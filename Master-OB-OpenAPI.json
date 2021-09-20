@@ -100,14 +100,14 @@
           "FileFolderURL": {
             "$ref": "#/components/schemas/FileFolderURL"
           },
-          "WarrantyMaterial": {
-            "$ref": "#/components/schemas/WarrantyMaterial"
-          },
           "Dimension": {
             "$ref": "#/components/schemas/Dimension"
           },
           "Packages": {
             "$ref": "#/components/schemas/Packages"
+          },
+          "Warranties ": {
+            "$ref": "#/components/schemas/Warranties "
           }
         },
         "x-ob-usage-tips": ""
@@ -336,12 +336,6 @@
           },
           "VoltageOpenCircuit": {
             "$ref": "#/components/schemas/VoltageOpenCircuit"
-          },
-          "CurrentMaxPower": {
-            "$ref": "#/components/schemas/CurrentMaxPower"
-          },
-          "VoltageMaxPower": {
-            "$ref": "#/components/schemas/VoltageMaxPower"
           }
         },
         "x-ob-usage-tips": ""
@@ -1468,7 +1462,7 @@
           {
             "type": "object",
             "description": "Method of the determining the location",
-            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type": "LocationDeterminationMethodItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "AddressGeocoding"
@@ -1485,7 +1479,7 @@
           {
             "type": "object",
             "description": "The type of contact being specified",
-            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type": "ContactTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Homeowner"
@@ -1502,7 +1496,7 @@
           {
             "type": "object",
             "description": "The method of contact the contact prefers",
-            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type": "PreferredContactMethodItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Email"
@@ -1587,7 +1581,7 @@
           {
             "type": "object",
             "description": "The type of location being specified",
-            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type": "LocationTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "GeneralProximity"
@@ -2043,7 +2037,7 @@
           {
             "type": "object",
             "description": "The type of product",
-            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type": "ProdTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Module"
@@ -3506,7 +3500,7 @@
           {
             "type": "object",
             "description": "The enumerated list of the types of major specifications.",
-            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type": "SpecificationTypeItemType",
             "x-ob-usage-tips": "If the specification does not have a type listed here, select \"None\" and then use the SpecificationName as an alternative.",
             "x-ob-sample-value": {
               "Value": "AcceptableAmbientTemperatureRange"
@@ -5085,44 +5079,33 @@
       "CurrentShortCircuit": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
-            "description": "Current of a photovoltaic device at short Circuit conditions.",
+            "description": "Current of a photovoltaic device at short circuit conditions.",
             "x-ob-item-type": "num-us:electricCurrentItemType",
+            "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Decimals": "",
-              "EndTime": "",
-              "Precision": "",
-              "StartTime": "",
-              "Unit": "",
-              "Value": ""
-            },
-            "x-ob-item-type-group": ""
+            "x-ob-sample-value": {}
           }
         ]
       },
       "VoltageOpenCircuit": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
-            "description": "Voltage of a photovoltaic device at open circuit conditions.",
+            "description": "Voltage at open circuit conditions",
             "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Decimals": "",
-              "EndTime": "",
-              "Precision": "",
-              "StartTime": "",
-              "Unit": "",
-              "Value": ""
-            },
-            "x-ob-item-type-group": ""
+              "Unit": "Volt",
+              "Value": "39.83"
+            }
           }
         ]
       },
@@ -5962,28 +5945,6 @@
           }
         ]
       },
-      "VoltageMaxPower": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Voltage of a photovoltaic device at the maximum power point.",
-            "x-ob-item-type": "num-us:voltageItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Decimals": "",
-              "EndTime": "",
-              "Precision": "",
-              "StartTime": "",
-              "Unit": "",
-              "Value": ""
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "EquipTypeWarrTerm": {
         "allOf": [
           {
@@ -6345,28 +6306,6 @@
             "type": "object",
             "description": "Depth of snow on the ground during a given period of time",
             "x-ob-item-type": "num:lengthItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Decimals": "",
-              "EndTime": "",
-              "Precision": "",
-              "StartTime": "",
-              "Unit": "",
-              "Value": ""
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "CurrentMaxPower": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Current of a photovoltaic device at the maximum power point.",
-            "x-ob-item-type": "num-us:electricCurrentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -7641,7 +7580,7 @@
           },
           {
             "type": "object",
-            "description": "(Vmpp)",
+            "description": "Voltage of a photovoltaic device at the maximum power point.",
             "x-ob-item-type": "num-us:voltageItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -7659,30 +7598,12 @@
           },
           {
             "type": "object",
-            "description": "(Impp)",
+            "description": "Current of a photovoltaic device at the maximum power point.",
             "x-ob-item-type": "num-us:electricCurrentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Ampere",
               "Value": "9.31"
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "VoltageOpenCircuit ": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "(Voc)",
-            "x-ob-item-type": "num-us:voltageItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "Volt",
-              "Value": "39.83"
             },
             "x-ob-item-type-group": ""
           }
@@ -8149,9 +8070,6 @@
               "CurrentAtMaximumPower": {
                 "$ref": "#/components/schemas/CurrentAtMaximumPower"
               },
-              "VoltageOpenCircuit ": {
-                "$ref": "#/components/schemas/VoltageOpenCircuit "
-              },
               "CurrentShortCircuit": {
                 "$ref": "#/components/schemas/CurrentShortCircuit"
               },
@@ -8239,24 +8157,6 @@
             }
           }
         ]
-      },
-      "WarrantyMaterial": {
-        "type": "object",
-        "description": "A warranty is a type of guarantee that a manufacturer or similar party makes regarding the condition of its product. It also refers to the terms and situations in which repairs or exchanges will be made if the product does not function as originally described or intended.",
-        "properties": {
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "Contacts": {
-            "$ref": "#/components/schemas/Contacts"
-          },
-          "Duration": {
-            "$ref": "#/components/schemas/Duration"
-          }
-        }
       },
       "ProdSolarCell": {
         "type": "object",
@@ -8412,6 +8312,145 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/Tag"
+        }
+      },
+      "WarrantyType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Classification of the Warranty. What type of Warranty is it?",
+            "x-ob-item-type": "WarrantyItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Power"
+            }
+          }
+        ]
+      },
+      "WarrantyID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Universally Unique Identifier for the Warranty",
+            "x-ob-item-type": "solar-types:uuidItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
+            }
+          }
+        ]
+      },
+      "WarrantyName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Human Readable Name for the Warranty",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Standard REC 25 yr Warranty"
+            }
+          }
+        ]
+      },
+      "WarrantyDuration": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
+          },
+          {
+            "type": "object",
+            "description": "How long is the Warranty Valid For? ",
+            "x-ob-item-type": "durationItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "Enter as integer; Specify Units.",
+            "x-ob-sample-value": {
+              "Value": 25,
+              "Units": "y"
+            }
+          }
+        ]
+      },
+      "WarrantyEffectiveDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date the Warranty Comes Into Force",
+            "x-ob-item-type": "stdi:dateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2012-07-16"
+            }
+          }
+        ]
+      },
+      "WarrantyExpirationDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date the Warranty Is No Longer in Force",
+            "x-ob-item-type": "stdi:dateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2037-07-16"
+            }
+          }
+        ]
+      },
+      "Warranty": {
+        "type": "object",
+        "description": "Guarantee of minimum quality level",
+        "properties": {
+          "WarrantyType": {
+            "$ref": "#/components/schemas/WarrantyType"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "WarrantyID": {
+            "$ref": "#/components/schemas/WarrantyID"
+          },
+          "WarrantyName": {
+            "$ref": "#/components/schemas/WarrantyName"
+          },
+          "WarrantyDuration": {
+            "$ref": "#/components/schemas/WarrantyDuration"
+          },
+          "WarrantyEffectiveDate": {
+            "$ref": "#/components/schemas/WarrantyEffectiveDate"
+          },
+          "WarrantyExpirationDate": {
+            "$ref": "#/components/schemas/WarrantyExpirationDate"
+          }
+        }
+      },
+      "Warranties ": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Warranty"
         }
       }
     }
@@ -9730,7 +9769,7 @@
       "units": {
         "Degree": {
           "label": "Degree",
-          "description": "The degree is a measurement of a plane angle, defined so that a full rotation is 360 degrees. In STD the degree is reported in a decimal format."
+          "description": "The degree is a measurement of a plane angle, defined so that a full rotation is 360 degrees. In Std the degree is reported in a decimal format."
         },
         "rad": {
           "label": "Radian",
@@ -13715,6 +13754,27 @@
         "CdTe": {
           "label": "CdTe",
           "description": "Cadmium telluride thin film"
+        }
+      }
+    },
+    "WarrantyItemType": {
+      "description": "Types of warranties",
+      "enums": {
+        "Power": {
+          "label": "Power",
+          "description": ""
+        },
+        "Service": {
+          "label": "Service",
+          "description": ""
+        },
+        "Material": {
+          "label": "Material",
+          "description": ""
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
         }
       }
     }
