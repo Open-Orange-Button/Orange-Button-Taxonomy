@@ -8143,6 +8143,15 @@
           },
           "ProdCode": {
             "$ref": "#/components/schemas/ProdCode"
+          },
+          "CellColor": {
+            "$ref": "#/components/schemas/CellColor"
+          },
+          "CellCutType": {
+            "$ref": "#/components/schemas/CellCutType"
+          },
+          "CellTechnologyType": {
+            "$ref": "#/components/schemas/CellTechnologyType"
           }
         }
       },
@@ -8483,6 +8492,57 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": "UL1741"
+          }
+        ]
+      },
+      "CellColor": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Physical color of the solar cell",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Blue"
+            }
+          }
+        ]
+      },
+      "CellCutType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Fractional Cell Cut",
+            "x-ob-item-type": "CellCutTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Half"
+            }
+          }
+        ]
+      },
+      "CellTechnologyType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Solar cell material type",
+            "x-ob-item-type": "cellTechnologyItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "thinfilm"
+            }
           }
         ]
       }
@@ -13790,7 +13850,35 @@
         }
       }
     },
-    "WarrantyItemType": {
+    "CellCutTypeItemType": {
+      "description": "",
+      "enums": {
+        "Full": {
+          "label": "Full",
+          "description": ""
+        },
+        "Half": {
+          "label": "Half",
+          "description": ""
+        },
+        "Third": {
+          "label": "Third",
+          "description": ""
+        },
+        "Quarter": {
+          "label": "Quarter",
+          "description": ""
+        },
+        "Fifth": {
+          "label": "Fifth",
+          "description": ""
+        },
+        "Sixth": {
+          "label": "Sixth",
+          "description": ""
+        }
+      }
+	  "WarrantyItemType": {
       "description": "Types of warranties",
       "enums": {
         "Power": {
