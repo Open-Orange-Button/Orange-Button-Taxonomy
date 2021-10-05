@@ -7848,23 +7848,6 @@
           }
         ]
       },
-      "ModuleFrameMaterial": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The material used for a module frame",
-            "x-ob-item-type": "stdi:stringItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "AnodizedAluminiumAlloy"
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "SolarCellQuantity": {
         "allOf": [
           {
@@ -8079,9 +8062,6 @@
               "ProdGlazing": {
                 "$ref": "#/components/schemas/ProdGlazing"
               },
-              "ModuleFrameMaterial": {
-                "$ref": "#/components/schemas/ModuleFrameMaterial"
-              },
               "SolarCellQuantity": {
                 "$ref": "#/components/schemas/SolarCellQuantity"
               },
@@ -8274,7 +8254,7 @@
           {
             "type": "object",
             "description": "The number of parallel-connected strings (a string is a series-connected number of cells).",
-            "x-ob-item-type": "xbrli:integerItemType",
+            "x-ob-item-type": "stdi:integerItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -13996,6 +13976,31 @@
         },
         "Other": {
           "label": "Other",
+          "description": ""
+        }
+      }
+    },
+    "FrameMaterialTypeItemType": {
+      "description": "An enumerated list of frame material types.",
+      "enums": {
+        "AnodizedAluminum": {
+          "label": "AnodizedAluminum",
+          "description": ""
+        },
+        "AnodizedAluminumAlloy": {
+          "label": "AnodizedAluminumAlloy",
+          "description": ""
+        },
+        "Frameless": {
+          "label": "Frameless",
+          "description": "Glass frame, or Glass-Glass modules"
+        },
+        "TransparentAluminum": {
+          "label": "TransparentAluminum",
+          "description": ""
+        },
+        "FlexiblePlastic": {
+          "label": "FlexiblePlastic",
           "description": ""
         }
       }
