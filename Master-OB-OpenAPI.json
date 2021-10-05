@@ -13878,26 +13878,27 @@
           "description": ""
         }
       }
-	  "WarrantyItemType": {
-      "description": "Types of warranties",
-      "enums": {
-        "Power": {
-          "label": "Power",
-          "description": ""
-        },
-        "Service": {
-          "label": "Service",
-          "description": ""
-        },
-        "Material": {
-          "label": "Material",
-          "description": ""
-        },
-        "Other": {
-          "label": "Other",
-          "description": ""
-        }
-      }
+	},
+	"WarrantyItemType": {
+	  "description": "Types of warranties",
+	  "enums": {
+		"Power": {
+		  "label": "Power",
+		  "description": ""
+		},
+		"Service": {
+		  "label": "Service",
+		  "description": ""
+		},
+		"Material": {
+		  "label": "Material",
+		  "description": ""
+		},
+		"Other": {
+		  "label": "Other",
+		  "description": ""
+		}
+	  }
     }
   },
   "x-ob-item-type-groups": {
