@@ -8111,6 +8111,30 @@
               },
               "CellsInSeries": {
                 "$ref": "#/components/schemas/CellsInSeries"
+              },
+              "BacksheetColor": {
+                "$ref": "#/components/schemas/BacksheetColor"
+              },
+              "BacksheetMaterial": {
+                "$ref": "#/components/schemas/BacksheetMaterial"
+              },
+              "CellQuantity": {
+                "$ref": "#/components/schemas/CellQuantity"
+              },
+              "CellStringsParallelQuantity": {
+                "$ref": "#/components/schemas/CellStringsParallelQuantity"
+              },
+              "FrameColor": {
+                "$ref": "#/components/schemas/FrameColor"
+              },
+              "FrameMaterialType": {
+                "$ref": "#/components/schemas/FrameMaterialType"
+              },
+              "ModuleBusbarDescription": {
+                "$ref": "#/components/schemas/ModuleBusbarDescription"
+              },
+              "ShadeResponse": {
+                "$ref": "#/components/schemas/ShadeResponse"
               }
             }
           }
@@ -8542,6 +8566,125 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "thinfilm"
+            }
+          }
+        ]
+      },
+      "BacksheetColor": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "What Color is the Module backsheet?",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Black"
+            }
+          }
+        ]
+      },
+      "BacksheetMaterial": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "What is the Backsheet made of?",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "polymer"
+            }
+          }
+        ]
+      },
+      "CellQuantity": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
+          },
+          {
+            "type": "object",
+            "description": "How Many Cells are in this module?",
+            "x-ob-item-type": "stdi:integerItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "60"
+            }
+          }
+        ]
+      },
+      "FrameColor": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "What Color is the Module Frame?",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Black"
+            }
+          }
+        ]
+      },
+      "FrameMaterialType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The composition of the frame",
+            "x-ob-item-type": "FrameMaterialTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "AnodizedAluminum"
+            }
+          }
+        ]
+      },
+      "ModuleBusbarDescription": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "How the busbars are arranged in this module",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "BackContact"
+            }
+          }
+        ]
+      },
+      "ShadeResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Description of how the module responds to shading conditions",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Half-Cut Topology Increases Power Production when partially shaded"
             }
           }
         ]
@@ -13878,27 +14021,27 @@
           "description": ""
         }
       }
-	},
-	"WarrantyItemType": {
-	  "description": "Types of warranties",
-	  "enums": {
-		"Power": {
-		  "label": "Power",
-		  "description": ""
-		},
-		"Service": {
-		  "label": "Service",
-		  "description": ""
-		},
-		"Material": {
-		  "label": "Material",
-		  "description": ""
-		},
-		"Other": {
-		  "label": "Other",
-		  "description": ""
-		}
-	  }
+    },
+    "WarrantyItemType": {
+      "description": "Types of warranties",
+      "enums": {
+        "Power": {
+          "label": "Power",
+          "description": ""
+        },
+        "Service": {
+          "label": "Service",
+          "description": ""
+        },
+        "Material": {
+          "label": "Material",
+          "description": ""
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
+        }
+      }
     }
   },
   "x-ob-item-type-groups": {
