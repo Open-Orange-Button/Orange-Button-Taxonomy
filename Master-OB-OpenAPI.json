@@ -13986,13 +13986,17 @@
           "label": "CIGS",
           "description": "Cadmium indium gallium selenium thin film"
         },
-        "other": {
-          "label": "other",
-          "description": "Other type not listed"
-        },
         "CdTe": {
           "label": "CdTe",
           "description": "Cadmium telluride thin film"
+        },
+        "heterojunction": {
+          "label": "heterojunction",
+          "description": ""
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
         }
       }
     },
