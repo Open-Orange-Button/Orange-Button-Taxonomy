@@ -7482,7 +7482,7 @@
           {
             "type": "object",
             "description": "The length of a product Warranty in Years",
-            "x-ob-item-type": "stdi:dateItemType",
+            "x-ob-item-type": "stdi:durationItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -8135,6 +8135,9 @@
               },
               "ShadeResponse": {
                 "$ref": "#/components/schemas/ShadeResponse"
+              },
+              "Warranties ": {
+                "$ref": "#/components/schemas/Warranties "
               }
             }
           }
@@ -8271,7 +8274,7 @@
           {
             "type": "object",
             "description": "The number of parallel-connected strings (a string is a series-connected number of cells).",
-            "x-ob-item-type": "stdi:integerItemType",
+            "x-ob-item-type": "xbrli:integerItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -8578,7 +8581,7 @@
           {
             "type": "object",
             "description": "What Color is the Module backsheet?",
-            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8595,7 +8598,7 @@
           {
             "type": "object",
             "description": "What is the Backsheet made of?",
-            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8612,7 +8615,7 @@
           {
             "type": "object",
             "description": "How Many Cells are in this module?",
-            "x-ob-item-type": "stdi:integerItemType",
+            "x-ob-item-type": "xbrli:integerItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8629,7 +8632,7 @@
           {
             "type": "object",
             "description": "What Color is the Module Frame?",
-            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8663,7 +8666,7 @@
           {
             "type": "object",
             "description": "How the busbars are arranged in this module",
-            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8680,7 +8683,7 @@
           {
             "type": "object",
             "description": "Description of how the module responds to shading conditions",
-            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type": "xbrli:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
