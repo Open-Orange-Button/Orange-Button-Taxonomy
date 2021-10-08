@@ -7485,7 +7485,7 @@
           {
             "type": "object",
             "description": "The length of a product Warranty in Years",
-            "x-ob-item-type": "stdi:dateItemType",
+            "x-ob-item-type": "stdi:durationItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -7851,23 +7851,6 @@
           }
         ]
       },
-      "ModuleFrameMaterial": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The material used for a module frame",
-            "x-ob-item-type": "stdi:stringItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "AnodizedAluminiumAlloy"
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "SolarCellQuantity": {
         "allOf": [
           {
@@ -8082,9 +8065,6 @@
               "ProdGlazing": {
                 "$ref": "#/components/schemas/ProdGlazing"
               },
-              "ModuleFrameMaterial": {
-                "$ref": "#/components/schemas/ModuleFrameMaterial"
-              },
               "SolarCellQuantity": {
                 "$ref": "#/components/schemas/SolarCellQuantity"
               },
@@ -8114,6 +8094,33 @@
               },
               "CellsInSeries": {
                 "$ref": "#/components/schemas/CellsInSeries"
+              },
+              "BacksheetColor": {
+                "$ref": "#/components/schemas/BacksheetColor"
+              },
+              "BacksheetMaterial": {
+                "$ref": "#/components/schemas/BacksheetMaterial"
+              },
+              "CellQuantity": {
+                "$ref": "#/components/schemas/CellQuantity"
+              },
+              "CellStringsParallelQuantity": {
+                "$ref": "#/components/schemas/CellStringsParallelQuantity"
+              },
+              "FrameColor": {
+                "$ref": "#/components/schemas/FrameColor"
+              },
+              "FrameMaterialType": {
+                "$ref": "#/components/schemas/FrameMaterialType"
+              },
+              "ModuleBusbarDescription": {
+                "$ref": "#/components/schemas/ModuleBusbarDescription"
+              },
+              "ShadeResponse": {
+                "$ref": "#/components/schemas/ShadeResponse"
+              },
+              "Warranties ": {
+                "$ref": "#/components/schemas/Warranties "
               }
             }
           }
@@ -8146,6 +8153,15 @@
           },
           "ProdCode": {
             "$ref": "#/components/schemas/ProdCode"
+          },
+          "CellColor": {
+            "$ref": "#/components/schemas/CellColor"
+          },
+          "CellCutType": {
+            "$ref": "#/components/schemas/CellCutType"
+          },
+          "CellTechnologyType": {
+            "$ref": "#/components/schemas/CellTechnologyType"
           }
         }
       },
@@ -8486,6 +8502,176 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": "UL1741"
+          }
+        ]
+      },
+      "CellColor": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Physical color of the solar cell",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Blue"
+            }
+          }
+        ]
+      },
+      "CellCutType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Fractional Cell Cut",
+            "x-ob-item-type": "CellCutTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Half"
+            }
+          }
+        ]
+      },
+      "CellTechnologyType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Solar cell material type",
+            "x-ob-item-type": "cellTechnologyItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "thinfilm"
+            }
+          }
+        ]
+      },
+      "BacksheetColor": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "What Color is the Module backsheet?",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Black"
+            }
+          }
+        ]
+      },
+      "BacksheetMaterial": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "What is the Backsheet made of?",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "polymer"
+            }
+          }
+        ]
+      },
+      "CellQuantity": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
+          },
+          {
+            "type": "object",
+            "description": "How Many Cells are in this module?",
+            "x-ob-item-type": "xbrli:integerItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "60"
+            }
+          }
+        ]
+      },
+      "FrameColor": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "What Color is the Module Frame?",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Black"
+            }
+          }
+        ]
+      },
+      "FrameMaterialType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The composition of the frame",
+            "x-ob-item-type": "FrameMaterialTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "AnodizedAluminum"
+            }
+          }
+        ]
+      },
+      "ModuleBusbarDescription": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "How the busbars are arranged in this module",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "BackContact"
+            }
+          }
+        ]
+      },
+      "ShadeResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Description of how the module responds to shading conditions",
+            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Half-Cut Topology Increases Power Production when partially shaded"
+            }
           }
         ]
       }
@@ -13783,13 +13969,71 @@
           "label": "CIGS",
           "description": "Cadmium indium gallium selenium thin film"
         },
-        "other": {
-          "label": "other",
-          "description": "Other type not listed"
-        },
         "CdTe": {
           "label": "CdTe",
           "description": "Cadmium telluride thin film"
+        },
+        "heterojunction": {
+          "label": "heterojunction",
+          "description": ""
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
+        }
+      }
+    },
+    "FrameMaterialTypeItemType": {
+      "description": "An enumerated list of frame material types.",
+      "enums": {
+        "AnodizedAluminum": {
+          "label": "AnodizedAluminum",
+          "description": ""
+        },
+        "AnodizedAluminumAlloy": {
+          "label": "AnodizedAluminumAlloy",
+          "description": ""
+        },
+        "Frameless": {
+          "label": "Frameless",
+          "description": "Glass frame, or Glass-Glass modules"
+        },
+        "TransparentAluminum": {
+          "label": "TransparentAluminum",
+          "description": ""
+        },
+        "FlexiblePlastic": {
+          "label": "FlexiblePlastic",
+          "description": ""
+        }
+      }
+    },
+    "CellCutTypeItemType": {
+      "description": "",
+      "enums": {
+        "Full": {
+          "label": "Full",
+          "description": ""
+        },
+        "Half": {
+          "label": "Half",
+          "description": ""
+        },
+        "Third": {
+          "label": "Third",
+          "description": ""
+        },
+        "Quarter": {
+          "label": "Quarter",
+          "description": ""
+        },
+        "Fifth": {
+          "label": "Fifth",
+          "description": ""
+        },
+        "Sixth": {
+          "label": "Sixth",
+          "description": ""
         }
       }
     },
