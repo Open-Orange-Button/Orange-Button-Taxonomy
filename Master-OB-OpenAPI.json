@@ -2629,7 +2629,7 @@
           },
           {
             "type": "object",
-            "description": "The phase of the utility being interconnected too",
+            "description": "The output phase type of a device",
             "x-ob-item-type": "InterconnectionPhaseTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -7161,6 +7161,24 @@
               },
               "Dimension": {
                 "$ref": "#/components/schemas/Dimension"
+              },
+              "VoltageDCInputMax": {
+                "$ref": "#/components/schemas/VoltageDCInputMax"
+              },
+              "VoltageDCInputMin": {
+                "$ref": "#/components/schemas/VoltageDCInputMin"
+              },
+              "VoltageDCInputNom": {
+                "$ref": "#/components/schemas/VoltageDCInputNom"
+              },
+              "InverterEfficiency": {
+                "$ref": "#/components/schemas/InverterEfficiency"
+              },
+              "InverterInput": {
+                "$ref": "#/components/schemas/InverterInput"
+              },
+              "InverterOutputs": {
+                "$ref": "#/components/schemas/InverterOutputs"
               }
             }
           }
@@ -8564,7 +8582,7 @@
           {
             "type": "object",
             "description": "What Color is the Module backsheet?",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8581,7 +8599,7 @@
           {
             "type": "object",
             "description": "What is the Backsheet made of?",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8598,7 +8616,7 @@
           {
             "type": "object",
             "description": "How Many Cells are in this module?",
-            "x-ob-item-type": "xbrli:integerItemType",
+            "x-ob-item-type": "stdi:integerItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8615,7 +8633,7 @@
           {
             "type": "object",
             "description": "What Color is the Module Frame?",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8649,7 +8667,7 @@
           {
             "type": "object",
             "description": "How the busbars are arranged in this module",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8666,7 +8684,7 @@
           {
             "type": "object",
             "description": "Description of how the module responds to shading conditions",
-            "x-ob-item-type": "xbrli:stringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8674,6 +8692,642 @@
             }
           }
         ]
+      },
+      "InverterEfficiencyCEC": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "CEC-weighted DC/AC conversion efficiency.",
+            "x-ob-item-type": "percentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Values": 94.2,
+              "Units": "percent"
+            }
+          }
+        ]
+      },
+      "InverterEfficiencyIEC": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "DC/AC conversion efficiency determined according to the IEC 61683 standard.",
+            "x-ob-item-type": "percentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Values": 93.4,
+              "Units": "percent"
+            }
+          }
+        ]
+      },
+      "InverterEfficiencyMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Manufacturer's stated maximum DC/AC conversion efficiency",
+            "x-ob-item-type": "percentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Values": 96.2,
+              "Units": "percent"
+            }
+          }
+        ]
+      },
+      "EfficiencyCECVoltageMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "DC/AC conversion efficiency at Vmax and specified DC input power",
+            "x-ob-item-type": "percentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 0.935,
+              "Units": "percent"
+            }
+          }
+        ]
+      },
+      "EfficiencyCECVoltageMin": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "DC/AC conversion efficiency at Vmin and specified DC input power",
+            "x-ob-item-type": "percentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Values": 92.5,
+              "Units": "percent"
+            }
+          }
+        ]
+      },
+      "EfficiencyCECVoltageNom": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "DC/AC conversion efficiency at Vnom and specified DC input power",
+            "x-ob-item-type": "percentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Values": 93.2,
+              "Units": "percent"
+            }
+          }
+        ]
+      },
+      "PowerLevelCECTest": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "DC input power for CEC efficiency test",
+            "x-ob-item-type": "num:powerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Values": 0.3,
+              "Units": "kW"
+            }
+          }
+        ]
+      },
+      "InverterEfficiency": {
+        "type": "object",
+        "description": "Measurements of DC/AC conversion efficiency",
+        "properties": {
+          "InverterEfficiencyCEC": {
+            "$ref": "#/components/schemas/InverterEfficiencyCEC"
+          },
+          "InverterEfficiencyIEC": {
+            "$ref": "#/components/schemas/InverterEfficiencyIEC"
+          },
+          "InverterEfficiencyMax": {
+            "$ref": "#/components/schemas/InverterEfficiencyMax"
+          },
+          "InverterEfficiencyCECTestResults": {
+            "$ref": "#/components/schemas/InverterEfficiencyCECTestResults"
+          }
+        }
+      },
+      "InverterEfficiencyCECTestResults": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/InverterEfficiencyCECTestResult"
+        }
+      },
+      "InverterEfficiencyCECTestResult": {
+        "type": "object",
+        "description": "CEC measured efficiency values at maximum, nominal and minimum voltage levels and specified input power",
+        "properties": {
+          "EfficiencyCECVoltageMax": {
+            "$ref": "#/components/schemas/EfficiencyCECVoltageMax"
+          },
+          "EfficiencyCECVoltageMin": {
+            "$ref": "#/components/schemas/EfficiencyCECVoltageMin"
+          },
+          "EfficiencyCECVoltageNom": {
+            "$ref": "#/components/schemas/EfficiencyCECVoltageNom"
+          },
+          "PowerLevelCECTest": {
+            "$ref": "#/components/schemas/PowerLevelCECTest"
+          }
+        }
+      },
+      "InverterHarmonicsMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The total harmonic distortion (THD) of an inverter, defined as the ratio of the sum of power of all harmonics to the power of the fundamental frequency.",
+            "x-ob-item-type": "percentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "VoltageDCInputMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum Input Voltage (DC)",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 200,
+              "Units": "Volt"
+            }
+          }
+        ]
+      },
+      "VoltageDCInputMin": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Minimum Input Voltage (DC)",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 20,
+              "Units": "Volt"
+            }
+          }
+        ]
+      },
+      "VoltageDCInputNom": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Nominal Input Voltage (DC)",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 150,
+              "Units": "Volt"
+            }
+          }
+        ]
+      },
+      "VoltageDCInputInverterStart": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Voltage (DC) input required for an inverter to begin power conversion",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "InverterInputMPPTNumber": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
+          },
+          {
+            "type": "object",
+            "description": "Number of MPPT inputs for an inverter",
+            "x-ob-item-type": "stdi:integerItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "CurrentShortCircuitMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum short circuit current of a device",
+            "x-ob-item-type": "num-us:electricCurrentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "VoltageMPPTMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum of the voltage range for an inverter MPPT",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "VoltageMPPTMin": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Minimum of the voltage range for an inverter MPPT",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "CurrentDCMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum DC current of a device",
+            "x-ob-item-type": "num-us:electricCurrentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "InverterMPPTInputStrings": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
+          },
+          {
+            "type": "object",
+            "description": "The number of parallel input strings for an inverter MPPT",
+            "x-ob-item-type": "stdi:integerItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "InverterInput": {
+        "type": "object",
+        "description": "Describes capability of one input to an inverter",
+        "properties": {
+          "VoltageDCInputMax": {
+            "$ref": "#/components/schemas/VoltageDCInputMax"
+          },
+          "VoltageDCInputMin": {
+            "$ref": "#/components/schemas/VoltageDCInputMin"
+          },
+          "VoltageDCInputNom": {
+            "$ref": "#/components/schemas/VoltageDCInputNom"
+          },
+          "VoltageDCInputInverterStart": {
+            "$ref": "#/components/schemas/VoltageDCInputInverterStart"
+          },
+          "InverterInputMPPTNumber": {
+            "$ref": "#/components/schemas/InverterInputMPPTNumber"
+          },
+          "InverterMPPTs": {
+            "$ref": "#/components/schemas/InverterMPPTs"
+          }
+        }
+      },
+      "InverterMPPTs": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/InverterMPPT"
+        }
+      },
+      "InverterMPPT": {
+        "type": "object",
+        "description": "An object of elements to describe an inverter maximum power point tracker (MPPT)",
+        "properties": {
+          "CurrentShortCircuitMax": {
+            "$ref": "#/components/schemas/CurrentShortCircuitMax"
+          },
+          "VoltageMPPTMax": {
+            "$ref": "#/components/schemas/VoltageMPPTMax"
+          },
+          "VoltageMPPTMin": {
+            "$ref": "#/components/schemas/VoltageMPPTMin"
+          },
+          "CurrentDCMax": {
+            "$ref": "#/components/schemas/CurrentDCMax"
+          },
+          "InverterMPPTInputStrings": {
+            "$ref": "#/components/schemas/InverterMPPTInputStrings"
+          }
+        }
+      },
+      "VoltageACMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum AC voltage for a device",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "VoltageACMin": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Minimum AC voltage for a device",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "PowerACMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum AC power for a device",
+            "x-ob-item-type": "num:powerItemType",
+            "x-ob-item-type-group": "OBElectricalPowerAC",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "CurrentACMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum AC current of a device",
+            "x-ob-item-type": "num-us:electricCurrentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "PowerFactorMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum power factor for a device, expressed as a value between -1 and 1. Power factor is the ratio between real and apparent power. Positive, or lagging, power factor indicates reactive power consumed by the load; negative, or leading, power factor indicates that reactive power is supplied by the load.",
+            "x-ob-item-type": "stdi:decimalItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "PowerFactorMin": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Minimum power factor for a device, expressed as a value between -1 and 1. Power factor is the ratio between real and apparent power. Positive, or lagging, power factor indicates reactive power consumed by the load; negative, or leading, power factor indicates that reactive power is supplied by the load.",
+            "x-ob-item-type": "stdi:decimalItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "InterconnectionLineCount": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The number of wires for the output connection of an inverter.",
+            "x-ob-item-type": "stdi:integerItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "PowerACNom": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The nominal AC power output of a device.",
+            "x-ob-item-type": "num:powerItemType",
+            "x-ob-item-type-group": "OBElectricalPowerAC",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "VoltageACNom": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The nominal AC voltage of a device",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "InterconnectionFrequency": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Frequency (Hz) of a AC power grid.",
+            "x-ob-item-type": "num-us:frequencyItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "InverterSwitchoverTime": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The time for an inverter to switch from grid-tied to islanded mode",
+            "x-ob-item-type": "durationItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "InverterOutput": {
+        "type": "object",
+        "description": "Output (AC) characteristics of an inverter",
+        "properties": {
+          "VoltageACMax": {
+            "$ref": "#/components/schemas/VoltageACMax"
+          },
+          "VoltageACMin": {
+            "$ref": "#/components/schemas/VoltageACMin"
+          },
+          "PowerACMax": {
+            "$ref": "#/components/schemas/PowerACMax"
+          },
+          "CurrentACMax": {
+            "$ref": "#/components/schemas/CurrentACMax"
+          },
+          "PowerFactorMax": {
+            "$ref": "#/components/schemas/PowerFactorMax"
+          },
+          "PowerFactorMin": {
+            "$ref": "#/components/schemas/PowerFactorMin"
+          },
+          "InverterHarmonicsMax": {
+            "$ref": "#/components/schemas/InverterHarmonicsMax"
+          },
+          "InterconnectionPhaseType": {
+            "$ref": "#/components/schemas/InterconnectionPhaseType"
+          },
+          "InterconnectionLineCount": {
+            "$ref": "#/components/schemas/InterconnectionLineCount"
+          },
+          "PowerACNom": {
+            "$ref": "#/components/schemas/PowerACNom"
+          },
+          "VoltageACNom": {
+            "$ref": "#/components/schemas/VoltageACNom"
+          },
+          "InterconnectionFrequencies": {
+            "$ref": "#/components/schemas/InterconnectionFrequencies"
+          },
+          "PowerACSurges": {
+            "$ref": "#/components/schemas/PowerACSurges"
+          },
+          "InverterSwitchoverTime": {
+            "$ref": "#/components/schemas/InverterSwitchoverTime"
+          }
+        }
+      },
+      "InterconnectionFrequencies": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/InterconnectionFrequency"
+        }
+      },
+      "PowerACSurges": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PowerACSurge"
+        }
+      },
+      "PowerACSurge": {
+        "type": "object",
+        "description": "Power (AC) that can be output from an inverter for a specified duration.",
+        "properties": {
+          "PowerACMax": {
+            "$ref": "#/components/schemas/PowerACMax"
+          },
+          "Duration": {
+            "$ref": "#/components/schemas/Duration"
+          }
+        }
+      },
+      "InverterOutputs": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/InverterOutput"
+        }
       }
     }
   },
@@ -12748,13 +13402,13 @@
           "label": "Single",
           "description": ""
         },
-        "Double": {
-          "label": "Double",
-          "description": ""
-        },
         "Three": {
           "label": "Three",
           "description": ""
+        },
+        "Double": {
+          "label": "Double",
+          "description": "Two-phase, also termed split phase or 2/3 phase."
         }
       }
     },
