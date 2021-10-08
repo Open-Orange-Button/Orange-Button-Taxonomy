@@ -7284,7 +7284,10 @@
             "x-ob-item-type": "num:powerItemType",
             "x-ob-item-type-group": "OBElectricalPower",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": ""
+            "x-ob-sample-value": {
+              "Value": 15.6,
+              "Unit": "kW"
+            }
           }
         ]
       },
