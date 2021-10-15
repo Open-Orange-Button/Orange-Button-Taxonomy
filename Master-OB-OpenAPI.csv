@@ -1,0 +1,462 @@
+,Category,Description,Item Type
+EnergyMeasurement,Object,A value of energy produced in one time period related to a device.,
+EnergyPrediction,Object,A value of energy produced in one time period.,
+EnergyModel,Object,Energy model contains energy predictions and information about the model assumptions and information sources.,
+EnergyProduction,Object,Actual Energy Production at a System Site.,
+Product,Object,"Contains ProdName, ProdMfr, ProdCode, ProdType, ProdDatasheet, ProdInstructions, ProdSpecifications, ProdCertifications, Description, FileFolderURL, Dimension, Packages, Warranties , ",
+Device,Object,"Contains DeviceID, SerialNum, DeviceMaintenance, Description, URL, Product, ProdCode, Location, Orientation, ",
+DataRecord,Object,"Contains DeviceID, ",
+DeviceMaintenance,Object,"Contains MaintDateLast, CalibrationDateLast, CalibrationMeth, ",
+WeatherInstrumentDevice,Object,"Contains AccuracyClass, CalibrationInterval, PVSystemID, PurchDate, DeviceCost, ManufactureDate, ManualLink, DeviceWarranty, OrientationInformation, ",
+DeviceWarranty,Object,"Contains EquipTypeWarrOutput, EquipTypeWarrStartDateMilestone, EquipTypeWarr, EquipTypeWarrTerm, EquipTypeWarrStartDate, EquipTypeWarrEndDate, ModulePerfWarrEndDate, ModulePerfWarrGuaranteedOutput, ModuleMaterialsAndWorkmanShipWarrInitiationDate, TrackerMaterialsWorkmanshipWarrExp, TrackerMaterialsWorkmanshipWarrInitiation, ",
+MeterProduct,Object,"Contains RevenueGrade, MeasScope, ",
+MeterDevice,Object,"Contains CurrentTransducerRatio, ",
+OrientationInformation,Object,"Contains OrientationAzimuth, OrientationTilt, HeightAboveGround, ",
+WeatherDataRecord,Object,"Contains IrradDirectNormal, IrradDiffuseHorizontal, IrradPlaneOfArray, IrradGlobalHorizontal, TempAmb, WindSpeed, HumidityRelative, PressureAtmospheric, Rainfall, Snowfall, PrecipitationType, Albedo, SnowAccumulation, ReferenceCellMeasurement, ",
+ReferenceCellMeasurement,Object,"Contains TempRefCell, CurrentShortCircuit, VoltageOpenCircuit, ",
+PowerMeasurements,Object,"Contains PowerAC, PowerDC, EnergyAC, TempMeter, TempModule, TempCell, CurtailLimit, Avail, SystemPF, ",
+SoilingInstrumentDevice,Object,"Contains SoilingInstrumentType, OrientationAzimuth, OrientationTilt, CalibrationDateLast, MaintDateLast, ",
+ASTME2848ReportingConditions,Object,"Contains IrradPlaneOfArray, TempAmb, WindSpeed, RefCellCalibrationConstantAtRptCond, ",
+ASTME2848DataRecord,Object,"Contains IrradPlaneOfArray, TempAmb, WindSpeed, DataSelected, DataFilterVisual, DataFilterOutliers, DataFilterMissing, DataFilterCollectionSystem, DataFilterOutsideRange, DataFilterStability, DataFilterInverterClipping, DataFilterShading, DataFilterInstrumentAlignment, ",
+DataFilterCriteria,Object,"Contains FilterIrradMax, FilterIrradMin, FilterTempAmbMax, FilterTempAmbMin, FilterWindSpeedMax, FilterWindSpeedMin, FilterPowerACMax, FilterPowerACMin, FilterIrradStabilityMax, FilterIrradStabilityWindowLen, ",
+ASTME2848Model,Object,"Contains ASTME28484ModelCoeffA1, ASTME28484ModelCoeffA2, ASTME28484ModelCoeffA3, ASTME28484ModelCoeffA4, ASTME2848PowerRtgAtRptCond, ASTME2848PowerRtgUncertainty, ASTME2848ModelResidualMean, ASTME2848ModelResidualStandardDeviation, ",
+Address,Object,Physical or Mailing address,
+Contact,Object,A person or contact information,
+AuthorityHavingJurisdiction,Object,"The authority having jurisdiction over any permit, site, or governance decision",
+EngineeringReviewRequirements,Array,array of EngineeringReviewRequirement,
+EngineeringReviewRequirement,Object,A review by a single engineer or other professional of a design or drawing set,
+Site,Object,The site of a solar installation or potential solar installation,
+Addresses,Array,array of Address,
+Contacts,Array,array of Contact,
+City,Element,Name of the city in the physical or mailing address.,stdi:stringItemType
+StateProvince,Element,State of a Province of the mailing or physical address.,stdi:stringItemType
+ZipPostalCode,Element,Zip Code / Postal Code of a mailing or physical address.,stdi:stringItemType
+Country,Element,ISO country code where system is located.,stdi:stringItemType
+Latitude,Element,Decimal value of latitude of the physical site in degrees.  Positive North of the Equator.  Negative South of the Equator,num-us:planeAngleItemType
+Longitude,Element,Decimal value of longitude of the physical site in degrees.  Positive east of the Prime Meridian.  Negative west of the Prime Meridian.  North America is negative..,num-us:planeAngleItemType
+County,Element,County of the physical or mailing address,stdi:stringItemType
+Email,Element,Email address,stdi:stringItemType
+MobilePhone,Element,"Phone Number of a cell phone or mobile device.  This phone is expected to be able to receive text messages.  Characters like hyphen, period, x for extension are allowed.",stdi:stringItemType
+WorkPhone,Element,"Phone number to be used during working hours.  Characters like hyphen, period, x for extension are allowed.",stdi:stringItemType
+HomePhone,Element,"Phone number to be used for high priority calls only.  Characters like hyphen, period, x for extension are allowed.",stdi:stringItemType
+FirstName,Element,First name of a person.,stdi:stringItemType
+MiddleName,Element,Middle name of a person.,stdi:stringItemType
+LastName,Element,The last name of person.,stdi:stringItemType
+Altitude,Element,The height of ground level at a location relative to sea level.,num:lengthItemType
+Location,Object,"A location is defined by Latitude, Longitude and Altitude.",
+Elevation,Element,Height from ground level.,num:lengthItemType
+AddrLine1,Element,First line of a mailing or physical address.,stdi:stringItemType
+AddrLine2,Element,Second line of a mailing or physical address.,stdi:stringItemType
+AddrLine3,Element,Third line of a mailing or physical address.,stdi:stringItemType
+EnergyModelName,Element,"Type of design/energy production model for the PV system which could be Pvsyst, SAM, PV Watts, or Other.",stdi:stringItemType
+EnergyModelConfigurationFilename,Element,A filename holding the configuration details of the energy prediction details. This could be a zip file containing multiple files. The intention is to be able to reproduce the energy predictions if needed.,stdi:stringItemType
+Description,Element,Generic Text field used in fields to provide more detail,stdi:stringItemType
+BuildingCode,Element,The applicable building code the AHJ enforces.,BuildingCodeItemType
+BuildingCodeNotes,Element,Notes for special requirements related to the building code in this AHJ.,stdi:stringItemType
+ResidentialCode,Element,The applicable residential code the AHJ enforces.,ResidentialCodeItemType
+FireCode,Element,The applicable fire code the AHJ enforces.,FireCodeItemType
+ElectricCode,Element,The applicable electric code the AHJ enforces.,ElectricCodeItemType
+ResidentialCodeNotes,Element,Notes for special requirements related to the residential code in this AHJ.,stdi:stringItemType
+FireCodeNotes,Element,Notes for special requirements related to the fire code in this AHJ.,stdi:stringItemType
+ElectricCodeNotes,Element,Notes for special requirements related to the electric code in this AHJ.,stdi:stringItemType
+DocumentSubmissionMethod,Element,The method for submitting AHJ documents.,DocumentSubmissionMethodItemType
+DocumentSubmissionMethodNotes,Element,Notes about the document submission process for this AHJ.,stdi:stringItemType
+EngineeringReviewType,Element,The type of engineering or professional review,EngineeringReviewTypeItemType
+StampType,Element,The type of certifying stamp that is applied to the design or drawing set,StampTypeItemType
+AHJName,Element,Name of the Authority Having Jurisdiction,stdi:stringItemType
+RequirementLevel,Element,This field indicates if this instance of an object is required or optional. Conditionally optional the conditions can be described in RequirementNotes.,RequirementLevelItemType
+LocationDeterminationMethod,Element,Method of the determining the location,LocationDeterminationMethodItemType
+ContactType,Element,The type of contact being specified,ContactTypeItemType
+PreferredContactMethod,Element,The method of contact the contact prefers,PreferredContactMethodItemType
+LocationID,Element,The identifier of the location.,stdi:stringItemType
+AddressID,Element,The identifier of the address.,stdi:stringItemType
+ContactID,Element,The identifier of the contact.,stdi:stringItemType
+ContactTimezone,Element,The timezone where the contact is located.,stdi:stringItemType
+LocationType,Element,The type of location being specified,LocationTypeItemType
+FileFolderURL,Element,A generic URL to a file folder for transmitting documents,stdi:stringItemType
+URL,Element,A URL string,stdi:stringItemType
+AddressType,Element,The type of address being specified,stdi:stringItemType
+Task,Object,A task to accomplish,
+TaskName,Element,The name of a task,stdi:stringItemType
+Tasks,Array,array of Task,
+TaskStatus,Element,The status of a task,TaskStatusItemType
+UtilityName,Element,Name of utility company where the grid connection will reside.,stdi:stringItemType
+Devices,Array,array of Device,
+PVSystem,Object,A solar photovoltaic system,
+PVSystemPrice,Element,The price of the PV system,stdi:monetaryItemType
+EnergyUsage,Object,A value of energy consumed in one time period,
+EnergyConsumption,Object,The energy consumption history of a site,
+PVSystemID,Element,Identifier for the System (plant).,stdi:stringItemType
+CapacityDC,Element,Capacity in DC at Standard Test Conditions,num:powerItemType
+ProdQty,Element,Quantity of a Product,us-types:perUnitItemType
+ProdLineItem,Object,A product used within a PVSystem and the quantity of that product,
+PVSystems,Array,array of PVSystem,
+Utility,Object,A electric service provider,
+ProjectedSavingsAmt,Element,The projected savings to the consumer from reduced electricity demand over a period of time.,stdi:monetaryItemType
+OperationalStatus,Element,The status of the operation of the PVSystem,OperationalStatusItemType
+OperationalPhase,Element,The status of the operation of the PVSystem,OperationalPhaseItemType
+ProdType,Element,The type of product,ProdTypeItemType
+BillOfMaterials,Object,Bill of Materials for a System,
+ProdLineItems,Array,array of ProdLineItem,
+BillOfMaterialsStatus,Element,The status of the BillOfMaterials,BillOfMaterialsStatusItemType
+Title,Element,The title of the contact,stdi:stringItemType
+RequirementNotes,Element,The notes about the requirement level of the engineering review,stdi:stringItemType
+TaskCompletedDate,Element,The date the task was completed,stdi:stringItemType
+Structure,Object,A structure on a site,
+StructureType,Element,The type of Structure,StructureTypeItemType
+RoofMaterial,Element,The type of roof of the structure,solar-types:roofItemType
+SeismicLoad,Object,The combined parameters for the Seismic Load condition of a structural design,
+MCERgroundmotionSS,Element, MCER ground motion (period=0.2s),stdi:stringItemType
+MCERgroundmotionS1,Element,MCER ground motion (period=1.0s),stdi:stringItemType
+StructureID,Element,The ID of the structure,solar-types:uuidItemType
+Structures,Array,array of Structure,
+ElectricalServiceID,Element,The identifier of the electrical service system,stdi:stringItemType
+ElectricalService,Object,A electrical service of a site,
+TempLowASHRAE,Element,The ambient dry bulb extreme low temperature for the wire sizing calculations.,num-us:temperatureItemType
+TempHighASHRAE,Element,The ambient dry bulb high temperature for the wire sizing calculations.,num-us:temperatureItemType
+RiskCategory,Element,The risk category from ASCE7,RiskCategoryItemType
+WindCode,Element,The wind code adopted by the authority having jurisdiction,WindCodeItemType
+ElectricalServices,Array,array of ElectricalService,
+ElectricalServiceRating,Element,The rating of the main electrical service breaker,num-us:electricCurrentItemType
+WindCodeNotes,Element,The notes about the wind code if there are special requirements,stdi:stringItemType
+TaskID,Element,The UUID of the task,solar-types:uuidItemType
+YearBuilt,Element,The year the structure was built,stdi:dateItemType
+HomeownersAssociation,Object,The Homeowner's Association of a site,
+HOAName,Element,The name of the homeowner's association,stdi:stringItemType
+FoundationType,Element,The type of foundation the structure has,FoundationTypeItemType
+ConstructionMaterial,Element,The type of construction of the structure,ConstructionMaterialItemType
+RiskDesignCriteria,Object,The risk design criteria,
+ExposureCategory,Element,The exposure category of the RiskDesignCriteria as defined by the ASCE 7 Standard,ExposureCategoryItemType
+InterconnectionVoltage,Element,The voltage of the utility being interconnected too,num-us:voltageItemType
+InterconnectionPhaseType,Element,The phase of the utility being interconnected too,InterconnectionPhaseTypeItemType
+FeeStructure,Object,A fee for a good or service,
+FeeStructureType,Element,The type of fee period,FeeStructureTypeItemType
+FeeName,Element,The name of the fee payment,stdi:stringItemType
+FeeID,Element,The ID of a particular fee,solar-types:uuidItemType
+FeeStructures,Array,array of FeeStructure,
+FeeStructureID,Element,The uuid of the FeeStructure,solar-types:uuidItemType
+Fee,Object,A fee for a good or service,
+FeeStructureName,Element,The name of the FeeStructure,stdi:stringItemType
+Fees,Array,array of Fee,
+TaskDueDate,Element,The due date of a task,stdi:dateItemType
+AHJCode,Element,The state letters and GeoID as described by the Census FIPS code.,stdi:stringItemType
+Checklist,Object,An Checklist or survey,
+Answer,Object,The result of an Checklist question,
+Question,Object,A question for an Checklist,
+QuestionID,Element,An ID for the Checklist question,stdi:stringItemType
+QuestionLabel,Element,The statement of the Checklist Question,stdi:stringItemType
+AnswerValue,Element,The value of the Checklist Result,stdi:stringItemType
+TransactionLineID,Element,The ID of the transaction line,stdi:stringItemType
+ChecklistType,Element,The type of Checklist,ChecklistTypeItemType
+TransactionID,Element,The ID of the transaction,stdi:stringItemType
+AnswerType,Element,The type of result expected by the question,AnswerTypeItemType
+ChecklistDate,Element,The date of the Checklist,stdi:dateItemType
+Answers,Array,array of Answer,
+Questions,Array,array of Question,
+Enumeration,Element,A valid value for an enumeration in a list,stdi:stringItemType
+InterconnectionPhase,Element,The phase of the interconnection,InterconnectionPhaseItemType
+TariffStructure,Object,The structure of a Tariff which is the sale of a commodity,
+TariffStructureName,Element,The name of the Tariff,stdi:stringItemType
+TariffStructureID,Element,The ID of the Tariff,solar-types:uuidStdItemType
+TariffStructureType,Element,The type of Tariff,TariffStructureTypeItemType
+Amount,Element,A currency amount,stdi:monetaryItemType
+QuestionUnits,Element,The units of the question,stdi:stringItemType
+Account,Object,A account,
+AccountType,Element,The type of account,AccountTypeItemType
+AccountName,Element,The name of the account,stdi:stringItemType
+AccountNumber,Element,The account number,stdi:stringItemType
+AccountRole,Element,The role the account plays in the reporting systems,AccountRoleItemType
+AccountBalance,Object,The balance of an account,
+AccountBalances,Array,array of AccountBalance,
+MonthlyOperatingReport,Object,The Monthly Operating Report Data,
+AgingBucket,Object,Sum of the aging amounts of transactions for a particular time period,
+StartPastDueDays,Element,The number of past due days that the transactions are to be included in this aging bucket,stdi:pureItemType
+EndPastDueDays,Element,The number of past due days that the transactions are to be included in this aging bucket,stdi:pureItemType
+AgingBucketType,Element,The type of aging bucket,AgingBucketTypeItemType
+AgingBuckets,Array,array of AgingBucket,
+EnergyModels,Array,array of EnergyModel,
+EnergyConsumptions,Array,array of EnergyConsumption,
+EnergyProductions,Array,array of EnergyProduction,
+EnergyPredictions,Array,array of EnergyPrediction,
+EnergyUsages,Array,array of EnergyUsage,
+EnergyMeasurements,Array,array of EnergyMeasurement,
+ProdDatasheet,Element,The datasheet for the product,stdi:stringItemType
+ProdInstruction,Element,A single document in a collection of the instructions for a product.,stdi:stringItemType
+ProdInstructions,Array,array of ProdInstruction,
+SpecificationName,Element,Use this for describing an individual specification,stdi:stringItemType
+SpecificationType,Element,The enumerated list of the types of major specifications.,SpecificationTypeItemType
+SpecificationUnit,Element,The specific unit of the specification,stdi:stringItemType
+SpecificationValue,Element,The value of the specific Specification.,stdi:stringItemType
+ProdSpecification,Object,A single specification for a product,
+ProdSpecifications,Array,array of ProdSpecification,
+ProdCertification,Object,A certification for a product,
+CertificationAgency,Object,The agency or testing center that grants the certification,
+CertificationAgencyName,Element,The name of the certification name,stdi:stringItemType
+ProdCertifications,Array,array of ProdCertification,
+AgingBalance1To30Days,Element,The aging balance from 1 to 30 days,stdi:monetaryItemType
+AgingBalance31To60Days,Element,Aging balance from 31 to 60 days,stdi:monetaryItemType
+AgingBalance61to90Days,Element,Aging balance from 61 to 90 days,stdi:monetaryItemType
+AgingBalance91to120Days,Element,Aging balance from 91 to 120 days,stdi:monetaryItemType
+AgingBalanceOver120Days,Element,The aging balance over 120 days,stdi:monetaryItemType
+TaskTypeID,Element,The UUID of the task type,solar-types:uuidItemType
+WindLoad,Object,A structural wind load,
+SnowLoad,Object,A structural snow load,
+WindSpeed,Element,"Velocity of the wind, typically measured at 3m height above ground.",num-us:speedItemType
+SnowPressure,Element,The design pressure to be applied to a structure for snow loading,num-us:pressureItemType
+SnowLoads,Array,array of SnowLoad,
+SnowCode,Element,The code for the local snow loading design,SnowCodeItemType
+ErrorMessage,Element,The message of the error,stdi:stringItemType
+ErrorName,Element,The name of the error,stdi:stringItemType
+ErrorCode,Element,The code of an error,stdi:stringItemType
+EstimatedTurnaroundDays,Element,The number of days the jurisdiction on average takes to complete a permit,stdi:stringItemType
+AHJInspection,Object,An inspection conducted by the local AHJ,
+AHJInspectionName,Element,The name of the inspection,stdi:stringItemType
+AHJInspectionNotes,Element,The notes about the inspection,stdi:stringItemType
+AHJInspections,Array,array of AHJInspection,
+PermitIssueMethod,Element,The method by which the permit is issued,PermitIssueMethodItemType
+PermitIssueMethodNotes,Element,The notes about the method of issuing permits the AHJ uses,stdi:stringItemType
+InspectionType,Element,The type of inspection,InspectionTypeItemType
+AnswerValues,Array,array of AnswerValue,
+AnswerOptions,Array,array of AnswerOption,
+AnswerOption,Element,An option for the answer to a question,stdi:stringItemType
+BatterySystem,Object,A battery system,
+BatterySystemID,Element,The UUID of the battery system,solar-types:uuidItemType
+BatterySystemPrice,Element,The price of the battery system as indicated on the contract,stdi:monetaryItemType
+BatterySystems,Array,array of BatterySystem,
+Loan,Object,A loan,
+LoanTerm,Element,The length of the loan,stdi:dateItemType
+LoanRate,Element,The percentage rate of the loan,stdi:stringItemType
+UUID,Element,The UUID of an object,solar-types:uuidItemType
+WindLoads,Array,array of WindLoad,
+TaskType,Object,The type of a task,
+TaskTypeName,Element,The name of a TaskType,stdi:stringItemType
+TaskCategoryID,Element,The UUID of the task category,solar-types:uuidItemType
+TaskGroup,Element,The name of the task category which is used to normalize task types when searching across multiple companies.,TaskGroupItemType
+FeeType,Object,The type of a fee,
+FeeTypeName,Element,The name of a FeeType,stdi:stringItemType
+FeeGroup,Element,A optional normalized list of FeeTypes that allow for searching across multiple company datasets,FeeGroupItemType
+TechnicianRequired,Element,If a on-site Technician from the AHJ is required to complete the AHJInspection,stdi:stringItemType
+PermitIssueMethods,Array,array of PermitIssueMethod,
+DocumentSubmissionMethods,Array,array of DocumentSubmissionMethod,
+Service,Object,A service,
+Quantity,Element,A quantity,stdi:integerItemType
+ServiceLineItem,Object,A ServiceLineItem,
+ServiceName,Element,The name of the service,stdi:stringItemType
+ServiceProvider,Element,The name of the person or organization providing the service,stdi:stringItemType
+ServiceLineItems,Array,array of ServiceLineItem,
+BillOfServices,Object,The scope of work for the given context in which the object appears.,
+BillOfServicesStatus,Element,The status of the overall scope of work,BillOfServicesStatusItemType
+ServiceID,Element,The UUID of the service,solar-types:uuidItemType
+ServiceQuantityUnit,Element,The method by which the cost of a service is evaluated.,ServiceQuantityUnitItemType
+ServiceType,Object,The type of Service,
+ServiceTypeName,Element,The name of the service type,stdi:stringItemType
+ServiceTypeID,Element,The UUID of the ServiceType,solar-types:uuidItemType
+ServiceGroup,Element,The optional list of normalized services that allow for cross-platform comparison of service data.,ServiceGroupItemType
+ServicePaymentResponsibility,Element,Information on who or what is performing the payment responsibility of the service,ServicePaymentResponsibilityItemType
+ServicePaidTo,Element,The Service Payment Responsibility for the Payee of the Service,ServicePaidToItemType
+ServicePaidBy,Element,The Service Payment Responsibility for the Payer of the Service,ServicePaidByItemType
+UnitPrice,Element,Amount Per ServiceQuantityUnit,stdi:monetaryItemType
+AmountExtended,Element,The total amount of the individual line item calculated by multiplying Quantity by UnitPrice,stdi:monetaryItemType
+BusbarCapacityAC,Element,Maximum AC capacity or load that the busbar is rated to handle.,num:powerItemType
+ProdCombiner,Element,A combiner joins several DC circuits.,
+HeightAboveGround,Element,Height above ground level,stdi:stringItemType
+ASTME28484ModelCoeffA3,Element,"Coefficient a3 in Equation 1 of ASTM E2848-11, P = E(a1 + a2 x E + a3 x Ta + a4 x V) where P is power, E is in-plane irradiance, Ta is ambient air temperature and V is wind speed.",stdi:decimalItemType
+Rainfall,Element,Amount of rainfall in a given period of time,num:lengthItemType
+FilterIrradMin,Element,Lower limit on irradiance.,num-us:irradianceItemType
+OrientationAzimuth,Element,"Azimuth of the sun, measured in degrees. The horizontal angle measured clockwise from true north, e.g. True North = 0 degrees, East = 90 degrees, South = 180 degrees, etc.",num-us:planeAngleItemType
+ModuleMaterialsAndWorkmanShipWarrInitiationDate,Element,Initiation date of the Materials and Workmanship Warranty.,stdi:dateItemType
+ModulePerfWarrEndDate,Element,Date performance warranty expires. The performance warranty guarantees that a solar panel will operate with a given level of efficiency over its lifetime.,stdi:dateItemType
+SiteID,Element,Universally unique identifier for the site.,solar-types:uuidItemType
+HumidityRelative,Element,Ratio between the amount of moisture in the air and the maximum amount of moisture that could be present in the air at current air temperature.,num:percentItemType
+ASTME2848ModelResidualMean,Element,Mean value of the residuals of the regression model at ASTM E2848-11 Eq. 1.,stdi:decimalItemType
+TempCell,Element,Temperature of a cell in a module.,num-us:temperatureItemType
+FilterWindSpeedMin,Element,Lower limit on wind speed.,num-us:speedItemType
+FilterPowerACMin,Element,Lower limit on AC power.,num:powerItemType
+CurrentShortCircuit,Element,Current of a photovoltaic device at short circuit conditions.,num-us:electricCurrentItemType
+VoltageOpenCircuit,Element,Voltage at open circuit conditions,num-us:voltageItemType
+TrackerMaterialsWorkmanshipWarrInitiation,Element,Tracker Materials & Workmanship Warranty initiation date.,stdi:dateItemType
+DataFilterOutsideRange,Element,Indicator that data passes checks for values outside of acceptable range.,stdi:booleanItemType
+ASTME2848ModelResidualStandardDeviation,Element,Standard deviation of the residuals of the regression model at ASTM E2848-11 Eq. 1.,stdi:decimalItemType
+TempMeter,Element,Temperature of a power measurement device.,num-us:temperatureItemType
+RefCellCalibrationConstantAtRptCond,Element,"Ratio of reference cell current to irradiance at spectrum for reporting condition, termed C_RC in ASTM E2848-11. Units of A/(W/m2).",stdi:decimalItemType
+TempModule,Element,Temperature measured at the back of a module.,num-us:temperatureItemType
+ASTME2848PowerRtgAtRptCond,Element,"Power rating P0 at reporting condition calculated using fitted model. Calculated by Equation 2 of ASTM E2848-11, P0 = E(a1 + a2 x E + a3 x Ta + a4 x V) where E is in-plane irradiance, Ta is ambient air temperature and V is wind speed at the reporting condition.",num:powerItemType
+ManufactureDate,Element,Manufacture date of the device.,stdi:dateItemType
+PressureAtmospheric,Element,The air pressure at the location of the weather data record,num-us:pressureItemType
+ASTME28484ModelCoeffA1,Element,"Coefficient a1 in Equation 1 of ASTM E2848-11, P = E(a1 + a2 x E + a3 x Ta + a4 x V) where P is power, E is in-plane irradiance, Ta is ambient air temperature and V is wind speed.",stdi:decimalItemType
+SerialNum,Element,Serial number of the device.,stdi:stringItemType
+AccuracyClass,Element,"Accuracy class of an instrument. The string should identify the standard where applicable, or a term in common use by calibration laboratories. For example, for a pyranometer, accuracy class can be ""Secondary Standard"". For an AC power meter, accuracy class could be ""ANSI C12.20-2015 Class 0.5"".",stdi:stringItemType
+IrradDirectNormal,Element,"The amount of direct irradiance received per unit area on a surface that is perpendicular (or normal) to the direction of the sun. Direct irradiance, also termed beam irradiance, is not scattered or reflected by the atmosphere, clouds, or other surfaces before arriving at the surface of measurement. Direct normal irradiance is measured in watts per square meter.",num-us:irradianceItemType
+FilterIrradMax,Element,Upper limit on irradiance.,num-us:irradianceItemType
+TrackerMaterialsWorkmanshipWarrExp,Element,Tracker Materials & Workmanship Warranty expiration date.,stdi:dateItemType
+PowerDC,Element,Power (DC) measured at an instant in time,num:powerItemType
+CurrentTransducerRatio,Element,Current Transducer Ratio (CT Ratio).,stdi:decimalItemType
+ASTME2848PowerRtgUncertainty,Element,Expanded uncertainty of the power rating at the reference condition. See ASTM E2848-11 paragraph 9.4 for guidance on calculating the expanded uncertainty.,stdi:decimalItemType
+DataFilterInverterClipping,Element,Indicator that data passes checks for periods of inverter clipping or operating away from maximum power point tracking.,stdi:booleanItemType
+ASTME28484ModelCoeffA4,Element,"Coefficient a4 in Equation 1 of ASTM E2848-11, P = E(a1 + a2 x E + a3 x Ta + a4 x V) where P is power, E is in-plane irradiance, Ta is ambient air temperature and V is wind speed.",stdi:decimalItemType
+SiteMandatoryAccessReqrmnts,Element,"Description of mandatory requirements for access to the site, such as background checks.",stdi:stringItemType
+SystemPF,Element,"Power factor setting of the power system which is defined as the ratio of the real power flowing to the load, to the apparent power in the circuit. It is a dimensionless number in the closed internal of -1 to +1.",num:percentItemType
+EquipTypeWarr,Element,Description of the warranty available on a type of equipment.,stdi:stringItemType
+IrradGlobalHorizontal,Element,Total amount of shortwave radiation received per unit area on a horizontal surface. Measured in watts per square meter.,num-us:irradianceItemType
+ASTME28484ModelCoeffA2,Element,"Coefficient a2 in Equation 1 of ASTM E2848-11, P = E(a1 + a2 x E + a3 x Ta + a4 x V) where P is power, E is in-plane irradiance, Ta is ambient air temperature and V is wind speed.",stdi:decimalItemType
+DataFilterCollectionSystem,Element,Indicator that data passes checks for data collection system faults or outages.,stdi:booleanItemType
+MaintDateLast,Element,Date of latest maintenance activity,stdi:dateItemType
+EquipTypeWarrStartDateMilestone,Element,"Description of start date milestone, for example, delivery of the equipment at the site.",stdi:stringItemType
+ProdName,Element,"Name of the product, for example ABC Brand Inverter.",stdi:stringItemType
+TempAmb,Element,Temperature of the air.,num-us:temperatureItemType
+DataFilterInstrumentAlignment,Element,Indicator that data passes checks for alignment between an irradiance instrument and a PV system's plane of array.,stdi:booleanItemType
+EquipTypeWarrOutput,Element,Description of the warranted output.,stdi:stringItemType
+EnergyAC,Element,Energy (AC) measured for a period of time.,num:energyItemType
+Albedo,Element,Percentage of light that is reflected off the ground surface,num:percentItemType
+OrientationTilt,Element,"The array's tilt angle in degrees from horizontal, where zero degrees is horizontal, and 90 degrees is vertical and facing the equator (in both the southern and northern hemispheres)",num-us:planeAngleItemType
+FilterPowerACMax,Element,Upper limit on AC power.,num:powerItemType
+ModelWeatherSource,Element,"Weather source used for the model which can be None, Local, Satellite, Modeled, or Mixed.",stdi:stringItemType
+CalibrationInterval,Element,The recommended time interval between calibrations.,stdi:durationItemType
+EquipTypeWarrTerm,Element,"Duration of the product warranty term offered by the manufacturer in the format P1Y1M1D. The value should be entered using the ISO8601 format of PnYnMnDTnHnMnS. For example, a 5-year term would be represented as P5Y, a 3-month term as P3M, and a 4-year, 6-month and 10-day term would be represented as P4Y6M10D.",stdi:durationItemType
+PrecipitationType,Element,Type of precipitation according to SYNOP codes,stdi:stringItemType
+DataSelected,Element,Indicates data inclusion or exclusion. True if data is retained; False if data is excluded.,stdi:booleanItemType
+ManualLink,Element,Link to the device manual.,stdi:stringItemType
+MeasScope,Element,"Scope of the power measurement. Can be ""System"" for the entire PV system, ""Inverter XXX"" for a specific inveter, ""String YYY"" for a specific string.",stdi:stringItemType
+Avail,Element,Percent of AC capacity available during a period of time.,num:percentItemType
+FilterTempAmbMax,Element,Upper limit on ambient air temperature.,num-us:temperatureItemType
+ProdMfr,Element,Name of the product or equipment manufacturer.,stdi:stringItemType
+EquipTypeWarrEndDate,Element,End date of the equipment warranty.,stdi:dateItemType
+CalibrationMeth,Element,Description of calibration method for an instrument.,stdi:stringItemType
+RevenueGrade,Element,True if power meter is revenue grade quality.,stdi:booleanItemType
+SoilingInstrumentType,Element,Type of soiling instrument.,stdi:stringItemType
+PurchDate,Element,Purchase date of the device.,stdi:dateItemType
+ProdCode,Element,"A product code is a standardized, unique human-readable identifier that is compact,and can be easily parsed. It consists of an entity code concatenated to a product specific identification string, separated by a hyphen. A product string is up to 16 characters, comprised of upper case letters, number, and hyphens (â€˜-â€˜).
+The format of a product code is:
+[EntityCode]-[ProductString], e.g., UEE-E2000-3-XFM for company Universal Energy Enterprises with Entity Code UEE and Product String of E2000-3-XFM.    ",stdi:stringItemType
+DataFilterOutliers,Element,Indicator that data passes tests for outlier values.,stdi:booleanItemType
+DataFilterVisual,Element,Indicator that data pass checks by visual examination.,stdi:booleanItemType
+SnowAccumulation,Element,Depth of snow on the ground during a given period of time,num:lengthItemType
+DataFilterMissing,Element,Indicator that data passes tests that detect missing values.,stdi:booleanItemType
+CalibrationDateLast,Element,Date of last calibration,stdi:dateItemType
+ModulePerfWarrGuaranteedOutput,Element,"Description of the amount of production guaranteed by a solar panel performance warranty, which will guarantee a percentage of production depending on the age of the module. For example, guarantees 80% production after 25 years.",stdi:stringItemType
+FilterIrradStabilityMax,Element,Maximum coefficient of variation (ratio of standard deviation to mean) of irradiance during a window of data.,num:percentItemType
+DeviceID,Element,"Identifier for an individual piece of equipment used in a system, for example, ABC Brand inverter with serial number xxxx.",stdi:stringItemType
+SiteParcelID,Element,"Assessors parcel number, or APN, which is a number assigned to parcels of real property by the tax assessor of a particular jurisdiction for purposes of identification and record-keeping.",stdi:stringItemType
+TempRefCell,Element,Temperature of a reference cell.,num-us:temperatureItemType
+FilterIrradStabilityWindowLen,Element,Duration of a window for determining irradiance stability.,stdi:durationItemType
+DataFilterShading,Element,"Indicator that data passes checks for periods of time where the irradiance instrument or PV system is shaded by nearby structures, soiling, snow, frost or other cause.",stdi:booleanItemType
+FilterWindSpeedMax,Element,Upper limit on wind speed.,num-us:speedItemType
+DataFilterStability,Element,"Indicator that data values pass checks for unstable values, e.g., where data values change more than a threshold in a time interval.",stdi:booleanItemType
+IrradDiffuseHorizontal,Element,The amount of diffuse radiation received per unit area on a horizontal surface. Diffuse irradiance arrives at the surface of measurement from any direction other than the direction of the sun. Diffuse horizontal irradiance is measured in watts per square meter.,num-us:irradianceItemType
+EquipTypeWarrStartDate,Element,Start date of the equipment warranty.,stdi:dateItemType
+SiteName,Element,Name of the site.,stdi:stringItemType
+CurtailLimit,Element,Curtailment limit on AC power during a period of time.,num:powerItemType
+FilterTempAmbMin,Element,Upper limit on ambient air temperature.,num-us:temperatureItemType
+IrradPlaneOfArray,Element,"The irradiance on a plane from all sources, both direct and diffuse. The plane can be horizontal or tilted. Plane of array irradiance is measured in watts per square meter.",num-us:irradianceItemType
+AHJID,Element,"Municipal authority, for example, town, city or country, that has jurisdiction to define local code requirements.",solar-types:uuidItemType
+PowerAC,Element,Power (AC) measured at an instant in time,num:powerItemType
+UtilityLegalEntityID,Element,The Legal Entity Identifier of the utility.,dei:legalEntityIdentifierItemType
+Snowfall,Element,Amount of snowfall in a given period of time,num:lengthItemType
+DeviceCost,Element,Aggregate cost of the device from start of the installation to date.,stdi:monetaryItemType
+Value,,,
+Unit,,,
+Decimals,,,
+Precision,,,
+StartTime,,,
+EndTime,,,
+TaxonomyElementString,Object,"Contains Value, Unit, Decimals, Precision, StartTime, EndTime, ",
+TaxonomyElementNumber,Object,"Contains Value, Unit, Decimals, Precision, StartTime, EndTime, ",
+TaxonomyElementInteger,Object,"Contains Value, Unit, Decimals, Precision, StartTime, EndTime, ",
+TaxonomyElementBoolean,Object,"Contains Value, Unit, Decimals, Precision, StartTime, EndTime, ",
+Azimuth,Element,Azimuth relative to North where North is 0 degrees and East is 90 degrees,num-us:planeAngleItemType
+PVStringID,Element,A UUID for identifying a specific string,solar-types:uuidItemType
+Area,Element,Area,num:areaItemType
+Tilt,Element,"Tilt is the angle relative to horizontal. Horizontal is defined as the x,y plane of a right-hand coordinate system where the the x-axis is East, y-axis is North, and the z-axis is vertical.",num-us:planeAngleItemType
+Roll,Element,"Roll is a right-hand rotation about an oriented axis, with a positive value being a counter-clockwise rotation. In the context of a solar module, Roll is the rotation of the module about the vector normal to the module's plane that is oriented towards the sky.",num-us:planeAngleItemType
+RoofPlaneID,Element,The UUID of the roofplane,solar-types:uuidItemType
+PVArray,Object,An array of modules within a PVSystem that have a common orientation.,
+PVStrings,Array,array of PVString,
+PVString,Object,A string of Modules within a PVSystem,
+Orientation,Object,"Orientation is defined by Azimuth, Tilt and Roll. Azimuth and Tilt are defined in the context of a right-hand coordinate system where the the x-axis is East, y-axis is North, and the z-axis is vertical.",
+ProductLineItems,Array,array of ProductLineItem,
+ProductLineItem,Object,A product used within a PVSystem and the quantity of that product,
+PVArrays,Array,array of PVArray,
+ProdInverter,Element,Equipment that converts electricity from DC to AC,
+InverterStyle,Element,"Description of the style of the inverter which can be Central, String, or MicroInverter.",inverterStyleItemType
+ProdWire,Element,Wire in a PV system,
+WireType,Element,The type of wire or cable.,WireTypeItemType
+Grounding,Element,"Describes the grounding of the inverter, can be Grounded or Transformerless",GroundingItemType
+PVArrayID,Element,A UUID for identifying a specific array,solar-types:uuidItemType
+RoofPlane,Object,A surface of a roof at a single orientation,
+RoofPlanes,Array,array of RoofPlane,
+CapacityAC,Element,"Capacity in AC at nominal conditions. Equal to rated capacity for a single inverter, or sum of inverter rated capacities for a PV system. Nominal conditions for an inverter are continuous output at unity power factor.",num:powerItemType
+CurrentOutputMax,Element,Maximum output electric current of a device,num-us:electricCurrentItemType
+VoltageOutputMax,Element,Maximum output voltage of a device,num-us:voltageItemType
+Comment,Object,"Date, source and content of a comment",
+CommentID,Element,The UUID of a comment,solar-types:uuidItemType
+CommentDate,Element,Date of a comment,stdi:dateItemType
+CommentText,Element,Content text of a comment,stdi:stringItemType
+Comments,Array,array of Comment,
+ProdOptimizer,Element,A DC-DC power optimizer,
+WireGauge,Element,The gauge of a wire or cable.,wireGaugeItemType
+ModuleOrientation,Element,"The orientation of a module, can be Landscape or Portrait",moduleOrientationItemType
+Tag,Element,"A tag, keyword or label.",stdi:stringItemType
+Duration,Element,A number defining a length of time,stdi:durationItemType
+ProductWarranty,Element,The length of a product Warranty in Years,stdi:durationItemType
+PowerWarranty,Element,A description of the warranty for power output if applicable,stdi:stringItemType
+PowerMaximum,Element,(Pmax) at STC,num:powerItemType
+VoltageAtMaximumPower,Element,Voltage of a photovoltaic device at the maximum power point.,num-us:voltageItemType
+CurrentAtMaximumPower,Element,Current of a photovoltaic device at the maximum power point.,num-us:electricCurrentItemType
+ModuleEfficiency,Element,The efficiency of the solar module at standard test condition (STC).,percentItemType
+PowerToleranceMax,Element,The specified range within which a solar panel could overperform its rated power at Standard Test Conditions.,percentItemType
+TemperatureNOCT,Element,The nominal operating cell temperature (NOCT) of a solar module.,num-us:temperatureItemType
+TemperatureMaximumOperating,Element,The highest temperature in which a product can operate,num-us:temperatureItemType
+TemperatureMinimumOperating,Element,The coldest temperature in which a product can operate,num-us:temperatureItemType
+TemperatureCoefficientMaximumPower,Element,The temperature coefficient of power at the maximum power point.,tempCoefficientItemType
+TemperatureCoefficientOpenCircuitVoltage,Element,The temperature coefficient of voltage at open circuit.,tempCoefficientItemType
+TemperatureCoefficientShortCircuitCurrent,Element,The temperature coefficient of current at short circuit.,tempCoefficientItemType
+VoltageMaximumSystem,Element,The maximum voltage that a string of modules can support,num-us:voltageItemType
+FuseSeriesRating,Element,The series fuse rating (need better description),num-us:electricCurrentItemType
+CellType,Element,The cell type for a solar module,cellTechnologyItemType
+Mass,Element,The mass of the parent object. ,num:massItemType
+Width,Element,The width of the parent object,num:lengthItemType
+Length,Element,The length of the parent object,num:lengthItemType
+Height,Element,The height of the parent object,num:lengthItemType
+GlazingMaterial,Element,The material used in the glazing of a solar module,stdi:stringItemType
+SolarCellQuantity,Element,The number of ProdSolarCell in a module,stdi:integerItemType
+JunctionBoxDiodeQuantity,Element,The number of Junction Box Diodes in a solar module,stdi:pureItemType
+JunctionBoxProtectionCertification,Element,The maximum certification that the Junction Box has been tested for.,stdi:stringItemType
+CableCrossSectionArea,Element,The cross sectional area of the cable connecting from the solar module,num:areaItemType
+CableLength,Element,The length of the connection cable to the solar module,num:lengthItemType
+CableConnector,Element,The type of cable connector used on the solar module,stdi:stringItemType
+Weight,Element,The weight of the parent object,num:massItemType
+PowerToleranceMin,Element,The specified range within which a solar panel could underperform its rated power at Standard Test Conditions.,percentItemType
+ProdModule,Element,A solar module product,
+ProdSolarCell,Object,A subcomponent of a ProdModule,
+ProdGlazing,Object,"The collection of glass, plastic or other solar cell transparent covers used in crafting a solar module",
+Dimension,Object,Dimensions of an object,
+IsBifacial,Element,"True if a module is bifacial, False otherwise",stdi:booleanItemType
+BypassDiodeQuantity,Element,The number of bypass diodes connected in parallel with cell strings in the module.,stdi:integerItemType
+CellsInSeries,Element,The number of cells in series in a module.,stdi:integerItemType
+CellStringsParallelQuantity,Element,The number of parallel-connected strings (a string is a series-connected number of cells).,stdi:integerItemType
+Package,Object,Elements describing a package,
+Packages,Array,array of Package,
+Tags,Array,array of Tag,
+WarrantyType,Element,Classification of the Warranty. What type of Warranty is it?,WarrantyItemType
+WarrantyID,Element,Universally Unique Identifier for the Warranty,solar-types:uuidItemType
+WarrantyName,Element,Human Readable Name for the Warranty,stdi:stringItemType
+WarrantyDuration,Element,How long is the Warranty Valid For? ,durationItemType
+WarrantyEffectiveDate,Element,Date the Warranty Comes Into Force,stdi:dateItemType
+WarrantyExpirationDate,Element,Date the Warranty Is No Longer in Force,stdi:dateItemType
+Warranty,Object,Guarantee of minimum quality level,
+Warranties ,Array,array of Warranty,
+CertificationDate,Element,The date on which a certification is made.,stdi:dateItemType
+CertificationExpirationDate,Element,The expiration date of a certification.,stdi:dateItemType
+CertificationName,Element,The name of the certification.,stdi:stringItemType
+CertificateValue,Element,The document identifier of a certification.,stdi:stringItemType
+CertificationTypeProduct,Element,A value from the enumerated list of the possible certifications that a product can have.,CertificationTypeProductItemType
+CellColor,Element,Physical color of the solar cell,stdi:stringItemType
+CellCutType,Element,Fractional Cell Cut,CellCutTypeItemType
+CellTechnologyType,Element,Solar cell material type,cellTechnologyItemType
+BacksheetColor,Element,What Color is the Module backsheet?,xbrli:stringItemType
+BacksheetMaterial,Element,What is the Backsheet made of?,xbrli:stringItemType
+CellQuantity,Element,How Many Cells are in this module?,xbrli:integerItemType
+FrameColor,Element,What Color is the Module Frame?,xbrli:stringItemType
+FrameMaterialType,Element,The composition of the frame,FrameMaterialTypeItemType
+ModuleBusbarDescription,Element,How the busbars are arranged in this module,xbrli:stringItemType
+ShadeResponse,Element,Description of how the module responds to shading conditions,xbrli:stringItemType
