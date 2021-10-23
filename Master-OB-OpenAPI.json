@@ -106,8 +106,8 @@
           "Packages": {
             "$ref": "#/components/schemas/Packages"
           },
-          "Warranties ": {
-            "$ref": "#/components/schemas/Warranties "
+          "Warranties": {
+            "$ref": "#/components/schemas/Warranties"
           }
         },
         "x-ob-usage-tips": ""
@@ -8119,8 +8119,8 @@
               "ShadeResponse": {
                 "$ref": "#/components/schemas/ShadeResponse"
               },
-              "Warranties ": {
-                "$ref": "#/components/schemas/Warranties "
+              "Warranties": {
+                "$ref": "#/components/schemas/Warranties"
               }
             }
           }
@@ -8424,7 +8424,7 @@
           }
         }
       },
-      "Warranties ": {
+      "Warranties": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/Warranty"
