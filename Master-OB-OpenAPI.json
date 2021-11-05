@@ -9328,6 +9328,39 @@
         "items": {
           "$ref": "#/components/schemas/InverterOutput"
         }
+      },
+      "ProdBattery": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Product"
+          },
+          {
+            "type": "object",
+            "description": "A chemical electrical storage device",
+            "properties": {
+              "BatteryChemistryType": {
+                "$ref": "#/components/schemas/BatteryChemistryType"
+              }
+            }
+          }
+        ]
+      },
+      "BatteryChemistryType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of chemistry used in the battery",
+            "x-ob-item-type": "BatteryChemistryItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "LeadAcidGel"
+            }
+          }
+        ]
       }
     }
   },
@@ -14709,6 +14742,35 @@
         "Other": {
           "label": "Other",
           "description": ""
+        }
+      }
+    },
+    "BatteryChemistryItemType": {
+      "description": "",
+      "enums": {
+        "LeadAcidGel": {
+          "label": "Lead Acid Gel",
+          "description": ""
+        },
+        "LeadAcidAGM": {
+          "label": "Lead Acid AGM",
+          "description": "Absorbent Glass Mat"
+        },
+        "LeadAcidFlooded": {
+          "label": "Lead Acid Flooded",
+          "description": ""
+        },
+        "LeadAcidSealed": {
+          "label": "Lead Acid Sealed",
+          "description": "aka SLA"
+        },
+        "LiFePO4": {
+          "label": "LiFePO4",
+          "description": "Lithium Iron Phosphate (LFP)"
+        },
+        "LiPoly": {
+          "label": "Li Polymer",
+          "description": "Lithium Polymer"
         }
       }
     }
