@@ -9340,6 +9340,33 @@
             "properties": {
               "BatteryChemistryType": {
                 "$ref": "#/components/schemas/BatteryChemistryType"
+              },
+              "VoltageDCChargeMin": {
+                "$ref": "#/components/schemas/VoltageDCChargeMin"
+              },
+              "VoltageDCChargeMax": {
+                "$ref": "#/components/schemas/VoltageDCChargeMax"
+              },
+              "VoltageDCDischargeMax": {
+                "$ref": "#/components/schemas/VoltageDCDischargeMax"
+              },
+              "VoltageDCDischargeMin": {
+                "$ref": "#/components/schemas/VoltageDCDischargeMin"
+              },
+              "EnergyUsable": {
+                "$ref": "#/components/schemas/EnergyUsable"
+              },
+              "BatteryPowerDischargePeaks": {
+                "$ref": "#/components/schemas/BatteryPowerDischargePeaks"
+              },
+              "PowerDCChargeContinuousMax": {
+                "$ref": "#/components/schemas/PowerDCChargeContinuousMax"
+              },
+              "PowerDCDischargeContinuousMax": {
+                "$ref": "#/components/schemas/PowerDCDischargeContinuousMax"
+              },
+              "PowerDCDischargePeak": {
+                "$ref": "#/components/schemas/PowerDCDischargePeak"
               }
             }
           }
@@ -9358,6 +9385,168 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "LeadAcidGel"
+            }
+          }
+        ]
+      },
+      "EnergyUsable": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Usable energy of battery unit.",
+            "x-ob-item-type": "num:energyItemType",
+            "x-ob-item-type-group": "OBElectricalEnergy",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 9.6,
+              "Units": "kWh"
+            }
+          }
+        ]
+      },
+      "VoltageDCChargeMin": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Minimum DC voltage for charging",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 420,
+              "Units": "V"
+            }
+          }
+        ]
+      },
+      "VoltageDCChargeMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum DC voltage for charging",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 450,
+              "Units": "V"
+            }
+          }
+        ]
+      },
+      "VoltageDCDischargeMin": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Minimum DC discharge voltage.",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 350,
+              "Units": "V"
+            }
+          }
+        ]
+      },
+      "VoltageDCDischargeMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum DC Discharge voltage.",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 410,
+              "Units": "V"
+            }
+          }
+        ]
+      },
+      "PowerDCDischargePeak": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Peak power over time interval during discharge.",
+            "x-ob-item-type": "num:powerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 7,
+              "Units": "kW"
+            }
+          }
+        ]
+      },
+      "BatteryPowerDischargePeak": {
+        "type": "object",
+        "description": "Battery power peak discharge specifications.",
+        "properties": {
+          "Duration": {
+            "$ref": "#/components/schemas/Duration"
+          },
+          "PowerDCDischargePeak": {
+            "$ref": "#/components/schemas/PowerDCDischargePeak"
+          }
+        }
+      },
+      "BatteryPowerDischargePeaks": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/BatteryPowerDischargePeak"
+        }
+      },
+      "PowerDCDischargeContinuousMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum DC power during continuous discharge.",
+            "x-ob-item-type": "num:powerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 5,
+              "Units": "kW"
+            }
+          }
+        ]
+      },
+      "PowerDCChargeContinuousMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum DC power under continuous charge.",
+            "x-ob-item-type": "num:powerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 5,
+              "Units": "kW"
             }
           }
         ]
@@ -14771,6 +14960,38 @@
         "LiPoly": {
           "label": "Li Polymer",
           "description": "Lithium Polymer"
+        },
+        "NiCd": {
+          "label": "NiCd",
+          "description": "Nickel Cadmium"
+        },
+        "LiIon": {
+          "label": "Li-ion",
+          "description": "Lithium Ion"
+        },
+        "NiMH": {
+          "label": "NiMH",
+          "description": "Nickel Metal Hydride"
+        },
+        "NiFe": {
+          "label": "NiFe",
+          "description": "Nickel Iron"
+        },
+        "NaS": {
+          "label": "NaS",
+          "description": "Sodium Sulfur"
+        },
+        "Hybrid": {
+          "label": "Hybrid",
+          "description": "Hybrid"
+        },
+        "PbC": {
+          "label": "PbC",
+          "description": "Lead Carbon"
+        },
+        "Other": {
+          "label": "Other",
+          "description": "Other"
         }
       }
     }
