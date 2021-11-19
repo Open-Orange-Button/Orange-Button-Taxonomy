@@ -9352,6 +9352,152 @@
         "items": {
           "$ref": "#/components/schemas/InverterOutput"
         }
+      },
+      "Entity": {
+        "type": "object",
+        "description": "Any commercial or legal organization.",
+        "properties": {
+          "Addresses": {
+            "$ref": "#/components/schemas/Addresses"
+          },
+          "Contacts": {
+            "$ref": "#/components/schemas/Contacts"
+          },
+          "Email": {
+            "$ref": "#/components/schemas/Email"
+          },
+          "WorkPhone": {
+            "$ref": "#/components/schemas/WorkPhone"
+          },
+          "LegalEntityIdentifier": {
+            "$ref": "#/components/schemas/LegalEntityIdentifier"
+          },
+          "URL": {
+            "$ref": "#/components/schemas/URL"
+          },
+          "TaxID": {
+            "$ref": "#/components/schemas/TaxID"
+          },
+          "CreditRatings": {
+            "$ref": "#/components/schemas/CreditRatings"
+          },
+          "EntityID": {
+            "$ref": "#/components/schemas/EntityID"
+          }
+        }
+      },
+      "LegalEntityIdentifier": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Legal Entity Identifier (LEI) of the entity.",
+            "x-ob-item-type": "dei:legalEntityIdentifierItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "TaxID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Tax identification number of the entity.",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "CreditRating": {
+        "type": "object",
+        "description": "Credit rating.",
+        "properties": {
+          "CreditScore": {
+            "$ref": "#/components/schemas/CreditScore"
+          },
+          "CreditScoreSource": {
+            "$ref": "#/components/schemas/CreditScoreSource"
+          }
+        }
+      },
+      "CreditScore": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Credit symbol that indicates the degree of credit worthiness. ",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "AAA"
+            }
+          }
+        ]
+      },
+      "CreditScoreSource": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Issuing source of a credit score, such as a Rating Agency. ",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Standard & Poor's"
+            }
+          }
+        ]
+      },
+      "CreditRatings": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/CreditRating"
+        }
+      },
+      "EntityID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Entity UUID",
+            "x-ob-item-type": "solar-types:uuidItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
+            }
+          }
+        ]
       }
     }
   },
@@ -11095,7 +11241,7 @@
         }
       }
     },
-    "solar-types:participantItemType": {
+    "solar-types:entityItemType": {
       "description": "",
       "enums": {
         "Appraiser": {
@@ -11114,19 +11260,19 @@
           "label": "",
           "description": ""
         },
-        "Back_leverageLender": {
+        "BackLeverageLender": {
           "label": "",
           "description": ""
         },
-        "Back_upAssetManager": {
+        "BackupAssetManager": {
           "label": "",
           "description": ""
         },
-        "Back_upMaintenanceProvider": {
+        "BackupMaintenanceProvider": {
           "label": "",
           "description": ""
         },
-        "Back_upMonitoringServiceProvider": {
+        "BackupMonitoringServiceProvider": {
           "label": "",
           "description": ""
         },
@@ -11134,7 +11280,7 @@
           "label": "",
           "description": ""
         },
-        "Builders_ConstructionAll_RiskInsurers": {
+        "BuildersConstructionAllRiskInsurer": {
           "label": "",
           "description": ""
         },
@@ -11230,11 +11376,11 @@
           "label": "",
           "description": ""
         },
-        "IndependentSystemOperatorasAuthorityHavingJurisdiction": {
+        "IndependentSystemOperatorAsAuthorityHavingJurisdiction": {
           "label": "",
           "description": ""
         },
-        "InterconnectingUtilityasAuthorityHavingJurisdiction": {
+        "InterconnectingUtilityAsAuthorityHavingJurisdiction": {
           "label": "",
           "description": ""
         },
@@ -11246,7 +11392,7 @@
           "label": "",
           "description": ""
         },
-        "Land_UseAttorney": {
+        "LandUseAttorney": {
           "label": "",
           "description": ""
         },
@@ -11270,7 +11416,7 @@
           "label": "",
           "description": ""
         },
-        "LongtermEquityInvestor": {
+        "LongTermEquityInvestor": {
           "label": "",
           "description": ""
         },
@@ -11294,7 +11440,7 @@
           "label": "",
           "description": ""
         },
-        "PermittingAuthorityasAuthorityHavingJurisdiction": {
+        "PermittingAuthorityAsAuthorityHavingJurisdiction": {
           "label": "",
           "description": ""
         },
@@ -11338,7 +11484,7 @@
           "label": "",
           "description": ""
         },
-        "RegionalTransmissionOperatorasAuthorityHavingJurisdiction": {
+        "RegionalTransmissionOperatorAsAuthorityHavingJurisdiction": {
           "label": "",
           "description": ""
         },
@@ -11374,7 +11520,7 @@
           "label": "",
           "description": ""
         },
-        "TaxequityInvestor": {
+        "TaxEquityInvestor": {
           "label": "",
           "description": ""
         },
@@ -11408,6 +11554,14 @@
         },
         "Other": {
           "label": "",
+          "description": ""
+        },
+        "Installer": {
+          "label": "Installer",
+          "description": ""
+        },
+        "Inspector": {
+          "label": "Inspector",
           "description": ""
         }
       }
