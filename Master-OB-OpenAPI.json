@@ -1944,37 +1944,6 @@
         },
         "x-ob-usage-tips": ""
       },
-      "Utility": {
-        "type": "object",
-        "description": "A electric service provider",
-        "properties": {
-          "UtilityLegalEntityID": {
-            "$ref": "#/components/schemas/UtilityLegalEntityID"
-          },
-          "UtilityName": {
-            "$ref": "#/components/schemas/UtilityName"
-          },
-          "FeeStructures": {
-            "$ref": "#/components/schemas/FeeStructures"
-          },
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "Contacts": {
-            "$ref": "#/components/schemas/Contacts"
-          },
-          "Addresses": {
-            "$ref": "#/components/schemas/Addresses"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "URL": {
-            "$ref": "#/components/schemas/URL"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
       "ProjectedSavingsAmt": {
         "allOf": [
           {
@@ -6695,28 +6664,6 @@
           }
         ]
       },
-      "UtilityLegalEntityID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The Legal Entity Identifier of the utility.",
-            "x-ob-item-type": "dei:legalEntityIdentifierItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Decimals": "",
-              "EndTime": "",
-              "Precision": "",
-              "StartTime": "",
-              "Unit": "",
-              "Value": ""
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "Snowfall": {
         "allOf": [
           {
@@ -9380,9 +9327,6 @@
           },
           "CreditRatings": {
             "$ref": "#/components/schemas/CreditRatings"
-          },
-          "EntityID": {
-            "$ref": "#/components/schemas/EntityID"
           }
         }
       },
@@ -9482,20 +9426,38 @@
           "$ref": "#/components/schemas/CreditRating"
         }
       },
-      "EntityID": {
+      "Utility": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/Entity"
           },
           {
             "type": "object",
-            "description": "Entity UUID",
-            "x-ob-item-type": "solar-types:uuidItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
-            }
+            "description": "A electric service provider",
+            "properties": {
+              "UtilityName": {
+                "$ref": "#/components/schemas/UtilityName"
+              },
+              "FeeStructures": {
+                "$ref": "#/components/schemas/FeeStructures"
+              },
+              "Description": {
+                "$ref": "#/components/schemas/Description"
+              },
+              "Contacts": {
+                "$ref": "#/components/schemas/Contacts"
+              },
+              "Addresses": {
+                "$ref": "#/components/schemas/Addresses"
+              },
+              "FileFolderURL": {
+                "$ref": "#/components/schemas/FileFolderURL"
+              },
+              "URL": {
+                "$ref": "#/components/schemas/URL"
+              }
+            },
+            "x-ob-usage-tips": ""
           }
         ]
       }
