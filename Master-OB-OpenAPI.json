@@ -6761,6 +6761,31 @@
           }
         ]
       },
+      "ValueNumber": {
+        "type": "number",
+        "description": "Value for the instance element",
+        "x-ob-usage-tips": ""
+      },
+      "ValueString": {
+        "type": "string",
+        "description": "Value for the instance element",
+        "x-ob-usage-tips": ""
+      },
+      "ValueBoolean": {
+        "type": "boolean",
+        "description": "Value for the instance element",
+        "x-ob-usage-tips": ""
+      },
+      "ValueInteger": {
+        "type": "integer",
+        "description": "Value for the instance element",
+        "x-ob-usage-tips": ""
+      },
+      "ValueArray": {
+        "type": "array",
+        "description": "Value for the instance element",
+        "x-ob-usage-tips": ""
+      },
       "Value": {
         "type": "string",
         "description": "Value for the instance element",
@@ -6795,7 +6820,7 @@
         "type": "object",
         "properties": {
           "Value": {
-            "$ref": "#/components/schemas/Value"
+            "$ref": "#/components/schemas/ValueString"
           },
           "Unit": {
             "$ref": "#/components/schemas/Unit"
@@ -6819,7 +6844,7 @@
         "type": "object",
         "properties": {
           "Value": {
-            "$ref": "#/components/schemas/Value"
+            "$ref": "#/components/schemas/ValueNumber"
           },
           "Unit": {
             "$ref": "#/components/schemas/Unit"
@@ -6843,7 +6868,7 @@
         "type": "object",
         "properties": {
           "Value": {
-            "$ref": "#/components/schemas/Value"
+            "$ref": "#/components/schemas/ValueInteger"
           },
           "Unit": {
             "$ref": "#/components/schemas/Unit"
@@ -6867,7 +6892,7 @@
         "type": "object",
         "properties": {
           "Value": {
-            "$ref": "#/components/schemas/Value"
+            "$ref": "#/components/schemas/ValueBoolean"
           },
           "Unit": {
             "$ref": "#/components/schemas/Unit"
@@ -6891,7 +6916,7 @@
         "type": "object",
         "properties": {
           "Value": {
-            "$ref": "#/components/schemas/Value"
+            "$ref": "#/components/schemas/ValueArray"
           },
           "Unit": {
             "$ref": "#/components/schemas/Unit"
