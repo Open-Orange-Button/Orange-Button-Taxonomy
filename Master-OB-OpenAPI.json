@@ -9353,9 +9353,6 @@
               "VoltageDCDischargeMin": {
                 "$ref": "#/components/schemas/VoltageDCDischargeMin"
               },
-              "EnergyUsable": {
-                "$ref": "#/components/schemas/EnergyUsable"
-              },
               "BatteryPowerDischargePeaks": {
                 "$ref": "#/components/schemas/BatteryPowerDischargePeaks"
               },
@@ -9367,6 +9364,33 @@
               },
               "PowerDCDischargePeak": {
                 "$ref": "#/components/schemas/PowerDCDischargePeak"
+              },
+              "EnergyCapacityUsable": {
+                "$ref": "#/components/schemas/EnergyCapacityUsable"
+              },
+              "EnergyCapacityNominal": {
+                "$ref": "#/components/schemas/EnergyCapacityNominal"
+              },
+              "DepthOfDischargeMax": {
+                "$ref": "#/components/schemas/DepthOfDischargeMax"
+              },
+              "AltitudeInstallationMax": {
+                "$ref": "#/components/schemas/AltitudeInstallationMax"
+              },
+              "VoltageDCInputNom": {
+                "$ref": "#/components/schemas/VoltageDCInputNom"
+              },
+              "VoltageDCOutputNom": {
+                "$ref": "#/components/schemas/VoltageDCOutputNom"
+              },
+              "TemperatureMinimumOperating": {
+                "$ref": "#/components/schemas/TemperatureMinimumOperating"
+              },
+              "TemperatureMaximumOperating": {
+                "$ref": "#/components/schemas/TemperatureMaximumOperating"
+              },
+              "CommunicationProtocol": {
+                "$ref": "#/components/schemas/CommunicationProtocol"
               }
             }
           }
@@ -9385,24 +9409,6 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "LeadAcidGel"
-            }
-          }
-        ]
-      },
-      "EnergyUsable": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Usable energy of battery unit.",
-            "x-ob-item-type": "num:energyItemType",
-            "x-ob-item-type-group": "OBElectricalEnergy",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 9.6,
-              "Units": "kWh"
             }
           }
         ]
@@ -9547,6 +9553,112 @@
             "x-ob-sample-value": {
               "Value": 5,
               "Units": "kW"
+            }
+          }
+        ]
+      },
+      "EnergyCapacityUsable": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Usable energy of battery unit.",
+            "x-ob-item-type": "num:energyItemType",
+            "x-ob-item-type-group": "OBElectricalEnergy",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 9.6,
+              "Units": "kWh"
+            }
+          }
+        ]
+      },
+      "EnergyCapacityNominal": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum DC Theoretical Energy Capacity",
+            "x-ob-item-type": "num:energyItemType",
+            "x-ob-item-type-group": "OBElectricalEnergy",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 50,
+              "Unit": "kWh"
+            }
+          }
+        ]
+      },
+      "DepthOfDischargeMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum Depth of Discharge without damaging battery hardware",
+            "x-ob-item-type": "percentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 98
+            }
+          }
+        ]
+      },
+      "AltitudeInstallationMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Max rated altitude before battery self discharge",
+            "x-ob-item-type": "num:lengthItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 3000,
+              "Unit": "m"
+            }
+          }
+        ]
+      },
+      "VoltageDCOutputNom": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Nominal DC output voltage",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 12,
+              "Unit": "V"
+            }
+          }
+        ]
+      },
+      "CommunicationProtocol": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Micro-grid communication protocol",
+            "x-ob-item-type": "CommunicationProtocolItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "RS485"
             }
           }
         ]
@@ -14992,6 +15104,23 @@
         "Other": {
           "label": "Other",
           "description": "Other"
+        }
+      }
+    },
+    "CommunicationProtocolItemType": {
+      "description": "",
+      "enums": {
+        "RS485": {
+          "label": "RS485",
+          "description": ""
+        },
+        "CAN 2.0 B": {
+          "label": "CAN 2.0 B",
+          "description": ""
+        },
+        "REbus DC Nanogrid": {
+          "label": "REbus DC Nanogrid",
+          "description": ""
         }
       }
     }
