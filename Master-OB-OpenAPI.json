@@ -6887,6 +6887,30 @@
         },
         "x-ob-usage-tips": ""
       },
+      "TaxonomyElementArray": {
+        "type": "object",
+        "properties": {
+          "Value": {
+            "$ref": "#/components/schemas/Value"
+          },
+          "Unit": {
+            "$ref": "#/components/schemas/Unit"
+          },
+          "Decimals": {
+            "$ref": "#/components/schemas/Decimals"
+          },
+          "Precision": {
+            "$ref": "#/components/schemas/Precision"
+          },
+          "StartTime": {
+            "$ref": "#/components/schemas/StartTime"
+          },
+          "EndTime": {
+            "$ref": "#/components/schemas/EndTime"
+          }
+        },
+        "x-ob-usage-tips": ""
+      },
       "Azimuth": {
         "allOf": [
           {
