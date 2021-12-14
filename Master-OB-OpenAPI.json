@@ -9617,7 +9617,7 @@
           },
           {
             "type": "object",
-            "description": "Max rated altitude before battery self discharge",
+            "description": "Maximum rated altitude",
             "x-ob-item-type": "num:lengthItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -15120,6 +15120,10 @@
         },
         "REbus DC Nanogrid": {
           "label": "REbus DC Nanogrid",
+          "description": ""
+        },
+        "Modbus": {
+          "label": "Modbus",
           "description": ""
         }
       }
