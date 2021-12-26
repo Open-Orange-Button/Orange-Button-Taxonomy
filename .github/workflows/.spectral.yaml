@@ -1,0 +1,30 @@
+extends: '@ibm-cloud/openapi-ruleset'
+rules:
+  no-special-characters:
+    description: Must only contain characters in 0-9, A-Z, a-z, and _ (underscore).
+    type: style
+    given:
+      - $.components.schemas[*]~ # Schema Element and Object Names
+      - $.x-ob-item-types[*]~ # OB Item Types
+      - $.x-ob-item-types[*].enums[*]~ # OB Item Type Enums
+      - $.x-ob-item-type-groups[*]~ # OB Item Type Groups
+    severity: error
+    then:
+      function: pattern
+      functionOptions:
+        match: ^[0-9A-Za-z_]+$
+
+  upper-camel-case-with-acronyms-and-numbers:
+    description: Should follow the upper camel case convention with all-caps acronyms and numbers.
+    type: style
+    given:
+      - $.components.schemas[*]~ # Schema Element and Object Names
+      - $.x-ob-item-types[*]~ # OB Item Types
+      - $.x-ob-item-types[*].enums[*]~ # OB Item Type Enums
+      - $.x-ob-item-type-groups[*]~ # OB Item Type Groups
+    severity: warn
+    then:
+      function: pattern
+      functionOptions:
+        match: ^[0-9A-Z][a-z0-9]*([A-Z]+[a-z0-9]*)*$ # modified version of k8s_camel_case to be more like upper camel case
+        # match: ^([0-9]+|[A-Z][a-z]+|[A-Z]+(?![a-z]))+$ # Match strings comprised of substrings with either 1 or more numbers, one capital letter followed by one or more lower case letters, or one or more capital letters NOT followed by a lower case leter. Example: AgingBalance1To30Days
