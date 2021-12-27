@@ -1,5 +1,4 @@
-
-name: Orange Button OpenAPI Validator
+name: OB OpenAPI Validator
 
 on: [push, pull_request]
 
@@ -15,8 +14,8 @@ jobs:
         with:
           definition-file: Master-OB-OpenAPI.json
 
-  orange-button-open-api-validator:
-    name: Orange Button OpenAPI Validator
+  ob-open-api-validator:
+    name: OB OpenAPI Validator
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
