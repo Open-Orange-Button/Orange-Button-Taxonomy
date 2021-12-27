@@ -1,5 +1,5 @@
 
-name: Validate Orange Button OpenAPI Taxonomy
+name: Orange Button OpenAPI Taxonomy Validator
 
 on: [push, pull_request]
 
@@ -9,7 +9,7 @@ jobs:
     name: Swagger Editor OAS Validator Remote
     steps:
       - name: Checkout
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
       - name: Validate OB OpenAPI
         uses: char0n/swagger-editor-validate@master
         with:
@@ -27,5 +27,5 @@ jobs:
       - name: Install IBM OpenAPI Validator with Spectral
         run: npm install -g ibm-openapi-validator
       - name: Run validator
-        working-directory: ./.github/workflows
-        run: lint-openapi ../../Master-OB-OpenAPI.json -c .validaterc -r .spectral.yaml
+        working-directory: ./.github
+        run: lint-openapi ../Master-OB-OpenAPI.json -c ./configs/validator/.validaterc -r ./configs/validator/.spectral.yaml
