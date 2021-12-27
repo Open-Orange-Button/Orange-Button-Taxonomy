@@ -1,12 +1,12 @@
 
-name: Orange Button OpenAPI Taxonomy Validator
+name: Orange Button OpenAPI Validator
 
 on: [push, pull_request]
 
 jobs:
   swagger-editor-oas-validator-remote:
-    runs-on: ubuntu-latest
     name: Swagger Editor OAS Validator Remote
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -16,6 +16,7 @@ jobs:
           definition-file: Master-OB-OpenAPI.json
 
   orange-button-open-api-validator:
+    name: Orange Button OpenAPI Validator
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
