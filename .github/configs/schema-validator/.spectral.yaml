@@ -31,4 +31,3 @@ rules:
       function: pattern
       functionOptions:
         match: ^[0-9A-Z][a-z0-9]*([A-Z]+[a-z0-9]*)*$ # modified version of k8s_camel_case to allow upper case letter beginning
-        # match: ^([0-9]+|[A-Z][a-z]+|[A-Z]+(?![a-z]))+$ # Match strings comprised of substrings with either 1 or more numbers, one capital letter followed by one or more lower case letters, or one or more capital letters NOT followed by a lower case leter. Example: AgingBalance1To30Days
