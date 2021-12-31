@@ -1813,6 +1813,9 @@
           },
           "CapacityAC": {
             "$ref": "#/components/schemas/CapacityAC"
+          },
+          "Entities": {
+            "$ref": "#/components/schemas/Entities"
           }
         },
         "x-ob-usage-tips": ""
@@ -4071,6 +4074,9 @@
           },
           "EnergyModels": {
             "$ref": "#/components/schemas/EnergyModels"
+          },
+          "Entities": {
+            "$ref": "#/components/schemas/Entities"
           }
         }
       },
@@ -9327,6 +9333,9 @@
           },
           "CreditRatings": {
             "$ref": "#/components/schemas/CreditRatings"
+          },
+          "EntityRoles": {
+            "$ref": "#/components/schemas/EntityRoles"
           }
         }
       },
@@ -9460,6 +9469,59 @@
             "x-ob-usage-tips": ""
           }
         ]
+      },
+      "EntityRole": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Services or function provided by this entity.",
+            "x-ob-item-type": "EntityRoleItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "AuthorityHavingJurisdiction"
+            }
+          }
+        ]
+      },
+      "EntityRoles": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/EntityRole"
+        }
+      },
+      "Installer": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "Contractor that does installation",
+            "properties": {}
+          }
+        ]
+      },
+      "Originator": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "Entity that originates a project",
+            "properties": {}
+          }
+        ]
+      },
+      "Entities": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Entity"
+        }
       }
     }
   },
@@ -14848,6 +14910,63 @@
         },
         "Other": {
           "label": "Other",
+          "description": ""
+        }
+      }
+    },
+    "EntityRoleItemType": {
+      "description": "Enumerated list of entity roles",
+      "enums": {
+        "AuthorityHavingJurisdiction": {
+          "label": "Authority Having Jurisdiction (AHJ)",
+          "description": ""
+        },
+        "Installer": {
+          "label": "Installer",
+          "description": ""
+        },
+        "Originator": {
+          "label": "Originator",
+          "description": "Entity that originates the project "
+        },
+        "Manufacturer": {
+          "label": "Manufacturer",
+          "description": ""
+        },
+        "Surety": {
+          "label": "Surety",
+          "description": ""
+        },
+        "InsurerWorkersCompensation": {
+          "label": "Insurer, Workers Compensation",
+          "description": ""
+        },
+        "InsurerGeneralLiability": {
+          "label": "Insurer, General Liability",
+          "description": ""
+        },
+        "InsurerProperty": {
+          "label": "Insurer, Property",
+          "description": ""
+        },
+        "InsurerBusinessInterruption": {
+          "label": "Insurer, Business Interruption",
+          "description": ""
+        },
+        "InsurerConstructionAllRisk": {
+          "label": "Insurer, Construction All Risk",
+          "description": ""
+        },
+        "InsurerAutomobile": {
+          "label": "Insurer, Automobile",
+          "description": ""
+        },
+        "InsurerProjectPerfomance": {
+          "label": "Insurer, Project Performance",
+          "description": ""
+        },
+        "InsurerUmbrellaExcessLiability": {
+          "label": "Insurer, Umbrella Excess Liability",
           "description": ""
         }
       }
