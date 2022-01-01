@@ -1,0 +1,31 @@
+name: OB OpenAPI Validator
+
+on: [push, pull_request]
+
+jobs:
+  swagger-editor-oas-validator-remote:
+    name: Swagger Editor OAS Validator Remote
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Validate OB OpenAPI
+        uses: char0n/swagger-editor-validate@master
+        with:
+          definition-file: Master-OB-OpenAPI.json
+
+  ob-open-api-validator:
+    name: OB OpenAPI Validator
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - name: Install IBM OpenAPI Validator with Spectral
+        run: npm install -g ibm-openapi-validator
+      - name: Run validator
+        working-directory: ./.github
+        run: lint-openapi ../Master-OB-OpenAPI.json -c ./configs/validator/.validaterc -r ./configs/validator/.spectral.yaml
