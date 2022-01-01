@@ -28,4 +28,4 @@ jobs:
         run: npm install -g ibm-openapi-validator
       - name: Run validator
         working-directory: ./.github
-        run: lint-openapi ../Master-OB-OpenAPI.json -c ./configs/validator/.validaterc -r ./configs/validator/.spectral.yaml
+        run: lint-openapi ../Master-OB-OpenAPI.json -c ./configs/schema-validator/.validaterc -r ./configs/schema-validator/.spectral.yaml
