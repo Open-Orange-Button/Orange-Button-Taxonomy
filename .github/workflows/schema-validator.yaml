@@ -26,6 +26,8 @@ jobs:
           node-version: '16'
       - name: Install IBM OpenAPI Validator with Spectral
         run: npm install -g ibm-openapi-validator
+      - name: Install Typo.js Spell Checker
+        run: npm install typo-js
       - name: Run validator
         working-directory: ./.github
         run: lint-openapi ../Master-OB-OpenAPI.json -c ./configs/schema-validator/.validaterc -r ./configs/schema-validator/.spectral.yaml
