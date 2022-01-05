@@ -1,5 +1,5 @@
 extends: '@ibm-cloud/openapi-ruleset'
-functions: [spellcheck]
+functions: [spellcheckSubstrings]
 rules:
   major-version-in-path: warn
   openapi-tags: warn
@@ -33,7 +33,7 @@ rules:
       functionOptions:
         match: ^[0-9A-Z][a-z0-9]*([A-Z]+[a-z0-9]*)*$ # modified version of k8s_camel_case to allow upper case letter beginning
 
-  spell-check-upper-camel-case-substrings:
+  spellcheck-upper-camel-case-substrings:
     message: 'These substrings are not in the dictionary: {{error}}'
     type: style
     given:
@@ -43,8 +43,9 @@ rules:
       - $.x-ob-item-type-groups[*]~ # OB Item Type Groups
     severity: warn
     then:
-      function: spellcheck
+      function: spellcheckSubstrings
       functionOptions:
+        substringMatch: '[0-9]+|[A-Z][a-z]+|[A-Z]+(?![a-z])'
         dictionaries:
           - name: en_US
             path: node_modules/typo-js/dictionaries
