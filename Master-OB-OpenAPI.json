@@ -789,6 +789,9 @@
           },
           "Comments": {
             "$ref": "#/components/schemas/Comments"
+          },
+          "Projects": {
+            "$ref": "#/components/schemas/Projects"
           }
         },
         "x-ob-usage-tips": ""
@@ -1960,8 +1963,8 @@
             "x-ob-sample-value": {
               "EndTime": "'2020-12-30'",
               "StartTime": "2020-01-01",
-              "Unit": "US Dollar",
-              "Value": "120"
+              "Unit": "USD",
+              "Value": 120
             },
             "x-ob-item-type-group": "OBMonetary"
           }
@@ -9408,7 +9411,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "AAA"
-			}
+            }
           }
         ]
       },
@@ -9803,7 +9806,7 @@
         "items": {
           "$ref": "#/components/schemas/Entity"
         }
-	  },
+      },
       "AltitudeInstallationMax": {
         "allOf": [
           {
@@ -9853,6 +9856,60 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "RS485"
+            }
+          }
+        ]
+      },
+      "Project": {
+        "type": "object",
+        "description": "An overall contract with a Site owner",
+        "properties": {
+          "PVSystems": {
+            "$ref": "#/components/schemas/PVSystems"
+          },
+          "BatterySystems": {
+            "$ref": "#/components/schemas/BatterySystems"
+          },
+          "BillOfServices": {
+            "$ref": "#/components/schemas/BillOfServices"
+          },
+          "Entities": {
+            "$ref": "#/components/schemas/Entities"
+          },
+          "Tasks": {
+            "$ref": "#/components/schemas/Tasks"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "ProjectedSavingsAmt": {
+            "$ref": "#/components/schemas/ProjectedSavingsAmt"
+          },
+          "ProjectPriceAmt": {
+            "$ref": "#/components/schemas/ProjectPriceAmt"
+          }
+        }
+      },
+      "Projects": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Project"
+        }
+      },
+      "ProjectPriceAmt": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The total price of a project",
+            "x-ob-item-type": "stdi:monetaryItemType",
+            "x-ob-item-type-group": "OBMonetary",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 27000,
+              "Unit": "USD"
             }
           }
         ]
@@ -14977,9 +15034,9 @@
         "InsurerUmbrellaExcessLiability": {
           "label": "Insurer, Umbrella Excess Liability",
           "description": ""
-		}
-	  }
-	},
+        }
+      }
+    },
     "BatteryChemistryItemType": {
       "description": "",
       "enums": {
