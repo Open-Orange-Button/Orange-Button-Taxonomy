@@ -1,8 +1,10 @@
 extends: '@ibm-cloud/openapi-ruleset'
+functions: [spellcheckSubstrings]
 rules:
   major-version-in-path: warn
   openapi-tags: warn
   oas3-api-servers: warn
+  oas3-unused-component: warn
 
   no-special-characters:
     description: Name must only contain characters in 0-9, A-Z, a-z, and _ (underscore).
@@ -31,3 +33,24 @@ rules:
       function: pattern
       functionOptions:
         match: ^[0-9A-Z][a-z0-9]*([A-Z]+[a-z0-9]*)*$ # modified version of k8s_camel_case to allow upper case letter beginning
+
+  spellcheck-upper-camel-case-substrings:
+    message: 'These substrings are not in the dictionary: {{error}}'
+    type: style
+    given:
+      - $.components.schemas[*]~ # Schema Element and Object Names
+      - $.x-ob-item-types[*]~ # OB Item Types
+      - $.x-ob-item-types[*].enums[*]~ # OB Item Type Enums
+      - $.x-ob-item-type-groups[*]~ # OB Item Type Groups
+    severity: warn
+    then:
+      function: spellcheckSubstrings
+      functionOptions:
+        substringMatch: '[0-9]+|[A-Z][a-z]+|[A-Z]+(?![a-z])'
+        dictionaries:
+          - name: en_US
+            path: node_modules/typo-js/dictionaries
+          - name: OB-abbreviations 
+            path: .github/configs/schema-validator/OB-dictionaries
+          - name: OB-acronyms
+            path: .github/configs/schema-validator/OB-dictionaries
