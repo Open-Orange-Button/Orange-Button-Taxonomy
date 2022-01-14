@@ -751,9 +751,6 @@
           "Addresses": {
             "$ref": "#/components/schemas/Addresses"
           },
-          "PVSystems": {
-            "$ref": "#/components/schemas/PVSystems"
-          },
           "Description": {
             "$ref": "#/components/schemas/Description"
           },
@@ -783,9 +780,6 @@
           },
           "EnergyConsumptions": {
             "$ref": "#/components/schemas/EnergyConsumptions"
-          },
-          "BatterySystems": {
-            "$ref": "#/components/schemas/BatterySystems"
           },
           "Comments": {
             "$ref": "#/components/schemas/Comments"
@@ -1769,9 +1763,6 @@
           "Devices": {
             "$ref": "#/components/schemas/Devices"
           },
-          "ProjectedSavingsAmt": {
-            "$ref": "#/components/schemas/ProjectedSavingsAmt"
-          },
           "Description": {
             "$ref": "#/components/schemas/Description"
           },
@@ -1802,23 +1793,11 @@
           "EnergyProductions": {
             "$ref": "#/components/schemas/EnergyProductions"
           },
-          "Tasks": {
-            "$ref": "#/components/schemas/Tasks"
-          },
-          "BillOfServices": {
-            "$ref": "#/components/schemas/BillOfServices"
-          },
           "PVArrays": {
             "$ref": "#/components/schemas/PVArrays"
           },
-          "Comments": {
-            "$ref": "#/components/schemas/Comments"
-          },
           "CapacityAC": {
             "$ref": "#/components/schemas/CapacityAC"
-          },
-          "Entities": {
-            "$ref": "#/components/schemas/Entities"
           }
         },
         "x-ob-usage-tips": ""
@@ -4054,9 +4033,6 @@
           "OperationalStatus": {
             "$ref": "#/components/schemas/OperationalStatus"
           },
-          "ProjectedSavingsAmt": {
-            "$ref": "#/components/schemas/ProjectedSavingsAmt"
-          },
           "StructureID": {
             "$ref": "#/components/schemas/StructureID"
           },
@@ -4066,9 +4042,6 @@
           "Devices": {
             "$ref": "#/components/schemas/Devices"
           },
-          "Tasks": {
-            "$ref": "#/components/schemas/Tasks"
-          },
           "EnergyProductions": {
             "$ref": "#/components/schemas/EnergyProductions"
           },
@@ -4077,9 +4050,6 @@
           },
           "EnergyModels": {
             "$ref": "#/components/schemas/EnergyModels"
-          },
-          "Entities": {
-            "$ref": "#/components/schemas/Entities"
           }
         }
       },
