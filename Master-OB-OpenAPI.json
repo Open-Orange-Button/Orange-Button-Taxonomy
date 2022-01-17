@@ -1813,6 +1813,9 @@
           },
           "CapacityAC": {
             "$ref": "#/components/schemas/CapacityAC"
+          },
+          "Entities": {
+            "$ref": "#/components/schemas/Entities"
           }
         },
         "x-ob-usage-tips": ""
@@ -1941,37 +1944,6 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/PVSystem"
-        },
-        "x-ob-usage-tips": ""
-      },
-      "Utility": {
-        "type": "object",
-        "description": "A electric service provider",
-        "properties": {
-          "UtilityLegalEntityID": {
-            "$ref": "#/components/schemas/UtilityLegalEntityID"
-          },
-          "UtilityName": {
-            "$ref": "#/components/schemas/UtilityName"
-          },
-          "FeeStructures": {
-            "$ref": "#/components/schemas/FeeStructures"
-          },
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "Contacts": {
-            "$ref": "#/components/schemas/Contacts"
-          },
-          "Addresses": {
-            "$ref": "#/components/schemas/Addresses"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "URL": {
-            "$ref": "#/components/schemas/URL"
-          }
         },
         "x-ob-usage-tips": ""
       },
@@ -4102,6 +4074,9 @@
           },
           "EnergyModels": {
             "$ref": "#/components/schemas/EnergyModels"
+          },
+          "Entities": {
+            "$ref": "#/components/schemas/Entities"
           }
         }
       },
@@ -6682,28 +6657,6 @@
             "type": "object",
             "description": "Power (AC) measured at an instant in time",
             "x-ob-item-type": "num:powerItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Decimals": "",
-              "EndTime": "",
-              "Precision": "",
-              "StartTime": "",
-              "Unit": "",
-              "Value": ""
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "UtilityLegalEntityID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The Legal Entity Identifier of the utility.",
-            "x-ob-item-type": "dei:legalEntityIdentifierItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -9352,6 +9305,557 @@
         "items": {
           "$ref": "#/components/schemas/InverterOutput"
         }
+      },
+      "Entity": {
+        "type": "object",
+        "description": "Any commercial or legal organization.",
+        "properties": {
+          "Addresses": {
+            "$ref": "#/components/schemas/Addresses"
+          },
+          "Contacts": {
+            "$ref": "#/components/schemas/Contacts"
+          },
+          "Email": {
+            "$ref": "#/components/schemas/Email"
+          },
+          "WorkPhone": {
+            "$ref": "#/components/schemas/WorkPhone"
+          },
+          "LegalEntityIdentifier": {
+            "$ref": "#/components/schemas/LegalEntityIdentifier"
+          },
+          "URL": {
+            "$ref": "#/components/schemas/URL"
+          },
+          "TaxID": {
+            "$ref": "#/components/schemas/TaxID"
+          },
+          "CreditRatings": {
+            "$ref": "#/components/schemas/CreditRatings"
+          },
+          "EntityRoles": {
+            "$ref": "#/components/schemas/EntityRoles"
+          }
+        }
+      },
+      "LegalEntityIdentifier": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Legal Entity Identifier (LEI) of the entity.",
+            "x-ob-item-type": "dei:legalEntityIdentifierItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "TaxID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Tax identification number of the entity.",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "CreditRating": {
+        "type": "object",
+        "description": "Credit rating.",
+        "properties": {
+          "CreditScore": {
+            "$ref": "#/components/schemas/CreditScore"
+          },
+          "CreditScoreSource": {
+            "$ref": "#/components/schemas/CreditScoreSource"
+          }
+        }
+      },
+      "CreditScore": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Credit symbol that indicates the degree of credit worthiness. ",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "AAA"
+			}
+          }
+        ]
+      },
+      "ProdBattery": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Product"
+          },
+          {
+            "type": "object",
+            "description": "A chemical electrical storage device",
+            "properties": {
+              "BatteryChemistryType": {
+                "$ref": "#/components/schemas/BatteryChemistryType"
+              },
+              "VoltageDCChargeMin": {
+                "$ref": "#/components/schemas/VoltageDCChargeMin"
+              },
+              "VoltageDCChargeMax": {
+                "$ref": "#/components/schemas/VoltageDCChargeMax"
+              },
+              "VoltageDCDischargeMax": {
+                "$ref": "#/components/schemas/VoltageDCDischargeMax"
+              },
+              "VoltageDCDischargeMin": {
+                "$ref": "#/components/schemas/VoltageDCDischargeMin"
+              },
+              "BatteryPowerDischargePeaks": {
+                "$ref": "#/components/schemas/BatteryPowerDischargePeaks"
+              },
+              "PowerDCChargeContinuousMax": {
+                "$ref": "#/components/schemas/PowerDCChargeContinuousMax"
+              },
+              "PowerDCDischargeContinuousMax": {
+                "$ref": "#/components/schemas/PowerDCDischargeContinuousMax"
+              },
+              "PowerDCDischargePeak": {
+                "$ref": "#/components/schemas/PowerDCDischargePeak"
+              },
+              "EnergyCapacityUsable": {
+                "$ref": "#/components/schemas/EnergyCapacityUsable"
+              },
+              "EnergyCapacityNominal": {
+                "$ref": "#/components/schemas/EnergyCapacityNominal"
+              },
+              "DepthOfDischargeMax": {
+                "$ref": "#/components/schemas/DepthOfDischargeMax"
+              },
+              "AltitudeInstallationMax": {
+                "$ref": "#/components/schemas/AltitudeInstallationMax"
+              },
+              "VoltageDCInputNom": {
+                "$ref": "#/components/schemas/VoltageDCInputNom"
+              },
+              "VoltageDCOutputNom": {
+                "$ref": "#/components/schemas/VoltageDCOutputNom"
+              },
+              "TemperatureMinimumOperating": {
+                "$ref": "#/components/schemas/TemperatureMinimumOperating"
+              },
+              "TemperatureMaximumOperating": {
+                "$ref": "#/components/schemas/TemperatureMaximumOperating"
+              },
+              "CommunicationProtocol": {
+                "$ref": "#/components/schemas/CommunicationProtocol"
+              }
+            }
+          }
+        ]
+      },
+      "BatteryChemistryType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of chemistry used in the battery",
+            "x-ob-item-type": "BatteryChemistryItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "LeadAcidGel"
+            }
+          }
+        ]
+      },
+      "VoltageDCChargeMin": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Minimum DC voltage for charging",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 420,
+              "Units": "V"
+            }
+          }
+        ]
+      },
+      "VoltageDCChargeMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum DC voltage for charging",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 450,
+              "Units": "V"
+            }
+          }
+        ]
+      },
+      "VoltageDCDischargeMin": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Minimum DC discharge voltage.",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 350,
+              "Units": "V"
+            }
+          }
+        ]
+      },
+      "VoltageDCDischargeMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum DC Discharge voltage.",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 410,
+              "Units": "V"
+            }
+          }
+        ]
+      },
+      "PowerDCDischargePeak": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Peak power over time interval during discharge.",
+            "x-ob-item-type": "num:powerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 7,
+              "Units": "kW"
+            }
+          }
+        ]
+      },
+      "BatteryPowerDischargePeak": {
+        "type": "object",
+        "description": "Battery power peak discharge specifications.",
+        "properties": {
+          "Duration": {
+            "$ref": "#/components/schemas/Duration"
+          },
+          "PowerDCDischargePeak": {
+            "$ref": "#/components/schemas/PowerDCDischargePeak"
+          }
+        }
+      },
+      "BatteryPowerDischargePeaks": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/BatteryPowerDischargePeak"
+        }
+      },
+      "PowerDCDischargeContinuousMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum DC power during continuous discharge.",
+            "x-ob-item-type": "num:powerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 5,
+              "Units": "kW"
+            }
+          }
+        ]
+      },
+      "CreditScoreSource": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Issuing source of a credit score, such as a Rating Agency. ",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Standard & Poor's"
+            }
+          }
+        ]
+      },
+      "PowerDCChargeContinuousMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum DC power under continuous charge.",
+            "x-ob-item-type": "num:powerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 5,
+              "Units": "kW"
+            }
+          }
+        ]
+      },
+      "CreditRatings": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/CreditRating"
+        }
+      },
+      "Utility": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "A electric service provider",
+            "properties": {
+              "UtilityName": {
+                "$ref": "#/components/schemas/UtilityName"
+              },
+              "FeeStructures": {
+                "$ref": "#/components/schemas/FeeStructures"
+              },
+              "Description": {
+                "$ref": "#/components/schemas/Description"
+              },
+              "Contacts": {
+                "$ref": "#/components/schemas/Contacts"
+              },
+              "Addresses": {
+                "$ref": "#/components/schemas/Addresses"
+              },
+              "FileFolderURL": {
+                "$ref": "#/components/schemas/FileFolderURL"
+              },
+              "URL": {
+                "$ref": "#/components/schemas/URL"
+              }
+            },
+            "x-ob-usage-tips": ""
+          }
+        ]
+      },
+      "EntityRole": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Services or function provided by this entity.",
+            "x-ob-item-type": "EntityRoleItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "AuthorityHavingJurisdiction"
+            }
+          }
+        ]
+      },
+      "EnergyCapacityUsable": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Usable energy of battery unit.",
+            "x-ob-item-type": "num:energyItemType",
+            "x-ob-item-type-group": "OBElectricalEnergy",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 9.6,
+              "Units": "kWh"
+            }
+          }
+        ]
+      },
+      "EnergyCapacityNominal": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum DC Theoretical Energy Capacity",
+            "x-ob-item-type": "num:energyItemType",
+            "x-ob-item-type-group": "OBElectricalEnergy",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 50,
+              "Unit": "kWh"
+            }
+          }
+        ]
+      },
+      "DepthOfDischargeMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum Depth of Discharge without damaging battery hardware",
+            "x-ob-item-type": "percentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 98
+            }
+          }
+        ]
+      },
+      "EntityRoles": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/EntityRole"
+        }
+      },
+      "Installer": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "Contractor that does installation",
+            "properties": {}
+          }
+        ]
+      },
+      "Originator": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "Entity that originates a project",
+            "properties": {}
+          }
+        ]
+      },
+      "Entities": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Entity"
+        }
+	  },
+      "AltitudeInstallationMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum rated altitude",
+            "x-ob-item-type": "num:lengthItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 3000,
+              "Unit": "m"
+            }
+          }
+        ]
+      },
+      "VoltageDCOutputNom": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Nominal DC output voltage",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 12,
+              "Unit": "V"
+            }
+          }
+        ]
+      },
+      "CommunicationProtocol": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Micro-grid communication protocol",
+            "x-ob-item-type": "CommunicationProtocolItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "RS485"
+            }
+          }
+        ]
       }
     }
   },
@@ -11090,323 +11594,6 @@
           "description": ""
         },
         "Finalized": {
-          "label": "",
-          "description": ""
-        }
-      }
-    },
-    "solar-types:participantItemType": {
-      "description": "",
-      "enums": {
-        "Appraiser": {
-          "label": "",
-          "description": ""
-        },
-        "AssetManager": {
-          "label": "",
-          "description": ""
-        },
-        "AssetOwner": {
-          "label": "",
-          "description": ""
-        },
-        "AutomobileLiabilityInsurer": {
-          "label": "",
-          "description": ""
-        },
-        "Back_leverageLender": {
-          "label": "",
-          "description": ""
-        },
-        "Back_upAssetManager": {
-          "label": "",
-          "description": ""
-        },
-        "Back_upMaintenanceProvider": {
-          "label": "",
-          "description": ""
-        },
-        "Back_upMonitoringServiceProvider": {
-          "label": "",
-          "description": ""
-        },
-        "BondAgent": {
-          "label": "",
-          "description": ""
-        },
-        "Builders_ConstructionAll_RiskInsurers": {
-          "label": "",
-          "description": ""
-        },
-        "BusinessInterruptionInsurer": {
-          "label": "",
-          "description": ""
-        },
-        "CollateralAgent": {
-          "label": "",
-          "description": ""
-        },
-        "CommercialLender": {
-          "label": "",
-          "description": ""
-        },
-        "ContractAttorney": {
-          "label": "",
-          "description": ""
-        },
-        "ConstructionContractorInstaller": {
-          "label": "",
-          "description": ""
-        },
-        "ConstructionLender": {
-          "label": "",
-          "description": ""
-        },
-        "ConstructionWarrantyProvider": {
-          "label": "",
-          "description": ""
-        },
-        "CorporateAttorney": {
-          "label": "",
-          "description": ""
-        },
-        "DeveloperAttorney": {
-          "label": "",
-          "description": ""
-        },
-        "EnergyForecastingService": {
-          "label": "",
-          "description": ""
-        },
-        "EnergyPriceForecaster": {
-          "label": "",
-          "description": ""
-        },
-        "EquipmentWarrantyProvider": {
-          "label": "",
-          "description": ""
-        },
-        "EngineeringContractorInstaller": {
-          "label": "",
-          "description": ""
-        },
-        "EnvironmentalAttorney": {
-          "label": "",
-          "description": ""
-        },
-        "EnvironmentalConsultant": {
-          "label": "",
-          "description": ""
-        },
-        "EquipmentFactoryAuditor": {
-          "label": "",
-          "description": ""
-        },
-        "EquipmentManufacturer": {
-          "label": "",
-          "description": ""
-        },
-        "EquipmentReliabilityTestLab": {
-          "label": "",
-          "description": ""
-        },
-        "Fund": {
-          "label": "",
-          "description": ""
-        },
-        "GeneralContractor": {
-          "label": "",
-          "description": ""
-        },
-        "GeneralLiabilityInsurer": {
-          "label": "",
-          "description": ""
-        },
-        "HedgeProvider": {
-          "label": "",
-          "description": ""
-        },
-        "IndependentEngineer": {
-          "label": "",
-          "description": ""
-        },
-        "IndependentSystemOperatorasAuthorityHavingJurisdiction": {
-          "label": "",
-          "description": ""
-        },
-        "InterconnectingUtilityasAuthorityHavingJurisdiction": {
-          "label": "",
-          "description": ""
-        },
-        "InsuranceBroker": {
-          "label": "",
-          "description": ""
-        },
-        "InsuranceConsultant": {
-          "label": "",
-          "description": ""
-        },
-        "Land_UseAttorney": {
-          "label": "",
-          "description": ""
-        },
-        "Lessor": {
-          "label": "",
-          "description": ""
-        },
-        "LitigationAttorney": {
-          "label": "",
-          "description": ""
-        },
-        "LLCPartnerManagingMember": {
-          "label": "",
-          "description": ""
-        },
-        "LLCPartnerVotingMember": {
-          "label": "",
-          "description": ""
-        },
-        "LLCPartnerPassiveMember": {
-          "label": "",
-          "description": ""
-        },
-        "LongtermEquityInvestor": {
-          "label": "",
-          "description": ""
-        },
-        "MaintenanceProvider": {
-          "label": "",
-          "description": ""
-        },
-        "MonitoringServiceProvider": {
-          "label": "",
-          "description": ""
-        },
-        "OceanCargoInsurer": {
-          "label": "",
-          "description": ""
-        },
-        "Operator": {
-          "label": "",
-          "description": ""
-        },
-        "ParallelMonitoringServiceProvider": {
-          "label": "",
-          "description": ""
-        },
-        "PermittingAuthorityasAuthorityHavingJurisdiction": {
-          "label": "",
-          "description": ""
-        },
-        "PersonalLender": {
-          "label": "",
-          "description": ""
-        },
-        "PollutionLiabilityInsurer": {
-          "label": "",
-          "description": ""
-        },
-        "PPAOfftaker": {
-          "label": "",
-          "description": ""
-        },
-        "PrimeContractor": {
-          "label": "",
-          "description": ""
-        },
-        "Project": {
-          "label": "",
-          "description": ""
-        },
-        "ProjectPerformanceInsurer": {
-          "label": "",
-          "description": ""
-        },
-        "ProjectDeveloper": {
-          "label": "",
-          "description": ""
-        },
-        "ProjectHost": {
-          "label": "",
-          "description": ""
-        },
-        "PropertyInsurer": {
-          "label": "",
-          "description": ""
-        },
-        "RECOfftaker": {
-          "label": "",
-          "description": ""
-        },
-        "RegionalTransmissionOperatorasAuthorityHavingJurisdiction": {
-          "label": "",
-          "description": ""
-        },
-        "SchedulingCoordinator": {
-          "label": "",
-          "description": ""
-        },
-        "SiteOwnerSiteControl": {
-          "label": "",
-          "description": ""
-        },
-        "SiteSecurityCompany": {
-          "label": "",
-          "description": ""
-        },
-        "Subcontractor": {
-          "label": "",
-          "description": ""
-        },
-        "SubcontractorContractorInstaller": {
-          "label": "",
-          "description": ""
-        },
-        "Surety": {
-          "label": "",
-          "description": ""
-        },
-        "TaxAttorney": {
-          "label": "",
-          "description": ""
-        },
-        "TaxConsultant": {
-          "label": "",
-          "description": ""
-        },
-        "TaxequityInvestor": {
-          "label": "",
-          "description": ""
-        },
-        "TelecomProvider": {
-          "label": "",
-          "description": ""
-        },
-        "TransmissionConsultant": {
-          "label": "",
-          "description": ""
-        },
-        "Trustee": {
-          "label": "",
-          "description": ""
-        },
-        "UmbrellaExcessLiabilityInsurer": {
-          "label": "",
-          "description": ""
-        },
-        "Utility": {
-          "label": "",
-          "description": ""
-        },
-        "WeatherDataProvider": {
-          "label": "",
-          "description": ""
-        },
-        "WorkersCompensationInsurer": {
-          "label": "",
-          "description": ""
-        },
-        "Other": {
           "label": "",
           "description": ""
         }
@@ -14732,6 +14919,145 @@
         },
         "Other": {
           "label": "Other",
+          "description": ""
+        }
+      }
+    },
+    "EntityRoleItemType": {
+      "description": "Enumerated list of entity roles",
+      "enums": {
+        "AuthorityHavingJurisdiction": {
+          "label": "Authority Having Jurisdiction (AHJ)",
+          "description": ""
+        },
+        "Installer": {
+          "label": "Installer",
+          "description": ""
+        },
+        "Originator": {
+          "label": "Originator",
+          "description": "Entity that originates the project "
+        },
+        "Manufacturer": {
+          "label": "Manufacturer",
+          "description": ""
+        },
+        "Surety": {
+          "label": "Surety",
+          "description": ""
+        },
+        "InsurerWorkersCompensation": {
+          "label": "Insurer, Workers Compensation",
+          "description": ""
+        },
+        "InsurerGeneralLiability": {
+          "label": "Insurer, General Liability",
+          "description": ""
+        },
+        "InsurerProperty": {
+          "label": "Insurer, Property",
+          "description": ""
+        },
+        "InsurerBusinessInterruption": {
+          "label": "Insurer, Business Interruption",
+          "description": ""
+        },
+        "InsurerConstructionAllRisk": {
+          "label": "Insurer, Construction All Risk",
+          "description": ""
+        },
+        "InsurerAutomobile": {
+          "label": "Insurer, Automobile",
+          "description": ""
+        },
+        "InsurerProjectPerfomance": {
+          "label": "Insurer, Project Performance",
+          "description": ""
+        },
+        "InsurerUmbrellaExcessLiability": {
+          "label": "Insurer, Umbrella Excess Liability",
+          "description": ""
+		}
+	  }
+	},
+    "BatteryChemistryItemType": {
+      "description": "",
+      "enums": {
+        "LeadAcidGel": {
+          "label": "Lead Acid Gel",
+          "description": ""
+        },
+        "LeadAcidAGM": {
+          "label": "Lead Acid AGM",
+          "description": "Absorbent Glass Mat"
+        },
+        "LeadAcidFlooded": {
+          "label": "Lead Acid Flooded",
+          "description": ""
+        },
+        "LeadAcidSealed": {
+          "label": "Lead Acid Sealed",
+          "description": "aka SLA"
+        },
+        "LiFePO4": {
+          "label": "LiFePO4",
+          "description": "Lithium Iron Phosphate (LFP)"
+        },
+        "LiPoly": {
+          "label": "Li Polymer",
+          "description": "Lithium Polymer"
+        },
+        "NiCd": {
+          "label": "NiCd",
+          "description": "Nickel Cadmium"
+        },
+        "LiIon": {
+          "label": "Li-ion",
+          "description": "Lithium Ion"
+        },
+        "NiMH": {
+          "label": "NiMH",
+          "description": "Nickel Metal Hydride"
+        },
+        "NiFe": {
+          "label": "NiFe",
+          "description": "Nickel Iron"
+        },
+        "NaS": {
+          "label": "NaS",
+          "description": "Sodium Sulfur"
+        },
+        "Hybrid": {
+          "label": "Hybrid",
+          "description": "Hybrid"
+        },
+        "PbC": {
+          "label": "PbC",
+          "description": "Lead Carbon"
+        },
+        "Other": {
+          "label": "Other",
+          "description": "Other"
+        }
+      }
+    },
+    "CommunicationProtocolItemType": {
+      "description": "",
+      "enums": {
+        "RS485": {
+          "label": "RS485",
+          "description": ""
+        },
+        "CAN 2.0 B": {
+          "label": "CAN 2.0 B",
+          "description": ""
+        },
+        "REbus DC Nanogrid": {
+          "label": "REbus DC Nanogrid",
+          "description": ""
+        },
+        "Modbus": {
+          "label": "Modbus",
           "description": ""
         }
       }
