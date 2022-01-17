@@ -1,16 +1,36 @@
-# ob-openapi-taxonomy
-**Master Files for OB OpenAPI** (Includes: Master Solar Taxonomy File and the OB OpenAPI Master File)
+The Orange Button Solar Taxonomy is defined within **Master-OB-OpenAPI.json**.  The taxonomy is compliant with OpenAPI 3.0.
 
-The Orange Button Solar Taxonomy is defined within **Master-OB-OpenAPI.json**, if you are here looking at this page, this file is the one you will most likely be interested in.
+# Contributing
 
-For those with git skills, please feel free to fork this repository and then submit a pull request with your suggested changes.  For those without git skills but still wanting to contribute ideas or changes to this file, please feel free to access Cliff's fork of this repository which is available via a google drive file link [here](https://drive.google.com/file/d/1-iPr4dQ4RYT_FgLC8jW6s1wjga4O38ox/view?usp=sharing) (for those new to working with the Orange Button team, you will likely be prompted to request access before you can begin editing it, please do request this access if you are interested in contributing). <em>**Note to Jan and Cliff etc, I think this section needs to be tweaked to explain the exact approach you are using to leverage Cliff's fork via a google local drive folder (I think it involves installing "Google Drive" on your local machine and then syncing with the google drive so that this json file appears on your machine and you can edit it as if it was a local file right?)**</em>
+To report a bug, error or to describe a new feature, please open an Issue. To contribute comments or propose changes to the taxonomy, for those with git skills, please feel free to fork this repository and then submit a pull request with your suggested changes.  For those without git skills but wanting contribute, the Orange Button Technical Workgroup meets regularly and welcomes new participants. Contact the workgroup at XXXXXX
 
-If you would prefer to visually explore and edit a copy of this json file (rather than editing the raw json with a text editor), we have also developed a webapp called the Orange Button Open API Editor for exactly that purpose.  You can find an instance of this editor that is free for you to use at the following URL: https://obeditor.sunspec.org
+# Using the taxonomy
 
-If you are also a coding wizzard and would like to contribute refinements or new features to this editor, please feel free to do so, it is also open source and available on GitHub [here](https://github.com/Open-Orange-Button/Orange-Button-Editor).
+The Orange Button Solar Taxonomy is free to use consistent with the terms of its license. A webapp is available to explore and edit a copy of **Master-OB-OpenAPI.json**. You can find an instance of this editor that is free for you to use at https://obeditor.sunspec.org.
+
+Code for the editor is open source and available on GitHub [here](https://github.com/Open-Orange-Button/Orange-Button-Editor). Issues, feature requests and contributions are welcome.
+
+# Versioning
+
+The Orange Button Solar Taxonomy uses calendar versioning, following the pattern YYMM.mm.pp, where YY is a two-digit year, MM is a zero-padded month, mm is a minor release integer, and pp is a patch integer. New major versions are anticipated to be released at 6 month intervals.
+
+Major releases are not intended to be backward compatible, where minor releases are backward compatible. Patches are intended to replace their parent major/minor release.
+
+Changes to the taxonomy are organized according to table below.
+
+| Type of Change       | Type of Release |
+|:--------------------:|:---------------:|
+| Change a term name   | Major           |
+| Remove a term from an object | Major   |
+| Change or delete a unit | Major        |
+| Delete a term or object | Major        |
+| Change a term's unit    | Major        |
+| Add a new term          | Minor        |
+| Add a term to an object | Minor        |
+| Add a new object        | Minor        |
+| Add a new unit or enumerated value | Minor |
+| Change a term description or sample value | Minor |
+| Correct an error that causes problems for users | Patch |
 
 If anything is unclear or you have any questions, please feel free to email us at: <support@sunspec.org>
 
----
-
-<em>At the risk of confusing things, but for the purposes of providing some additional historical context, here is some old formal documentation. This documation covers the old way of submitting changes to the Orange Button Solar Taxonomy, you can read it [here](https://docs.google.com/document/d/1GfzZf5ixYwEbz4QZAFQerlP6cTknKQD8PHnZQTVeTzw/edit?usp=sharing) if you wish (but please do note, the correct way to submit your changes now is documeted in the section above, so it is safe to completely ignore this historical info).</em>
