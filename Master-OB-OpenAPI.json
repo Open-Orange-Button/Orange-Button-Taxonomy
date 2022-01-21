@@ -9883,6 +9883,123 @@
             }
           }
         ]
+      },
+      "Contract": {
+        "type": "object",
+        "description": "Binding agreement between at least two parties",
+        "properties": {
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "Signatories": {
+            "$ref": "#/components/schemas/Signatories"
+          },
+          "EffectiveDate": {
+            "$ref": "#/components/schemas/EffectiveDate"
+          },
+          "ExpirationDate": {
+            "$ref": "#/components/schemas/ExpirationDate"
+          },
+          "Preparer": {
+            "$ref": "#/components/schemas/Preparer"
+          }
+        }
+      },
+      "Signatory": {
+        "type": "object",
+        "description": "Information about a being who signs the contract",
+        "properties": {
+          "SignatureDate": {
+            "$ref": "#/components/schemas/SignatureDate"
+          },
+          "Entity": {
+            "$ref": "#/components/schemas/Entity"
+          },
+          "Contact": {
+            "$ref": "#/components/schemas/Contact"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          }
+        }
+      },
+      "SignatureDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date of the Signature",
+            "x-ob-item-type": "stdi:dateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2022-01-01"
+            }
+          }
+        ]
+      },
+      "Signatories": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Signatory"
+        }
+      },
+      "EffectiveDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "That a thing become effective",
+            "x-ob-item-type": "stdi:dateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2022-01-21"
+            }
+          }
+        ]
+      },
+      "ExpirationDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The Date after which a thing is no long in effect",
+            "x-ob-item-type": "stdi:dateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2022-10-31"
+            }
+          }
+        ]
+      },
+      "Preparer": {
+        "type": "object",
+        "description": "Entity who prepared the legal documents",
+        "properties": {
+          "Entity": {
+            "$ref": "#/components/schemas/Entity"
+          },
+          "Contact": {
+            "$ref": "#/components/schemas/Contact"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          }
+        }
       }
     }
   },
