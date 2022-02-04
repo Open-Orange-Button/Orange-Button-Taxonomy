@@ -9860,6 +9860,9 @@
           },
           "Contacts": {
             "$ref": "#/components/schemas/Contacts"
+          },
+          "Contracts": {
+            "$ref": "#/components/schemas/Contracts"
           }
         }
       },
@@ -10088,6 +10091,12 @@
             }
           }
         ]
+      },
+      "Contracts": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Contract"
+        }
       }
     }
   },
