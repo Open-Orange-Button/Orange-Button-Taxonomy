@@ -9857,6 +9857,12 @@
           },
           "ProjectPriceAmt": {
             "$ref": "#/components/schemas/ProjectPriceAmt"
+          },
+          "Contacts": {
+            "$ref": "#/components/schemas/Contacts"
+          },
+          "Contracts": {
+            "$ref": "#/components/schemas/Contracts"
           }
         }
       },
@@ -9883,6 +9889,214 @@
             }
           }
         ]
+      },
+      "Contract": {
+        "type": "object",
+        "description": "Binding agreement between at least two parties",
+        "properties": {
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "Signatories": {
+            "$ref": "#/components/schemas/Signatories"
+          },
+          "EffectiveDate": {
+            "$ref": "#/components/schemas/EffectiveDate"
+          },
+          "ExpirationDate": {
+            "$ref": "#/components/schemas/ExpirationDate"
+          },
+          "Preparer": {
+            "$ref": "#/components/schemas/Preparer"
+          },
+          "ContractPriceAmount": {
+            "$ref": "#/components/schemas/ContractPriceAmount"
+          },
+          "Stipulations": {
+            "$ref": "#/components/schemas/Stipulations"
+          }
+        }
+      },
+      "Signatory": {
+        "type": "object",
+        "description": "Information about a being who signs the contract",
+        "properties": {
+          "SignatureDate": {
+            "$ref": "#/components/schemas/SignatureDate"
+          },
+          "Entity": {
+            "$ref": "#/components/schemas/Entity"
+          },
+          "Contact": {
+            "$ref": "#/components/schemas/Contact"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          }
+        }
+      },
+      "SignatureDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date of the Signature",
+            "x-ob-item-type": "stdi:dateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2022-01-01"
+            }
+          }
+        ]
+      },
+      "Signatories": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Signatory"
+        }
+      },
+      "EffectiveDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "That a thing become effective",
+            "x-ob-item-type": "stdi:dateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2022-01-21"
+            }
+          }
+        ]
+      },
+      "ExpirationDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The Date after which a thing is no long in effect",
+            "x-ob-item-type": "stdi:dateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2022-10-31"
+            }
+          }
+        ]
+      },
+      "Preparer": {
+        "type": "object",
+        "description": "Entity who prepared the legal documents",
+        "properties": {
+          "Entity": {
+            "$ref": "#/components/schemas/Entity"
+          },
+          "Contact": {
+            "$ref": "#/components/schemas/Contact"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          }
+        }
+      },
+      "Stipulation": {
+        "type": "object",
+        "description": "Condition of Contract Enforceability ",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "StipulationStatus": {
+            "$ref": "#/components/schemas/StipulationStatus"
+          },
+          "StipulationType": {
+            "$ref": "#/components/schemas/StipulationType"
+          }
+        }
+      },
+      "StipulationType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of stipulation",
+            "x-ob-item-type": "StipulationTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "IDVerification"
+            }
+          }
+        ]
+      },
+      "StipulationStatus": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Status of stipulation",
+            "x-ob-item-type": "StipulationStatusItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Approved"
+            }
+          }
+        ]
+      },
+      "Stipulations": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Stipulation"
+        }
+      },
+      "ContractPriceAmount": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Total cash price of the contract",
+            "x-ob-item-type": "stdi:monetaryItemType",
+            "x-ob-item-type-group": "OBMonetary",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 1000000,
+              "Unit": "USD"
+            }
+          }
+        ]
+      },
+      "Contracts": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Contract"
+        }
       }
     }
   },
@@ -15086,6 +15300,56 @@
         "Modbus": {
           "label": "Modbus",
           "description": ""
+        }
+      }
+    },
+    "StipulationTypeItemType": {
+      "description": "List of stipulation types",
+      "enums": {
+        "IDVerification": {
+          "label": "Identity Verification ",
+          "description": ""
+        },
+        "IncomeVerification": {
+          "label": "Income Verification",
+          "description": ""
+        },
+        "OwnershipVerification": {
+          "label": "Ownership Verification",
+          "description": ""
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
+        }
+      }
+    },
+    "StipulationStatusItemType": {
+      "description": "Describes the Status of the Stipulation",
+      "enums": {
+        "NeedsDocumentation": {
+          "label": "Needs Documentation",
+          "description": "Stipulation is requested, Documentation has not yet been recieved"
+        },
+        "NeedsReview": {
+          "label": "Needs Review",
+          "description": "Documentation Received, not yet reviewed."
+        },
+        "Approved": {
+          "label": "Approved",
+          "description": "Stipulation has been approved and met"
+        },
+        "NeedsRevision": {
+          "label": "Needs Revision",
+          "description": "Reviewed documentation is insufficient, revision is needed"
+        },
+        "Rejected": {
+          "label": "Rejected",
+          "description": "The stipulation is rejected"
+        },
+        "Rescinded ": {
+          "label": "Rescinded",
+          "description": "The stipulation has been withdrawn"
         }
       }
     }
