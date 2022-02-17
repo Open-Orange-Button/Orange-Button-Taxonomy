@@ -884,7 +884,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Degree",
-              "Value": "45.7783517"
+              "Value": 45.7783517
             },
             "x-ob-item-type-group": ""
           }
@@ -902,7 +902,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Degree",
-              "Value": "-108.5203597"
+              "Value": -108.5203597
             },
             "x-ob-item-type-group": ""
           }
@@ -2190,7 +2190,7 @@
             "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "0.131"
+              "Value": 0.131
             },
             "x-ob-item-type-group": ""
           }
@@ -3492,7 +3492,7 @@
             "x-ob-usage-tips": "Note the unit always needs to be equal to the SpecificationUnit value",
             "x-ob-sample-value": {
               "Unit": "mm",
-              "Value": "9"
+              "Value": 9
             },
             "x-ob-item-type-group": ""
           }
@@ -4655,7 +4655,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
-              "Value": "1000"
+              "Value": 1000
             },
             "x-ob-item-type-group": ""
           }
