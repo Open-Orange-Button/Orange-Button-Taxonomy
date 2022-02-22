@@ -8922,7 +8922,7 @@
             "type": "object",
             "description": "Maximum continuous, real AC power for a device.",
             "x-ob-item-type": "num:powerItemType",
-            "x-ob-item-type-group": "OBElectricalPowerAC",
+            "x-ob-item-type-group": "OBElectricalPower",
             "x-ob-usage-tips": "For limited duration power levels, use PowerACSurges",
             "x-ob-sample-value": {}
           }
@@ -8997,7 +8997,7 @@
             "type": "object",
             "description": "The nominal continuous, real AC power output of a device.",
             "x-ob-item-type": "num:powerItemType",
-            "x-ob-item-type-group": "OBElectricalPowerAC",
+            "x-ob-item-type-group": "OBElectricalPower",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
           }
