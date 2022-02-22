@@ -7112,23 +7112,23 @@
               "Dimension": {
                 "$ref": "#/components/schemas/Dimension"
               },
-              "VoltageDCInputMax": {
-                "$ref": "#/components/schemas/VoltageDCInputMax"
-              },
-              "VoltageDCInputMin": {
-                "$ref": "#/components/schemas/VoltageDCInputMin"
-              },
-              "VoltageDCInputNom": {
-                "$ref": "#/components/schemas/VoltageDCInputNom"
-              },
               "InverterEfficiency": {
                 "$ref": "#/components/schemas/InverterEfficiency"
               },
-              "InverterInput": {
-                "$ref": "#/components/schemas/InverterInput"
+              "DCInput": {
+                "$ref": "#/components/schemas/DCInput"
               },
-              "InverterOutputs": {
-                "$ref": "#/components/schemas/InverterOutputs"
+              "InverterHarmonicsMax": {
+                "$ref": "#/components/schemas/InverterHarmonicsMax"
+              },
+              "InverterSwitchoverTime": {
+                "$ref": "#/components/schemas/InverterSwitchoverTime"
+              },
+              "VoltageDCInverterStart": {
+                "$ref": "#/components/schemas/VoltageDCInverterStart"
+              },
+              "ACOutputs": {
+                "$ref": "#/components/schemas/ACOutputs"
               }
             }
           }
@@ -8826,90 +8826,6 @@
           }
         ]
       },
-      "VoltageDCInputMax": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Maximum Input Voltage (DC)",
-            "x-ob-item-type": "num-us:voltageItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 200,
-              "Units": "Volt"
-            }
-          }
-        ]
-      },
-      "VoltageDCInputMin": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Minimum Input Voltage (DC)",
-            "x-ob-item-type": "num-us:voltageItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 20,
-              "Units": "Volt"
-            }
-          }
-        ]
-      },
-      "VoltageDCInputNom": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Nominal Input Voltage (DC)",
-            "x-ob-item-type": "num-us:voltageItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 150,
-              "Units": "Volt"
-            }
-          }
-        ]
-      },
-      "VoltageDCInputInverterStart": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Voltage (DC) input required for an inverter to begin power conversion",
-            "x-ob-item-type": "num-us:voltageItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "InverterInputMPPTNumber": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementInteger"
-          },
-          {
-            "type": "object",
-            "description": "Number of MPPT inputs for an inverter",
-            "x-ob-item-type": "stdi:integerItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": ""
-          }
-        ]
-      },
       "CurrentShortCircuitMax": {
         "allOf": [
           {
@@ -8932,7 +8848,7 @@
           },
           {
             "type": "object",
-            "description": "Maximum of the voltage range for an inverter MPPT",
+            "description": "Maximum of the voltage range for a MPPT",
             "x-ob-item-type": "num-us:voltageItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -8947,7 +8863,7 @@
           },
           {
             "type": "object",
-            "description": "Minimum of the voltage range for an inverter MPPT",
+            "description": "Minimum of the voltage range for a MPPT",
             "x-ob-item-type": "num-us:voltageItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -8970,14 +8886,14 @@
           }
         ]
       },
-      "InverterMPPTInputStrings": {
+      "MPPTInputStrings": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementInteger"
           },
           {
             "type": "object",
-            "description": "The number of parallel input strings for an inverter MPPT",
+            "description": "The number of parallel input strings for a MPPT",
             "x-ob-item-type": "stdi:integerItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -8985,39 +8901,15 @@
           }
         ]
       },
-      "InverterInput": {
-        "type": "object",
-        "description": "Describes capability of one input to an inverter",
-        "properties": {
-          "VoltageDCInputMax": {
-            "$ref": "#/components/schemas/VoltageDCInputMax"
-          },
-          "VoltageDCInputMin": {
-            "$ref": "#/components/schemas/VoltageDCInputMin"
-          },
-          "VoltageDCInputNom": {
-            "$ref": "#/components/schemas/VoltageDCInputNom"
-          },
-          "VoltageDCInputInverterStart": {
-            "$ref": "#/components/schemas/VoltageDCInputInverterStart"
-          },
-          "InverterInputMPPTNumber": {
-            "$ref": "#/components/schemas/InverterInputMPPTNumber"
-          },
-          "InverterMPPTs": {
-            "$ref": "#/components/schemas/InverterMPPTs"
-          }
-        }
-      },
-      "InverterMPPTs": {
+      "MPPTs": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/InverterMPPT"
+          "$ref": "#/components/schemas/MPPT"
         }
       },
-      "InverterMPPT": {
+      "MPPT": {
         "type": "object",
-        "description": "An object of elements to describe an inverter maximum power point tracker (MPPT)",
+        "description": "An object of elements to describe a maximum power point tracker (MPPT)",
         "properties": {
           "CurrentShortCircuitMax": {
             "$ref": "#/components/schemas/CurrentShortCircuitMax"
@@ -9031,8 +8923,8 @@
           "CurrentDCMax": {
             "$ref": "#/components/schemas/CurrentDCMax"
           },
-          "InverterMPPTInputStrings": {
-            "$ref": "#/components/schemas/InverterMPPTInputStrings"
+          "MPPTInputStrings": {
+            "$ref": "#/components/schemas/MPPTInputStrings"
           }
         }
       },
@@ -9073,10 +8965,10 @@
           },
           {
             "type": "object",
-            "description": "Maximum AC power for a device",
+            "description": "Maximum continuous, real AC power for a device.",
             "x-ob-item-type": "num:powerItemType",
             "x-ob-item-type-group": "OBElectricalPowerAC",
-            "x-ob-usage-tips": "",
+            "x-ob-usage-tips": "For limited duration power levels, use PowerACSurges",
             "x-ob-sample-value": {}
           }
         ]
@@ -9148,7 +9040,7 @@
           },
           {
             "type": "object",
-            "description": "The nominal AC power output of a device.",
+            "description": "The nominal continuous, real AC power output of a device.",
             "x-ob-item-type": "num:powerItemType",
             "x-ob-item-type-group": "OBElectricalPowerAC",
             "x-ob-usage-tips": "",
@@ -9165,21 +9057,6 @@
             "type": "object",
             "description": "The nominal AC voltage of a device",
             "x-ob-item-type": "num-us:voltageItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "InterconnectionFrequency": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Frequency (Hz) of a AC power grid.",
-            "x-ob-item-type": "num-us:frequencyItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -9238,8 +9115,8 @@
           "VoltageACNom": {
             "$ref": "#/components/schemas/VoltageACNom"
           },
-          "InterconnectionFrequencies": {
-            "$ref": "#/components/schemas/InterconnectionFrequencies"
+          "FrequenciesAC": {
+            "$ref": "#/components/schemas/FrequenciesAC"
           },
           "PowerACSurges": {
             "$ref": "#/components/schemas/PowerACSurges"
@@ -9249,10 +9126,10 @@
           }
         }
       },
-      "InterconnectionFrequencies": {
+      "FrequenciesAC": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/InterconnectionFrequency"
+          "$ref": "#/components/schemas/FrequencyAC"
         }
       },
       "PowerACSurges": {
@@ -9412,14 +9289,8 @@
               "BatteryPowerDischargePeaks": {
                 "$ref": "#/components/schemas/BatteryPowerDischargePeaks"
               },
-              "PowerDCChargeContinuousMax": {
-                "$ref": "#/components/schemas/PowerDCChargeContinuousMax"
-              },
               "PowerDCDischargeContinuousMax": {
                 "$ref": "#/components/schemas/PowerDCDischargeContinuousMax"
-              },
-              "PowerDCDischargePeak": {
-                "$ref": "#/components/schemas/PowerDCDischargePeak"
               },
               "EnergyCapacityUsable": {
                 "$ref": "#/components/schemas/EnergyCapacityUsable"
@@ -9433,9 +9304,6 @@
               "AltitudeInstallationMax": {
                 "$ref": "#/components/schemas/AltitudeInstallationMax"
               },
-              "VoltageDCInputNom": {
-                "$ref": "#/components/schemas/VoltageDCInputNom"
-              },
               "VoltageDCOutputNom": {
                 "$ref": "#/components/schemas/VoltageDCOutputNom"
               },
@@ -9447,6 +9315,21 @@
               },
               "CommunicationProtocol": {
                 "$ref": "#/components/schemas/CommunicationProtocol"
+              },
+              "VoltageDCNom": {
+                "$ref": "#/components/schemas/VoltageDCNom"
+              },
+              "PowerDCContinuousMax": {
+                "$ref": "#/components/schemas/PowerDCContinuousMax"
+              },
+              "DCInput": {
+                "$ref": "#/components/schemas/DCInput"
+              },
+              "DCOutput": {
+                "$ref": "#/components/schemas/DCOutput"
+              },
+              "PowerDCMax": {
+                "$ref": "#/components/schemas/PowerDCMax"
               }
             }
           }
@@ -9541,24 +9424,6 @@
           }
         ]
       },
-      "PowerDCDischargePeak": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Peak power over time interval during discharge.",
-            "x-ob-item-type": "num:powerItemType",
-            "x-ob-item-type-group": "OBElectricalPower",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 7,
-              "Units": "kW"
-            }
-          }
-        ]
-      },
       "BatteryPowerDischargePeak": {
         "type": "object",
         "description": "Battery power peak discharge specifications.",
@@ -9566,8 +9431,8 @@
           "Duration": {
             "$ref": "#/components/schemas/Duration"
           },
-          "PowerDCDischargePeak": {
-            "$ref": "#/components/schemas/PowerDCDischargePeak"
+          "PowerDCMax": {
+            "$ref": "#/components/schemas/PowerDCMax"
           }
         }
       },
@@ -9608,24 +9473,6 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Standard & Poor's"
-            }
-          }
-        ]
-      },
-      "PowerDCChargeContinuousMax": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Maximum DC power under continuous charge.",
-            "x-ob-item-type": "num:powerItemType",
-            "x-ob-item-type-group": "OBElectricalPower",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 5,
-              "Units": "kW"
             }
           }
         ]
@@ -10096,6 +9943,345 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/Contract"
+        }
+      },
+      "DCInput": {
+        "type": "object",
+        "description": "DC inputs to a device",
+        "properties": {
+          "VoltageDCMax": {
+            "$ref": "#/components/schemas/VoltageDCMax"
+          },
+          "VoltageDCMin": {
+            "$ref": "#/components/schemas/VoltageDCMin"
+          },
+          "VoltageDCNom": {
+            "$ref": "#/components/schemas/VoltageDCNom"
+          },
+          "MPPTNumber": {
+            "$ref": "#/components/schemas/MPPTNumber"
+          },
+          "PowerDCContinuousMax": {
+            "$ref": "#/components/schemas/PowerDCContinuousMax"
+          },
+          "MPPTs": {
+            "$ref": "#/components/schemas/MPPTs"
+          }
+        }
+      },
+      "VoltageDCMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum DC Voltage",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 200,
+              "Units": "Volt"
+            }
+          }
+        ]
+      },
+      "VoltageDCMin": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Minimum DC Voltage",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 20,
+              "Units": "Volt"
+            }
+          }
+        ]
+      },
+      "VoltageDCNom": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Nominal DC Voltage",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 150,
+              "Units": "Volt"
+            }
+          }
+        ]
+      },
+      "MPPTNumber": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
+          },
+          {
+            "type": "object",
+            "description": "Number of MPPTs on a device",
+            "x-ob-item-type": "stdi:integerItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "PowerDCContinuousMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum continuous DC power.",
+            "x-ob-item-type": "num:powerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 5,
+              "Units": "kW"
+            }
+          }
+        ]
+      },
+      "VoltageDCInverterStart": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Voltage (DC) input required for an inverter to begin power conversion",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "DCOutput": {
+        "description": "DC outputs from a device",
+        "properties": {
+          "VoltageDCMax": {
+            "$ref": "#/components/schemas/VoltageDCMax"
+          },
+          "VoltageDCMin": {
+            "$ref": "#/components/schemas/VoltageDCMin"
+          },
+          "VoltageDCNom": {
+            "$ref": "#/components/schemas/VoltageDCNom"
+          },
+          "PowerDCContinuousMax": {
+            "$ref": "#/components/schemas/PowerDCContinuousMax"
+          },
+          "CurrentDCMax": {
+            "$ref": "#/components/schemas/CurrentDCMax"
+          },
+          "PowerDCMax": {
+            "$ref": "#/components/schemas/PowerDCMax"
+          },
+          "PowerDCPeaks": {
+            "$ref": "#/components/schemas/PowerDCPeaks"
+          }
+        },
+        "type": "object"
+      },
+      "ACInput": {
+        "type": "object",
+        "description": "AC inputs to a device",
+        "properties": {
+          "VoltageACMax": {
+            "$ref": "#/components/schemas/VoltageACMax"
+          },
+          "VoltageACMin": {
+            "$ref": "#/components/schemas/VoltageACMin"
+          },
+          "VoltageACNom": {
+            "$ref": "#/components/schemas/VoltageACNom"
+          },
+          "CurrentACMax": {
+            "$ref": "#/components/schemas/CurrentACMax"
+          },
+          "FrequenciesAC": {
+            "$ref": "#/components/schemas/FrequenciesAC"
+          }
+        }
+      },
+      "ACOutput": {
+        "type": "object",
+        "description": "AC outputs from a device",
+        "properties": {
+          "VoltageACMax": {
+            "$ref": "#/components/schemas/VoltageACMax"
+          },
+          "VoltageACMin": {
+            "$ref": "#/components/schemas/VoltageACMin"
+          },
+          "VoltageACNom": {
+            "$ref": "#/components/schemas/VoltageACNom"
+          },
+          "PowerFactorMax": {
+            "$ref": "#/components/schemas/PowerFactorMax"
+          },
+          "PowerFactorMin": {
+            "$ref": "#/components/schemas/PowerFactorMin"
+          },
+          "PowerACMax": {
+            "$ref": "#/components/schemas/PowerACMax"
+          },
+          "PowerACNom": {
+            "$ref": "#/components/schemas/PowerACNom"
+          },
+          "CurrentACMax": {
+            "$ref": "#/components/schemas/CurrentACMax"
+          },
+          "PowerACApparentMax": {
+            "$ref": "#/components/schemas/PowerACApparentMax"
+          },
+          "PowerACApparentNom": {
+            "$ref": "#/components/schemas/PowerACApparentNom"
+          },
+          "InterconnectionLineCount": {
+            "$ref": "#/components/schemas/InterconnectionLineCount"
+          },
+          "InterconnectionPhase": {
+            "$ref": "#/components/schemas/InterconnectionPhase"
+          },
+          "InterconnectionPhaseType": {
+            "$ref": "#/components/schemas/InterconnectionPhaseType"
+          },
+          "PowerACSurges": {
+            "$ref": "#/components/schemas/PowerACSurges"
+          },
+          "CurrentACNom": {
+            "$ref": "#/components/schemas/CurrentACNom"
+          },
+          "FrequenciesAC": {
+            "$ref": "#/components/schemas/FrequenciesAC"
+          }
+        }
+      },
+      "PowerACApparentMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum apparent AC power",
+            "x-ob-item-type": "num:powerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 5000,
+              "Unit": "VA"
+            }
+          }
+        ]
+      },
+      "PowerACApparentNom": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Nominal apparent AC power",
+            "x-ob-item-type": "num:powerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 5000,
+              "Unit": "VA"
+            }
+          }
+        ]
+      },
+      "CurrentACNom": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Nominal AC current",
+            "x-ob-item-type": "num-us:electricCurrentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 10,
+              "Unit": "A"
+            }
+          }
+        ]
+      },
+      "ACOutputs": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ACOutput"
+        }
+      },
+      "FrequencyAC": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Frequency (Hz) of a AC power device or system",
+            "x-ob-item-type": "num-us:frequencyItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "PowerDCMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum DC power at a moment in time",
+            "x-ob-item-type": "num:powerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 7,
+              "Units": "kW"
+            }
+          }
+        ]
+      },
+      "PowerDCPeak": {
+        "type": "object",
+        "description": "Peak DC power over an interval of time",
+        "properties": {
+          "PowerDC": {
+            "$ref": "#/components/schemas/PowerDC"
+          },
+          "Duration": {
+            "$ref": "#/components/schemas/Duration"
+          }
+        }
+      },
+      "PowerDCPeaks": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PowerDCPeak"
         }
       }
     }
@@ -15380,7 +15566,8 @@
         "GW",
         "kW",
         "MW",
-        "W"
+        "W",
+        "VA"
       ]
     },
     "massUnitItemType": {
