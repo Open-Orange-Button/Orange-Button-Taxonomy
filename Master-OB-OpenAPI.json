@@ -7118,9 +7118,6 @@
               "DCInput": {
                 "$ref": "#/components/schemas/DCInput"
               },
-              "InverterHarmonicsMax": {
-                "$ref": "#/components/schemas/InverterHarmonicsMax"
-              },
               "InverterSwitchoverTime": {
                 "$ref": "#/components/schemas/InverterSwitchoverTime"
               },
@@ -7129,6 +7126,12 @@
               },
               "ACOutputs": {
                 "$ref": "#/components/schemas/ACOutputs"
+              },
+              "TotalHarmonicDistortionPower": {
+                "$ref": "#/components/schemas/TotalHarmonicDistortionPower"
+              },
+              "TotalHarmonicDistortionCurrent": {
+                "$ref": "#/components/schemas/TotalHarmonicDistortionCurrent"
               }
             }
           }
@@ -7259,36 +7262,6 @@
           }
         ]
       },
-      "CurrentOutputMax": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Maximum output electric current of a device",
-            "x-ob-item-type": "num-us:electricCurrentItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": ""
-          }
-        ]
-      },
-      "VoltageOutputMax": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Maximum output voltage of a device",
-            "x-ob-item-type": "num-us:voltageItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": ""
-          }
-        ]
-      },
       "Comment": {
         "type": "object",
         "description": "Date, source and content of a comment",
@@ -7370,11 +7343,8 @@
             "type": "object",
             "description": "A DC-DC power optimizer",
             "properties": {
-              "CurrentOutputMax": {
-                "$ref": "#/components/schemas/CurrentOutputMax"
-              },
-              "VoltageOutputMax": {
-                "$ref": "#/components/schemas/VoltageOutputMax"
+              "DCOutput": {
+                "$ref": "#/components/schemas/DCOutput"
               }
             }
           }
@@ -8811,21 +8781,6 @@
           }
         }
       },
-      "InverterHarmonicsMax": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The total harmonic distortion (THD) of an inverter, defined as the ratio of the sum of power of all harmonics to the power of the fundamental frequency.",
-            "x-ob-item-type": "percentItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
       "CurrentShortCircuitMax": {
         "allOf": [
           {
@@ -9100,9 +9055,6 @@
           "PowerFactorMin": {
             "$ref": "#/components/schemas/PowerFactorMin"
           },
-          "InverterHarmonicsMax": {
-            "$ref": "#/components/schemas/InverterHarmonicsMax"
-          },
           "InterconnectionPhaseType": {
             "$ref": "#/components/schemas/InterconnectionPhaseType"
           },
@@ -9123,6 +9075,9 @@
           },
           "InverterSwitchoverTime": {
             "$ref": "#/components/schemas/InverterSwitchoverTime"
+          },
+          "TotalHarmonicDistortionPower": {
+            "$ref": "#/components/schemas/TotalHarmonicDistortionPower"
           }
         }
       },
@@ -9274,24 +9229,6 @@
               "BatteryChemistryType": {
                 "$ref": "#/components/schemas/BatteryChemistryType"
               },
-              "VoltageDCChargeMin": {
-                "$ref": "#/components/schemas/VoltageDCChargeMin"
-              },
-              "VoltageDCChargeMax": {
-                "$ref": "#/components/schemas/VoltageDCChargeMax"
-              },
-              "VoltageDCDischargeMax": {
-                "$ref": "#/components/schemas/VoltageDCDischargeMax"
-              },
-              "VoltageDCDischargeMin": {
-                "$ref": "#/components/schemas/VoltageDCDischargeMin"
-              },
-              "BatteryPowerDischargePeaks": {
-                "$ref": "#/components/schemas/BatteryPowerDischargePeaks"
-              },
-              "PowerDCDischargeContinuousMax": {
-                "$ref": "#/components/schemas/PowerDCDischargeContinuousMax"
-              },
               "EnergyCapacityUsable": {
                 "$ref": "#/components/schemas/EnergyCapacityUsable"
               },
@@ -9304,9 +9241,6 @@
               "AltitudeInstallationMax": {
                 "$ref": "#/components/schemas/AltitudeInstallationMax"
               },
-              "VoltageDCOutputNom": {
-                "$ref": "#/components/schemas/VoltageDCOutputNom"
-              },
               "TemperatureMinimumOperating": {
                 "$ref": "#/components/schemas/TemperatureMinimumOperating"
               },
@@ -9316,20 +9250,11 @@
               "CommunicationProtocol": {
                 "$ref": "#/components/schemas/CommunicationProtocol"
               },
-              "VoltageDCNom": {
-                "$ref": "#/components/schemas/VoltageDCNom"
-              },
-              "PowerDCContinuousMax": {
-                "$ref": "#/components/schemas/PowerDCContinuousMax"
-              },
               "DCInput": {
                 "$ref": "#/components/schemas/DCInput"
               },
               "DCOutput": {
                 "$ref": "#/components/schemas/DCOutput"
-              },
-              "PowerDCMax": {
-                "$ref": "#/components/schemas/PowerDCMax"
               }
             }
           }
@@ -9348,114 +9273,6 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "LeadAcidGel"
-            }
-          }
-        ]
-      },
-      "VoltageDCChargeMin": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Minimum DC voltage for charging",
-            "x-ob-item-type": "num-us:voltageItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 420,
-              "Units": "V"
-            }
-          }
-        ]
-      },
-      "VoltageDCChargeMax": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Maximum DC voltage for charging",
-            "x-ob-item-type": "num-us:voltageItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 450,
-              "Units": "V"
-            }
-          }
-        ]
-      },
-      "VoltageDCDischargeMin": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Minimum DC discharge voltage.",
-            "x-ob-item-type": "num-us:voltageItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 350,
-              "Units": "V"
-            }
-          }
-        ]
-      },
-      "VoltageDCDischargeMax": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Maximum DC Discharge voltage.",
-            "x-ob-item-type": "num-us:voltageItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 410,
-              "Units": "V"
-            }
-          }
-        ]
-      },
-      "BatteryPowerDischargePeak": {
-        "type": "object",
-        "description": "Battery power peak discharge specifications.",
-        "properties": {
-          "Duration": {
-            "$ref": "#/components/schemas/Duration"
-          },
-          "PowerDCMax": {
-            "$ref": "#/components/schemas/PowerDCMax"
-          }
-        }
-      },
-      "BatteryPowerDischargePeaks": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/BatteryPowerDischargePeak"
-        }
-      },
-      "PowerDCDischargeContinuousMax": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Maximum DC power during continuous discharge.",
-            "x-ob-item-type": "num:powerItemType",
-            "x-ob-item-type-group": "OBElectricalPower",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 5,
-              "Units": "kW"
             }
           }
         ]
@@ -9638,24 +9455,6 @@
             "x-ob-sample-value": {
               "Value": 3000,
               "Unit": "m"
-            }
-          }
-        ]
-      },
-      "VoltageDCOutputNom": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Nominal DC output voltage",
-            "x-ob-item-type": "num-us:voltageItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 12,
-              "Unit": "V"
             }
           }
         ]
@@ -10283,6 +10082,36 @@
         "items": {
           "$ref": "#/components/schemas/PowerDCPeak"
         }
+      },
+      "TotalHarmonicDistortionPower": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The total harmonic distortion (THD) of the power of an inverter, defined as the ratio of the sum of power of all harmonics to the power of the fundamental frequency.",
+            "x-ob-item-type": "percentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TotalHarmonicDistortionCurrent": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The total harmonic distortion (THD) of the power of an inverter, defined as the ratio of the sum of current in all harmonics to the current in the fundamental frequency.",
+            "x-ob-item-type": "percentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
       }
     }
   },
