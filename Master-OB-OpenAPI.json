@@ -7345,6 +7345,15 @@
             "properties": {
               "DCOutput": {
                 "$ref": "#/components/schemas/DCOutput"
+              },
+              "DCInput": {
+                "$ref": "#/components/schemas/DCInput"
+              },
+              "OptimizerEfficiencyMax": {
+                "$ref": "#/components/schemas/OptimizerEfficiencyMax"
+              },
+              "OptimizerEfficiencyWeighted": {
+                "$ref": "#/components/schemas/OptimizerEfficiencyWeighted"
               }
             }
           }
@@ -10110,6 +10119,40 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "OptimizerEfficiencyMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum efficiency of a DC-DC optimizer",
+            "x-ob-item-type": "percentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 99.5
+            }
+          }
+        ]
+      },
+      "OptimizerEfficiencyWeighted": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "CEC-weighted efficiency of a DC-DC optimizer",
+            "x-ob-item-type": "percentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 98.3
+            }
           }
         ]
       }
