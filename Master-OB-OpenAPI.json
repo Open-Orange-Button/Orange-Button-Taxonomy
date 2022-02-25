@@ -784,8 +784,8 @@
           "Comments": {
             "$ref": "#/components/schemas/Comments"
           },
-          "Projects": {
-            "$ref": "#/components/schemas/Projects"
+          "Jobs": {
+            "$ref": "#/components/schemas/Jobs"
           }
         },
         "x-ob-usage-tips": ""
@@ -9830,65 +9830,11 @@
           }
         ]
       },
-      "Project": {
-        "type": "object",
-        "description": "An overall contract with a Site owner",
-        "properties": {
-          "PVSystems": {
-            "$ref": "#/components/schemas/PVSystems"
-          },
-          "BatterySystems": {
-            "$ref": "#/components/schemas/BatterySystems"
-          },
-          "BillOfServices": {
-            "$ref": "#/components/schemas/BillOfServices"
-          },
-          "Entities": {
-            "$ref": "#/components/schemas/Entities"
-          },
-          "Tasks": {
-            "$ref": "#/components/schemas/Tasks"
-          },
-          "Comments": {
-            "$ref": "#/components/schemas/Comments"
-          },
-          "ProjectedSavingsAmt": {
-            "$ref": "#/components/schemas/ProjectedSavingsAmt"
-          },
-          "ProjectPriceAmt": {
-            "$ref": "#/components/schemas/ProjectPriceAmt"
-          },
-          "Contacts": {
-            "$ref": "#/components/schemas/Contacts"
-          },
-          "Contracts": {
-            "$ref": "#/components/schemas/Contracts"
-          }
-        }
-      },
-      "Projects": {
+      "Jobs": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/Project"
+          "$ref": "#/components/schemas/Job"
         }
-      },
-      "ProjectPriceAmt": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The total price of a project",
-            "x-ob-item-type": "stdi:monetaryItemType",
-            "x-ob-item-type-group": "OBMonetary",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 27001,
-              "Unit": "USD"
-            }
-          }
-        ]
       },
       "Contract": {
         "type": "object",
@@ -10097,6 +10043,60 @@
         "items": {
           "$ref": "#/components/schemas/Contract"
         }
+      },
+      "Job": {
+        "type": "object",
+        "description": "An overall contract with a Site owner",
+        "properties": {
+          "PVSystems": {
+            "$ref": "#/components/schemas/PVSystems"
+          },
+          "BatterySystems": {
+            "$ref": "#/components/schemas/BatterySystems"
+          },
+          "BillOfServices": {
+            "$ref": "#/components/schemas/BillOfServices"
+          },
+          "Entities": {
+            "$ref": "#/components/schemas/Entities"
+          },
+          "Tasks": {
+            "$ref": "#/components/schemas/Tasks"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "ProjectedSavingsAmt": {
+            "$ref": "#/components/schemas/ProjectedSavingsAmt"
+          },
+          "Contacts": {
+            "$ref": "#/components/schemas/Contacts"
+          },
+          "Contracts": {
+            "$ref": "#/components/schemas/Contracts"
+          },
+          "JobPriceAmt": {
+            "$ref": "#/components/schemas/JobPriceAmt"
+          }
+        }
+      },
+      "JobPriceAmt": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The total price of a job",
+            "x-ob-item-type": "stdi:monetaryItemType",
+            "x-ob-item-type-group": "OBMonetary",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 27001,
+              "Unit": "USD"
+            }
+          }
+        ]
       }
     }
   },
