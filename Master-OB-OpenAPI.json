@@ -884,7 +884,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Degree",
-              "Value": "45.7783517"
+              "Value": 45.7783517
             },
             "x-ob-item-type-group": ""
           }
@@ -902,7 +902,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Degree",
-              "Value": "-108.5203597"
+              "Value": -108.5203597
             },
             "x-ob-item-type-group": ""
           }
@@ -1056,7 +1056,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Foot",
-              "Value": "3123"
+              "Value": 3123
             },
             "x-ob-item-type-group": ""
           }
@@ -1105,7 +1105,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Foot",
-              "Value": "20"
+              "Value": 20
             },
             "x-ob-item-type-group": ""
           }
@@ -1814,7 +1814,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
-              "Value": "43095"
+              "Value": 43095
             },
             "x-ob-item-type-group": "OBMonetary"
           }
@@ -1877,7 +1877,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Kilowatt",
-              "Value": "11.5"
+              "Value": 11.5
             },
             "x-ob-item-type-group": "OBElectricalPower"
           }
@@ -2190,7 +2190,7 @@
             "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "0.131"
+              "Value": 0.131
             },
             "x-ob-item-type-group": ""
           }
@@ -3109,7 +3109,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
-              "Value": "0.01"
+              "Value": 0.01
             },
             "x-ob-item-type-group": ""
           }
@@ -3492,7 +3492,7 @@
             "x-ob-usage-tips": "Note the unit always needs to be equal to the SpecificationUnit value",
             "x-ob-sample-value": {
               "Unit": "mm",
-              "Value": "9"
+              "Value": 9
             },
             "x-ob-item-type-group": ""
           }
@@ -3608,7 +3608,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
-              "Value": "120"
+              "Value": 120
             },
             "x-ob-item-type-group": ""
           }
@@ -3626,7 +3626,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
-              "Value": "125"
+              "Value": 125
             },
             "x-ob-item-type-group": ""
           }
@@ -3644,7 +3644,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
-              "Value": "130"
+              "Value": 130
             },
             "x-ob-item-type-group": ""
           }
@@ -3662,7 +3662,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
-              "Value": "135"
+              "Value": 135
             },
             "x-ob-item-type-group": ""
           }
@@ -3680,7 +3680,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
-              "Value": "145"
+              "Value": 145
             },
             "x-ob-item-type-group": ""
           }
@@ -3852,7 +3852,7 @@
             "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "10"
+              "Value": 10
             },
             "x-ob-item-type-group": ""
           }
@@ -4082,7 +4082,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
-              "Value": "12000"
+              "Value": 12000
             },
             "x-ob-item-type-group": ""
           }
@@ -4637,7 +4637,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
-              "Value": "10.00"
+              "Value": 10.00
             },
             "x-ob-item-type-group": ""
           }
@@ -4655,7 +4655,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
-              "Value": "1000"
+              "Value": 1000
             },
             "x-ob-item-type-group": ""
           }
@@ -5010,7 +5010,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Volt",
-              "Value": "39.83"
+              "Value": 39.83
             }
           }
         ]
@@ -6897,7 +6897,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "Square Foot",
-              "Value": "10"
+              "Value": 10
             },
             "x-ob-item-type-group": ""
           }
@@ -7440,7 +7440,7 @@
               "EndTime": "2020-11-30",
               "StartTime": "2045-11-30",
               "Unit": "Year",
-              "Value": "25"
+              "Value": 25
             }
           }
         ]
@@ -7496,7 +7496,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Watt",
-              "Value": "300"
+              "Value": 300
             },
             "x-ob-item-type-group": ""
           }
@@ -7514,7 +7514,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Volt",
-              "Value": "32.26"
+              "Value": 32.26
             },
             "x-ob-item-type-group": ""
           }
@@ -7532,7 +7532,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Ampere",
-              "Value": "9.31"
+              "Value": 9.31
             },
             "x-ob-item-type-group": ""
           }
@@ -7584,7 +7584,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Celsius",
-              "Value": "45"
+              "Value": 45
             },
             "x-ob-item-type-group": ""
           }
@@ -7602,7 +7602,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Celsius",
-              "Value": "85"
+              "Value": 85
             },
             "x-ob-item-type-group": ""
           }
@@ -7620,7 +7620,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Celsius",
-              "Value": "-40"
+              "Value": -40
             },
             "x-ob-item-type-group": ""
           }
@@ -7637,7 +7637,7 @@
             "x-ob-item-type": "tempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "-0.37"
+              "Value": -0.37
             },
             "x-ob-item-type-group": ""
           }
@@ -7654,7 +7654,7 @@
             "x-ob-item-type": "tempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "-0.304"
+              "Value": -0.304
             },
             "x-ob-item-type-group": ""
           }
@@ -7671,7 +7671,7 @@
             "x-ob-item-type": "tempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "0.05"
+              "Value": 0.05
             },
             "x-ob-item-type-group": ""
           }
@@ -7689,7 +7689,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Volt",
-              "Value": "1500"
+              "Value": 1500
             },
             "x-ob-item-type-group": ""
           }
@@ -7707,7 +7707,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Ampere",
-              "Value": "20"
+              "Value": 20
             },
             "x-ob-item-type-group": ""
           }
@@ -7742,7 +7742,7 @@
             "x-ob-usage-tips": "Apply appropriate engineering consistency with related object Weight.",
             "x-ob-sample-value": {
               "Unit": "Kilogram",
-              "Value": "20"
+              "Value": 20
             },
             "x-ob-item-type-group": "massUnitItemType"
           }
@@ -7760,7 +7760,7 @@
             "x-ob-usage-tips": "For irregularly shaped objects use this as a bounding box dimension.",
             "x-ob-sample-value": {
               "Unit": "Millimetre",
-              "Value": "1765"
+              "Value": 1765
             },
             "x-ob-item-type-group": ""
           }
@@ -7778,7 +7778,7 @@
             "x-ob-usage-tips": "For irregularly shaped objects use this as a bounding box dimension.",
             "x-ob-sample-value": {
               "Unit": "Millimetre",
-              "Value": "1048"
+              "Value": 1048
             },
             "x-ob-item-type-group": ""
           }
@@ -7796,7 +7796,7 @@
             "x-ob-usage-tips": "For irregularly shaped objects use this as a bounding box dimension",
             "x-ob-sample-value": {
               "Unit": "Millimetre",
-              "Value": "35"
+              "Value": 35
             },
             "x-ob-item-type-group": ""
           }
@@ -7830,7 +7830,7 @@
             "x-ob-item-type": "stdi:integerItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "120"
+              "Value": 120
             },
             "x-ob-item-type-group": ""
           }
@@ -7847,7 +7847,7 @@
             "x-ob-item-type": "stdi:pureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "3"
+              "Value": 3
             },
             "x-ob-item-type-group": ""
           }
@@ -7882,7 +7882,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Square Millimeter",
-              "Value": "4"
+              "Value": 4
             },
             "x-ob-item-type-group": ""
           }
@@ -7900,7 +7900,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Millimetre",
-              "Value": "1200"
+              "Value": 1200
             },
             "x-ob-item-type-group": ""
           }
@@ -7935,7 +7935,7 @@
             "x-ob-usage-tips": "Use appropriate engineering consistency with related object Mass",
             "x-ob-sample-value": {
               "Unit": "Newton",
-              "Value": "9.81"
+              "Value": 9.81
             },
             "x-ob-item-type-group": ""
           }
