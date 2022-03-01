@@ -2309,7 +2309,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Fahrenheit",
-              "Value": "22"
+              "Value": 22
             },
             "x-ob-item-type-group": ""
           }
@@ -2327,7 +2327,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Fahrenheit",
-              "Value": "105"
+              "Value": 105
             },
             "x-ob-item-type-group": ""
           }
@@ -6853,7 +6853,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "Degree",
-              "Value": "180"
+              "Value": 180
             },
             "x-ob-item-type-group": ""
           }
@@ -6919,7 +6919,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "Degree",
-              "Value": "30"
+              "Value": 30
             },
             "x-ob-item-type-group": ""
           }
@@ -6941,7 +6941,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "Degree",
-              "Value": "20"
+              "Value": 20
             },
             "x-ob-item-type-group": ""
           }
