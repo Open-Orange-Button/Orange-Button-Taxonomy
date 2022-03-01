@@ -9699,7 +9699,6 @@
           "$ref": "#/components/schemas/Contract"
         }
       },
-<<<<<<< HEAD
       "DCInput": {
         "type": "object",
         "description": "DC inputs to a device",
@@ -10087,7 +10086,22 @@
         ]
       },
       "OptimizerEfficiencyWeighted": {
-=======
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Weighted efficiency of a DC-DC optimizer",
+            "x-ob-item-type": "percentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 99.5
+            }
+          }
+        ]
+      },
       "Job": {
         "type": "object",
         "description": "An overall contract with a Site owner",
