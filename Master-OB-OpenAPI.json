@@ -4637,7 +4637,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
-              "Value": 10.00
+              "Value": 10
             },
             "x-ob-item-type-group": ""
           }
@@ -10152,6 +10152,52 @@
             "x-ob-sample-value": {
               "Value": 27001,
               "Unit": "USD"
+            }
+          }
+        ]
+      },
+      "ProdEnergyStorageSystem": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Product"
+          },
+          {
+            "type": "object",
+            "description": "System that includes batteries, overcurrent protection, a disconnect, an enclosure, and optionally an inverter if it's AC-coupled.",
+            "properties": {
+              "ACInput": {
+                "$ref": "#/components/schemas/ACInput"
+              },
+              "ACOutputs": {
+                "$ref": "#/components/schemas/ACOutputs"
+              },
+              "DCInput": {
+                "$ref": "#/components/schemas/DCInput"
+              },
+              "DCOutput": {
+                "$ref": "#/components/schemas/DCOutput"
+              },
+              "AltitudeInstallationMax": {
+                "$ref": "#/components/schemas/AltitudeInstallationMax"
+              },
+              "BatteryChemistryType": {
+                "$ref": "#/components/schemas/BatteryChemistryType"
+              },
+              "CommunicationProtocol": {
+                "$ref": "#/components/schemas/CommunicationProtocol"
+              },
+              "EnergyCapacityNominal": {
+                "$ref": "#/components/schemas/EnergyCapacityNominal"
+              },
+              "EnergyCapacityUsable": {
+                "$ref": "#/components/schemas/EnergyCapacityUsable"
+              },
+              "TemperatureMaximumOperating": {
+                "$ref": "#/components/schemas/TemperatureMaximumOperating"
+              },
+              "TemperatureMinimumOperating": {
+                "$ref": "#/components/schemas/TemperatureMinimumOperating"
+              }
             }
           }
         ]
