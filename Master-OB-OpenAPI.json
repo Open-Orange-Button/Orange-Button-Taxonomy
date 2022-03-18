@@ -875,7 +875,7 @@
       "Latitude": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -893,7 +893,7 @@
       "Longitude": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -2182,7 +2182,7 @@
       "MCERgroundmotionSS": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -2199,7 +2199,7 @@
       "MCERgroundmotionS1": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -2207,7 +2207,7 @@
             "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "0.057"
+              "Value": 0.057
             },
             "x-ob-item-type-group": ""
           }
@@ -2300,7 +2300,7 @@
       "TempLowASHRAE": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -2318,7 +2318,7 @@
       "TempHighASHRAE": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -2377,7 +2377,7 @@
       "ElectricalServiceRating": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -2386,7 +2386,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Ampere",
-              "Value": "120"
+              "Value": 120
             },
             "x-ob-item-type-group": ""
           }
@@ -3492,7 +3492,7 @@
             "x-ob-usage-tips": "Note the unit always needs to be equal to the SpecificationUnit value",
             "x-ob-sample-value": {
               "Unit": "mm",
-              "Value": 9
+              "Value": "9"
             },
             "x-ob-item-type-group": ""
           }
@@ -3730,7 +3730,7 @@
       "WindSpeed": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -3742,8 +3742,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "mi_per_h",
+              "Value": 15
             },
             "x-ob-item-type-group": ""
           }
@@ -3752,7 +3752,7 @@
       "SnowPressure": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -3760,8 +3760,8 @@
             "x-ob-item-type": "num-us:pressureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Unit": "Pounds Per Square Foot",
-              "Value": "20"
+              "Unit": "psi",
+              "Value": 20
             },
             "x-ob-item-type-group": ""
           }
@@ -4145,15 +4145,15 @@
       "LoanRate": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
             "description": "The percentage rate of the loan",
-            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type": "percentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "2.99"
+              "Value": 2.99
             },
             "x-ob-item-type-group": ""
           }
@@ -4646,7 +4646,7 @@
       "AmountExtended": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -4699,20 +4699,20 @@
       "HeightAboveGround": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
             "description": "Height above ground level",
-            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type": "num:lengthItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "M",
+              "Value": 3
             },
             "x-ob-item-type-group": ""
           }
@@ -4721,7 +4721,7 @@
       "ASTME28484ModelCoeffA3": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -4734,7 +4734,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "",
-              "Value": ""
+              "Value": 0
             },
             "x-ob-item-type-group": ""
           }
@@ -4743,7 +4743,7 @@
       "Rainfall": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -4755,8 +4755,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "mm",
+              "Value": 5
             },
             "x-ob-item-type-group": ""
           }
@@ -4765,7 +4765,7 @@
       "FilterIrradMin": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -4777,8 +4777,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "W_per_sqm",
+              "Value": 50
             },
             "x-ob-item-type-group": ""
           }
@@ -4787,7 +4787,7 @@
       "OrientationAzimuth": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -4799,8 +4799,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "Degree",
+              "Value": 45
             },
             "x-ob-item-type-group": ""
           }
@@ -4875,7 +4875,7 @@
       "HumidityRelative": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -4888,7 +4888,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "",
-              "Value": ""
+              "Value": 33
             },
             "x-ob-item-type-group": ""
           }
@@ -4897,7 +4897,7 @@
       "ASTME2848ModelResidualMean": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -4919,7 +4919,7 @@
       "TempCell": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -4941,7 +4941,7 @@
       "FilterWindSpeedMin": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -4953,8 +4953,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "mi_per_h",
+              "Value": 5
             },
             "x-ob-item-type-group": ""
           }
@@ -4963,7 +4963,7 @@
       "FilterPowerACMin": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -4975,8 +4975,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "W",
+              "Value": 45
             },
             "x-ob-item-type-group": ""
           }
@@ -5040,7 +5040,7 @@
       "DataFilterOutsideRange": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
           },
           {
             "type": "object",
@@ -5062,7 +5062,7 @@
       "ASTME2848ModelResidualStandardDeviation": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5084,7 +5084,7 @@
       "TempMeter": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5106,7 +5106,7 @@
       "RefCellCalibrationConstantAtRptCond": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5118,8 +5118,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "Cel",
+              "Value": 50
             },
             "x-ob-item-type-group": ""
           }
@@ -5128,7 +5128,7 @@
       "TempModule": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5140,8 +5140,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "Cel",
+              "Value": 15
             },
             "x-ob-item-type-group": ""
           }
@@ -5150,7 +5150,7 @@
       "ASTME2848PowerRtgAtRptCond": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5162,8 +5162,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "W",
+              "Value": 45
             },
             "x-ob-item-type-group": ""
           }
@@ -5194,7 +5194,7 @@
       "PressureAtmospheric": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5206,8 +5206,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "psi",
+              "Value": 45
             },
             "x-ob-item-type-group": ""
           }
@@ -5216,7 +5216,7 @@
       "ASTME28484ModelCoeffA1": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5282,7 +5282,7 @@
       "IrradDirectNormal": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5294,8 +5294,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "W_per_sqm",
+              "Value": 50
             },
             "x-ob-item-type-group": ""
           }
@@ -5304,7 +5304,7 @@
       "FilterIrradMax": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5316,8 +5316,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "W_per_sqm",
+              "Value": 50
             },
             "x-ob-item-type-group": ""
           }
@@ -5348,7 +5348,7 @@
       "PowerDC": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5360,8 +5360,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "W",
+              "Value": 50
             },
             "x-ob-item-type-group": ""
           }
@@ -5370,7 +5370,7 @@
       "CurrentTransducerRatio": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5383,7 +5383,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "",
-              "Value": ""
+              "Value": 0.5
             },
             "x-ob-item-type-group": ""
           }
@@ -5392,7 +5392,7 @@
       "ASTME2848PowerRtgUncertainty": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5414,7 +5414,7 @@
       "DataFilterInverterClipping": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
           },
           {
             "type": "object",
@@ -5436,7 +5436,7 @@
       "ASTME28484ModelCoeffA4": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5480,7 +5480,7 @@
       "SystemPF": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5493,7 +5493,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "",
-              "Value": ""
+              "Value": 95
             },
             "x-ob-item-type-group": ""
           }
@@ -5524,7 +5524,7 @@
       "IrradGlobalHorizontal": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5536,8 +5536,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "W_per_sqm",
+              "Value": 50
             },
             "x-ob-item-type-group": ""
           }
@@ -5546,7 +5546,7 @@
       "ASTME28484ModelCoeffA2": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5568,7 +5568,7 @@
       "DataFilterCollectionSystem": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
           },
           {
             "type": "object",
@@ -5656,7 +5656,7 @@
       "TempAmb": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5668,8 +5668,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "Cel",
+              "Value": 15
             },
             "x-ob-item-type-group": ""
           }
@@ -5678,7 +5678,7 @@
       "DataFilterInstrumentAlignment": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
           },
           {
             "type": "object",
@@ -5722,7 +5722,7 @@
       "EnergyAC": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5734,8 +5734,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "kWh",
+              "Value": 50
             },
             "x-ob-item-type-group": "OBElectricalEnergy"
           }
@@ -5744,7 +5744,7 @@
       "Albedo": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5757,7 +5757,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "",
-              "Value": ""
+              "Value": 30
             },
             "x-ob-item-type-group": ""
           }
@@ -5766,7 +5766,7 @@
       "OrientationTilt": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5778,8 +5778,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "Degree",
+              "Value": 25
             },
             "x-ob-item-type-group": ""
           }
@@ -5788,7 +5788,7 @@
       "FilterPowerACMax": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5800,8 +5800,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "W",
+              "Value": 50
             },
             "x-ob-item-type-group": ""
           }
@@ -5898,7 +5898,7 @@
       "DataSelected": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
           },
           {
             "type": "object",
@@ -5964,7 +5964,7 @@
       "Avail": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5977,7 +5977,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "",
-              "Value": ""
+              "Value": 95
             },
             "x-ob-item-type-group": ""
           }
@@ -5986,7 +5986,7 @@
       "FilterTempAmbMax": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5998,8 +5998,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "Cel",
+              "Value": 15
             },
             "x-ob-item-type-group": ""
           }
@@ -6074,7 +6074,7 @@
       "RevenueGrade": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
           },
           {
             "type": "object",
@@ -6162,7 +6162,7 @@
       "DataFilterOutliers": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
           },
           {
             "type": "object",
@@ -6184,7 +6184,7 @@
       "DataFilterVisual": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
           },
           {
             "type": "object",
@@ -6206,7 +6206,7 @@
       "SnowAccumulation": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6218,8 +6218,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "cm",
+              "Value": 25
             },
             "x-ob-item-type-group": ""
           }
@@ -6228,7 +6228,7 @@
       "DataFilterMissing": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
           },
           {
             "type": "object",
@@ -6294,7 +6294,7 @@
       "FilterIrradStabilityMax": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6307,7 +6307,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "",
-              "Value": ""
+              "Value": 5
             },
             "x-ob-item-type-group": ""
           }
@@ -6360,7 +6360,7 @@
       "TempRefCell": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6372,8 +6372,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "Cel",
+              "Value": 15
             },
             "x-ob-item-type-group": ""
           }
@@ -6404,7 +6404,7 @@
       "DataFilterShading": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
           },
           {
             "type": "object",
@@ -6426,7 +6426,7 @@
       "FilterWindSpeedMax": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6438,8 +6438,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "mi_per_h",
+              "Value": 50
             },
             "x-ob-item-type-group": ""
           }
@@ -6448,7 +6448,7 @@
       "DataFilterStability": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
           },
           {
             "type": "object",
@@ -6470,7 +6470,7 @@
       "IrradDiffuseHorizontal": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6482,8 +6482,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "W_per_sqm",
+              "Value": 150
             },
             "x-ob-item-type-group": ""
           }
@@ -6536,7 +6536,7 @@
       "CurtailLimit": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6548,8 +6548,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "kW",
+              "Value": 10
             },
             "x-ob-item-type-group": ""
           }
@@ -6558,7 +6558,7 @@
       "FilterTempAmbMin": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6570,8 +6570,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "Cel",
+              "Value": -10
             },
             "x-ob-item-type-group": ""
           }
@@ -6580,7 +6580,7 @@
       "IrradPlaneOfArray": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6592,8 +6592,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "W_per_sqm",
+              "Value": 700
             },
             "x-ob-item-type-group": ""
           }
@@ -6624,7 +6624,7 @@
       "PowerAC": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6636,8 +6636,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "W",
+              "Value": 50
             },
             "x-ob-item-type-group": ""
           }
@@ -6646,7 +6646,7 @@
       "Snowfall": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6658,8 +6658,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "cm",
+              "Value": 20
             },
             "x-ob-item-type-group": ""
           }
@@ -6668,7 +6668,7 @@
       "DeviceCost": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6680,8 +6680,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "USD",
+              "Value": 500
             },
             "x-ob-item-type-group": ""
           }
@@ -6840,7 +6840,7 @@
       "Azimuth": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6906,7 +6906,7 @@
       "Tilt": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6928,7 +6928,7 @@
       "Roll": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -7520,7 +7520,7 @@
       "ModuleEfficiency": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -7528,7 +7528,7 @@
             "x-ob-item-type": "percentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "18.3%"
+              "Value": 18.3
             },
             "x-ob-item-type-group": ""
           }
@@ -7537,7 +7537,7 @@
       "PowerToleranceMax": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -7545,7 +7545,7 @@
             "x-ob-item-type": "percentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "+ 1.5 %"
+              "Value": 1.5
             },
             "x-ob-item-type-group": ""
           }
@@ -7923,7 +7923,7 @@
       "PowerToleranceMin": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -7931,7 +7931,7 @@
             "x-ob-item-type": "percentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "- 1.5 %"
+              "Value": 1.5
             },
             "x-ob-item-type-group": ""
           }
