@@ -4711,7 +4711,7 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "M",
+              "Unit": "m",
               "Value": 3
             },
             "x-ob-item-type-group": ""
@@ -5207,7 +5207,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "psi",
-              "Value": 45
+              "Value": 14.7
             },
             "x-ob-item-type-group": ""
           }
@@ -5295,7 +5295,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "W_per_sqm",
-              "Value": 50
+              "Value": 900
             },
             "x-ob-item-type-group": ""
           }
@@ -5317,7 +5317,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "W_per_sqm",
-              "Value": 50
+              "Value": 1100
             },
             "x-ob-item-type-group": ""
           }
@@ -5537,7 +5537,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "W_per_sqm",
-              "Value": 50
+              "Value": 800
             },
             "x-ob-item-type-group": ""
           }
@@ -7931,7 +7931,7 @@
             "x-ob-item-type": "percentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 1.5
+              "Value": -1.5
             },
             "x-ob-item-type-group": ""
           }
