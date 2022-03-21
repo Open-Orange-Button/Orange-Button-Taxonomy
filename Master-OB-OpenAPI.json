@@ -5749,7 +5749,7 @@
           {
             "type": "object",
             "description": "Percentage of light that is reflected off the ground surface",
-            "x-ob-item-type": "num:percentItemType",
+            "x-ob-item-type": "stdi:decimalItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5757,7 +5757,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "",
-              "Value": 30
+              "Value": 0.3
             },
             "x-ob-item-type-group": ""
           }
