@@ -15450,7 +15450,7 @@
         }
       }
     },
-    "accelerationItemType": {
+    "AccelerationItemType": {
       "description": "Acceleration is quantified as distance per time squared.",
       "units": {
         "g": {
