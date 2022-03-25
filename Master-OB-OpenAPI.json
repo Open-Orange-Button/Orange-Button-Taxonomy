@@ -2187,10 +2187,11 @@
           {
             "type": "object",
             "description": " MCER ground motion (period=0.2s)",
-            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type": "accelerationItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 0.131
+              "Value": 0.131,
+              "Unit": "g"
             },
             "x-ob-item-type-group": ""
           }
@@ -2204,10 +2205,11 @@
           {
             "type": "object",
             "description": "MCER ground motion (period=1.0s)",
-            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type": "accelerationItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 0.057
+              "Value": 0.057,
+              "Unit": "g"
             },
             "x-ob-item-type-group": ""
           }
@@ -15445,6 +15447,19 @@
         "Rescinded ": {
           "label": "Rescinded",
           "description": "The stipulation has been withdrawn"
+        }
+      }
+    },
+    "AccelerationItemType": {
+      "description": "Acceleration is quantified as distance per time squared.",
+      "units": {
+        "g": {
+          "label": "Gravity",
+          "description": "Equal to 9.81 meters per second square"
+        },
+        "m_per_s_squared": {
+          "label": "Meter per second squared",
+          "description": "Meter per second squared"
         }
       }
     }

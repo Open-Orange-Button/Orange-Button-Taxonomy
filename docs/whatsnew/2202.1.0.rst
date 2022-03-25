@@ -14,6 +14,7 @@ Objects added
 
 Units added
 ~~~~~~~~~~~
+* Adds AccelerationItemType (:pull:`47`)
 
 
 Bug fixes
