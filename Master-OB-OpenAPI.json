@@ -2190,7 +2190,8 @@
             "x-ob-item-type": "accelerationItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 0.131
+              "Value": 0.131,
+              "Unit": "g"
             },
             "x-ob-item-type-group": ""
           }
@@ -2207,7 +2208,8 @@
             "x-ob-item-type": "accelerationItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 0.057
+              "Value": 0.057,
+              "Unit": "g"
             },
             "x-ob-item-type-group": ""
           }
