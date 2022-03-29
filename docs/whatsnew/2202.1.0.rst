@@ -1,0 +1,36 @@
+.. _whatsnew_0910:
+
+2202.1.0
+--------
+
+
+Elements added
+~~~~~~~~~~~~~~
+
+
+Objects added
+~~~~~~~~~~~~~
+
+
+Units added
+~~~~~~~~~~~
+* Adds AccelerationItemType (:pull:`47`)
+
+
+Bug fixes
+~~~~~~~~~
+
+
+Testing
+~~~~~~~
+
+
+Documentation
+~~~~~~~~~~~~~
+
+
+Contributors
+~~~~~~~~~~~~
+* Cliff Hansen (:ghuser:`cwhanse`)
+
+
