@@ -10,7 +10,18 @@ Elements added
 
 Objects added
 ~~~~~~~~~~~~~
-
+* Adds Contracts Object
+* Adds ContractID Object
+* Adds Portfolio Object
+* Adds Job Object
+* Adds Jobs Object
+* Adds Project Object
+* Adds Projects Object
+* Adds PortfolioID Object
+* Adds Project ID Object
+* Adds PorfolioName Object
+* Adds ProjectName Object
+* Adds Sites Object Object
 
 Units added
 ~~~~~~~~~~~
