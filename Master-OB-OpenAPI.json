@@ -10320,7 +10320,7 @@
         "items": {
           "$ref": "#/components/schemas/Site"
         }
-	  },
+      },
       "ProdEnergyStorageSystem": {
         "allOf": [
           {
