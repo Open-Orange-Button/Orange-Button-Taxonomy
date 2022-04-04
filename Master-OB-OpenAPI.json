@@ -786,6 +786,9 @@
           },
           "Jobs": {
             "$ref": "#/components/schemas/Jobs"
+          },
+          "Contracts": {
+            "$ref": "#/components/schemas/Contracts"
           }
         },
         "x-ob-usage-tips": ""
@@ -1594,7 +1597,7 @@
           },
           {
             "type": "object",
-            "description": "A generic URL to a file folder for transmitting documents",
+            "description": "A generic URL to a file folder or a single file for transmitting documents",
             "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -9523,6 +9526,9 @@
           },
           "Stipulations": {
             "$ref": "#/components/schemas/Stipulations"
+		  },
+           "ContractID": {
+            "$ref": "#/components/schemas/ContractID"
           }
         }
       },
@@ -10157,6 +10163,163 @@
             }
           }
         ]
+      },
+      "ContractID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "UUID for a contract",
+            "x-ob-item-type": "solar-types:uuidItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "123e4567-e89b-12d3-a456-426614174000"
+            }
+          }
+        ]
+      },
+      "Portfolio": {
+        "type": "object",
+        "description": "A collection of projects.",
+        "properties": {
+          "Projects": {
+            "$ref": "#/components/schemas/Projects"
+          },
+          "Entities": {
+            "$ref": "#/components/schemas/Entities"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "Contracts": {
+            "$ref": "#/components/schemas/Contracts"
+          },
+          "PortfolioID": {
+            "$ref": "#/components/schemas/PortfolioID"
+          },
+          "PortfolioName": {
+            "$ref": "#/components/schemas/PortfolioName"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Contacts": {
+            "$ref": "#/components/schemas/Contacts"
+          }
+        }
+      },
+      "Project": {
+        "type": "object",
+        "description": "A logical unit of work that may include more than one site.",
+        "properties": {
+          "ProjectID": {
+            "$ref": "#/components/schemas/ProjectID"
+          },
+          "ProjectName": {
+            "$ref": "#/components/schemas/ProjectName"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Contracts": {
+            "$ref": "#/components/schemas/Contracts"
+          },
+          "Contacts": {
+            "$ref": "#/components/schemas/Contacts"
+          },
+          "Entities": {
+            "$ref": "#/components/schemas/Entities"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "Sites": {
+            "$ref": "#/components/schemas/Sites"
+          }
+        }
+      },
+      "Projects": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Project"
+        }
+      },
+      "PortfolioID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A UUID for a portfolio.",
+            "x-ob-item-type": "solar-types:uuidItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "123e4567-e89b-12d3-a456-426614174000"
+            }
+          }
+        ]
+      },
+      "ProjectID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A UUID for a project",
+            "x-ob-item-type": "solar-types:uuidItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "123e4567-e89b-12d3-a456-426614174000"
+            }
+          }
+        ]
+      },
+      "PortfolioName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of a portfolio",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Acacia Crossing"
+            }
+          }
+        ]
+      },
+      "ProjectName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A name for a project",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Vista View"
+            }
+          }
+        ]
+      },
+      "Sites": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Site"
+        }
       },
       "ProdEnergyStorageSystem": {
         "allOf": [

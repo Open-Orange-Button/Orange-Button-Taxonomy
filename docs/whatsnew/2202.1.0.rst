@@ -6,10 +6,11 @@
 
 Elements added
 ~~~~~~~~~~~~~~
-
+* Adds ContractID, ProjectID, PortfolioID, ProjectName, PorfolioName, Projects, Sites  (:pull:`35`)
 
 Objects added
 ~~~~~~~~~~~~~
+* Adds Portfolio, Project Objects (:pull:`35`)
 
 
 Units added
@@ -32,5 +33,4 @@ Documentation
 Contributors
 ~~~~~~~~~~~~
 * Cliff Hansen (:ghuser:`cwhanse`)
-
-
+* Kevin Kirkley (:ghuser:`kevinkirkl3y`)
