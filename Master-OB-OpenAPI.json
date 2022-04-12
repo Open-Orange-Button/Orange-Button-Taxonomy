@@ -3557,6 +3557,9 @@
           },
           "CertificateValue": {
             "$ref": "#/components/schemas/CertificateValue"
+          },
+          "FirmwareVersions": {
+            "$ref": "#/components/schemas/FirmwareVersions"
           }
         }
       },
@@ -10444,7 +10447,7 @@
           },
           {
             "type": "object",
-            "description": "Value used to confirm accuracy of data. ",
+            "description": "Value used to confirm integrity of data or code. ",
             "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -10459,7 +10462,7 @@
           },
           {
             "type": "object",
-            "description": "Date at which firmware version was updated.",
+            "description": "Date at which firmware or software update was applied. ",
             "x-ob-item-type": "stdi:dateItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",

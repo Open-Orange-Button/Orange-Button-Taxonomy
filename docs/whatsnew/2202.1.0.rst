@@ -7,10 +7,12 @@
 Elements added
 ~~~~~~~~~~~~~~
 * Adds ContractID, ProjectID, PortfolioID, ProjectName, PorfolioName, Projects, Sites  (:pull:`35`)
+* Adds FirmwareVersion, CertificationDate, Checksum, AppliedDate
 
 Objects added
 ~~~~~~~~~~~~~
 * Adds Portfolio, Project Objects (:pull:`35`)
+* Adds Firmware, FirmwareVersions
 
 
 Units added
