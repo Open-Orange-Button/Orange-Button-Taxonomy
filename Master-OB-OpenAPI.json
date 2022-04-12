@@ -8389,11 +8389,13 @@
           },
           {
             "type": "object",
-            "description": "The date on which a certification is made.",
+            "description": "The date that certification was awarded to product.",
             "x-ob-item-type": "stdi:dateItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": ""
+            "x-ob-sample-value": {
+              "Value": "03/18/2022"
+            }
           }
         ]
       },
@@ -9526,8 +9528,8 @@
           },
           "Stipulations": {
             "$ref": "#/components/schemas/Stipulations"
-		  },
-           "ContractID": {
+          },
+          "ContractID": {
             "$ref": "#/components/schemas/ContractID"
           }
         }
@@ -10366,6 +10368,130 @@
             }
           }
         ]
+      },
+      "IsHybridInverter": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "Hybrid inverters are capable of taking DC power input from both a solar system and an energy storage system.",
+            "x-ob-item-type": "stdi:booleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "T"
+            }
+          }
+        ]
+      },
+      "FirmwareVersion": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Firmware version ",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "A.4.0.B"
+            }
+          }
+        ]
+      },
+      "CECListingDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date that CEC listed the product with the certification.",
+            "x-ob-item-type": "stdi:dateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "12/25/2021"
+            }
+          }
+        ]
+      },
+      "CertificationTypeSections": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A list of sections covered by the certification.",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "SA8-SA13, SA14, SA15"
+            }
+          }
+        ]
+      },
+      "Checksum": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Value used to confirm accuracy of data. ",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "AppliedDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date at which firmware version was updated.",
+            "x-ob-item-type": "stdi:dateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "02/22/2022"
+            }
+          }
+        ]
+      },
+      "Firmware": {
+        "type": "object",
+        "description": "Permanent software programmed into a read-only memory.",
+        "properties": {
+          "FirmwareVersion": {
+            "$ref": "#/components/schemas/FirmwareVersion"
+          },
+          "CertificationDate": {
+            "$ref": "#/components/schemas/CertificationDate"
+          },
+          "Checksum": {
+            "$ref": "#/components/schemas/Checksum"
+          },
+          "AppliedDate": {
+            "$ref": "#/components/schemas/AppliedDate"
+          }
+        }
+      },
+      "FirmwareVersions": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Firmware"
+        }
       }
     }
   },
