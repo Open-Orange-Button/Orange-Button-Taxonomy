@@ -108,6 +108,9 @@
           },
           "Warranties": {
             "$ref": "#/components/schemas/Warranties"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         },
         "x-ob-usage-tips": ""
@@ -789,6 +792,9 @@
           },
           "Contracts": {
             "$ref": "#/components/schemas/Contracts"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         },
         "x-ob-usage-tips": ""
@@ -9155,6 +9161,9 @@
           },
           "EntityRoles": {
             "$ref": "#/components/schemas/EntityRoles"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         }
       },
@@ -9526,9 +9535,12 @@
           },
           "Stipulations": {
             "$ref": "#/components/schemas/Stipulations"
-		  },
-           "ContractID": {
+          },
+          "ContractID": {
             "$ref": "#/components/schemas/ContractID"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         }
       },
@@ -10143,6 +10155,9 @@
           },
           "JobPriceAmt": {
             "$ref": "#/components/schemas/JobPriceAmt"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         }
       },
@@ -10208,6 +10223,9 @@
           },
           "Contacts": {
             "$ref": "#/components/schemas/Contacts"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         }
       },
@@ -10238,6 +10256,9 @@
           },
           "Sites": {
             "$ref": "#/components/schemas/Sites"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         }
       },
@@ -10363,6 +10384,81 @@
               "TemperatureMinimumOperating": {
                 "$ref": "#/components/schemas/TemperatureMinimumOperating"
               }
+            }
+          }
+        ]
+      },
+      "AlternativeIdentifier": {
+        "type": "object",
+        "description": "Additional identifier for a given record",
+        "properties": {
+          "SourceType": {
+            "$ref": "#/components/schemas/SourceType"
+          },
+          "SourceName": {
+            "$ref": "#/components/schemas/SourceName"
+          },
+          "Identifier": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          }
+        }
+      },
+      "AlternativeIdentifiers": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/AlternativeIdentifier"
+        }
+      },
+      "Identifier": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A unique identifier for a record that ties to a data source.",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "be3827bd-0b57-4990-a757-7ee13348356f"
+            }
+          }
+        ]
+      },
+      "SourceType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Known specific source of data. ",
+            "x-ob-item-type": "SourceTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "LEI"
+            }
+          }
+        ]
+      },
+      "SourceName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of the data source when SourceType is \"Other\".",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Data Source"
             }
           }
         ]
@@ -15623,6 +15719,23 @@
         "m_per_s_squared": {
           "label": "Meter per second squared",
           "description": "Meter per second squared"
+        }
+      }
+    },
+    "SourceTypeItemType": {
+      "description": "Known specific source of data.",
+      "enums": {
+        "CEC": {
+          "label": "CEC Equipment List",
+          "description": "California Electrical Commission Equipment List"
+        },
+        "LEI": {
+          "label": "Legal Entity Identifier",
+          "description": "https://en.wikipedia.org/wiki/Legal_Entity_Identifier"
+        },
+        "Other": {
+          "label": "Other",
+          "description": "Other known specific source of data. "
         }
       }
     }
