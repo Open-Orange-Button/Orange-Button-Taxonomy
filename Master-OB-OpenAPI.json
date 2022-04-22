@@ -2088,11 +2088,10 @@
           {
             "type": "object",
             "description": "The date the task was completed",
-            "x-ob-item-type": "stdi:stringItemType",
-            "x-ob-usage-tips": "Use EndTime for the actual completed date. StartTime should be the task start date",
+            "x-ob-item-type": "stdi:dateItemType",
+            "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "EndTime": "2020-11-30",
-              "StartTime": "2020-05-30"
+              "Value": "2020-11-30"
             },
             "x-ob-item-type-group": ""
           }
@@ -2442,7 +2441,7 @@
             "x-ob-item-type": "stdi:dateItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "1969"
+              "Value": "1969-01-01"
             },
             "x-ob-item-type-group": ""
           }
