@@ -10392,9 +10392,6 @@
         "type": "object",
         "description": "Additional identifier for a given record",
         "properties": {
-          "SourceType": {
-            "$ref": "#/components/schemas/SourceType"
-          },
           "SourceName": {
             "$ref": "#/components/schemas/SourceName"
           },
@@ -10419,29 +10416,12 @@
           },
           {
             "type": "object",
-            "description": "A unique identifier for a record that ties to a data source.",
+            "description": "A unique identifier for a record or dataset.",
             "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "be3827bd-0b57-4990-a757-7ee13348356f"
-            }
-          }
-        ]
-      },
-      "SourceType": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Known specific source of data. ",
-            "x-ob-item-type": "SourceTypeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "LEI"
             }
           }
         ]
@@ -10453,7 +10433,7 @@
           },
           {
             "type": "object",
-            "description": "Name of the data source when SourceType is \"Other\".",
+            "description": "Name of the data source.",
             "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
