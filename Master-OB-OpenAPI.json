@@ -7140,6 +7140,18 @@
               },
               "TotalHarmonicDistortionCurrent": {
                 "$ref": "#/components/schemas/TotalHarmonicDistortionCurrent"
+              },
+              "IsHybrid": {
+                "$ref": "#/components/schemas/IsHybrid"
+              },
+              "CECNotes": {
+                "$ref": "#/components/schemas/CECNotes"
+              },
+              "HasMeter": {
+                "$ref": "#/components/schemas/HasMeter"
+              },
+              "NightTare": {
+                "$ref": "#/components/schemas/NightTare"
               }
             }
           }
@@ -8773,6 +8785,15 @@
           },
           "InverterEfficiencyCECTestResults": {
             "$ref": "#/components/schemas/InverterEfficiencyCECTestResults"
+          },
+          "EfficiencyCECWtdVoltageMax": {
+            "$ref": "#/components/schemas/EfficiencyCECWtdVoltageMax"
+          },
+          "EfficiencyCECWtdVoltageMin": {
+            "$ref": "#/components/schemas/EfficiencyCECWtdVoltageMin"
+          },
+          "EfficiencyCECWtdVoltageNom": {
+            "$ref": "#/components/schemas/EfficiencyCECWtdVoltageNom"
           }
         }
       },
@@ -10372,23 +10393,6 @@
           }
         ]
       },
-      "IsHybridInverter": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementBoolean"
-          },
-          {
-            "type": "object",
-            "description": "Hybrid inverters are capable of taking DC power input from both a solar system and an energy storage system.",
-            "x-ob-item-type": "stdi:booleanItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "T"
-            }
-          }
-        ]
-      },
       "FirmwareVersion": {
         "allOf": [
           {
@@ -10495,6 +10499,127 @@
         "items": {
           "$ref": "#/components/schemas/Firmware"
         }
+      },
+      "IsHybrid": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "True if inverter is capable of taking DC power input from a PV system and an energy storage system. ",
+            "x-ob-item-type": "stdi:booleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": true
+            }
+          }
+        ]
+      },
+      "CECNotes": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Notes from California Energy Commission (CEC) equipment list.",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "HasMeter": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "Product contains a built in metering device. ",
+            "x-ob-item-type": "stdi:booleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": true
+            }
+          }
+        ]
+      },
+      "NightTare": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Power consumed by an inverter with no DC input. Also referred to as internal consumption.",
+            "x-ob-item-type": "num:powerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 1,
+              "Unit": "W"
+            }
+          }
+        ]
+      },
+      "EfficiencyCECWtdVoltageMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Weighted DC/AC conversion efficiency at Vmax. Weighting according to CEC specification. ",
+            "x-ob-item-type": "percentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 93.5,
+              "Units": "percent"
+            }
+          }
+        ]
+      },
+      "EfficiencyCECWtdVoltageMin": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Weighted DC/AC conversion efficiency at Vmin. Weighted based on CEC specifications.",
+            "x-ob-item-type": "percentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Values": 92.5,
+              "Units": "percent"
+            }
+          }
+        ]
+      },
+      "EfficiencyCECWtdVoltageNom": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Weighted DC/AC conversion efficiency at Vnom. Weighted based on CEC specifications.",
+            "x-ob-item-type": "percentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Values": 93.2,
+              "Units": "percent"
+            }
+          }
+        ]
       }
     }
   },
@@ -15047,6 +15172,14 @@
         "UL3741": {
           "label": "UL3741",
           "description": ""
+        },
+        "CSIP": {
+          "label": "CSIP",
+          "description": "SunSpec 2030.5 Common Smart Inverter Profile (CSIP) Certification"
+        },
+        "CSIP-NRTL": {
+          "label": "CSIP NRTL Attestation",
+          "description": "SunSpec 2030.5 Common Smart Inverter Profile (CSIP) Attestation. Inverter was connected to gateway during compatibility testing."
         }
       }
     },

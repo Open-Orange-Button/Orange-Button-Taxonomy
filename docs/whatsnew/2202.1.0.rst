@@ -7,7 +7,7 @@
 Elements added
 ~~~~~~~~~~~~~~
 * Adds ContractID, ProjectID, PortfolioID, ProjectName, PorfolioName, Projects, Sites  (:pull:`35`)
-* Adds FirmwareVersion, CertificationDate, Checksum, AppliedDate
+* Adds FirmwareVersion, CertificationDate, Checksum, AppliedDate, EfficiencyCECWtdVoltageMax, EfficiencyCECWtdVoltageMin, EfficiencyCECWtdVoltageNom, NightTare, IsHybrid, HasMeter, CECNotes
 
 Objects added
 ~~~~~~~~~~~~~
