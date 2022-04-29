@@ -15701,23 +15701,6 @@
           "description": "Meter per second squared"
         }
       }
-    },
-    "SourceTypeItemType": {
-      "description": "Known specific source of data.",
-      "enums": {
-        "CEC": {
-          "label": "CEC Equipment List",
-          "description": "California Electrical Commission Equipment List"
-        },
-        "LEI": {
-          "label": "Legal Entity Identifier",
-          "description": "https://en.wikipedia.org/wiki/Legal_Entity_Identifier"
-        },
-        "Other": {
-          "label": "Other",
-          "description": "Other known specific source of data. "
-        }
-      }
     }
   },
   "x-ob-item-type-groups": {
