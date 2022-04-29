@@ -2441,7 +2441,7 @@
             "x-ob-item-type": "stdi:dateItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "1969-01-01"
+              "Value": "1969"
             },
             "x-ob-item-type-group": ""
           }

@@ -20,7 +20,7 @@ Units added
 
 Bug fixes
 ~~~~~~~~~
-
+* Changed date values to match ISO Format. (:pull:`52`)
 
 Testing
 ~~~~~~~
