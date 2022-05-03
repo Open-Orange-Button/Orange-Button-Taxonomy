@@ -10390,7 +10390,7 @@
       },
       "AlternativeIdentifier": {
         "type": "object",
-        "description": "Additional identifier for a given record",
+        "description": "Additional identifier for a record or data set",
         "properties": {
           "SourceName": {
             "$ref": "#/components/schemas/SourceName"
