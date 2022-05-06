@@ -9526,8 +9526,8 @@
           },
           "Stipulations": {
             "$ref": "#/components/schemas/Stipulations"
-		  },
-           "ContractID": {
+          },
+          "ContractID": {
             "$ref": "#/components/schemas/ContractID"
           }
         }
@@ -14917,6 +14917,14 @@
         },
         "UL3741": {
           "label": "UL3741",
+          "description": ""
+        },
+        "UL1973-2-2018": {
+          "label": "UL1973 Edition 2: 2018",
+          "description": ""
+        },
+        "JA12": {
+          "label": "JA12",
           "description": ""
         }
       }
