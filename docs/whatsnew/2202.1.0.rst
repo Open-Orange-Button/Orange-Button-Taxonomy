@@ -7,11 +7,11 @@
 Elements added
 ~~~~~~~~~~~~~~
 * Adds ContractID, ProjectID, PortfolioID, ProjectName, PorfolioName, Projects, Sites  (:pull:`35`)
-
+* Adds Identifier, SourceName (:pull:`51`)
 Objects added
 ~~~~~~~~~~~~~
 * Adds Portfolio, Project Objects (:pull:`35`)
-
+* Adds AlternativeIdentifier, AlternativeIdentifiers (:pull:`51`)
 
 Units added
 ~~~~~~~~~~~
