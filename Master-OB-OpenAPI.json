@@ -108,6 +108,9 @@
           },
           "Warranties": {
             "$ref": "#/components/schemas/Warranties"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         },
         "x-ob-usage-tips": ""
@@ -789,6 +792,9 @@
           },
           "Contracts": {
             "$ref": "#/components/schemas/Contracts"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         },
         "x-ob-usage-tips": ""
@@ -2088,11 +2094,10 @@
           {
             "type": "object",
             "description": "The date the task was completed",
-            "x-ob-item-type": "stdi:stringItemType",
-            "x-ob-usage-tips": "Use EndTime for the actual completed date. StartTime should be the task start date",
+            "x-ob-item-type": "stdi:dateItemType",
+            "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "EndTime": "2020-11-30",
-              "StartTime": "2020-05-30"
+              "Value": "2020-11-30"
             },
             "x-ob-item-type-group": ""
           }
@@ -9181,6 +9186,9 @@
           },
           "EntityRoles": {
             "$ref": "#/components/schemas/EntityRoles"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         }
       },
@@ -9555,6 +9563,9 @@
           },
           "ContractID": {
             "$ref": "#/components/schemas/ContractID"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         }
       },
@@ -10169,6 +10180,9 @@
           },
           "JobPriceAmt": {
             "$ref": "#/components/schemas/JobPriceAmt"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         }
       },
@@ -10234,6 +10248,9 @@
           },
           "Contacts": {
             "$ref": "#/components/schemas/Contacts"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         }
       },
@@ -10264,6 +10281,9 @@
           },
           "Sites": {
             "$ref": "#/components/schemas/Sites"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         }
       },
@@ -10517,6 +10537,44 @@
           }
         ]
       },
+      "AlternativeIdentifier": {
+        "type": "object",
+        "description": "Additional identifier for a record or data set",
+        "properties": {
+          "SourceName": {
+            "$ref": "#/components/schemas/SourceName"
+          },
+          "Identifier": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          }
+        }
+      },
+      "AlternativeIdentifiers": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/AlternativeIdentifier"
+        }
+      },
+      "Identifier": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A unique identifier for a record or dataset.",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "be3827bd-0b57-4990-a757-7ee13348356f"
+            }
+          }
+        ]
+      },
       "CECNotes": {
         "allOf": [
           {
@@ -10617,6 +10675,23 @@
             "x-ob-sample-value": {
               "Values": 93.2,
               "Units": "percent"
+            }
+          }
+        ]
+      },
+      "SourceName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of the data source.",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Data Source"
             }
           }
         ]
