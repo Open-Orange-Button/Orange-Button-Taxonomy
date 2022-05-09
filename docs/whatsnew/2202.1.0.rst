@@ -7,16 +7,18 @@
 Elements added
 ~~~~~~~~~~~~~~
 * Adds ContractID, ProjectID, PortfolioID, ProjectName, PorfolioName, Projects, Sites  (:pull:`35`)
-* Adds Identifier, SourceName (:pull:`51`)
+* Adds FirmwareVersion, CertificationDate, Checksum, AppliedDate, EfficiencyCECWtdVoltageMax, EfficiencyCECWtdVoltageMin, EfficiencyCECWtdVoltageNom, NightTare, IsHybrid, HasMeter, CECNotes
+  Identifier, SourceName (:pull:`51`)
+
 Objects added
 ~~~~~~~~~~~~~
 * Adds Portfolio, Project Objects (:pull:`35`)
-* Adds AlternativeIdentifier, AlternativeIdentifiers (:pull:`51`)
+* Adds Firmware, FirmwareVersions
+  AlternativeIdentifier, AlternativeIdentifiers (:pull:`51`)
 
 Units added
 ~~~~~~~~~~~
 * Adds AccelerationItemType (:pull:`47`)
-
 
 Bug fixes
 ~~~~~~~~~
