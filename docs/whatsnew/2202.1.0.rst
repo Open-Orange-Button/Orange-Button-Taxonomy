@@ -19,6 +19,7 @@ Objects added
 Units added
 ~~~~~~~~~~~
 * Adds AccelerationItemType (:pull:`47`)
+* Adds "UL1973" and "JA12" to CertificationTypeProductItemType (:pull:`58`) 
 
 Bug fixes
 ~~~~~~~~~
