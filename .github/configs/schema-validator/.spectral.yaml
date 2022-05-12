@@ -1,11 +1,6 @@
 extends: '@ibm-cloud/openapi-ruleset'
 functions: [spellcheckSubstrings]
 rules:
-  major-version-in-path: warn
-  openapi-tags: warn
-  oas3-api-servers: warn
-  oas3-unused-component: warn
-
   no-special-characters:
     description: Name must only contain characters in 0-9, A-Z, a-z, and _ (underscore).
     type: style
