@@ -13086,27 +13086,6 @@
         }
       }
     },
-    "solar-types:optimizerTypeItemType": {
-      "description": "",
-      "enums": {
-        "Standalone": {
-          "label": "",
-          "description": ""
-        },
-        "Attached": {
-          "label": "",
-          "description": ""
-        },
-        "Embedded": {
-          "label": "",
-          "description": ""
-        },
-        "Other": {
-          "label": "",
-          "description": ""
-        }
-      }
-    },
     "solar-types:systemAvailabilityModeItemType": {
       "description": "",
       "enums": {
@@ -16072,11 +16051,11 @@
     "OptimizerTypeItemType": {
       "description": "List of Optimizer Topologies",
       "enums": {
-        "Buck Only": {
-          "label": "BuckOnly",
+        "BuckOnly": {
+          "label": "Buck Only",
           "description": "This optimizer is Buck Only"
         },
-        "Boost-Buck": {
+        "BoostBuck": {
           "label": "Boost-Buck",
           "description": "This optimizer is Boost-Buck"
         }
