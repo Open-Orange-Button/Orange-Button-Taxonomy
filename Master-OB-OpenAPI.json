@@ -10441,7 +10441,7 @@
           },
           {
             "type": "object",
-            "description": "What Optimization Method Does this component Use",
+            "description": "The optimization method used by the optimizer.",
             "x-ob-item-type": "optimizerTypeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -10601,7 +10601,7 @@
           },
           {
             "type": "object",
-            "description": "This is an optimizer that modifies the attached module's apparent Voc value to allow for longer strings.",
+            "description": "True if the optimizer can modify the attached module's apparent Voc to allow for longer strings.",
             "x-ob-item-type": "stdi:booleanItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
