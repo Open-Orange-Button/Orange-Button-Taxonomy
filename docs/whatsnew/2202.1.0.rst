@@ -7,21 +7,23 @@
 Elements added
 ~~~~~~~~~~~~~~
 * Adds ContractID, ProjectID, PortfolioID, ProjectName, PorfolioName, Projects, Sites  (:pull:`35`)
+* Adds FirmwareVersion, CertificationDate, Checksum, AppliedDate, EfficiencyCECWtdVoltageMax, EfficiencyCECWtdVoltageMin, EfficiencyCECWtdVoltageNom, NightTare, IsHybrid, HasMeter, CECNotes
+  Identifier, SourceName (:pull:`51`)
 
 Objects added
 ~~~~~~~~~~~~~
 * Adds Portfolio, Project Objects (:pull:`35`)
-
+* Adds Firmware, FirmwareVersions
+  AlternativeIdentifier, AlternativeIdentifiers (:pull:`51`)
 
 Units added
 ~~~~~~~~~~~
 * Adds AccelerationItemType (:pull:`47`)
 * Adds UL1973-2-2018, JA12 to CertificationTypeProdItemType (:pull:`58`)
 
-
 Bug fixes
 ~~~~~~~~~
-
+* Changed ItemType of TaskCompletedDate to dateItemType, corrected sample value (:pull:`52`)
 
 Testing
 ~~~~~~~

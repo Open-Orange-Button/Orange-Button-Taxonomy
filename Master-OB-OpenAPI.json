@@ -108,6 +108,9 @@
           },
           "Warranties": {
             "$ref": "#/components/schemas/Warranties"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         },
         "x-ob-usage-tips": ""
@@ -789,6 +792,9 @@
           },
           "Contracts": {
             "$ref": "#/components/schemas/Contracts"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         },
         "x-ob-usage-tips": ""
@@ -2088,11 +2094,10 @@
           {
             "type": "object",
             "description": "The date the task was completed",
-            "x-ob-item-type": "stdi:stringItemType",
-            "x-ob-usage-tips": "Use EndTime for the actual completed date. StartTime should be the task start date",
+            "x-ob-item-type": "stdi:dateItemType",
+            "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "EndTime": "2020-11-30",
-              "StartTime": "2020-05-30"
+              "Value": "2020-11-30"
             },
             "x-ob-item-type-group": ""
           }
@@ -3557,6 +3562,9 @@
           },
           "CertificateValue": {
             "$ref": "#/components/schemas/CertificateValue"
+          },
+          "FirmwareVersions": {
+            "$ref": "#/components/schemas/FirmwareVersions"
           }
         }
       },
@@ -7137,6 +7145,18 @@
               },
               "TotalHarmonicDistortionCurrent": {
                 "$ref": "#/components/schemas/TotalHarmonicDistortionCurrent"
+              },
+              "IsHybrid": {
+                "$ref": "#/components/schemas/IsHybrid"
+              },
+              "CECNotes": {
+                "$ref": "#/components/schemas/CECNotes"
+              },
+              "HasMeter": {
+                "$ref": "#/components/schemas/HasMeter"
+              },
+              "NightTare": {
+                "$ref": "#/components/schemas/NightTare"
               }
             }
           }
@@ -8389,11 +8409,13 @@
           },
           {
             "type": "object",
-            "description": "The date on which a certification is made.",
+            "description": "The date that certification was awarded to product.",
             "x-ob-item-type": "stdi:dateItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": ""
+            "x-ob-sample-value": {
+              "Value": "03/18/2022"
+            }
           }
         ]
       },
@@ -8768,6 +8790,15 @@
           },
           "InverterEfficiencyCECTestResults": {
             "$ref": "#/components/schemas/InverterEfficiencyCECTestResults"
+          },
+          "EfficiencyCECWtdVoltageMax": {
+            "$ref": "#/components/schemas/EfficiencyCECWtdVoltageMax"
+          },
+          "EfficiencyCECWtdVoltageMin": {
+            "$ref": "#/components/schemas/EfficiencyCECWtdVoltageMin"
+          },
+          "EfficiencyCECWtdVoltageNom": {
+            "$ref": "#/components/schemas/EfficiencyCECWtdVoltageNom"
           }
         }
       },
@@ -9155,6 +9186,9 @@
           },
           "EntityRoles": {
             "$ref": "#/components/schemas/EntityRoles"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         }
       },
@@ -9529,6 +9563,9 @@
           },
           "ContractID": {
             "$ref": "#/components/schemas/ContractID"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         }
       },
@@ -10143,6 +10180,9 @@
           },
           "JobPriceAmt": {
             "$ref": "#/components/schemas/JobPriceAmt"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         }
       },
@@ -10208,6 +10248,9 @@
           },
           "Contacts": {
             "$ref": "#/components/schemas/Contacts"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         }
       },
@@ -10238,6 +10281,9 @@
           },
           "Sites": {
             "$ref": "#/components/schemas/Sites"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         }
       },
@@ -10363,6 +10409,289 @@
               "TemperatureMinimumOperating": {
                 "$ref": "#/components/schemas/TemperatureMinimumOperating"
               }
+            }
+          }
+        ]
+      },
+      "FirmwareVersion": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Firmware version ",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "A.4.0.B"
+            }
+          }
+        ]
+      },
+      "CECListingDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date that CEC listed the product with the certification.",
+            "x-ob-item-type": "stdi:dateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "12/25/2021"
+            }
+          }
+        ]
+      },
+      "CertificationTypeSections": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A list of sections covered by the certification.",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "SA8-SA13, SA14, SA15"
+            }
+          }
+        ]
+      },
+      "Checksum": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Value used to confirm integrity of data or code. ",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "AppliedDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date at which firmware or software update was applied. ",
+            "x-ob-item-type": "stdi:dateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "02/22/2022"
+            }
+          }
+        ]
+      },
+      "Firmware": {
+        "type": "object",
+        "description": "Permanent software programmed into a read-only memory.",
+        "properties": {
+          "FirmwareVersion": {
+            "$ref": "#/components/schemas/FirmwareVersion"
+          },
+          "CertificationDate": {
+            "$ref": "#/components/schemas/CertificationDate"
+          },
+          "Checksum": {
+            "$ref": "#/components/schemas/Checksum"
+          },
+          "AppliedDate": {
+            "$ref": "#/components/schemas/AppliedDate"
+          }
+        }
+      },
+      "FirmwareVersions": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Firmware"
+        }
+      },
+      "IsHybrid": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "True if inverter is capable of taking DC power input from a PV system and an energy storage system. ",
+            "x-ob-item-type": "stdi:booleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": true
+            }
+          }
+        ]
+      },
+      "AlternativeIdentifier": {
+        "type": "object",
+        "description": "Additional identifier for a record or data set",
+        "properties": {
+          "SourceName": {
+            "$ref": "#/components/schemas/SourceName"
+          },
+          "Identifier": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          }
+        }
+      },
+      "AlternativeIdentifiers": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/AlternativeIdentifier"
+        }
+      },
+      "Identifier": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A unique identifier for a record or dataset.",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "be3827bd-0b57-4990-a757-7ee13348356f"
+            }
+          }
+        ]
+      },
+      "CECNotes": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Notes from California Energy Commission (CEC) equipment list.",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "HasMeter": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "Product contains a built in metering device. ",
+            "x-ob-item-type": "stdi:booleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": true
+            }
+          }
+        ]
+      },
+      "NightTare": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Power consumed by an inverter with no DC input. Also referred to as internal consumption.",
+            "x-ob-item-type": "num:powerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 1,
+              "Unit": "W"
+            }
+          }
+        ]
+      },
+      "EfficiencyCECWtdVoltageMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Weighted DC/AC conversion efficiency at Vmax. Weighting according to CEC specification. ",
+            "x-ob-item-type": "percentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 93.5,
+              "Units": "percent"
+            }
+          }
+        ]
+      },
+      "EfficiencyCECWtdVoltageMin": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Weighted DC/AC conversion efficiency at Vmin. Weighted based on CEC specifications.",
+            "x-ob-item-type": "percentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Values": 92.5,
+              "Units": "percent"
+            }
+          }
+        ]
+      },
+      "EfficiencyCECWtdVoltageNom": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Weighted DC/AC conversion efficiency at Vnom. Weighted based on CEC specifications.",
+            "x-ob-item-type": "percentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Values": 93.2,
+              "Units": "percent"
+            }
+          }
+        ]
+      },
+      "SourceName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of the data source.",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Data Source"
             }
           }
         ]
@@ -14926,6 +15255,14 @@
         "JA12": {
           "label": "JA12",
           "description": ""
+        },
+        "CSIP": {
+          "label": "CSIP",
+          "description": "SunSpec 2030.5 Common Smart Inverter Profile (CSIP) Certification"
+        },
+        "CSIP-NRTL": {
+          "label": "CSIP NRTL Attestation",
+          "description": "SunSpec 2030.5 Common Smart Inverter Profile (CSIP) Attestation. Inverter was connected to gateway during compatibility testing."
         }
       }
     },
