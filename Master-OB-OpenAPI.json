@@ -10442,7 +10442,7 @@
           {
             "type": "object",
             "description": "The optimization method used by the optimizer.",
-            "x-ob-item-type": "optimizerTypeItemType",
+            "x-ob-item-type": "OptimizerTypeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -16069,11 +16069,11 @@
         }
       }
     },
-    "optimizerTypeItemType": {
+    "OptimizerTypeItemType": {
       "description": "List of Optimizer Topologies",
       "enums": {
         "Buck Only": {
-          "label": "BuckOnly`",
+          "label": "BuckOnly",
           "description": "This optimizer is Buck Only"
         },
         "Boost-Buck": {
