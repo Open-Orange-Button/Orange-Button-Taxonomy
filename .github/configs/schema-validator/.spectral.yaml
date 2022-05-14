@@ -1,6 +1,9 @@
-extends: '@ibm-cloud/openapi-ruleset'
+extends: 'ibm-oas-wrapper-check-components.js'
 functions: [spellcheckSubstrings]
 rules:
+  property-case-convention: off
+  enum-case-convention: off
+
   no-special-characters:
     description: Name must only contain characters in 0-9, A-Z, a-z, and _ (underscore).
     type: style
