@@ -1,5 +1,5 @@
 extends: 'ibm-oas-wrapper-check-components.js'
-functions: [spellcheckSubstrings, isInXOBObjectKeys, resolveItemTypeGroupType]
+functions: [spellcheckSubstrings, isInXOBObjectKeys, refPathExists, itemTypeGroupEntriesExist]
 rules:
   property-case-convention: off
   enum-case-convention: off
@@ -24,11 +24,18 @@ rules:
 
   item-type-group-type-exists:
     message: 'Item type group type does not exist: {{error}}'
+    given: $[x-ob-item-type-groups][*].type
+    severity: error
+    then:
+      function: refPathExists
+  
+  item-type-group-entries-exist:  
+    message: '{{error}}'
     given: $[x-ob-item-type-groups][*]~
     severity: error
     then:
-      function: resolveItemTypeGroupType
-  
+      function: itemTypeGroupEntriesExist
+
   no-special-characters:
     description: Name must only contain characters in 0-9, A-Z, a-z, and _ (underscore).
     type: style
