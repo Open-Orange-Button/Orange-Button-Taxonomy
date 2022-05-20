@@ -7379,6 +7379,27 @@
               },
               "OptimizerEfficiencyWeighted": {
                 "$ref": "#/components/schemas/OptimizerEfficiencyWeighted"
+              },
+              "OptimizerType": {
+                "$ref": "#/components/schemas/OptimizerType"
+              },
+              "TotalHarmonicDistortionCurrent": {
+                "$ref": "#/components/schemas/TotalHarmonicDistortionCurrent"
+              },
+              "CompatibleWith": {
+                "$ref": "#/components/schemas/CompatibleWith"
+              },
+              "IsSelectiveOptimization": {
+                "$ref": "#/components/schemas/IsSelectiveOptimization"
+              },
+              "IsVocReducing": {
+                "$ref": "#/components/schemas/IsVocReducing"
+              },
+              "AllowsString": {
+                "$ref": "#/components/schemas/AllowsString"
+              },
+              "GeoRegion": {
+                "$ref": "#/components/schemas/GeoRegion"
               }
             }
           }
@@ -10413,6 +10434,21 @@
           }
         ]
       },
+      "OptimizerType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The optimization method used by the optimizer.",
+            "x-ob-item-type": "OptimizerTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
       "FirmwareVersion": {
         "allOf": [
           {
@@ -10479,6 +10515,27 @@
           }
         ]
       },
+      "CompatibleWith": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ProdName"
+        }
+      },
+      "AllowsString": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "Does this optimizer allow more than one module in series to be connected to an input",
+            "x-ob-item-type": "stdi:booleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
       "AppliedDate": {
         "allOf": [
           {
@@ -10528,6 +10585,23 @@
           {
             "type": "object",
             "description": "True if inverter is capable of taking DC power input from a PV system and an energy storage system. ",
+            "x-ob-item-type": "stdi:booleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": true
+            }
+          }
+        ]
+      },
+      "IsVocReducing": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "True if the optimizer can modify the attached module's apparent Voc to allow for longer strings.",
             "x-ob-item-type": "stdi:booleanItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -10590,6 +10664,21 @@
           }
         ]
       },
+      "IsSelectiveOptimization": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "This optimizer allows some modules on a string to have optimizers while others don't",
+            "x-ob-item-type": "stdi:booleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
       "HasMeter": {
         "allOf": [
           {
@@ -10603,6 +10692,23 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": true
+            }
+          }
+        ]
+      },
+      "GeoRegion": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Region this component is designed for use in",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "EU"
             }
           }
         ]
@@ -12975,27 +13081,6 @@
           "description": ""
         },
         "HighInsolation": {
-          "label": "",
-          "description": ""
-        }
-      }
-    },
-    "solar-types:optimizerTypeItemType": {
-      "description": "",
-      "enums": {
-        "Standalone": {
-          "label": "",
-          "description": ""
-        },
-        "Attached": {
-          "label": "",
-          "description": ""
-        },
-        "Embedded": {
-          "label": "",
-          "description": ""
-        },
-        "Other": {
           "label": "",
           "description": ""
         }
@@ -15968,6 +16053,19 @@
         "m_per_s_squared": {
           "label": "Meter per second squared",
           "description": "Meter per second squared"
+        }
+      }
+    },
+    "OptimizerTypeItemType": {
+      "description": "List of Optimizer Topologies",
+      "enums": {
+        "BuckOnly": {
+          "label": "Buck Only",
+          "description": "This optimizer is Buck Only"
+        },
+        "BoostBuck": {
+          "label": "Boost-Buck",
+          "description": "This optimizer is Boost-Buck"
         }
       }
     }

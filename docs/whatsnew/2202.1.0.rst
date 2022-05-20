@@ -9,6 +9,7 @@ Elements added
 * Adds ContractID, ProjectID, PortfolioID, ProjectName, PorfolioName, Projects, Sites  (:pull:`35`)
 * Adds FirmwareVersion, CertificationDate, Checksum, AppliedDate, EfficiencyCECWtdVoltageMax, EfficiencyCECWtdVoltageMin, EfficiencyCECWtdVoltageNom, NightTare, IsHybrid, HasMeter, CECNotes
   Identifier, SourceName (:pull:`51`)
+* Adds OptimizerType, CompatibleWith, AllowsString, IsVocReducing, IsSelectiveOptimization, GeoRegion, (:pull:`50`)
 
 Objects added
 ~~~~~~~~~~~~~
@@ -19,7 +20,13 @@ Objects added
 Units added
 ~~~~~~~~~~~
 * Adds AccelerationItemType (:pull:`47`)
+<<<<<<< HEAD
 * Adds UL1973-2-2018, JA12 to CertificationTypeProdItemType (:pull:`58`)
+=======
+* Adds "UL1973" and "JA12" to CertificationTypeProductItemType (:pull:`58`) 
+* Adds OptimizerTypeItemType (:pull:`50`)
+* Removes solar-types:optimizerTypeItemType(:pull:`50`)
+>>>>>>> 591096a94f7843afe920478935770b780008bede
 
 Bug fixes
 ~~~~~~~~~
