@@ -7702,6 +7702,40 @@
           }
         ]
       },
+      "TemperatureCoefficientMaxPowerVoltage": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The temperature coefficient of voltage at maximum power.",
+            "x-ob-item-type": "tempCoefficientItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": -0.304
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "TemperatureCoefficientMaxPowerCurrent": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The temperature coefficient of current at maximum power.",
+            "x-ob-item-type": "tempCoefficientItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 0.05
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
       "VoltageMaximumSystem": {
         "allOf": [
           {
@@ -7733,23 +7767,6 @@
             "x-ob-sample-value": {
               "Unit": "Ampere",
               "Value": 20
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "CellType": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The cell type for a solar module",
-            "x-ob-item-type": "cellTechnologyItemType",
-            "x-ob-usage-tips": "Used for large group categorizations",
-            "x-ob-sample-value": {
-              "Value": "monoSi"
             },
             "x-ob-item-type-group": ""
           }
@@ -8114,6 +8131,9 @@
               },
               "Warranties": {
                 "$ref": "#/components/schemas/Warranties"
+              },
+              "CECNotes": {
+                "$ref": "#/components/schemas/CECNotes"
               }
             }
           }
@@ -8123,9 +8143,6 @@
         "type": "object",
         "description": "A subcomponent of a ProdModule",
         "properties": {
-          "CellType": {
-            "$ref": "#/components/schemas/CellType"
-          },
           "Description": {
             "$ref": "#/components/schemas/Description"
           },
@@ -10798,6 +10815,77 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Data Source"
+            }
+          }
+        ]
+      },
+      "PowerDCMaxSTC": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum DC power at Standard Test Condition (STC). STC is defined as 1000 W/m2 irradiance, 25C and ASTM G173-03 standard solar spectrum.",
+            "x-ob-item-type": "num:powerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 300,
+              "Unit": "W"
+            }
+          }
+        ]
+      },
+      "PowerDCMaxPTC": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum DC power at PVUSA Test Condition (PTC). PTC is defined as 1000 W/m2 irradiance, 20C air temperature and 1 m/s wind speed at 10m above ground.",
+            "x-ob-item-type": "num:powerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 300,
+              "Unit": "W"
+            }
+          }
+        ]
+      },
+      "ModuleArea": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The area of a PV module inside the frame. Equal to total module area for a frameless module.",
+            "x-ob-item-type": "num:areaItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 1.5,
+              "Unit": "sqm"
+            }
+          }
+        ]
+      },
+      "IsBIPV": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "True if the PV module is intended for a building-integrated PV system.",
+            "x-ob-item-type": "stdi:booleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": true
             }
           }
         ]
