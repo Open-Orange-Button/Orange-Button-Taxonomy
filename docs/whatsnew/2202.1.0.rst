@@ -20,9 +20,9 @@ Objects added
 Units added
 ~~~~~~~~~~~
 * Adds AccelerationItemType (:pull:`47`)
-* Adds "UL1973" and "JA12" to CertificationTypeProductItemType (:pull:`58`) 
 * Adds OptimizerTypeItemType (:pull:`50`)
 * Removes solar-types:optimizerTypeItemType(:pull:`50`)
+* Adds "UL1973" and "JA12" to CertificationTypeProductItemType (:pull:`58`) 
 
 Bug fixes
 ~~~~~~~~~
@@ -40,3 +40,4 @@ Contributors
 ~~~~~~~~~~~~
 * Cliff Hansen (:ghuser:`cwhanse`)
 * Kevin Kirkley (:ghuser:`kevinkirkl3y`)
+* Zia Swim (:ghuser:`blizita`)

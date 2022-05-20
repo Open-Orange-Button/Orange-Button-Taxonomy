@@ -15333,6 +15333,14 @@
           "label": "UL3741",
           "description": ""
         },
+        "UL1973-2-2018": {
+          "label": "UL1973 Edition 2: 2018",
+          "description": ""
+        },
+        "JA12": {
+          "label": "JA12",
+          "description": ""
+        },
         "CSIP": {
           "label": "CSIP",
           "description": "SunSpec 2030.5 Common Smart Inverter Profile (CSIP) Certification"
