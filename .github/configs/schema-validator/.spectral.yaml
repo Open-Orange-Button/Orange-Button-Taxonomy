@@ -1,8 +1,13 @@
 extends: 'ibm-oas-wrapper-check-components.js'
 functions: [spellcheckSubstrings, isInXOBObjectKeys, refPathExists, itemTypeGroupEntriesExist]
 rules:
-  property-case-convention: off
   enum-case-convention: off
+  major-version-in-path: off
+  openapi-tags: off
+  oas3-api-servers: off
+  oas3-unused-component: off
+  property-case-convention: off
+  property-description: off
   
   item-type-exists:
     message: 'Item type does not exist: {{error}}'
@@ -80,7 +85,5 @@ rules:
         dictionaries:
           - name: en_US
             path: node_modules/typo-js/dictionaries
-          - name: OB-abbreviations 
-            path: .github/configs/schema-validator/OB-dictionaries
-          - name: OB-acronyms
+          - name: OB-words
             path: .github/configs/schema-validator/OB-dictionaries

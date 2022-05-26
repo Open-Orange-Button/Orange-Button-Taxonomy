@@ -1,0 +1,99 @@
+{
+    "solar-types:batteryChemistryItemType": {
+        "description": "",
+        "enums": {
+            "LiOn": {
+                "label": "",
+                "description": ""
+            },
+            "Pb": {
+                "label": "",
+                "description": ""
+            },
+            "NiCad": {
+                "label": "",
+                "description": ""
+            }
+        }
+    },
+    "solar-types:communicationProtocolItemType": {
+        "description": "",
+        "enums": {
+            "Modbus": {
+                "label": "",
+                "description": ""
+            },
+            "Zigbee": {
+                "label": "",
+                "description": ""
+            },
+            "WIFI": {
+                "label": "",
+                "description": ""
+            },
+            "Ethernet": {
+                "label": "",
+                "description": ""
+            }
+        }
+    },
+    "stdi:durationItemType": {
+        "description": "",
+        "units": {
+            "Y": {
+                "label": "Year",
+                "description": "Gregorian calendar year of 365 days. Use only as a denominator because durationItemType is not numeric and has no units."
+            },
+            "M": {
+                "label": "Month",
+                "description": "Gregorian calendar month of 30.41 days. Use only as a denominator because durationItemType is not numeric and has no units."
+            },
+            "D": {
+                "label": "Day",
+                "description": "Day of 24 hours. Use only as a denominator because durationItemType is not numeric and has no units."
+            },
+            "H": {
+                "label": "Hour",
+                "description": "Hour of 60 minutes. Use only as a denominator because durationItemType is not numeric and has no units."
+            },
+            "MM": {
+                "label": "Minute",
+                "description": "Minute of 60 seconds. Use only as a denominator because durationItemType is not numeric and has no units."
+            },
+            "S": {
+                "label": "Second",
+                "description": "Second. Use only as a denominator because durationItemType is not numeric and has no units."
+            },
+            "Q": {
+                "label": "Quarter",
+                "description": "Gregorian Calendar Quarter (three months). Use only as a denominator because durationItemType is not numeric and has no units."
+            },
+            "WK": {
+                "label": "Week",
+                "description": "Gregorian Calendar Week. Use only as a denominator because durationItemType is not numeric and has no units."
+            }
+        }
+    },
+    "solar-types:moduleOrientationItemType": {
+        "description": "",
+        "enums": {
+            "Portrait": {
+                "label": "",
+                "description": ""
+            },
+            "Landscape": {
+                "label": "",
+                "description": ""
+            }
+        }
+    },
+    "us-types:perUnitItemType": {
+        "description": "",
+        "units": {
+            "Monetary_per_Decimal": {
+                "label": "Monetary/Decimal",
+                "description": "Monetary Unit / Anything"
+            }
+        }
+    }
+}

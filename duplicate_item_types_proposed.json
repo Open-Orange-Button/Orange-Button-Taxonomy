@@ -1,0 +1,176 @@
+{
+    "BatteryChemistryItemType": {
+        "description": "These are named using chemical nomenclature when it is concise and complete, otherwise English is used.",
+        "enums": {
+            "LeadAcidGel": {
+                "label": "Lead Acid Gel",
+                "description": ""
+            },
+            "LeadAcidAGM": {
+                "label": "Lead Acid AGM",
+                "description": "Absorbent Glass Mat"
+            },
+            "LeadAcidFlooded": {
+                "label": "Lead Acid Flooded",
+                "description": ""
+            },
+            "LeadAcidSealed": {
+                "label": "Lead Acid Sealed",
+                "description": "aka SLA"
+            },
+            "LiFePO4": {
+                "label": "LiFePO4",
+                "description": "Lithium Iron Phosphate (LFP)"
+            },
+            "LiPoly": {
+                "label": "Li Polymer",
+                "description": "Lithium Polymer"
+            },
+            "NiCd": {
+                "label": "NiCd",
+                "description": "Nickel Cadmium"
+            },
+            "LiIon": {
+                "label": "Li-ion",
+                "description": "Lithium Ion"
+            },
+            "NiMH": {
+                "label": "NiMH",
+                "description": "Nickel Metal Hydride"
+            },
+            "NiFe": {
+                "label": "NiFe",
+                "description": "Nickel Iron"
+            },
+            "NaS": {
+                "label": "NaS",
+                "description": "Sodium Sulfur"
+            },
+            "Hybrid": {
+                "label": "Hybrid",
+                "description": "Hybrid"
+            },
+            "PbC": {
+                "label": "PbC",
+                "description": "Lead Carbon"
+            },
+            "Other": {
+                "label": "Other",
+                "description": "Other"
+            }
+        }
+    },
+    "CommunicationProtocolItemType": {
+        "description": "",
+        "enums": {
+            "RS485": {
+                "label": "RS-485",
+                "description": ""
+            },
+            "CAN 2.0 B": {
+                "label": "CAN 2.0 B",
+                "description": ""
+            },
+            "REbus DC Nanogrid": {
+                "label": "REbus DC Nanogrid",
+                "description": ""
+            },
+            "Modbus": {
+                "label": "Modbus",
+                "description": ""
+            },
+            "TCPIP": {
+                "label": "TCP/IP",
+                "description": ""
+            }
+        }
+    },
+    "CommunicationTransportLayerItemType": {
+        "description": "",
+        "enums": {
+            "Ethernet": {
+                "label": "Ethernet",
+                "description": ""
+            },
+            "WiFi": {
+                "label": "WiFi",
+                "description": ""
+            },
+            "Zigbee": {
+                "label": "Zigbee",
+                "description": ""
+            }
+        }
+    },
+    "DurationItemType": {
+        "description": "Units for time periods. Unit source prefixes: stdi",
+        "units": {
+            "Y": {
+                "label": "Year",
+                "description": "Gregorian calendar year of 365 days. Use only as a denominator because durationItemType is not numeric and has no units."
+            },
+            "M": {
+                "label": "Month",
+                "description": "Gregorian calendar month of 30.41 days. Use only as a denominator because durationItemType is not numeric and has no units."
+            },
+            "D": {
+                "label": "Day",
+                "description": "Day of 24 hours. Use only as a denominator because durationItemType is not numeric and has no units."
+            },
+            "H": {
+                "label": "Hour",
+                "description": "Hour of 60 minutes. Use only as a denominator because durationItemType is not numeric and has no units."
+            },
+            "MM": {
+                "label": "Minute",
+                "description": "Minute of 60 seconds. Use only as a denominator because durationItemType is not numeric and has no units."
+            },
+            "S": {
+                "label": "Second",
+                "description": "Second. Use only as a denominator because durationItemType is not numeric and has no units."
+            },
+            "Q": {
+                "label": "Quarter",
+                "description": "Gregorian Calendar Quarter (three months). Use only as a denominator because durationItemType is not numeric and has no units."
+            },
+            "WK": {
+                "label": "Week",
+                "description": "Gregorian Calendar Week. Use only as a denominator because durationItemType is not numeric and has no units."
+            }
+        }
+    },
+    "ModuleOrientationItemType": {
+        "description": "Orientation of a module, can be Landscape or Potrait",
+        "enums": {
+            "Landscape": {
+                "label": "Landscape",
+                "description": ""
+            },
+            "Portrait": {
+                "label": "Portrait",
+                "description": ""
+            },
+            "Mixed": {
+                "label": "Mixed",
+                "description": "Use when the object (e.g., Array) has modules in both Portrait and Landscape."
+            },
+            "Diamond": {
+                "label": "Diamond",
+                "description": "Use when the object (e.g., Array) has modules that are not axis-aligned."
+            }
+        }
+    },
+    "PerUnitItemType": {
+        "description": "Per unit. Unit source prefixes: us-types",
+        "units": {
+            "Monetary_per_Decimal": {
+                "label": "Monetary/Decimal",
+                "description": "Monetary Unit / Anything"
+            },
+            "pu": {
+                "label": "Per unit",
+                "description": ""
+            }
+        }
+    }
+}

@@ -1,0 +1,139 @@
+{
+    "BatteryChemistryItemType": {
+        "description": "",
+        "enums": {
+            "LeadAcidGel": {
+                "label": "Lead Acid Gel",
+                "description": ""
+            },
+            "LeadAcidAGM": {
+                "label": "Lead Acid AGM",
+                "description": "Absorbent Glass Mat"
+            },
+            "LeadAcidFlooded": {
+                "label": "Lead Acid Flooded",
+                "description": ""
+            },
+            "LeadAcidSealed": {
+                "label": "Lead Acid Sealed",
+                "description": "aka SLA"
+            },
+            "LiFePO4": {
+                "label": "LiFePO4",
+                "description": "Lithium Iron Phosphate (LFP)"
+            },
+            "LiPoly": {
+                "label": "Li Polymer",
+                "description": "Lithium Polymer"
+            },
+            "NiCd": {
+                "label": "NiCd",
+                "description": "Nickel Cadmium"
+            },
+            "LiIon": {
+                "label": "Li-ion",
+                "description": "Lithium Ion"
+            },
+            "NiMH": {
+                "label": "NiMH",
+                "description": "Nickel Metal Hydride"
+            },
+            "NiFe": {
+                "label": "NiFe",
+                "description": "Nickel Iron"
+            },
+            "NaS": {
+                "label": "NaS",
+                "description": "Sodium Sulfur"
+            },
+            "Hybrid": {
+                "label": "Hybrid",
+                "description": "Hybrid"
+            },
+            "PbC": {
+                "label": "PbC",
+                "description": "Lead Carbon"
+            },
+            "Other": {
+                "label": "Other",
+                "description": "Other"
+            }
+        }
+    },
+    "CommunicationProtocolItemType": {
+        "description": "",
+        "enums": {
+            "RS485": {
+                "label": "RS485",
+                "description": ""
+            },
+            "CAN 2.0 B": {
+                "label": "CAN 2.0 B",
+                "description": ""
+            },
+            "REbus DC Nanogrid": {
+                "label": "REbus DC Nanogrid",
+                "description": ""
+            },
+            "Modbus": {
+                "label": "Modbus",
+                "description": ""
+            }
+        }
+    },
+    "durationItemType": {
+        "description": "Units for time periods",
+        "units": {
+            "y": {
+                "label": "Year",
+                "description": ""
+            },
+            "mo": {
+                "label": "Month",
+                "description": ""
+            },
+            "d": {
+                "label": "Day",
+                "description": ""
+            },
+            "h": {
+                "label": "Hour",
+                "description": ""
+            },
+            "min": {
+                "label": "Minute",
+                "description": ""
+            },
+            "s": {
+                "label": "Second",
+                "description": ""
+            }
+        }
+    },
+    "moduleOrientationItemType": {
+        "description": "Orientation of a module, can be Landscape or Potrait",
+        "enums": {
+            "Landscape": {
+                "label": "Landscape",
+                "description": ""
+            },
+            "Portrait": {
+                "label": "Portrait",
+                "description": ""
+            },
+            "Mixed": {
+                "label": "Mixed",
+                "description": "Use when the object (e.g., Array) has modules in both Portrait and Landscape "
+            }
+        }
+    },
+    "perUnitItemType": {
+        "description": "Per unit",
+        "units": {
+            "pu": {
+                "label": "Per unit",
+                "description": ""
+            }
+        }
+    }
+}

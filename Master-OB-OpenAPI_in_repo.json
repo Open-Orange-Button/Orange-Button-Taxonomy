@@ -821,7 +821,7 @@
           {
             "type": "object",
             "description": "Name of the city in the physical or mailing address.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Billings"
@@ -838,7 +838,7 @@
           {
             "type": "object",
             "description": "State of a Province of the mailing or physical address.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "MT"
@@ -855,7 +855,7 @@
           {
             "type": "object",
             "description": "Zip Code / Postal Code of a mailing or physical address.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "59101"
@@ -872,7 +872,7 @@
           {
             "type": "object",
             "description": "ISO country code where system is located.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "USA"
@@ -889,7 +889,7 @@
           {
             "type": "object",
             "description": "Decimal value of latitude of the physical site in degrees.  Positive North of the Equator.  Negative South of the Equator",
-            "x-ob-item-type": "PlaneAngleItemType",
+            "x-ob-item-type": "num-us:planeAngleItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Degree",
@@ -907,7 +907,7 @@
           {
             "type": "object",
             "description": "Decimal value of longitude of the physical site in degrees.  Positive east of the Prime Meridian.  Negative west of the Prime Meridian.  North America is negative..",
-            "x-ob-item-type": "PlaneAngleItemType",
+            "x-ob-item-type": "num-us:planeAngleItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Degree",
@@ -925,7 +925,7 @@
           {
             "type": "object",
             "description": "County of the physical or mailing address",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Yellowstone County"
@@ -942,7 +942,7 @@
           {
             "type": "object",
             "description": "Email address",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Test@sunspec.com"
@@ -959,7 +959,7 @@
           {
             "type": "object",
             "description": "Phone Number of a cell phone or mobile device.  This phone is expected to be able to receive text messages.  Characters like hyphen, period, x for extension are allowed.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "9999999999"
@@ -976,7 +976,7 @@
           {
             "type": "object",
             "description": "Phone number to be used during working hours.  Characters like hyphen, period, x for extension are allowed.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "9999999999"
@@ -993,7 +993,7 @@
           {
             "type": "object",
             "description": "Phone number to be used for high priority calls only.  Characters like hyphen, period, x for extension are allowed.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "9999999999"
@@ -1010,7 +1010,7 @@
           {
             "type": "object",
             "description": "First name of a person.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Bob"
@@ -1027,7 +1027,7 @@
           {
             "type": "object",
             "description": "Middle name of a person.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Alex"
@@ -1044,7 +1044,7 @@
           {
             "type": "object",
             "description": "The last name of person.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Smith"
@@ -1061,7 +1061,7 @@
           {
             "type": "object",
             "description": "The height of ground level at a location relative to sea level.",
-            "x-ob-item-type": "LengthItemType",
+            "x-ob-item-type": "num:lengthItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Foot",
@@ -1110,7 +1110,7 @@
           {
             "type": "object",
             "description": "Height from ground level.",
-            "x-ob-item-type": "LengthItemType",
+            "x-ob-item-type": "num:lengthItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Foot",
@@ -1128,7 +1128,7 @@
           {
             "type": "object",
             "description": "First line of a mailing or physical address.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "135 Wyoming Avenue"
@@ -1145,7 +1145,7 @@
           {
             "type": "object",
             "description": "Second line of a mailing or physical address.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Apt 31"
@@ -1162,7 +1162,7 @@
           {
             "type": "object",
             "description": "Third line of a mailing or physical address.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Building H"
@@ -1179,7 +1179,7 @@
           {
             "type": "object",
             "description": "Type of design/energy production model for the PV system which could be Pvsyst, SAM, PV Watts, or Other.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Pvsyst Model 1"
@@ -1196,7 +1196,7 @@
           {
             "type": "object",
             "description": "A filename holding the configuration details of the energy prediction details. This could be a zip file containing multiple files. The intention is to be able to reproduce the energy predictions if needed.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Pvsyst Model 1.dxf"
@@ -1213,7 +1213,7 @@
           {
             "type": "object",
             "description": "Generic Text field used in fields to provide more detail",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "A description for generic commentary on a object. Not intended for machine analysis"
@@ -1247,7 +1247,7 @@
           {
             "type": "object",
             "description": "Notes for special requirements related to the building code in this AHJ.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Locally denoted as the 2018 state code"
@@ -1315,7 +1315,7 @@
           {
             "type": "object",
             "description": "Notes for special requirements related to the residential code in this AHJ.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Locally denoted as the 2018 state code"
@@ -1332,7 +1332,7 @@
           {
             "type": "object",
             "description": "Notes for special requirements related to the fire code in this AHJ.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Locally denoted as the 2018 state code"
@@ -1349,7 +1349,7 @@
           {
             "type": "object",
             "description": "Notes for special requirements related to the electric code in this AHJ.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Locally denoted as the 2018 state code"
@@ -1383,7 +1383,7 @@
           {
             "type": "object",
             "description": "Notes about the document submission process for this AHJ.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "The documents need to be submitted in PDF format with everything combined into a single document"
@@ -1434,7 +1434,7 @@
           {
             "type": "object",
             "description": "Name of the Authority Having Jurisdiction",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Calhoun County"
@@ -1519,7 +1519,7 @@
           {
             "type": "object",
             "description": "The identifier of the location.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
@@ -1536,7 +1536,7 @@
           {
             "type": "object",
             "description": "The identifier of the address.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
@@ -1553,7 +1553,7 @@
           {
             "type": "object",
             "description": "The identifier of the contact.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
@@ -1570,7 +1570,7 @@
           {
             "type": "object",
             "description": "The timezone where the contact is located.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "PST"
@@ -1604,7 +1604,7 @@
           {
             "type": "object",
             "description": "A generic URL to a file folder or a single file for transmitting documents",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "https://www.lg.com/us/business/download/resources/BT00002151/[Print]%20Neon_2_60_BF_80308_ck_FRD_v4.pdf"
@@ -1621,7 +1621,7 @@
           {
             "type": "object",
             "description": "A URL string",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "https://ahjregistry.sunspec.org/#/ahj-search"
@@ -1638,7 +1638,7 @@
           {
             "type": "object",
             "description": "The type of address being specified",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Installation"
@@ -1695,7 +1695,7 @@
           {
             "type": "object",
             "description": "The name of a task",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Site Survey"
@@ -1735,7 +1735,7 @@
           {
             "type": "object",
             "description": "Name of utility company where the grid connection will reside.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -1819,7 +1819,7 @@
           {
             "type": "object",
             "description": "The price of the PV system",
-            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type": "stdi:monetaryItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
@@ -1860,7 +1860,7 @@
           {
             "type": "object",
             "description": "Identifier for the System (plant).",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -1882,7 +1882,7 @@
           {
             "type": "object",
             "description": "Capacity in DC at Standard Test Conditions",
-            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type": "num:powerItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Kilowatt",
@@ -1900,7 +1900,7 @@
           {
             "type": "object",
             "description": "Quantity of a Product",
-            "x-ob-item-type": "PerUnitItemType",
+            "x-ob-item-type": "us-types:perUnitItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "4"
@@ -1946,7 +1946,7 @@
           {
             "type": "object",
             "description": "The projected savings to the consumer from reduced electricity demand over a period of time.",
-            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type": "stdi:monetaryItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "EndTime": "'2020-12-30'",
@@ -2060,7 +2060,7 @@
           {
             "type": "object",
             "description": "The title of the contact",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Department Manager"
@@ -2077,7 +2077,7 @@
           {
             "type": "object",
             "description": "The notes about the requirement level of the engineering review",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "The structural engineering stamp is only required for houses built before 1990"
@@ -2094,7 +2094,7 @@
           {
             "type": "object",
             "description": "The date the task was completed",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "2020-11-30"
@@ -2165,7 +2165,7 @@
           {
             "type": "object",
             "description": "The type of roof of the structure",
-            "x-ob-item-type": "RoofItemType",
+            "x-ob-item-type": "solar-types:roofItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Asphalt Shingle"
@@ -2195,7 +2195,7 @@
           {
             "type": "object",
             "description": " MCER ground motion (period=0.2s)",
-            "x-ob-item-type": "AccelerationItemType",
+            "x-ob-item-type": "accelerationItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": 0.131,
@@ -2213,7 +2213,7 @@
           {
             "type": "object",
             "description": "MCER ground motion (period=1.0s)",
-            "x-ob-item-type": "AccelerationItemType",
+            "x-ob-item-type": "accelerationItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": 0.057,
@@ -2231,7 +2231,7 @@
           {
             "type": "object",
             "description": "The ID of the structure",
-            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type": "solar-types:uuidItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
@@ -2255,7 +2255,7 @@
           {
             "type": "object",
             "description": "The identifier of the electrical service system",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
@@ -2315,7 +2315,7 @@
           {
             "type": "object",
             "description": "The ambient dry bulb extreme low temperature for the wire sizing calculations.",
-            "x-ob-item-type": "TemperatureItemType",
+            "x-ob-item-type": "num-us:temperatureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Fahrenheit",
@@ -2333,7 +2333,7 @@
           {
             "type": "object",
             "description": "The ambient dry bulb high temperature for the wire sizing calculations.",
-            "x-ob-item-type": "TemperatureItemType",
+            "x-ob-item-type": "num-us:temperatureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Fahrenheit",
@@ -2392,7 +2392,7 @@
           {
             "type": "object",
             "description": "The rating of the main electrical service breaker",
-            "x-ob-item-type": "ElectricCurrentItemType",
+            "x-ob-item-type": "num-us:electricCurrentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Ampere",
@@ -2410,7 +2410,7 @@
           {
             "type": "object",
             "description": "The notes about the wind code if there are special requirements",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "This area uses the wind code from the department of insurance rather than the ASCE codes."
@@ -2427,7 +2427,7 @@
           {
             "type": "object",
             "description": "The UUID of the task",
-            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type": "solar-types:uuidItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
@@ -2444,7 +2444,7 @@
           {
             "type": "object",
             "description": "The year the structure was built",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "1969"
@@ -2489,7 +2489,7 @@
           {
             "type": "object",
             "description": "The name of the homeowner's association",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Emerald Property Association"
@@ -2576,7 +2576,7 @@
           {
             "type": "object",
             "description": "The voltage of the utility being interconnected too",
-            "x-ob-item-type": "VoltageItemType",
+            "x-ob-item-type": "num-us:voltageItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Volt",
@@ -2645,7 +2645,7 @@
           {
             "type": "object",
             "description": "The name of the fee payment",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-sample-value": {
               "Value": "Permit Application Fee Calhoun County"
             },
@@ -2661,7 +2661,7 @@
           {
             "type": "object",
             "description": "The ID of a particular fee",
-            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type": "solar-types:uuidItemType",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
             },
@@ -2683,7 +2683,7 @@
           {
             "type": "object",
             "description": "The uuid of the FeeStructure",
-            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type": "solar-types:uuidItemType",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
             },
@@ -2720,7 +2720,7 @@
           {
             "type": "object",
             "description": "The name of the FeeStructure",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-sample-value": {
               "Value": "Calhoun County Permit Fee Structure"
             },
@@ -2742,7 +2742,7 @@
           {
             "type": "object",
             "description": "The due date of a task",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-usage-tips": "Use the Value for the actual due date, start and end time can be used for the task start and completed dates",
             "x-ob-sample-value": {
               "EndTime": "2020-04-28",
@@ -2761,7 +2761,7 @@
           {
             "type": "object",
             "description": "The state letters and GeoID as described by the Census FIPS code.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "AK-231"
@@ -2856,7 +2856,7 @@
           {
             "type": "object",
             "description": "An ID for the Checklist question",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "12345"
@@ -2873,7 +2873,7 @@
           {
             "type": "object",
             "description": "The statement of the Checklist Question",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "System Size (kW)?"
@@ -2890,7 +2890,7 @@
           {
             "type": "object",
             "description": "The value of the Checklist Result",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "Add units from the QuestionUnits Item Type. For Example, for a question that has an answer in Kilowatts, select QuestionUnits num:powerItemType, then add unit \"Kilowatt\" to the AnswerValue.",
             "x-ob-sample-value": {
               "Unit": "Kilowatt",
@@ -2908,7 +2908,7 @@
           {
             "type": "object",
             "description": "The ID of the transaction line",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
@@ -2942,7 +2942,7 @@
           {
             "type": "object",
             "description": "The ID of the transaction",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
@@ -2976,7 +2976,7 @@
           {
             "type": "object",
             "description": "The date of the Checklist",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "EndTime": "2011-10-05T16:48:00.000Z",
@@ -3006,7 +3006,7 @@
           {
             "type": "object",
             "description": "A valid value for an enumeration in a list",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Single Phase"
@@ -3064,7 +3064,7 @@
           {
             "type": "object",
             "description": "The name of the Tariff",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Monthly electrical service"
@@ -3081,7 +3081,7 @@
           {
             "type": "object",
             "description": "The ID of the Tariff",
-            "x-ob-item-type": "UUIDStdItemType",
+            "x-ob-item-type": "solar-types:uuidStdItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
@@ -3115,7 +3115,7 @@
           {
             "type": "object",
             "description": "A currency amount",
-            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type": "stdi:monetaryItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
@@ -3133,7 +3133,7 @@
           {
             "type": "object",
             "description": "The units of the question",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "Select ONLY items from the OB Item Type list for the expected answer unit type",
             "x-ob-sample-value": {
               "Value": "num:powerItemType"
@@ -3191,7 +3191,7 @@
           {
             "type": "object",
             "description": "The name of the account",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Main Checking Account"
@@ -3208,7 +3208,7 @@
           {
             "type": "object",
             "description": "The account number",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "38748172-8723817231"
@@ -3314,7 +3314,7 @@
           {
             "type": "object",
             "description": "The number of past due days that the transactions are to be included in this aging bucket",
-            "x-ob-item-type": "PureItemType",
+            "x-ob-item-type": "stdi:pureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "30"
@@ -3331,7 +3331,7 @@
           {
             "type": "object",
             "description": "The number of past due days that the transactions are to be included in this aging bucket",
-            "x-ob-item-type": "PureItemType",
+            "x-ob-item-type": "stdi:pureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "31"
@@ -3407,7 +3407,7 @@
           {
             "type": "object",
             "description": "The datasheet for the product",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "This is for a URL leading to the Datasheet for a product.",
             "x-ob-sample-value": {
               "Value": "http://www.lg-solar.com/downloads/spec-sheet/DS_NeON2_60cells.pdf"
@@ -3424,7 +3424,7 @@
           {
             "type": "object",
             "description": "A single document in a collection of the instructions for a product.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "This should be used for sending all of the instructions for installing and servicing the product. Each file can be placed in one member of the array of ProdInstructions",
             "x-ob-sample-value": {
               "Value": "https://unirac.com/wp-content/uploads/pdf/FLASHKIT-PRO_Brochure_20180831.pdf"
@@ -3447,7 +3447,7 @@
           {
             "type": "object",
             "description": "Use this for describing an individual specification",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "Use this for custom units and details of the product",
             "x-ob-sample-value": {
               "Value": "Power factor (adjustable)"
@@ -3481,7 +3481,7 @@
           {
             "type": "object",
             "description": "The specific unit of the specification",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "This needs to be the specific unit the SpecificationValue is given in",
             "x-ob-sample-value": {
               "Value": "mm"
@@ -3498,7 +3498,7 @@
           {
             "type": "object",
             "description": "The value of the specific Specification.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "Note the unit always needs to be equal to the SpecificationUnit value",
             "x-ob-sample-value": {
               "Unit": "mm",
@@ -3594,7 +3594,7 @@
           {
             "type": "object",
             "description": "The name of the certification name",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "ISO"
@@ -3617,7 +3617,7 @@
           {
             "type": "object",
             "description": "The aging balance from 1 to 30 days",
-            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type": "stdi:monetaryItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
@@ -3635,7 +3635,7 @@
           {
             "type": "object",
             "description": "Aging balance from 31 to 60 days",
-            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type": "stdi:monetaryItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
@@ -3653,7 +3653,7 @@
           {
             "type": "object",
             "description": "Aging balance from 61 to 90 days",
-            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type": "stdi:monetaryItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
@@ -3671,7 +3671,7 @@
           {
             "type": "object",
             "description": "Aging balance from 91 to 120 days",
-            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type": "stdi:monetaryItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
@@ -3689,7 +3689,7 @@
           {
             "type": "object",
             "description": "The aging balance over 120 days",
-            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type": "stdi:monetaryItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
@@ -3707,7 +3707,7 @@
           {
             "type": "object",
             "description": "The UUID of the task type",
-            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type": "solar-types:uuidItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
@@ -3748,7 +3748,7 @@
           {
             "type": "object",
             "description": "Velocity of the wind, typically measured at 3m height above ground.",
-            "x-ob-item-type": "SpeedItemType",
+            "x-ob-item-type": "num-us:speedItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -3770,7 +3770,7 @@
           {
             "type": "object",
             "description": "The design pressure to be applied to a structure for snow loading",
-            "x-ob-item-type": "PressureItemType",
+            "x-ob-item-type": "num-us:pressureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "psi",
@@ -3811,7 +3811,7 @@
           {
             "type": "object",
             "description": "The message of the error",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Attempt to set field Site.PVSystems[0].EnergyPredictions[0].EnergyAC.StartTime to invalid date format. ISO date format expected. ( YYYY-MM-DD )"
@@ -3828,7 +3828,7 @@
           {
             "type": "object",
             "description": "The name of the error",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "ISO_DATE_FORMAT"
@@ -3845,7 +3845,7 @@
           {
             "type": "object",
             "description": "The code of an error",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "412"
@@ -3862,7 +3862,7 @@
           {
             "type": "object",
             "description": "The number of days the jurisdiction on average takes to complete a permit",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": 10
@@ -3906,7 +3906,7 @@
           {
             "type": "object",
             "description": "The name of the inspection",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Rough-In Inspection"
@@ -3923,7 +3923,7 @@
           {
             "type": "object",
             "description": "The notes about the inspection",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "Used for instructions for carrying out the inspection",
             "x-ob-sample-value": {
               "Value": "Plan for Rough-In once racking is installed, call the morning of installation to schedule."
@@ -3963,7 +3963,7 @@
           {
             "type": "object",
             "description": "The notes about the method of issuing permits the AHJ uses",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "Used for instructions on receiving completed permits",
             "x-ob-sample-value": {
               "Value": "The permits are emailed to us with stamps and signatures. Print out the pdf and then send with the installation crew for the inspector."
@@ -4009,7 +4009,7 @@
           {
             "type": "object",
             "description": "An option for the answer to a question",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "Used for enumerated list values for selectable dropdown lists or multi-select questions",
             "x-ob-sample-value": {
               "Value": "Customer Selection 1"
@@ -4074,7 +4074,7 @@
           {
             "type": "object",
             "description": "The UUID of the battery system",
-            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type": "solar-types:uuidItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
@@ -4091,7 +4091,7 @@
           {
             "type": "object",
             "description": "The price of the battery system as indicated on the contract",
-            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type": "stdi:monetaryItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
@@ -4145,7 +4145,7 @@
           {
             "type": "object",
             "description": "The length of the loan",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-usage-tips": "Use StartTime and EndTime in this object rather than Value for additional clarity. Use Value only if the Loan has no specific start or end time period",
             "x-ob-sample-value": {
               "EndTime": "2025-05-01",
@@ -4163,7 +4163,7 @@
           {
             "type": "object",
             "description": "The percentage rate of the loan",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "percentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": 2.99
@@ -4180,7 +4180,7 @@
           {
             "type": "object",
             "description": "The UUID of an object",
-            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type": "solar-types:uuidItemType",
             "x-ob-usage-tips": "Always place this UUID at the top level of an object to which it refers. UUIDs are to be used for uniquely identifying objects that need to be repeatedly tracked across multiple softwares",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
@@ -4218,7 +4218,7 @@
           {
             "type": "object",
             "description": "The name of a TaskType",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Site Survey"
@@ -4235,7 +4235,7 @@
           {
             "type": "object",
             "description": "The UUID of the task category",
-            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type": "solar-types:uuidItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
@@ -4281,7 +4281,7 @@
           {
             "type": "object",
             "description": "The name of a FeeType",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "Used to describe a general category of fees. This is a specific name for a fee. Whereas FeeGroup represents the normalized category of fee across multiple companies.",
             "x-ob-sample-value": {
               "Value": "Payment to Jorgenson Installation Services"
@@ -4315,7 +4315,7 @@
           {
             "type": "object",
             "description": "If a on-site Technician from the AHJ is required to complete the AHJInspection",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "True"
@@ -4365,7 +4365,7 @@
           {
             "type": "object",
             "description": "A quantity",
-            "x-ob-item-type": "IntegerItemType",
+            "x-ob-item-type": "stdi:integerItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -4420,7 +4420,7 @@
           {
             "type": "object",
             "description": "The name of the service",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Trenching"
@@ -4437,7 +4437,7 @@
           {
             "type": "object",
             "description": "The name of the person or organization providing the service",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Hampton's Trenching"
@@ -4495,7 +4495,7 @@
           {
             "type": "object",
             "description": "The UUID of the service",
-            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type": "solar-types:uuidItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
@@ -4544,7 +4544,7 @@
           {
             "type": "object",
             "description": "The name of the service type",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Trenching"
@@ -4561,7 +4561,7 @@
           {
             "type": "object",
             "description": "The UUID of the ServiceType",
-            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type": "solar-types:uuidItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
@@ -4646,7 +4646,7 @@
           {
             "type": "object",
             "description": "Amount Per ServiceQuantityUnit",
-            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type": "stdi:monetaryItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
@@ -4664,7 +4664,7 @@
           {
             "type": "object",
             "description": "The total amount of the individual line item calculated by multiplying Quantity by UnitPrice",
-            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type": "stdi:monetaryItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
@@ -4682,7 +4682,7 @@
           {
             "type": "object",
             "description": "Maximum AC capacity or load that the busbar is rated to handle.",
-            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type": "num:powerItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "",
@@ -4717,7 +4717,7 @@
           {
             "type": "object",
             "description": "Height above ground level",
-            "x-ob-item-type": "LengthItemType",
+            "x-ob-item-type": "num:lengthItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -4739,7 +4739,7 @@
           {
             "type": "object",
             "description": "Coefficient a3 in Equation 1 of ASTM E2848-11, P = E(a1 + a2 x E + a3 x Ta + a4 x V) where P is power, E is in-plane irradiance, Ta is ambient air temperature and V is wind speed.",
-            "x-ob-item-type": "DecimalItemType",
+            "x-ob-item-type": "stdi:decimalItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -4761,7 +4761,7 @@
           {
             "type": "object",
             "description": "Amount of rainfall in a given period of time",
-            "x-ob-item-type": "LengthItemType",
+            "x-ob-item-type": "num:lengthItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -4783,7 +4783,7 @@
           {
             "type": "object",
             "description": "Lower limit on irradiance.",
-            "x-ob-item-type": "IrradianceItemType",
+            "x-ob-item-type": "num-us:irradianceItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -4805,7 +4805,7 @@
           {
             "type": "object",
             "description": "Azimuth of the sun, measured in degrees. The horizontal angle measured clockwise from true north, e.g. True North = 0 degrees, East = 90 degrees, South = 180 degrees, etc.",
-            "x-ob-item-type": "PlaneAngleItemType",
+            "x-ob-item-type": "num-us:planeAngleItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -4827,7 +4827,7 @@
           {
             "type": "object",
             "description": "Initiation date of the Materials and Workmanship Warranty.",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -4849,7 +4849,7 @@
           {
             "type": "object",
             "description": "Date performance warranty expires. The performance warranty guarantees that a solar panel will operate with a given level of efficiency over its lifetime.",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -4871,7 +4871,7 @@
           {
             "type": "object",
             "description": "Universally unique identifier for the site.",
-            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type": "solar-types:uuidItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -4893,7 +4893,7 @@
           {
             "type": "object",
             "description": "Ratio between the amount of moisture in the air and the maximum amount of moisture that could be present in the air at current air temperature.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "num:percentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -4915,7 +4915,7 @@
           {
             "type": "object",
             "description": "Mean value of the residuals of the regression model at ASTM E2848-11 Eq. 1.",
-            "x-ob-item-type": "DecimalItemType",
+            "x-ob-item-type": "stdi:decimalItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -4937,7 +4937,7 @@
           {
             "type": "object",
             "description": "Temperature of a cell in a module.",
-            "x-ob-item-type": "TemperatureItemType",
+            "x-ob-item-type": "num-us:temperatureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -4959,7 +4959,7 @@
           {
             "type": "object",
             "description": "Lower limit on wind speed.",
-            "x-ob-item-type": "SpeedItemType",
+            "x-ob-item-type": "num-us:speedItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -4981,7 +4981,7 @@
           {
             "type": "object",
             "description": "Lower limit on AC power.",
-            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type": "num:powerItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5003,7 +5003,7 @@
           {
             "type": "object",
             "description": "Current of a photovoltaic device at short circuit conditions.",
-            "x-ob-item-type": "ElectricCurrentItemType",
+            "x-ob-item-type": "num-us:electricCurrentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -5018,7 +5018,7 @@
           {
             "type": "object",
             "description": "Voltage at open circuit conditions",
-            "x-ob-item-type": "VoltageItemType",
+            "x-ob-item-type": "num-us:voltageItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -5036,7 +5036,7 @@
           {
             "type": "object",
             "description": "Tracker Materials & Workmanship Warranty initiation date.",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5058,7 +5058,7 @@
           {
             "type": "object",
             "description": "Indicator that data passes checks for values outside of acceptable range.",
-            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type": "stdi:booleanItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5080,7 +5080,7 @@
           {
             "type": "object",
             "description": "Standard deviation of the residuals of the regression model at ASTM E2848-11 Eq. 1.",
-            "x-ob-item-type": "DecimalItemType",
+            "x-ob-item-type": "stdi:decimalItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5102,7 +5102,7 @@
           {
             "type": "object",
             "description": "Temperature of a power measurement device.",
-            "x-ob-item-type": "TemperatureItemType",
+            "x-ob-item-type": "num-us:temperatureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5124,7 +5124,7 @@
           {
             "type": "object",
             "description": "Ratio of reference cell current to irradiance at spectrum for reporting condition, termed C_RC in ASTM E2848-11. Units of A/(W/m2).",
-            "x-ob-item-type": "DecimalItemType",
+            "x-ob-item-type": "stdi:decimalItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5146,7 +5146,7 @@
           {
             "type": "object",
             "description": "Temperature measured at the back of a module.",
-            "x-ob-item-type": "TemperatureItemType",
+            "x-ob-item-type": "num-us:temperatureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5168,7 +5168,7 @@
           {
             "type": "object",
             "description": "Power rating P0 at reporting condition calculated using fitted model. Calculated by Equation 2 of ASTM E2848-11, P0 = E(a1 + a2 x E + a3 x Ta + a4 x V) where E is in-plane irradiance, Ta is ambient air temperature and V is wind speed at the reporting condition.",
-            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type": "num:powerItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5190,7 +5190,7 @@
           {
             "type": "object",
             "description": "Manufacture date of the device.",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5212,7 +5212,7 @@
           {
             "type": "object",
             "description": "The air pressure at the location of the weather data record",
-            "x-ob-item-type": "PressureItemType",
+            "x-ob-item-type": "num-us:pressureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5234,7 +5234,7 @@
           {
             "type": "object",
             "description": "Coefficient a1 in Equation 1 of ASTM E2848-11, P = E(a1 + a2 x E + a3 x Ta + a4 x V) where P is power, E is in-plane irradiance, Ta is ambient air temperature and V is wind speed.",
-            "x-ob-item-type": "DecimalItemType",
+            "x-ob-item-type": "stdi:decimalItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5256,7 +5256,7 @@
           {
             "type": "object",
             "description": "Serial number of the device.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5278,7 +5278,7 @@
           {
             "type": "object",
             "description": "Accuracy class of an instrument. The string should identify the standard where applicable, or a term in common use by calibration laboratories. For example, for a pyranometer, accuracy class can be \"Secondary Standard\". For an AC power meter, accuracy class could be \"ANSI C12.20-2015 Class 0.5\".",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5300,7 +5300,7 @@
           {
             "type": "object",
             "description": "The amount of direct irradiance received per unit area on a surface that is perpendicular (or normal) to the direction of the sun. Direct irradiance, also termed beam irradiance, is not scattered or reflected by the atmosphere, clouds, or other surfaces before arriving at the surface of measurement. Direct normal irradiance is measured in watts per square meter.",
-            "x-ob-item-type": "IrradianceItemType",
+            "x-ob-item-type": "num-us:irradianceItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5322,7 +5322,7 @@
           {
             "type": "object",
             "description": "Upper limit on irradiance.",
-            "x-ob-item-type": "IrradianceItemType",
+            "x-ob-item-type": "num-us:irradianceItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5344,7 +5344,7 @@
           {
             "type": "object",
             "description": "Tracker Materials & Workmanship Warranty expiration date.",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5366,7 +5366,7 @@
           {
             "type": "object",
             "description": "Power (DC) measured at an instant in time",
-            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type": "num:powerItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5388,7 +5388,7 @@
           {
             "type": "object",
             "description": "Current Transducer Ratio (CT Ratio).",
-            "x-ob-item-type": "DecimalItemType",
+            "x-ob-item-type": "stdi:decimalItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5410,7 +5410,7 @@
           {
             "type": "object",
             "description": "Expanded uncertainty of the power rating at the reference condition. See ASTM E2848-11 paragraph 9.4 for guidance on calculating the expanded uncertainty.",
-            "x-ob-item-type": "DecimalItemType",
+            "x-ob-item-type": "stdi:decimalItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5432,7 +5432,7 @@
           {
             "type": "object",
             "description": "Indicator that data passes checks for periods of inverter clipping or operating away from maximum power point tracking.",
-            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type": "stdi:booleanItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5454,7 +5454,7 @@
           {
             "type": "object",
             "description": "Coefficient a4 in Equation 1 of ASTM E2848-11, P = E(a1 + a2 x E + a3 x Ta + a4 x V) where P is power, E is in-plane irradiance, Ta is ambient air temperature and V is wind speed.",
-            "x-ob-item-type": "DecimalItemType",
+            "x-ob-item-type": "stdi:decimalItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5476,7 +5476,7 @@
           {
             "type": "object",
             "description": "Description of mandatory requirements for access to the site, such as background checks.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5498,7 +5498,7 @@
           {
             "type": "object",
             "description": "Power factor setting of the power system which is defined as the ratio of the real power flowing to the load, to the apparent power in the circuit. It is a dimensionless number in the closed internal of -1 to +1.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "num:percentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5520,7 +5520,7 @@
           {
             "type": "object",
             "description": "Description of the warranty available on a type of equipment.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5542,7 +5542,7 @@
           {
             "type": "object",
             "description": "Total amount of shortwave radiation received per unit area on a horizontal surface. Measured in watts per square meter.",
-            "x-ob-item-type": "IrradianceItemType",
+            "x-ob-item-type": "num-us:irradianceItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5564,7 +5564,7 @@
           {
             "type": "object",
             "description": "Coefficient a2 in Equation 1 of ASTM E2848-11, P = E(a1 + a2 x E + a3 x Ta + a4 x V) where P is power, E is in-plane irradiance, Ta is ambient air temperature and V is wind speed.",
-            "x-ob-item-type": "DecimalItemType",
+            "x-ob-item-type": "stdi:decimalItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5586,7 +5586,7 @@
           {
             "type": "object",
             "description": "Indicator that data passes checks for data collection system faults or outages.",
-            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type": "stdi:booleanItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5608,7 +5608,7 @@
           {
             "type": "object",
             "description": "Date of latest maintenance activity",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5630,7 +5630,7 @@
           {
             "type": "object",
             "description": "Description of start date milestone, for example, delivery of the equipment at the site.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5652,7 +5652,7 @@
           {
             "type": "object",
             "description": "Name of the product, for example ABC Brand Inverter.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5674,7 +5674,7 @@
           {
             "type": "object",
             "description": "Temperature of the air.",
-            "x-ob-item-type": "TemperatureItemType",
+            "x-ob-item-type": "num-us:temperatureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5696,7 +5696,7 @@
           {
             "type": "object",
             "description": "Indicator that data passes checks for alignment between an irradiance instrument and a PV system's plane of array.",
-            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type": "stdi:booleanItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5718,7 +5718,7 @@
           {
             "type": "object",
             "description": "Description of the warranted output.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5740,7 +5740,7 @@
           {
             "type": "object",
             "description": "Energy (AC) measured for a period of time.",
-            "x-ob-item-type": "EnergyItemType",
+            "x-ob-item-type": "num:energyItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5762,7 +5762,7 @@
           {
             "type": "object",
             "description": "Percentage of light that is reflected off the ground surface",
-            "x-ob-item-type": "DecimalItemType",
+            "x-ob-item-type": "stdi:decimalItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5784,7 +5784,7 @@
           {
             "type": "object",
             "description": "The array's tilt angle in degrees from horizontal, where zero degrees is horizontal, and 90 degrees is vertical and facing the equator (in both the southern and northern hemispheres)",
-            "x-ob-item-type": "PlaneAngleItemType",
+            "x-ob-item-type": "num-us:planeAngleItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5806,7 +5806,7 @@
           {
             "type": "object",
             "description": "Upper limit on AC power.",
-            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type": "num:powerItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5828,7 +5828,7 @@
           {
             "type": "object",
             "description": "Weather source used for the model which can be None, Local, Satellite, Modeled, or Mixed.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5850,7 +5850,7 @@
           {
             "type": "object",
             "description": "The recommended time interval between calibrations.",
-            "x-ob-item-type": "DurationItemType",
+            "x-ob-item-type": "stdi:durationItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5872,7 +5872,7 @@
           {
             "type": "object",
             "description": "Duration of the product warranty term offered by the manufacturer in the format P1Y1M1D. The value should be entered using the ISO8601 format of PnYnMnDTnHnMnS. For example, a 5-year term would be represented as P5Y, a 3-month term as P3M, and a 4-year, 6-month and 10-day term would be represented as P4Y6M10D.",
-            "x-ob-item-type": "DurationItemType",
+            "x-ob-item-type": "stdi:durationItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5894,7 +5894,7 @@
           {
             "type": "object",
             "description": "Type of precipitation according to SYNOP codes",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5916,7 +5916,7 @@
           {
             "type": "object",
             "description": "Indicates data inclusion or exclusion. True if data is retained; False if data is excluded.",
-            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type": "stdi:booleanItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5938,7 +5938,7 @@
           {
             "type": "object",
             "description": "Link to the device manual.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5960,7 +5960,7 @@
           {
             "type": "object",
             "description": "Scope of the power measurement. Can be \"System\" for the entire PV system, \"Inverter XXX\" for a specific inveter, \"String YYY\" for a specific string.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5982,7 +5982,7 @@
           {
             "type": "object",
             "description": "Percent of AC capacity available during a period of time.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "num:percentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6004,7 +6004,7 @@
           {
             "type": "object",
             "description": "Upper limit on ambient air temperature.",
-            "x-ob-item-type": "TemperatureItemType",
+            "x-ob-item-type": "num-us:temperatureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6026,7 +6026,7 @@
           {
             "type": "object",
             "description": "Name of the product or equipment manufacturer.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6048,7 +6048,7 @@
           {
             "type": "object",
             "description": "End date of the equipment warranty.",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6070,7 +6070,7 @@
           {
             "type": "object",
             "description": "Description of calibration method for an instrument.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6092,7 +6092,7 @@
           {
             "type": "object",
             "description": "True if power meter is revenue grade quality.",
-            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type": "stdi:booleanItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6114,7 +6114,7 @@
           {
             "type": "object",
             "description": "Type of soiling instrument.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6136,7 +6136,7 @@
           {
             "type": "object",
             "description": "Purchase date of the device.",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6158,7 +6158,7 @@
           {
             "type": "object",
             "description": "A product code is a standardized, unique human-readable identifier that is compact,and can be easily parsed. It consists of an entity code concatenated to a product specific identification string, separated by a hyphen. A product string is up to 16 characters, comprised of upper case letters, number, and hyphens (Ã¢â‚¬Ëœ-Ã¢â‚¬Ëœ).\nThe format of a product code is:\n[EntityCode]-[ProductString], e.g., UEE-E2000-3-XFM for company Universal Energy Enterprises with Entity Code UEE and Product String of E2000-3-XFM.    ",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6180,7 +6180,7 @@
           {
             "type": "object",
             "description": "Indicator that data passes tests for outlier values.",
-            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type": "stdi:booleanItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6202,7 +6202,7 @@
           {
             "type": "object",
             "description": "Indicator that data pass checks by visual examination.",
-            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type": "stdi:booleanItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6224,7 +6224,7 @@
           {
             "type": "object",
             "description": "Depth of snow on the ground during a given period of time",
-            "x-ob-item-type": "LengthItemType",
+            "x-ob-item-type": "num:lengthItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6246,7 +6246,7 @@
           {
             "type": "object",
             "description": "Indicator that data passes tests that detect missing values.",
-            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type": "stdi:booleanItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6268,7 +6268,7 @@
           {
             "type": "object",
             "description": "Date of last calibration",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6290,7 +6290,7 @@
           {
             "type": "object",
             "description": "Description of the amount of production guaranteed by a solar panel performance warranty, which will guarantee a percentage of production depending on the age of the module. For example, guarantees 80% production after 25 years.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6312,7 +6312,7 @@
           {
             "type": "object",
             "description": "Maximum coefficient of variation (ratio of standard deviation to mean) of irradiance during a window of data.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "num:percentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6334,7 +6334,7 @@
           {
             "type": "object",
             "description": "Identifier for an individual piece of equipment used in a system, for example, ABC Brand inverter with serial number xxxx.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6356,7 +6356,7 @@
           {
             "type": "object",
             "description": "Assessors parcel number, or APN, which is a number assigned to parcels of real property by the tax assessor of a particular jurisdiction for purposes of identification and record-keeping.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6378,7 +6378,7 @@
           {
             "type": "object",
             "description": "Temperature of a reference cell.",
-            "x-ob-item-type": "TemperatureItemType",
+            "x-ob-item-type": "num-us:temperatureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6400,7 +6400,7 @@
           {
             "type": "object",
             "description": "Duration of a window for determining irradiance stability.",
-            "x-ob-item-type": "DurationItemType",
+            "x-ob-item-type": "stdi:durationItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6422,7 +6422,7 @@
           {
             "type": "object",
             "description": "Indicator that data passes checks for periods of time where the irradiance instrument or PV system is shaded by nearby structures, soiling, snow, frost or other cause.",
-            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type": "stdi:booleanItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6444,7 +6444,7 @@
           {
             "type": "object",
             "description": "Upper limit on wind speed.",
-            "x-ob-item-type": "SpeedItemType",
+            "x-ob-item-type": "num-us:speedItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6466,7 +6466,7 @@
           {
             "type": "object",
             "description": "Indicator that data values pass checks for unstable values, e.g., where data values change more than a threshold in a time interval.",
-            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type": "stdi:booleanItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6488,7 +6488,7 @@
           {
             "type": "object",
             "description": "The amount of diffuse radiation received per unit area on a horizontal surface. Diffuse irradiance arrives at the surface of measurement from any direction other than the direction of the sun. Diffuse horizontal irradiance is measured in watts per square meter.",
-            "x-ob-item-type": "IrradianceItemType",
+            "x-ob-item-type": "num-us:irradianceItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6510,7 +6510,7 @@
           {
             "type": "object",
             "description": "Start date of the equipment warranty.",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6532,7 +6532,7 @@
           {
             "type": "object",
             "description": "Name of the site.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6554,7 +6554,7 @@
           {
             "type": "object",
             "description": "Curtailment limit on AC power during a period of time.",
-            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type": "num:powerItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6576,7 +6576,7 @@
           {
             "type": "object",
             "description": "Upper limit on ambient air temperature.",
-            "x-ob-item-type": "TemperatureItemType",
+            "x-ob-item-type": "num-us:temperatureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6598,7 +6598,7 @@
           {
             "type": "object",
             "description": "The irradiance on a plane from all sources, both direct and diffuse. The plane can be horizontal or tilted. Plane of array irradiance is measured in watts per square meter.",
-            "x-ob-item-type": "IrradianceItemType",
+            "x-ob-item-type": "num-us:irradianceItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6620,7 +6620,7 @@
           {
             "type": "object",
             "description": "Municipal authority, for example, town, city or country, that has jurisdiction to define local code requirements.",
-            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type": "solar-types:uuidItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6642,7 +6642,7 @@
           {
             "type": "object",
             "description": "Power (AC) measured at an instant in time",
-            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type": "num:powerItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6664,7 +6664,7 @@
           {
             "type": "object",
             "description": "Amount of snowfall in a given period of time",
-            "x-ob-item-type": "LengthItemType",
+            "x-ob-item-type": "num:lengthItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6686,7 +6686,7 @@
           {
             "type": "object",
             "description": "Aggregate cost of the device from start of the installation to date.",
-            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type": "stdi:monetaryItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6858,7 +6858,7 @@
           {
             "type": "object",
             "description": "Azimuth relative to North where North is 0 degrees and East is 90 degrees",
-            "x-ob-item-type": "PlaneAngleItemType",
+            "x-ob-item-type": "num-us:planeAngleItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6880,7 +6880,7 @@
           {
             "type": "object",
             "description": "A UUID for identifying a specific string",
-            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type": "solar-types:uuidItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6902,7 +6902,7 @@
           {
             "type": "object",
             "description": "Area",
-            "x-ob-item-type": "AreaItemType",
+            "x-ob-item-type": "num:areaItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6924,7 +6924,7 @@
           {
             "type": "object",
             "description": "Tilt is the angle relative to horizontal. Horizontal is defined as the x,y plane of a right-hand coordinate system where the the x-axis is East, y-axis is North, and the z-axis is vertical.",
-            "x-ob-item-type": "PlaneAngleItemType",
+            "x-ob-item-type": "num-us:planeAngleItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6946,7 +6946,7 @@
           {
             "type": "object",
             "description": "Roll is a right-hand rotation about an oriented axis, with a positive value being a counter-clockwise rotation. In the context of a solar module, Roll is the rotation of the module about the vector normal to the module's plane that is oriented towards the sky.",
-            "x-ob-item-type": "PlaneAngleItemType",
+            "x-ob-item-type": "num-us:planeAngleItemType",
             "x-ob-usage-tips": "The Roll element of Orientation is used when solar modules are installed on a slant.",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -6968,7 +6968,7 @@
           {
             "type": "object",
             "description": "The UUID of the roofplane",
-            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type": "solar-types:uuidItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -7170,7 +7170,7 @@
           {
             "type": "object",
             "description": "Description of the style of the inverter which can be Central, String, or MicroInverter.",
-            "x-ob-item-type": "InverterStyleItemType",
+            "x-ob-item-type": "inverterStyleItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": "Central"
@@ -7234,7 +7234,7 @@
           {
             "type": "object",
             "description": "A UUID for identifying a specific array",
-            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type": "solar-types:uuidItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -7277,7 +7277,7 @@
           {
             "type": "object",
             "description": "Capacity in AC at nominal conditions. Equal to rated capacity for a single inverter, or sum of inverter rated capacities for a PV system. Nominal conditions for an inverter are continuous output at unity power factor.",
-            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type": "num:powerItemType",
             "x-ob-item-type-group": "OBElectricalPower",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -7316,7 +7316,7 @@
           {
             "type": "object",
             "description": "The UUID of a comment",
-            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type": "solar-types:uuidItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -7331,7 +7331,7 @@
           {
             "type": "object",
             "description": "Date of a comment",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -7346,7 +7346,7 @@
           {
             "type": "object",
             "description": "Content text of a comment",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -7392,7 +7392,7 @@
           {
             "type": "object",
             "description": "The gauge of a wire or cable.",
-            "x-ob-item-type": "WireGaugeItemType",
+            "x-ob-item-type": "wireGaugeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": 10
@@ -7407,7 +7407,7 @@
           {
             "type": "object",
             "description": "The orientation of a module, can be Landscape or Portrait",
-            "x-ob-item-type": "ModuleOrientationItemType",
+            "x-ob-item-type": "moduleOrientationItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -7422,7 +7422,7 @@
           {
             "type": "object",
             "description": "A tag, keyword or label.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -7437,7 +7437,7 @@
           {
             "type": "object",
             "description": "A number defining a length of time",
-            "x-ob-item-type": "DurationItemType",
+            "x-ob-item-type": "stdi:durationItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -7457,7 +7457,7 @@
           {
             "type": "object",
             "description": "The length of a product Warranty in Years",
-            "x-ob-item-type": "DurationItemType",
+            "x-ob-item-type": "stdi:durationItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -7479,7 +7479,7 @@
           {
             "type": "object",
             "description": "A description of the warranty for power output if applicable",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "12 Years of 90.2% Output Power, 30 Years of 80.7% Output Power"
@@ -7496,7 +7496,7 @@
           {
             "type": "object",
             "description": "(Pmax) at STC",
-            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type": "num:powerItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Watt",
@@ -7514,7 +7514,7 @@
           {
             "type": "object",
             "description": "Voltage of a photovoltaic device at the maximum power point.",
-            "x-ob-item-type": "VoltageItemType",
+            "x-ob-item-type": "num-us:voltageItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Volt",
@@ -7532,7 +7532,7 @@
           {
             "type": "object",
             "description": "Current of a photovoltaic device at the maximum power point.",
-            "x-ob-item-type": "ElectricCurrentItemType",
+            "x-ob-item-type": "num-us:electricCurrentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Ampere",
@@ -7550,7 +7550,7 @@
           {
             "type": "object",
             "description": "The efficiency of the solar module at standard test condition (STC).",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "percentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": 18.3
@@ -7567,7 +7567,7 @@
           {
             "type": "object",
             "description": "The specified range within which a solar panel could overperform its rated power at Standard Test Conditions.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "percentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": 1.5
@@ -7584,7 +7584,7 @@
           {
             "type": "object",
             "description": "The nominal operating cell temperature (NOCT) of a solar module.",
-            "x-ob-item-type": "TemperatureItemType",
+            "x-ob-item-type": "num-us:temperatureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Celsius",
@@ -7602,7 +7602,7 @@
           {
             "type": "object",
             "description": "The highest temperature in which a product can operate",
-            "x-ob-item-type": "TemperatureItemType",
+            "x-ob-item-type": "num-us:temperatureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Celsius",
@@ -7620,7 +7620,7 @@
           {
             "type": "object",
             "description": "The coldest temperature in which a product can operate",
-            "x-ob-item-type": "TemperatureItemType",
+            "x-ob-item-type": "num-us:temperatureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Celsius",
@@ -7638,7 +7638,7 @@
           {
             "type": "object",
             "description": "The temperature coefficient of power at the maximum power point.",
-            "x-ob-item-type": "TempCoefficientItemType",
+            "x-ob-item-type": "tempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": -0.37
@@ -7655,7 +7655,7 @@
           {
             "type": "object",
             "description": "The temperature coefficient of voltage at open circuit.",
-            "x-ob-item-type": "TempCoefficientItemType",
+            "x-ob-item-type": "tempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": -0.304
@@ -7672,7 +7672,7 @@
           {
             "type": "object",
             "description": "The temperature coefficient of current at short circuit.",
-            "x-ob-item-type": "TempCoefficientItemType",
+            "x-ob-item-type": "tempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": 0.05
@@ -7689,7 +7689,7 @@
           {
             "type": "object",
             "description": "The maximum voltage that a string of modules can support",
-            "x-ob-item-type": "VoltageItemType",
+            "x-ob-item-type": "num-us:voltageItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Volt",
@@ -7707,7 +7707,7 @@
           {
             "type": "object",
             "description": "The series fuse rating (need better description)",
-            "x-ob-item-type": "ElectricCurrentItemType",
+            "x-ob-item-type": "num-us:electricCurrentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Ampere",
@@ -7725,7 +7725,7 @@
           {
             "type": "object",
             "description": "The cell type for a solar module",
-            "x-ob-item-type": "CellTechnologyItemType",
+            "x-ob-item-type": "cellTechnologyItemType",
             "x-ob-usage-tips": "Used for large group categorizations",
             "x-ob-sample-value": {
               "Value": "monoSi"
@@ -7742,13 +7742,13 @@
           {
             "type": "object",
             "description": "The mass of the parent object. ",
-            "x-ob-item-type": "MassItemType",
+            "x-ob-item-type": "num:massItemType",
             "x-ob-usage-tips": "Apply appropriate engineering consistency with related object Weight.",
             "x-ob-sample-value": {
               "Unit": "Kilogram",
               "Value": 20
             },
-            "x-ob-item-type-group": "MassUnitItemType"
+            "x-ob-item-type-group": "massUnitItemType"
           }
         ]
       },
@@ -7760,7 +7760,7 @@
           {
             "type": "object",
             "description": "The width of the parent object",
-            "x-ob-item-type": "LengthItemType",
+            "x-ob-item-type": "num:lengthItemType",
             "x-ob-usage-tips": "For irregularly shaped objects use this as a bounding box dimension.",
             "x-ob-sample-value": {
               "Unit": "Millimetre",
@@ -7778,7 +7778,7 @@
           {
             "type": "object",
             "description": "The length of the parent object",
-            "x-ob-item-type": "LengthItemType",
+            "x-ob-item-type": "num:lengthItemType",
             "x-ob-usage-tips": "For irregularly shaped objects use this as a bounding box dimension.",
             "x-ob-sample-value": {
               "Unit": "Millimetre",
@@ -7796,7 +7796,7 @@
           {
             "type": "object",
             "description": "The height of the parent object",
-            "x-ob-item-type": "LengthItemType",
+            "x-ob-item-type": "num:lengthItemType",
             "x-ob-usage-tips": "For irregularly shaped objects use this as a bounding box dimension",
             "x-ob-sample-value": {
               "Unit": "Millimetre",
@@ -7814,7 +7814,7 @@
           {
             "type": "object",
             "description": "The material used in the glazing of a solar module",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "GlassTempered"
@@ -7831,7 +7831,7 @@
           {
             "type": "object",
             "description": "The number of ProdSolarCell in a module",
-            "x-ob-item-type": "IntegerItemType",
+            "x-ob-item-type": "stdi:integerItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": 120
@@ -7848,7 +7848,7 @@
           {
             "type": "object",
             "description": "The number of Junction Box Diodes in a solar module",
-            "x-ob-item-type": "PureItemType",
+            "x-ob-item-type": "stdi:pureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": 3
@@ -7865,7 +7865,7 @@
           {
             "type": "object",
             "description": "The maximum certification that the Junction Box has been tested for.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "IP 68"
@@ -7882,7 +7882,7 @@
           {
             "type": "object",
             "description": "The cross sectional area of the cable connecting from the solar module",
-            "x-ob-item-type": "AreaItemType",
+            "x-ob-item-type": "num:areaItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Square Millimeter",
@@ -7900,7 +7900,7 @@
           {
             "type": "object",
             "description": "The length of the connection cable to the solar module",
-            "x-ob-item-type": "LengthItemType",
+            "x-ob-item-type": "num:lengthItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Millimetre",
@@ -7918,7 +7918,7 @@
           {
             "type": "object",
             "description": "The type of cable connector used on the solar module",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "MC4"
@@ -7935,7 +7935,7 @@
           {
             "type": "object",
             "description": "The weight of the parent object",
-            "x-ob-item-type": "MassItemType",
+            "x-ob-item-type": "num:massItemType",
             "x-ob-usage-tips": "Use appropriate engineering consistency with related object Mass",
             "x-ob-sample-value": {
               "Unit": "Newton",
@@ -7953,7 +7953,7 @@
           {
             "type": "object",
             "description": "The specified range within which a solar panel could underperform its rated power at Standard Test Conditions.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "percentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": -1.5
@@ -8184,7 +8184,7 @@
           {
             "type": "object",
             "description": "True if a module is bifacial, False otherwise",
-            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type": "stdi:booleanItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -8199,7 +8199,7 @@
           {
             "type": "object",
             "description": "The number of bypass diodes connected in parallel with cell strings in the module.",
-            "x-ob-item-type": "IntegerItemType",
+            "x-ob-item-type": "stdi:integerItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -8214,7 +8214,7 @@
           {
             "type": "object",
             "description": "The number of cells in series in a module.",
-            "x-ob-item-type": "IntegerItemType",
+            "x-ob-item-type": "stdi:integerItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -8229,7 +8229,7 @@
           {
             "type": "object",
             "description": "The number of parallel-connected strings (a string is a series-connected number of cells).",
-            "x-ob-item-type": "IntegerItemType",
+            "x-ob-item-type": "stdi:integerItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -8288,7 +8288,7 @@
           {
             "type": "object",
             "description": "Universally Unique Identifier for the Warranty",
-            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type": "solar-types:uuidItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8305,7 +8305,7 @@
           {
             "type": "object",
             "description": "Human Readable Name for the Warranty",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8322,7 +8322,7 @@
           {
             "type": "object",
             "description": "How long is the Warranty Valid For? ",
-            "x-ob-item-type": "DurationItemType",
+            "x-ob-item-type": "durationItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "Enter as integer; Specify Units.",
             "x-ob-sample-value": {
@@ -8340,7 +8340,7 @@
           {
             "type": "object",
             "description": "Date the Warranty Comes Into Force",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8357,7 +8357,7 @@
           {
             "type": "object",
             "description": "Date the Warranty Is No Longer in Force",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8410,7 +8410,7 @@
           {
             "type": "object",
             "description": "The date that certification was awarded to product.",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8427,7 +8427,7 @@
           {
             "type": "object",
             "description": "The expiration date of a certification.",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -8442,7 +8442,7 @@
           {
             "type": "object",
             "description": "The name of the certification.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -8457,7 +8457,7 @@
           {
             "type": "object",
             "description": "The document identifier of a certification.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": "ABC-123"
@@ -8487,7 +8487,7 @@
           {
             "type": "object",
             "description": "Physical color of the solar cell",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8521,7 +8521,7 @@
           {
             "type": "object",
             "description": "Solar cell material type",
-            "x-ob-item-type": "CellTechnologyItemType",
+            "x-ob-item-type": "cellTechnologyItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8538,7 +8538,7 @@
           {
             "type": "object",
             "description": "What Color is the Module backsheet?",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8555,7 +8555,7 @@
           {
             "type": "object",
             "description": "What is the Backsheet made of?",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8572,7 +8572,7 @@
           {
             "type": "object",
             "description": "How Many Cells are in this module?",
-            "x-ob-item-type": "IntegerItemType",
+            "x-ob-item-type": "stdi:integerItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8589,7 +8589,7 @@
           {
             "type": "object",
             "description": "What Color is the Module Frame?",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8623,7 +8623,7 @@
           {
             "type": "object",
             "description": "How the busbars are arranged in this module",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8640,7 +8640,7 @@
           {
             "type": "object",
             "description": "Description of how the module responds to shading conditions",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8657,7 +8657,7 @@
           {
             "type": "object",
             "description": "CEC-weighted DC/AC conversion efficiency.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "percentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8675,7 +8675,7 @@
           {
             "type": "object",
             "description": "DC/AC conversion efficiency determined according to the IEC 61683 standard.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "percentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8693,7 +8693,7 @@
           {
             "type": "object",
             "description": "Manufacturer's stated maximum DC/AC conversion efficiency",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "percentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8711,7 +8711,7 @@
           {
             "type": "object",
             "description": "DC/AC conversion efficiency at Vmax and specified DC input power",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "percentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8729,7 +8729,7 @@
           {
             "type": "object",
             "description": "DC/AC conversion efficiency at Vmin and specified DC input power",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "percentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8747,7 +8747,7 @@
           {
             "type": "object",
             "description": "DC/AC conversion efficiency at Vnom and specified DC input power",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "percentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8765,7 +8765,7 @@
           {
             "type": "object",
             "description": "DC input power for CEC efficiency test",
-            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type": "num:powerItemType",
             "x-ob-item-type-group": "OBElectricalPower",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8834,7 +8834,7 @@
           {
             "type": "object",
             "description": "Maximum short circuit current of a device",
-            "x-ob-item-type": "ElectricCurrentItemType",
+            "x-ob-item-type": "num-us:electricCurrentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -8849,7 +8849,7 @@
           {
             "type": "object",
             "description": "Maximum of the voltage range for a MPPT",
-            "x-ob-item-type": "VoltageItemType",
+            "x-ob-item-type": "num-us:voltageItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -8864,7 +8864,7 @@
           {
             "type": "object",
             "description": "Minimum of the voltage range for a MPPT",
-            "x-ob-item-type": "VoltageItemType",
+            "x-ob-item-type": "num-us:voltageItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -8879,7 +8879,7 @@
           {
             "type": "object",
             "description": "Maximum DC current of a device",
-            "x-ob-item-type": "ElectricCurrentItemType",
+            "x-ob-item-type": "num-us:electricCurrentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -8894,7 +8894,7 @@
           {
             "type": "object",
             "description": "The number of parallel input strings for a MPPT",
-            "x-ob-item-type": "IntegerItemType",
+            "x-ob-item-type": "stdi:integerItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -8936,7 +8936,7 @@
           {
             "type": "object",
             "description": "Maximum AC voltage for a device",
-            "x-ob-item-type": "VoltageItemType",
+            "x-ob-item-type": "num-us:voltageItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -8951,7 +8951,7 @@
           {
             "type": "object",
             "description": "Minimum AC voltage for a device",
-            "x-ob-item-type": "VoltageItemType",
+            "x-ob-item-type": "num-us:voltageItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -8966,7 +8966,7 @@
           {
             "type": "object",
             "description": "Maximum continuous, real AC power for a device.",
-            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type": "num:powerItemType",
             "x-ob-item-type-group": "OBElectricalPower",
             "x-ob-usage-tips": "For limited duration power levels, use PowerACSurges",
             "x-ob-sample-value": {}
@@ -8981,7 +8981,7 @@
           {
             "type": "object",
             "description": "Maximum AC current of a device",
-            "x-ob-item-type": "ElectricCurrentItemType",
+            "x-ob-item-type": "num-us:electricCurrentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -8996,7 +8996,7 @@
           {
             "type": "object",
             "description": "Maximum power factor for a device, expressed as a value between -1 and 1. Power factor is the ratio between real and apparent power. Positive, or lagging, power factor indicates reactive power consumed by the load; negative, or leading, power factor indicates that reactive power is supplied by the load.",
-            "x-ob-item-type": "DecimalItemType",
+            "x-ob-item-type": "stdi:decimalItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -9011,7 +9011,7 @@
           {
             "type": "object",
             "description": "Minimum power factor for a device, expressed as a value between -1 and 1. Power factor is the ratio between real and apparent power. Positive, or lagging, power factor indicates reactive power consumed by the load; negative, or leading, power factor indicates that reactive power is supplied by the load.",
-            "x-ob-item-type": "DecimalItemType",
+            "x-ob-item-type": "stdi:decimalItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -9026,7 +9026,7 @@
           {
             "type": "object",
             "description": "The number of wires for the output connection of an inverter.",
-            "x-ob-item-type": "IntegerItemType",
+            "x-ob-item-type": "stdi:integerItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -9041,7 +9041,7 @@
           {
             "type": "object",
             "description": "The nominal continuous, real AC power output of a device.",
-            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type": "num:powerItemType",
             "x-ob-item-type-group": "OBElectricalPower",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -9056,7 +9056,7 @@
           {
             "type": "object",
             "description": "The nominal AC voltage of a device",
-            "x-ob-item-type": "VoltageItemType",
+            "x-ob-item-type": "num-us:voltageItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -9071,7 +9071,7 @@
           {
             "type": "object",
             "description": "The time for an inverter to switch from grid-tied to islanded mode",
-            "x-ob-item-type": "DurationItemType",
+            "x-ob-item-type": "durationItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -9200,7 +9200,7 @@
           {
             "type": "object",
             "description": "Legal Entity Identifier (LEI) of the entity.",
-            "x-ob-item-type": "LegalEntityIdentifierItemType",
+            "x-ob-item-type": "dei:legalEntityIdentifierItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -9222,7 +9222,7 @@
           {
             "type": "object",
             "description": "Tax identification number of the entity.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -9256,7 +9256,7 @@
           {
             "type": "object",
             "description": "Credit symbol that indicates the degree of credit worthiness. ",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -9333,7 +9333,7 @@
           {
             "type": "object",
             "description": "Issuing source of a credit score, such as a Rating Agency. ",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -9408,7 +9408,7 @@
           {
             "type": "object",
             "description": "Usable energy of battery unit.",
-            "x-ob-item-type": "EnergyItemType",
+            "x-ob-item-type": "num:energyItemType",
             "x-ob-item-type-group": "OBElectricalEnergy",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -9426,7 +9426,7 @@
           {
             "type": "object",
             "description": "Maximum DC Theoretical Energy Capacity",
-            "x-ob-item-type": "EnergyItemType",
+            "x-ob-item-type": "num:energyItemType",
             "x-ob-item-type-group": "OBElectricalEnergy",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -9444,7 +9444,7 @@
           {
             "type": "object",
             "description": "Maximum Depth of Discharge without damaging battery hardware",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "percentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -9497,7 +9497,7 @@
           {
             "type": "object",
             "description": "Maximum rated altitude",
-            "x-ob-item-type": "LengthItemType",
+            "x-ob-item-type": "num:lengthItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -9595,7 +9595,7 @@
           {
             "type": "object",
             "description": "Date of the Signature",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -9618,7 +9618,7 @@
           {
             "type": "object",
             "description": "That a thing become effective",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -9635,7 +9635,7 @@
           {
             "type": "object",
             "description": "The Date after which a thing is no long in effect",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -9728,7 +9728,7 @@
           {
             "type": "object",
             "description": "Total cash price of the contract",
-            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type": "stdi:monetaryItemType",
             "x-ob-item-type-group": "OBMonetary",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -9776,7 +9776,7 @@
           {
             "type": "object",
             "description": "Maximum DC Voltage",
-            "x-ob-item-type": "VoltageItemType",
+            "x-ob-item-type": "num-us:voltageItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -9794,7 +9794,7 @@
           {
             "type": "object",
             "description": "Minimum DC Voltage",
-            "x-ob-item-type": "VoltageItemType",
+            "x-ob-item-type": "num-us:voltageItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -9812,7 +9812,7 @@
           {
             "type": "object",
             "description": "Nominal DC Voltage",
-            "x-ob-item-type": "VoltageItemType",
+            "x-ob-item-type": "num-us:voltageItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -9830,7 +9830,7 @@
           {
             "type": "object",
             "description": "Number of MPPTs on a device",
-            "x-ob-item-type": "IntegerItemType",
+            "x-ob-item-type": "stdi:integerItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -9845,7 +9845,7 @@
           {
             "type": "object",
             "description": "Maximum continuous DC power.",
-            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type": "num:powerItemType",
             "x-ob-item-type-group": "OBElectricalPower",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -9863,7 +9863,7 @@
           {
             "type": "object",
             "description": "Voltage (DC) input required for an inverter to begin power conversion",
-            "x-ob-item-type": "VoltageItemType",
+            "x-ob-item-type": "num-us:voltageItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -9980,7 +9980,7 @@
           {
             "type": "object",
             "description": "Maximum apparent AC power",
-            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type": "num:powerItemType",
             "x-ob-item-type-group": "OBElectricalPower",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -9998,7 +9998,7 @@
           {
             "type": "object",
             "description": "Nominal apparent AC power",
-            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type": "num:powerItemType",
             "x-ob-item-type-group": "OBElectricalPower",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -10016,7 +10016,7 @@
           {
             "type": "object",
             "description": "Nominal AC current",
-            "x-ob-item-type": "ElectricCurrentItemType",
+            "x-ob-item-type": "num-us:electricCurrentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -10040,7 +10040,7 @@
           {
             "type": "object",
             "description": "Frequency (Hz) of a AC power device or system",
-            "x-ob-item-type": "FrequencyItemType",
+            "x-ob-item-type": "num-us:frequencyItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -10055,7 +10055,7 @@
           {
             "type": "object",
             "description": "Maximum DC power at a moment in time",
-            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type": "num:powerItemType",
             "x-ob-item-type-group": "OBElectricalPower",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -10091,7 +10091,7 @@
           {
             "type": "object",
             "description": "The total harmonic distortion (THD) of the power of an inverter, defined as the ratio of the sum of power of all harmonics to the power of the fundamental frequency.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "percentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -10106,7 +10106,7 @@
           {
             "type": "object",
             "description": "The total harmonic distortion (THD) of the power of an inverter, defined as the ratio of the sum of current in all harmonics to the current in the fundamental frequency.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "percentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": ""
@@ -10121,7 +10121,7 @@
           {
             "type": "object",
             "description": "Maximum efficiency of a DC-DC optimizer",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "percentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -10138,7 +10138,7 @@
           {
             "type": "object",
             "description": "Weighted efficiency of a DC-DC optimizer",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "percentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -10194,7 +10194,7 @@
           {
             "type": "object",
             "description": "The total price of a job",
-            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type": "stdi:monetaryItemType",
             "x-ob-item-type-group": "OBMonetary",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -10212,7 +10212,7 @@
           {
             "type": "object",
             "description": "UUID for a contract",
-            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type": "solar-types:uuidItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -10301,7 +10301,7 @@
           {
             "type": "object",
             "description": "A UUID for a portfolio.",
-            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type": "solar-types:uuidItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -10318,7 +10318,7 @@
           {
             "type": "object",
             "description": "A UUID for a project",
-            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type": "solar-types:uuidItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -10335,7 +10335,7 @@
           {
             "type": "object",
             "description": "Name of a portfolio",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -10352,7 +10352,7 @@
           {
             "type": "object",
             "description": "A name for a project",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -10421,7 +10421,7 @@
           {
             "type": "object",
             "description": "Firmware version ",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -10438,7 +10438,7 @@
           {
             "type": "object",
             "description": "Date that CEC listed the product with the certification.",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -10455,7 +10455,7 @@
           {
             "type": "object",
             "description": "A list of sections covered by the certification.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -10472,7 +10472,7 @@
           {
             "type": "object",
             "description": "Value used to confirm integrity of data or code. ",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -10487,7 +10487,7 @@
           {
             "type": "object",
             "description": "Date at which firmware or software update was applied. ",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "stdi:dateItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -10528,7 +10528,7 @@
           {
             "type": "object",
             "description": "True if inverter is capable of taking DC power input from a PV system and an energy storage system. ",
-            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type": "stdi:booleanItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -10566,7 +10566,7 @@
           {
             "type": "object",
             "description": "A unique identifier for a record or dataset.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -10583,7 +10583,7 @@
           {
             "type": "object",
             "description": "Notes from California Energy Commission (CEC) equipment list.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -10598,7 +10598,7 @@
           {
             "type": "object",
             "description": "Product contains a built in metering device. ",
-            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type": "stdi:booleanItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -10615,7 +10615,7 @@
           {
             "type": "object",
             "description": "Power consumed by an inverter with no DC input. Also referred to as internal consumption.",
-            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type": "num:powerItemType",
             "x-ob-item-type-group": "OBElectricalPower",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -10633,7 +10633,7 @@
           {
             "type": "object",
             "description": "Weighted DC/AC conversion efficiency at Vmax. Weighting according to CEC specification. ",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "percentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -10651,7 +10651,7 @@
           {
             "type": "object",
             "description": "Weighted DC/AC conversion efficiency at Vmin. Weighted based on CEC specifications.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "percentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -10669,7 +10669,7 @@
           {
             "type": "object",
             "description": "Weighted DC/AC conversion efficiency at Vnom. Weighted based on CEC specifications.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "percentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -10687,7 +10687,7 @@
           {
             "type": "object",
             "description": "Name of the data source.",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -10699,35 +10699,35 @@
     }
   },
   "x-ob-item-types": {
-    "BooleanItemType": {
-      "description": "Enum source prefixes: stdi"
+    "stdi:booleanItemType": {
+      "description": ""
     },
-    "Token": {
-      "description": "Enum source prefixes: xs"
+    "xs:token": {
+      "description": ""
     },
-    "LegalEntityIdentifierItemType": {
-      "description": "Enum source prefixes: dei"
+    "dei:legalEntityIdentifierItemType": {
+      "description": ""
     },
-    "DecimalItemType": {
-      "description": "Enum source prefixes: stdi"
+    "stdi:decimalItemType": {
+      "description": ""
     },
-    "DomainItemType": {
-      "description": "Enum source prefixes: nonnum"
+    "nonnum:domainItemType": {
+      "description": ""
     },
-    "AnyURIItemType": {
-      "description": "Enum source prefixes: stdi"
+    "stdi:anyURIItemType": {
+      "description": ""
     },
-    "DateItemType": {
-      "description": "Enum source prefixes: stdi"
+    "stdi:dateItemType": {
+      "description": ""
     },
-    "StringItemType": {
-      "description": "Enum source prefixes: stdi"
+    "stdi:stringItemType": {
+      "description": ""
     },
-    "IntegerItemType": {
-      "description": "Enum source prefixes: stdi"
+    "stdi:integerItemType": {
+      "description": ""
     },
-    "AreaItemType": {
-      "description": "The area item type is used to indicate that an element represents an area. Unit source prefixes: num",
+    "num:areaItemType": {
+      "description": "The area item type is used to indicate that an element represents an area.",
       "units": {
         "acre": {
           "label": "Acre",
@@ -10759,8 +10759,8 @@
         }
       }
     },
-    "EnergyItemType": {
-      "description": "The energy item type represents a unit of energy. Unit source prefixes: num",
+    "num:energyItemType": {
+      "description": "The energy item type represents a unit of energy.",
       "units": {
         "Boe": {
           "label": "Barrel of Oil Equivalent",
@@ -10852,8 +10852,8 @@
         }
       }
     },
-    "LengthItemType": {
-      "description": "The length item type is a measure of distance. Unit source prefixes: num",
+    "num:lengthItemType": {
+      "description": "The length item type is a measure of distance.",
       "units": {
         "ft": {
           "label": "Foot",
@@ -10897,8 +10897,8 @@
         }
       }
     },
-    "MassItemType": {
-      "description": "The mass item type represents the mass of an object which can be measured. Unit source prefixes: num",
+    "num:massItemType": {
+      "description": "The mass item type represents the mass of an object which can be measured.",
       "units": {
         "lb": {
           "label": "Pound",
@@ -10954,8 +10954,8 @@
         }
       }
     },
-    "PowerItemType": {
-      "description": "Measures a rate of energy use or energy production and is equivalent to the use or production of energy during a period of time. I.e. a watt is the equal to one joule of energy per second. Unit source prefixes: num",
+    "num:powerItemType": {
+      "description": "Measures a rate of energy use or energy production and is equivalent to the use or production of energy during a period of time. I.e. a watt is the equal to one joule of energy per second.",
       "units": {
         "hp": {
           "label": "Horsepower",
@@ -10991,8 +10991,8 @@
         }
       }
     },
-    "VolumeItemType": {
-      "description": "The Volume item type is used to indicate that an element represents a volume and can be used to express the volume of any substance, whether solid, liquid, or gas. Unit source prefixes: num",
+    "num:volumeItemType": {
+      "description": "The Volume item type is used to indicate that an element represents a volume and can be used to express the volume of any substance, whether solid, liquid, or gas.",
       "units": {
         "bbl": {
           "label": "Barrel",
@@ -11048,8 +11048,8 @@
         }
       }
     },
-    "MonetaryItemType": {
-      "description": "Unit source prefixes: stdi",
+    "stdi:monetaryItemType": {
+      "description": "",
       "units": {
         "AED": {
           "label": "U.A.E. dirham",
@@ -11789,8 +11789,8 @@
         }
       }
     },
-    "MemoryItemType": {
-      "description": "The memory item type is a measure of memory typically used in the IT industry. Unit source prefixes: num",
+    "num:memoryItemType": {
+      "description": "The memory item type is a measure of memory typically used in the IT industry.",
       "units": {
         "B": {
           "label": "Byte",
@@ -11814,8 +11814,8 @@
         }
       }
     },
-    "ElectricCurrentItemType": {
-      "description": "The electric current item type is used to represent a measure of electric current (the flow of electric charge over a circuit). Unit source prefixes: num-us",
+    "num-us:electricCurrentItemType": {
+      "description": "The electric current item type is used to represent a measure of electric current (the flow of electric charge over a circuit).",
       "units": {
         "A": {
           "label": "Ampere",
@@ -11823,8 +11823,8 @@
         }
       }
     },
-    "VoltageItemType": {
-      "description": "The voltage item type is used to represent a measure of voltage (the difference in electric potential energy between two points per unit electric charge). Unit source prefixes: num-us",
+    "num-us:voltageItemType": {
+      "description": "The voltage item type is used to represent a measure of voltage (the difference in electric potential energy between two points per unit electric charge).",
       "units": {
         "V": {
           "label": "Volt",
@@ -11844,8 +11844,8 @@
         }
       }
     },
-    "FrequencyItemType": {
-      "description": "The frequency item type is used to represent a measure of the number of occurrences of a repeating event per unit time. Unit source prefixes: num-us",
+    "num-us:frequencyItemType": {
+      "description": "The frequency item type is used to represent a measure of the number of occurrences of a repeating event per unit time.",
       "units": {
         "Hz": {
           "label": "Hertz",
@@ -11853,7 +11853,7 @@
         }
       }
     },
-    "PerShareItemType": {
+    "perShareItemType": {
       "description": "The per share item type indicates a monetary amount divided by a number of shares. The per share item type has a Decimal base.",
       "units": {
         "Monetary_per_Share": {
@@ -11862,8 +11862,17 @@
         }
       }
     },
-    "PureItemType": {
-      "description": "Unit source prefixes: stdi",
+    "us-types:perUnitItemType": {
+      "description": "",
+      "units": {
+        "Monetary_per_Decimal": {
+          "label": "Monetary/Decimal",
+          "description": "Monetary Unit / Anything"
+        }
+      }
+    },
+    "stdi:pureItemType": {
+      "description": "",
       "units": {
         "Monetary_per_Monetary": {
           "label": "Monetary/Monetary",
@@ -11879,7 +11888,7 @@
         }
       }
     },
-    "SharesItemType": {
+    "sharesItemType": {
       "description": "",
       "units": {
         "shares": {
@@ -11888,7 +11897,44 @@
         }
       }
     },
-    "FlowItemType": {
+    "stdi:durationItemType": {
+      "description": "",
+      "units": {
+        "Y": {
+          "label": "Year",
+          "description": "Gregorian calendar year of 365 days. Use only as a denominator because durationItemType is not numeric and has no units."
+        },
+        "M": {
+          "label": "Month",
+          "description": "Gregorian calendar month of 30.41 days. Use only as a denominator because durationItemType is not numeric and has no units."
+        },
+        "D": {
+          "label": "Day",
+          "description": "Day of 24 hours. Use only as a denominator because durationItemType is not numeric and has no units."
+        },
+        "H": {
+          "label": "Hour",
+          "description": "Hour of 60 minutes. Use only as a denominator because durationItemType is not numeric and has no units."
+        },
+        "MM": {
+          "label": "Minute",
+          "description": "Minute of 60 seconds. Use only as a denominator because durationItemType is not numeric and has no units."
+        },
+        "S": {
+          "label": "Second",
+          "description": "Second. Use only as a denominator because durationItemType is not numeric and has no units."
+        },
+        "Q": {
+          "label": "Quarter",
+          "description": "Gregorian Calendar Quarter (three months). Use only as a denominator because durationItemType is not numeric and has no units."
+        },
+        "WK": {
+          "label": "Week",
+          "description": "Gregorian Calendar Week. Use only as a denominator because durationItemType is not numeric and has no units."
+        }
+      }
+    },
+    "flowItemType": {
       "description": "The flow item type is used to represent a measure of volumetric flow rate.",
       "units": {
         "Volume_per_Duration": {
@@ -11901,8 +11947,8 @@
         }
       }
     },
-    "TemperatureItemType": {
-      "description": "The temperature item type is used to represent a measure of temperature either in absolute terms or as a difference between two temperatures. Unit source prefixes: num-us",
+    "num-us:temperatureItemType": {
+      "description": "The temperature item type is used to represent a measure of temperature either in absolute terms or as a difference between two temperatures.",
       "units": {
         "Cel": {
           "label": "Celsius",
@@ -11918,8 +11964,8 @@
         }
       }
     },
-    "PressureItemType": {
-      "description": "The pressure item type is used to represent a measure of the force applied perpendicular to the surface of an object per unit area over which that force is distributed. Units include Pascal, PSI and Bar. Unit source prefixes: num-us",
+    "num-us:pressureItemType": {
+      "description": "The pressure item type is used to represent a measure of the force applied perpendicular to the surface of an object per unit area over which that force is distributed. Units include Pascal, PSI and Bar.",
       "units": {
         "Pa": {
           "label": "Pascal",
@@ -11939,7 +11985,7 @@
         }
       }
     },
-    "ForceItemType": {
+    "forceItemType": {
       "description": "The force item type is used to represent a measure of a physical force.  Units include newtons.",
       "units": {
         "N": {
@@ -11948,7 +11994,7 @@
         }
       }
     },
-    "ElectricChargeItemType": {
+    "electricChargeItemType": {
       "description": "The electric charge item is used to represent a measure of electric charge (the physical property of matter that causes it to experience a force when placed in an electromagnetic field)",
       "units": {
         "Ah": {
@@ -11961,8 +12007,8 @@
         }
       }
     },
-    "PlaneAngleItemType": {
-      "description": "The angle item type is used to represent the measurement of an angle. Units include radians, degrees and gradians. Unit source prefixes: num-us",
+    "num-us:planeAngleItemType": {
+      "description": "The angle item type is used to represent the measurement of an angle. Units include radians, degrees and gradians.",
       "units": {
         "Degree": {
           "label": "Degree",
@@ -11974,10 +12020,10 @@
         }
       }
     },
-    "TextBlockItemType": {
+    "textBlockItemType": {
       "description": "textBlockItemType specializes xmlNodesItemType. The unescaped content MUST have mixed content containing a simple string, or a fragment of XHTML or a mixture of both."
     },
-    "InverterItemType": {
+    "solar-types:inverterItemType": {
       "description": "",
       "enums": {
         "Central": {
@@ -12006,7 +12052,7 @@
         }
       }
     },
-    "ModuleTechnologyItemType": {
+    "solar-types:moduleTechnologyItemType": {
       "description": "",
       "enums": {
         "Mono_C_Si": {
@@ -12027,7 +12073,7 @@
         }
       }
     },
-    "ModuleItemType": {
+    "solar-types:moduleItemType": {
       "description": "",
       "enums": {
         "ASi": {
@@ -12100,7 +12146,7 @@
         }
       }
     },
-    "TrackerItemType": {
+    "solar-types:trackerItemType": {
       "description": "",
       "enums": {
         "AzimuthAxisTracking": {
@@ -12129,7 +12175,7 @@
         }
       }
     },
-    "SolarSystemCharacterItemType": {
+    "solar-types:solarSystemCharacterItemType": {
       "description": "",
       "enums": {
         "Aggregate": {
@@ -12162,7 +12208,7 @@
         }
       }
     },
-    "InternetConnectionItemType": {
+    "solar-types:internetConnectionItemType": {
       "description": "",
       "enums": {
         "Cellular": {
@@ -12187,7 +12233,7 @@
         }
       }
     },
-    "OccupancyItemType": {
+    "solar-types:occupancyItemType": {
       "description": "",
       "enums": {
         "OwnerOccupied": {
@@ -12200,7 +12246,7 @@
         }
       }
     },
-    "ClimateZoneANSIItemType": {
+    "solar-types:climateZoneANSIItemType": {
       "description": "",
       "enums": {
         "VeryHotHumid": {
@@ -12273,7 +12319,7 @@
         }
       }
     },
-    "SiteControlItemType": {
+    "solar-types:siteControlItemType": {
       "description": "",
       "enums": {
         "Lease": {
@@ -12290,7 +12336,20 @@
         }
       }
     },
-    "SPVOrCounterpartyItemType": {
+    "solar-types:moduleOrientationItemType": {
+      "description": "",
+      "enums": {
+        "Portrait": {
+          "label": "",
+          "description": ""
+        },
+        "Landscape": {
+          "label": "",
+          "description": ""
+        }
+      }
+    },
+    "solar-types:sPVOrCounterpartyItemType": {
       "description": "",
       "enums": {
         "SPV": {
@@ -12303,7 +12362,7 @@
         }
       }
     },
-    "FundOrProjectItemType": {
+    "solar-types:fundOrProjectItemType": {
       "description": "",
       "enums": {
         "Fund": {
@@ -12316,7 +12375,7 @@
         }
       }
     },
-    "FundStatusItemType": {
+    "solar-types:fundStatusItemType": {
       "description": "",
       "enums": {
         "Closed": {
@@ -12333,7 +12392,7 @@
         }
       }
     },
-    "FinancingEventItemType": {
+    "solar-types:financingEventItemType": {
       "description": "",
       "enums": {
         "OriginationRequest": {
@@ -12366,7 +12425,7 @@
         }
       }
     },
-    "EventStatusItemType": {
+    "solar-types:eventStatusItemType": {
       "description": "",
       "enums": {
         "InProcess": {
@@ -12379,7 +12438,7 @@
         }
       }
     },
-    "ProjectAssetTypeItemType": {
+    "solar-types:projectAssetTypeItemType": {
       "description": "",
       "enums": {
         "Wind": {
@@ -12396,7 +12455,7 @@
         }
       }
     },
-    "ProjectClassItemType": {
+    "solar-types:projectClassItemType": {
       "description": "",
       "enums": {
         "UtilityScale": {
@@ -12421,7 +12480,7 @@
         }
       }
     },
-    "ProjectInterconnectionItemType": {
+    "solar-types:projectInterconnectionItemType": {
       "description": "",
       "enums": {
         "BehindtheMeter": {
@@ -12438,7 +12497,7 @@
         }
       }
     },
-    "ProjectStageItemType": {
+    "solar-types:projectStageItemType": {
       "description": "",
       "enums": {
         "UnderDevelopment": {
@@ -12455,7 +12514,7 @@
         }
       }
     },
-    "InvestmentStatusItemType": {
+    "solar-types:investmentStatusItemType": {
       "description": "",
       "enums": {
         "Awarded": {
@@ -12476,7 +12535,7 @@
         }
       }
     },
-    "RegulatoryFacilityItemType": {
+    "solar-types:regulatoryFacilityItemType": {
       "description": "",
       "enums": {
         "QF": {
@@ -12493,7 +12552,7 @@
         }
       }
     },
-    "RegulatoryApprovalStatusItemType": {
+    "solar-types:regulatoryApprovalStatusItemType": {
       "description": "",
       "enums": {
         "NotSubmitted": {
@@ -12514,7 +12573,7 @@
         }
       }
     },
-    "HedgeItemType": {
+    "solar-types:hedgeItemType": {
       "description": "",
       "enums": {
         "Swap": {
@@ -12539,7 +12598,7 @@
         }
       }
     },
-    "DivisionStateApprovalStatusItemType": {
+    "solar-types:divisionStateApprovalStatusItemType": {
       "description": "",
       "enums": {
         "NotSubmitted": {
@@ -12564,7 +12623,7 @@
         }
       }
     },
-    "FeeStatusItemType": {
+    "solar-types:feeStatusItemType": {
       "description": "",
       "enums": {
         "NotApplicable": {
@@ -12589,7 +12648,7 @@
         }
       }
     },
-    "ZoningPermitPropertyItemType": {
+    "solar-types:zoningPermitPropertyItemType": {
       "description": "",
       "enums": {
         "Plant": {
@@ -12606,7 +12665,7 @@
         }
       }
     },
-    "EnergyBudgetPhaseItemType": {
+    "solar-types:energyBudgetPhaseItemType": {
       "description": "",
       "enums": {
         "Closing": {
@@ -12623,7 +12682,7 @@
         }
       }
     },
-    "TitlePolicyInsuranceItemType": {
+    "solar-types:titlePolicyInsuranceItemType": {
       "description": "",
       "enums": {
         "NotApplicable": {
@@ -12644,7 +12703,7 @@
         }
       }
     },
-    "ALTASurveyItemType": {
+    "solar-types:aLTASurveyItemType": {
       "description": "",
       "enums": {
         "Notapplicable": {
@@ -12665,7 +12724,7 @@
         }
       }
     },
-    "BatteryConnectionItemType": {
+    "solar-types:batteryConnectionItemType": {
       "description": "",
       "enums": {
         "DC_Coupled": {
@@ -12678,7 +12737,7 @@
         }
       }
     },
-    "EmployeeRoleItemType": {
+    "solar-types:employeeRoleItemType": {
       "description": "",
       "enums": {
         "Fund": {
@@ -12691,7 +12750,7 @@
         }
       }
     },
-    "EmployeeLevelItemType": {
+    "solar-types:employeeLevelItemType": {
       "description": "",
       "enums": {
         "Lead": {
@@ -12704,7 +12763,7 @@
         }
       }
     },
-    "ApprovalRequestItemType": {
+    "solar-types:approvalRequestItemType": {
       "description": "",
       "enums": {
         "Notsubmitted": {
@@ -12729,7 +12788,7 @@
         }
       }
     },
-    "CreditSupportStatusItemType": {
+    "solar-types:creditSupportStatusItemType": {
       "description": "",
       "enums": {
         "NotDue": {
@@ -12750,7 +12809,7 @@
         }
       }
     },
-    "SecurityInterestItemType": {
+    "solar-types:securityInterestItemType": {
       "description": "",
       "enums": {
         "Mortgage": {
@@ -12779,7 +12838,7 @@
         }
       }
     },
-    "AssetSecuredItemType": {
+    "solar-types:assetSecuredItemType": {
       "description": "",
       "enums": {
         "Land": {
@@ -12804,7 +12863,7 @@
         }
       }
     },
-    "SecurityInterestStatusItemType": {
+    "solar-types:securityInterestStatusItemType": {
       "description": "",
       "enums": {
         "NotDue": {
@@ -12825,7 +12884,7 @@
         }
       }
     },
-    "InverterPhaseItemType": {
+    "solar-types:inverterPhaseItemType": {
       "description": "",
       "enums": {
         "SinglePhase": {
@@ -12842,7 +12901,7 @@
         }
       }
     },
-    "ApprovalStatusItemType": {
+    "solar-types:approvalStatusItemType": {
       "description": "",
       "enums": {
         "Closed": {
@@ -12855,7 +12914,7 @@
         }
       }
     },
-    "DERItemType": {
+    "solar-types:DERItemType": {
       "description": "",
       "enums": {
         "PVSystem": {
@@ -12880,7 +12939,7 @@
         }
       }
     },
-    "EnvironmentalConditionsItemType": {
+    "solar-types:environmentalConditionsItemType": {
       "description": "",
       "enums": {
         "Pollen": {
@@ -12921,7 +12980,7 @@
         }
       }
     },
-    "OptimizerTypeItemType": {
+    "solar-types:optimizerTypeItemType": {
       "description": "",
       "enums": {
         "Standalone": {
@@ -12942,7 +13001,7 @@
         }
       }
     },
-    "SystemAvailabilityModeItemType": {
+    "solar-types:systemAvailabilityModeItemType": {
       "description": "",
       "enums": {
         "Emergency": {
@@ -12975,7 +13034,7 @@
         }
       }
     },
-    "MountingItemType": {
+    "solar-types:mountingItemType": {
       "description": "",
       "enums": {
         "Attached": {
@@ -12996,7 +13055,7 @@
         }
       }
     },
-    "RoofSlopeItemType": {
+    "solar-types:roofSlopeItemType": {
       "description": "",
       "enums": {
         "Flat": {
@@ -13013,7 +13072,7 @@
         }
       }
     },
-    "RoofItemType": {
+    "solar-types:roofItemType": {
       "description": "",
       "enums": {
         "AsphaltShingle": {
@@ -13066,7 +13125,7 @@
         }
       }
     },
-    "SystemOperationalStatusItemType": {
+    "solar-types:systemOperationalStatusItemType": {
       "description": "",
       "enums": {
         "Operational": {
@@ -13087,7 +13146,28 @@
         }
       }
     },
-    "ReserveCollateralItemType": {
+    "solar-types:communicationProtocolItemType": {
+      "description": "",
+      "enums": {
+        "Modbus": {
+          "label": "",
+          "description": ""
+        },
+        "Zigbee": {
+          "label": "",
+          "description": ""
+        },
+        "WIFI": {
+          "label": "",
+          "description": ""
+        },
+        "Ethernet": {
+          "label": "",
+          "description": ""
+        }
+      }
+    },
+    "solar-types:reserveCollateralItemType": {
       "description": "",
       "enums": {
         "LetterofCredit": {
@@ -13100,7 +13180,7 @@
         }
       }
     },
-    "GISFileFormatItemType": {
+    "solar-types:gISFileFormatItemType": {
       "description": "",
       "enums": {
         "GEOJson": {
@@ -13121,7 +13201,7 @@
         }
       }
     },
-    "ReserveUseItemType": {
+    "solar-types:reserveUseItemType": {
       "description": "",
       "enums": {
         "Rent": {
@@ -13138,7 +13218,7 @@
         }
       }
     },
-    "DeviceItemType": {
+    "solar-types:deviceItemType": {
       "description": "",
       "enums": {
         "ModuleMember": {
@@ -13203,7 +13283,7 @@
         }
       }
     },
-    "ProjectPhaseItemType": {
+    "solar-types:projectPhaseItemType": {
       "description": "",
       "enums": {
         "Pre_Construction": {
@@ -13228,7 +13308,7 @@
         }
       }
     },
-    "ComponentMaintenanceEventItemType": {
+    "solar-types:componentMaintenanceEventItemType": {
       "description": "",
       "enums": {
         "Repair": {
@@ -13241,7 +13321,7 @@
         }
       }
     },
-    "FinancialContractItemType": {
+    "solar-types:financialContractItemType": {
       "description": "",
       "enums": {
         "Lease": {
@@ -13270,7 +13350,7 @@
         }
       }
     },
-    "ClimateClassificationKoppenItemType": {
+    "solar-types:climateClassificationKoppenItemType": {
       "description": "",
       "enums": {
         "Tropicalmegathermalclimates": {
@@ -13335,7 +13415,7 @@
         }
       }
     },
-    "FinancialTransactionItemType": {
+    "solar-types:financialTransactionItemType": {
       "description": "",
       "enums": {
         "ACHSettlementCredit": {
@@ -13444,7 +13524,7 @@
         }
       }
     },
-    "DistributedGenOrUtilityScaleItemType": {
+    "solar-types:distributedGenOrUtilityScaleItemType": {
       "description": "",
       "enums": {
         "DistributedGeneration": {
@@ -13457,7 +13537,7 @@
         }
       }
     },
-    "SparePartsStatusItemType": {
+    "solar-types:sparePartsStatusItemType": {
       "description": "",
       "enums": {
         "Sufficient": {
@@ -13470,7 +13550,7 @@
         }
       }
     },
-    "PreventiveMaintenanceTaskStatusItemType": {
+    "solar-types:preventiveMaintenanceTaskStatusItemType": {
       "description": "",
       "enums": {
         "Complete": {
@@ -13483,7 +13563,7 @@
         }
       }
     },
-    "EventSeverityItemType": {
+    "solar-types:eventSeverityItemType": {
       "description": "",
       "enums": {
         "Low": {
@@ -13500,7 +13580,7 @@
         }
       }
     },
-    "MORLevelItemType": {
+    "solar-types:mORLevelItemType": {
       "description": "",
       "enums": {
         "SiteLevel": {
@@ -13517,7 +13597,24 @@
         }
       }
     },
-    "InsuranceItemType": {
+    "solar-types:batteryChemistryItemType": {
+      "description": "",
+      "enums": {
+        "LiOn": {
+          "label": "",
+          "description": ""
+        },
+        "Pb": {
+          "label": "",
+          "description": ""
+        },
+        "NiCad": {
+          "label": "",
+          "description": ""
+        }
+      }
+    },
+    "solar-types:insuranceItemType": {
       "description": "",
       "enums": {
         "Liability": {
@@ -13622,7 +13719,7 @@
         }
       }
     },
-    "UUIDItemType": {
+    "solar-types:uuidItemType": {
       "description": "",
       "enums": {
         "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})": {
@@ -15161,7 +15258,7 @@
         }
       }
     },
-    "InverterStyleItemType": {
+    "inverterStyleItemType": {
       "description": "",
       "enums": {
         "Central": {
@@ -15212,7 +15309,7 @@
         }
       }
     },
-    "WireGaugeItemType": {
+    "wireGaugeItemType": {
       "description": "Units for gauge of a wire or cable",
       "enums": {
         "AWG": {
@@ -15221,7 +15318,7 @@
         }
       }
     },
-    "ModuleOrientationItemType": {
+    "moduleOrientationItemType": {
       "description": "Orientation of a module, can be Landscape or Potrait",
       "enums": {
         "Landscape": {
@@ -15234,15 +15331,11 @@
         },
         "Mixed": {
           "label": "Mixed",
-          "description": "Use when the object (e.g., Array) has modules in both Portrait and Landscape."
-        },
-        "Diamond": {
-          "label": "Diamond",
-          "description": "Use when the object (e.g., Array) has modules that are not axis-aligned."
+          "description": "Use when the object (e.g., Array) has modules in both Portrait and Landscape "
         }
       }
     },
-    "WeightItemType": {
+    "weightItemType": {
       "description": "Units for weight",
       "units": {
         "lb": {
@@ -15263,7 +15356,7 @@
         }
       }
     },
-    "IrradianceItemType": {
+    "irradianceItemType": {
       "description": "Units for irradiance",
       "units": {
         "W_per_sqm": {
@@ -15276,7 +15369,7 @@
         }
       }
     },
-    "InsolationItemType": {
+    "insolationItemType": {
       "description": "Units for insolation (time-integrated irradiance)",
       "units": {
         "Wh_per_sqm": {
@@ -15289,7 +15382,7 @@
         }
       }
     },
-    "SpeedItemType": {
+    "speedItemType": {
       "description": "Units for speed",
       "units": {
         "mi_per_h": {
@@ -15310,7 +15403,7 @@
         }
       }
     },
-    "PercentItemType": {
+    "percentItemType": {
       "description": "Percent unit",
       "units": {
         "percent": {
@@ -15319,20 +15412,16 @@
         }
       }
     },
-    "PerUnitItemType": {
-      "description": "Per unit. Unit source prefixes: us-types",
+    "perUnitItemType": {
+      "description": "Per unit",
       "units": {
-        "Monetary_per_Decimal": {
-          "label": "Monetary/Decimal",
-          "description": "Monetary Unit / Anything"
-        },
         "pu": {
           "label": "Per unit",
           "description": ""
         }
       }
     },
-    "TempCoefficientItemType": {
+    "tempCoefficientItemType": {
       "description": "Units for temperature coefficients, which are change in numerator per unit change in temperature",
       "units": {
         "V_per_Cel": {
@@ -15357,7 +15446,7 @@
         }
       }
     },
-    "MonetaryPerAreaItemType": {
+    "monetaryPerAreaItemType": {
       "description": "Currency per unit area",
       "units": {
         "USD_per_acre": {
@@ -15386,44 +15475,36 @@
         }
       }
     },
-    "DurationItemType": {
-      "description": "Units for time periods. Unit source prefixes: stdi",
+    "durationItemType": {
+      "description": "Units for time periods",
       "units": {
-        "Y": {
+        "y": {
           "label": "Year",
-          "description": "Gregorian calendar year of 365 days. Use only as a denominator because durationItemType is not numeric and has no units."
+          "description": ""
         },
-        "M": {
+        "mo": {
           "label": "Month",
-          "description": "Gregorian calendar month of 30.41 days. Use only as a denominator because durationItemType is not numeric and has no units."
+          "description": ""
         },
-        "D": {
+        "d": {
           "label": "Day",
-          "description": "Day of 24 hours. Use only as a denominator because durationItemType is not numeric and has no units."
+          "description": ""
         },
-        "H": {
+        "h": {
           "label": "Hour",
-          "description": "Hour of 60 minutes. Use only as a denominator because durationItemType is not numeric and has no units."
+          "description": ""
         },
-        "MM": {
+        "min": {
           "label": "Minute",
-          "description": "Minute of 60 seconds. Use only as a denominator because durationItemType is not numeric and has no units."
+          "description": ""
         },
-        "S": {
+        "s": {
           "label": "Second",
-          "description": "Second. Use only as a denominator because durationItemType is not numeric and has no units."
-        },
-        "Q": {
-          "label": "Quarter",
-          "description": "Gregorian Calendar Quarter (three months). Use only as a denominator because durationItemType is not numeric and has no units."
-        },
-        "WK": {
-          "label": "Week",
-          "description": "Gregorian Calendar Week. Use only as a denominator because durationItemType is not numeric and has no units."
+          "description": ""
         }
       }
     },
-    "MonetaryPerDurationItemType": {
+    "monetaryPerDurationItemType": {
       "description": "Units for currency per time",
       "units": {
         "USD_per_y": {
@@ -15460,7 +15541,7 @@
         }
       }
     },
-    "MonetaryPerEnergyItemType": {
+    "monetaryPerEnergyItemType": {
       "description": "Units for current per energy",
       "units": {
         "USD_per_MWh": {
@@ -15481,7 +15562,7 @@
         }
       }
     },
-    "MonetaryPerMassItemType": {
+    "monetaryPerMassItemType": {
       "description": "Units for currency per mass or weight",
       "units": {
         "USD_per_lb": {
@@ -15510,7 +15591,7 @@
         }
       }
     },
-    "MonetaryPerVolumeItemType": {
+    "monetaryPerVolumeItemType": {
       "description": "Units for currenncy per volume",
       "units": {
         "USD_per_m3": {
@@ -15535,7 +15616,7 @@
         }
       }
     },
-    "MonetaryPerPowerItemType": {
+    "monetaryPerPowerItemType": {
       "description": "Units for current per power",
       "units": {
         "USD_per_W": {
@@ -15564,7 +15645,7 @@
         }
       }
     },
-    "CellTechnologyItemType": {
+    "cellTechnologyItemType": {
       "description": "The type of technology for a solar cell.",
       "enums": {
         "monoSi": {
@@ -15738,7 +15819,7 @@
       }
     },
     "BatteryChemistryItemType": {
-      "description": "These are named using chemical nomenclature when it is concise and complete, otherwise English is used.",
+      "description": "",
       "enums": {
         "LeadAcidGel": {
           "label": "Lead Acid Gel",
@@ -15802,7 +15883,7 @@
       "description": "",
       "enums": {
         "RS485": {
-          "label": "RS-485",
+          "label": "RS485",
           "description": ""
         },
         "CAN 2.0 B": {
@@ -15815,10 +15896,6 @@
         },
         "Modbus": {
           "label": "Modbus",
-          "description": ""
-        },
-        "TCPIP": {
-          "label": "TCP/IP",
           "description": ""
         }
       }
@@ -15885,28 +15962,11 @@
           "description": "Meter per second squared"
         }
       }
-    },
-    "CommunicationTransportLayerItemType": {
-      "description": "",
-      "enums": {
-        "Ethernet": {
-          "label": "Ethernet",
-          "description": ""
-        },
-        "WiFi": {
-          "label": "WiFi",
-          "description": ""
-        },
-        "Zigbee": {
-          "label": "Zigbee",
-          "description": ""
-        }
-      }
     }
   },
   "x-ob-item-type-groups": {
     "OBMonetary": {
-      "type": "#/x-ob-item-types/MonetaryItemType",
+      "type": "#/components/x-ob-units/stdi:monetaryItemType",
       "description": "",
       "group": [
         "CAD",
@@ -15915,7 +15975,7 @@
       ]
     },
     "OBElectricalEnergy": {
-      "type": "#/x-ob-item-types/EnergyItemType",
+      "type": "#/components/x-ob-units/num:energyItemType",
       "description": "",
       "group": [
         "kWh",
@@ -15924,7 +15984,7 @@
       ]
     },
     "OBElectricalPower": {
-      "type": "#/x-ob-item-types/PowerItemType",
+      "type": "#/components/x-ob-units/num:powerItemType",
       "description": "",
       "group": [
         "GW",
@@ -15934,8 +15994,8 @@
         "VA"
       ]
     },
-    "MassUnitItemType": {
-      "type": "#/x-ob-item-types/MassItemType",
+    "massUnitItemType": {
+      "type": "#/components/x-ob-units/num:massItemType",
       "description": "Restriction of num:massItemType to only units of mass: g, kg, t, kt, Mt, Gt",
       "group": [
         "t",
