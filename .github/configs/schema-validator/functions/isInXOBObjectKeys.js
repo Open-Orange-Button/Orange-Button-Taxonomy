@@ -1,6 +1,6 @@
 export default (input, options, context) => {
-  let itemTypes = Object.keys(context.document.data[options.objectPath]);
-  if (input && !itemTypes.includes(input)) {
+  let items = Object.keys(context.document.data[options.objectPath]);
+  if (input && !items.includes(input)) {
     return [{ message: input }];
   }
 }

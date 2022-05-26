@@ -9,7 +9,7 @@ rules:
   property-case-convention: off
   property-description: off
   
-  item-type-exists:
+  element-item-type-exists:
     message: 'Item type does not exist: {{error}}'
     given: $.components.schemas[*].allOf[1][x-ob-item-type]
     severity: error
@@ -18,7 +18,7 @@ rules:
       functionOptions:
         objectPath: x-ob-item-types
   
-  item-type-group-exists:
+  element-item-type-group-exists:
     message: 'Item type group does not exist: {{error}}'
     given: $.components.schemas[*].allOf[1][x-ob-item-type-group]
     severity: error
