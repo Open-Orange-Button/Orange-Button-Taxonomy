@@ -8015,15 +8015,6 @@
               "PowerWarranty": {
                 "$ref": "#/components/schemas/PowerWarranty"
               },
-              "VoltageAtMaximumPower": {
-                "$ref": "#/components/schemas/VoltageAtMaximumPower"
-              },
-              "CurrentAtMaximumPower": {
-                "$ref": "#/components/schemas/CurrentAtMaximumPower"
-              },
-              "CurrentShortCircuit": {
-                "$ref": "#/components/schemas/CurrentShortCircuit"
-              },
               "ModuleEfficiency": {
                 "$ref": "#/components/schemas/ModuleEfficiency"
               },
@@ -8134,6 +8125,9 @@
               },
               "PowerSTC": {
                 "$ref": "#/components/schemas/PowerSTC"
+              },
+              "ModuleElectRatings": {
+                "$ref": "#/components/schemas/ModuleElectRatings"
               }
             }
           }
@@ -10911,6 +10905,12 @@
           "ModuleRatingCondition": {
             "$ref": "#/components/schemas/ModuleRatingCondition"
           }
+        }
+      },
+      "ModuleElectRatings": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ModuleElectRating"
         }
       }
     }
