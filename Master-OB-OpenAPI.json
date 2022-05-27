@@ -108,6 +108,9 @@
           },
           "Warranties": {
             "$ref": "#/components/schemas/Warranties"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         },
         "x-ob-usage-tips": ""
@@ -751,9 +754,6 @@
           "Addresses": {
             "$ref": "#/components/schemas/Addresses"
           },
-          "PVSystems": {
-            "$ref": "#/components/schemas/PVSystems"
-          },
           "Description": {
             "$ref": "#/components/schemas/Description"
           },
@@ -784,11 +784,17 @@
           "EnergyConsumptions": {
             "$ref": "#/components/schemas/EnergyConsumptions"
           },
-          "BatterySystems": {
-            "$ref": "#/components/schemas/BatterySystems"
-          },
           "Comments": {
             "$ref": "#/components/schemas/Comments"
+          },
+          "Jobs": {
+            "$ref": "#/components/schemas/Jobs"
+          },
+          "Contracts": {
+            "$ref": "#/components/schemas/Contracts"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         },
         "x-ob-usage-tips": ""
@@ -878,7 +884,7 @@
       "Latitude": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -887,7 +893,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Degree",
-              "Value": "45.7783517"
+              "Value": 45.7783517
             },
             "x-ob-item-type-group": ""
           }
@@ -896,7 +902,7 @@
       "Longitude": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -905,7 +911,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Degree",
-              "Value": "-108.5203597"
+              "Value": -108.5203597
             },
             "x-ob-item-type-group": ""
           }
@@ -1059,7 +1065,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Foot",
-              "Value": "3123"
+              "Value": 3123
             },
             "x-ob-item-type-group": ""
           }
@@ -1108,7 +1114,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Foot",
-              "Value": "20"
+              "Value": 20
             },
             "x-ob-item-type-group": ""
           }
@@ -1597,7 +1603,7 @@
           },
           {
             "type": "object",
-            "description": "A generic URL to a file folder for transmitting documents",
+            "description": "A generic URL to a file folder or a single file for transmitting documents",
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -1766,9 +1772,6 @@
           "Devices": {
             "$ref": "#/components/schemas/Devices"
           },
-          "ProjectedSavingsAmt": {
-            "$ref": "#/components/schemas/ProjectedSavingsAmt"
-          },
           "Description": {
             "$ref": "#/components/schemas/Description"
           },
@@ -1799,17 +1802,8 @@
           "EnergyProductions": {
             "$ref": "#/components/schemas/EnergyProductions"
           },
-          "Tasks": {
-            "$ref": "#/components/schemas/Tasks"
-          },
-          "BillOfServices": {
-            "$ref": "#/components/schemas/BillOfServices"
-          },
           "PVArrays": {
             "$ref": "#/components/schemas/PVArrays"
-          },
-          "Comments": {
-            "$ref": "#/components/schemas/Comments"
           },
           "CapacityAC": {
             "$ref": "#/components/schemas/CapacityAC"
@@ -1829,7 +1823,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
-              "Value": "43095"
+              "Value": 43095
             },
             "x-ob-item-type-group": "OBMonetary"
           }
@@ -1892,7 +1886,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Kilowatt",
-              "Value": "11.5"
+              "Value": 11.5
             },
             "x-ob-item-type-group": "OBElectricalPower"
           }
@@ -1944,37 +1938,6 @@
         },
         "x-ob-usage-tips": ""
       },
-      "Utility": {
-        "type": "object",
-        "description": "A electric service provider",
-        "properties": {
-          "UtilityLegalEntityID": {
-            "$ref": "#/components/schemas/UtilityLegalEntityID"
-          },
-          "UtilityName": {
-            "$ref": "#/components/schemas/UtilityName"
-          },
-          "FeeStructures": {
-            "$ref": "#/components/schemas/FeeStructures"
-          },
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "Contacts": {
-            "$ref": "#/components/schemas/Contacts"
-          },
-          "Addresses": {
-            "$ref": "#/components/schemas/Addresses"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "URL": {
-            "$ref": "#/components/schemas/URL"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
       "ProjectedSavingsAmt": {
         "allOf": [
           {
@@ -1988,8 +1951,8 @@
             "x-ob-sample-value": {
               "EndTime": "'2020-12-30'",
               "StartTime": "2020-01-01",
-              "Unit": "US Dollar",
-              "Value": "120"
+              "Unit": "USD",
+              "Value": 120
             },
             "x-ob-item-type-group": "OBMonetary"
           }
@@ -2131,11 +2094,10 @@
           {
             "type": "object",
             "description": "The date the task was completed",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-usage-tips": "Use EndTime for the actual completed date. StartTime should be the task start date",
+            "x-ob-item-type": "DateItemType",
+            "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "EndTime": "2020-11-30",
-              "StartTime": "2020-05-30"
+              "Value": "2020-11-30"
             },
             "x-ob-item-type-group": ""
           }
@@ -2228,15 +2190,16 @@
       "MCERgroundmotionSS": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
             "description": " MCER ground motion (period=0.2s)",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "AccelerationItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "0.131"
+              "Value": 0.131,
+              "Unit": "g"
             },
             "x-ob-item-type-group": ""
           }
@@ -2245,15 +2208,16 @@
       "MCERgroundmotionS1": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
             "description": "MCER ground motion (period=1.0s)",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "AccelerationItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "0.057"
+              "Value": 0.057,
+              "Unit": "g"
             },
             "x-ob-item-type-group": ""
           }
@@ -2346,7 +2310,7 @@
       "TempLowASHRAE": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -2355,7 +2319,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Fahrenheit",
-              "Value": "22"
+              "Value": 22
             },
             "x-ob-item-type-group": ""
           }
@@ -2364,7 +2328,7 @@
       "TempHighASHRAE": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -2373,7 +2337,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Fahrenheit",
-              "Value": "105"
+              "Value": 105
             },
             "x-ob-item-type-group": ""
           }
@@ -2423,7 +2387,7 @@
       "ElectricalServiceRating": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -2432,7 +2396,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Ampere",
-              "Value": "120"
+              "Value": 120
             },
             "x-ob-item-type-group": ""
           }
@@ -3155,7 +3119,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
-              "Value": "0.01"
+              "Value": 0.01
             },
             "x-ob-item-type-group": ""
           }
@@ -3598,6 +3562,9 @@
           },
           "CertificateValue": {
             "$ref": "#/components/schemas/CertificateValue"
+          },
+          "FirmwareVersions": {
+            "$ref": "#/components/schemas/FirmwareVersions"
           }
         }
       },
@@ -3654,7 +3621,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
-              "Value": "120"
+              "Value": 120
             },
             "x-ob-item-type-group": ""
           }
@@ -3672,7 +3639,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
-              "Value": "125"
+              "Value": 125
             },
             "x-ob-item-type-group": ""
           }
@@ -3690,7 +3657,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
-              "Value": "130"
+              "Value": 130
             },
             "x-ob-item-type-group": ""
           }
@@ -3708,7 +3675,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
-              "Value": "135"
+              "Value": 135
             },
             "x-ob-item-type-group": ""
           }
@@ -3726,7 +3693,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
-              "Value": "145"
+              "Value": 145
             },
             "x-ob-item-type-group": ""
           }
@@ -3776,7 +3743,7 @@
       "WindSpeed": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -3788,8 +3755,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "mi_per_h",
+              "Value": 15
             },
             "x-ob-item-type-group": ""
           }
@@ -3798,7 +3765,7 @@
       "SnowPressure": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -3806,8 +3773,8 @@
             "x-ob-item-type": "PressureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Unit": "Pounds Per Square Foot",
-              "Value": "20"
+              "Unit": "psi",
+              "Value": 20
             },
             "x-ob-item-type-group": ""
           }
@@ -3898,7 +3865,7 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "10"
+              "Value": 10
             },
             "x-ob-item-type-group": ""
           }
@@ -4079,9 +4046,6 @@
           "OperationalStatus": {
             "$ref": "#/components/schemas/OperationalStatus"
           },
-          "ProjectedSavingsAmt": {
-            "$ref": "#/components/schemas/ProjectedSavingsAmt"
-          },
           "StructureID": {
             "$ref": "#/components/schemas/StructureID"
           },
@@ -4090,9 +4054,6 @@
           },
           "Devices": {
             "$ref": "#/components/schemas/Devices"
-          },
-          "Tasks": {
-            "$ref": "#/components/schemas/Tasks"
           },
           "EnergyProductions": {
             "$ref": "#/components/schemas/EnergyProductions"
@@ -4134,7 +4095,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
-              "Value": "12000"
+              "Value": 12000
             },
             "x-ob-item-type-group": ""
           }
@@ -4197,15 +4158,15 @@
       "LoanRate": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
             "description": "The percentage rate of the loan",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "PercentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "2.99"
+              "Value": 2.99
             },
             "x-ob-item-type-group": ""
           }
@@ -4689,7 +4650,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
-              "Value": "10.00"
+              "Value": 10
             },
             "x-ob-item-type-group": ""
           }
@@ -4698,7 +4659,7 @@
       "AmountExtended": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -4707,7 +4668,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "US Dollar",
-              "Value": "1000"
+              "Value": 1000
             },
             "x-ob-item-type-group": ""
           }
@@ -4751,20 +4712,20 @@
       "HeightAboveGround": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
             "description": "Height above ground level",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "LengthItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "m",
+              "Value": 3
             },
             "x-ob-item-type-group": ""
           }
@@ -4773,7 +4734,7 @@
       "ASTME28484ModelCoeffA3": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -4786,7 +4747,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "",
-              "Value": ""
+              "Value": 0
             },
             "x-ob-item-type-group": ""
           }
@@ -4795,7 +4756,7 @@
       "Rainfall": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -4807,8 +4768,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "mm",
+              "Value": 5
             },
             "x-ob-item-type-group": ""
           }
@@ -4817,7 +4778,7 @@
       "FilterIrradMin": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -4829,8 +4790,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "W_per_sqm",
+              "Value": 50
             },
             "x-ob-item-type-group": ""
           }
@@ -4839,7 +4800,7 @@
       "OrientationAzimuth": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -4851,8 +4812,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "Degree",
+              "Value": 45
             },
             "x-ob-item-type-group": ""
           }
@@ -4927,7 +4888,7 @@
       "HumidityRelative": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -4940,7 +4901,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "",
-              "Value": ""
+              "Value": 33
             },
             "x-ob-item-type-group": ""
           }
@@ -4949,7 +4910,7 @@
       "ASTME2848ModelResidualMean": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -4971,7 +4932,7 @@
       "TempCell": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -4993,7 +4954,7 @@
       "FilterWindSpeedMin": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5005,8 +4966,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "mi_per_h",
+              "Value": 5
             },
             "x-ob-item-type-group": ""
           }
@@ -5015,7 +4976,7 @@
       "FilterPowerACMin": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5027,8 +4988,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "W",
+              "Value": 45
             },
             "x-ob-item-type-group": ""
           }
@@ -5062,7 +5023,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Volt",
-              "Value": "39.83"
+              "Value": 39.83
             }
           }
         ]
@@ -5092,7 +5053,7 @@
       "DataFilterOutsideRange": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
           },
           {
             "type": "object",
@@ -5114,7 +5075,7 @@
       "ASTME2848ModelResidualStandardDeviation": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5136,7 +5097,7 @@
       "TempMeter": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5158,7 +5119,7 @@
       "RefCellCalibrationConstantAtRptCond": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5170,8 +5131,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "Cel",
+              "Value": 50
             },
             "x-ob-item-type-group": ""
           }
@@ -5180,7 +5141,7 @@
       "TempModule": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5192,8 +5153,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "Cel",
+              "Value": 15
             },
             "x-ob-item-type-group": ""
           }
@@ -5202,7 +5163,7 @@
       "ASTME2848PowerRtgAtRptCond": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5214,8 +5175,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "W",
+              "Value": 45
             },
             "x-ob-item-type-group": ""
           }
@@ -5246,7 +5207,7 @@
       "PressureAtmospheric": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5258,8 +5219,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "psi",
+              "Value": 14.7
             },
             "x-ob-item-type-group": ""
           }
@@ -5268,7 +5229,7 @@
       "ASTME28484ModelCoeffA1": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5334,7 +5295,7 @@
       "IrradDirectNormal": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5346,8 +5307,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "W_per_sqm",
+              "Value": 900
             },
             "x-ob-item-type-group": ""
           }
@@ -5356,7 +5317,7 @@
       "FilterIrradMax": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5368,8 +5329,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "W_per_sqm",
+              "Value": 1100
             },
             "x-ob-item-type-group": ""
           }
@@ -5400,7 +5361,7 @@
       "PowerDC": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5412,8 +5373,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "W",
+              "Value": 50
             },
             "x-ob-item-type-group": ""
           }
@@ -5422,7 +5383,7 @@
       "CurrentTransducerRatio": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5435,7 +5396,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "",
-              "Value": ""
+              "Value": 0.5
             },
             "x-ob-item-type-group": ""
           }
@@ -5444,7 +5405,7 @@
       "ASTME2848PowerRtgUncertainty": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5466,7 +5427,7 @@
       "DataFilterInverterClipping": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
           },
           {
             "type": "object",
@@ -5488,7 +5449,7 @@
       "ASTME28484ModelCoeffA4": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5532,7 +5493,7 @@
       "SystemPF": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5545,7 +5506,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "",
-              "Value": ""
+              "Value": 95
             },
             "x-ob-item-type-group": ""
           }
@@ -5576,7 +5537,7 @@
       "IrradGlobalHorizontal": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5588,8 +5549,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "W_per_sqm",
+              "Value": 800
             },
             "x-ob-item-type-group": ""
           }
@@ -5598,7 +5559,7 @@
       "ASTME28484ModelCoeffA2": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5620,7 +5581,7 @@
       "DataFilterCollectionSystem": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
           },
           {
             "type": "object",
@@ -5708,7 +5669,7 @@
       "TempAmb": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5720,8 +5681,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "Cel",
+              "Value": 15
             },
             "x-ob-item-type-group": ""
           }
@@ -5730,7 +5691,7 @@
       "DataFilterInstrumentAlignment": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
           },
           {
             "type": "object",
@@ -5774,7 +5735,7 @@
       "EnergyAC": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5786,8 +5747,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "kWh",
+              "Value": 50
             },
             "x-ob-item-type-group": "OBElectricalEnergy"
           }
@@ -5796,12 +5757,12 @@
       "Albedo": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
             "description": "Percentage of light that is reflected off the ground surface",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "",
@@ -5809,7 +5770,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "",
-              "Value": ""
+              "Value": 0.3
             },
             "x-ob-item-type-group": ""
           }
@@ -5818,7 +5779,7 @@
       "OrientationTilt": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5830,8 +5791,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "Degree",
+              "Value": 25
             },
             "x-ob-item-type-group": ""
           }
@@ -5840,7 +5801,7 @@
       "FilterPowerACMax": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5852,8 +5813,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "W",
+              "Value": 50
             },
             "x-ob-item-type-group": ""
           }
@@ -5950,7 +5911,7 @@
       "DataSelected": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
           },
           {
             "type": "object",
@@ -6016,7 +5977,7 @@
       "Avail": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6029,7 +5990,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "",
-              "Value": ""
+              "Value": 95
             },
             "x-ob-item-type-group": ""
           }
@@ -6038,7 +5999,7 @@
       "FilterTempAmbMax": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6050,8 +6011,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "Cel",
+              "Value": 15
             },
             "x-ob-item-type-group": ""
           }
@@ -6126,7 +6087,7 @@
       "RevenueGrade": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
           },
           {
             "type": "object",
@@ -6214,7 +6175,7 @@
       "DataFilterOutliers": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
           },
           {
             "type": "object",
@@ -6236,7 +6197,7 @@
       "DataFilterVisual": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
           },
           {
             "type": "object",
@@ -6258,7 +6219,7 @@
       "SnowAccumulation": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6270,8 +6231,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "cm",
+              "Value": 25
             },
             "x-ob-item-type-group": ""
           }
@@ -6280,7 +6241,7 @@
       "DataFilterMissing": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
           },
           {
             "type": "object",
@@ -6346,7 +6307,7 @@
       "FilterIrradStabilityMax": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6359,7 +6320,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "",
-              "Value": ""
+              "Value": 5
             },
             "x-ob-item-type-group": ""
           }
@@ -6412,7 +6373,7 @@
       "TempRefCell": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6424,8 +6385,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "Cel",
+              "Value": 15
             },
             "x-ob-item-type-group": ""
           }
@@ -6456,7 +6417,7 @@
       "DataFilterShading": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
           },
           {
             "type": "object",
@@ -6478,7 +6439,7 @@
       "FilterWindSpeedMax": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6490,8 +6451,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "mi_per_h",
+              "Value": 50
             },
             "x-ob-item-type-group": ""
           }
@@ -6500,7 +6461,7 @@
       "DataFilterStability": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
           },
           {
             "type": "object",
@@ -6522,7 +6483,7 @@
       "IrradDiffuseHorizontal": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6534,8 +6495,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "W_per_sqm",
+              "Value": 150
             },
             "x-ob-item-type-group": ""
           }
@@ -6588,7 +6549,7 @@
       "CurtailLimit": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6600,8 +6561,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "kW",
+              "Value": 10
             },
             "x-ob-item-type-group": ""
           }
@@ -6610,7 +6571,7 @@
       "FilterTempAmbMin": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6622,8 +6583,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "Cel",
+              "Value": -10
             },
             "x-ob-item-type-group": ""
           }
@@ -6632,7 +6593,7 @@
       "IrradPlaneOfArray": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6644,8 +6605,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "W_per_sqm",
+              "Value": 700
             },
             "x-ob-item-type-group": ""
           }
@@ -6676,7 +6637,7 @@
       "PowerAC": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6688,30 +6649,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "UtilityLegalEntityID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The Legal Entity Identifier of the utility.",
-            "x-ob-item-type": "LegalEntityIdentifierItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Decimals": "",
-              "EndTime": "",
-              "Precision": "",
-              "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "W",
+              "Value": 50
             },
             "x-ob-item-type-group": ""
           }
@@ -6720,7 +6659,7 @@
       "Snowfall": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6732,8 +6671,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "cm",
+              "Value": 20
             },
             "x-ob-item-type-group": ""
           }
@@ -6742,7 +6681,7 @@
       "DeviceCost": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6754,8 +6693,8 @@
               "EndTime": "",
               "Precision": "",
               "StartTime": "",
-              "Unit": "",
-              "Value": ""
+              "Unit": "USD",
+              "Value": 500
             },
             "x-ob-item-type-group": ""
           }
@@ -7033,7 +6972,7 @@
       "Azimuth": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -7046,7 +6985,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "Degree",
-              "Value": "180"
+              "Value": 180
             },
             "x-ob-item-type-group": ""
           }
@@ -7090,7 +7029,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "Square Foot",
-              "Value": "10"
+              "Value": 10
             },
             "x-ob-item-type-group": ""
           }
@@ -7099,7 +7038,7 @@
       "Tilt": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -7112,7 +7051,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "Degree",
-              "Value": "30"
+              "Value": 30
             },
             "x-ob-item-type-group": ""
           }
@@ -7121,7 +7060,7 @@
       "Roll": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -7134,7 +7073,7 @@
               "Precision": "",
               "StartTime": "",
               "Unit": "Degree",
-              "Value": "20"
+              "Value": 20
             },
             "x-ob-item-type-group": ""
           }
@@ -7305,23 +7244,38 @@
               "Dimension": {
                 "$ref": "#/components/schemas/Dimension"
               },
-              "VoltageDCInputMax": {
-                "$ref": "#/components/schemas/VoltageDCInputMax"
-              },
-              "VoltageDCInputMin": {
-                "$ref": "#/components/schemas/VoltageDCInputMin"
-              },
-              "VoltageDCInputNom": {
-                "$ref": "#/components/schemas/VoltageDCInputNom"
-              },
               "InverterEfficiency": {
                 "$ref": "#/components/schemas/InverterEfficiency"
               },
-              "InverterInput": {
-                "$ref": "#/components/schemas/InverterInput"
+              "DCInput": {
+                "$ref": "#/components/schemas/DCInput"
               },
-              "InverterOutputs": {
-                "$ref": "#/components/schemas/InverterOutputs"
+              "InverterSwitchoverTime": {
+                "$ref": "#/components/schemas/InverterSwitchoverTime"
+              },
+              "VoltageDCInverterStart": {
+                "$ref": "#/components/schemas/VoltageDCInverterStart"
+              },
+              "ACOutputs": {
+                "$ref": "#/components/schemas/ACOutputs"
+              },
+              "TotalHarmonicDistortionPower": {
+                "$ref": "#/components/schemas/TotalHarmonicDistortionPower"
+              },
+              "TotalHarmonicDistortionCurrent": {
+                "$ref": "#/components/schemas/TotalHarmonicDistortionCurrent"
+              },
+              "IsHybrid": {
+                "$ref": "#/components/schemas/IsHybrid"
+              },
+              "CECNotes": {
+                "$ref": "#/components/schemas/CECNotes"
+              },
+              "HasMeter": {
+                "$ref": "#/components/schemas/HasMeter"
+              },
+              "NightTare": {
+                "$ref": "#/components/schemas/NightTare"
               }
             }
           }
@@ -7452,36 +7406,6 @@
           }
         ]
       },
-      "CurrentOutputMax": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Maximum output electric current of a device",
-            "x-ob-item-type": "ElectricCurrentItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": ""
-          }
-        ]
-      },
-      "VoltageOutputMax": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Maximum output voltage of a device",
-            "x-ob-item-type": "VoltageItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": ""
-          }
-        ]
-      },
       "Comment": {
         "type": "object",
         "description": "Date, source and content of a comment",
@@ -7563,11 +7487,38 @@
             "type": "object",
             "description": "A DC-DC power optimizer",
             "properties": {
-              "CurrentOutputMax": {
-                "$ref": "#/components/schemas/CurrentOutputMax"
+              "DCOutput": {
+                "$ref": "#/components/schemas/DCOutput"
               },
-              "VoltageOutputMax": {
-                "$ref": "#/components/schemas/VoltageOutputMax"
+              "DCInput": {
+                "$ref": "#/components/schemas/DCInput"
+              },
+              "OptimizerEfficiencyMax": {
+                "$ref": "#/components/schemas/OptimizerEfficiencyMax"
+              },
+              "OptimizerEfficiencyWeighted": {
+                "$ref": "#/components/schemas/OptimizerEfficiencyWeighted"
+              },
+              "OptimizerType": {
+                "$ref": "#/components/schemas/OptimizerType"
+              },
+              "TotalHarmonicDistortionCurrent": {
+                "$ref": "#/components/schemas/TotalHarmonicDistortionCurrent"
+              },
+              "CompatibleWith": {
+                "$ref": "#/components/schemas/CompatibleWith"
+              },
+              "IsSelectiveOptimization": {
+                "$ref": "#/components/schemas/IsSelectiveOptimization"
+              },
+              "IsVocReducing": {
+                "$ref": "#/components/schemas/IsVocReducing"
+              },
+              "AllowsString": {
+                "$ref": "#/components/schemas/AllowsString"
+              },
+              "GeoRegion": {
+                "$ref": "#/components/schemas/GeoRegion"
               }
             }
           }
@@ -7633,7 +7584,7 @@
               "EndTime": "2020-11-30",
               "StartTime": "2045-11-30",
               "Unit": "Year",
-              "Value": "25"
+              "Value": 25
             }
           }
         ]
@@ -7689,7 +7640,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Watt",
-              "Value": "300"
+              "Value": 300
             },
             "x-ob-item-type-group": ""
           }
@@ -7707,7 +7658,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Volt",
-              "Value": "32.26"
+              "Value": 32.26
             },
             "x-ob-item-type-group": ""
           }
@@ -7725,7 +7676,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Ampere",
-              "Value": "9.31"
+              "Value": 9.31
             },
             "x-ob-item-type-group": ""
           }
@@ -7734,7 +7685,7 @@
       "ModuleEfficiency": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -7742,7 +7693,7 @@
             "x-ob-item-type": "PercentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "18.3%"
+              "Value": 18.3
             },
             "x-ob-item-type-group": ""
           }
@@ -7751,7 +7702,7 @@
       "PowerToleranceMax": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -7759,7 +7710,7 @@
             "x-ob-item-type": "PercentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "+ 1.5 %"
+              "Value": 1.5
             },
             "x-ob-item-type-group": ""
           }
@@ -7777,7 +7728,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Celsius",
-              "Value": "45"
+              "Value": 45
             },
             "x-ob-item-type-group": ""
           }
@@ -7795,7 +7746,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Celsius",
-              "Value": "85"
+              "Value": 85
             },
             "x-ob-item-type-group": ""
           }
@@ -7813,7 +7764,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Celsius",
-              "Value": "-40"
+              "Value": -40
             },
             "x-ob-item-type-group": ""
           }
@@ -7830,7 +7781,7 @@
             "x-ob-item-type": "TempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "-0.37"
+              "Value": -0.37
             },
             "x-ob-item-type-group": ""
           }
@@ -7847,7 +7798,7 @@
             "x-ob-item-type": "TempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "-0.304"
+              "Value": -0.304
             },
             "x-ob-item-type-group": ""
           }
@@ -7864,7 +7815,7 @@
             "x-ob-item-type": "TempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "0.05"
+              "Value": 0.05
             },
             "x-ob-item-type-group": ""
           }
@@ -7882,7 +7833,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Volt",
-              "Value": "1500"
+              "Value": 1500
             },
             "x-ob-item-type-group": ""
           }
@@ -7900,7 +7851,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Ampere",
-              "Value": "20"
+              "Value": 20
             },
             "x-ob-item-type-group": ""
           }
@@ -7935,7 +7886,7 @@
             "x-ob-usage-tips": "Apply appropriate engineering consistency with related object Weight.",
             "x-ob-sample-value": {
               "Unit": "Kilogram",
-              "Value": "20"
+              "Value": 20
             },
             "x-ob-item-type-group": "MassUnitItemType"
           }
@@ -7953,7 +7904,7 @@
             "x-ob-usage-tips": "For irregularly shaped objects use this as a bounding box dimension.",
             "x-ob-sample-value": {
               "Unit": "Millimetre",
-              "Value": "1765"
+              "Value": 1765
             },
             "x-ob-item-type-group": ""
           }
@@ -7971,7 +7922,7 @@
             "x-ob-usage-tips": "For irregularly shaped objects use this as a bounding box dimension.",
             "x-ob-sample-value": {
               "Unit": "Millimetre",
-              "Value": "1048"
+              "Value": 1048
             },
             "x-ob-item-type-group": ""
           }
@@ -7989,7 +7940,7 @@
             "x-ob-usage-tips": "For irregularly shaped objects use this as a bounding box dimension",
             "x-ob-sample-value": {
               "Unit": "Millimetre",
-              "Value": "35"
+              "Value": 35
             },
             "x-ob-item-type-group": ""
           }
@@ -8023,7 +7974,7 @@
             "x-ob-item-type": "IntegerItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "120"
+              "Value": 120
             },
             "x-ob-item-type-group": ""
           }
@@ -8040,7 +7991,7 @@
             "x-ob-item-type": "PureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "3"
+              "Value": 3
             },
             "x-ob-item-type-group": ""
           }
@@ -8075,7 +8026,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Square Millimeter",
-              "Value": "4"
+              "Value": 4
             },
             "x-ob-item-type-group": ""
           }
@@ -8093,7 +8044,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "Millimetre",
-              "Value": "1200"
+              "Value": 1200
             },
             "x-ob-item-type-group": ""
           }
@@ -8128,7 +8079,7 @@
             "x-ob-usage-tips": "Use appropriate engineering consistency with related object Mass",
             "x-ob-sample-value": {
               "Unit": "Newton",
-              "Value": "9.81"
+              "Value": 9.81
             },
             "x-ob-item-type-group": ""
           }
@@ -8137,7 +8088,7 @@
       "PowerToleranceMin": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -8145,7 +8096,7 @@
             "x-ob-item-type": "PercentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "- 1.5 %"
+              "Value": -1.5
             },
             "x-ob-item-type-group": ""
           }
@@ -8598,11 +8549,13 @@
           },
           {
             "type": "object",
-            "description": "The date on which a certification is made.",
+            "description": "The date that certification was awarded to product.",
             "x-ob-item-type": "DateItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": ""
+            "x-ob-sample-value": {
+              "Value": "03/18/2022"
+            }
           }
         ]
       },
@@ -8977,6 +8930,15 @@
           },
           "InverterEfficiencyCECTestResults": {
             "$ref": "#/components/schemas/InverterEfficiencyCECTestResults"
+          },
+          "EfficiencyCECWtdVoltageMax": {
+            "$ref": "#/components/schemas/EfficiencyCECWtdVoltageMax"
+          },
+          "EfficiencyCECWtdVoltageMin": {
+            "$ref": "#/components/schemas/EfficiencyCECWtdVoltageMin"
+          },
+          "EfficiencyCECWtdVoltageNom": {
+            "$ref": "#/components/schemas/EfficiencyCECWtdVoltageNom"
           }
         }
       },
@@ -9004,105 +8966,6 @@
           }
         }
       },
-      "InverterHarmonicsMax": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The total harmonic distortion (THD) of an inverter, defined as the ratio of the sum of power of all harmonics to the power of the fundamental frequency.",
-            "x-ob-item-type": "PercentItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "VoltageDCInputMax": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Maximum Input Voltage (DC)",
-            "x-ob-item-type": "VoltageItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 200,
-              "Units": "Volt"
-            }
-          }
-        ]
-      },
-      "VoltageDCInputMin": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Minimum Input Voltage (DC)",
-            "x-ob-item-type": "VoltageItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 20,
-              "Units": "Volt"
-            }
-          }
-        ]
-      },
-      "VoltageDCInputNom": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Nominal Input Voltage (DC)",
-            "x-ob-item-type": "VoltageItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 150,
-              "Units": "Volt"
-            }
-          }
-        ]
-      },
-      "VoltageDCInputInverterStart": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Voltage (DC) input required for an inverter to begin power conversion",
-            "x-ob-item-type": "VoltageItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "InverterInputMPPTNumber": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementInteger"
-          },
-          {
-            "type": "object",
-            "description": "Number of MPPT inputs for an inverter",
-            "x-ob-item-type": "IntegerItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": ""
-          }
-        ]
-      },
       "CurrentShortCircuitMax": {
         "allOf": [
           {
@@ -9125,7 +8988,7 @@
           },
           {
             "type": "object",
-            "description": "Maximum of the voltage range for an inverter MPPT",
+            "description": "Maximum of the voltage range for a MPPT",
             "x-ob-item-type": "VoltageItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -9140,7 +9003,7 @@
           },
           {
             "type": "object",
-            "description": "Minimum of the voltage range for an inverter MPPT",
+            "description": "Minimum of the voltage range for a MPPT",
             "x-ob-item-type": "VoltageItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -9163,14 +9026,14 @@
           }
         ]
       },
-      "InverterMPPTInputStrings": {
+      "MPPTInputStrings": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementInteger"
           },
           {
             "type": "object",
-            "description": "The number of parallel input strings for an inverter MPPT",
+            "description": "The number of parallel input strings for a MPPT",
             "x-ob-item-type": "IntegerItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -9178,39 +9041,15 @@
           }
         ]
       },
-      "InverterInput": {
-        "type": "object",
-        "description": "Describes capability of one input to an inverter",
-        "properties": {
-          "VoltageDCInputMax": {
-            "$ref": "#/components/schemas/VoltageDCInputMax"
-          },
-          "VoltageDCInputMin": {
-            "$ref": "#/components/schemas/VoltageDCInputMin"
-          },
-          "VoltageDCInputNom": {
-            "$ref": "#/components/schemas/VoltageDCInputNom"
-          },
-          "VoltageDCInputInverterStart": {
-            "$ref": "#/components/schemas/VoltageDCInputInverterStart"
-          },
-          "InverterInputMPPTNumber": {
-            "$ref": "#/components/schemas/InverterInputMPPTNumber"
-          },
-          "InverterMPPTs": {
-            "$ref": "#/components/schemas/InverterMPPTs"
-          }
-        }
-      },
-      "InverterMPPTs": {
+      "MPPTs": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/InverterMPPT"
+          "$ref": "#/components/schemas/MPPT"
         }
       },
-      "InverterMPPT": {
+      "MPPT": {
         "type": "object",
-        "description": "An object of elements to describe an inverter maximum power point tracker (MPPT)",
+        "description": "An object of elements to describe a maximum power point tracker (MPPT)",
         "properties": {
           "CurrentShortCircuitMax": {
             "$ref": "#/components/schemas/CurrentShortCircuitMax"
@@ -9224,8 +9063,8 @@
           "CurrentDCMax": {
             "$ref": "#/components/schemas/CurrentDCMax"
           },
-          "InverterMPPTInputStrings": {
-            "$ref": "#/components/schemas/InverterMPPTInputStrings"
+          "MPPTInputStrings": {
+            "$ref": "#/components/schemas/MPPTInputStrings"
           }
         }
       },
@@ -9266,10 +9105,10 @@
           },
           {
             "type": "object",
-            "description": "Maximum AC power for a device",
+            "description": "Maximum continuous, real AC power for a device.",
             "x-ob-item-type": "PowerItemType",
-            "x-ob-item-type-group": "OBElectricalPowerAC",
-            "x-ob-usage-tips": "",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "For limited duration power levels, use PowerACSurges",
             "x-ob-sample-value": {}
           }
         ]
@@ -9341,9 +9180,9 @@
           },
           {
             "type": "object",
-            "description": "The nominal AC power output of a device.",
+            "description": "The nominal continuous, real AC power output of a device.",
             "x-ob-item-type": "PowerItemType",
-            "x-ob-item-type-group": "OBElectricalPowerAC",
+            "x-ob-item-type-group": "OBElectricalPower",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
           }
@@ -9358,21 +9197,6 @@
             "type": "object",
             "description": "The nominal AC voltage of a device",
             "x-ob-item-type": "VoltageItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "InterconnectionFrequency": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Frequency (Hz) of a AC power grid.",
-            "x-ob-item-type": "FrequencyItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -9416,9 +9240,6 @@
           "PowerFactorMin": {
             "$ref": "#/components/schemas/PowerFactorMin"
           },
-          "InverterHarmonicsMax": {
-            "$ref": "#/components/schemas/InverterHarmonicsMax"
-          },
           "InterconnectionPhaseType": {
             "$ref": "#/components/schemas/InterconnectionPhaseType"
           },
@@ -9431,21 +9252,24 @@
           "VoltageACNom": {
             "$ref": "#/components/schemas/VoltageACNom"
           },
-          "InterconnectionFrequencies": {
-            "$ref": "#/components/schemas/InterconnectionFrequencies"
+          "FrequenciesAC": {
+            "$ref": "#/components/schemas/FrequenciesAC"
           },
           "PowerACSurges": {
             "$ref": "#/components/schemas/PowerACSurges"
           },
           "InverterSwitchoverTime": {
             "$ref": "#/components/schemas/InverterSwitchoverTime"
+          },
+          "TotalHarmonicDistortionPower": {
+            "$ref": "#/components/schemas/TotalHarmonicDistortionPower"
           }
         }
       },
-      "InterconnectionFrequencies": {
+      "FrequenciesAC": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/InterconnectionFrequency"
+          "$ref": "#/components/schemas/FrequencyAC"
         }
       },
       "PowerACSurges": {
@@ -9471,6 +9295,1631 @@
         "items": {
           "$ref": "#/components/schemas/InverterOutput"
         }
+      },
+      "Entity": {
+        "type": "object",
+        "description": "Any commercial or legal organization.",
+        "properties": {
+          "Addresses": {
+            "$ref": "#/components/schemas/Addresses"
+          },
+          "Contacts": {
+            "$ref": "#/components/schemas/Contacts"
+          },
+          "Email": {
+            "$ref": "#/components/schemas/Email"
+          },
+          "WorkPhone": {
+            "$ref": "#/components/schemas/WorkPhone"
+          },
+          "LegalEntityIdentifier": {
+            "$ref": "#/components/schemas/LegalEntityIdentifier"
+          },
+          "URL": {
+            "$ref": "#/components/schemas/URL"
+          },
+          "TaxID": {
+            "$ref": "#/components/schemas/TaxID"
+          },
+          "CreditRatings": {
+            "$ref": "#/components/schemas/CreditRatings"
+          },
+          "EntityRoles": {
+            "$ref": "#/components/schemas/EntityRoles"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
+          }
+        }
+      },
+      "LegalEntityIdentifier": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Legal Entity Identifier (LEI) of the entity.",
+            "x-ob-item-type": "LegalEntityIdentifierItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "TaxID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Tax identification number of the entity.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "",
+              "EndTime": "",
+              "Precision": "",
+              "StartTime": "",
+              "Unit": "",
+              "Value": ""
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "CreditRating": {
+        "type": "object",
+        "description": "Credit rating.",
+        "properties": {
+          "CreditScore": {
+            "$ref": "#/components/schemas/CreditScore"
+          },
+          "CreditScoreSource": {
+            "$ref": "#/components/schemas/CreditScoreSource"
+          }
+        }
+      },
+      "CreditScore": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Credit symbol that indicates the degree of credit worthiness. ",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "AAA"
+            }
+          }
+        ]
+      },
+      "ProdBattery": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Product"
+          },
+          {
+            "type": "object",
+            "description": "A chemical electrical storage device",
+            "properties": {
+              "BatteryChemistryType": {
+                "$ref": "#/components/schemas/BatteryChemistryType"
+              },
+              "EnergyCapacityUsable": {
+                "$ref": "#/components/schemas/EnergyCapacityUsable"
+              },
+              "EnergyCapacityNominal": {
+                "$ref": "#/components/schemas/EnergyCapacityNominal"
+              },
+              "DepthOfDischargeMax": {
+                "$ref": "#/components/schemas/DepthOfDischargeMax"
+              },
+              "AltitudeInstallationMax": {
+                "$ref": "#/components/schemas/AltitudeInstallationMax"
+              },
+              "TemperatureMinimumOperating": {
+                "$ref": "#/components/schemas/TemperatureMinimumOperating"
+              },
+              "TemperatureMaximumOperating": {
+                "$ref": "#/components/schemas/TemperatureMaximumOperating"
+              },
+              "CommunicationProtocol": {
+                "$ref": "#/components/schemas/CommunicationProtocol"
+              },
+              "DCInput": {
+                "$ref": "#/components/schemas/DCInput"
+              },
+              "DCOutput": {
+                "$ref": "#/components/schemas/DCOutput"
+              }
+            }
+          }
+        ]
+      },
+      "BatteryChemistryType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of chemistry used in the battery",
+            "x-ob-item-type": "BatteryChemistryItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "LeadAcidGel"
+            }
+          }
+        ]
+      },
+      "CreditScoreSource": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Issuing source of a credit score, such as a Rating Agency. ",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Standard & Poor's"
+            }
+          }
+        ]
+      },
+      "CreditRatings": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/CreditRating"
+        }
+      },
+      "Utility": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "A electric service provider",
+            "properties": {
+              "UtilityName": {
+                "$ref": "#/components/schemas/UtilityName"
+              },
+              "FeeStructures": {
+                "$ref": "#/components/schemas/FeeStructures"
+              },
+              "Description": {
+                "$ref": "#/components/schemas/Description"
+              },
+              "Contacts": {
+                "$ref": "#/components/schemas/Contacts"
+              },
+              "Addresses": {
+                "$ref": "#/components/schemas/Addresses"
+              },
+              "FileFolderURL": {
+                "$ref": "#/components/schemas/FileFolderURL"
+              },
+              "URL": {
+                "$ref": "#/components/schemas/URL"
+              }
+            },
+            "x-ob-usage-tips": ""
+          }
+        ]
+      },
+      "EntityRole": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Services or function provided by this entity.",
+            "x-ob-item-type": "EntityRoleItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "AuthorityHavingJurisdiction"
+            }
+          }
+        ]
+      },
+      "EnergyCapacityUsable": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Usable energy of battery unit.",
+            "x-ob-item-type": "EnergyItemType",
+            "x-ob-item-type-group": "OBElectricalEnergy",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 9.6,
+              "Units": "kWh"
+            }
+          }
+        ]
+      },
+      "EnergyCapacityNominal": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum DC Theoretical Energy Capacity",
+            "x-ob-item-type": "EnergyItemType",
+            "x-ob-item-type-group": "OBElectricalEnergy",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 50,
+              "Unit": "kWh"
+            }
+          }
+        ]
+      },
+      "DepthOfDischargeMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum Depth of Discharge without damaging battery hardware",
+            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 98
+            }
+          }
+        ]
+      },
+      "EntityRoles": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/EntityRole"
+        }
+      },
+      "Installer": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "Contractor that does installation",
+            "properties": {}
+          }
+        ]
+      },
+      "Originator": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "Entity that originates a project",
+            "properties": {}
+          }
+        ]
+      },
+      "Entities": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Entity"
+        }
+      },
+      "AltitudeInstallationMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum rated altitude",
+            "x-ob-item-type": "LengthItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 3000,
+              "Unit": "m"
+            }
+          }
+        ]
+      },
+      "CommunicationProtocol": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Micro-grid communication protocol",
+            "x-ob-item-type": "CommunicationProtocolItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "RS485"
+            }
+          }
+        ]
+      },
+      "Jobs": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Job"
+        }
+      },
+      "Contract": {
+        "type": "object",
+        "description": "Binding agreement between at least two parties",
+        "properties": {
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "Signatories": {
+            "$ref": "#/components/schemas/Signatories"
+          },
+          "EffectiveDate": {
+            "$ref": "#/components/schemas/EffectiveDate"
+          },
+          "ExpirationDate": {
+            "$ref": "#/components/schemas/ExpirationDate"
+          },
+          "Preparer": {
+            "$ref": "#/components/schemas/Preparer"
+          },
+          "ContractPriceAmount": {
+            "$ref": "#/components/schemas/ContractPriceAmount"
+          },
+          "Stipulations": {
+            "$ref": "#/components/schemas/Stipulations"
+          },
+          "ContractID": {
+            "$ref": "#/components/schemas/ContractID"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
+          }
+        }
+      },
+      "Signatory": {
+        "type": "object",
+        "description": "Information about a being who signs the contract",
+        "properties": {
+          "SignatureDate": {
+            "$ref": "#/components/schemas/SignatureDate"
+          },
+          "Entity": {
+            "$ref": "#/components/schemas/Entity"
+          },
+          "Contact": {
+            "$ref": "#/components/schemas/Contact"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          }
+        }
+      },
+      "SignatureDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date of the Signature",
+            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2022-01-01"
+            }
+          }
+        ]
+      },
+      "Signatories": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Signatory"
+        }
+      },
+      "EffectiveDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "That a thing become effective",
+            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2022-01-21"
+            }
+          }
+        ]
+      },
+      "ExpirationDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The Date after which a thing is no long in effect",
+            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2022-10-31"
+            }
+          }
+        ]
+      },
+      "Preparer": {
+        "type": "object",
+        "description": "Entity who prepared the legal documents",
+        "properties": {
+          "Entity": {
+            "$ref": "#/components/schemas/Entity"
+          },
+          "Contact": {
+            "$ref": "#/components/schemas/Contact"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          }
+        }
+      },
+      "Stipulation": {
+        "type": "object",
+        "description": "Condition of Contract Enforceability ",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "StipulationStatus": {
+            "$ref": "#/components/schemas/StipulationStatus"
+          },
+          "StipulationType": {
+            "$ref": "#/components/schemas/StipulationType"
+          }
+        }
+      },
+      "StipulationType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of stipulation",
+            "x-ob-item-type": "StipulationTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "IDVerification"
+            }
+          }
+        ]
+      },
+      "StipulationStatus": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Status of stipulation",
+            "x-ob-item-type": "StipulationStatusItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Approved"
+            }
+          }
+        ]
+      },
+      "Stipulations": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Stipulation"
+        }
+      },
+      "ContractPriceAmount": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Total cash price of the contract",
+            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type-group": "OBMonetary",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 1000000,
+              "Unit": "USD"
+            }
+          }
+        ]
+      },
+      "Contracts": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Contract"
+        }
+      },
+      "DCInput": {
+        "type": "object",
+        "description": "DC inputs to a device",
+        "properties": {
+          "VoltageDCMax": {
+            "$ref": "#/components/schemas/VoltageDCMax"
+          },
+          "VoltageDCMin": {
+            "$ref": "#/components/schemas/VoltageDCMin"
+          },
+          "VoltageDCNom": {
+            "$ref": "#/components/schemas/VoltageDCNom"
+          },
+          "MPPTNumber": {
+            "$ref": "#/components/schemas/MPPTNumber"
+          },
+          "PowerDCContinuousMax": {
+            "$ref": "#/components/schemas/PowerDCContinuousMax"
+          },
+          "MPPTs": {
+            "$ref": "#/components/schemas/MPPTs"
+          }
+        }
+      },
+      "VoltageDCMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum DC Voltage",
+            "x-ob-item-type": "VoltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 200,
+              "Units": "Volt"
+            }
+          }
+        ]
+      },
+      "VoltageDCMin": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Minimum DC Voltage",
+            "x-ob-item-type": "VoltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 20,
+              "Units": "Volt"
+            }
+          }
+        ]
+      },
+      "VoltageDCNom": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Nominal DC Voltage",
+            "x-ob-item-type": "VoltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 150,
+              "Units": "Volt"
+            }
+          }
+        ]
+      },
+      "MPPTNumber": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
+          },
+          {
+            "type": "object",
+            "description": "Number of MPPTs on a device",
+            "x-ob-item-type": "IntegerItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "PowerDCContinuousMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum continuous DC power.",
+            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 5,
+              "Units": "kW"
+            }
+          }
+        ]
+      },
+      "VoltageDCInverterStart": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Voltage (DC) input required for an inverter to begin power conversion",
+            "x-ob-item-type": "VoltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "DCOutput": {
+        "description": "DC outputs from a device",
+        "properties": {
+          "VoltageDCMax": {
+            "$ref": "#/components/schemas/VoltageDCMax"
+          },
+          "VoltageDCMin": {
+            "$ref": "#/components/schemas/VoltageDCMin"
+          },
+          "VoltageDCNom": {
+            "$ref": "#/components/schemas/VoltageDCNom"
+          },
+          "PowerDCContinuousMax": {
+            "$ref": "#/components/schemas/PowerDCContinuousMax"
+          },
+          "CurrentDCMax": {
+            "$ref": "#/components/schemas/CurrentDCMax"
+          },
+          "PowerDCMax": {
+            "$ref": "#/components/schemas/PowerDCMax"
+          },
+          "PowerDCPeaks": {
+            "$ref": "#/components/schemas/PowerDCPeaks"
+          }
+        },
+        "type": "object"
+      },
+      "ACInput": {
+        "type": "object",
+        "description": "AC inputs to a device",
+        "properties": {
+          "VoltageACMax": {
+            "$ref": "#/components/schemas/VoltageACMax"
+          },
+          "VoltageACMin": {
+            "$ref": "#/components/schemas/VoltageACMin"
+          },
+          "VoltageACNom": {
+            "$ref": "#/components/schemas/VoltageACNom"
+          },
+          "CurrentACMax": {
+            "$ref": "#/components/schemas/CurrentACMax"
+          },
+          "FrequenciesAC": {
+            "$ref": "#/components/schemas/FrequenciesAC"
+          }
+        }
+      },
+      "ACOutput": {
+        "type": "object",
+        "description": "AC outputs from a device",
+        "properties": {
+          "VoltageACMax": {
+            "$ref": "#/components/schemas/VoltageACMax"
+          },
+          "VoltageACMin": {
+            "$ref": "#/components/schemas/VoltageACMin"
+          },
+          "VoltageACNom": {
+            "$ref": "#/components/schemas/VoltageACNom"
+          },
+          "PowerFactorMax": {
+            "$ref": "#/components/schemas/PowerFactorMax"
+          },
+          "PowerFactorMin": {
+            "$ref": "#/components/schemas/PowerFactorMin"
+          },
+          "PowerACMax": {
+            "$ref": "#/components/schemas/PowerACMax"
+          },
+          "PowerACNom": {
+            "$ref": "#/components/schemas/PowerACNom"
+          },
+          "CurrentACMax": {
+            "$ref": "#/components/schemas/CurrentACMax"
+          },
+          "PowerACApparentMax": {
+            "$ref": "#/components/schemas/PowerACApparentMax"
+          },
+          "PowerACApparentNom": {
+            "$ref": "#/components/schemas/PowerACApparentNom"
+          },
+          "InterconnectionLineCount": {
+            "$ref": "#/components/schemas/InterconnectionLineCount"
+          },
+          "InterconnectionPhase": {
+            "$ref": "#/components/schemas/InterconnectionPhase"
+          },
+          "InterconnectionPhaseType": {
+            "$ref": "#/components/schemas/InterconnectionPhaseType"
+          },
+          "PowerACSurges": {
+            "$ref": "#/components/schemas/PowerACSurges"
+          },
+          "CurrentACNom": {
+            "$ref": "#/components/schemas/CurrentACNom"
+          },
+          "FrequenciesAC": {
+            "$ref": "#/components/schemas/FrequenciesAC"
+          }
+        }
+      },
+      "PowerACApparentMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum apparent AC power",
+            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 5000,
+              "Unit": "VA"
+            }
+          }
+        ]
+      },
+      "PowerACApparentNom": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Nominal apparent AC power",
+            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 5000,
+              "Unit": "VA"
+            }
+          }
+        ]
+      },
+      "CurrentACNom": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Nominal AC current",
+            "x-ob-item-type": "ElectricCurrentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 10,
+              "Unit": "A"
+            }
+          }
+        ]
+      },
+      "ACOutputs": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ACOutput"
+        }
+      },
+      "FrequencyAC": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Frequency (Hz) of a AC power device or system",
+            "x-ob-item-type": "FrequencyItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "PowerDCMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum DC power at a moment in time",
+            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 7,
+              "Units": "kW"
+            }
+          }
+        ]
+      },
+      "PowerDCPeak": {
+        "type": "object",
+        "description": "Peak DC power over an interval of time",
+        "properties": {
+          "PowerDC": {
+            "$ref": "#/components/schemas/PowerDC"
+          },
+          "Duration": {
+            "$ref": "#/components/schemas/Duration"
+          }
+        }
+      },
+      "PowerDCPeaks": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PowerDCPeak"
+        }
+      },
+      "TotalHarmonicDistortionPower": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The total harmonic distortion (THD) of the power of an inverter, defined as the ratio of the sum of power of all harmonics to the power of the fundamental frequency.",
+            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TotalHarmonicDistortionCurrent": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The total harmonic distortion (THD) of the power of an inverter, defined as the ratio of the sum of current in all harmonics to the current in the fundamental frequency.",
+            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "OptimizerEfficiencyMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum efficiency of a DC-DC optimizer",
+            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 99.5
+            }
+          }
+        ]
+      },
+      "OptimizerEfficiencyWeighted": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Weighted efficiency of a DC-DC optimizer",
+            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 99.5
+            }
+          }
+        ]
+      },
+      "Job": {
+        "type": "object",
+        "description": "An overall contract with a Site owner",
+        "properties": {
+          "PVSystems": {
+            "$ref": "#/components/schemas/PVSystems"
+          },
+          "BatterySystems": {
+            "$ref": "#/components/schemas/BatterySystems"
+          },
+          "BillOfServices": {
+            "$ref": "#/components/schemas/BillOfServices"
+          },
+          "Entities": {
+            "$ref": "#/components/schemas/Entities"
+          },
+          "Tasks": {
+            "$ref": "#/components/schemas/Tasks"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "ProjectedSavingsAmt": {
+            "$ref": "#/components/schemas/ProjectedSavingsAmt"
+          },
+          "Contacts": {
+            "$ref": "#/components/schemas/Contacts"
+          },
+          "Contracts": {
+            "$ref": "#/components/schemas/Contracts"
+          },
+          "JobPriceAmt": {
+            "$ref": "#/components/schemas/JobPriceAmt"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
+          }
+        }
+      },
+      "JobPriceAmt": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The total price of a job",
+            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type-group": "OBMonetary",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 27001,
+              "Unit": "USD"
+            }
+          }
+        ]
+      },
+      "ContractID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "UUID for a contract",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "123e4567-e89b-12d3-a456-426614174000"
+            }
+          }
+        ]
+      },
+      "Portfolio": {
+        "type": "object",
+        "description": "A collection of projects.",
+        "properties": {
+          "Projects": {
+            "$ref": "#/components/schemas/Projects"
+          },
+          "Entities": {
+            "$ref": "#/components/schemas/Entities"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "Contracts": {
+            "$ref": "#/components/schemas/Contracts"
+          },
+          "PortfolioID": {
+            "$ref": "#/components/schemas/PortfolioID"
+          },
+          "PortfolioName": {
+            "$ref": "#/components/schemas/PortfolioName"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Contacts": {
+            "$ref": "#/components/schemas/Contacts"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
+          }
+        }
+      },
+      "Project": {
+        "type": "object",
+        "description": "A logical unit of work that may include more than one site.",
+        "properties": {
+          "ProjectID": {
+            "$ref": "#/components/schemas/ProjectID"
+          },
+          "ProjectName": {
+            "$ref": "#/components/schemas/ProjectName"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Contracts": {
+            "$ref": "#/components/schemas/Contracts"
+          },
+          "Contacts": {
+            "$ref": "#/components/schemas/Contacts"
+          },
+          "Entities": {
+            "$ref": "#/components/schemas/Entities"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "Sites": {
+            "$ref": "#/components/schemas/Sites"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
+          }
+        }
+      },
+      "Projects": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Project"
+        }
+      },
+      "PortfolioID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A UUID for a portfolio.",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "123e4567-e89b-12d3-a456-426614174000"
+            }
+          }
+        ]
+      },
+      "ProjectID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A UUID for a project",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "123e4567-e89b-12d3-a456-426614174000"
+            }
+          }
+        ]
+      },
+      "PortfolioName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of a portfolio",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Acacia Crossing"
+            }
+          }
+        ]
+      },
+      "ProjectName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A name for a project",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Vista View"
+            }
+          }
+        ]
+      },
+      "Sites": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Site"
+        }
+      },
+      "ProdEnergyStorageSystem": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Product"
+          },
+          {
+            "type": "object",
+            "description": "System that includes batteries, overcurrent protection, a disconnect, an enclosure, and optionally an inverter if it's AC-coupled.",
+            "properties": {
+              "ACInput": {
+                "$ref": "#/components/schemas/ACInput"
+              },
+              "ACOutputs": {
+                "$ref": "#/components/schemas/ACOutputs"
+              },
+              "DCInput": {
+                "$ref": "#/components/schemas/DCInput"
+              },
+              "DCOutput": {
+                "$ref": "#/components/schemas/DCOutput"
+              },
+              "AltitudeInstallationMax": {
+                "$ref": "#/components/schemas/AltitudeInstallationMax"
+              },
+              "BatteryChemistryType": {
+                "$ref": "#/components/schemas/BatteryChemistryType"
+              },
+              "CommunicationProtocol": {
+                "$ref": "#/components/schemas/CommunicationProtocol"
+              },
+              "EnergyCapacityNominal": {
+                "$ref": "#/components/schemas/EnergyCapacityNominal"
+              },
+              "EnergyCapacityUsable": {
+                "$ref": "#/components/schemas/EnergyCapacityUsable"
+              },
+              "TemperatureMaximumOperating": {
+                "$ref": "#/components/schemas/TemperatureMaximumOperating"
+              },
+              "TemperatureMinimumOperating": {
+                "$ref": "#/components/schemas/TemperatureMinimumOperating"
+              }
+            }
+          }
+        ]
+      },
+      "OptimizerType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The optimization method used by the optimizer.",
+            "x-ob-item-type": "OptimizerTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "FirmwareVersion": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Firmware version ",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "A.4.0.B"
+            }
+          }
+        ]
+      },
+      "CECListingDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date that CEC listed the product with the certification.",
+            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "12/25/2021"
+            }
+          }
+        ]
+      },
+      "CertificationTypeSections": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A list of sections covered by the certification.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "SA8-SA13, SA14, SA15"
+            }
+          }
+        ]
+      },
+      "Checksum": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Value used to confirm integrity of data or code. ",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "CompatibleWith": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ProdName"
+        }
+      },
+      "AllowsString": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "Does this optimizer allow more than one module in series to be connected to an input",
+            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "AppliedDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date at which firmware or software update was applied. ",
+            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "02/22/2022"
+            }
+          }
+        ]
+      },
+      "Firmware": {
+        "type": "object",
+        "description": "Permanent software programmed into a read-only memory.",
+        "properties": {
+          "FirmwareVersion": {
+            "$ref": "#/components/schemas/FirmwareVersion"
+          },
+          "CertificationDate": {
+            "$ref": "#/components/schemas/CertificationDate"
+          },
+          "Checksum": {
+            "$ref": "#/components/schemas/Checksum"
+          },
+          "AppliedDate": {
+            "$ref": "#/components/schemas/AppliedDate"
+          }
+        }
+      },
+      "FirmwareVersions": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Firmware"
+        }
+      },
+      "IsHybrid": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "True if inverter is capable of taking DC power input from a PV system and an energy storage system. ",
+            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": true
+            }
+          }
+        ]
+      },
+      "IsVocReducing": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "True if the optimizer can modify the attached module's apparent Voc to allow for longer strings.",
+            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": true
+            }
+          }
+        ]
+      },
+      "AlternativeIdentifier": {
+        "type": "object",
+        "description": "Additional identifier for a record or data set",
+        "properties": {
+          "SourceName": {
+            "$ref": "#/components/schemas/SourceName"
+          },
+          "Identifier": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          }
+        }
+      },
+      "AlternativeIdentifiers": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/AlternativeIdentifier"
+        }
+      },
+      "Identifier": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A unique identifier for a record or dataset.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "be3827bd-0b57-4990-a757-7ee13348356f"
+            }
+          }
+        ]
+      },
+      "CECNotes": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Notes from California Energy Commission (CEC) equipment list.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IsSelectiveOptimization": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "This optimizer allows some modules on a string to have optimizers while others don't",
+            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "HasMeter": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "Product contains a built in metering device. ",
+            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": true
+            }
+          }
+        ]
+      },
+      "GeoRegion": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Region this component is designed for use in",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "EU"
+            }
+          }
+        ]
+      },
+      "NightTare": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Power consumed by an inverter with no DC input. Also referred to as internal consumption.",
+            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 1,
+              "Unit": "W"
+            }
+          }
+        ]
+      },
+      "EfficiencyCECWtdVoltageMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Weighted DC/AC conversion efficiency at Vmax. Weighting according to CEC specification. ",
+            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 93.5,
+              "Units": "percent"
+            }
+          }
+        ]
+      },
+      "EfficiencyCECWtdVoltageMin": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Weighted DC/AC conversion efficiency at Vmin. Weighted based on CEC specifications.",
+            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Values": 92.5,
+              "Units": "percent"
+            }
+          }
+        ]
+      },
+      "EfficiencyCECWtdVoltageNom": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Weighted DC/AC conversion efficiency at Vnom. Weighted based on CEC specifications.",
+            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Values": 93.2,
+              "Units": "percent"
+            }
+          }
+        ]
+      },
+      "SourceName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of the data source.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Data Source"
+            }
+          }
+        ]
       }
     }
   },
@@ -11155,323 +12604,6 @@
         }
       }
     },
-    "ParticipantItemType": {
-      "description": "",
-      "enums": {
-        "Appraiser": {
-          "label": "",
-          "description": ""
-        },
-        "AssetManager": {
-          "label": "",
-          "description": ""
-        },
-        "AssetOwner": {
-          "label": "",
-          "description": ""
-        },
-        "AutomobileLiabilityInsurer": {
-          "label": "",
-          "description": ""
-        },
-        "Back_leverageLender": {
-          "label": "",
-          "description": ""
-        },
-        "Back_upAssetManager": {
-          "label": "",
-          "description": ""
-        },
-        "Back_upMaintenanceProvider": {
-          "label": "",
-          "description": ""
-        },
-        "Back_upMonitoringServiceProvider": {
-          "label": "",
-          "description": ""
-        },
-        "BondAgent": {
-          "label": "",
-          "description": ""
-        },
-        "Builders_ConstructionAll_RiskInsurers": {
-          "label": "",
-          "description": ""
-        },
-        "BusinessInterruptionInsurer": {
-          "label": "",
-          "description": ""
-        },
-        "CollateralAgent": {
-          "label": "",
-          "description": ""
-        },
-        "CommercialLender": {
-          "label": "",
-          "description": ""
-        },
-        "ContractAttorney": {
-          "label": "",
-          "description": ""
-        },
-        "ConstructionContractorInstaller": {
-          "label": "",
-          "description": ""
-        },
-        "ConstructionLender": {
-          "label": "",
-          "description": ""
-        },
-        "ConstructionWarrantyProvider": {
-          "label": "",
-          "description": ""
-        },
-        "CorporateAttorney": {
-          "label": "",
-          "description": ""
-        },
-        "DeveloperAttorney": {
-          "label": "",
-          "description": ""
-        },
-        "EnergyForecastingService": {
-          "label": "",
-          "description": ""
-        },
-        "EnergyPriceForecaster": {
-          "label": "",
-          "description": ""
-        },
-        "EquipmentWarrantyProvider": {
-          "label": "",
-          "description": ""
-        },
-        "EngineeringContractorInstaller": {
-          "label": "",
-          "description": ""
-        },
-        "EnvironmentalAttorney": {
-          "label": "",
-          "description": ""
-        },
-        "EnvironmentalConsultant": {
-          "label": "",
-          "description": ""
-        },
-        "EquipmentFactoryAuditor": {
-          "label": "",
-          "description": ""
-        },
-        "EquipmentManufacturer": {
-          "label": "",
-          "description": ""
-        },
-        "EquipmentReliabilityTestLab": {
-          "label": "",
-          "description": ""
-        },
-        "Fund": {
-          "label": "",
-          "description": ""
-        },
-        "GeneralContractor": {
-          "label": "",
-          "description": ""
-        },
-        "GeneralLiabilityInsurer": {
-          "label": "",
-          "description": ""
-        },
-        "HedgeProvider": {
-          "label": "",
-          "description": ""
-        },
-        "IndependentEngineer": {
-          "label": "",
-          "description": ""
-        },
-        "IndependentSystemOperatorasAuthorityHavingJurisdiction": {
-          "label": "",
-          "description": ""
-        },
-        "InterconnectingUtilityasAuthorityHavingJurisdiction": {
-          "label": "",
-          "description": ""
-        },
-        "InsuranceBroker": {
-          "label": "",
-          "description": ""
-        },
-        "InsuranceConsultant": {
-          "label": "",
-          "description": ""
-        },
-        "Land_UseAttorney": {
-          "label": "",
-          "description": ""
-        },
-        "Lessor": {
-          "label": "",
-          "description": ""
-        },
-        "LitigationAttorney": {
-          "label": "",
-          "description": ""
-        },
-        "LLCPartnerManagingMember": {
-          "label": "",
-          "description": ""
-        },
-        "LLCPartnerVotingMember": {
-          "label": "",
-          "description": ""
-        },
-        "LLCPartnerPassiveMember": {
-          "label": "",
-          "description": ""
-        },
-        "LongtermEquityInvestor": {
-          "label": "",
-          "description": ""
-        },
-        "MaintenanceProvider": {
-          "label": "",
-          "description": ""
-        },
-        "MonitoringServiceProvider": {
-          "label": "",
-          "description": ""
-        },
-        "OceanCargoInsurer": {
-          "label": "",
-          "description": ""
-        },
-        "Operator": {
-          "label": "",
-          "description": ""
-        },
-        "ParallelMonitoringServiceProvider": {
-          "label": "",
-          "description": ""
-        },
-        "PermittingAuthorityasAuthorityHavingJurisdiction": {
-          "label": "",
-          "description": ""
-        },
-        "PersonalLender": {
-          "label": "",
-          "description": ""
-        },
-        "PollutionLiabilityInsurer": {
-          "label": "",
-          "description": ""
-        },
-        "PPAOfftaker": {
-          "label": "",
-          "description": ""
-        },
-        "PrimeContractor": {
-          "label": "",
-          "description": ""
-        },
-        "Project": {
-          "label": "",
-          "description": ""
-        },
-        "ProjectPerformanceInsurer": {
-          "label": "",
-          "description": ""
-        },
-        "ProjectDeveloper": {
-          "label": "",
-          "description": ""
-        },
-        "ProjectHost": {
-          "label": "",
-          "description": ""
-        },
-        "PropertyInsurer": {
-          "label": "",
-          "description": ""
-        },
-        "RECOfftaker": {
-          "label": "",
-          "description": ""
-        },
-        "RegionalTransmissionOperatorasAuthorityHavingJurisdiction": {
-          "label": "",
-          "description": ""
-        },
-        "SchedulingCoordinator": {
-          "label": "",
-          "description": ""
-        },
-        "SiteOwnerSiteControl": {
-          "label": "",
-          "description": ""
-        },
-        "SiteSecurityCompany": {
-          "label": "",
-          "description": ""
-        },
-        "Subcontractor": {
-          "label": "",
-          "description": ""
-        },
-        "SubcontractorContractorInstaller": {
-          "label": "",
-          "description": ""
-        },
-        "Surety": {
-          "label": "",
-          "description": ""
-        },
-        "TaxAttorney": {
-          "label": "",
-          "description": ""
-        },
-        "TaxConsultant": {
-          "label": "",
-          "description": ""
-        },
-        "TaxequityInvestor": {
-          "label": "",
-          "description": ""
-        },
-        "TelecomProvider": {
-          "label": "",
-          "description": ""
-        },
-        "TransmissionConsultant": {
-          "label": "",
-          "description": ""
-        },
-        "Trustee": {
-          "label": "",
-          "description": ""
-        },
-        "UmbrellaExcessLiabilityInsurer": {
-          "label": "",
-          "description": ""
-        },
-        "Utility": {
-          "label": "",
-          "description": ""
-        },
-        "WeatherDataProvider": {
-          "label": "",
-          "description": ""
-        },
-        "WorkersCompensationInsurer": {
-          "label": "",
-          "description": ""
-        },
-        "Other": {
-          "label": "",
-          "description": ""
-        }
-      }
-    },
     "ProjectAssetTypeItemType": {
       "description": "",
       "enums": {
@@ -12009,27 +13141,6 @@
           "description": ""
         },
         "HighInsolation": {
-          "label": "",
-          "description": ""
-        }
-      }
-    },
-    "OptimizerTypeItemType": {
-      "description": "",
-      "enums": {
-        "Standalone": {
-          "label": "",
-          "description": ""
-        },
-        "Attached": {
-          "label": "",
-          "description": ""
-        },
-        "Embedded": {
-          "label": "",
-          "description": ""
-        },
-        "Other": {
           "label": "",
           "description": ""
         }
@@ -12716,15 +13827,6 @@
       }
     },
     "UUIDItemType": {
-      "description": "",
-      "enums": {
-        "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})": {
-          "label": "",
-          "description": ""
-        }
-      }
-    },
-    "UUIDStdItemType": {
       "description": "",
       "enums": {
         "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})": {
@@ -14252,6 +15354,22 @@
         "UL3741": {
           "label": "UL3741",
           "description": ""
+        },
+        "UL1973-2-2018": {
+          "label": "UL1973 Edition 2: 2018",
+          "description": ""
+        },
+        "JA12": {
+          "label": "JA12",
+          "description": ""
+        },
+        "CSIP": {
+          "label": "CSIP",
+          "description": "SunSpec 2030.5 Common Smart Inverter Profile (CSIP) Certification"
+        },
+        "CSIP-NRTL": {
+          "label": "CSIP NRTL Attestation",
+          "description": "SunSpec 2030.5 Common Smart Inverter Profile (CSIP) Attestation. Inverter was connected to gateway during compatibility testing."
         }
       }
     },
@@ -14774,6 +15892,63 @@
         }
       }
     },
+    "EntityRoleItemType": {
+      "description": "Enumerated list of entity roles",
+      "enums": {
+        "AuthorityHavingJurisdiction": {
+          "label": "Authority Having Jurisdiction (AHJ)",
+          "description": ""
+        },
+        "Installer": {
+          "label": "Installer",
+          "description": ""
+        },
+        "Originator": {
+          "label": "Originator",
+          "description": "Entity that originates the project "
+        },
+        "Manufacturer": {
+          "label": "Manufacturer",
+          "description": ""
+        },
+        "Surety": {
+          "label": "Surety",
+          "description": ""
+        },
+        "InsurerWorkersCompensation": {
+          "label": "Insurer, Workers Compensation",
+          "description": ""
+        },
+        "InsurerGeneralLiability": {
+          "label": "Insurer, General Liability",
+          "description": ""
+        },
+        "InsurerProperty": {
+          "label": "Insurer, Property",
+          "description": ""
+        },
+        "InsurerBusinessInterruption": {
+          "label": "Insurer, Business Interruption",
+          "description": ""
+        },
+        "InsurerConstructionAllRisk": {
+          "label": "Insurer, Construction All Risk",
+          "description": ""
+        },
+        "InsurerAutomobile": {
+          "label": "Insurer, Automobile",
+          "description": ""
+        },
+        "InsurerProjectPerfomance": {
+          "label": "Insurer, Project Performance",
+          "description": ""
+        },
+        "InsurerUmbrellaExcessLiability": {
+          "label": "Insurer, Umbrella Excess Liability",
+          "description": ""
+        }
+      }
+    },
     "BatteryChemistryItemType": {
       "description": "These are named using chemical nomenclature when it is concise and complete, otherwise English is used.",
       "enums": {
@@ -14842,11 +16017,11 @@
           "label": "RS-485",
           "description": ""
         },
-        "CAN 2.0 B": {
+        "CAN20B": {
           "label": "CAN 2.0 B",
           "description": ""
         },
-        "REbus DC Nanogrid": {
+        "REbusDCNanogrid": {
           "label": "REbus DC Nanogrid",
           "description": ""
         },
@@ -14857,6 +16032,82 @@
         "TCPIP": {
           "label": "TCP/IP",
           "description": ""
+        }
+      }
+    },
+    "StipulationTypeItemType": {
+      "description": "List of stipulation types",
+      "enums": {
+        "IDVerification": {
+          "label": "Identity Verification ",
+          "description": ""
+        },
+        "IncomeVerification": {
+          "label": "Income Verification",
+          "description": ""
+        },
+        "OwnershipVerification": {
+          "label": "Ownership Verification",
+          "description": ""
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
+        }
+      }
+    },
+    "StipulationStatusItemType": {
+      "description": "Describes the Status of the Stipulation",
+      "enums": {
+        "NeedsDocumentation": {
+          "label": "Needs Documentation",
+          "description": "Stipulation is requested, Documentation has not yet been recieved"
+        },
+        "NeedsReview": {
+          "label": "Needs Review",
+          "description": "Documentation Received, not yet reviewed."
+        },
+        "Approved": {
+          "label": "Approved",
+          "description": "Stipulation has been approved and met"
+        },
+        "NeedsRevision": {
+          "label": "Needs Revision",
+          "description": "Reviewed documentation is insufficient, revision is needed"
+        },
+        "Rejected": {
+          "label": "Rejected",
+          "description": "The stipulation is rejected"
+        },
+        "Rescinded ": {
+          "label": "Rescinded",
+          "description": "The stipulation has been withdrawn"
+        }
+      }
+    },
+    "AccelerationItemType": {
+      "description": "Acceleration is quantified as distance per time squared.",
+      "units": {
+        "g": {
+          "label": "Gravity",
+          "description": "Equal to 9.81 meters per second square"
+        },
+        "m_per_s_squared": {
+          "label": "Meter per second squared",
+          "description": "Meter per second squared"
+        }
+      }
+    },
+    "OptimizerTypeItemType": {
+      "description": "List of Optimizer Topologies",
+      "enums": {
+        "BuckOnly": {
+          "label": "Buck Only",
+          "description": "This optimizer is Buck Only"
+        },
+        "BoostBuck": {
+          "label": "Boost-Buck",
+          "description": "This optimizer is Boost-Buck"
         }
       }
     },
@@ -14904,7 +16155,8 @@
         "GW",
         "kW",
         "MW",
-        "W"
+        "W",
+        "VA"
       ]
     },
     "MassUnitItemType": {
