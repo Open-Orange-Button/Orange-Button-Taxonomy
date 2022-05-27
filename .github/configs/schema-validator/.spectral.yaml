@@ -1,5 +1,9 @@
 extends: 'ibm-oas-wrapper-check-components.js'
-functions: [spellcheckSubstrings, isInXOBObjectKeys, refPathExists, itemTypeGroupEntriesExist]
+functions: [spellcheckSubstrings,
+            validateXOBFields,
+            refPathExists,
+            validateItemTypeGroupEntries,
+            validateXOBSampleValue]
 rules:
   enum-case-convention: off
   major-version-in-path: off
@@ -8,38 +12,47 @@ rules:
   oas3-unused-component: off
   property-case-convention: off
   property-description: off
+  property-inconsistent-name-and-type: off
   
-  element-item-type-exists:
+  element-valid-item-type:
     message: 'Item type does not exist: {{error}}'
     given: $.components.schemas[*].allOf[1][x-ob-item-type]
     severity: error
     then:
-      function: isInXOBObjectKeys
+      function: validateXOBFields
       functionOptions:
         objectPath: x-ob-item-types
   
-  element-item-type-group-exists:
+  element-valid-item-type-group:
     message: 'Item type group does not exist: {{error}}'
     given: $.components.schemas[*].allOf[1][x-ob-item-type-group]
     severity: error
     then:
-      function: isInXOBObjectKeys
+      function: validateXOBFields
       functionOptions:
         objectPath: x-ob-item-type-groups
 
-  item-type-group-type-exists:
+  item-type-group-valid-type:
     message: 'Item type group type does not exist: {{error}}'
     given: $[x-ob-item-type-groups][*].type
     severity: error
     then:
       function: refPathExists
   
-  item-type-group-entries-exist:  
+  item-type-group-valid-entries:  
     message: '{{error}}'
     given: $[x-ob-item-type-groups][*]~
     severity: error
     then:
-      function: itemTypeGroupEntriesExist
+      function: validateItemTypeGroupEntries
+  
+  element-valid-sample-value:
+    message: '{{error}}'
+    # Give the entire definition of an element
+    given: $.components.schemas[*][?(@property === 'allOf' && @[0].properties.Value)]
+    severity: error
+    then:
+      function: validateXOBSampleValue
 
   no-special-characters:
     description: Name must only contain characters in 0-9, A-Z, a-z, and _ (underscore).

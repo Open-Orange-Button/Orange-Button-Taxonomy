@@ -8,8 +8,6 @@
   "electricChargeItemType": "ElectricChargeItemType",
   "textBlockItemType": "TextBlockItemType",
   "solar-types:moduleOrientationItemType": "ModuleOrientationItemType",
-  "solar-types:communicationProtocolItemType": "CommunicationProtocolItemType",
-  "solar-types:batteryChemistryItemType": "BatteryChemistryItemType",
   "BuildingCodeItemType": "BuildingCodeItemType",
   "ResidentialCodeItemType": "ResidentialCodeItemType",
   "FireCodeItemType": "FireCodeItemType",
@@ -78,11 +76,5 @@
   "cellTechnologyItemType": "CellTechnologyItemType",
   "FrameMaterialTypeItemType": "FrameMaterialTypeItemType",
   "CellCutTypeItemType": "CellCutTypeItemType",
-  "WarrantyItemType": "WarrantyItemType",
-  "EntityRoleItemType": "EntityRoleItemType",
-  "BatteryChemistryItemType": "BatteryChemistryItemType",
-  "CommunicationProtocolItemType": "CommunicationProtocolItemType",
-  "StipulationTypeItemType": "StipulationTypeItemType",
-  "StipulationStatusItemType": "StipulationStatusItemType",
-  "AccelerationItemType": "AccelerationItemType"
+  "WarrantyItemType": "WarrantyItemType"
 }
