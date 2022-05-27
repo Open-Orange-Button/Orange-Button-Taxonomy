@@ -3,6 +3,10 @@
 2202.1.0
 --------
 
+Breaking changes
+----------------
+* Replaces the primitive Value with ValueNumber, ValueString, ValueBoolean, ValueInteger, ValueArrayNumber, ValueArrayString, ValueArrayBoolean, ValueArrayInteger. (:pull:`17`)
+
 
 Elements added
 ~~~~~~~~~~~~~~
@@ -41,3 +45,5 @@ Contributors
 * Cliff Hansen (:ghuser:`cwhanse`)
 * Kevin Kirkley (:ghuser:`kevinkirkl3y`)
 * Zia Swim (:ghuser:`blizita`)
+* Taos Transue (:ghuser:`reepoi`)
+
