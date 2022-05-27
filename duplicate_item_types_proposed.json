@@ -67,11 +67,11 @@
                 "label": "RS-485",
                 "description": ""
             },
-            "CAN 2.0 B": {
+            "CAN20B": {
                 "label": "CAN 2.0 B",
                 "description": ""
             },
-            "REbus DC Nanogrid": {
+            "REbusDCNanogrid": {
                 "label": "REbus DC Nanogrid",
                 "description": ""
             },
