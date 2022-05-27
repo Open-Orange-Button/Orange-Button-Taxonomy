@@ -8128,6 +8128,15 @@
               },
               "ModuleElectRatings": {
                 "$ref": "#/components/schemas/ModuleElectRatings"
+              },
+              "IsBIPV": {
+                "$ref": "#/components/schemas/IsBIPV"
+              },
+              "TemperatureCoefficientMaxPowerCurrent": {
+                "$ref": "#/components/schemas/TemperatureCoefficientMaxPowerCurrent"
+              },
+              "TemperatureCoefficientMaxPowerVoltage": {
+                "$ref": "#/components/schemas/TemperatureCoefficientMaxPowerVoltage"
               }
             }
           }
