@@ -3,7 +3,7 @@
   "info": {
     "version": "1.1.7",
     "title": "OB OpenAPI Taxonomy",
-    "description": "OB OpenAPI Definitions For Orange Button."
+    "description": "OB OpenAPI Taxonomy version 2202.0.0."
   },
   "paths": {},
   "servers": [],
@@ -108,9 +108,6 @@
           },
           "Warranties": {
             "$ref": "#/components/schemas/Warranties"
-          },
-          "AlternativeIdentifiers": {
-            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         },
         "x-ob-usage-tips": ""
@@ -789,12 +786,6 @@
           },
           "Jobs": {
             "$ref": "#/components/schemas/Jobs"
-          },
-          "Contracts": {
-            "$ref": "#/components/schemas/Contracts"
-          },
-          "AlternativeIdentifiers": {
-            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         },
         "x-ob-usage-tips": ""
@@ -1603,7 +1594,7 @@
           },
           {
             "type": "object",
-            "description": "A generic URL to a file folder or a single file for transmitting documents",
+            "description": "A generic URL to a file folder for transmitting documents",
             "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -2094,10 +2085,11 @@
           {
             "type": "object",
             "description": "The date the task was completed",
-            "x-ob-item-type": "stdi:dateItemType",
-            "x-ob-usage-tips": "",
+            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-usage-tips": "Use EndTime for the actual completed date. StartTime should be the task start date",
             "x-ob-sample-value": {
-              "Value": "2020-11-30"
+              "EndTime": "2020-11-30",
+              "StartTime": "2020-05-30"
             },
             "x-ob-item-type-group": ""
           }
@@ -2195,11 +2187,10 @@
           {
             "type": "object",
             "description": " MCER ground motion (period=0.2s)",
-            "x-ob-item-type": "accelerationItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 0.131,
-              "Unit": "g"
+              "Value": 0.131
             },
             "x-ob-item-type-group": ""
           }
@@ -2213,11 +2204,10 @@
           {
             "type": "object",
             "description": "MCER ground motion (period=1.0s)",
-            "x-ob-item-type": "accelerationItemType",
+            "x-ob-item-type": "stdi:stringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 0.057,
-              "Unit": "g"
+              "Value": 0.057
             },
             "x-ob-item-type-group": ""
           }
@@ -3562,9 +3552,6 @@
           },
           "CertificateValue": {
             "$ref": "#/components/schemas/CertificateValue"
-          },
-          "FirmwareVersions": {
-            "$ref": "#/components/schemas/FirmwareVersions"
           }
         }
       },
@@ -6700,55 +6687,8 @@
           }
         ]
       },
-      "ValueNumber": {
-        "type": "number",
-        "description": "Value for the instance element",
-        "x-ob-usage-tips": ""
-      },
-      "ValueString": {
+      "Value": {
         "type": "string",
-        "description": "Value for the instance element",
-        "x-ob-usage-tips": ""
-      },
-      "ValueBoolean": {
-        "type": "boolean",
-        "description": "Value for the instance element",
-        "x-ob-usage-tips": ""
-      },
-      "ValueInteger": {
-        "type": "integer",
-        "description": "Value for the instance element",
-        "x-ob-usage-tips": ""
-      },
-      "ValueArrayNumber": {
-        "type": "array",
-        "items": {
-          "type": "number"
-        },
-        "description": "Value for the instance element",
-        "x-ob-usage-tips": ""
-      },
-      "ValueArrayString": {
-        "type": "array",
-        "items": {
-          "type": "string"
-        },
-        "description": "Value for the instance element",
-        "x-ob-usage-tips": ""
-      },
-      "ValueArrayBoolean": {
-        "type": "array",
-        "items": {
-          "type": "boolean"
-        },
-        "description": "Value for the instance element",
-        "x-ob-usage-tips": ""
-      },
-      "ValueArrayInteger": {
-        "type": "array",
-        "items": {
-          "type": "integer"
-        },
         "description": "Value for the instance element",
         "x-ob-usage-tips": ""
       },
@@ -6781,7 +6721,7 @@
         "type": "object",
         "properties": {
           "Value": {
-            "$ref": "#/components/schemas/ValueString"
+            "$ref": "#/components/schemas/Value"
           },
           "Unit": {
             "$ref": "#/components/schemas/Unit"
@@ -6805,7 +6745,7 @@
         "type": "object",
         "properties": {
           "Value": {
-            "$ref": "#/components/schemas/ValueNumber"
+            "$ref": "#/components/schemas/Value"
           },
           "Unit": {
             "$ref": "#/components/schemas/Unit"
@@ -6829,7 +6769,7 @@
         "type": "object",
         "properties": {
           "Value": {
-            "$ref": "#/components/schemas/ValueInteger"
+            "$ref": "#/components/schemas/Value"
           },
           "Unit": {
             "$ref": "#/components/schemas/Unit"
@@ -6853,7 +6793,7 @@
         "type": "object",
         "properties": {
           "Value": {
-            "$ref": "#/components/schemas/ValueBoolean"
+            "$ref": "#/components/schemas/Value"
           },
           "Unit": {
             "$ref": "#/components/schemas/Unit"
@@ -6873,83 +6813,11 @@
         },
         "x-ob-usage-tips": ""
       },
-      "TaxonomyElementArrayNumber": {
+      "TaxonomyElementArray": {
         "type": "object",
         "properties": {
           "Value": {
-            "$ref": "#/components/schemas/ValueArrayNumber"
-          },
-          "Unit": {
-            "$ref": "#/components/schemas/Unit"
-          },
-          "Decimals": {
-            "$ref": "#/components/schemas/Decimals"
-          },
-          "Precision": {
-            "$ref": "#/components/schemas/Precision"
-          },
-          "StartTime": {
-            "$ref": "#/components/schemas/StartTime"
-          },
-          "EndTime": {
-            "$ref": "#/components/schemas/EndTime"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
-      "TaxonomyElementArrayString": {
-        "type": "object",
-        "properties": {
-          "Value": {
-            "$ref": "#/components/schemas/ValueArrayString"
-          },
-          "Unit": {
-            "$ref": "#/components/schemas/Unit"
-          },
-          "Decimals": {
-            "$ref": "#/components/schemas/Decimals"
-          },
-          "Precision": {
-            "$ref": "#/components/schemas/Precision"
-          },
-          "StartTime": {
-            "$ref": "#/components/schemas/StartTime"
-          },
-          "EndTime": {
-            "$ref": "#/components/schemas/EndTime"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
-      "TaxonomyElementArrayBoolean": {
-        "type": "object",
-        "properties": {
-          "Value": {
-            "$ref": "#/components/schemas/ValueArrayBoolean"
-          },
-          "Unit": {
-            "$ref": "#/components/schemas/Unit"
-          },
-          "Decimals": {
-            "$ref": "#/components/schemas/Decimals"
-          },
-          "Precision": {
-            "$ref": "#/components/schemas/Precision"
-          },
-          "StartTime": {
-            "$ref": "#/components/schemas/StartTime"
-          },
-          "EndTime": {
-            "$ref": "#/components/schemas/EndTime"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
-      "TaxonomyElementArrayInteger": {
-        "type": "object",
-        "properties": {
-          "Value": {
-            "$ref": "#/components/schemas/ValueArrayInteger"
+            "$ref": "#/components/schemas/Value"
           },
           "Unit": {
             "$ref": "#/components/schemas/Unit"
@@ -7264,18 +7132,6 @@
               },
               "TotalHarmonicDistortionCurrent": {
                 "$ref": "#/components/schemas/TotalHarmonicDistortionCurrent"
-              },
-              "IsHybrid": {
-                "$ref": "#/components/schemas/IsHybrid"
-              },
-              "CECNotes": {
-                "$ref": "#/components/schemas/CECNotes"
-              },
-              "HasMeter": {
-                "$ref": "#/components/schemas/HasMeter"
-              },
-              "NightTare": {
-                "$ref": "#/components/schemas/NightTare"
               }
             }
           }
@@ -7498,27 +7354,6 @@
               },
               "OptimizerEfficiencyWeighted": {
                 "$ref": "#/components/schemas/OptimizerEfficiencyWeighted"
-              },
-              "OptimizerType": {
-                "$ref": "#/components/schemas/OptimizerType"
-              },
-              "TotalHarmonicDistortionCurrent": {
-                "$ref": "#/components/schemas/TotalHarmonicDistortionCurrent"
-              },
-              "CompatibleWith": {
-                "$ref": "#/components/schemas/CompatibleWith"
-              },
-              "IsSelectiveOptimization": {
-                "$ref": "#/components/schemas/IsSelectiveOptimization"
-              },
-              "IsVocReducing": {
-                "$ref": "#/components/schemas/IsVocReducing"
-              },
-              "AllowsString": {
-                "$ref": "#/components/schemas/AllowsString"
-              },
-              "GeoRegion": {
-                "$ref": "#/components/schemas/GeoRegion"
               }
             }
           }
@@ -8549,13 +8384,11 @@
           },
           {
             "type": "object",
-            "description": "The date that certification was awarded to product.",
+            "description": "The date on which a certification is made.",
             "x-ob-item-type": "stdi:dateItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "03/18/2022"
-            }
+            "x-ob-sample-value": ""
           }
         ]
       },
@@ -8930,15 +8763,6 @@
           },
           "InverterEfficiencyCECTestResults": {
             "$ref": "#/components/schemas/InverterEfficiencyCECTestResults"
-          },
-          "EfficiencyCECWtdVoltageMax": {
-            "$ref": "#/components/schemas/EfficiencyCECWtdVoltageMax"
-          },
-          "EfficiencyCECWtdVoltageMin": {
-            "$ref": "#/components/schemas/EfficiencyCECWtdVoltageMin"
-          },
-          "EfficiencyCECWtdVoltageNom": {
-            "$ref": "#/components/schemas/EfficiencyCECWtdVoltageNom"
           }
         }
       },
@@ -9326,9 +9150,6 @@
           },
           "EntityRoles": {
             "$ref": "#/components/schemas/EntityRoles"
-          },
-          "AlternativeIdentifiers": {
-            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         }
       },
@@ -9700,12 +9521,6 @@
           },
           "Stipulations": {
             "$ref": "#/components/schemas/Stipulations"
-          },
-          "ContractID": {
-            "$ref": "#/components/schemas/ContractID"
-          },
-          "AlternativeIdentifiers": {
-            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         }
       },
@@ -10320,9 +10135,6 @@
           },
           "JobPriceAmt": {
             "$ref": "#/components/schemas/JobPriceAmt"
-          },
-          "AlternativeIdentifiers": {
-            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         }
       },
@@ -10343,169 +10155,6 @@
             }
           }
         ]
-      },
-      "ContractID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "UUID for a contract",
-            "x-ob-item-type": "solar-types:uuidItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "123e4567-e89b-12d3-a456-426614174000"
-            }
-          }
-        ]
-      },
-      "Portfolio": {
-        "type": "object",
-        "description": "A collection of projects.",
-        "properties": {
-          "Projects": {
-            "$ref": "#/components/schemas/Projects"
-          },
-          "Entities": {
-            "$ref": "#/components/schemas/Entities"
-          },
-          "Comments": {
-            "$ref": "#/components/schemas/Comments"
-          },
-          "Contracts": {
-            "$ref": "#/components/schemas/Contracts"
-          },
-          "PortfolioID": {
-            "$ref": "#/components/schemas/PortfolioID"
-          },
-          "PortfolioName": {
-            "$ref": "#/components/schemas/PortfolioName"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "Contacts": {
-            "$ref": "#/components/schemas/Contacts"
-          },
-          "AlternativeIdentifiers": {
-            "$ref": "#/components/schemas/AlternativeIdentifiers"
-          }
-        }
-      },
-      "Project": {
-        "type": "object",
-        "description": "A logical unit of work that may include more than one site.",
-        "properties": {
-          "ProjectID": {
-            "$ref": "#/components/schemas/ProjectID"
-          },
-          "ProjectName": {
-            "$ref": "#/components/schemas/ProjectName"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "Contracts": {
-            "$ref": "#/components/schemas/Contracts"
-          },
-          "Contacts": {
-            "$ref": "#/components/schemas/Contacts"
-          },
-          "Entities": {
-            "$ref": "#/components/schemas/Entities"
-          },
-          "Comments": {
-            "$ref": "#/components/schemas/Comments"
-          },
-          "Sites": {
-            "$ref": "#/components/schemas/Sites"
-          },
-          "AlternativeIdentifiers": {
-            "$ref": "#/components/schemas/AlternativeIdentifiers"
-          }
-        }
-      },
-      "Projects": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/Project"
-        }
-      },
-      "PortfolioID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "A UUID for a portfolio.",
-            "x-ob-item-type": "solar-types:uuidItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "123e4567-e89b-12d3-a456-426614174000"
-            }
-          }
-        ]
-      },
-      "ProjectID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "A UUID for a project",
-            "x-ob-item-type": "solar-types:uuidItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "123e4567-e89b-12d3-a456-426614174000"
-            }
-          }
-        ]
-      },
-      "PortfolioName": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Name of a portfolio",
-            "x-ob-item-type": "stdi:stringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "Acacia Crossing"
-            }
-          }
-        ]
-      },
-      "ProjectName": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "A name for a project",
-            "x-ob-item-type": "stdi:stringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "Vista View"
-            }
-          }
-        ]
-      },
-      "Sites": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/Site"
-        }
       },
       "ProdEnergyStorageSystem": {
         "allOf": [
@@ -10549,374 +10198,6 @@
               "TemperatureMinimumOperating": {
                 "$ref": "#/components/schemas/TemperatureMinimumOperating"
               }
-            }
-          }
-        ]
-      },
-      "OptimizerType": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The optimization method used by the optimizer.",
-            "x-ob-item-type": "OptimizerTypeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "FirmwareVersion": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Firmware version ",
-            "x-ob-item-type": "stdi:stringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "A.4.0.B"
-            }
-          }
-        ]
-      },
-      "CECListingDate": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Date that CEC listed the product with the certification.",
-            "x-ob-item-type": "stdi:dateItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "12/25/2021"
-            }
-          }
-        ]
-      },
-      "CertificationTypeSections": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "A list of sections covered by the certification.",
-            "x-ob-item-type": "stdi:stringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "SA8-SA13, SA14, SA15"
-            }
-          }
-        ]
-      },
-      "Checksum": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Value used to confirm integrity of data or code. ",
-            "x-ob-item-type": "stdi:stringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "CompatibleWith": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ProdName"
-        }
-      },
-      "AllowsString": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementBoolean"
-          },
-          {
-            "type": "object",
-            "description": "Does this optimizer allow more than one module in series to be connected to an input",
-            "x-ob-item-type": "stdi:booleanItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "AppliedDate": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Date at which firmware or software update was applied. ",
-            "x-ob-item-type": "stdi:dateItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "02/22/2022"
-            }
-          }
-        ]
-      },
-      "Firmware": {
-        "type": "object",
-        "description": "Permanent software programmed into a read-only memory.",
-        "properties": {
-          "FirmwareVersion": {
-            "$ref": "#/components/schemas/FirmwareVersion"
-          },
-          "CertificationDate": {
-            "$ref": "#/components/schemas/CertificationDate"
-          },
-          "Checksum": {
-            "$ref": "#/components/schemas/Checksum"
-          },
-          "AppliedDate": {
-            "$ref": "#/components/schemas/AppliedDate"
-          }
-        }
-      },
-      "FirmwareVersions": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/Firmware"
-        }
-      },
-      "IsHybrid": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementBoolean"
-          },
-          {
-            "type": "object",
-            "description": "True if inverter is capable of taking DC power input from a PV system and an energy storage system. ",
-            "x-ob-item-type": "stdi:booleanItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": true
-            }
-          }
-        ]
-      },
-      "IsVocReducing": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementBoolean"
-          },
-          {
-            "type": "object",
-            "description": "True if the optimizer can modify the attached module's apparent Voc to allow for longer strings.",
-            "x-ob-item-type": "stdi:booleanItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": true
-            }
-          }
-        ]
-      },
-      "AlternativeIdentifier": {
-        "type": "object",
-        "description": "Additional identifier for a record or data set",
-        "properties": {
-          "SourceName": {
-            "$ref": "#/components/schemas/SourceName"
-          },
-          "Identifier": {
-            "$ref": "#/components/schemas/Identifier"
-          },
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          }
-        }
-      },
-      "AlternativeIdentifiers": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/AlternativeIdentifier"
-        }
-      },
-      "Identifier": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "A unique identifier for a record or dataset.",
-            "x-ob-item-type": "stdi:stringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "be3827bd-0b57-4990-a757-7ee13348356f"
-            }
-          }
-        ]
-      },
-      "CECNotes": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Notes from California Energy Commission (CEC) equipment list.",
-            "x-ob-item-type": "stdi:stringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "IsSelectiveOptimization": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementBoolean"
-          },
-          {
-            "type": "object",
-            "description": "This optimizer allows some modules on a string to have optimizers while others don't",
-            "x-ob-item-type": "stdi:booleanItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "HasMeter": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementBoolean"
-          },
-          {
-            "type": "object",
-            "description": "Product contains a built in metering device. ",
-            "x-ob-item-type": "stdi:booleanItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": true
-            }
-          }
-        ]
-      },
-      "GeoRegion": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Region this component is designed for use in",
-            "x-ob-item-type": "stdi:stringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "EU"
-            }
-          }
-        ]
-      },
-      "NightTare": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Power consumed by an inverter with no DC input. Also referred to as internal consumption.",
-            "x-ob-item-type": "num:powerItemType",
-            "x-ob-item-type-group": "OBElectricalPower",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 1,
-              "Unit": "W"
-            }
-          }
-        ]
-      },
-      "EfficiencyCECWtdVoltageMax": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Weighted DC/AC conversion efficiency at Vmax. Weighting according to CEC specification. ",
-            "x-ob-item-type": "percentItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 93.5,
-              "Units": "percent"
-            }
-          }
-        ]
-      },
-      "EfficiencyCECWtdVoltageMin": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Weighted DC/AC conversion efficiency at Vmin. Weighted based on CEC specifications.",
-            "x-ob-item-type": "percentItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Values": 92.5,
-              "Units": "percent"
-            }
-          }
-        ]
-      },
-      "EfficiencyCECWtdVoltageNom": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Weighted DC/AC conversion efficiency at Vnom. Weighted based on CEC specifications.",
-            "x-ob-item-type": "percentItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Values": 93.2,
-              "Units": "percent"
-            }
-          }
-        ]
-      },
-      "SourceName": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Name of the data source.",
-            "x-ob-item-type": "stdi:stringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "Data Source"
             }
           }
         ]
@@ -13205,6 +12486,27 @@
         }
       }
     },
+    "solar-types:optimizerTypeItemType": {
+      "description": "",
+      "enums": {
+        "Standalone": {
+          "label": "",
+          "description": ""
+        },
+        "Attached": {
+          "label": "",
+          "description": ""
+        },
+        "Embedded": {
+          "label": "",
+          "description": ""
+        },
+        "Other": {
+          "label": "",
+          "description": ""
+        }
+      }
+    },
     "solar-types:systemAvailabilityModeItemType": {
       "description": "",
       "enums": {
@@ -15451,22 +14753,6 @@
         "UL3741": {
           "label": "UL3741",
           "description": ""
-        },
-        "UL1973-2-2018": {
-          "label": "UL1973 Edition 2: 2018",
-          "description": ""
-        },
-        "JA12": {
-          "label": "JA12",
-          "description": ""
-        },
-        "CSIP": {
-          "label": "CSIP",
-          "description": "SunSpec 2030.5 Common Smart Inverter Profile (CSIP) Certification"
-        },
-        "CSIP-NRTL": {
-          "label": "CSIP NRTL Attestation",
-          "description": "SunSpec 2030.5 Common Smart Inverter Profile (CSIP) Attestation. Inverter was connected to gateway during compatibility testing."
         }
       }
     },
@@ -16159,32 +15445,6 @@
         "Rescinded ": {
           "label": "Rescinded",
           "description": "The stipulation has been withdrawn"
-        }
-      }
-    },
-    "AccelerationItemType": {
-      "description": "Acceleration is quantified as distance per time squared.",
-      "units": {
-        "g": {
-          "label": "Gravity",
-          "description": "Equal to 9.81 meters per second square"
-        },
-        "m_per_s_squared": {
-          "label": "Meter per second squared",
-          "description": "Meter per second squared"
-        }
-      }
-    },
-    "OptimizerTypeItemType": {
-      "description": "List of Optimizer Topologies",
-      "enums": {
-        "BuckOnly": {
-          "label": "Buck Only",
-          "description": "This optimizer is Buck Only"
-        },
-        "BoostBuck": {
-          "label": "Boost-Buck",
-          "description": "This optimizer is Boost-Buck"
         }
       }
     }
