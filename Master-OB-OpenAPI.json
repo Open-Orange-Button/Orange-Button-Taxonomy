@@ -2187,7 +2187,7 @@
         },
         "x-ob-usage-tips": ""
       },
-      "MCERgroundmotionSS": {
+      "MCERGroundMotionSS": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementNumber"
@@ -2205,7 +2205,7 @@
           }
         ]
       },
-      "MCERgroundmotionS1": {
+      "MCERGroundMotionS1": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementNumber"
@@ -3081,7 +3081,7 @@
           {
             "type": "object",
             "description": "The ID of the Tariff",
-            "x-ob-item-type": "UUIDStdItemType",
+            "x-ob-item-type": "UUIDItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
@@ -12271,7 +12271,7 @@
           "label": "",
           "description": ""
         },
-        "BiPv": {
+        "BIPV": {
           "label": "",
           "description": ""
         },
@@ -12649,7 +12649,7 @@
     "ProjectInterconnectionItemType": {
       "description": "",
       "enums": {
-        "BehindtheMeter": {
+        "BehindTheMeter": {
           "label": "",
           "description": ""
         },
@@ -12657,7 +12657,7 @@
           "label": "",
           "description": ""
         },
-        "InFrontofMeter": {
+        "InFrontOfMeter": {
           "label": "",
           "description": ""
         }
@@ -12872,7 +12872,7 @@
     "ALTASurveyItemType": {
       "description": "",
       "enums": {
-        "Notapplicable": {
+        "NotApplicable": {
           "label": "",
           "description": ""
         },
@@ -12932,7 +12932,7 @@
     "ApprovalRequestItemType": {
       "description": "",
       "enums": {
-        "Notsubmitted": {
+        "NotSubmitted": {
           "label": "",
           "description": ""
         },
@@ -12982,7 +12982,7 @@
           "label": "",
           "description": ""
         },
-        "DeedofTrust": {
+        "DeedOfTrust": {
           "label": "",
           "description": ""
         },
@@ -13128,7 +13128,7 @@
           "label": "",
           "description": ""
         },
-        "IndustrialEmmissions": {
+        "IndustrialEmissions": {
           "label": "",
           "description": ""
         },
@@ -13240,7 +13240,7 @@
           "label": "",
           "description": ""
         },
-        "PolyVinylChloride": {
+        "PolyvinylChloride": {
           "label": "",
           "description": ""
         },
@@ -13294,7 +13294,7 @@
     "ReserveCollateralItemType": {
       "description": "",
       "enums": {
-        "LetterofCredit": {
+        "LetterOfCredit": {
           "label": "",
           "description": ""
         },
@@ -13307,7 +13307,7 @@
     "GISFileFormatItemType": {
       "description": "",
       "enums": {
-        "GEOJson": {
+        "GeoJSON": {
           "label": "",
           "description": ""
         },
@@ -13410,7 +13410,7 @@
     "ProjectPhaseItemType": {
       "description": "",
       "enums": {
-        "Pre_Construction": {
+        "PreConstruction": {
           "label": "",
           "description": ""
         },
@@ -13477,63 +13477,63 @@
     "ClimateClassificationKoppenItemType": {
       "description": "",
       "enums": {
-        "Tropicalmegathermalclimates": {
+        "TropicalMegathermalClimates": {
           "label": "",
           "description": ""
         },
-        "Tropicalrainforestclimate": {
+        "TropicalRainForestClimate": {
           "label": "",
           "description": ""
         },
-        "Tropicalmonsoonclimate": {
+        "TropicalMonsoonClimate": {
           "label": "",
           "description": ""
         },
-        "Tropicalwetanddryorsavannaclimates": {
+        "TropicalWetAndDryOrSavannaClimates": {
           "label": "",
           "description": ""
         },
-        "Drydesertandsemi_aridclimates": {
+        "DryDesertAndSemiAridClimates": {
           "label": "",
           "description": ""
         },
-        "Temperatemesothermalclimates": {
+        "TemperateMesothermalClimates": {
           "label": "",
           "description": ""
         },
-        "Mediterraneanclimates": {
+        "MediterraneanClimates": {
           "label": "",
           "description": ""
         },
-        "Humidsubtropicalclimates": {
+        "HumidSubtropicalClimates": {
           "label": "",
           "description": ""
         },
-        "Oceanicclimates": {
+        "OceanicClimates": {
           "label": "",
           "description": ""
         },
-        "Highlandclimates": {
+        "HighlandClimates": {
           "label": "",
           "description": ""
         },
-        "Continentalmicrothermalclimates": {
+        "ContinentalMicrothermalClimates": {
           "label": "",
           "description": ""
         },
-        "Hotsummercontinentalclimates": {
+        "HotSummerContinentalClimates": {
           "label": "",
           "description": ""
         },
-        "Warmsummercontinentalorhemiborealclimates": {
+        "WarmSummerContinentalOrHemiborealClimates": {
           "label": "",
           "description": ""
         },
-        "Subarcticorborealclimates": {
+        "SubarcticOrBorealClimates": {
           "label": "",
           "description": ""
         },
-        "Polarclimates": {
+        "PolarClimates": {
           "label": "",
           "description": ""
         }
@@ -13554,7 +13554,7 @@
           "label": "",
           "description": ""
         },
-        "ContributiontoPrincipalCash": {
+        "ContributionToPrincipalCash": {
           "label": "",
           "description": ""
         },
@@ -13602,7 +13602,7 @@
           "label": "",
           "description": ""
         },
-        "LeaseOperationsandMaintenance": {
+        "LeaseOperationsAndMaintenance": {
           "label": "",
           "description": ""
         },
@@ -13626,7 +13626,7 @@
           "label": "",
           "description": ""
         },
-        "PPAOperationsandMaintenance": {
+        "PPAOperationsAndMaintenance": {
           "label": "",
           "description": ""
         },
@@ -13634,7 +13634,7 @@
           "label": "",
           "description": ""
         },
-        "PrincipalCashPaidtoBeneficiary": {
+        "PrincipalCashPaidToBeneficiary": {
           "label": "",
           "description": ""
         },
@@ -13829,9 +13829,9 @@
     "UUIDItemType": {
       "description": "",
       "enums": {
-        "([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})": {
-          "label": "",
-          "description": ""
+        "UUID": {
+          "label": "UUID",
+          "description": "An string identifier that matches the regex [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
         }
       }
     },
@@ -13954,7 +13954,7 @@
     "DocumentSubmissionMethodItemType": {
       "description": "",
       "enums": {
-        "Epermitting": {
+        "EPermitting": {
           "label": "Epermitting",
           "description": ""
         },
@@ -14343,7 +14343,7 @@
           "label": "Complete",
           "description": ""
         },
-        "Cancelled": {
+        "Canceled": {
           "label": "Cancelled",
           "description": ""
         }
@@ -14945,7 +14945,7 @@
           "label": "Email",
           "description": ""
         },
-        "Epermitting": {
+        "EPermitting": {
           "label": "Epermitting",
           "description": ""
         },
@@ -15093,7 +15093,7 @@
           "label": "Complete",
           "description": ""
         },
-        "Cancelled": {
+        "Canceled": {
           "label": "Cancelled",
           "description": ""
         }
@@ -15303,7 +15303,7 @@
           "label": "IEC61730",
           "description": ""
         },
-        "IEC60364-4-41": {
+        "IEC60364_4_41": {
           "label": "IEC60364-4-41",
           "description": ""
         },
@@ -15327,11 +15327,11 @@
           "label": "IEC61683",
           "description": ""
         },
-        "IEC62109-1": {
+        "IEC62109_1": {
           "label": "IEC62109-1",
           "description": ""
         },
-        "IEC62109-2": {
+        "IEC62109_2": {
           "label": "IEC62109-2",
           "description": ""
         },
@@ -15355,7 +15355,7 @@
           "label": "UL3741",
           "description": ""
         },
-        "UL1973-2-2018": {
+        "UL1973_2_2018": {
           "label": "UL1973 Edition 2: 2018",
           "description": ""
         },
@@ -15367,7 +15367,7 @@
           "label": "CSIP",
           "description": "SunSpec 2030.5 Common Smart Inverter Profile (CSIP) Certification"
         },
-        "CSIP-NRTL": {
+        "CSIP_NRTL": {
           "label": "CSIP NRTL Attestation",
           "description": "SunSpec 2030.5 Common Smart Inverter Profile (CSIP) Attestation. Inverter was connected to gateway during compatibility testing."
         }
@@ -15401,7 +15401,7 @@
           "label": "ClassC",
           "description": ""
         },
-        "THWN-2": {
+        "THWN_2": {
           "label": "THWN-2",
           "description": ""
         },
@@ -15779,11 +15779,11 @@
     "CellTechnologyItemType": {
       "description": "The type of technology for a solar cell.",
       "enums": {
-        "monoSi": {
+        "MonoSi": {
           "label": "monoSi",
           "description": "Monocrystalline silicon"
         },
-        "polySi": {
+        "PolySi": {
           "label": "polySi",
           "description": "Polycrystalline silicon"
         },
@@ -15791,11 +15791,11 @@
           "label": "HIT",
           "description": "Heterojunction with Intrinsic thin-layer"
         },
-        "aSi": {
+        "ASi": {
           "label": "aSi",
           "description": "Amorphous silicon thin film"
         },
-        "thinfilm": {
+        "ThinFilm": {
           "label": "thinfilm",
           "description": "Thin film (generic)"
         },
@@ -15807,7 +15807,7 @@
           "label": "CdTe",
           "description": "Cadmium telluride thin film"
         },
-        "heterojunction": {
+        "Heterojunction": {
           "label": "heterojunction",
           "description": ""
         },
@@ -15939,7 +15939,7 @@
           "label": "Insurer, Automobile",
           "description": ""
         },
-        "InsurerProjectPerfomance": {
+        "InsurerProjectPerformance": {
           "label": "Insurer, Project Performance",
           "description": ""
         },
@@ -16017,7 +16017,7 @@
           "label": "RS-485",
           "description": ""
         },
-        "CAN20B": {
+        "CAN2_0B": {
           "label": "CAN 2.0 B",
           "description": ""
         },
@@ -16079,7 +16079,7 @@
           "label": "Rejected",
           "description": "The stipulation is rejected"
         },
-        "Rescinded ": {
+        "Rescinded": {
           "label": "Rescinded",
           "description": "The stipulation has been withdrawn"
         }
@@ -16118,8 +16118,8 @@
           "label": "Ethernet",
           "description": ""
         },
-        "WiFi": {
-          "label": "WiFi",
+        "WIFI": {
+          "label": "WIFI",
           "description": ""
         },
         "Zigbee": {

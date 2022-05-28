@@ -129,6 +129,22 @@ def old_new_item_type_map(taxonomy):
     return result
 
 
+def rename_taxonomy_schemas(taxonomy):
+    key_map = {'MCERgroundmotionSS': 'MCERGroundMotionSS',
+               'MCERgroundmotionS1': 'MCERGroundMotionS1'}
+    new_schemas = {}
+    for k, v in taxonomy['components']['schemas'].items():
+        if k in key_map:
+            new_schemas[key_map[k]] = v
+        else:
+            new_schemas[k] = v
+        if k == 'SeismicLoad':
+            new_props = {}
+            for r, s in v['properties'].items():
+                pass
+    taxonomy['components']['schemas'] = new_schemas
+
+
 def duplicate_item_types_after_prefix_removal(taxonomy):
     key_map = old_new_item_type_map(taxonomy)
     lower_case_taxonomy_item_types = {k.lower() for k in taxonomy[ITEM_TYPES]}
@@ -139,6 +155,81 @@ def get_recorded_duplicates(taxonomy):
     with open('duplicate_item_types_proposed.json', 'r', encoding='utf-8') as file:
         objs = json.load(file)
         return objs
+
+
+def update_item_type_entries(item_types, name, old_key, new_key):
+    entry_type = 'enums' if 'enums' in item_types[name] else 'units'
+    assert old_key in item_types[name][entry_type]
+    item_types[name][entry_type] = {(new_key if k == old_key else k): v for k, v in item_types[name][entry_type].items()}
+    assert new_key in item_types[name][entry_type]
+    # new_entries = {}
+    # for k, v in item_types[name][entry_type].items():
+    #     if k == old_key:
+    #         new_entries[new_key] = v
+    #     else:
+    #         new_entries[k] = v
+    # item_types[name][entry_type] = new_entries
+
+
+def manual_item_type_entry_updates(taxonomy):
+    item_types = taxonomy[ITEM_TYPES]
+    update_item_type_entries(item_types, 'StipulationStatusItemType', 'Rescinded ', 'Rescinded')
+    update_item_type_entries(item_types, 'WireTypeItemType', 'THWN-2', 'THWN_2')
+    update_item_type_entries(item_types, 'CertificationTypeProductItemType', 'CSIP-NRTL', 'CSIP_NRTL')
+    update_item_type_entries(item_types, 'CertificationTypeProductItemType', 'UL1973-2-2018', 'UL1973_2_2018')
+    update_item_type_entries(item_types, 'CertificationTypeProductItemType', 'IEC62109-1', 'IEC62109_1')
+    update_item_type_entries(item_types, 'CertificationTypeProductItemType', 'IEC62109-2', 'IEC62109_2')
+    update_item_type_entries(item_types, 'CertificationTypeProductItemType', 'IEC60364-4-41', 'IEC60364_4_41')
+    update_item_type_entries(item_types, 'UUIDItemType', '([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\})', '')
+    item_types['UUIDItemType']['enums'] = {
+        "UUID": {
+            "label": "UUID",
+            "description": "An string identifier that matches the regex [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
+        }
+    }
+    update_item_type_entries(item_types, 'CellTechnologyItemType', 'aSi', 'ASi')
+    update_item_type_entries(item_types, 'CellTechnologyItemType', 'monoSi', 'MonoSi')
+    update_item_type_entries(item_types, 'CellTechnologyItemType', 'polySi', 'PolySi')
+    update_item_type_entries(item_types, 'CellTechnologyItemType', 'heterojunction', 'Heterojunction')
+    update_item_type_entries(item_types, 'CellTechnologyItemType', 'thinfilm', 'ThinFilm')
+    update_item_type_entries(item_types, 'ClimateClassificationKoppenItemType', 'Tropicalmegathermalclimates', 'TropicalMegathermalClimates')
+    update_item_type_entries(item_types, 'ProjectPhaseItemType', 'Pre_Construction', 'PreConstruction')
+    update_item_type_entries(item_types, 'GISFileFormatItemType', 'GEOJson', 'GeoJSON')
+    update_item_type_entries(item_types, 'ReserveCollateralItemType', 'LetterofCredit', 'LetterOfCredit')
+    update_item_type_entries(item_types, 'RoofItemType', 'ThermoplasticPolyolefin', 'ThermoplasticPolyolefin')
+    update_item_type_entries(item_types, 'RoofItemType', 'PolyVinylChloride', 'PolyvinylChloride')
+    update_item_type_entries(item_types, 'EnvironmentalConditionsItemType', 'IndustrialEmmissions', 'IndustrialEmissions')
+    update_item_type_entries(item_types, 'SecurityInterestItemType', 'DeedofTrust', 'DeedOfTrust')
+    update_item_type_entries(item_types, 'ApprovalRequestItemType', 'Notsubmitted', 'NotSubmitted')
+    update_item_type_entries(item_types, 'ALTASurveyItemType', 'Notapplicable', 'NotApplicable')
+    update_item_type_entries(item_types, 'ProjectInterconnectionItemType', 'InFrontofMeter', 'InFrontOfMeter')
+    update_item_type_entries(item_types, 'ProjectInterconnectionItemType', 'BehindtheMeter', 'BehindTheMeter')
+    update_item_type_entries(item_types, 'ModuleItemType', 'BiPv', 'BIPV')
+    update_item_type_entries(item_types, 'ClimateClassificationKoppenItemType', 'Tropicalrainforestclimate', 'TropicalRainForestClimate')
+    update_item_type_entries(item_types, 'ClimateClassificationKoppenItemType', 'Tropicalmonsoonclimate', 'TropicalMonsoonClimate')
+    update_item_type_entries(item_types, 'ClimateClassificationKoppenItemType', 'Tropicalwetanddryorsavannaclimates', 'TropicalWetAndDryOrSavannaClimates')
+    update_item_type_entries(item_types, 'ClimateClassificationKoppenItemType', 'Drydesertandsemi_aridclimates', 'DryDesertAndSemiAridClimates')
+    update_item_type_entries(item_types, 'ClimateClassificationKoppenItemType', 'Temperatemesothermalclimates', 'TemperateMesothermalClimates')
+    update_item_type_entries(item_types, 'ClimateClassificationKoppenItemType', 'Mediterraneanclimates', 'MediterraneanClimates')
+    update_item_type_entries(item_types, 'ClimateClassificationKoppenItemType', 'Humidsubtropicalclimates', 'HumidSubtropicalClimates')
+    update_item_type_entries(item_types, 'ClimateClassificationKoppenItemType', 'Oceanicclimates', 'OceanicClimates')
+    update_item_type_entries(item_types, 'ClimateClassificationKoppenItemType', 'Highlandclimates', 'HighlandClimates')
+    update_item_type_entries(item_types, 'ClimateClassificationKoppenItemType', 'Continentalmicrothermalclimates', 'ContinentalMicrothermalClimates')
+    update_item_type_entries(item_types, 'ClimateClassificationKoppenItemType', 'Hotsummercontinentalclimates', 'HotSummerContinentalClimates')
+    update_item_type_entries(item_types, 'ClimateClassificationKoppenItemType', 'Warmsummercontinentalorhemiborealclimates', 'WarmSummerContinentalOrHemiborealClimates')
+    update_item_type_entries(item_types, 'ClimateClassificationKoppenItemType', 'Subarcticorborealclimates', 'SubarcticOrBorealClimates')
+    update_item_type_entries(item_types, 'ClimateClassificationKoppenItemType', 'Polarclimates', 'PolarClimates')
+    update_item_type_entries(item_types, 'FinancialTransactionItemType', 'ContributiontoPrincipalCash', 'ContributionToPrincipalCash')
+    update_item_type_entries(item_types, 'FinancialTransactionItemType', 'PPAOperationsandMaintenance', 'PPAOperationsAndMaintenance')
+    update_item_type_entries(item_types, 'FinancialTransactionItemType', 'LeaseOperationsandMaintenance', 'LeaseOperationsAndMaintenance')
+    update_item_type_entries(item_types, 'FinancialTransactionItemType', 'PrincipalCashPaidtoBeneficiary', 'PrincipalCashPaidToBeneficiary')
+    update_item_type_entries(item_types, 'EntityRoleItemType', 'InsurerProjectPerfomance', 'InsurerProjectPerformance')
+    update_item_type_entries(item_types, 'DocumentSubmissionMethodItemType', 'Epermitting', 'EPermitting')
+    update_item_type_entries(item_types, 'PermitIssueMethodItemType', 'Epermitting', 'EPermitting')
+    update_item_type_entries(item_types, 'BillOfMaterialsStatusItemType', 'Cancelled', 'Canceled')
+    update_item_type_entries(item_types, 'BillOfServicesStatusItemType', 'Cancelled', 'Canceled')
+    # update_item_type_entries(item_types, '', '', '')
+    taxonomy['components']['schemas']['TariffStructureID']['allOf'][1]['x-ob-item-type'] = 'UUIDItemType'
 
 
 TAXONOMY_FILENAME = 'Master-OB-OpenAPI_in_repo.json'
@@ -155,10 +246,13 @@ def write_json(fname, d):
 
 with open(TAXONOMY_FILENAME, 'r', encoding='utf-8') as taxonomyFile:
     taxonomy = json.load(taxonomyFile)
-    write_json('duplicate_item_types.json', duplicate_item_types_after_prefix_removal(taxonomy))
+    write_json('duplicate_item_types.json',
+               duplicate_item_types_after_prefix_removal(taxonomy))
     manual_written = get_recorded_duplicates(taxonomy)
     remove_item_type_colon_prefixes(taxonomy, manual=manual_written)
     capitalize_item_type(taxonomy)
     change_item_type_group_type_path(taxonomy)
     capitalize_item_type_group(taxonomy)
+    rename_taxonomy_schemas(taxonomy)
+    manual_item_type_entry_updates(taxonomy)
     write_json('Master-OB-OpenAPI.json', taxonomy)

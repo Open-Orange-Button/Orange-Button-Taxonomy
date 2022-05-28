@@ -46,13 +46,13 @@ rules:
     then:
       function: validateItemTypeGroupEntries
   
-  element-valid-sample-value:
-    message: '{{error}}'
-    # Give the entire definition of an element
-    given: $.components.schemas[*][?(@property === 'allOf' && @[0].properties.Value)]
-    severity: error
-    then:
-      function: validateXOBSampleValue
+  # element-valid-sample-value:
+  #   message: '{{error}}'
+  #   # Give the entire definition of an element
+  #   given: $.components.schemas[*][?(@property === 'allOf' && @[0].properties.Value)]
+  #   severity: error
+  #   then:
+  #     function: validateXOBSampleValue
 
   no-special-characters:
     description: Name must only contain characters in 0-9, A-Z, a-z, and _ (underscore).
@@ -80,7 +80,7 @@ rules:
     then:
       function: pattern
       functionOptions:
-        match: ^[0-9A-Z][a-z0-9]*([A-Z]+[a-z0-9]*)*$ # modified version of k8s_camel_case to allow upper case letter beginning
+        match: ^[0-9A-Z][a-z0-9_]*([A-Z]+[a-z0-9_]*)*$ # modified version of k8s_camel_case to allow upper case letter beginning
 
   spellcheck-upper-camel-case-substrings:
     message: 'These substrings are not in the dictionary: {{error}}'

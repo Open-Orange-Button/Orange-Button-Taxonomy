@@ -67,7 +67,7 @@
                 "label": "RS-485",
                 "description": ""
             },
-            "CAN20B": {
+            "CAN2_0B": {
                 "label": "CAN 2.0 B",
                 "description": ""
             },
@@ -92,8 +92,8 @@
                 "label": "Ethernet",
                 "description": ""
             },
-            "WiFi": {
-                "label": "WiFi",
+            "WIFI": {
+                "label": "WIFI",
                 "description": ""
             },
             "Zigbee": {
