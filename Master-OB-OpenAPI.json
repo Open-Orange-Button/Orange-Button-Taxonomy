@@ -2178,11 +2178,11 @@
         "type": "object",
         "description": "The combined parameters for the Seismic Load condition of a structural design",
         "properties": {
-          "MCERgroundmotionSS": {
-            "$ref": "#/components/schemas/MCERgroundmotionSS"
+          "MCERGroundMotionSS": {
+            "$ref": "#/components/schemas/MCERGroundMotionSS"
           },
-          "MCERgroundmotionS1": {
-            "$ref": "#/components/schemas/MCERgroundmotionS1"
+          "MCERGroundMotionS1": {
+            "$ref": "#/components/schemas/MCERGroundMotionS1"
           }
         },
         "x-ob-usage-tips": ""

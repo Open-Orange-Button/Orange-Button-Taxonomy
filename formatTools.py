@@ -140,8 +140,9 @@ def rename_taxonomy_schemas(taxonomy):
             new_schemas[k] = v
         if k == 'SeismicLoad':
             new_props = {}
-            for r, s in v['properties'].items():
-                pass
+            for r in v['properties']:
+                new_props[key_map[r]] = {'$ref': f'#/components/schemas/{key_map[r]}'}
+            v['properties'] = new_props
     taxonomy['components']['schemas'] = new_schemas
 
 
