@@ -40,7 +40,8 @@ rules:
     then:
       function: refPathExists
   
-  item-type-group-valid-entries:  
+  item-type-group-valid-entries:
+    description: The enums or units in the item type group exist in the item type definition.
     message: '{{error}}'
     given: $[x-ob-item-type-groups][*]~
     severity: error
@@ -48,6 +49,11 @@ rules:
       function: validateItemTypeGroupEntries
   
   element-valid-sample-value:
+    description: >-
+      Checks that the sample value is an object and that it's fields are only primitives,
+      Value has the correct OpenAPI type, Value is an enum of the OB item type if applicable,
+      and Unit is a unit of the OB item type if applicable.
+      Additional validation rules for each primitve can be added to validateXOBSampleValue.
     message: '{{error}}'
     # Give entire 'allOf' array of an element definition
     # Spectral resolves all $ref's, so allOf[0].properties.Value exists
@@ -58,8 +64,16 @@ rules:
       functionOptions:
         # Require sample value be a nonempty object
         requireAtLeastOneField: false
+        enumItemTypeIgnoreList:
+          - UUIDItemType # Value is checked against the regex of UUID
 
-  element-number-integer-item-type-is-not-enum:
+  element-valid-openapi-type-and-item-type:
+    description: >-
+      Check that the element's OpenAPI type and OB item type are compatible.
+      OpenAPI 'integer' and 'number' types are only compatible with OB unit item types.
+      OpenAPI 'boolean' and 'string' types are only compatible with OB enum item types.
+      For OB item types without enums or units, all schema definitons that use these
+      OB item types should have the same OpenAPI type.
     message: '{{error}}'
     given: $.components.schemas[*][?(@property === 'allOf' && @[0].properties.Value)]
     severity: error

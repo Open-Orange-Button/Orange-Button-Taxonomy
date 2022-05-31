@@ -4,8 +4,11 @@ const primitiveValidators = { Decimals: validateDecimals,
                               StartTime: validateStartTime,
                               Unit: validateUnit,
                               Value: validateValue };
-const ValueValidators = new Set([ValuePercentItemType]);
+const ValueValidators = new Set([ValuePercentItemType,
+                                 ValueUUIDItemType]);
+let validatorOptions;
 export default (input, options, context) => {
+  validatorOptions = options;
   let taxonomy = context.document.data;
   let results = [];
   let addResult = (message, primitive) => results.push({ message, path: [...context.path, '1', 'x-ob-sample-value', primitive] });
@@ -101,14 +104,20 @@ function validateValue(input, taxonomy, addResult) {
   let sampleValue = getSampleValue(input);
   let itemType = getItemType(input);
   if (itemType && primitive in sampleValue) {
+    let itemTypeDef = taxonomy['x-ob-item-types'][itemType];
+    let itemTypeEnums = itemTypeDef['enums'];
     let sampleValueValue = sampleValue[primitive];
     let OpenAPIType = getValueOpenAPIType(input);
     if (!OpenAPITypecheck(sampleValueValue, OpenAPIType)) {
       addResult(`Must be of type ${getOpenAPITypeName(OpenAPIType)}. Value: ${sampleValueValue}`);
     } else if (OpenAPIType.type === 'string' && sampleValueValue.length === 0) {
       addResult(`Must not be an empty string.`);
+    } else if (itemTypeEnums && !validatorOptions.enumItemTypeIgnoreList.includes(itemType)) {
+      if (!itemTypeEnums[sampleValueValue]) {
+        addResult(`The item type '${itemType} does not define the enum '${sampleValueValue}'.`);
+      }
     } else {
-      Object.values(ValueValidators).forEach(v => v(sampleValueValue, itemType, addResult));
+      ValueValidators.forEach(v => v(sampleValueValue, itemType, addResult));
     }
   }
 }
@@ -117,6 +126,15 @@ function ValuePercentItemType(value, itemType, addResult) {
   if (itemType === 'PercentItemType') {
     if (value < 0 || value > 100) {
       addResult(`(${itemType}) Must be between 0 and 100. Value: ${value}`);
+    }
+  }
+}
+
+function ValueUUIDItemType(value, itemType, addResult) {
+  if (itemType === 'UUIDItemType') {
+    let uuidRegex = '^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$';
+    if (!(new RegExp(uuidRegex)).test(value)) {
+      addResult(`(${itemType}) Must match the regex ${uuidRegex}. Value: ${value}.`)
     }
   }
 }

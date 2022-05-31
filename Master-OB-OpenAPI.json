@@ -2154,7 +2154,7 @@
             "x-ob-item-type": "RoofItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "Asphalt Shingle"
+              "Value": "AsphaltShingle"
             },
             "x-ob-item-type-group": ""
           }
@@ -3333,9 +3333,7 @@
             "description": "The type of aging bucket",
             "x-ob-item-type": "AgingBucketTypeItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "AccountsPayable"
-            },
+            "x-ob-sample-value": {},
             "x-ob-item-type-group": ""
           }
         ]
@@ -3449,9 +3447,7 @@
             "description": "The enumerated list of the types of major specifications.",
             "x-ob-item-type": "SpecificationTypeItemType",
             "x-ob-usage-tips": "If the specification does not have a type listed here, select \"None\" and then use the SpecificationName as an alternative.",
-            "x-ob-sample-value": {
-              "Value": "AcceptableAmbientTemperatureRange"
-            },
+            "x-ob-sample-value": {},
             "x-ob-item-type-group": ""
           }
         ]
@@ -6443,7 +6439,7 @@
             "x-ob-item-type": "UUIDItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "7a00622c6bb04a3fc6da73090958db3a1bf6c791"
+              "Value": "7a00622c-6bb0-4a3f-c6da-73090958db3a"
             },
             "x-ob-item-type-group": ""
           }
@@ -6514,7 +6510,7 @@
             "x-ob-item-type": "UUIDItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "7a00622c6bb04a3fc6da73090958db3a1bf6c791"
+              "Value": "7a00622c-6bb0-4a3f-c6da-73090958db3a"
             },
             "x-ob-item-type-group": ""
           }
@@ -6782,7 +6778,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "7a00622c6bb04a3fc6da73090958db3a1bf6c791"
+              "Value": "7a00622c-6bb0-4a3f-c6da-73090958db3a"
             }
           }
         ]
@@ -7281,7 +7277,7 @@
             "x-ob-item-type": "CellTechnologyItemType",
             "x-ob-usage-tips": "Used for large group categorizations",
             "x-ob-sample-value": {
-              "Value": "monoSi"
+              "Value": "MonoSi"
             },
             "x-ob-item-type-group": ""
           }
@@ -7509,7 +7505,7 @@
             "x-ob-item-type": "PercentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": -1.5
+              "Value": 1.5
             },
             "x-ob-item-type-group": ""
           }
@@ -8082,7 +8078,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "thinfilm"
+              "Value": "ThinFilm"
             }
           }
         ]
