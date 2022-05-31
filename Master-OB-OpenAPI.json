@@ -7439,7 +7439,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "sqft",
-              "Value": 0.4
+              "Value": 0.01
             },
             "x-ob-item-type-group": ""
           }
