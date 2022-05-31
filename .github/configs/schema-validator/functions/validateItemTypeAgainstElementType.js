@@ -8,6 +8,6 @@ export default (input, options, context) => {
     let itemType = input[1]['x-ob-item-type'];
     let itemTypeDef = taxonomy['x-ob-item-types'][itemType];
     if (numericOpenAPITypes.includes(elementType) && itemTypeDef.enums) {
-        return [{ message: `This element ${isArray ? 'is an' : 'has items of'} OpenAPI type ${elementType}, but the item type '${itemType}' defines string type enumerations.` }];
+        return [{ message: `This element's Value primitive ${isArray ? 'is an' : 'has items of'} OpenAPI type ${elementType}, but the item type '${itemType}' defines string type enumerations.` }];
     }
 }
