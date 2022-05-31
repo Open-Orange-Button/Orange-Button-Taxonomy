@@ -3,7 +3,8 @@ functions: [spellcheckSubstrings,
             validateXOBFields,
             refPathExists,
             validateItemTypeGroupEntries,
-            validateXOBSampleValue]
+            validateXOBSampleValue,
+            validateItemTypeAgainstElementType]
 rules:
   enum-case-convention: off
   major-version-in-path: off
@@ -49,6 +50,7 @@ rules:
   element-valid-sample-value:
     message: '{{error}}'
     # Give entire 'allOf' array of an element definition
+    # Spectral resolves all $ref's, so allOf[0].properties.Value exists
     given: $.components.schemas[*][?(@property === 'allOf' && @[0].properties.Value)]
     severity: error
     then:
@@ -57,6 +59,13 @@ rules:
         # Require sample value be a nonempty object
         requireAtLeastOneField: false
 
+  element-number-integer-item-type-is-not-enum:
+    message: '{{error}}'
+    given: $.components.schemas[*][?(@property === 'allOf' && @[0].properties.Value)]
+    severity: error
+    then:
+      function: validateItemTypeAgainstElementType
+  
   no-special-characters:
     description: Name must only contain characters in 0-9, A-Z, a-z, and _ (underscore).
     type: style
