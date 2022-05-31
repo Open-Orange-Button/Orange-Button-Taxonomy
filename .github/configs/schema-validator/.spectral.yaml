@@ -48,11 +48,14 @@ rules:
   
   element-valid-sample-value:
     message: '{{error}}'
-    # Give the entire definition of an element
+    # Give entire 'allOf' array of an element definition
     given: $.components.schemas[*][?(@property === 'allOf' && @[0].properties.Value)]
     severity: error
     then:
       function: validateXOBSampleValue
+      functionOptions:
+        # Require sample value be a nonempty object
+        requireAtLeastOneField: false
 
   no-special-characters:
     description: Name must only contain characters in 0-9, A-Z, a-z, and _ (underscore).

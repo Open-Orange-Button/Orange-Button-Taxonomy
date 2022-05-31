@@ -10,8 +10,10 @@ export default (input, options, context) => {
   let results = [];
   let addResult = (message, primitive) => results.push({ message, path: [...context.path, '1', 'x-ob-sample-value', primitive] });
   let sampleValue = getSampleValue(input);
-  if (!isObject(sampleValue) || Object.keys(sampleValue) === 0) {
-    addResult('Sample value must be an object with defined primitive fields.');
+  if (!isObject(sampleValue)) {
+    addResult('Sample value must be an object.');
+  } else if (options.requireAtLeastOneField && (!isObject(sampleValue) || Object.keys(sampleValue) === 0)) {
+    addResult('Sample value must have defined primitive fields.');
   } else if (!Object.keys(sampleValue).every(k => primitiveValidators[k])) {
     let extraKeys = Object.keys(sampleValue).filter(k => !primitiveValidators[k]);
     addResult(`These fields are not valid primitves: ${extraKeys.join(', ')}`);
