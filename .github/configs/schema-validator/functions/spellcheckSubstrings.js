@@ -8,7 +8,8 @@ export default (input, options) => {
   let nonNumericalSubstrings = substrings.filter(isNaN);
   // filter for substrings not in any dictionary
   let misspellings = nonNumericalSubstrings.filter(s => !dictionaries.some(dict => dict.check(s)));
-  if (misspellings.length > 0) {
+  let wholeInputIsWord = dictionaries.some(dict => dict.check(input));
+  if (!wholeInputIsWord && misspellings.length > 0) {
     return [{ message: misspellings.join(', ') }];
   }
 };

@@ -1,9 +1,71 @@
 extends: 'ibm-oas-wrapper-check-components.js'
-functions: [spellcheckSubstrings]
+functions: [spellcheckSubstrings,
+            validateXOBFields,
+            refPathExists,
+            validateItemTypeGroupEntries,
+            validateXOBSampleValue,
+            validateItemTypeAgainstElementType]
 rules:
-  property-case-convention: off
   enum-case-convention: off
+  major-version-in-path: off
+  openapi-tags: off
+  oas3-api-servers: off
+  oas3-unused-component: off
+  property-case-convention: off
+  property-description: off
+  property-inconsistent-name-and-type: off
+  
+  element-valid-item-type:
+    message: 'Item type does not exist: {{error}}'
+    given: $.components.schemas[*].allOf[1][x-ob-item-type]
+    severity: error
+    then:
+      function: validateXOBFields
+      functionOptions:
+        objectPath: x-ob-item-types
+  
+  element-valid-item-type-group:
+    message: 'Item type group does not exist: {{error}}'
+    given: $.components.schemas[*].allOf[1][x-ob-item-type-group]
+    severity: error
+    then:
+      function: validateXOBFields
+      functionOptions:
+        objectPath: x-ob-item-type-groups
 
+  item-type-group-valid-type:
+    message: 'Item type group type does not exist: {{error}}'
+    given: $[x-ob-item-type-groups][*].type
+    severity: error
+    then:
+      function: refPathExists
+  
+  item-type-group-valid-entries:  
+    message: '{{error}}'
+    given: $[x-ob-item-type-groups][*]~
+    severity: error
+    then:
+      function: validateItemTypeGroupEntries
+  
+  element-valid-sample-value:
+    message: '{{error}}'
+    # Give entire 'allOf' array of an element definition
+    # Spectral resolves all $ref's, so allOf[0].properties.Value exists
+    given: $.components.schemas[*][?(@property === 'allOf' && @[0].properties.Value)]
+    severity: error
+    then:
+      function: validateXOBSampleValue
+      functionOptions:
+        # Require sample value be a nonempty object
+        requireAtLeastOneField: false
+
+  element-number-integer-item-type-is-not-enum:
+    message: '{{error}}'
+    given: $.components.schemas[*][?(@property === 'allOf' && @[0].properties.Value)]
+    severity: error
+    then:
+      function: validateItemTypeAgainstElementType
+  
   no-special-characters:
     description: Name must only contain characters in 0-9, A-Z, a-z, and _ (underscore).
     type: style
@@ -30,7 +92,7 @@ rules:
     then:
       function: pattern
       functionOptions:
-        match: ^[0-9A-Z][a-z0-9]*([A-Z]+[a-z0-9]*)*$ # modified version of k8s_camel_case to allow upper case letter beginning
+        match: ^[0-9A-Z][a-z0-9_]*([A-Z]+[a-z0-9_]*)*$ # modified version of k8s_camel_case to allow upper case letter beginning
 
   spellcheck-upper-camel-case-substrings:
     message: 'These substrings are not in the dictionary: {{error}}'
@@ -48,7 +110,5 @@ rules:
         dictionaries:
           - name: en_US
             path: node_modules/typo-js/dictionaries
-          - name: OB-abbreviations 
-            path: .github/configs/schema-validator/OB-dictionaries
-          - name: OB-acronyms
+          - name: OB-words
             path: .github/configs/schema-validator/OB-dictionaries

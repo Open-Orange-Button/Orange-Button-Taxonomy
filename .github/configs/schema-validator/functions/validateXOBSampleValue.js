@@ -1,0 +1,122 @@
+const primitiveValidators = { Decimals: validateDecimals,
+                              EndTime: validateEndTime,
+                              Precision: validatePrecision,
+                              StartTime: validateStartTime,
+                              Unit: validateUnit,
+                              Value: validateValue };
+const ValueValidators = new Set([ValuePercentItemType]);
+export default (input, options, context) => {
+  let taxonomy = context.document.data;
+  let results = [];
+  let addResult = (message, primitive) => results.push({ message, path: [...context.path, '1', 'x-ob-sample-value', primitive] });
+  let sampleValue = getSampleValue(input);
+  if (!isObject(sampleValue)) {
+    addResult('Sample value must be an object.');
+  } else if (options.requireAtLeastOneField && (!isObject(sampleValue) || Object.keys(sampleValue) === 0)) {
+    addResult('Sample value must have defined primitive fields.');
+  } else if (!Object.keys(sampleValue).every(k => primitiveValidators[k])) {
+    let extraKeys = Object.keys(sampleValue).filter(k => !primitiveValidators[k]);
+    addResult(`These fields are not valid primitves: ${extraKeys.join(', ')}`);
+  } else {
+    for (let [k, v] of Object.entries(primitiveValidators)) {
+      v(input, taxonomy, m => addResult(m, k));
+    }
+  }
+  return results;
+}
+
+function isObject(variable) {
+  return typeof variable === 'object' && !Array.isArray(variable)
+    && variable !== null && variable !== undefined;
+}
+
+function getSampleValue(input) {
+  return input[1]['x-ob-sample-value'];
+}
+
+function getItemType(input) {
+  return input[1]['x-ob-item-type'];
+}
+
+function getValueOpenAPIType(input) {
+  let Value = input[0].properties.Value;
+  return { isArray: Value.type === 'array', type: Value.type };
+}
+
+function getOpenAPITypeName(type) {
+  let result = '';
+  if (type.isArray) {
+    result += 'array of ';
+  }
+  result += type.type;
+  return result;
+}
+
+function OpenAPITypecheck(value, type) {
+  if (type.isArray) {
+    return Array.isArray(value) && value.length > 0
+      && value.every(v => OpenAPITypecheckNotArray(v, type.type));
+  }
+  return OpenAPITypecheckNotArray(value, type.type);
+}
+
+function OpenAPITypecheckNotArray(value, type) {
+  if (type === 'number') {
+    return !Number.isNaN(value);
+  } else if (type === 'string') {
+    return typeof value === 'string';
+  } else if (type === 'boolean') {
+    return typeof value === 'boolean';
+  } else if (type === 'integer') {
+    return Number.isInteger(value);
+  }
+}
+
+function validateDecimals(input, taxonomy, addResult) {}
+
+function validateEndTime(input, taxonomy, addResult) {}
+
+function validatePrecision(input, taxonomy, addResult) {}
+
+function validateStartTime(input, taxonomy, addResult) {}
+
+function validateUnit(input, taxonomy, addResult) {
+  let primitive = 'Unit';
+  let sampleValue = getSampleValue(input);
+  let itemType = getItemType(input);
+  let sampleValueUnits = sampleValue[primitive];
+  if (itemType && primitive in sampleValue) {
+    let itemTypeDef = taxonomy['x-ob-item-types'][itemType];
+    let itemTypeUnits = itemTypeDef['units'];
+    if (!itemTypeUnits) {
+      addResult(`Cannot define 'Unit' because the item type '${itemType}' does not define units.`);
+    } else if (!itemTypeUnits[sampleValueUnits]) {
+      addResult(`The item type '${itemType}' does not define the unit '${sampleValueUnits}'.`);
+    }
+  }
+}
+
+function validateValue(input, taxonomy, addResult) {
+  let primitive = 'Value';
+  let sampleValue = getSampleValue(input);
+  let itemType = getItemType(input);
+  if (itemType && primitive in sampleValue) {
+    let sampleValueValue = sampleValue[primitive];
+    let OpenAPIType = getValueOpenAPIType(input);
+    if (!OpenAPITypecheck(sampleValueValue, OpenAPIType)) {
+      addResult(`Must be of type ${getOpenAPITypeName(OpenAPIType)}. Value: ${sampleValueValue}`);
+    } else if (OpenAPIType.type === 'string' && sampleValueValue.length === 0) {
+      addResult(`Must not be an empty string.`);
+    } else {
+      Object.values(ValueValidators).forEach(v => v(sampleValueValue, itemType, addResult));
+    }
+  }
+}
+
+function ValuePercentItemType(value, itemType, addResult) {
+  if (itemType === 'PercentItemType') {
+    if (value < 0 || value > 100) {
+      addResult(`(${itemType}) Must be between 0 and 100. Value: ${value}`);
+    }
+  }
+}
