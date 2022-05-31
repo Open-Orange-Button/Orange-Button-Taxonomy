@@ -13955,7 +13955,7 @@
       "description": "",
       "enums": {
         "EPermitting": {
-          "label": "Epermitting",
+          "label": "ePermitting",
           "description": ""
         },
         "Email": {
