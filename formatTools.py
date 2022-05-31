@@ -1,4 +1,5 @@
 import json
+import functools
 from collections import OrderedDict
 
 
@@ -225,18 +226,142 @@ def manual_item_type_entry_updates(taxonomy):
     update_item_type_entries(item_types, 'FinancialTransactionItemType', 'LeaseOperationsandMaintenance', 'LeaseOperationsAndMaintenance')
     update_item_type_entries(item_types, 'FinancialTransactionItemType', 'PrincipalCashPaidtoBeneficiary', 'PrincipalCashPaidToBeneficiary')
     update_item_type_entries(item_types, 'EntityRoleItemType', 'InsurerProjectPerfomance', 'InsurerProjectPerformance')
-    update_item_type_entries(item_types, 'DocumentSubmissionMethodItemType', 'Epermitting', 'ePermitting')
-    update_item_type_entries(item_types, 'PermitIssueMethodItemType', 'Epermitting', 'ePermitting')
+    update_item_type_entries(item_types, 'DocumentSubmissionMethodItemType', 'Epermitting', 'EPermitting')
+    update_item_type_entries(item_types, 'PermitIssueMethodItemType', 'Epermitting', 'EPermitting')
     update_item_type_entries(item_types, 'BillOfMaterialsStatusItemType', 'Cancelled', 'Canceled')
     update_item_type_entries(item_types, 'BillOfServicesStatusItemType', 'Cancelled', 'Canceled')
     # update_item_type_entries(item_types, '', '', '')
     taxonomy['components']['schemas']['TariffStructureID']['allOf'][1]['x-ob-item-type'] = 'UUIDItemType'
 
 
+def isTaxonomyElement(defn):
+    return 'allOf' in defn and any('$ref' in d and 'TaxonomyElement' in d['$ref'] for d in defn['allOf'])
+
+def sample_value_label_to_id(taxonomy):
+    defns = taxonomy['components']['schemas']
+    for k, v in defns.items():
+        if not isTaxonomyElement(v):
+            continue
+        sv = v['allOf'][1][SCHEMA_SAMPLE_VALUE]
+        if isinstance(sv, dict) and 'Unit' in sv:
+            it = v['allOf'][1][SCHEMA_ITEM_TYPE]
+            if k == 'VoltageDCMax':
+                print('hi')
+            source = taxonomy[ITEM_TYPES][it]
+            if not ('enums' in source or 'units' in source):
+                continue
+            entries = 'enums' if 'enums' in source else 'units'
+            item = list(filter(lambda k: source[entries][k]['label'] == sv['Unit'], source[entries]))
+            if len(item) > 0:
+                sv['Unit'] = item[0]
+
+
+def sample_value_values_to_value_units_to_unit(taxonomy):
+    defns = taxonomy['components']['schemas']
+    for k, v in defns.items():
+        if not isTaxonomyElement(v):
+            continue
+        sv = v['allOf'][1][SCHEMA_SAMPLE_VALUE]
+        if isinstance(sv, dict):
+            new_sv = {}
+            for q, r in sv.items():
+                if q == 'Units':
+                    new_sv['Unit'] = r
+                if q == 'Values':
+                    new_sv['Value'] = r
+                if q not in {'Units', 'Values'}:
+                    new_sv[q] = r
+            v['allOf'][1][SCHEMA_SAMPLE_VALUE] = new_sv
+
+
+def sample_value_not_units_defined(taxonomy):
+    defns = taxonomy['components']['schemas']
+    for k, v in defns.items():
+        if not isTaxonomyElement(v):
+            continue
+        sv = v['allOf'][1][SCHEMA_SAMPLE_VALUE]
+        if isinstance(sv, dict) and 'Unit' in sv:
+            it = v['allOf'][1][SCHEMA_ITEM_TYPE]
+            source = taxonomy[ITEM_TYPES][it]
+            if not 'units' in source:
+                new_sv = {}
+                for q, r in sv.items():
+                    if q != 'Unit':
+                        new_sv[q] = r
+                v['allOf'][1][SCHEMA_SAMPLE_VALUE] = new_sv
+
+
+def sample_value_remove_empty_fields(taxonomy):
+    defns = taxonomy['components']['schemas']
+    for k, v in defns.items():
+        if not isTaxonomyElement(v):
+            continue
+        sv = v['allOf'][1][SCHEMA_SAMPLE_VALUE]
+        if isinstance(sv, dict):
+            new_sv = {}
+            for q, r in sv.items():
+                if r != '':
+                    new_sv[q] = r
+            v['allOf'][1][SCHEMA_SAMPLE_VALUE] = new_sv
+
+
+def sample_value_empty_string_to_empty_dict(taxonomy):
+    defns = taxonomy['components']['schemas']
+    for k, v in defns.items():
+        if not isTaxonomyElement(v):
+            continue
+        sv = v['allOf'][1][SCHEMA_SAMPLE_VALUE]
+        if sv == '':
+            v['allOf'][1][SCHEMA_SAMPLE_VALUE] = {}
+
+
+def sample_value_str_num_to_num(taxonomy):
+    defns = taxonomy['components']['schemas']
+    for k, v in defns.items():
+        if not isTaxonomyElement(v):
+            continue
+        sv = v['allOf'][1][SCHEMA_SAMPLE_VALUE]
+        if isinstance(sv, dict) and 'Value' in sv and isinstance(sv['Value'], str):
+            r = sv['Value'].strip()
+            if r.isnumeric():
+                if float(r) == int(r):
+                    res = int(r)
+                else:
+                    res = float(r)
+                v['allOf'][1][SCHEMA_SAMPLE_VALUE]['Value'] = res
+
+
+def sample_value_stringify(taxonomy):
+    defns = taxonomy['components']['schemas']
+    for k, v in defns.items():
+        if not isTaxonomyElement(v):
+            continue
+        if not 'TaxonomyElementString' in v['allOf'][0]['$ref']:
+            continue
+        sv = v['allOf'][1][SCHEMA_SAMPLE_VALUE]
+        if isinstance(sv, dict) and 'Value' in sv:
+            r = sv['Value']
+            v['allOf'][1][SCHEMA_SAMPLE_VALUE]['Value'] = str(r)
+
+
+def sample_value_nonempty_str_to_value(taxonomy):
+    defns = taxonomy['components']['schemas']
+    for k, v in defns.items():
+        if not isTaxonomyElement(v):
+            continue
+        sv = v['allOf'][1][SCHEMA_SAMPLE_VALUE]
+        if isinstance(sv, str) and sv != '':
+            v['allOf'][1][SCHEMA_SAMPLE_VALUE] = {'Value': sv}
+
+
+
+
+
 TAXONOMY_FILENAME = 'Master-OB-OpenAPI_in_repo.json'
 ITEM_TYPES = 'x-ob-item-types'
 SCHEMA_ITEM_TYPE = 'x-ob-item-type'
 SCHEMA_ITEM_TYPE_GROUP = 'x-ob-item-type-group'
+SCHEMA_SAMPLE_VALUE = 'x-ob-sample-value'
 ITEM_TYPE_GROUP = 'x-ob-item-type-groups'
 
 
@@ -256,4 +381,12 @@ with open(TAXONOMY_FILENAME, 'r', encoding='utf-8') as taxonomyFile:
     capitalize_item_type_group(taxonomy)
     rename_taxonomy_schemas(taxonomy)
     manual_item_type_entry_updates(taxonomy)
+    sample_value_label_to_id(taxonomy)
+    sample_value_values_to_value_units_to_unit(taxonomy)
+    sample_value_not_units_defined(taxonomy)
+    sample_value_remove_empty_fields(taxonomy)
+    sample_value_empty_string_to_empty_dict(taxonomy)
+    sample_value_str_num_to_num(taxonomy)
+    sample_value_stringify(taxonomy)
+    sample_value_nonempty_str_to_value(taxonomy)
     write_json('Master-OB-OpenAPI.json', taxonomy)
