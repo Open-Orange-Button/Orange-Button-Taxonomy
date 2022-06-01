@@ -3119,7 +3119,7 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "Select ONLY items from the OB Item Type list for the expected answer unit type",
             "x-ob-sample-value": {
-              "Value": "num:powerItemType"
+              "Value": "PowerItemType"
             },
             "x-ob-item-type-group": ""
           }
@@ -7119,7 +7119,8 @@
             "x-ob-item-type": "PercentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 1.5
+              "Value": 1.5,
+              "Unit": "percent"
             },
             "x-ob-item-type-group": ""
           }
@@ -12809,7 +12810,7 @@
     "ProjectPhaseItemType": {
       "description": "",
       "enums": {
-        "PreConstruction": {
+        "Pre_Construction": {
           "label": "",
           "description": ""
         },
@@ -14849,7 +14850,7 @@
         },
         "Diamond": {
           "label": "Diamond",
-          "description": "Use when the object (e.g., Array) has modules that are not axis-aligned."
+          "description": "Use when the object (e.g., Array) has modules that are neither Portrait nor Landscape."
         }
       }
     },

@@ -113,6 +113,7 @@ rules:
         match: ^[0-9A-Z][a-z0-9_]*([A-Z]+[a-z0-9_]*)*$ # modified version of k8s_camel_case to allow upper case letter beginning
 
   spellcheck-upper-camel-case-substrings:
+    description: Checks if the entire string or all substrings matching substringMatch are in any of the dictionaries.
     message: 'These substrings are not in the dictionary: {{error}}'
     type: style
     given:
