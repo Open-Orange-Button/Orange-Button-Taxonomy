@@ -10,7 +10,7 @@ export default (input, options, context) => {
     let itemTypeDef = taxonomy['x-ob-item-types'][itemType];
     let errorMessageFirstPart = (elementType, isArray) => `This element's Value primitve ${isArray ? 'has items of' : 'is an'} OpenAPI type '${elementType}'`;
     if (numericOpenAPITypes.includes(elementType) && itemTypeDef.enums) {
-        return [{ message: `${errorMessageFirstPart(elementType, isArray)}, but the item type '${itemType}' defines string type enumerations.` }];
+        return [{ message: `${errorMessageFirstPart(elementType, isArray)}, but the item type '${itemType}' defines 'string' type enumerations.` }];
     } else if (nonnumericOpenAPITypes.includes(elementType) && itemTypeDef.units) {
         return [{ message: `${errorMessageFirstPart(elementType, isArray)}, but the item type '${itemType}' defines units.` }];
     }
