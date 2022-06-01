@@ -41,6 +41,10 @@ function getItemType(input) {
   return input[1]['x-ob-item-type'];
 }
 
+function getItemTypeGroup(input) {
+  return input[1]['x-ob-item-type-group'];
+}
+
 function getValueOpenAPIType(input) {
   let Value = input[0].properties.Value;
   return { isArray: Value.type === 'array', type: Value.type };
@@ -87,14 +91,20 @@ function validateUnit(input, taxonomy, addResult) {
   let primitive = 'Unit';
   let sampleValue = getSampleValue(input);
   let itemType = getItemType(input);
-  let sampleValueUnits = sampleValue[primitive];
+  let sampleValueUnit = sampleValue[primitive];
   if (itemType && primitive in sampleValue) {
     let itemTypeDef = taxonomy['x-ob-item-types'][itemType];
     let itemTypeUnits = itemTypeDef['units'];
     if (!itemTypeUnits) {
       addResult(`Cannot define 'Unit' because the item type '${itemType}' does not define units.`);
-    } else if (!itemTypeUnits[sampleValueUnits]) {
-      addResult(`The item type '${itemType}' does not define the unit '${sampleValueUnits}'.`);
+    } else {
+      let itemTypeGroup = getItemTypeGroup(input);
+      let itemTypeGroupDef = taxonomy['x-ob-item-type-groups'][itemTypeGroup];
+      if (!itemTypeUnits[sampleValueUnit]) {
+        addResult(`The item type '${itemType}' does not define the unit '${sampleValueUnit}'.`);
+      } else if (itemTypeGroupDef && !itemTypeGroupDef.group.includes(sampleValueUnit)) {
+        addResult(`The item type group '${itemTypeGroup}' does not define the unit '${sampleValueUnit}'.`)
+      }
     }
   }
 }
@@ -113,8 +123,12 @@ function validateValue(input, taxonomy, addResult) {
     } else if (OpenAPIType.type === 'string' && sampleValueValue.length === 0) {
       addResult(`Must not be an empty string.`);
     } else if (itemTypeEnums && !validatorOptions.enumItemTypeIgnoreList.includes(itemType)) {
+      let itemTypeGroup = getItemTypeGroup(input);
+      let itemTypeGroupDef = taxonomy['x-ob-item-type-groups'][itemTypeGroup];
       if (!itemTypeEnums[sampleValueValue]) {
         addResult(`The item type '${itemType} does not define the enum '${sampleValueValue}'.`);
+      } else if (itemTypeGroupDef && !itemTypeGroupDef.group.includes(sampleValueValue)) {
+        addResult(`The item type group '${itemTypeGroup}' does not define the enum '${sampleValueValue}'.`)
       }
     } else {
       ValueValidators.forEach(v => v(sampleValueValue, itemType, addResult));
