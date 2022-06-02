@@ -1,105 +1,105 @@
 0
-ACH
-Addr
-AGM
-AHJ
-AHJID
-Amb
-App
-ASCE
-ASHRAE
-ASTME
-AWG
+ACH//Automated Clearing House
+Addr//Address
+AGM//Absorbent Glass Mat
+AHJ//Authority Having Jurisdiction
+AHJID//Authority Having Jurisdiction Identifier
+Amb//Ambient
+App//Application
+ASCE//American Society of Civil Engineers
+ASHRAE//American Society of Heating, Refrigerating and Air-Conditioning
+ASTME//American Society of Tool and Manufacturing Engineers
+AWG//American Wire Gauge
 Backsheet
 Bifacial
-BIPV
+BIPV//Building-Integrated Photovoltaics
 Boreal
 Busbar
-CEC
-CIGS
-Coeff
-Cond
+CEC//California Energy Commission
+CIGS//Copper Indium Gallium Diselenide Selenium
+Coeff//Coefficient
+Cond//Condition
 Counterparty
-CPV
-CSIP
+CPV//Concentrator Photovoltaic
+CSIP//Common Smart Inverter Profile
 Datasheet
 Derate
 Diene
-EWG
-Facil
-Forma
+EWG//Environmental Working Group
+Facil//Facilitator
+ProForma
 Frameless
 Gauge
 Geocoding
-GIS
-GML
-GPS
+GIS//Geographic Information System
+GML//Generalized Markup Language
+GPS//Global Positioning System
 Hemiboreal
 Heterojunction
-HOA
-IBC
-IEC
-IFC
+HOA//Homeowners Association
+IBC//International Building Code
+IEC//International Electric Code
+IFC//International Fire Code
 Insolation
-IRC
-Irrad
+IRC//International Residential Code
+Irrad//Irradiance
 Irradiance
-JA
-JSON
-KML
+JA//Joint Appendix
+JSON//JavaScript Object Notation
+KML//Keyhole Markup Language
 Koppen
 LiPoly
-Maint
-MCER
+Maint//Maintenance
+MCER//Risk-Targeted Maximum Considered Earthquake
 Megathermal
 Mesothermal
-Meth
+Meth//Method
 Microthermal
 Modbus
-MOR
-MPPT
-MPPTs
+MOR//Monthly Operating Report
+MPPT//Maximum Power Point Tracker
+MPPTs//Maximum Power Point Trackers
 Nanogrid
-NEC
-NiMH
-NOCT
-Nom
+NEC//National Electric Code
+NiMH//Nickel Metal Hydride
+NOCT//Nominal Operating Cell Temperature
+Nom//Nominal
 Noncurrent
 Noninterest
 Nonposting
-NRTL
-Num
+NRTL//Nationally Recognized Testing Laboratory
+Num//Number
 Obligee
 Offline
 Online
-Perf
+Perf//Performance
 Polyolefin
 PolySi
-PPA
+PPA//Power Purchase Agreement
 Pre
-PSA
-Purch
-PV
-QF
+PSA//Power Sale Agreement
+Purch//Purchase
+PV//Photovoltaic
+QF//Qualifying Facility
 REbusDCNanogrid
-Reqrmnts
-Rpt
-Rtg
-SBS
+Reqrmnts//Requirements
+Rpt//Reporting
+Rtg//Rating
+SBS//Styrene-Butadiene-Styrene
 Shapefile
-SPV
+SPV//Special Purpose Vehicle
 Sublimits
 Subpanel
-TCPIP
+TCPIP//Transmission Control Protocol/Internet Protocol
 Terpolymer
-TFSI
-THWN
+TFSI//Thin Film Silicon
+THWN//Thermoplastic Heat and Water Resistant
 Transformerless
 Unbilled
-UUID
-Voc
-Warr
-WIFI
+UUID//Universally Unique Identifier
+Voc//Open-Circuit Voltage
+Warr//Warranty
+WIFI//Wireless Fidelity
 Workmans
-Wtd
+Wtd//Weighted
 Zigbee
