@@ -10,12 +10,14 @@ Elements added
 * Adds FirmwareVersion, CertificationDate, Checksum, AppliedDate, EfficiencyCECWtdVoltageMax, EfficiencyCECWtdVoltageMin, EfficiencyCECWtdVoltageNom, NightTare, IsHybrid, HasMeter, CECNotes
   Identifier, SourceName (:pull:`51`)
 * Adds OptimizerType, CompatibleWith, AllowsString, IsVocReducing, IsSelectiveOptimization, GeoRegion, (:pull:`50`)
+* Adds DisplayDescription, AccuracyClassANSI (:pull:`57`)
 
 Objects added
 ~~~~~~~~~~~~~
 * Adds Portfolio, Project Objects (:pull:`35`)
 * Adds Firmware, FirmwareVersions
   AlternativeIdentifier, AlternativeIdentifiers (:pull:`51`)
+* Adds ProdMeter (:pull:`57`)
 
 Units added
 ~~~~~~~~~~~
