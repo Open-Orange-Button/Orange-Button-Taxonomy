@@ -34,7 +34,7 @@ rules:
         objectPath: x-ob-item-type-groups
 
   item-type-group-valid-type:
-    message: 'Item type group type does not exist: {{error}}'
+    message: 'Item type group references an item type that does not exist: {{error}}'
     given: $[x-ob-item-type-groups][*].type
     severity: error
     then:
@@ -54,9 +54,11 @@ rules:
       - It is an object. The object may be empty (see requireAtLeastOneField).
       - Its fields are only primitives.
       - Value has the correct OpenAPI type
-      - If the schema definition OB item type defines enums or units, and it has an item type group:
-        - When enums are defined, Value is an enum of the OB item type and item type group.
-        - When units are defined, Unit is a unit of the OB item type and item type group.
+      - If the schema definition OB item type defines enums or units:
+        - When enums are defined, Value is an enum of the OB item type.
+          - If the schema definiton has an OB item type group, Value is an enum of the item type group.
+        - When units are defined, Unit is a unit of the OB item type.
+          - If the schema definiton has an OB item type group, Unit is a unit of the item type group.
       - Additional validation rules for each primitve can be added to validateXOBSampleValue.
     message: '{{error}}'
     # Give entire 'allOf' array of an element definition
@@ -75,7 +77,8 @@ rules:
     description: >-
       Check that the element's OpenAPI type and OB item type are compatible.
       OpenAPI 'integer' and 'number' types are only compatible with OB unit item types.
-      OpenAPI 'boolean' and 'string' types are only compatible with OB enum item types.
+      OpenAPI 'string' type is only compatible with OB enum item types.
+      OpenAPI 'boolean' type is only compatible with the BooleanItemType.
       For OB item types without enums or units, all schema definitons that use these
       OB item types should have the same OpenAPI type.
     message: '{{error}}'
