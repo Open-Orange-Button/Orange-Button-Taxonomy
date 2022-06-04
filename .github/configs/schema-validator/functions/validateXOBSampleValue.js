@@ -94,6 +94,10 @@ function validateUnit(input, taxonomy, addResult) {
   let sampleValueUnit = sampleValue[primitive];
   if (itemType && primitive in sampleValue) {
     let itemTypeDef = taxonomy['x-ob-item-types'][itemType];
+    if (!itemTypeDef) {
+      // ignore if item type does not exist, this is checked separately
+      return;
+    }
     let itemTypeUnits = itemTypeDef['units'];
     if (!itemTypeUnits) {
       addResult(`Cannot define 'Unit' because the item type '${itemType}' does not define units.`);
@@ -115,6 +119,10 @@ function validateValue(input, taxonomy, addResult) {
   let itemType = getItemType(input);
   if (itemType && primitive in sampleValue) {
     let itemTypeDef = taxonomy['x-ob-item-types'][itemType];
+    if (!itemTypeDef) {
+      // ignore if item type does not exist, this is checked separately
+      return;
+    }
     let itemTypeEnums = itemTypeDef['enums'];
     let sampleValueValue = sampleValue[primitive];
     let OpenAPIType = getValueOpenAPIType(input);

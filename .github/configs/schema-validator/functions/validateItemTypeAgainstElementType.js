@@ -7,6 +7,10 @@ export default (input, options, context) => {
     let elementType = isArray ? defValue.items.type : defValue.type;
     let itemType = input[1]['x-ob-item-type'];
     let itemTypeDef = taxonomy['x-ob-item-types'][itemType];
+    if (!itemTypeDef) {
+        // ignore if item type does not exist, this is checked separately
+        return;
+    }
     let errorMessageFirstPart = (elementType, isArray) => `This element's Value primitve ${isArray ? 'has items of' : 'is an'} OpenAPI type '${elementType}'`;
     if (numericOpenAPITypes.includes(elementType) && itemTypeDef.enums) {
         return [{ message: `${errorMessageFirstPart(elementType, isArray)}, but the item type '${itemType}' defines 'string' type enumerations.` }];
