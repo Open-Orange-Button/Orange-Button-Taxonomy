@@ -56,10 +56,10 @@ rules:
       - Value has the correct OpenAPI type
       - If the schema definition OB item type defines enums or units:
         - When enums are defined, Value is an enum of the OB item type.
-          - If the schema definiton has an OB item type group, Value is an enum of the item type group.
+          - If the schema definition has an OB item type group, Value is an enum of the item type group.
         - When units are defined, Unit is a unit of the OB item type.
-          - If the schema definiton has an OB item type group, Unit is a unit of the item type group.
-      - Additional validation rules for each primitve can be added to validateXOBSampleValue.
+          - If the schema definition has an OB item type group, Unit is a unit of the item type group.
+      - Additional validation rules for each primitive can be added to validateXOBSampleValue.
     message: '{{error}}'
     # Give entire 'allOf' array of an element definition
     # Spectral resolves all $ref's, so allOf[0].properties.Value exists
@@ -79,7 +79,7 @@ rules:
       OpenAPI 'integer' and 'number' types are only compatible with OB unit item types.
       OpenAPI 'string' type is only compatible with OB enum item types.
       OpenAPI 'boolean' type is only compatible with the BooleanItemType.
-      For OB item types without enums or units, all schema definitons that use these
+      For OB item types without enums or units, all schema definitions that use these
       OB item types should have the same OpenAPI type.
     message: '{{error}}'
     given: $.components.schemas[*][?(@property === 'allOf' && @[0].properties.Value)]
