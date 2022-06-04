@@ -48,6 +48,7 @@ JA//Joint Appendix
 JSON//JavaScript Object Notation
 KML//Keyhole Markup Language
 Koppen
+LIC//Low Irradiance Condition
 LiPoly
 Maint//Maintenance
 MCER//Risk-Targeted Maximum Considered Earthquake
@@ -78,8 +79,10 @@ PolySi
 PPA//Power Purchase Agreement
 Pre
 PSA//Power Sale Agreement
+PTC//PVUSA Test Condition
 Purch//Purchase
 PV//Photovoltaic
+PVUSA//Photovoltaics for Utility Scale Applications
 QF//Qualifying Facility
 REbusDCNanogrid
 Reqrmnts//Requirements
@@ -88,6 +91,7 @@ Rtg//Rating
 SBS//Styrene-Butadiene-Styrene
 Shapefile
 SPV//Special Purpose Vehicle
+STC//Standard Test Condition
 Sublimits
 Subpanel
 TCPIP//Transmission Control Protocol/Internet Protocol
