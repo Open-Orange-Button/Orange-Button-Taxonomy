@@ -19,7 +19,7 @@ export default (input, options, context) => {
     addResult('Sample value must have defined primitive fields.');
   } else if (!Object.keys(sampleValue).every(k => primitiveValidators[k])) {
     let extraKeys = Object.keys(sampleValue).filter(k => !primitiveValidators[k]);
-    addResult(`These fields are not valid primitves: ${extraKeys.join(', ')}`);
+    addResult(`These fields are not valid primitives: ${extraKeys.join(', ')}`);
   } else {
     for (let [k, v] of Object.entries(primitiveValidators)) {
       v(input, taxonomy, m => addResult(m, k));

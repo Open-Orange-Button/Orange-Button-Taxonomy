@@ -12,6 +12,6 @@ export default (input, options, context) => {
   let typeInstanceNames = Object.keys(typeInstances);
   let missingEntries = groupEntires.filter(entry => !typeInstanceNames.includes(entry));
   if (missingEntries.length > 0) {
-    return [{ message: `These entries of item type group '${input}' are not untis or enums of item type '${itemTypeGroup.type.split('/').at(-1)}': ${missingEntries.join(', ')}` }];
+    return [{ message: `These entries of item type group '${input}' are not units or enums of item type '${itemTypeGroup.type.split('/').at(-1)}': ${missingEntries.join(', ')}` }];
   }
 }

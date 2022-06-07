@@ -11,7 +11,7 @@ export default (input, options, context) => {
         // ignore if item type does not exist, this is checked separately
         return;
     }
-    let errorMessageFirstPart = (elementType, isArray) => `This element's Value primitve ${isArray ? 'has items of' : 'is an'} OpenAPI type '${elementType}'`;
+    let errorMessageFirstPart = (elementType, isArray) => `This element's Value primitive ${isArray ? 'has items of' : 'is an'} OpenAPI type '${elementType}'`;
     if (numericOpenAPITypes.includes(elementType) && itemTypeDef.enums) {
         return [{ message: `${errorMessageFirstPart(elementType, isArray)}, but the item type '${itemType}' defines 'string' type enumerations.` }];
     } else if (elementType === 'string' && itemTypeDef.units) {
