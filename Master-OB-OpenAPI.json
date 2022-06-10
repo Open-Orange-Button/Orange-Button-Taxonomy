@@ -7390,14 +7390,14 @@
           }
         ]
       },
-      "SolarCellQuantity": {
+      "CellCount": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
-            "description": "The number of ProdSolarCell in a module",
+            "description": "The number of ProdCell in a module",
             "x-ob-item-type": "IntegerItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -7574,8 +7574,8 @@
               "FuseSeriesRating": {
                 "$ref": "#/components/schemas/FuseSeriesRating"
               },
-              "ProdSolarCell": {
-                "$ref": "#/components/schemas/ProdSolarCell"
+              "ProdCell": {
+                "$ref": "#/components/schemas/ProdCell"
               },
               "ProdCode": {
                 "$ref": "#/components/schemas/ProdCode"
@@ -7591,9 +7591,6 @@
               },
               "ProdGlazing": {
                 "$ref": "#/components/schemas/ProdGlazing"
-              },
-              "SolarCellQuantity": {
-                "$ref": "#/components/schemas/SolarCellQuantity"
               },
               "JunctionBoxProtectionCertification": {
                 "$ref": "#/components/schemas/JunctionBoxProtectionCertification"
@@ -7628,8 +7625,8 @@
               "BacksheetMaterial": {
                 "$ref": "#/components/schemas/BacksheetMaterial"
               },
-              "CellQuantity": {
-                "$ref": "#/components/schemas/CellQuantity"
+              "CellCount": {
+                "$ref": "#/components/schemas/CellCount"
               },
               "CellStringsParallelQuantity": {
                 "$ref": "#/components/schemas/CellStringsParallelQuantity"
@@ -7671,41 +7668,36 @@
           }
         ]
       },
-      "ProdSolarCell": {
-        "type": "object",
-        "description": "A subcomponent of a ProdModule",
-        "properties": {
-          "Description": {
-            "$ref": "#/components/schemas/Description"
+      "ProdCell": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Product"
           },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "Mass": {
-            "$ref": "#/components/schemas/Mass"
-          },
-          "Width": {
-            "$ref": "#/components/schemas/Width"
-          },
-          "Length": {
-            "$ref": "#/components/schemas/Length"
-          },
-          "Height": {
-            "$ref": "#/components/schemas/Height"
-          },
-          "ProdCode": {
-            "$ref": "#/components/schemas/ProdCode"
-          },
-          "CellColor": {
-            "$ref": "#/components/schemas/CellColor"
-          },
-          "CellCutType": {
-            "$ref": "#/components/schemas/CellCutType"
-          },
-          "CellTechnologyType": {
-            "$ref": "#/components/schemas/CellTechnologyType"
+          {
+            "type": "object",
+            "description": "A subcomponent of a ProdModule",
+            "properties": {
+              "Description": {
+                "$ref": "#/components/schemas/Description"
+              },
+              "FileFolderURL": {
+                "$ref": "#/components/schemas/FileFolderURL"
+              },
+              "ProdCode": {
+                "$ref": "#/components/schemas/ProdCode"
+              },
+              "CellColor": {
+                "$ref": "#/components/schemas/CellColor"
+              },
+              "CellCutType": {
+                "$ref": "#/components/schemas/CellCutType"
+              },
+              "CellTechnologyType": {
+                "$ref": "#/components/schemas/CellTechnologyType"
+              }
+            }
           }
-        }
+        ]
       },
       "ProdGlazing": {
         "type": "object",
@@ -8134,23 +8126,6 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "polymer"
-            }
-          }
-        ]
-      },
-      "CellQuantity": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementInteger"
-          },
-          {
-            "type": "object",
-            "description": "How Many Cells are in this module?",
-            "x-ob-item-type": "IntegerItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 60
             }
           }
         ]
