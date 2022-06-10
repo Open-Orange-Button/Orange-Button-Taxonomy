@@ -7393,12 +7393,12 @@
       "SolarCellQuantity": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementInteger"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
             "description": "The number of ProdSolarCell in a module",
-            "x-ob-item-type": "IntegerItemType",
+            "x-ob-item-type": "DecimalItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": 120
@@ -8141,12 +8141,12 @@
       "CellQuantity": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementInteger"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
             "description": "How Many Cells are in this module?",
-            "x-ob-item-type": "IntegerItemType",
+            "x-ob-item-type": "DecimalItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
