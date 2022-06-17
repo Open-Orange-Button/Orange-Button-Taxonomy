@@ -10,6 +10,9 @@ Element changes
 * Add OptimizerType, CompatibleWith, AllowsString, IsVocReducing, IsSelectiveOptimization, GeoRegion, (:pull:`50`)
 * Add TemperatureCoefficientMaxPowerVoltage, TemperatureCoefficientMaxPowerCurrent, PowerSTC, ModuleArea, IsBIPV, ModuleRatingCondition (:pull:`60`)
 * Remove CellType, redundant with CellTechnologyType (:pull:`60`)
+* Add IsPVInputCapable to ProdEnergyStorageSystem and ProdInverter (:pull:`56`)
+* Add RoundTripEfficiency to ProdEnergyStorageSystem (:pull:`56`)
+* Add GridInterfaceType to ProdEnergyStorageSystem and ProdInverter (:pull:`39`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -30,6 +33,8 @@ Unit changes
 * Add Values "UL1973" and "JA12" to CertificationTypeProductItemType (:pull:`58`) 
 * Add ModuleRatingConditionItemType (:pull:`60`)
 * Remove solar-types:optimizerTypeItemType(:pull:`50`)
+* Add UL1741SB and UL9540 to CertificationTypeProductItemType (:pull:`56`)
+* Add GridInterfaceTypeItemType (:pull:`39`)
 
 Bug fixes
 ~~~~~~~~~
