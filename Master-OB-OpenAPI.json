@@ -6700,8 +6700,55 @@
           }
         ]
       },
-      "Value": {
+      "ValueNumber": {
+        "type": "number",
+        "description": "Value for the instance element",
+        "x-ob-usage-tips": ""
+      },
+      "ValueString": {
         "type": "string",
+        "description": "Value for the instance element",
+        "x-ob-usage-tips": ""
+      },
+      "ValueBoolean": {
+        "type": "boolean",
+        "description": "Value for the instance element",
+        "x-ob-usage-tips": ""
+      },
+      "ValueInteger": {
+        "type": "integer",
+        "description": "Value for the instance element",
+        "x-ob-usage-tips": ""
+      },
+      "ValueArrayNumber": {
+        "type": "array",
+        "items": {
+          "type": "number"
+        },
+        "description": "Value for the instance element",
+        "x-ob-usage-tips": ""
+      },
+      "ValueArrayString": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Value for the instance element",
+        "x-ob-usage-tips": ""
+      },
+      "ValueArrayBoolean": {
+        "type": "array",
+        "items": {
+          "type": "boolean"
+        },
+        "description": "Value for the instance element",
+        "x-ob-usage-tips": ""
+      },
+      "ValueArrayInteger": {
+        "type": "array",
+        "items": {
+          "type": "integer"
+        },
         "description": "Value for the instance element",
         "x-ob-usage-tips": ""
       },
@@ -6734,7 +6781,7 @@
         "type": "object",
         "properties": {
           "Value": {
-            "$ref": "#/components/schemas/Value"
+            "$ref": "#/components/schemas/ValueString"
           },
           "Unit": {
             "$ref": "#/components/schemas/Unit"
@@ -6758,7 +6805,7 @@
         "type": "object",
         "properties": {
           "Value": {
-            "$ref": "#/components/schemas/Value"
+            "$ref": "#/components/schemas/ValueNumber"
           },
           "Unit": {
             "$ref": "#/components/schemas/Unit"
@@ -6782,7 +6829,7 @@
         "type": "object",
         "properties": {
           "Value": {
-            "$ref": "#/components/schemas/Value"
+            "$ref": "#/components/schemas/ValueInteger"
           },
           "Unit": {
             "$ref": "#/components/schemas/Unit"
@@ -6806,7 +6853,7 @@
         "type": "object",
         "properties": {
           "Value": {
-            "$ref": "#/components/schemas/Value"
+            "$ref": "#/components/schemas/ValueBoolean"
           },
           "Unit": {
             "$ref": "#/components/schemas/Unit"
@@ -6826,11 +6873,83 @@
         },
         "x-ob-usage-tips": ""
       },
-      "TaxonomyElementArray": {
+      "TaxonomyElementArrayNumber": {
         "type": "object",
         "properties": {
           "Value": {
-            "$ref": "#/components/schemas/Value"
+            "$ref": "#/components/schemas/ValueArrayNumber"
+          },
+          "Unit": {
+            "$ref": "#/components/schemas/Unit"
+          },
+          "Decimals": {
+            "$ref": "#/components/schemas/Decimals"
+          },
+          "Precision": {
+            "$ref": "#/components/schemas/Precision"
+          },
+          "StartTime": {
+            "$ref": "#/components/schemas/StartTime"
+          },
+          "EndTime": {
+            "$ref": "#/components/schemas/EndTime"
+          }
+        },
+        "x-ob-usage-tips": ""
+      },
+      "TaxonomyElementArrayString": {
+        "type": "object",
+        "properties": {
+          "Value": {
+            "$ref": "#/components/schemas/ValueArrayString"
+          },
+          "Unit": {
+            "$ref": "#/components/schemas/Unit"
+          },
+          "Decimals": {
+            "$ref": "#/components/schemas/Decimals"
+          },
+          "Precision": {
+            "$ref": "#/components/schemas/Precision"
+          },
+          "StartTime": {
+            "$ref": "#/components/schemas/StartTime"
+          },
+          "EndTime": {
+            "$ref": "#/components/schemas/EndTime"
+          }
+        },
+        "x-ob-usage-tips": ""
+      },
+      "TaxonomyElementArrayBoolean": {
+        "type": "object",
+        "properties": {
+          "Value": {
+            "$ref": "#/components/schemas/ValueArrayBoolean"
+          },
+          "Unit": {
+            "$ref": "#/components/schemas/Unit"
+          },
+          "Decimals": {
+            "$ref": "#/components/schemas/Decimals"
+          },
+          "Precision": {
+            "$ref": "#/components/schemas/Precision"
+          },
+          "StartTime": {
+            "$ref": "#/components/schemas/StartTime"
+          },
+          "EndTime": {
+            "$ref": "#/components/schemas/EndTime"
+          }
+        },
+        "x-ob-usage-tips": ""
+      },
+      "TaxonomyElementArrayInteger": {
+        "type": "object",
+        "properties": {
+          "Value": {
+            "$ref": "#/components/schemas/ValueArrayInteger"
           },
           "Unit": {
             "$ref": "#/components/schemas/Unit"
