@@ -3,6 +3,13 @@
 2202.1.0
 --------
 
+Breaking changes
+----------------
+* Replaces the primitive Value with ValueNumber, ValueString, ValueBoolean, ValueInteger, ValueArrayNumber, ValueArrayString, ValueArrayBoolean, ValueArrayInteger. (:pull:`17`)
+
+
+Elements added
+=======
 Element changes
 ~~~~~~~~~~~~~~~
 * Add ContractID, ProjectID, PortfolioID, ProjectName, PorfolioName, Projects, Sites  (:pull:`35`)
