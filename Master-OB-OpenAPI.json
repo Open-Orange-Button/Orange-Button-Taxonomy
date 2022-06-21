@@ -2575,7 +2575,7 @@
       "InterconnectionPhaseType": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementInteger"
+            "$ref": "#/components/schemas/TaxonomyElementString"
           },
           {
             "type": "object",
@@ -3836,7 +3836,7 @@
           {
             "type": "object",
             "description": "The number of days the jurisdiction on average takes to complete a permit",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "DecimalItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": 10
@@ -4289,7 +4289,7 @@
           {
             "type": "object",
             "description": "If a on-site Technician from the AHJ is required to complete the AHJInspection",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "BooleanItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": true
@@ -4334,7 +4334,7 @@
       "Quantity": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
           },
           {
             "type": "object",
@@ -5522,7 +5522,7 @@
       "CalibrationInterval": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5537,7 +5537,7 @@
       "EquipTypeWarrTerm": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -5910,7 +5910,7 @@
       "FilterIrradStabilityWindowLen": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -6943,7 +6943,7 @@
       "WireGauge": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
+            "$ref": "#/components/schemas/TaxonomyElementString"
           },
           {
             "type": "object",
@@ -7756,7 +7756,7 @@
       "BypassDiodeQuantity": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
           },
           {
             "type": "object",
@@ -7771,7 +7771,7 @@
       "CellsInSeries": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
           },
           {
             "type": "object",
@@ -7786,7 +7786,7 @@
       "CellStringsParallelQuantity": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
           },
           {
             "type": "object",
@@ -8570,7 +8570,7 @@
       "InterconnectionLineCount": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
           },
           {
             "type": "object",
