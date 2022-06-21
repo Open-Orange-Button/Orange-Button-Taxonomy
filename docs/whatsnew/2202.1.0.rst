@@ -13,6 +13,7 @@ Element changes
 * Add IsPVInputCapable to ProdEnergyStorageSystem and ProdInverter (:pull:`56`)
 * Add RoundTripEfficiency to ProdEnergyStorageSystem (:pull:`56`)
 * Add GridInterfaceType to ProdEnergyStorageSystem and ProdInverter (:pull:`39`)
+* Changes RoundTripEfficiency to EfficiencyRoundTrip and adds element to ProdBattery and updates ProdEnergyStorageSystem (:pull:`56`)
 
 Object changes
 ~~~~~~~~~~~~~~

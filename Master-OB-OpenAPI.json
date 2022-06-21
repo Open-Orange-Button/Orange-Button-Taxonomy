@@ -9350,6 +9350,9 @@
               },
               "DCOutput": {
                 "$ref": "#/components/schemas/DCOutput"
+              },
+              "EfficiencyRoundTrip": {
+                "$ref": "#/components/schemas/EfficiencyRoundTrip"
               }
             }
           }
@@ -10456,14 +10459,14 @@
               "TemperatureMinimumOperating": {
                 "$ref": "#/components/schemas/TemperatureMinimumOperating"
               },
-              "RoundTripEfficiency": {
-                "$ref": "#/components/schemas/RoundTripEfficiency"
-              },
               "GridInterfaceType": {
                 "$ref": "#/components/schemas/GridInterfaceType"
               },
               "IsPVInputCapable": {
                 "$ref": "#/components/schemas/IsPVInputCapable"
+              },
+              "EfficiencyRoundTrip": {
+                "$ref": "#/components/schemas/EfficiencyRoundTrip"
               }
             }
           }
@@ -10937,23 +10940,6 @@
           "$ref": "#/components/schemas/ModuleElectRating"
         }
       },
-      "RoundTripEfficiency": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Percent of energy retained during full charge/discharge cycle",
-            "x-ob-item-type": "percentItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 98.5
-            }
-          }
-        ]
-      },
       "GridInterfaceType": {
         "allOf": [
           {
@@ -10984,6 +10970,23 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": true
+            }
+          }
+        ]
+      },
+      "EfficiencyRoundTrip": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Percent of energy retained during full charge/discharge cycle",
+            "x-ob-item-type": "percentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 98.5
             }
           }
         ]
