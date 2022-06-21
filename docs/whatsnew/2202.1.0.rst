@@ -9,24 +9,34 @@ Breaking changes
 
 
 Elements added
+=======
+Element changes
+~~~~~~~~~~~~~~~
+* Add ContractID, ProjectID, PortfolioID, ProjectName, PorfolioName, Projects, Sites  (:pull:`35`)
+* Add FirmwareVersion, CertificationDate, Checksum, AppliedDate, EfficiencyCECWtdVoltageMax, EfficiencyCECWtdVoltageMin, EfficiencyCECWtdVoltageNom, NightTare, IsHybrid, HasMeter, CECNotes, Identifier, SourceName (:pull:`51`)
+* Add OptimizerType, CompatibleWith, AllowsString, IsVocReducing, IsSelectiveOptimization, GeoRegion, (:pull:`50`)
+* Add TemperatureCoefficientMaxPowerVoltage, TemperatureCoefficientMaxPowerCurrent, PowerSTC, ModuleArea, IsBIPV, ModuleRatingCondition (:pull:`60`)
+* Remove CellType, redundant with CellTechnologyType (:pull:`60`)
+
+Object changes
 ~~~~~~~~~~~~~~
-* Adds ContractID, ProjectID, PortfolioID, ProjectName, PorfolioName, Projects, Sites  (:pull:`35`)
-* Adds FirmwareVersion, CertificationDate, Checksum, AppliedDate, EfficiencyCECWtdVoltageMax, EfficiencyCECWtdVoltageMin, EfficiencyCECWtdVoltageNom, NightTare, IsHybrid, HasMeter, CECNotes
-  Identifier, SourceName (:pull:`51`)
-* Adds OptimizerType, CompatibleWith, AllowsString, IsVocReducing, IsSelectiveOptimization, GeoRegion, (:pull:`50`)
+* Add Portfolio, Project (:pull:`35`)
+* Add Firmware, FirmwareVersions, AlternativeIdentifier, AlternativeIdentifiers (:pull:`51`)
+* Add ModuleElectRating (:pull:`60`)
+* Add to ProdModule: TemperatureCoefficientMaxPowerVoltage, TemperatureCoefficientMaxPowerCurrent, PowerSTC, ModuleArea, IsBIPV, ModuleRatingCondition, ModuleElectRatings (:pull:`60`)
+* Remove from ProdModule: CurrentAtMaximumPower, CurrentShortCircuit, VoltageAtMaximumPower. These elements are replaced by ModuleElectRatings. (:pull:`60`)
 
-Objects added
+Array changes
 ~~~~~~~~~~~~~
-* Adds Portfolio, Project Objects (:pull:`35`)
-* Adds Firmware, FirmwareVersions
-  AlternativeIdentifier, AlternativeIdentifiers (:pull:`51`)
+* Add ModuleElectRatings (:pull:`60`)
 
-Units added
-~~~~~~~~~~~
-* Adds AccelerationItemType (:pull:`47`)
-* Adds OptimizerTypeItemType (:pull:`50`)
-* Removes solar-types:optimizerTypeItemType(:pull:`50`)
-* Adds "UL1973" and "JA12" to CertificationTypeProductItemType (:pull:`58`) 
+Unit changes
+~~~~~~~~~~~~
+* Add AccelerationItemType (:pull:`47`)
+* Add OptimizerTypeItemType (:pull:`50`)
+* Add Values "UL1973" and "JA12" to CertificationTypeProductItemType (:pull:`58`) 
+* Add ModuleRatingConditionItemType (:pull:`60`)
+* Remove solar-types:optimizerTypeItemType(:pull:`50`)
 
 Bug fixes
 ~~~~~~~~~
@@ -46,4 +56,3 @@ Contributors
 * Kevin Kirkley (:ghuser:`kevinkirkl3y`)
 * Zia Swim (:ghuser:`blizita`)
 * Taos Transue (:ghuser:`reepoi`)
-

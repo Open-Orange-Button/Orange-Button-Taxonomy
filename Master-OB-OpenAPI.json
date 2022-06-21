@@ -7821,6 +7821,40 @@
           }
         ]
       },
+      "TemperatureCoefficientMaxPowerVoltage": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The temperature coefficient of voltage at maximum power.",
+            "x-ob-item-type": "tempCoefficientItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": -0.304
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "TemperatureCoefficientMaxPowerCurrent": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The temperature coefficient of current at maximum power.",
+            "x-ob-item-type": "tempCoefficientItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 0.05
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
       "VoltageMaximumSystem": {
         "allOf": [
           {
@@ -7852,23 +7886,6 @@
             "x-ob-sample-value": {
               "Unit": "Ampere",
               "Value": 20
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "CellType": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The cell type for a solar module",
-            "x-ob-item-type": "cellTechnologyItemType",
-            "x-ob-usage-tips": "Used for large group categorizations",
-            "x-ob-sample-value": {
-              "Value": "monoSi"
             },
             "x-ob-item-type-group": ""
           }
@@ -8117,18 +8134,6 @@
               "PowerWarranty": {
                 "$ref": "#/components/schemas/PowerWarranty"
               },
-              "PowerMaximum": {
-                "$ref": "#/components/schemas/PowerMaximum"
-              },
-              "VoltageAtMaximumPower": {
-                "$ref": "#/components/schemas/VoltageAtMaximumPower"
-              },
-              "CurrentAtMaximumPower": {
-                "$ref": "#/components/schemas/CurrentAtMaximumPower"
-              },
-              "CurrentShortCircuit": {
-                "$ref": "#/components/schemas/CurrentShortCircuit"
-              },
               "ModuleEfficiency": {
                 "$ref": "#/components/schemas/ModuleEfficiency"
               },
@@ -8233,6 +8238,24 @@
               },
               "Warranties": {
                 "$ref": "#/components/schemas/Warranties"
+              },
+              "CECNotes": {
+                "$ref": "#/components/schemas/CECNotes"
+              },
+              "PowerSTC": {
+                "$ref": "#/components/schemas/PowerSTC"
+              },
+              "ModuleElectRatings": {
+                "$ref": "#/components/schemas/ModuleElectRatings"
+              },
+              "IsBIPV": {
+                "$ref": "#/components/schemas/IsBIPV"
+              },
+              "TemperatureCoefficientMaxPowerCurrent": {
+                "$ref": "#/components/schemas/TemperatureCoefficientMaxPowerCurrent"
+              },
+              "TemperatureCoefficientMaxPowerVoltage": {
+                "$ref": "#/components/schemas/TemperatureCoefficientMaxPowerVoltage"
               }
             }
           }
@@ -8242,9 +8265,6 @@
         "type": "object",
         "description": "A subcomponent of a ProdModule",
         "properties": {
-          "CellType": {
-            "$ref": "#/components/schemas/CellType"
-          },
           "Description": {
             "$ref": "#/components/schemas/Description"
           },
@@ -10920,6 +10940,106 @@
             }
           }
         ]
+      },
+      "ModuleArea": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The area of a PV module inside the frame. Equal to total module area for a frameless module.",
+            "x-ob-item-type": "num:areaItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 1.5,
+              "Unit": "sqm"
+            }
+          }
+        ]
+      },
+      "IsBIPV": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "True if the PV module is intended for a building-integrated PV system.",
+            "x-ob-item-type": "stdi:booleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": true
+            }
+          }
+        ]
+      },
+      "ModuleRatingCondition": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A condition at which a module electrical rating is determined.",
+            "x-ob-item-type": "ModuleRatingConditionItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "STC"
+            }
+          }
+        ]
+      },
+      "PowerSTC": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "DC power at Standard Test Condition (STC). STC is defined as 1000 W/m2 irradiance, 25C and ASTM G173-03 standard solar spectrum.",
+            "x-ob-item-type": "num:powerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 300,
+              "Unit": "W"
+            }
+          }
+        ]
+      },
+      "ModuleElectRating": {
+        "type": "object",
+        "description": "Data describing the module characteristics at a specific rating condition.",
+        "properties": {
+          "PowerDC": {
+            "$ref": "#/components/schemas/PowerDC"
+          },
+          "VoltageOpenCircuit": {
+            "$ref": "#/components/schemas/VoltageOpenCircuit"
+          },
+          "VoltageAtMaximumPower": {
+            "$ref": "#/components/schemas/VoltageAtMaximumPower"
+          },
+          "CurrentShortCircuit": {
+            "$ref": "#/components/schemas/CurrentShortCircuit"
+          },
+          "CurrentAtMaximumPower": {
+            "$ref": "#/components/schemas/CurrentAtMaximumPower"
+          },
+          "ModuleRatingCondition": {
+            "$ref": "#/components/schemas/ModuleRatingCondition"
+          }
+        }
+      },
+      "ModuleElectRatings": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ModuleElectRating"
+        }
       }
     }
   },
@@ -16185,6 +16305,27 @@
         "BoostBuck": {
           "label": "Boost-Buck",
           "description": "This optimizer is Boost-Buck"
+        }
+      }
+    },
+    "ModuleRatingConditionItemType": {
+      "description": "Conditions at which PV module electrical ratings are made.",
+      "enums": {
+        "STC": {
+          "label": "Standard Test Condition",
+          "description": "1000 W/m2, 25C, ASTM G-173 spectrum"
+        },
+        "PTC": {
+          "label": "PVUSA Test Condition",
+          "description": "1000 W/m2, 20C air temperature, 1 m/s wind speed, air mass of 1.5. "
+        },
+        "NOCT": {
+          "label": "Nominal Operating Cell Temperature",
+          "description": "800 W/m2, 20C air temperature, 1 m/s wind speed, mounting is open for air circulation."
+        },
+        "LIC": {
+          "label": "Low Irradiance Condition",
+          "description": "200 W/m2, 25C module temperature, 0 m/s wind speed and air mass 1.5."
         }
       }
     }
