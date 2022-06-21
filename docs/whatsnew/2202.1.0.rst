@@ -17,6 +17,7 @@ Element changes
 * Add OptimizerType, CompatibleWith, AllowsString, IsVocReducing, IsSelectiveOptimization, GeoRegion, (:pull:`50`)
 * Add TemperatureCoefficientMaxPowerVoltage, TemperatureCoefficientMaxPowerCurrent, PowerSTC, ModuleArea, IsBIPV, ModuleRatingCondition (:pull:`60`)
 * Remove CellType, redundant with CellTechnologyType (:pull:`60`)
+* Rename MCERgroundmotionSS to MCERGroundMotionSS, MCERgroundmotionS1 to MCERGroundMotionS1 (:pull:`59`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -36,7 +37,22 @@ Unit changes
 * Add OptimizerTypeItemType (:pull:`50`)
 * Add Values "UL1973" and "JA12" to CertificationTypeProductItemType (:pull:`58`) 
 * Add ModuleRatingConditionItemType (:pull:`60`)
-* Remove solar-types:optimizerTypeItemType(:pull:`50`)
+* Add CommunicationTransportLayerItemType (:pull:`59`)
+* Add Values "TCPIP" to CommunicationProtocolItemType (:pull:`59`)
+* Remove solar-types:optimizerTypeItemType (:pull:`50`)
+
+In (:pull:`59`), all item types are renamed to follow the upper camel case convention with all-caps acronyms, and consist only of these characters: 0-9, A-Z, a-z, and _ (underscore).
+The prefixes of many item type names, such as "solar-types:" and "stdi:", have been removed and recorded in the item type's description.
+If an item type defines enumerations, its enumerations are also renamed in this way.
+Item type renaming examples:
+
+* cellTechnologyItemType to CellTechnologyItemType (capitalize each word)
+* stdi:stringItemType to StringItemType (remove prefix "stdi:" and capitalize each word)
+
+Enumeration renaming examples from CommunicationProtocolItemType:
+
+* "REbus DC Nanogrid" to "REbusDCNanogrid" (remove spaces)
+* "CAN 2.0 B" to "CAN2_0B" (remove spaces and change "." to "_")
 
 Bug fixes
 ~~~~~~~~~
@@ -44,7 +60,8 @@ Bug fixes
 
 Testing
 ~~~~~~~
-
+In (:pull:`59`), new rules have been added to the taxonomy checker workflow to validate the references made between objects in the taxonomy JSON file.
+For example, these rules check that each item type or item type group referred to by a schema definition exists, and that the units or enumerations of an item type group are a subset of those defined by its item type.
 
 Documentation
 ~~~~~~~~~~~~~
