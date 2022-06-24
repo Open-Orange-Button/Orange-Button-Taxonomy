@@ -10374,9 +10374,9 @@
           {
             "type": "object",
             "description": "Energy measurement accuracy, as defined by ANSI C12.20. The value is percent over or under the exact measurement. ",
-            "x-ob-item-type": "percentItemType",
+            "x-ob-item-type": "PercentItemType",
             "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "In 2022 if it is marked for Performance Based Incentive (PBI) then enter 2% or less. ",
+            "x-ob-usage-tips": "In 2022 if it the meter is marked for Performance Based Incentive (PBI) then enter 2% or less. ",
             "x-ob-sample-value": {
               "Value": 2
             }
@@ -10391,7 +10391,7 @@
           {
             "type": "object",
             "description": "Type of display on a device. ",
-            "x-ob-item-type": "stdi:stringItemType",
+            "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
