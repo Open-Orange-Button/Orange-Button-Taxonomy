@@ -10965,7 +10965,7 @@
           {
             "type": "object",
             "description": "Is this device capable of accepting PV input natively (without seperate charge controller)",
-            "x-ob-item-type": "stdi:booleanItemType",
+            "x-ob-item-type": "BooleanItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -10982,7 +10982,7 @@
           {
             "type": "object",
             "description": "Percent of energy retained during full charge/discharge cycle",
-            "x-ob-item-type": "percentItemType",
+            "x-ob-item-type": "PercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
