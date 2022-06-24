@@ -3,31 +3,17 @@
 2202.1.0
 --------
 
-Breaking changes
-----------------
-* Replaces the primitive Value with ValueNumber, ValueString, ValueBoolean, ValueInteger, ValueArrayNumber, ValueArrayString, ValueArrayBoolean, ValueArrayInteger. (:pull:`17`)
-
 
 Elements added
-=======
-Element changes
-~~~~~~~~~~~~~~~
-* Add ContractID, ProjectID, PortfolioID, ProjectName, PorfolioName, Projects, Sites  (:pull:`35`)
-* Add FirmwareVersion, CertificationDate, Checksum, AppliedDate, EfficiencyCECWtdVoltageMax, EfficiencyCECWtdVoltageMin, EfficiencyCECWtdVoltageNom, NightTare, IsHybrid, HasMeter, CECNotes, Identifier, SourceName (:pull:`51`)
-* Add OptimizerType, CompatibleWith, AllowsString, IsVocReducing, IsSelectiveOptimization, GeoRegion, (:pull:`50`)
-* Add TemperatureCoefficientMaxPowerVoltage, TemperatureCoefficientMaxPowerCurrent, PowerSTC, ModuleArea, IsBIPV, ModuleRatingCondition (:pull:`60`)
-* Remove CellType, redundant with CellTechnologyType (:pull:`60`)
-* Rename MCERgroundmotionSS to MCERGroundMotionSS, MCERgroundmotionS1 to MCERGroundMotionS1 (:pull:`59`)
-
-Object changes
 ~~~~~~~~~~~~~~
 * Add Portfolio, Project (:pull:`35`)
 * Add Firmware, FirmwareVersions, AlternativeIdentifier, AlternativeIdentifiers (:pull:`51`)
 * Add ModuleElectRating (:pull:`60`)
 * Add to ProdModule: TemperatureCoefficientMaxPowerVoltage, TemperatureCoefficientMaxPowerCurrent, PowerSTC, ModuleArea, IsBIPV, ModuleRatingCondition, ModuleElectRatings (:pull:`60`)
 * Remove from ProdModule: CurrentAtMaximumPower, CurrentShortCircuit, VoltageAtMaximumPower. These elements are replaced by ModuleElectRatings. (:pull:`60`)
+* Adds DisplayDescription, AccuracyClassANSI (:pull:`57`)
 
-Array changes
+Objects added
 ~~~~~~~~~~~~~
 * Add ModuleElectRatings (:pull:`60`)
 
@@ -35,7 +21,7 @@ Unit changes
 ~~~~~~~~~~~~
 * Add AccelerationItemType (:pull:`47`)
 * Add OptimizerTypeItemType (:pull:`50`)
-* Add Values "UL1973" and "JA12" to CertificationTypeProductItemType (:pull:`58`) 
+* Add Values "UL1973" and "JA12" to CertificationTypeProductItemType (:pull:`58`)
 * Add ModuleRatingConditionItemType (:pull:`60`)
 * Add CommunicationTransportLayerItemType (:pull:`59`)
 * Add Values "TCPIP" to CommunicationProtocolItemType (:pull:`59`)
@@ -48,6 +34,10 @@ Item type renaming examples:
 
 * cellTechnologyItemType to CellTechnologyItemType (capitalize each word)
 * stdi:stringItemType to StringItemType (remove prefix "stdi:" and capitalize each word)
+* Adds Portfolio, Project Objects (:pull:`35`)
+* Adds Firmware, FirmwareVersions
+  AlternativeIdentifier, AlternativeIdentifiers (:pull:`51`)
+* Adds ProdMeter (:pull:`57`)
 
 Enumeration renaming examples from CommunicationProtocolItemType:
 

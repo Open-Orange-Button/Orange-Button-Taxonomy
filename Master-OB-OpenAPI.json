@@ -10341,6 +10341,65 @@
           }
         ]
       },
+      "ProdMeter": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Product"
+          },
+          {
+            "type": "object",
+            "description": "A device used to measure generated and/or consumed energy.",
+            "properties": {
+              "CECNotes": {
+                "$ref": "#/components/schemas/CECNotes"
+              },
+              "CECListingDate": {
+                "$ref": "#/components/schemas/CECListingDate"
+              },
+              "AccuracyClassANSI": {
+                "$ref": "#/components/schemas/AccuracyClassANSI"
+              },
+              "DisplayDescription": {
+                "$ref": "#/components/schemas/DisplayDescription"
+              }
+            }
+          }
+        ]
+      },
+      "AccuracyClassANSI": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Energy measurement accuracy, as defined by ANSI C12.20. The value is percent over or under the exact measurement. ",
+            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "In 2022 if the meter is marked for Performance Based Incentive (PBI) then enter 2% or less. ",
+            "x-ob-sample-value": {
+              "Value": 2
+            }
+          }
+        ]
+      },
+      "DisplayDescription": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Type of display on a device. ",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "LCD"
+            }
+          }
+        ]
+      },
       "ModuleArea": {
         "allOf": [
           {
