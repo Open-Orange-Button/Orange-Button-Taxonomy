@@ -181,9 +181,6 @@
           "CalibrationInterval": {
             "$ref": "#/components/schemas/CalibrationInterval"
           },
-          "PVSystemID": {
-            "$ref": "#/components/schemas/PVSystemID"
-          },
           "PurchDate": {
             "$ref": "#/components/schemas/PurchDate"
           },
@@ -1749,79 +1746,6 @@
         },
         "x-ob-usage-tips": ""
       },
-      "PVSystem": {
-        "type": "object",
-        "description": "A solar photovoltaic system",
-        "properties": {
-          "CapacityDC": {
-            "$ref": "#/components/schemas/CapacityDC"
-          },
-          "PVSystemID": {
-            "$ref": "#/components/schemas/PVSystemID"
-          },
-          "PVSystemPrice": {
-            "$ref": "#/components/schemas/PVSystemPrice"
-          },
-          "Devices": {
-            "$ref": "#/components/schemas/Devices"
-          },
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "OperationalPhase": {
-            "$ref": "#/components/schemas/OperationalPhase"
-          },
-          "BillOfMaterials": {
-            "$ref": "#/components/schemas/BillOfMaterials"
-          },
-          "OperationalStatus": {
-            "$ref": "#/components/schemas/OperationalStatus"
-          },
-          "StructureID": {
-            "$ref": "#/components/schemas/StructureID"
-          },
-          "ElectricalServiceID": {
-            "$ref": "#/components/schemas/ElectricalServiceID"
-          },
-          "RiskCategory": {
-            "$ref": "#/components/schemas/RiskCategory"
-          },
-          "EnergyModels": {
-            "$ref": "#/components/schemas/EnergyModels"
-          },
-          "EnergyProductions": {
-            "$ref": "#/components/schemas/EnergyProductions"
-          },
-          "PVArrays": {
-            "$ref": "#/components/schemas/PVArrays"
-          },
-          "CapacityAC": {
-            "$ref": "#/components/schemas/CapacityAC"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
-      "PVSystemPrice": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The price of the PV system",
-            "x-ob-item-type": "MonetaryItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "USD",
-              "Value": 43095
-            },
-            "x-ob-item-type-group": "OBMonetary"
-          }
-        ]
-      },
       "EnergyUsage": {
         "type": "object",
         "description": "A value of energy consumed in one time period",
@@ -1844,21 +1768,6 @@
           }
         },
         "x-ob-usage-tips": ""
-      },
-      "PVSystemID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Identifier for the System (plant).",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
-            "x-ob-item-type-group": ""
-          }
-        ]
       },
       "CapacityDC": {
         "allOf": [
@@ -3251,9 +3160,6 @@
           "SiteID": {
             "$ref": "#/components/schemas/SiteID"
           },
-          "PVSystemID": {
-            "$ref": "#/components/schemas/PVSystemID"
-          },
           "Contacts": {
             "$ref": "#/components/schemas/Contacts"
           },
@@ -3987,89 +3893,6 @@
             "x-ob-usage-tips": "Used for enumerated list values for selectable dropdown lists or multi-select questions",
             "x-ob-sample-value": {
               "Value": "Customer Selection 1"
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "BatterySystem": {
-        "type": "object",
-        "description": "A battery system",
-        "properties": {
-          "BatterySystemID": {
-            "$ref": "#/components/schemas/BatterySystemID"
-          },
-          "BatterySystemPrice": {
-            "$ref": "#/components/schemas/BatterySystemPrice"
-          },
-          "CapacityDC": {
-            "$ref": "#/components/schemas/CapacityDC"
-          },
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "ElectricalServiceID": {
-            "$ref": "#/components/schemas/ElectricalServiceID"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "OperationalPhase": {
-            "$ref": "#/components/schemas/OperationalPhase"
-          },
-          "OperationalStatus": {
-            "$ref": "#/components/schemas/OperationalStatus"
-          },
-          "StructureID": {
-            "$ref": "#/components/schemas/StructureID"
-          },
-          "BillOfMaterials": {
-            "$ref": "#/components/schemas/BillOfMaterials"
-          },
-          "Devices": {
-            "$ref": "#/components/schemas/Devices"
-          },
-          "EnergyProductions": {
-            "$ref": "#/components/schemas/EnergyProductions"
-          },
-          "EnergyConsumptions": {
-            "$ref": "#/components/schemas/EnergyConsumptions"
-          },
-          "EnergyModels": {
-            "$ref": "#/components/schemas/EnergyModels"
-          }
-        }
-      },
-      "BatterySystemID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The UUID of the battery system",
-            "x-ob-item-type": "UUIDItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "BatterySystemPrice": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The price of the battery system as indicated on the contract",
-            "x-ob-item-type": "MonetaryItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "USD",
-              "Value": 12000
             },
             "x-ob-item-type-group": ""
           }
@@ -10440,6 +10263,143 @@
         "items": {
           "$ref": "#/components/schemas/ModuleElectRating"
         }
+      },
+      "System": {
+        "type": "object",
+        "description": "Generic abstract base class for generation/storage systems.",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "OperationalStatus": {
+            "$ref": "#/components/schemas/OperationalStatus"
+          },
+          "OperationalPhase": {
+            "$ref": "#/components/schemas/OperationalPhase"
+          },
+          "Devices": {
+            "$ref": "#/components/schemas/Devices"
+          },
+          "BillOfMaterials": {
+            "$ref": "#/components/schemas/BillOfMaterials"
+          },
+          "SystemID": {
+            "$ref": "#/components/schemas/SystemID"
+          },
+          "SystemPrice": {
+            "$ref": "#/components/schemas/SystemPrice"
+          }
+        }
+      },
+      "SystemID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Generic identifier of a system.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "\"945d3284-145f-4edd-a062-9d8daddd3b4b\""
+            }
+          }
+        ]
+      },
+      "SystemPrice": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Price of a generic system.",
+            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type-group": "OBMonetary",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "USD",
+              "Value": 50000
+            }
+          }
+        ]
+      },
+      "PVSystem": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/System"
+          },
+          {
+            "type": "object",
+            "description": "A solar photovoltaic system",
+            "properties": {
+              "CapacityDC": {
+                "$ref": "#/components/schemas/CapacityDC"
+              },
+              "StructureID": {
+                "$ref": "#/components/schemas/StructureID"
+              },
+              "ElectricalServiceID": {
+                "$ref": "#/components/schemas/ElectricalServiceID"
+              },
+              "RiskCategory": {
+                "$ref": "#/components/schemas/RiskCategory"
+              },
+              "EnergyModels": {
+                "$ref": "#/components/schemas/EnergyModels"
+              },
+              "EnergyProductions": {
+                "$ref": "#/components/schemas/EnergyProductions"
+              },
+              "PVArrays": {
+                "$ref": "#/components/schemas/PVArrays"
+              },
+              "CapacityAC": {
+                "$ref": "#/components/schemas/CapacityAC"
+              }
+            },
+            "x-ob-usage-tips": ""
+          }
+        ]
+      },
+      "BatterySystem": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/System"
+          },
+          {
+            "type": "object",
+            "description": "A battery system",
+            "properties": {
+              "CapacityDC": {
+                "$ref": "#/components/schemas/CapacityDC"
+              },
+              "Description": {
+                "$ref": "#/components/schemas/Description"
+              },
+              "ElectricalServiceID": {
+                "$ref": "#/components/schemas/ElectricalServiceID"
+              },
+              "StructureID": {
+                "$ref": "#/components/schemas/StructureID"
+              },
+              "EnergyProductions": {
+                "$ref": "#/components/schemas/EnergyProductions"
+              },
+              "EnergyConsumptions": {
+                "$ref": "#/components/schemas/EnergyConsumptions"
+              },
+              "EnergyModels": {
+                "$ref": "#/components/schemas/EnergyModels"
+              }
+            }
+          }
+        ]
       }
     }
   },
