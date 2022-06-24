@@ -18,6 +18,8 @@ Element changes
 * Add TemperatureCoefficientMaxPowerVoltage, TemperatureCoefficientMaxPowerCurrent, PowerSTC, ModuleArea, IsBIPV, ModuleRatingCondition (:pull:`60`)
 * Remove CellType, redundant with CellTechnologyType (:pull:`60`)
 * Rename MCERgroundmotionSS to MCERGroundMotionSS, MCERgroundmotionS1 to MCERGroundMotionS1 (:pull:`59`)
+* Remove PVSystemId, BatterySystemID, PVSystemPrice, BatterySystemPrice (:pull:`73`)
+* Add SystemID, SystemPrice (:pull:`73`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -26,7 +28,7 @@ Object changes
 * Add ModuleElectRating (:pull:`60`)
 * Add to ProdModule: TemperatureCoefficientMaxPowerVoltage, TemperatureCoefficientMaxPowerCurrent, PowerSTC, ModuleArea, IsBIPV, ModuleRatingCondition, ModuleElectRatings (:pull:`60`)
 * Remove from ProdModule: CurrentAtMaximumPower, CurrentShortCircuit, VoltageAtMaximumPower. These elements are replaced by ModuleElectRatings. (:pull:`60`)
-
+* Added System Object (:pull:`73`)
 Array changes
 ~~~~~~~~~~~~~
 * Add ModuleElectRatings (:pull:`60`)
