@@ -22,20 +22,25 @@ Object changes
 * Add ModuleElectRating (:pull:`60`)
 * Add to ProdModule: TemperatureCoefficientMaxPowerVoltage, TemperatureCoefficientMaxPowerCurrent, PowerSTC, ModuleArea, IsBIPV, ModuleRatingCondition, ModuleElectRatings (:pull:`60`)
 * Remove from ProdModule: CurrentAtMaximumPower, CurrentShortCircuit, VoltageAtMaximumPower. These elements are replaced by ModuleElectRatings. (:pull:`60`)
-
-Array changes
-~~~~~~~~~~~~~
-* Add ModuleElectRatings (:pull:`60`)
+* Adds DisplayDescription, AccuracyClassANSI (:pull:`57`)
 
 Unit changes
 ~~~~~~~~~~~~
 * Add AccelerationItemType (:pull:`47`)
 * Add OptimizerTypeItemType (:pull:`50`)
-* Add Values "UL1973" and "JA12" to CertificationTypeProductItemType (:pull:`58`) 
+* Add Values "UL1973" and "JA12" to CertificationTypeProductItemType (:pull:`58`)
 * Add ModuleRatingConditionItemType (:pull:`60`)
 * Remove solar-types:optimizerTypeItemType(:pull:`50`)
 * Add UL1741SB and UL9540 to CertificationTypeProductItemType (:pull:`56`)
 * Add GridInterfaceTypeItemType (:pull:`39`)
+* Add CommunicationTransportLayerItemType (:pull:`59`)
+* Add Value "TCPIP" to CommunicationProtocolItemType (:pull:`59`)
+* Remove solar-types:optimizerTypeItemType (:pull:`50`)
+* All item types are renamed to follow the upper camel case convention with all-caps acronyms, and consist only of these characters: 0-9, A-Z, a-z, and _ (underscore). 
+  The prefixes of many item type names, such as "solar-types:" and "stdi:", have been removed and recorded in the item type's description.
+  If an item type defines enumerations, its enumerations are also renamed in this way. (:pull:`59`)
+  Examples: cellTechnologyItemType to CellTechnologyItemType (capitalize each word), stdi:stringItemType to StringItemType (remove prefix "stdi:" and capitalize each word)
+  Enumeration renaming examples from CommunicationProtocolItemType: "REbus DC Nanogrid" to "REbusDCNanogrid" (remove spaces), "CAN 2.0 B" to "CAN2_0B" (remove spaces and change "." to "_")
 
 Bug fixes
 ~~~~~~~~~
@@ -43,7 +48,9 @@ Bug fixes
 
 Testing
 ~~~~~~~
-
+* Added new rules to the taxonomy checker workflow to validate the references made between objects in the taxonomy JSON file.
+  For example, these rules check that each item type or item type group referred to by a schema definition exists, and that
+  the units or enumerations of an item type group are a subset of those defined by its item type. (:pull:`59`)
 
 Documentation
 ~~~~~~~~~~~~~
@@ -54,3 +61,4 @@ Contributors
 * Cliff Hansen (:ghuser:`cwhanse`)
 * Kevin Kirkley (:ghuser:`kevinkirkl3y`)
 * Zia Swim (:ghuser:`blizita`)
+* Taos Transue (:ghuser:`reepoi`)
