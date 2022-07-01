@@ -8870,8 +8870,8 @@
               "DCOutput": {
                 "$ref": "#/components/schemas/DCOutput"
               },
-              "EfficiencyRoundTrip": {
-                "$ref": "#/components/schemas/EfficiencyRoundTrip"
+              "EfficiencyBatteryRoundTrip": {
+                "$ref": "#/components/schemas/EfficiencyBatteryRoundTrip"
               }
             }
           }
@@ -9984,8 +9984,8 @@
               "IsPVInputCapable": {
                 "$ref": "#/components/schemas/IsPVInputCapable"
               },
-              "EfficiencyRoundTrip": {
-                "$ref": "#/components/schemas/EfficiencyRoundTrip"
+              "EfficiencyBatteryRoundTrip": {
+                "$ref": "#/components/schemas/EfficiencyBatteryRoundTrip"
               }
             }
           }
@@ -10552,7 +10552,7 @@
           }
         ]
       },
-      "EfficiencyRoundTrip": {
+      "EfficiencyBatteryRoundTrip": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementNumber"
