@@ -4,17 +4,19 @@
 --------
 
 
-Elements added
-~~~~~~~~~~~~~~
+Element Changes
+~~~~~~~~~~~~~~~
 * Add Portfolio, Project (:pull:`35`)
 * Add Firmware, FirmwareVersions, AlternativeIdentifier, AlternativeIdentifiers (:pull:`51`)
 * Add ModuleElectRating (:pull:`60`)
 * Add to ProdModule: TemperatureCoefficientMaxPowerVoltage, TemperatureCoefficientMaxPowerCurrent, PowerSTC, ModuleArea, IsBIPV, ModuleRatingCondition, ModuleElectRatings (:pull:`60`)
 * Remove from ProdModule: CurrentAtMaximumPower, CurrentShortCircuit, VoltageAtMaximumPower. These elements are replaced by ModuleElectRatings. (:pull:`60`)
 * Adds DisplayDescription, AccuracyClassANSI (:pull:`57`)
+* Renames ProdSolarCell to ProdCell, CellQuantity to CellCount. (:pull:`67`)
 
-Objects added
-~~~~~~~~~~~~~
+
+Object Changes
+~~~~~~~~~~~~~~
 * Add ModuleElectRatings (:pull:`60`)
 
 Unit changes
