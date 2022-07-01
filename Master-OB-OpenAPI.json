@@ -10297,6 +10297,9 @@
           },
           "BillOfServices": {
             "$ref": "#/components/schemas/BillOfServices"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         }
       },
