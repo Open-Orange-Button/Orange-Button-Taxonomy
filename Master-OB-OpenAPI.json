@@ -9031,7 +9031,11 @@
           {
             "type": "object",
             "description": "Contractor that does installation",
-            "properties": {}
+            "properties": {
+              "InstallerName": {
+                "$ref": "#/components/schemas/InstallerName"
+              }
+            }
           }
         ]
       },
@@ -10503,6 +10507,23 @@
         "items": {
           "$ref": "#/components/schemas/ModuleElectRating"
         }
+      },
+      "InstallerName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The name of the installer",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Installer, Inc."
+            }
+          }
+        ]
       }
     }
   },
