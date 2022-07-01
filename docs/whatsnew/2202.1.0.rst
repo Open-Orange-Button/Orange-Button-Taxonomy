@@ -12,7 +12,7 @@ Element Changes
 * Add to ProdModule: TemperatureCoefficientMaxPowerVoltage, TemperatureCoefficientMaxPowerCurrent, PowerSTC, ModuleArea, IsBIPV, ModuleRatingCondition, ModuleElectRatings (:pull:`60`)
 * Remove from ProdModule: CurrentAtMaximumPower, CurrentShortCircuit, VoltageAtMaximumPower. These elements are replaced by ModuleElectRatings. (:pull:`60`)
 * Adds DisplayDescription, AccuracyClassANSI (:pull:`57`)
-* Renames ProdSolarCell to ProdCell, CellQuantity to CellCount. (:pull:`67`)
+* Renames ProdSolarCell to ProdCell. Replace SolarCellQuantity and CellQuantity with CellCount. (:pull:`67`)
 
 
 Object Changes
