@@ -12,6 +12,7 @@ Elements added
 * Add to ProdModule: TemperatureCoefficientMaxPowerVoltage, TemperatureCoefficientMaxPowerCurrent, PowerSTC, ModuleArea, IsBIPV, ModuleRatingCondition, ModuleElectRatings (:pull:`60`)
 * Remove from ProdModule: CurrentAtMaximumPower, CurrentShortCircuit, VoltageAtMaximumPower. These elements are replaced by ModuleElectRatings. (:pull:`60`)
 * Adds DisplayDescription, AccuracyClassANSI (:pull:`57`)
+* Add to Installer: InstallerName (:pull:`74`)
 
 Objects added
 ~~~~~~~~~~~~~
