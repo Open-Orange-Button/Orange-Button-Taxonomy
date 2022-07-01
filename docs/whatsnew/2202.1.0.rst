@@ -3,7 +3,7 @@
 2202.1.0
 --------
 
-Element changes
+Element Changes
 ~~~~~~~~~~~~~~~
 * Add ContractID, ProjectID, PortfolioID, ProjectName, PorfolioName, Projects, Sites  (:pull:`35`)
 * Add FirmwareVersion, CertificationDate, Checksum, AppliedDate, EfficiencyCECWtdVoltageMax, EfficiencyCECWtdVoltageMin, EfficiencyCECWtdVoltageNom, NightTare, IsHybrid, HasMeter, CECNotes, Identifier, SourceName (:pull:`51`)
@@ -22,6 +22,7 @@ Object changes
 * Add to ProdModule: TemperatureCoefficientMaxPowerVoltage, TemperatureCoefficientMaxPowerCurrent, PowerSTC, ModuleArea, IsBIPV, ModuleRatingCondition, ModuleElectRatings (:pull:`60`)
 * Remove from ProdModule: CurrentAtMaximumPower, CurrentShortCircuit, VoltageAtMaximumPower. These elements are replaced by ModuleElectRatings. (:pull:`60`)
 * Adds DisplayDescription, AccuracyClassANSI (:pull:`57`)
+* Renames ProdSolarCell to ProdCell. Replace SolarCellQuantity and CellQuantity with CellCount. (:pull:`67`)
 
 Unit changes
 ~~~~~~~~~~~~
