@@ -7397,8 +7397,8 @@
           },
           {
             "type": "object",
-            "description": "The number of ProdCell in a module",
-            "x-ob-item-type": "DecimalItemType",
+            "description": "The number of cells in a module",
+            "x-ob-item-type": "IntegerItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": 120
