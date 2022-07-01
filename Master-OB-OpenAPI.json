@@ -7393,7 +7393,7 @@
       "CellCount": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
           },
           {
             "type": "object",
