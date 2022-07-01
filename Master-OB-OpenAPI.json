@@ -10291,6 +10291,12 @@
           },
           "SystemPrice": {
             "$ref": "#/components/schemas/SystemPrice"
+          },
+          "SystemType": {
+            "$ref": "#/components/schemas/SystemType"
+          },
+          "BillOfServices": {
+            "$ref": "#/components/schemas/BillOfServices"
           }
         }
       },
@@ -10397,6 +10403,23 @@
               "EnergyModels": {
                 "$ref": "#/components/schemas/EnergyModels"
               }
+            }
+          }
+        ]
+      },
+      "SystemType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Type of system referenced by base abstract class System.",
+            "x-ob-item-type": "SystemTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "PV"
             }
           }
         ]
@@ -15626,6 +15649,31 @@
         "LIC": {
           "label": "Low Irradiance Condition",
           "description": "200 W/m2, 25C module temperature, 0 m/s wind speed and air mass 1.5."
+        }
+      }
+    },
+    "SystemTypeItemType": {
+      "description": "Type of system referenced by base abstract class System. ",
+      "enums": {
+        "PV": {
+          "label": "PV System",
+          "description": ""
+        },
+        "Battery": {
+          "label": "Battery System",
+          "description": ""
+        },
+        "ESS": {
+          "label": "Energy Storage System",
+          "description": ""
+        },
+        "Wind": {
+          "label": "Wind System",
+          "description": ""
+        },
+        "Geothermal": {
+          "label": "Geothermal System",
+          "description": ""
         }
       }
     }
