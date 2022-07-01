@@ -962,7 +962,7 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "9999999999"
+              "Value": "(987) 654-3210"
             },
             "x-ob-item-type-group": ""
           }
@@ -979,7 +979,7 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "9999999999"
+              "Value": "(987) 654-3210"
             },
             "x-ob-item-type-group": ""
           }
@@ -996,7 +996,7 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "9999999999"
+              "Value": "(987) 654-3210"
             },
             "x-ob-item-type-group": ""
           }
@@ -8776,7 +8776,9 @@
             "description": "Legal Entity Identifier (LEI) of the entity.",
             "x-ob-item-type": "LegalEntityIdentifierItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "254900HROIFWPRGM1V77"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -8791,7 +8793,9 @@
             "description": "Tax identification number of the entity.",
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "13-7654321"
+            },
             "x-ob-item-type-group": ""
           }
         ]
