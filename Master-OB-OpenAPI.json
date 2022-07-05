@@ -6691,6 +6691,12 @@
               },
               "NightTare": {
                 "$ref": "#/components/schemas/NightTare"
+              },
+              "GridInterfaceType": {
+                "$ref": "#/components/schemas/GridInterfaceType"
+              },
+              "IsPVInputCapable": {
+                "$ref": "#/components/schemas/IsPVInputCapable"
               }
             }
           }
@@ -7390,14 +7396,14 @@
           }
         ]
       },
-      "SolarCellQuantity": {
+      "CellCount": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
           },
           {
             "type": "object",
-            "description": "The number of ProdSolarCell in a module",
+            "description": "The number of cells in a module",
             "x-ob-item-type": "IntegerItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -7574,8 +7580,8 @@
               "FuseSeriesRating": {
                 "$ref": "#/components/schemas/FuseSeriesRating"
               },
-              "ProdSolarCell": {
-                "$ref": "#/components/schemas/ProdSolarCell"
+              "ProdCell": {
+                "$ref": "#/components/schemas/ProdCell"
               },
               "ProdCode": {
                 "$ref": "#/components/schemas/ProdCode"
@@ -7591,9 +7597,6 @@
               },
               "ProdGlazing": {
                 "$ref": "#/components/schemas/ProdGlazing"
-              },
-              "SolarCellQuantity": {
-                "$ref": "#/components/schemas/SolarCellQuantity"
               },
               "JunctionBoxProtectionCertification": {
                 "$ref": "#/components/schemas/JunctionBoxProtectionCertification"
@@ -7628,8 +7631,8 @@
               "BacksheetMaterial": {
                 "$ref": "#/components/schemas/BacksheetMaterial"
               },
-              "CellQuantity": {
-                "$ref": "#/components/schemas/CellQuantity"
+              "CellCount": {
+                "$ref": "#/components/schemas/CellCount"
               },
               "CellStringsParallelQuantity": {
                 "$ref": "#/components/schemas/CellStringsParallelQuantity"
@@ -7671,41 +7674,36 @@
           }
         ]
       },
-      "ProdSolarCell": {
-        "type": "object",
-        "description": "A subcomponent of a ProdModule",
-        "properties": {
-          "Description": {
-            "$ref": "#/components/schemas/Description"
+      "ProdCell": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Product"
           },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "Mass": {
-            "$ref": "#/components/schemas/Mass"
-          },
-          "Width": {
-            "$ref": "#/components/schemas/Width"
-          },
-          "Length": {
-            "$ref": "#/components/schemas/Length"
-          },
-          "Height": {
-            "$ref": "#/components/schemas/Height"
-          },
-          "ProdCode": {
-            "$ref": "#/components/schemas/ProdCode"
-          },
-          "CellColor": {
-            "$ref": "#/components/schemas/CellColor"
-          },
-          "CellCutType": {
-            "$ref": "#/components/schemas/CellCutType"
-          },
-          "CellTechnologyType": {
-            "$ref": "#/components/schemas/CellTechnologyType"
+          {
+            "type": "object",
+            "description": "A subcomponent of a ProdModule",
+            "properties": {
+              "Description": {
+                "$ref": "#/components/schemas/Description"
+              },
+              "FileFolderURL": {
+                "$ref": "#/components/schemas/FileFolderURL"
+              },
+              "ProdCode": {
+                "$ref": "#/components/schemas/ProdCode"
+              },
+              "CellColor": {
+                "$ref": "#/components/schemas/CellColor"
+              },
+              "CellCutType": {
+                "$ref": "#/components/schemas/CellCutType"
+              },
+              "CellTechnologyType": {
+                "$ref": "#/components/schemas/CellTechnologyType"
+              }
+            }
           }
-        }
+        ]
       },
       "ProdGlazing": {
         "type": "object",
@@ -8134,23 +8132,6 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "polymer"
-            }
-          }
-        ]
-      },
-      "CellQuantity": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "How Many Cells are in this module?",
-            "x-ob-item-type": "IntegerItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 60
             }
           }
         ]
@@ -8867,6 +8848,9 @@
               },
               "DCOutput": {
                 "$ref": "#/components/schemas/DCOutput"
+              },
+              "EfficiencyBatteryRoundTrip": {
+                "$ref": "#/components/schemas/EfficiencyBatteryRoundTrip"
               }
             }
           }
@@ -9976,6 +9960,15 @@
               },
               "TemperatureMinimumOperating": {
                 "$ref": "#/components/schemas/TemperatureMinimumOperating"
+              },
+              "GridInterfaceType": {
+                "$ref": "#/components/schemas/GridInterfaceType"
+              },
+              "IsPVInputCapable": {
+                "$ref": "#/components/schemas/IsPVInputCapable"
+              },
+              "EfficiencyBatteryRoundTrip": {
+                "$ref": "#/components/schemas/EfficiencyBatteryRoundTrip"
               }
             }
           }
@@ -10508,10 +10501,61 @@
           "$ref": "#/components/schemas/ModuleElectRating"
         }
       },
-      "InstallerName": {
+      "GridInterfaceType": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Description of how the device interacts with the grid",
+            "x-ob-item-type": "GridInterfaceTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "GridForming"
+            }
+          }
+        ]
+      },
+      "IsPVInputCapable": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "Is this device capable of accepting PV input natively (without seperate charge controller)",
+            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": true
+            }
+          }
+        ]
+      },
+      "EfficiencyBatteryRoundTrip": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Percent of energy retained during full charge/discharge cycle",
+            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 98.5
+            }
+          }
+        ]
+      },
+      "InstallerName": {
+        "allOf": [
+          {
+              "$ref": "#/components/schemas/TaxonomyElementString"
           },
           {
             "type": "object",
@@ -14974,6 +15018,14 @@
         "CSIP_NRTL": {
           "label": "CSIP NRTL Attestation",
           "description": "SunSpec 2030.5 Common Smart Inverter Profile (CSIP) Attestation. Inverter was connected to gateway during compatibility testing."
+        },
+        "UL9540": {
+          "label": "UL9540",
+          "description": ""
+        },
+        "UL1741SB": {
+          "label": "UL1741SB",
+          "description": ""
         }
       }
     },
@@ -15750,6 +15802,23 @@
         "LIC": {
           "label": "Low Irradiance Condition",
           "description": "200 W/m2, 25C module temperature, 0 m/s wind speed and air mass 1.5."
+        }
+      }
+    },
+    "GridInterfaceTypeItemType": {
+      "description": "Different methods that a device may interface with a grid",
+      "enums": {
+        "GridForming": {
+          "label": "Grid Forming",
+          "description": "aka Islanding Capable"
+        },
+        "GridFollowing": {
+          "label": "Grid Following",
+          "description": "Only functions when connected to the Grid"
+        },
+        "OffGrid": {
+          "label": "Off Grid Only",
+          "description": "Has no Grid Connection Capabilities"
         }
       }
     }
