@@ -10542,6 +10542,18 @@
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
+          },
+          "TempModuleArray": {
+            "$ref": "#/components/schemas/TempModuleArray"
+          },
+          "IrradGlobalHorizArray": {
+            "$ref": "#/components/schemas/IrradGlobalHorizArray"
+          },
+          "ForecastSource": {
+            "$ref": "#/components/schemas/ForecastSource"
+          },
+          "ForecastScope": {
+            "$ref": "#/components/schemas/ForecastScope"
           }
         }
       },
@@ -10555,38 +10567,115 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/TempAmb"
-          }
         }
       },
-      "ModuleElectRating": {
-        "type": "object",
-        "description": "Data describing the module characteristics at a specific rating condition.",
-        "properties": {
-          "PowerDC": {
-            "$ref": "#/components/schemas/PowerDC"
+      "ForecastSource": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
           },
-          "VoltageOpenCircuit": {
-            "$ref": "#/components/schemas/VoltageOpenCircuit"
-          },
-          "VoltageAtMaximumPower": {
-            "$ref": "#/components/schemas/VoltageAtMaximumPower"
-          },
-          "CurrentShortCircuit": {
-            "$ref": "#/components/schemas/CurrentShortCircuit"
-          },
-          "CurrentAtMaximumPower": {
-            "$ref": "#/components/schemas/CurrentAtMaximumPower"
-          },
-          "ModuleRatingCondition": {
-            "$ref": "#/components/schemas/ModuleRatingCondition"
+          {
+            "type": "object",
+            "description": "The source of a forecast",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
           }
-        }
+        ]
       },
-      "ModuleElectRatings": {
+      "IrradGlobalHorizArray": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/ModuleElectRating"
+          "$ref": "#/components/schemas/IrradGlobalHorizontal"
         }
+      },
+      "TempModuleArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/TempModule"
+        }
+      },
+      "ForecastScope": {
+        "type": "object",
+        "description": "An object containing information describing where the forecast applies.",
+        "properties": {
+          "Location": {
+            "$ref": "#/components/schemas/Location"
+          },
+          "ForecastScopeID": {
+            "$ref": "#/components/schemas/ForecastScopeID"
+          },
+          "ForecastScopeType": {
+            "$ref": "#/components/schemas/ForecastScopeType"
+          }
+        }
+      },
+      "ForecastScopeID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An identifier for the device, system, portfolio, or region where a forecast applied.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "A forecast scope identifier may be used to identify a hierarchy involving the device, system or location to which the forecast applies.",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ForecastScopeType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of the item to which a forecast applies.",
+            "x-ob-item-type": "ForecastScopeTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IrradPlaneOfArrayArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/IrradPlaneOfArray"
+        }
+      }
+    },
+    "ModuleElectRating": {
+      "type": "object",
+      "description": "Data describing the module characteristics at a specific rating condition.",
+      "properties": {
+        "PowerDC": {
+          "$ref": "#/components/schemas/PowerDC"
+        },
+        "VoltageOpenCircuit": {
+          "$ref": "#/components/schemas/VoltageOpenCircuit"
+        },
+        "VoltageAtMaximumPower": {
+          "$ref": "#/components/schemas/VoltageAtMaximumPower"
+        },
+        "CurrentShortCircuit": {
+          "$ref": "#/components/schemas/CurrentShortCircuit"
+        },
+        "CurrentAtMaximumPower": {
+          "$ref": "#/components/schemas/CurrentAtMaximumPower"
+        },
+        "ModuleRatingCondition": {
+          "$ref": "#/components/schemas/ModuleRatingCondition"
+        }
+      }
+    },
+    "ModuleElectRatings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ModuleElectRating"
       }
     }
   },
@@ -15813,6 +15902,31 @@
         "LIC": {
           "label": "Low Irradiance Condition",
           "description": "200 W/m2, 25C module temperature, 0 m/s wind speed and air mass 1.5."
+        }
+      }
+    },
+    "ForecastScopeTypeItemType": {
+      "description": "A list of items for which a forecast may be made.",
+      "enums": {
+        "Device": {
+          "label": "Device",
+          "description": ""
+        },
+        "PVSystem": {
+          "label": "PVSystem",
+          "description": ""
+        },
+        "Portfolio": {
+          "label": "Portfolio",
+          "description": ""
+        },
+        "GeoRegion": {
+          "label": "GeoRegion",
+          "description": "A geographic region"
+        },
+        "Site": {
+          "label": "Site",
+          "description": ""
         }
       }
     }
