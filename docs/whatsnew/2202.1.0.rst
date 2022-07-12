@@ -13,6 +13,8 @@ Element Changes
 * Add IsPVInputCapable to ProdEnergyStorageSystem and ProdInverter (:pull:`56`)
 * Rename RoundTripEfficiency to EfficiencyBatteryRoundTrip, add to ProdBattery and ProdEnergyStorageSystem (:issue:`56`, :pull:`56`)
 * Add GridInterfaceType to ProdEnergyStorageSystem and ProdInverter (:pull:`39`)
+* Remove PVSystemId, BatterySystemID, PVSystemPrice, BatterySystemPrice (:pull:`73`)
+* Add SystemID, SystemPrice (:pull:`73`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -23,6 +25,7 @@ Object changes
 * Remove from ProdModule: CurrentAtMaximumPower, CurrentShortCircuit, VoltageAtMaximumPower. These elements are replaced by ModuleElectRatings. (:pull:`60`)
 * Adds DisplayDescription, AccuracyClassANSI (:pull:`57`)
 * Renames ProdSolarCell to ProdCell. Replace SolarCellQuantity and CellQuantity with CellCount. (:pull:`67`)
+* Added System Object (:pull:`73`)
 
 Unit changes
 ~~~~~~~~~~~~
@@ -36,11 +39,12 @@ Unit changes
 * Add CommunicationTransportLayerItemType (:pull:`59`)
 * Add Value "TCPIP" to CommunicationProtocolItemType (:pull:`59`)
 * Remove solar-types:optimizerTypeItemType (:pull:`50`)
-* All item types are renamed to follow the upper camel case convention with all-caps acronyms, and consist only of these characters: 0-9, A-Z, a-z, and _ (underscore). 
+* All item types are renamed to follow the upper camel case convention with all-caps acronyms, and consist only of these characters: 0-9, A-Z, a-z, and _ (underscore).
   The prefixes of many item type names, such as "solar-types:" and "stdi:", have been removed and recorded in the item type's description.
   If an item type defines enumerations, its enumerations are also renamed in this way. (:pull:`59`)
   Examples: cellTechnologyItemType to CellTechnologyItemType (capitalize each word), stdi:stringItemType to StringItemType (remove prefix "stdi:" and capitalize each word)
   Enumeration renaming examples from CommunicationProtocolItemType: "REbus DC Nanogrid" to "REbusDCNanogrid" (remove spaces), "CAN 2.0 B" to "CAN2_0B" (remove spaces and change "." to "_")
+* Adds SystemTypeItemType Unit (:pull:`73`)
 
 Bug fixes
 ~~~~~~~~~
