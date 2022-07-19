@@ -959,7 +959,7 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "9999999999"
+              "Value": "(987) 654-3210"
             },
             "x-ob-item-type-group": ""
           }
@@ -976,7 +976,7 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "9999999999"
+              "Value": "(987) 654-3210"
             },
             "x-ob-item-type-group": ""
           }
@@ -993,7 +993,7 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "9999999999"
+              "Value": "(987) 654-3210"
             },
             "x-ob-item-type-group": ""
           }
@@ -8580,7 +8580,9 @@
             "description": "Legal Entity Identifier (LEI) of the entity.",
             "x-ob-item-type": "LegalEntityIdentifierItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "254900HROIFWPRGM1V77"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -8595,7 +8597,9 @@
             "description": "Tax identification number of the entity.",
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "13-7654321"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -8834,7 +8838,11 @@
           {
             "type": "object",
             "description": "Contractor that does installation",
-            "properties": {}
+            "properties": {
+              "InstallerName": {
+                "$ref": "#/components/schemas/InstallerName"
+              }
+            }
           }
         ]
       },
@@ -10526,6 +10534,23 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": 98.5
+            }
+          }
+        ]
+      },
+      "InstallerName": {
+        "allOf": [
+          {
+              "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The name of the installer",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Installer, Inc."
             }
           }
         ]

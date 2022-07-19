@@ -3,7 +3,7 @@
 2202.1.0
 --------
 
-Element Changes
+Element changes
 ~~~~~~~~~~~~~~~
 * Add ContractID, ProjectID, PortfolioID, ProjectName, PorfolioName, Projects, Sites  (:pull:`35`)
 * Add FirmwareVersion, CertificationDate, Checksum, AppliedDate, EfficiencyCECWtdVoltageMax, EfficiencyCECWtdVoltageMin, EfficiencyCECWtdVoltageNom, NightTare, IsHybrid, HasMeter, CECNotes, Identifier, SourceName (:pull:`51`)
@@ -26,6 +26,7 @@ Object changes
 * Adds DisplayDescription, AccuracyClassANSI (:pull:`57`)
 * Renames ProdSolarCell to ProdCell. Replace SolarCellQuantity and CellQuantity with CellCount. (:pull:`67`)
 * Added System Object (:pull:`73`)
+* Add to Installer: InstallerName (:pull:`74`)
 
 Unit changes
 ~~~~~~~~~~~~
