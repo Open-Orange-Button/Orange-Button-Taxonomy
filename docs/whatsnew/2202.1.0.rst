@@ -28,7 +28,7 @@ Object changes
 * Renames ProdSolarCell to ProdCell. Replace SolarCellQuantity and CellQuantity with CellCount. (:pull:`67`)
 * Added System Object (:pull:`73`)
 * Add to Installer: InstallerName (:pull:`74`)
-* Add Forecast, ForecastType objects (:pull:`79`)
+* Add Forecast, ForecastScope objects (:pull:`79`)
 
 Unit changes
 ~~~~~~~~~~~~
