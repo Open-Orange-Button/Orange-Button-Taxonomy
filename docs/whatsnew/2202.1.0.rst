@@ -15,6 +15,7 @@ Element changes
 * Add GridInterfaceType to ProdEnergyStorageSystem and ProdInverter (:pull:`39`)
 * Remove PVSystemId, BatterySystemID, PVSystemPrice, BatterySystemPrice (:pull:`73`)
 * Add SystemID, SystemPrice (:pull:`73`)
+* Add ForecastID, ForecastName, ForecastScopeID, ForecastScopeType, ForecastIssueTime, EnergyACArray, PowerACArray, TempAmbArray, TempModuleArray, IrradGlobHorizArray, IrradPlaneOfArrayArray (:pull:`79`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -27,6 +28,7 @@ Object changes
 * Renames ProdSolarCell to ProdCell. Replace SolarCellQuantity and CellQuantity with CellCount. (:pull:`67`)
 * Added System Object (:pull:`73`)
 * Add to Installer: InstallerName (:pull:`74`)
+* Add Forecast, ForecastScope objects (:pull:`79`)
 
 Unit changes
 ~~~~~~~~~~~~
@@ -46,6 +48,7 @@ Unit changes
   Examples: cellTechnologyItemType to CellTechnologyItemType (capitalize each word), stdi:stringItemType to StringItemType (remove prefix "stdi:" and capitalize each word)
   Enumeration renaming examples from CommunicationProtocolItemType: "REbus DC Nanogrid" to "REbusDCNanogrid" (remove spaces), "CAN 2.0 B" to "CAN2_0B" (remove spaces and change "." to "_")
 * Adds SystemTypeItemType Unit (:pull:`73`)
+* Add ForecastScopeTypeItemType (:pull`79`)
 
 Bug fixes
 ~~~~~~~~~
