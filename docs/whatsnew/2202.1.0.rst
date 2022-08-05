@@ -29,6 +29,7 @@ Object changes
 * Added System Object (:pull:`73`)
 * Add to Installer: InstallerName (:pull:`74`)
 * Add Forecast, ForecastScope objects (:pull:`79`)
+* Add Scope, Measurement, EnergyACMeas, IrradGlobalHorizMeas, PowerACMeas, TempAmbMeas (:pull:`82`)
 
 Unit changes
 ~~~~~~~~~~~~
