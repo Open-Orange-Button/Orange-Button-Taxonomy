@@ -1,0 +1,33 @@
+.. _whatsnew_0910:
+
+2202.1.1
+--------
+
+Element changes
+~~~~~~~~~~~~~~~
+
+Object changes
+~~~~~~~~~~~~~~
+* Add Scope, Measurement, EnergyACMeas, IrradGlobalHorizMeas, PowerACMeas, TempAmbMeas (:pull:`82`)
+* Removes ForecastScope (:pull:`82`)
+Unit changes
+~~~~~~~~~~~~
+ * Add ScopeTypeItemType (:pull:`82`)
+Bug fixes
+~~~~~~~~~
+
+
+Testing
+~~~~~~~
+
+
+Documentation
+~~~~~~~~~~~~~
+
+
+Contributors
+~~~~~~~~~~~~
+* Cliff Hansen (:ghuser:`cwhanse`)
+* Kevin Kirkley (:ghuser:`kevinkirkl3y`)
+* Zia Swim (:ghuser:`blizita`)
+* Taos Transue (:ghuser:`reepoi`)

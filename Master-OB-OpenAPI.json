@@ -10725,21 +10725,6 @@
           }
         ]
       },
-      "ForecastScope": {
-        "type": "object",
-        "description": "An object containing information describing where the forecast applies.",
-        "properties": {
-          "ForecastScopeID": {
-            "$ref": "#/components/schemas/ForecastScopeID"
-          },
-          "ForecastScopeType": {
-            "$ref": "#/components/schemas/ForecastScopeType"
-          },
-          "Location": {
-            "$ref": "#/components/schemas/Location"
-          }
-        }
-      },
       "Scope": {
         "type": "object",
         "description": "A generic object containing information describing where the aforementioned data applies to. ",
