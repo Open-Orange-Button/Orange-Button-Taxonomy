@@ -9561,6 +9561,9 @@
           },
           "AlternativeIdentifiers": {
             "$ref": "#/components/schemas/AlternativeIdentifiers"
+          },
+          "JobID": {
+            "$ref": "#/components/schemas/JobID"
           }
         }
       },
@@ -10739,6 +10742,21 @@
             "$ref": "#/components/schemas/Location"
           }
         }
+      },
+      "JobID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Universally unique identifier for the job.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
       }
     }
   },
