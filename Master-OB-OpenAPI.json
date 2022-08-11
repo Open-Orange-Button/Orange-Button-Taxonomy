@@ -10705,8 +10705,8 @@
           "TempModuleArray": {
             "$ref": "#/components/schemas/TempModuleArray"
           },
-          "ForecastScope": {
-            "$ref": "#/components/schemas/ForecastScope"
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
           }
         }
       },
@@ -10725,20 +10725,150 @@
           }
         ]
       },
-      "ForecastScope": {
+      "Scope": {
         "type": "object",
-        "description": "An object containing information describing where the forecast applies.",
+        "description": "A generic object containing information describing where the aforementioned data applies to. ",
         "properties": {
-          "ForecastScopeID": {
-            "$ref": "#/components/schemas/ForecastScopeID"
+          "ScopeID": {
+            "$ref": "#/components/schemas/ScopeID"
           },
-          "ForecastScopeType": {
-            "$ref": "#/components/schemas/ForecastScopeType"
+          "ScopeType": {
+            "$ref": "#/components/schemas/ScopeType"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
           },
           "Location": {
             "$ref": "#/components/schemas/Location"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
           }
         }
+      },
+      "ScopeID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An identifier for the device, system, portfolio, or region where data was collected.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ScopeType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The scope where data applies.",
+            "x-ob-item-type": "ScopeTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "Measurement": {
+        "type": "object",
+        "description": "An object containing data for measurements.",
+        "properties": {
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "Comment": {
+            "$ref": "#/components/schemas/Comment"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          }
+        }
+      },
+      "EnergyACMeas": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Measurement"
+          },
+          {
+            "type": "object",
+            "description": "An object containing Energy AC measurements.",
+            "properties": {
+              "EnergyACArray": {
+                "$ref": "#/components/schemas/EnergyACArray"
+              }
+            }
+          }
+        ]
+      },
+      "VoltageDCMeas": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Measurement"
+          },
+          {
+            "type": "object",
+            "description": "Object containing VoltageDC measurements.",
+            "properties": {}
+          }
+        ]
+      },
+      "IrradGlobalHorizMeas": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Measurement"
+          },
+          {
+            "type": "object",
+            "description": "An object containing Irradiance Global Horizontal (IrradGlobalHoriz) measurements.",
+            "properties": {
+              "IrradGlobalHorizArray": {
+                "$ref": "#/components/schemas/IrradGlobalHorizArray"
+              }
+            }
+          }
+        ]
+      },
+      "PowerACMeas": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Measurement"
+          },
+          {
+            "type": "object",
+            "description": "An object containing PowerAC measurements.",
+            "properties": {
+              "PowerACArray": {
+                "$ref": "#/components/schemas/PowerACArray"
+              }
+            }
+          }
+        ]
+      },
+      "TempAmbMeas": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Measurement"
+          },
+          {
+            "type": "object",
+            "description": "An object containing Ambient Temperature (TempAmb) measurements.",
+            "properties": {
+              "TempAmbArray": {
+                "$ref": "#/components/schemas/TempAmbArray"
+              }
+            }
+          }
+        ]
       }
     }
   },
@@ -16035,6 +16165,31 @@
         },
         "GeoRegion": {
           "label": "GeoRegion",
+          "description": ""
+        },
+        "Site": {
+          "label": "Site",
+          "description": ""
+        }
+      }
+    },
+    "ScopeTypeItemType": {
+      "description": "An enumerated list of scope for a dataset.",
+      "enums": {
+        "Device": {
+          "label": "Device",
+          "description": ""
+        },
+        "GeoRegion": {
+          "label": "GeoRegion",
+          "description": ""
+        },
+        "Portfolio": {
+          "label": "Portfolio",
+          "description": ""
+        },
+        "PVSystem": {
+          "label": "PVSystem",
           "description": ""
         },
         "Site": {
