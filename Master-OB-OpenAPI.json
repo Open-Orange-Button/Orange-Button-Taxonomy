@@ -10817,7 +10817,7 @@
           },
           {
             "type": "object",
-            "description": "Object containing Voltage DC measurements.",
+            "description": "Object containing VoltageDC measurements.",
             "properties": {}
           }
         ]
