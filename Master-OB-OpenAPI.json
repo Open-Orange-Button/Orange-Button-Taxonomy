@@ -50,6 +50,15 @@
           },
           "EnergyPredictions": {
             "$ref": "#/components/schemas/EnergyPredictions"
+          },
+          "EnergyModelInputs": {
+            "$ref": "#/components/schemas/EnergyModelInputs"
+          },
+          "EnergyModelOutputs": {
+            "$ref": "#/components/schemas/EnergyModelOutputs"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
           }
         },
         "x-ob-usage-tips": ""
@@ -10869,6 +10878,84 @@
             }
           }
         ]
+      },
+      "EnergyACAnnualP50": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The 50th percentile of annual AC energy.",
+            "x-ob-item-type": "EnergyItemType",
+            "x-ob-item-type-group": "OBElectricalEnergy",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "MWh",
+              "Value": 5000
+            }
+          }
+        ]
+      },
+      "EnergyACAnnualP90": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The 90th percentile of annual AC energy.",
+            "x-ob-item-type": "EnergyItemType",
+            "x-ob-item-type-group": "OBElectricalEnergy",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "MWh",
+              "Value": 6500
+            }
+          }
+        ]
+      },
+      "EnergyModelOutputs": {
+        "type": "object",
+        "description": "Output from an energy model.",
+        "properties": {
+          "EnergyACArray": {
+            "$ref": "#/components/schemas/EnergyACArray"
+          },
+          "EnergyACAnnualP50": {
+            "$ref": "#/components/schemas/EnergyACAnnualP50"
+          },
+          "EnergyACAnnualP90": {
+            "$ref": "#/components/schemas/EnergyACAnnualP90"
+          },
+          "FileFolderURLs": {
+            "$ref": "#/components/schemas/FileFolderURLs"
+          }
+        }
+      },
+      "FileFolderURLs": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/FileFolderURL"
+        }
+      },
+      "EnergyModelInputs": {
+        "type": "object",
+        "description": "Inputs to an energy model.",
+        "properties": {
+          "FileFolderURLs": {
+            "$ref": "#/components/schemas/FileFolderURLs"
+          },
+          "ModelWeatherSource": {
+            "$ref": "#/components/schemas/ModelWeatherSource"
+          },
+          "CapacityAC": {
+            "$ref": "#/components/schemas/CapacityAC"
+          },
+          "CapacityDC": {
+            "$ref": "#/components/schemas/CapacityDC"
+          }
+        }
       }
     }
   },
