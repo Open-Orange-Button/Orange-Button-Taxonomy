@@ -36,29 +36,20 @@
         "type": "object",
         "description": "Energy model contains energy predictions and information about the model assumptions and information sources.",
         "properties": {
-          "ModelWeatherSource": {
-            "$ref": "#/components/schemas/ModelWeatherSource"
-          },
           "EnergyModelName": {
             "$ref": "#/components/schemas/EnergyModelName"
           },
-          "SiteID": {
-            "$ref": "#/components/schemas/SiteID"
+          "Description": {
+            "$ref": "#/components/schemas/Description"
           },
-          "EnergyModelConfigurationFilename": {
-            "$ref": "#/components/schemas/EnergyModelConfigurationFilename"
+          "EnergyModelInput": {
+            "$ref": "#/components/schemas/EnergyModelInput"
           },
-          "EnergyPredictions": {
-            "$ref": "#/components/schemas/EnergyPredictions"
+          "EnergyModelOutput": {
+            "$ref": "#/components/schemas/EnergyModelOutput"
           },
-          "EnergyModelInputs": {
-            "$ref": "#/components/schemas/EnergyModelInputs"
-          },
-          "EnergyModelOutputs": {
-            "$ref": "#/components/schemas/EnergyModelOutputs"
-          },
-          "Scope": {
-            "$ref": "#/components/schemas/Scope"
+          "EnergyModelScope": {
+            "$ref": "#/components/schemas/EnergyModelScope"
           }
         },
         "x-ob-usage-tips": ""
@@ -3172,9 +3163,6 @@
           "Contacts": {
             "$ref": "#/components/schemas/Contacts"
           },
-          "EnergyModels": {
-            "$ref": "#/components/schemas/EnergyModels"
-          },
           "EnergyConsumptions": {
             "$ref": "#/components/schemas/EnergyConsumptions"
           },
@@ -3257,12 +3245,6 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/AgingBucket"
-        }
-      },
-      "EnergyModels": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/EnergyModel"
         }
       },
       "EnergyConsumptions": {
@@ -10465,9 +10447,6 @@
               "RiskCategory": {
                 "$ref": "#/components/schemas/RiskCategory"
               },
-              "EnergyModels": {
-                "$ref": "#/components/schemas/EnergyModels"
-              },
               "EnergyProductions": {
                 "$ref": "#/components/schemas/EnergyProductions"
               },
@@ -10476,6 +10455,9 @@
               },
               "CapacityAC": {
                 "$ref": "#/components/schemas/CapacityAC"
+              },
+              "EnergyModel": {
+                "$ref": "#/components/schemas/EnergyModel"
               }
             },
             "x-ob-usage-tips": ""
@@ -10508,9 +10490,6 @@
               },
               "EnergyConsumptions": {
                 "$ref": "#/components/schemas/EnergyConsumptions"
-              },
-              "EnergyModels": {
-                "$ref": "#/components/schemas/EnergyModels"
               }
             }
           }
@@ -10915,7 +10894,28 @@
           }
         ]
       },
-      "EnergyModelOutputs": {
+      "EnergyModelInput": {
+        "type": "object",
+        "description": "Inputs to an energy model.",
+        "properties": {
+          "ModelWeatherSource": {
+            "$ref": "#/components/schemas/ModelWeatherSource"
+          },
+          "CapacityAC": {
+            "$ref": "#/components/schemas/CapacityAC"
+          },
+          "CapacityDC": {
+            "$ref": "#/components/schemas/CapacityDC"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          }
+        }
+      },
+      "EnergyModelOutput": {
         "type": "object",
         "description": "Output from an energy model.",
         "properties": {
@@ -10928,34 +10928,25 @@
           "EnergyACAnnualP90": {
             "$ref": "#/components/schemas/EnergyACAnnualP90"
           },
-          "FileFolderURLs": {
-            "$ref": "#/components/schemas/FileFolderURLs"
+          "PowerACArray": {
+            "$ref": "#/components/schemas/PowerACArray"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
           }
         }
       },
-      "FileFolderURLs": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/FileFolderURL"
-        }
-      },
-      "EnergyModelInputs": {
-        "type": "object",
-        "description": "Inputs to an energy model.",
-        "properties": {
-          "FileFolderURLs": {
-            "$ref": "#/components/schemas/FileFolderURLs"
+      "EnergyModelScope": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Scope"
           },
-          "ModelWeatherSource": {
-            "$ref": "#/components/schemas/ModelWeatherSource"
-          },
-          "CapacityAC": {
-            "$ref": "#/components/schemas/CapacityAC"
-          },
-          "CapacityDC": {
-            "$ref": "#/components/schemas/CapacityDC"
+          {
+            "type": "object",
+            "description": "Scope of an energy model",
+            "properties": {}
           }
-        }
+        ]
       }
     }
   },
