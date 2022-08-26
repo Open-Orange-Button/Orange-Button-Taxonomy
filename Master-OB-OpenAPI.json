@@ -22,16 +22,6 @@
         "type": "object",
         "x-ob-usage-tips": ""
       },
-      "EnergyPrediction": {
-        "type": "object",
-        "description": "A value of energy produced in one time period.",
-        "properties": {
-          "EnergyAC": {
-            "$ref": "#/components/schemas/EnergyAC"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
       "EnergyModel": {
         "type": "object",
         "description": "Energy model contains energy predictions and information about the model assumptions and information sources.",
@@ -50,6 +40,9 @@
           },
           "EnergyModelScope": {
             "$ref": "#/components/schemas/EnergyModelScope"
+          },
+          "ModelRunDate": {
+            "$ref": "#/components/schemas/ModelRunDate"
           }
         },
         "x-ob-usage-tips": ""
@@ -1177,9 +1170,9 @@
             "type": "object",
             "description": "Type of design/energy production model for the PV system which could be Pvsyst, SAM, PV Watts, or Other.",
             "x-ob-item-type": "StringItemType",
-            "x-ob-usage-tips": "",
+            "x-ob-usage-tips": "Include software version number with EnergyModelName",
             "x-ob-sample-value": {
-              "Value": "Pvsyst Model 1"
+              "Value": "Pvsyst v7.0"
             },
             "x-ob-item-type-group": ""
           }
@@ -3259,12 +3252,6 @@
           "$ref": "#/components/schemas/EnergyProduction"
         }
       },
-      "EnergyPredictions": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/EnergyPrediction"
-        }
-      },
       "EnergyUsages": {
         "type": "array",
         "items": {
@@ -5328,7 +5315,7 @@
           },
           {
             "type": "object",
-            "description": "Weather source used for the model which can be None, Local, Satellite, Modeled, or Mixed.",
+            "description": "Weather source used for the model, for example: ground measurements, NSRDB TMY3, SolarAnywhere v3.0, SolarGIS vX.Y",
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {},
@@ -10456,8 +10443,8 @@
               "CapacityAC": {
                 "$ref": "#/components/schemas/CapacityAC"
               },
-              "EnergyModel": {
-                "$ref": "#/components/schemas/EnergyModel"
+              "EnergyModels": {
+                "$ref": "#/components/schemas/EnergyModels"
               }
             },
             "x-ob-usage-tips": ""
@@ -10912,6 +10899,9 @@
           },
           "FileFolderURL": {
             "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "IrradTranspositionModel": {
+            "$ref": "#/components/schemas/IrradTranspositionModel"
           }
         }
       },
@@ -10933,6 +10923,9 @@
           },
           "FileFolderURL": {
             "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "EnergyACAnnual": {
+            "$ref": "#/components/schemas/EnergyACAnnual"
           }
         }
       },
@@ -10947,6 +10940,63 @@
             "properties": {}
           }
         ]
+      },
+      "ModelRunDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The date and time associated with the energy model run.",
+            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IrradTranspositionModel": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The model used to transpose from global horizontal irradiance (GHI) to plane-of-array (POA) irradiance.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "{\"Value\": \"Hay-Davies\"}"
+            }
+          }
+        ]
+      },
+      "EnergyACAnnual": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The total annual AC energy for a PV system.",
+            "x-ob-item-type": "EnergyItemType",
+            "x-ob-item-type-group": "OBElectricalEnergy",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "1",
+              "Unit": "kWh",
+              "Value": 1650.4
+            }
+          }
+        ]
+      },
+      "EnergyModels": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/EnergyModel"
+        }
       }
     }
   },
