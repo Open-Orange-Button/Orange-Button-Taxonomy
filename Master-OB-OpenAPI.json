@@ -10869,6 +10869,159 @@
             }
           }
         ]
+      },
+      "InsurancePolicy": {
+        "type": "object",
+        "description": "Specific instance of an insurance policy with beneficiary, supplier and purchaser.",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "ExpirationDate": {
+            "$ref": "#/components/schemas/ExpirationDate"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "StateProvince": {
+            "$ref": "#/components/schemas/StateProvince"
+          },
+          "InsurancePolicyID": {
+            "$ref": "#/components/schemas/InsurancePolicyID"
+          },
+          "RiskTransferType": {
+            "$ref": "#/components/schemas/RiskTransferType"
+          },
+          "PerClaimAmount": {
+            "$ref": "#/components/schemas/PerClaimAmount"
+          },
+          "AggregateAmount": {
+            "$ref": "#/components/schemas/AggregateAmount"
+          },
+          "DeductibleAmount": {
+            "$ref": "#/components/schemas/DeductibleAmount"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "InsurancePolicyScope": {
+            "$ref": "#/components/schemas/InsurancePolicyScope"
+          }
+        }
+      },
+      "InsurancePolicyID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A unique identifier for a specific InsurancePolicy",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "InsuranceType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Specific type of insurance provided by the InsurancePolicy.",
+            "x-ob-item-type": "InsuranceTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "RiskTransferType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Method or product that transfers risk between entities.",
+            "x-ob-item-type": "RiskTransferTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "PerClaimAmount": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The maximum limit payable, per licensee, for damages arising from the same or a related claim.",
+            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type-group": "OBMonetary",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "USD",
+              "Value": 1000000
+            }
+          }
+        ]
+      },
+      "AggregateAmount": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The highest amount of money the insurer will pay for all of your losses during a policy period.",
+            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type-group": "OBMonetary",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "USD",
+              "Value": 1000000
+            }
+          }
+        ]
+      },
+      "DeductibleAmount": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The amount of money that the insured is responsible for paying toward an insured loss.",
+            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type-group": "OBMonetary",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "USD",
+              "Value": 50000
+            }
+          }
+        ]
+      },
+      "InsurancePolicyScope": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Scope"
+          },
+          {
+            "type": "object",
+            "description": "Scope of the InsurancePolicy object.",
+            "properties": {}
+          }
+        ]
       }
     }
   },
@@ -13670,7 +13823,7 @@
         }
       }
     },
-    "InsuranceItemType": {
+    "InsuranceTypeItemType": {
       "description": "",
       "enums": {
         "Liability": {
@@ -16194,6 +16347,56 @@
         },
         "Site": {
           "label": "Site",
+          "description": ""
+        }
+      }
+    },
+    "RiskTransferTypeItemType": {
+      "description": "Type of method or product that transfers risk between entities.",
+      "enums": {
+        "WorkersComp": {
+          "label": "Workers Compensation",
+          "description": ""
+        },
+        "LiabilityCasualty": {
+          "label": "Liability Casualty",
+          "description": ""
+        },
+        "SuretyBonds": {
+          "label": "Surety Bonds",
+          "description": ""
+        },
+        "Property": {
+          "label": "Property",
+          "description": ""
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
+        },
+        "Specialty": {
+          "label": "Specialty",
+          "description": ""
+        }
+      }
+    },
+    "AHJLevelCodeItemType": {
+      "description": "",
+      "enums": {
+        "13": {
+          "label": "State",
+          "description": ""
+        },
+        "14": {
+          "label": "State County",
+          "description": ""
+        },
+        "15": {
+          "label": "State County Minor Civil Division",
+          "description": ""
+        },
+        "16": {
+          "label": "State Incorporated Place",
           "description": ""
         }
       }

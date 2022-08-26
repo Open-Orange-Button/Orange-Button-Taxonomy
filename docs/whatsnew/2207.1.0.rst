@@ -1,0 +1,29 @@
+.. _whatsnew_0910:
+
+2207.1.0
+--------
+
+Element changes
+~~~~~~~~~~~~~~~
+* Adds PerClaimAmount, AggregateAmount, DeductibleAmount, InsurancePolicyID, RiskTransferType (:pull:`89`)
+Object changes
+~~~~~~~~~~~~~~
+* Adds InsurancePolicy, InsurancePolicyScope (:pull:`89`)
+Unit changes
+~~~~~~~~~~~~
+* RiskTransferTypeItemType (:pull:`89`)
+Bug fixes
+~~~~~~~~~
+
+
+Testing
+~~~~~~~
+
+
+Documentation
+~~~~~~~~~~~~~
+
+
+Contributors
+~~~~~~~~~~~~
+* Kevin Kirkley (:ghuser:`kevinkirkl3y`)
