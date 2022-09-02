@@ -1,17 +1,17 @@
-.. _whatsnew_0910:
+.. _whatsnew_220710::
 
 2207.1.0
 --------
 
 Element changes
 ~~~~~~~~~~~~~~~
-*Adds DelegatesToAHJID, ExceptionDescription, AHJLevelCode (:pull:`90`)
+*Adds DelegatesToAHJID, ExceptionDescription, AHJLevelCode (:pull:`91`)
 Object changes
 ~~~~~~~~~~~~~~
 
 Unit changes
 ~~~~~~~~~~~~
-* Adds AHJLevelCodeItemType and Enums (:pull:`90`)
+* Adds AHJLevelCodeItemType and Enums (:pull:`91`)
 Bug fixes
 ~~~~~~~~~
 
