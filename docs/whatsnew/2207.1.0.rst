@@ -1,4 +1,5 @@
-.. _whatsnew_220710::
+
+.. _whatsnew_220710:
 
 2207.1.0
 --------
@@ -6,17 +7,25 @@
 Element changes
 ~~~~~~~~~~~~~~~
 *Adds DelegatesToAHJID, ExceptionDescription, AHJLevelCode (:pull:`91`)
+
 Object changes
 ~~~~~~~~~~~~~~
+* Add Scope, Measurement, EnergyACMeas, IrradGlobalHorizMeas, PowerACMeas, TempAmbMeas (:pull:`82`)
+* Removes ForecastScope (:pull:`82`)
 
 Unit changes
 ~~~~~~~~~~~~
-* Adds AHJLevelCodeItemType and Enums (:pull:`91`)
+ * Add ScopeTypeItemType (:pull:`82`)
+ * Adds AHJLevelCodeItemType and Enums (:pull:`91`)
+
 Bug fixes
 ~~~~~~~~~
 
+
 Testing
 ~~~~~~~
+
+
 
 Documentation
 ~~~~~~~~~~~~~
@@ -24,6 +33,5 @@ Documentation
 
 Contributors
 ~~~~~~~~~~~~
-
 * Kevin Kirkley (:ghuser:`kevinkirkl3y`)
 
