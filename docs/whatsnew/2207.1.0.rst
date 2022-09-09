@@ -17,7 +17,7 @@ Object changes
 
 Unit changes
 ~~~~~~~~~~~~
-*Adds DelegatesToAHJID, ExceptionDescription, AHJLevelCode (:pull:`91`)
+* Adds DelegatesToAHJID, ExceptionDescription, AHJLevelCode (:pull:`91`)
 
 Object changes
 ~~~~~~~~~~~~~~
