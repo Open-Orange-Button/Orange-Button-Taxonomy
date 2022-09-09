@@ -1689,6 +1689,9 @@
           },
           "Comments": {
             "$ref": "#/components/schemas/Comments"
+          },
+          "TaskScope": {
+            "$ref": "#/components/schemas/TaskScope"
           }
         },
         "x-ob-usage-tips": ""
@@ -1928,6 +1931,9 @@
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
+          },
+          "BOMScope": {
+            "$ref": "#/components/schemas/BOMScope"
           }
         },
         "x-ob-usage-tips": ""
@@ -4266,6 +4272,9 @@
           },
           "BillOfServicesStatus": {
             "$ref": "#/components/schemas/BillOfServicesStatus"
+          },
+          "BOSScope": {
+            "$ref": "#/components/schemas/BOSScope"
           }
         }
       },
@@ -6681,6 +6690,9 @@
           },
           "Tags": {
             "$ref": "#/components/schemas/Tags"
+          },
+          "CommentScope": {
+            "$ref": "#/components/schemas/CommentScope"
           }
         }
       },
@@ -9570,6 +9582,9 @@
           },
           "AlternativeIdentifiers": {
             "$ref": "#/components/schemas/AlternativeIdentifiers"
+          },
+          "JobID": {
+            "$ref": "#/components/schemas/JobID"
           }
         }
       },
@@ -10879,6 +10894,21 @@
           }
         ]
       },
+      "JobID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Universally unique identifier for the job.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
       "AHJLevelCode": {
         "allOf": [
           {
@@ -10925,6 +10955,54 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "BOMScope": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Scope"
+          },
+          {
+            "type": "object",
+            "description": "Scope of the BillOfMaterials object.",
+            "properties": {}
+          }
+        ]
+      },
+      "BOSScope": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Scope"
+          },
+          {
+            "type": "object",
+            "description": "Scope of the BillOfServices object.",
+            "properties": {}
+          }
+        ]
+      },
+      "CommentScope": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Scope"
+          },
+          {
+            "type": "object",
+            "description": "Scope of Comment object.",
+            "properties": {}
+          }
+        ]
+      },
+      "TaskScope": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Scope"
+          },
+          {
+            "type": "object",
+            "description": "Scope of the Task object.",
+            "properties": {}
           }
         ]
       }

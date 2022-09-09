@@ -6,7 +6,18 @@
 
 Element changes
 ~~~~~~~~~~~~~~~
-*Adds DelegatesToAHJID, ExceptionDescription, AHJLevelCode (:pull:`91`)
+* Adds JobID Element (:pull:`84`)
+* Adds DelegatesToAHJID, ExceptionDescription, AHJLevelCode (:pull:`91`)
+
+Object changes
+~~~~~~~~~~~~~~
+* Add Scope, Measurement, EnergyACMeas, IrradGlobalHorizMeas, PowerACMeas, TempAmbMeas (:pull:`82`)
+* Removes ForecastScope (:pull:`82`)
+* Adds BOSScope to BillOfServices, BOMScope to BillOfMaterials, TaskScope to Tasks, CommentScope to Comments (:pull:`84`)
+
+Unit changes
+~~~~~~~~~~~~
+* Adds DelegatesToAHJID, ExceptionDescription, AHJLevelCode (:pull:`91`)
 
 Object changes
 ~~~~~~~~~~~~~~
