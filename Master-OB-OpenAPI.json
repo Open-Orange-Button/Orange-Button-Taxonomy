@@ -692,6 +692,15 @@
           },
           "DocumentSubmissionMethods": {
             "$ref": "#/components/schemas/DocumentSubmissionMethods"
+          },
+          "AHJLevelCode": {
+            "$ref": "#/components/schemas/AHJLevelCode"
+          },
+          "DelegatesToAHJID": {
+            "$ref": "#/components/schemas/DelegatesToAHJID"
+          },
+          "ExceptionDescription": {
+            "$ref": "#/components/schemas/ExceptionDescription"
           }
         },
         "x-ob-usage-tips": ""
@@ -1673,6 +1682,9 @@
           },
           "Comments": {
             "$ref": "#/components/schemas/Comments"
+          },
+          "TaskScope": {
+            "$ref": "#/components/schemas/TaskScope"
           }
         },
         "x-ob-usage-tips": ""
@@ -1912,6 +1924,9 @@
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
+          },
+          "BOMScope": {
+            "$ref": "#/components/schemas/BOMScope"
           }
         },
         "x-ob-usage-tips": ""
@@ -4235,6 +4250,9 @@
           },
           "BillOfServicesStatus": {
             "$ref": "#/components/schemas/BillOfServicesStatus"
+          },
+          "BOSScope": {
+            "$ref": "#/components/schemas/BOSScope"
           }
         }
       },
@@ -5883,7 +5901,7 @@
           },
           {
             "type": "object",
-            "description": "Municipal authority, for example, town, city or country, that has jurisdiction to define local code requirements.",
+            "description": "Identifier of the municipal authority, for example, town, city or county, that has jurisdiction to define local code requirements.",
             "x-ob-item-type": "UUIDItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {},
@@ -6650,6 +6668,9 @@
           },
           "Tags": {
             "$ref": "#/components/schemas/Tags"
+          },
+          "CommentScope": {
+            "$ref": "#/components/schemas/CommentScope"
           }
         }
       },
@@ -9539,6 +9560,9 @@
           },
           "AlternativeIdentifiers": {
             "$ref": "#/components/schemas/AlternativeIdentifiers"
+          },
+          "JobID": {
+            "$ref": "#/components/schemas/JobID"
           }
         }
       },
@@ -10845,7 +10869,39 @@
           }
         ]
       },
-      "EnergyACAnnualP50": {
+      "JobID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Universally unique identifier for the job.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "AHJLevelCode": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Code defining jurisdictional level of an Authority Having Jurisdiction.",
+            "x-ob-item-type": "AHJLevelCodeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "050"
+						}
+          }
+        ]
+      },
+			"EnergyACAnnualP50": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementNumber"
@@ -10929,7 +10985,51 @@
           }
         }
       },
-      "EnergyModelScope": {
+      "DelegatesToAHJID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The identifier of the delegated AHJ that has the authority to issue permits for PV and Battery Systems within this jurisdiction.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "3eca0f90-8948-42ab-82d8-ddd891f86166"
+            }
+          }
+        ]
+      },
+      "ExceptionDescription": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Description of special cases applicable to the element. ",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "BOMScope": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Scope"
+          },
+          {
+            "type": "object",
+            "description": "Scope of the BillOfMaterials object.",
+            "properties": {}
+          }
+        ]
+      },
+			"EnergyModelScope": {
         "allOf": [
           {
             "$ref": "#/components/schemas/Scope"
@@ -10997,6 +11097,42 @@
         "items": {
           "$ref": "#/components/schemas/EnergyModel"
         }
+			},
+      "BOSScope": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Scope"
+          },
+          {
+            "type": "object",
+            "description": "Scope of the BillOfServices object.",
+            "properties": {}
+          }
+        ]
+      },
+      "CommentScope": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Scope"
+          },
+          {
+            "type": "object",
+            "description": "Scope of Comment object.",
+            "properties": {}
+          }
+        ]
+      },
+      "TaskScope": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Scope"
+          },
+          {
+            "type": "object",
+            "description": "Scope of the Task object.",
+            "properties": {}
+          }
+        ]
       }
     }
   },
@@ -16323,6 +16459,27 @@
         "Site": {
           "label": "Site",
           "description": ""
+        }
+      }
+    },
+    "AHJLevelCodeItemType": {
+      "description": "Geographic summary levels are three-digit numeric codes used by the Census Bureau to designate different geographic levels or areas. The AHJLevelCodeItemType refers to levels of jurisdictional delegation. ",
+      "enums": {
+        "040": {
+          "label": "State",
+          "description": "The primary legal subdivision of the United States"
+        },
+        "050": {
+          "label": "State-County",
+          "description": "The primary legal subdivision of every state except Alaska and Louisiana."
+        },
+        "061": {
+          "label": "State-County-Minor Civil Division (MCD)",
+          "description": "Legally defined county subdivision known by various descriptions, including towns, townships, and districts."
+        },
+        "071": {
+          "label": "State-County-MCD-Incorporated Place/Balance",
+          "description": "Inncorporated places can cross MCD boundaries, therefore a place name can appear in more than one MCD. The 071 code designates that part of place that is within one MCD. This summary level includes any unincorporated \"balance\" of the MCD."
         }
       }
     }

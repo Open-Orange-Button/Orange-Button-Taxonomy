@@ -1,0 +1,48 @@
+
+.. _whatsnew_220710:
+
+2207.1.0
+--------
+
+Element changes
+~~~~~~~~~~~~~~~
+* Adds JobID Element (:pull:`84`)
+* Adds DelegatesToAHJID, ExceptionDescription, AHJLevelCode (:pull:`91`)
+
+Object changes
+~~~~~~~~~~~~~~
+* Add Scope, Measurement, EnergyACMeas, IrradGlobalHorizMeas, PowerACMeas, TempAmbMeas (:pull:`82`)
+* Removes ForecastScope (:pull:`82`)
+* Adds BOSScope to BillOfServices, BOMScope to BillOfMaterials, TaskScope to Tasks, CommentScope to Comments (:pull:`84`)
+
+Unit changes
+~~~~~~~~~~~~
+* Adds DelegatesToAHJID, ExceptionDescription, AHJLevelCode (:pull:`91`)
+
+Object changes
+~~~~~~~~~~~~~~
+* Add Scope, Measurement, EnergyACMeas, IrradGlobalHorizMeas, PowerACMeas, TempAmbMeas (:pull:`82`)
+* Removes ForecastScope (:pull:`82`)
+
+Unit changes
+~~~~~~~~~~~~
+ * Add ScopeTypeItemType (:pull:`82`)
+ * Adds AHJLevelCodeItemType and Enums (:pull:`91`)
+
+Bug fixes
+~~~~~~~~~
+
+
+Testing
+~~~~~~~
+
+
+
+Documentation
+~~~~~~~~~~~~~
+
+
+Contributors
+~~~~~~~~~~~~
+* Kevin Kirkley (:ghuser:`kevinkirkl3y`)
+
