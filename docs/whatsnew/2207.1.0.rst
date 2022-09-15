@@ -8,12 +8,17 @@ Element changes
 ~~~~~~~~~~~~~~~
 * Adds JobID Element (:pull:`84`)
 * Adds DelegatesToAHJID, ExceptionDescription, AHJLevelCode (:pull:`91`)
+* Removes ModelWeatherSource (:pull:`88`)
+* Adds EnergyACAnnual, EnergyACAnnualP50, EnergyACAnnualP90, IrradTranspositionModel, ModelRunDate (:pull`88`)
 
 Object changes
 ~~~~~~~~~~~~~~
 * Add Scope, Measurement, EnergyACMeas, IrradGlobalHorizMeas, PowerACMeas, TempAmbMeas (:pull:`82`)
 * Removes ForecastScope (:pull:`82`)
 * Adds BOSScope to BillOfServices, BOMScope to BillOfMaterials, TaskScope to Tasks, CommentScope to Comments (:pull:`84`)
+* Creates EnergyModelInput, EnergyModelOutput, EnergyModelScope (:pull:`88`)
+* Removes EnergyPrediction, EnergyPredictions (:pull`88`)
+* EnergyModel elements changed (:pull:`88`)
 
 Unit changes
 ~~~~~~~~~~~~
@@ -45,4 +50,4 @@ Documentation
 Contributors
 ~~~~~~~~~~~~
 * Kevin Kirkley (:ghuser:`kevinkirkl3y`)
-
+* Cliff Hansen (:ghuser:`cwhanse`)
