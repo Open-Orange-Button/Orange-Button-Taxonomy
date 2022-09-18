@@ -11159,7 +11159,7 @@
           },
           {
             "type": "object",
-            "description": "The highest amount of money the insurer will pay for all of your losses during a policy period.",
+            "description": "The maximum amount of money the insurer will pay for all of your losses during a policy period.",
             "x-ob-item-type": "MonetaryItemType",
             "x-ob-item-type-group": "OBMonetary",
             "x-ob-usage-tips": "",
@@ -11195,7 +11195,7 @@
           },
           {
             "type": "object",
-            "description": "A unique identifier for a specific InsurancePolicy",
+            "description": "A unique identifier for a specific InsurancePolicy.",
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -16630,11 +16630,11 @@
           "description": ""
         },
         "LiabilityCasualty": {
-          "label": "Liability Casualty\t",
+          "label": "Liability Casualty",
           "description": ""
         },
         "SuretyBonds": {
-          "label": "Surety Bonds\t",
+          "label": "Surety Bonds",
           "description": ""
         },
         "Property": {
