@@ -11,6 +11,7 @@ Element changes
 * Removes ModelWeatherSource (:pull:`88`)
 * Adds EnergyACAnnual, EnergyACAnnualP50, EnergyACAnnualP90, IrradTranspositionModel, ModelRunDate (:pull`88`)
 * Adds PerClaimAmount, AggregateAmount, DeductibleAmount, InsurancePolicyID, RiskTransferType (:pull:`103`)
+* Delete ForecastScopeID (:pull:`105`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -21,6 +22,7 @@ Object changes
 * Removes EnergyPrediction, EnergyPredictions (:pull`88`)
 * EnergyModel elements changed (:pull:`88`)
 * Adds InsurancePolicy, InsurancePolicyScope (:pull:`103`)
+* Remake ForecastScope and attach to Forecase (:pull:`105`)
 
 Unit changes
 ~~~~~~~~~~~~
