@@ -10897,11 +10897,11 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "050"
-						}
+            }
           }
         ]
       },
-			"EnergyACAnnualP50": {
+      "EnergyACAnnualP50": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementNumber"
@@ -11029,7 +11029,7 @@
           }
         ]
       },
-			"EnergyModelScope": {
+      "EnergyModelScope": {
         "allOf": [
           {
             "$ref": "#/components/schemas/Scope"
@@ -11097,7 +11097,7 @@
         "items": {
           "$ref": "#/components/schemas/EnergyModel"
         }
-			},
+      },
       "BOSScope": {
         "allOf": [
           {
@@ -11130,6 +11130,145 @@
           {
             "type": "object",
             "description": "Scope of the Task object.",
+            "properties": {}
+          }
+        ]
+      },
+      "PerClaimAmount": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The maximum limit payable, per licensee, for damages arising from the same or a related claim.",
+            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type-group": "OBMonetary",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "USD",
+              "Value": 1000000
+            }
+          }
+        ]
+      },
+      "AggregateAmount": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The maximum amount of money the insurer will pay for all of your losses during a policy period.",
+            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type-group": "OBMonetary",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "USD",
+              "Value": 1000000
+            }
+          }
+        ]
+      },
+      "DeductibleAmount": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The amount of money that the insured is responsible for paying toward an insured loss.",
+            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type-group": "OBMonetary",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "USD",
+              "Value": 1000000
+            }
+          }
+        ]
+      },
+      "InsurancePolicyID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A unique identifier for a specific InsurancePolicy.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "12bfdbee-1aec-4f42-bd96-10c8b0625196"
+            }
+          }
+        ]
+      },
+      "RiskTransferType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Method or product that transfers risk between entities.",
+            "x-ob-item-type": "RiskTransferTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Specialty"
+            }
+          }
+        ]
+      },
+      "InsurancePolicy": {
+        "type": "object",
+        "description": "Specific instance of an insurance policy with beneficiary, supplier and purchaser.",
+        "properties": {
+          "AggregateAmount": {
+            "$ref": "#/components/schemas/AggregateAmount"
+          },
+          "PerClaimAmount": {
+            "$ref": "#/components/schemas/PerClaimAmount"
+          },
+          "InsurancePolicyID": {
+            "$ref": "#/components/schemas/InsurancePolicyID"
+          },
+          "InsurancePolicyScope": {
+            "$ref": "#/components/schemas/InsurancePolicyScope"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "ExpirationDate": {
+            "$ref": "#/components/schemas/ExpirationDate"
+          },
+          "RiskTransferType": {
+            "$ref": "#/components/schemas/RiskTransferType"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "DeductibleAmount": {
+            "$ref": "#/components/schemas/DeductibleAmount"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          }
+        }
+      },
+      "InsurancePolicyScope": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Scope"
+          },
+          {
+            "type": "object",
+            "description": "Scope of the InsurancePolicy object.",
             "properties": {}
           }
         ]
@@ -16480,6 +16619,35 @@
         "071": {
           "label": "State-County-MCD-Incorporated Place/Balance",
           "description": "Inncorporated places can cross MCD boundaries, therefore a place name can appear in more than one MCD. The 071 code designates that part of place that is within one MCD. This summary level includes any unincorporated \"balance\" of the MCD."
+        }
+      }
+    },
+    "RiskTransferTypeItemType": {
+      "description": "Type of method or product that transfers risk between entities.",
+      "enums": {
+        "WorkersComp": {
+          "label": "Workers Compensation",
+          "description": ""
+        },
+        "LiabilityCasualty": {
+          "label": "Liability Casualty",
+          "description": ""
+        },
+        "SuretyBonds": {
+          "label": "Surety Bonds",
+          "description": ""
+        },
+        "Property": {
+          "label": "Property",
+          "description": ""
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
+        },
+        "Specialty": {
+          "label": "Specialty",
+          "description": ""
         }
       }
     }

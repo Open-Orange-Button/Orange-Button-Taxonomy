@@ -10,6 +10,7 @@ Element changes
 * Adds DelegatesToAHJID, ExceptionDescription, AHJLevelCode (:pull:`91`)
 * Removes ModelWeatherSource (:pull:`88`)
 * Adds EnergyACAnnual, EnergyACAnnualP50, EnergyACAnnualP90, IrradTranspositionModel, ModelRunDate (:pull`88`)
+* Adds PerClaimAmount, AggregateAmount, DeductibleAmount, InsurancePolicyID, RiskTransferType (:pull:`103`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -19,10 +20,12 @@ Object changes
 * Creates EnergyModelInput, EnergyModelOutput, EnergyModelScope (:pull:`88`)
 * Removes EnergyPrediction, EnergyPredictions (:pull`88`)
 * EnergyModel elements changed (:pull:`88`)
+* Adds InsurancePolicy, InsurancePolicyScope (:pull:`103`)
 
 Unit changes
 ~~~~~~~~~~~~
 * Adds DelegatesToAHJID, ExceptionDescription, AHJLevelCode (:pull:`91`)
+* RiskTransferTypeItemType (:pull:`103`)
 
 Object changes
 ~~~~~~~~~~~~~~
