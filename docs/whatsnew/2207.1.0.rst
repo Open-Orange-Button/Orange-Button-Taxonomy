@@ -21,6 +21,7 @@ Object changes
 * Removes EnergyPrediction, EnergyPredictions (:pull`88`)
 * EnergyModel elements changed (:pull:`88`)
 * Adds InsurancePolicy, InsurancePolicyScope (:pull:`103`)
+* Adds element CECListingDate to ProdModule, ProdInverter (:pull:`104`)
 
 Unit changes
 ~~~~~~~~~~~~

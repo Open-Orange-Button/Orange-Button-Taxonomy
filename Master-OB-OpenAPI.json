@@ -6519,6 +6519,9 @@
               },
               "IsPVInputCapable": {
                 "$ref": "#/components/schemas/IsPVInputCapable"
+              },
+              "CECListingDate": {
+                "$ref": "#/components/schemas/CECListingDate"
               }
             }
           }
@@ -7494,6 +7497,9 @@
               },
               "TemperatureCoefficientMaxPowerVoltage": {
                 "$ref": "#/components/schemas/TemperatureCoefficientMaxPowerVoltage"
+              },
+              "CECListingDate": {
+                "$ref": "#/components/schemas/CECListingDate"
               }
             }
           }
