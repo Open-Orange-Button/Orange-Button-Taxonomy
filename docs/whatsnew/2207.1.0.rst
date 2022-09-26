@@ -23,7 +23,7 @@ Object changes
 * EnergyModel elements changed (:pull:`88`)
 * Adds InsurancePolicy, InsurancePolicyScope (:pull:`103`)
 * Adds element CECListingDate to ProdModule, ProdInverter (:pull:`104`)
-* Remake ForecastScope and attach to Forecase (:pull:`105`)
+* Remake ForecastScope and attach to Forecast (:pull:`105`)
 
 Unit changes
 ~~~~~~~~~~~~
