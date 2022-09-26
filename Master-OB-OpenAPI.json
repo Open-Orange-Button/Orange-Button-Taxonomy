@@ -8952,24 +8952,6 @@
           }
         }
       },
-      "Signatory": {
-        "type": "object",
-        "description": "Information about a being who signs the contract",
-        "properties": {
-          "SignatureDate": {
-            "$ref": "#/components/schemas/SignatureDate"
-          },
-          "Entity": {
-            "$ref": "#/components/schemas/Entity"
-          },
-          "Contact": {
-            "$ref": "#/components/schemas/Contact"
-          },
-          "Comments": {
-            "$ref": "#/components/schemas/Comments"
-          }
-        }
-      },
       "SignatureDate": {
         "allOf": [
           {
@@ -9026,21 +9008,6 @@
             }
           }
         ]
-      },
-      "Preparer": {
-        "type": "object",
-        "description": "Entity who prepared the legal documents",
-        "properties": {
-          "Entity": {
-            "$ref": "#/components/schemas/Entity"
-          },
-          "Contact": {
-            "$ref": "#/components/schemas/Contact"
-          },
-          "Comments": {
-            "$ref": "#/components/schemas/Comments"
-          }
-        }
       },
       "Stipulation": {
         "type": "object",
@@ -11276,6 +11243,87 @@
             "type": "object",
             "description": "Scope of the InsurancePolicy object.",
             "properties": {}
+          }
+        ]
+      },
+      "Signatory": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "Information about a being who signs the contract",
+            "properties": {
+              "SignatureDate": {
+                "$ref": "#/components/schemas/SignatureDate"
+              },
+              "Contact": {
+                "$ref": "#/components/schemas/Contact"
+              },
+              "Comments": {
+                "$ref": "#/components/schemas/Comments"
+              },
+              "SigningFor": {
+                "$ref": "#/components/schemas/SigningFor"
+              }
+            }
+          }
+        ]
+      },
+      "Preparer": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "Entity who prepared the legal documents",
+            "properties": {
+              "Contact": {
+                "$ref": "#/components/schemas/Contact"
+              },
+              "Comments": {
+                "$ref": "#/components/schemas/Comments"
+              },
+              "PreparerName": {
+                "$ref": "#/components/schemas/PreparerName"
+              }
+            }
+          }
+        ]
+      },
+      "PreparerName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of preparer",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "John Q. Public"
+            }
+          }
+        ]
+      },
+      "SigningFor": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Entity that has signed on behalf of the concerned parties",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "John Q. Public"
+            }
           }
         ]
       }
