@@ -9569,6 +9569,9 @@
           },
           "JobID": {
             "$ref": "#/components/schemas/JobID"
+          },
+          "JobType": {
+            "$ref": "#/components/schemas/JobType"
           }
         }
       },
@@ -11276,6 +11279,23 @@
             "type": "object",
             "description": "Scope of the InsurancePolicy object.",
             "properties": {}
+          }
+        ]
+      },
+      "JobType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Description of the high-level technical elements within a job. ",
+            "x-ob-item-type": "JobTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "PV_ST"
+            }
           }
         ]
       }
@@ -16654,6 +16674,27 @@
         "Specialty": {
           "label": "Specialty",
           "description": ""
+        }
+      }
+    },
+    "JobTypeItemType": {
+      "description": "High-level technical components contained within a Job.",
+      "enums": {
+        "PV": {
+          "label": "PV",
+          "description": "PV install only."
+        },
+        "BIPV": {
+          "label": "BIPV",
+          "description": "Building integrated PV installation."
+        },
+        "PV_ST": {
+          "label": "PV+ST",
+          "description": "PV and Storage installation."
+        },
+        "BIPV_ST\t": {
+          "label": "BIPV+ST\t",
+          "description": "Building integrated PV and Storage Installation."
         }
       }
     }
