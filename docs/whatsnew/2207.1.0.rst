@@ -38,7 +38,7 @@ Unit changes
 ~~~~~~~~~~~~
  * Add ScopeTypeItemType (:pull:`82`)
  * Adds AHJLevelCodeItemType and Enums (:pull:`91`)
-* Adds JobTypeItemType (:pull:`107`)
+ * Adds JobTypeItemType (:pull:`107`)
 
 Bug fixes
 ~~~~~~~~~
