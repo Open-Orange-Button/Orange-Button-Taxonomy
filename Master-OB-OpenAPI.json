@@ -16678,7 +16678,7 @@
       }
     },
     "JobTypeItemType": {
-      "description": "High-level technical components contained within a Job.",
+      "description": "High-level technical components contained within a Job. Enumerated values are sourced to match values required by SolarAPP.",
       "enums": {
         "PV": {
           "label": "PV",
@@ -16692,7 +16692,7 @@
           "label": "PV+ST",
           "description": "PV and Storage installation."
         },
-        "BIPV_ST\t": {
+        "BIPV_ST": {
           "label": "BIPV+ST\t",
           "description": "Building integrated PV and Storage Installation."
         }
