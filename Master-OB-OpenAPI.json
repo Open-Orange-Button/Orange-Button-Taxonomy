@@ -16692,7 +16692,7 @@
           "label": "PV+ST",
           "description": "PV and Storage installation."
         },
-        "BIPV_ST\t": {
+        "BIPV_ST": {
           "label": "BIPV+ST",
           "description": "Building integrated PV and Storage Installation."
         }
