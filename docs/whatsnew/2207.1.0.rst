@@ -11,7 +11,7 @@ Element changes
 * Removes ModelWeatherSource (:pull:`88`)
 * Adds EnergyACAnnual, EnergyACAnnualP50, EnergyACAnnualP90, IrradTranspositionModel, ModelRunDate (:pull`88`)
 * Adds PerClaimAmount, AggregateAmount, DeductibleAmount, InsurancePolicyID, RiskTransferType (:pull:`103`)
-* Adds PreparerName and SigningFor elements (:pull:'106')
+* Adds PreparerName and SigningFor elements (:pull:`106`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -23,7 +23,7 @@ Object changes
 * EnergyModel elements changed (:pull:`88`)
 * Adds InsurancePolicy, InsurancePolicyScope (:pull:`103`)
 * Adds element CECListingDate to ProdModule, ProdInverter (:pull:`104`)
-* Removed Entity from Preparer and Signatory and added inheritance (:pull:'106')
+* Removed Entity from Preparer and Signatory and added inheritance (:pull:`106`)
 
 Unit changes
 ~~~~~~~~~~~~
