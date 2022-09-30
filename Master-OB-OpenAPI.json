@@ -10655,21 +10655,6 @@
           "$ref": "#/components/schemas/TempModule"
         }
       },
-      "ForecastScopeID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "An identifier for the device, system, portfolio, or region where a forecast applied.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
       "IrradPlaneOfArrayArray": {
         "type": "array",
         "items": {
@@ -10710,8 +10695,8 @@
           "TempModuleArray": {
             "$ref": "#/components/schemas/TempModuleArray"
           },
-          "Scope": {
-            "$ref": "#/components/schemas/Scope"
+          "ForecastScope": {
+            "$ref": "#/components/schemas/ForecastScope"
           }
         }
       },
@@ -11275,6 +11260,18 @@
           {
             "type": "object",
             "description": "Scope of the InsurancePolicy object.",
+            "properties": {}
+          }
+        ]
+      },
+      "ForecastScope": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Scope"
+          },
+          {
+            "type": "object",
+            "description": "The scope of a forecast object, an instance of base class Scope",
             "properties": {}
           }
         ]
