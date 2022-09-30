@@ -1,7 +1,7 @@
 
-.. _whatsnew_220710:
+.. _whatsnew_220900:
 
-2207.1.0
+2209.0.0
 --------
 
 Element changes
@@ -11,7 +11,11 @@ Element changes
 * Removes ModelWeatherSource (:pull:`88`)
 * Adds EnergyACAnnual, EnergyACAnnualP50, EnergyACAnnualP90, IrradTranspositionModel, ModelRunDate (:pull`88`)
 * Adds PerClaimAmount, AggregateAmount, DeductibleAmount, InsurancePolicyID, RiskTransferType (:pull:`103`)
+<<<<<<< HEAD:docs/whatsnew/2207.1.0.rst
 * Adds JobType (:pull:`107`)
+=======
+* Delete ForecastScopeID (:pull:`105`)
+>>>>>>> b4872b331a9aaf639665c4ef2c69310b76935348:docs/whatsnew/2209.0.0.rst
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -23,6 +27,7 @@ Object changes
 * EnergyModel elements changed (:pull:`88`)
 * Adds InsurancePolicy, InsurancePolicyScope (:pull:`103`)
 * Adds element CECListingDate to ProdModule, ProdInverter (:pull:`104`)
+* Remake ForecastScope and attach to Forecast (:pull:`105`)
 
 Unit changes
 ~~~~~~~~~~~~
