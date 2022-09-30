@@ -10658,6 +10658,21 @@
           "$ref": "#/components/schemas/TempModule"
         }
       },
+      "ForecastScopeID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An identifier for the device, system, portfolio, or region where a forecast applied.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
       "IrradPlaneOfArrayArray": {
         "type": "array",
         "items": {
