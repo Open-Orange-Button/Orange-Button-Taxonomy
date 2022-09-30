@@ -11764,7 +11764,6 @@
         },
         "CAD": {
           "label": "Canadian dollar",
-          "label": "Canadian dollar",
           "description": "Canadian dollar"
         },
         "CDF": {
@@ -16694,7 +16693,7 @@
           "description": "PV and Storage installation."
         },
         "BIPV_ST": {
-          "label": "BIPV+ST\t",
+          "label": "BIPV+ST",
           "description": "Building integrated PV and Storage Installation."
         }
       }
