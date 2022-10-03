@@ -11,7 +11,6 @@ Element changes
 * Removes ModelWeatherSource (:pull:`88`)
 * Adds EnergyACAnnual, EnergyACAnnualP50, EnergyACAnnualP90, IrradTranspositionModel, ModelRunDate (:pull`88`)
 * Adds PerClaimAmount, AggregateAmount, DeductibleAmount, InsurancePolicyID, RiskTransferType (:pull:`103`)
-* Adds JobType (:pull:`107`)
 * Delete ForecastScopeID (:pull:`105`)
 
 Object changes
@@ -40,7 +39,6 @@ Unit changes
 ~~~~~~~~~~~~
  * Add ScopeTypeItemType (:pull:`82`)
  * Adds AHJLevelCodeItemType and Enums (:pull:`91`)
- * Adds JobTypeItemType (:pull:`107`)
 
 Bug fixes
 ~~~~~~~~~
