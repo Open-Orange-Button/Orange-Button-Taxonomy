@@ -40,4 +40,5 @@ Documentation
 Contributors
 ~~~~~~~~~~~~
  * Kevin Kirkley (:ghuser:`kevinkirkl3y`)
+ * Tyler Hagen (:ghuser:`THagen-BB`)
  
