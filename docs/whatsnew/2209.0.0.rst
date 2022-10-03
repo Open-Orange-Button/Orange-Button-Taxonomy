@@ -11,11 +11,8 @@ Element changes
 * Removes ModelWeatherSource (:pull:`88`)
 * Adds EnergyACAnnual, EnergyACAnnualP50, EnergyACAnnualP90, IrradTranspositionModel, ModelRunDate (:pull`88`)
 * Adds PerClaimAmount, AggregateAmount, DeductibleAmount, InsurancePolicyID, RiskTransferType (:pull:`103`)
-<<<<<<< HEAD:docs/whatsnew/2207.1.0.rst
 * Adds JobType (:pull:`107`)
-=======
 * Delete ForecastScopeID (:pull:`105`)
->>>>>>> b4872b331a9aaf639665c4ef2c69310b76935348:docs/whatsnew/2209.0.0.rst
 
 Object changes
 ~~~~~~~~~~~~~~
