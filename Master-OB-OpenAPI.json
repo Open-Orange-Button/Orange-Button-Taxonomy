@@ -9536,6 +9536,9 @@
           },
           "JobID": {
             "$ref": "#/components/schemas/JobID"
+          },
+          "JobType": {
+            "$ref": "#/components/schemas/JobType"
           }
         }
       },
@@ -10622,6 +10625,21 @@
           "$ref": "#/components/schemas/TempModule"
         }
       },
+      "ForecastScopeID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An identifier for the device, system, portfolio, or region where a forecast applied.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
       "IrradPlaneOfArrayArray": {
         "type": "array",
         "items": {
@@ -10662,8 +10680,8 @@
           "TempModuleArray": {
             "$ref": "#/components/schemas/TempModuleArray"
           },
-          "ForecastScope": {
-            "$ref": "#/components/schemas/ForecastScope"
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
           }
         }
       },
@@ -11308,6 +11326,23 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "John Q. Public"
+            }
+          }
+        ]
+      },
+      "JobType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Description of the high-level technical elements within a job. ",
+            "x-ob-item-type": "JobTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "PV_ST"
             }
           }
         ]
@@ -16699,6 +16734,27 @@
         "Specialty": {
           "label": "Specialty",
           "description": ""
+        }
+      }
+    },
+    "JobTypeItemType": {
+      "description": "High-level technical components contained within a Job. Enumerated values are sourced to match values required by SolarAPP.",
+      "enums": {
+        "PV": {
+          "label": "PV",
+          "description": "PV install only."
+        },
+        "BIPV": {
+          "label": "BIPV",
+          "description": "Building integrated PV installation."
+        },
+        "PV_ST": {
+          "label": "PV+ST",
+          "description": "PV and Storage installation."
+        },
+        "BIPV_ST": {
+          "label": "BIPV+ST",
+          "description": "Building integrated PV and Storage Installation."
         }
       }
     }
