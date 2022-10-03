@@ -10680,8 +10680,8 @@
           "TempModuleArray": {
             "$ref": "#/components/schemas/TempModuleArray"
           },
-          "Scope": {
-            "$ref": "#/components/schemas/Scope"
+          "ForecastScope": {
+            "$ref": "#/components/schemas/ForecastScope"
           }
         }
       },
