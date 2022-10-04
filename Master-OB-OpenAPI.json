@@ -239,9 +239,6 @@
         "properties": {
           "RevenueGrade": {
             "$ref": "#/components/schemas/RevenueGrade"
-          },
-          "MeasScope": {
-            "$ref": "#/components/schemas/MeasScope"
           }
         },
         "x-ob-usage-tips": ""
@@ -5416,21 +5413,6 @@
           }
         ]
       },
-      "MeasScope": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Scope of the power measurement. Can be \"System\" for the entire PV system, \"Inverter XXX\" for a specific inveter, \"String YYY\" for a specific string.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "Avail": {
         "allOf": [
           {
@@ -10434,9 +10416,6 @@
               "RiskCategory": {
                 "$ref": "#/components/schemas/RiskCategory"
               },
-              "EnergyProductions": {
-                "$ref": "#/components/schemas/EnergyProductions"
-              },
               "PVArrays": {
                 "$ref": "#/components/schemas/PVArrays"
               },
@@ -10445,6 +10424,9 @@
               },
               "EnergyModels": {
                 "$ref": "#/components/schemas/EnergyModels"
+              },
+              "Production": {
+                "$ref": "#/components/schemas/Production"
               }
             },
             "x-ob-usage-tips": ""
@@ -10766,6 +10748,9 @@
           },
           "FileFolderURL": {
             "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
           }
         }
       },
@@ -11355,6 +11340,42 @@
           {
             "type": "object",
             "description": "The scope of a forecast object, an instance of base class Scope",
+            "properties": {}
+          }
+        ]
+      },
+      "Production": {
+        "type": "object",
+        "description": "A collection of electrical and related measurements with a common scope.",
+        "properties": {
+          "EnergyACMeas": {
+            "$ref": "#/components/schemas/EnergyACMeas"
+          },
+          "IrradGlobalHorizMeas": {
+            "$ref": "#/components/schemas/IrradGlobalHorizMeas"
+          },
+          "MeasScope": {
+            "$ref": "#/components/schemas/MeasScope"
+          },
+          "PowerACMeas": {
+            "$ref": "#/components/schemas/PowerACMeas"
+          },
+          "TempAmbMeas": {
+            "$ref": "#/components/schemas/TempAmbMeas"
+          },
+          "VoltageDCMeas": {
+            "$ref": "#/components/schemas/VoltageDCMeas"
+          }
+        }
+      },
+      "MeasScope": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Scope"
+          },
+          {
+            "type": "object",
+            "description": "The scope of a set of measurements",
             "properties": {}
           }
         ]
