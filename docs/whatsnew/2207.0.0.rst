@@ -1,6 +1,6 @@
-.. _whatsnew_0910:
+.. _whatsnew_220700:
 
-2202.1.0
+2207.0.0
 --------
 
 Element changes
@@ -29,7 +29,6 @@ Object changes
 * Added System Object (:pull:`73`)
 * Add to Installer: InstallerName (:pull:`74`)
 * Add Forecast, ForecastScope objects (:pull:`79`)
-* Add Scope, Measurement, EnergyACMeas, IrradGlobalHorizMeas, PowerACMeas, TempAmbMeas (:pull:`82`)
 
 Unit changes
 ~~~~~~~~~~~~
@@ -71,3 +70,4 @@ Contributors
 * Kevin Kirkley (:ghuser:`kevinkirkl3y`)
 * Zia Swim (:ghuser:`blizita`)
 * Taos Transue (:ghuser:`reepoi`)
+

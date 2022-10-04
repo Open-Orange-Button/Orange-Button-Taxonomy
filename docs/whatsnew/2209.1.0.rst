@@ -1,0 +1,44 @@
+
+.. _whatsnew_220910:
+
+2209.1.0
+--------
+
+Element changes
+~~~~~~~~~~~~~~~
+ * Adds JobType (:pull:`107`)
+ * Adds PreparerName, SigningFor (:pull:`105`)
+ 
+Object changes
+~~~~~~~~~~~~~~
+ * Signatory and Preparer now inherit from Entity rather than use Entity directly (:pull:`106`)
+ 
+
+Unit changes
+~~~~~~~~~~~~
+
+Object changes
+~~~~~~~~~~~~~~
+
+Unit changes
+~~~~~~~~~~~~
+ * Adds JobTypeItemType (:pull:`107`)
+
+Bug fixes
+~~~~~~~~~
+
+
+Testing
+~~~~~~~
+
+
+
+Documentation
+~~~~~~~~~~~~~
+
+
+Contributors
+~~~~~~~~~~~~
+ * Kevin Kirkley (:ghuser:`kevinkirkl3y`)
+ * Tyler Hagen (:ghuser:`THagen-BB`)
+ 

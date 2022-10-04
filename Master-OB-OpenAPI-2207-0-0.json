@@ -3,7 +3,7 @@
   "info": {
     "version": "1.1.7",
     "title": "OB OpenAPI Taxonomy",
-    "description": "OB OpenAPI Definitions For Orange Button."
+    "description": "OB OpenAPI Taxonomy version 2207.0.0."
   },
   "paths": {},
   "servers": [],
@@ -22,27 +22,34 @@
         "type": "object",
         "x-ob-usage-tips": ""
       },
+      "EnergyPrediction": {
+        "type": "object",
+        "description": "A value of energy produced in one time period.",
+        "properties": {
+          "EnergyAC": {
+            "$ref": "#/components/schemas/EnergyAC"
+          }
+        },
+        "x-ob-usage-tips": ""
+      },
       "EnergyModel": {
         "type": "object",
         "description": "Energy model contains energy predictions and information about the model assumptions and information sources.",
         "properties": {
+          "ModelWeatherSource": {
+            "$ref": "#/components/schemas/ModelWeatherSource"
+          },
           "EnergyModelName": {
             "$ref": "#/components/schemas/EnergyModelName"
           },
-          "Description": {
-            "$ref": "#/components/schemas/Description"
+          "SiteID": {
+            "$ref": "#/components/schemas/SiteID"
           },
-          "EnergyModelInput": {
-            "$ref": "#/components/schemas/EnergyModelInput"
+          "EnergyModelConfigurationFilename": {
+            "$ref": "#/components/schemas/EnergyModelConfigurationFilename"
           },
-          "EnergyModelOutput": {
-            "$ref": "#/components/schemas/EnergyModelOutput"
-          },
-          "EnergyModelScope": {
-            "$ref": "#/components/schemas/EnergyModelScope"
-          },
-          "ModelRunDate": {
-            "$ref": "#/components/schemas/ModelRunDate"
+          "EnergyPredictions": {
+            "$ref": "#/components/schemas/EnergyPredictions"
           }
         },
         "x-ob-usage-tips": ""
@@ -692,15 +699,6 @@
           },
           "DocumentSubmissionMethods": {
             "$ref": "#/components/schemas/DocumentSubmissionMethods"
-          },
-          "AHJLevelCode": {
-            "$ref": "#/components/schemas/AHJLevelCode"
-          },
-          "DelegatesToAHJID": {
-            "$ref": "#/components/schemas/DelegatesToAHJID"
-          },
-          "ExceptionDescription": {
-            "$ref": "#/components/schemas/ExceptionDescription"
           }
         },
         "x-ob-usage-tips": ""
@@ -1179,9 +1177,9 @@
             "type": "object",
             "description": "Type of design/energy production model for the PV system which could be Pvsyst, SAM, PV Watts, or Other.",
             "x-ob-item-type": "StringItemType",
-            "x-ob-usage-tips": "Include software version number with EnergyModelName",
+            "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "Pvsyst v7.0"
+              "Value": "Pvsyst Model 1"
             },
             "x-ob-item-type-group": ""
           }
@@ -1682,9 +1680,6 @@
           },
           "Comments": {
             "$ref": "#/components/schemas/Comments"
-          },
-          "TaskScope": {
-            "$ref": "#/components/schemas/TaskScope"
           }
         },
         "x-ob-usage-tips": ""
@@ -1924,9 +1919,6 @@
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
-          },
-          "BOMScope": {
-            "$ref": "#/components/schemas/BOMScope"
           }
         },
         "x-ob-usage-tips": ""
@@ -3171,6 +3163,9 @@
           "Contacts": {
             "$ref": "#/components/schemas/Contacts"
           },
+          "EnergyModels": {
+            "$ref": "#/components/schemas/EnergyModels"
+          },
           "EnergyConsumptions": {
             "$ref": "#/components/schemas/EnergyConsumptions"
           },
@@ -3255,6 +3250,12 @@
           "$ref": "#/components/schemas/AgingBucket"
         }
       },
+      "EnergyModels": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/EnergyModel"
+        }
+      },
       "EnergyConsumptions": {
         "type": "array",
         "items": {
@@ -3265,6 +3266,12 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/EnergyProduction"
+        }
+      },
+      "EnergyPredictions": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/EnergyPrediction"
         }
       },
       "EnergyUsages": {
@@ -4250,9 +4257,6 @@
           },
           "BillOfServicesStatus": {
             "$ref": "#/components/schemas/BillOfServicesStatus"
-          },
-          "BOSScope": {
-            "$ref": "#/components/schemas/BOSScope"
           }
         }
       },
@@ -5333,7 +5337,7 @@
           },
           {
             "type": "object",
-            "description": "Weather source used for the model, for example: ground measurements, NSRDB TMY3, SolarAnywhere v3.0, SolarGIS vX.Y",
+            "description": "Weather source used for the model which can be None, Local, Satellite, Modeled, or Mixed.",
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {},
@@ -5901,7 +5905,7 @@
           },
           {
             "type": "object",
-            "description": "Identifier of the municipal authority, for example, town, city or county, that has jurisdiction to define local code requirements.",
+            "description": "Municipal authority, for example, town, city or country, that has jurisdiction to define local code requirements.",
             "x-ob-item-type": "UUIDItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {},
@@ -6519,9 +6523,6 @@
               },
               "IsPVInputCapable": {
                 "$ref": "#/components/schemas/IsPVInputCapable"
-              },
-              "CECListingDate": {
-                "$ref": "#/components/schemas/CECListingDate"
               }
             }
           }
@@ -6671,9 +6672,6 @@
           },
           "Tags": {
             "$ref": "#/components/schemas/Tags"
-          },
-          "CommentScope": {
-            "$ref": "#/components/schemas/CommentScope"
           }
         }
       },
@@ -7497,9 +7495,6 @@
               },
               "TemperatureCoefficientMaxPowerVoltage": {
                 "$ref": "#/components/schemas/TemperatureCoefficientMaxPowerVoltage"
-              },
-              "CECListingDate": {
-                "$ref": "#/components/schemas/CECListingDate"
               }
             }
           }
@@ -8952,6 +8947,24 @@
           }
         }
       },
+      "Signatory": {
+        "type": "object",
+        "description": "Information about a being who signs the contract",
+        "properties": {
+          "SignatureDate": {
+            "$ref": "#/components/schemas/SignatureDate"
+          },
+          "Entity": {
+            "$ref": "#/components/schemas/Entity"
+          },
+          "Contact": {
+            "$ref": "#/components/schemas/Contact"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          }
+        }
+      },
       "SignatureDate": {
         "allOf": [
           {
@@ -9008,6 +9021,21 @@
             }
           }
         ]
+      },
+      "Preparer": {
+        "type": "object",
+        "description": "Entity who prepared the legal documents",
+        "properties": {
+          "Entity": {
+            "$ref": "#/components/schemas/Entity"
+          },
+          "Contact": {
+            "$ref": "#/components/schemas/Contact"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          }
+        }
       },
       "Stipulation": {
         "type": "object",
@@ -9533,12 +9561,6 @@
           },
           "AlternativeIdentifiers": {
             "$ref": "#/components/schemas/AlternativeIdentifiers"
-          },
-          "JobID": {
-            "$ref": "#/components/schemas/JobID"
-          },
-          "JobType": {
-            "$ref": "#/components/schemas/JobType"
           }
         }
       },
@@ -10434,6 +10456,9 @@
               "RiskCategory": {
                 "$ref": "#/components/schemas/RiskCategory"
               },
+              "EnergyModels": {
+                "$ref": "#/components/schemas/EnergyModels"
+              },
               "EnergyProductions": {
                 "$ref": "#/components/schemas/EnergyProductions"
               },
@@ -10442,9 +10467,6 @@
               },
               "CapacityAC": {
                 "$ref": "#/components/schemas/CapacityAC"
-              },
-              "EnergyModels": {
-                "$ref": "#/components/schemas/EnergyModels"
               }
             },
             "x-ob-usage-tips": ""
@@ -10477,6 +10499,9 @@
               },
               "EnergyConsumptions": {
                 "$ref": "#/components/schemas/EnergyConsumptions"
+              },
+              "EnergyModels": {
+                "$ref": "#/components/schemas/EnergyModels"
               }
             }
           }
@@ -10700,664 +10725,20 @@
           }
         ]
       },
-      "Scope": {
+      "ForecastScope": {
         "type": "object",
-        "description": "A generic object containing information describing where the aforementioned data applies to. ",
+        "description": "An object containing information describing where the forecast applies.",
         "properties": {
-          "ScopeID": {
-            "$ref": "#/components/schemas/ScopeID"
+          "ForecastScopeID": {
+            "$ref": "#/components/schemas/ForecastScopeID"
           },
-          "ScopeType": {
-            "$ref": "#/components/schemas/ScopeType"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
+          "ForecastScopeType": {
+            "$ref": "#/components/schemas/ForecastScopeType"
           },
           "Location": {
             "$ref": "#/components/schemas/Location"
-          },
-          "Description": {
-            "$ref": "#/components/schemas/Description"
           }
         }
-      },
-      "ScopeID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "An identifier for the device, system, portfolio, or region where data was collected.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "ScopeType": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The scope where data applies.",
-            "x-ob-item-type": "ScopeTypeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "Measurement": {
-        "type": "object",
-        "description": "An object containing data for measurements.",
-        "properties": {
-          "Scope": {
-            "$ref": "#/components/schemas/Scope"
-          },
-          "Comment": {
-            "$ref": "#/components/schemas/Comment"
-          },
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          }
-        }
-      },
-      "EnergyACMeas": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Measurement"
-          },
-          {
-            "type": "object",
-            "description": "An object containing Energy AC measurements.",
-            "properties": {
-              "EnergyACArray": {
-                "$ref": "#/components/schemas/EnergyACArray"
-              }
-            }
-          }
-        ]
-      },
-      "VoltageDCMeas": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Measurement"
-          },
-          {
-            "type": "object",
-            "description": "Object containing VoltageDC measurements.",
-            "properties": {}
-          }
-        ]
-      },
-      "IrradGlobalHorizMeas": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Measurement"
-          },
-          {
-            "type": "object",
-            "description": "An object containing Irradiance Global Horizontal (IrradGlobalHoriz) measurements.",
-            "properties": {
-              "IrradGlobalHorizArray": {
-                "$ref": "#/components/schemas/IrradGlobalHorizArray"
-              }
-            }
-          }
-        ]
-      },
-      "PowerACMeas": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Measurement"
-          },
-          {
-            "type": "object",
-            "description": "An object containing PowerAC measurements.",
-            "properties": {
-              "PowerACArray": {
-                "$ref": "#/components/schemas/PowerACArray"
-              }
-            }
-          }
-        ]
-      },
-      "TempAmbMeas": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Measurement"
-          },
-          {
-            "type": "object",
-            "description": "An object containing Ambient Temperature (TempAmb) measurements.",
-            "properties": {
-              "TempAmbArray": {
-                "$ref": "#/components/schemas/TempAmbArray"
-              }
-            }
-          }
-        ]
-      },
-      "JobID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Universally unique identifier for the job.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "AHJLevelCode": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Code defining jurisdictional level of an Authority Having Jurisdiction.",
-            "x-ob-item-type": "AHJLevelCodeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "050"
-            }
-          }
-        ]
-      },
-      "EnergyACAnnualP50": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The 50th percentile of annual AC energy.",
-            "x-ob-item-type": "EnergyItemType",
-            "x-ob-item-type-group": "OBElectricalEnergy",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "MWh",
-              "Value": 5000
-            }
-          }
-        ]
-      },
-      "EnergyACAnnualP90": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The 90th percentile of annual AC energy.",
-            "x-ob-item-type": "EnergyItemType",
-            "x-ob-item-type-group": "OBElectricalEnergy",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "MWh",
-              "Value": 6500
-            }
-          }
-        ]
-      },
-      "EnergyModelInput": {
-        "type": "object",
-        "description": "Inputs to an energy model.",
-        "properties": {
-          "ModelWeatherSource": {
-            "$ref": "#/components/schemas/ModelWeatherSource"
-          },
-          "CapacityAC": {
-            "$ref": "#/components/schemas/CapacityAC"
-          },
-          "CapacityDC": {
-            "$ref": "#/components/schemas/CapacityDC"
-          },
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "IrradTranspositionModel": {
-            "$ref": "#/components/schemas/IrradTranspositionModel"
-          }
-        }
-      },
-      "EnergyModelOutput": {
-        "type": "object",
-        "description": "Output from an energy model.",
-        "properties": {
-          "EnergyACArray": {
-            "$ref": "#/components/schemas/EnergyACArray"
-          },
-          "EnergyACAnnualP50": {
-            "$ref": "#/components/schemas/EnergyACAnnualP50"
-          },
-          "EnergyACAnnualP90": {
-            "$ref": "#/components/schemas/EnergyACAnnualP90"
-          },
-          "PowerACArray": {
-            "$ref": "#/components/schemas/PowerACArray"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "EnergyACAnnual": {
-            "$ref": "#/components/schemas/EnergyACAnnual"
-          }
-        }
-      },
-      "DelegatesToAHJID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The identifier of the delegated AHJ that has the authority to issue permits for PV and Battery Systems within this jurisdiction.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "3eca0f90-8948-42ab-82d8-ddd891f86166"
-            }
-          }
-        ]
-      },
-      "ExceptionDescription": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Description of special cases applicable to the element. ",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "BOMScope": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Scope"
-          },
-          {
-            "type": "object",
-            "description": "Scope of the BillOfMaterials object.",
-            "properties": {}
-          }
-        ]
-      },
-      "EnergyModelScope": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Scope"
-          },
-          {
-            "type": "object",
-            "description": "Scope of an energy model",
-            "properties": {}
-          }
-        ]
-      },
-      "ModelRunDate": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The date and time associated with the energy model run.",
-            "x-ob-item-type": "DateItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "IrradTranspositionModel": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The model used to transpose from global horizontal irradiance (GHI) to plane-of-array (POA) irradiance.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "{\"Value\": \"Hay-Davies\"}"
-            }
-          }
-        ]
-      },
-      "EnergyACAnnual": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The total annual AC energy for a PV system.",
-            "x-ob-item-type": "EnergyItemType",
-            "x-ob-item-type-group": "OBElectricalEnergy",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Decimals": "1",
-              "Unit": "kWh",
-              "Value": 1650.4
-            }
-          }
-        ]
-      },
-      "EnergyModels": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/EnergyModel"
-        }
-      },
-      "BOSScope": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Scope"
-          },
-          {
-            "type": "object",
-            "description": "Scope of the BillOfServices object.",
-            "properties": {}
-          }
-        ]
-      },
-      "CommentScope": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Scope"
-          },
-          {
-            "type": "object",
-            "description": "Scope of Comment object.",
-            "properties": {}
-          }
-        ]
-      },
-      "TaskScope": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Scope"
-          },
-          {
-            "type": "object",
-            "description": "Scope of the Task object.",
-            "properties": {}
-          }
-        ]
-      },
-      "PerClaimAmount": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The maximum limit payable, per licensee, for damages arising from the same or a related claim.",
-            "x-ob-item-type": "MonetaryItemType",
-            "x-ob-item-type-group": "OBMonetary",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "USD",
-              "Value": 1000000
-            }
-          }
-        ]
-      },
-      "AggregateAmount": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The maximum amount of money the insurer will pay for all of your losses during a policy period.",
-            "x-ob-item-type": "MonetaryItemType",
-            "x-ob-item-type-group": "OBMonetary",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "USD",
-              "Value": 1000000
-            }
-          }
-        ]
-      },
-      "DeductibleAmount": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The amount of money that the insured is responsible for paying toward an insured loss.",
-            "x-ob-item-type": "MonetaryItemType",
-            "x-ob-item-type-group": "OBMonetary",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "USD",
-              "Value": 1000000
-            }
-          }
-        ]
-      },
-      "InsurancePolicyID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "A unique identifier for a specific InsurancePolicy.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "12bfdbee-1aec-4f42-bd96-10c8b0625196"
-            }
-          }
-        ]
-      },
-      "RiskTransferType": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Method or product that transfers risk between entities.",
-            "x-ob-item-type": "RiskTransferTypeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "Specialty"
-            }
-          }
-        ]
-      },
-      "InsurancePolicy": {
-        "type": "object",
-        "description": "Specific instance of an insurance policy with beneficiary, supplier and purchaser.",
-        "properties": {
-          "AggregateAmount": {
-            "$ref": "#/components/schemas/AggregateAmount"
-          },
-          "PerClaimAmount": {
-            "$ref": "#/components/schemas/PerClaimAmount"
-          },
-          "InsurancePolicyID": {
-            "$ref": "#/components/schemas/InsurancePolicyID"
-          },
-          "InsurancePolicyScope": {
-            "$ref": "#/components/schemas/InsurancePolicyScope"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "ExpirationDate": {
-            "$ref": "#/components/schemas/ExpirationDate"
-          },
-          "RiskTransferType": {
-            "$ref": "#/components/schemas/RiskTransferType"
-          },
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "DeductibleAmount": {
-            "$ref": "#/components/schemas/DeductibleAmount"
-          },
-          "AlternativeIdentifiers": {
-            "$ref": "#/components/schemas/AlternativeIdentifiers"
-          },
-          "Comments": {
-            "$ref": "#/components/schemas/Comments"
-          }
-        }
-      },
-      "InsurancePolicyScope": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Scope"
-          },
-          {
-            "type": "object",
-            "description": "Scope of the InsurancePolicy object.",
-            "properties": {}
-          }
-        ]
-      },
-      "Signatory": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Entity"
-          },
-          {
-            "type": "object",
-            "description": "Information about a being who signs the contract",
-            "properties": {
-              "SignatureDate": {
-                "$ref": "#/components/schemas/SignatureDate"
-              },
-              "Contact": {
-                "$ref": "#/components/schemas/Contact"
-              },
-              "Comments": {
-                "$ref": "#/components/schemas/Comments"
-              },
-              "SigningFor": {
-                "$ref": "#/components/schemas/SigningFor"
-              }
-            }
-          }
-        ]
-      },
-      "Preparer": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Entity"
-          },
-          {
-            "type": "object",
-            "description": "Entity who prepared the legal documents",
-            "properties": {
-              "Contact": {
-                "$ref": "#/components/schemas/Contact"
-              },
-              "Comments": {
-                "$ref": "#/components/schemas/Comments"
-              },
-              "PreparerName": {
-                "$ref": "#/components/schemas/PreparerName"
-              }
-            }
-          }
-        ]
-      },
-      "PreparerName": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Name of preparer",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "John Q. Public"
-            }
-          }
-        ]
-      },
-      "SigningFor": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Entity that has signed on behalf of the concerned parties",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "John Q. Public"
-            }
-          }
-        ]
-      },
-      "JobType": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Description of the high-level technical elements within a job. ",
-            "x-ob-item-type": "JobTypeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "PV_ST"
-            }
-          }
-        ]
-      },
-      "ForecastScope": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Scope"
-          },
-          {
-            "type": "object",
-            "description": "The scope of a forecast object, an instance of base class Scope",
-            "properties": {}
-          }
-        ]
       }
     }
   },
@@ -16659,102 +16040,6 @@
         "Site": {
           "label": "Site",
           "description": ""
-        }
-      }
-    },
-    "ScopeTypeItemType": {
-      "description": "An enumerated list of scope for a dataset.",
-      "enums": {
-        "Device": {
-          "label": "Device",
-          "description": ""
-        },
-        "GeoRegion": {
-          "label": "GeoRegion",
-          "description": ""
-        },
-        "Portfolio": {
-          "label": "Portfolio",
-          "description": ""
-        },
-        "PVSystem": {
-          "label": "PVSystem",
-          "description": ""
-        },
-        "Site": {
-          "label": "Site",
-          "description": ""
-        }
-      }
-    },
-    "AHJLevelCodeItemType": {
-      "description": "Geographic summary levels are three-digit numeric codes used by the Census Bureau to designate different geographic levels or areas. The AHJLevelCodeItemType refers to levels of jurisdictional delegation. ",
-      "enums": {
-        "040": {
-          "label": "State",
-          "description": "The primary legal subdivision of the United States"
-        },
-        "050": {
-          "label": "State-County",
-          "description": "The primary legal subdivision of every state except Alaska and Louisiana."
-        },
-        "061": {
-          "label": "State-County-Minor Civil Division (MCD)",
-          "description": "Legally defined county subdivision known by various descriptions, including towns, townships, and districts."
-        },
-        "071": {
-          "label": "State-County-MCD-Incorporated Place/Balance",
-          "description": "Inncorporated places can cross MCD boundaries, therefore a place name can appear in more than one MCD. The 071 code designates that part of place that is within one MCD. This summary level includes any unincorporated \"balance\" of the MCD."
-        }
-      }
-    },
-    "RiskTransferTypeItemType": {
-      "description": "Type of method or product that transfers risk between entities.",
-      "enums": {
-        "WorkersComp": {
-          "label": "Workers Compensation",
-          "description": ""
-        },
-        "LiabilityCasualty": {
-          "label": "Liability Casualty",
-          "description": ""
-        },
-        "SuretyBonds": {
-          "label": "Surety Bonds",
-          "description": ""
-        },
-        "Property": {
-          "label": "Property",
-          "description": ""
-        },
-        "Other": {
-          "label": "Other",
-          "description": ""
-        },
-        "Specialty": {
-          "label": "Specialty",
-          "description": ""
-        }
-      }
-    },
-    "JobTypeItemType": {
-      "description": "High-level technical components contained within a Job. Enumerated values are sourced to match values required by SolarAPP.",
-      "enums": {
-        "PV": {
-          "label": "PV",
-          "description": "PV install only."
-        },
-        "BIPV": {
-          "label": "BIPV",
-          "description": "Building integrated PV installation."
-        },
-        "PV_ST": {
-          "label": "PV+ST",
-          "description": "PV and Storage installation."
-        },
-        "BIPV_ST": {
-          "label": "BIPV+ST",
-          "description": "Building integrated PV and Storage Installation."
         }
       }
     }
