@@ -2,7 +2,7 @@ The Orange Button Solar Taxonomy is defined within **Master-OB-OpenAPI.json**.  
 
 # Contributing
 
-To report a bug, error or to describe a new feature, please open an Issue. To contribute comments or propose changes to the taxonomy, for those with git skills, please feel free to fork this repository and then submit a pull request with your suggested changes.  For those without git skills but wanting contribute, the Orange Button Technical Workgroup meets regularly and welcomes new participants. Contact the workgroup at XXXXXX
+To report a bug, error or to describe a new feature, please open an Issue. To contribute comments or propose changes to the taxonomy, for those with git skills, please feel free to fork this repository and then submit a pull request with your suggested changes.  For those without git skills but wanting contribute, the Orange Button Technical Workgroup meets regularly and welcomes new participants. Contact the workgroup at membership@sunspec.org
 
 # Using the taxonomy
 
