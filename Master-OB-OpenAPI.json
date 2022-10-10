@@ -9,19 +9,6 @@
   "servers": [],
   "components": {
     "schemas": {
-      "EnergyMeasurement": {
-        "description": "A value of energy produced in one time period related to a device.",
-        "properties": {
-          "DeviceID": {
-            "$ref": "#/components/schemas/DeviceID"
-          },
-          "EnergyAC": {
-            "$ref": "#/components/schemas/EnergyAC"
-          }
-        },
-        "type": "object",
-        "x-ob-usage-tips": ""
-      },
       "EnergyModel": {
         "type": "object",
         "description": "Energy model contains energy predictions and information about the model assumptions and information sources.",
@@ -43,19 +30,6 @@
           },
           "ModelRunDate": {
             "$ref": "#/components/schemas/ModelRunDate"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
-      "EnergyProduction": {
-        "type": "object",
-        "description": "Actual Energy Production at a System Site.",
-        "properties": {
-          "SiteID": {
-            "$ref": "#/components/schemas/SiteID"
-          },
-          "EnergyMeasurements": {
-            "$ref": "#/components/schemas/EnergyMeasurements"
           }
         },
         "x-ob-usage-tips": ""
@@ -3170,9 +3144,6 @@
           },
           "EnergyConsumptions": {
             "$ref": "#/components/schemas/EnergyConsumptions"
-          },
-          "EnergyProductions": {
-            "$ref": "#/components/schemas/EnergyProductions"
           }
         }
       },
@@ -3258,22 +3229,10 @@
           "$ref": "#/components/schemas/EnergyConsumption"
         }
       },
-      "EnergyProductions": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/EnergyProduction"
-        }
-      },
       "EnergyUsages": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/EnergyUsage"
-        }
-      },
-      "EnergyMeasurements": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/EnergyMeasurement"
         }
       },
       "ProdDatasheet": {
@@ -10454,9 +10413,6 @@
               "StructureID": {
                 "$ref": "#/components/schemas/StructureID"
               },
-              "EnergyProductions": {
-                "$ref": "#/components/schemas/EnergyProductions"
-              },
               "EnergyConsumptions": {
                 "$ref": "#/components/schemas/EnergyConsumptions"
               }
@@ -11365,6 +11321,12 @@
           },
           "VoltageDCMeas": {
             "$ref": "#/components/schemas/VoltageDCMeas"
+          },
+          "IrradPlaneOfArrayMeas": {
+            "$ref": "#/components/schemas/IrradPlaneOfArrayMeas"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
           }
         }
       },
@@ -11377,6 +11339,22 @@
             "type": "object",
             "description": "The scope of a set of measurements",
             "properties": {}
+          }
+        ]
+      },
+      "IrradPlaneOfArrayMeas": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/MeasScope"
+          },
+          {
+            "type": "object",
+            "description": "Measurements of plane-of-array (POA) irradiance",
+            "properties": {
+              "IrradPlaneOfArrayArray": {
+                "$ref": "#/components/schemas/IrradPlaneOfArrayArray"
+              }
+            }
           }
         ]
       }
