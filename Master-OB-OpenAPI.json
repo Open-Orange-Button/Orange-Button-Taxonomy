@@ -9,19 +9,6 @@
   "servers": [],
   "components": {
     "schemas": {
-      "EnergyMeasurement": {
-        "description": "A value of energy produced in one time period related to a device.",
-        "properties": {
-          "DeviceID": {
-            "$ref": "#/components/schemas/DeviceID"
-          },
-          "EnergyAC": {
-            "$ref": "#/components/schemas/EnergyAC"
-          }
-        },
-        "type": "object",
-        "x-ob-usage-tips": ""
-      },
       "EnergyModel": {
         "type": "object",
         "description": "Energy model contains energy predictions and information about the model assumptions and information sources.",
@@ -43,19 +30,6 @@
           },
           "ModelRunDate": {
             "$ref": "#/components/schemas/ModelRunDate"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
-      "EnergyProduction": {
-        "type": "object",
-        "description": "Actual Energy Production at a System Site.",
-        "properties": {
-          "SiteID": {
-            "$ref": "#/components/schemas/SiteID"
-          },
-          "EnergyMeasurements": {
-            "$ref": "#/components/schemas/EnergyMeasurements"
           }
         },
         "x-ob-usage-tips": ""
@@ -239,9 +213,6 @@
         "properties": {
           "RevenueGrade": {
             "$ref": "#/components/schemas/RevenueGrade"
-          },
-          "MeasScope": {
-            "$ref": "#/components/schemas/MeasScope"
           }
         },
         "x-ob-usage-tips": ""
@@ -3173,9 +3144,6 @@
           },
           "EnergyConsumptions": {
             "$ref": "#/components/schemas/EnergyConsumptions"
-          },
-          "EnergyProductions": {
-            "$ref": "#/components/schemas/EnergyProductions"
           }
         }
       },
@@ -3261,22 +3229,10 @@
           "$ref": "#/components/schemas/EnergyConsumption"
         }
       },
-      "EnergyProductions": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/EnergyProduction"
-        }
-      },
       "EnergyUsages": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/EnergyUsage"
-        }
-      },
-      "EnergyMeasurements": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/EnergyMeasurement"
         }
       },
       "ProdDatasheet": {
@@ -5409,21 +5365,6 @@
           {
             "type": "object",
             "description": "Link to the device manual.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "MeasScope": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Scope of the power measurement. Can be \"System\" for the entire PV system, \"Inverter XXX\" for a specific inveter, \"String YYY\" for a specific string.",
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {},
@@ -10434,9 +10375,6 @@
               "RiskCategory": {
                 "$ref": "#/components/schemas/RiskCategory"
               },
-              "EnergyProductions": {
-                "$ref": "#/components/schemas/EnergyProductions"
-              },
               "PVArrays": {
                 "$ref": "#/components/schemas/PVArrays"
               },
@@ -10445,6 +10383,9 @@
               },
               "EnergyModels": {
                 "$ref": "#/components/schemas/EnergyModels"
+              },
+              "Production": {
+                "$ref": "#/components/schemas/Production"
               }
             },
             "x-ob-usage-tips": ""
@@ -10471,9 +10412,6 @@
               },
               "StructureID": {
                 "$ref": "#/components/schemas/StructureID"
-              },
-              "EnergyProductions": {
-                "$ref": "#/components/schemas/EnergyProductions"
               },
               "EnergyConsumptions": {
                 "$ref": "#/components/schemas/EnergyConsumptions"
@@ -10766,6 +10704,9 @@
           },
           "FileFolderURL": {
             "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
           }
         }
       },
@@ -11356,6 +11297,64 @@
             "type": "object",
             "description": "The scope of a forecast object, an instance of base class Scope",
             "properties": {}
+          }
+        ]
+      },
+      "Production": {
+        "type": "object",
+        "description": "A collection of electrical and related measurements with a common scope.",
+        "properties": {
+          "EnergyACMeas": {
+            "$ref": "#/components/schemas/EnergyACMeas"
+          },
+          "IrradGlobalHorizMeas": {
+            "$ref": "#/components/schemas/IrradGlobalHorizMeas"
+          },
+          "MeasScope": {
+            "$ref": "#/components/schemas/MeasScope"
+          },
+          "PowerACMeas": {
+            "$ref": "#/components/schemas/PowerACMeas"
+          },
+          "TempAmbMeas": {
+            "$ref": "#/components/schemas/TempAmbMeas"
+          },
+          "VoltageDCMeas": {
+            "$ref": "#/components/schemas/VoltageDCMeas"
+          },
+          "IrradPlaneOfArrayMeas": {
+            "$ref": "#/components/schemas/IrradPlaneOfArrayMeas"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          }
+        }
+      },
+      "MeasScope": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Scope"
+          },
+          {
+            "type": "object",
+            "description": "The scope of a set of measurements",
+            "properties": {}
+          }
+        ]
+      },
+      "IrradPlaneOfArrayMeas": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/MeasScope"
+          },
+          {
+            "type": "object",
+            "description": "Measurements of plane-of-array (POA) irradiance",
+            "properties": {
+              "IrradPlaneOfArrayArray": {
+                "$ref": "#/components/schemas/IrradPlaneOfArrayArray"
+              }
+            }
           }
         ]
       }
