@@ -10544,21 +10544,6 @@
           "$ref": "#/components/schemas/TempModule"
         }
       },
-      "ForecastScopeID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "An identifier for the device, system, portfolio, or region where a forecast applied.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
       "IrradPlaneOfArrayArray": {
         "type": "array",
         "items": {
@@ -10603,21 +10588,6 @@
             "$ref": "#/components/schemas/Scope"
           }
         }
-      },
-      "ForecastScopeType": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The scope where a forecast applies.",
-            "x-ob-item-type": "ForecastScopeTypeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
       },
       "Scope": {
         "type": "object",
@@ -10676,9 +10646,6 @@
         "properties": {
           "Scope": {
             "$ref": "#/components/schemas/Scope"
-          },
-          "Comment": {
-            "$ref": "#/components/schemas/Comment"
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
@@ -11252,7 +11219,7 @@
       "IrradPlaneOfArrayMeas": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Scope"
+            "$ref": "#/components/schemas/Measurement"
           },
           {
             "type": "object",

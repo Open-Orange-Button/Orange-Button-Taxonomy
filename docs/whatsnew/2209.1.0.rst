@@ -17,6 +17,8 @@ Object changes
  * Removes and deletes Member : BOMScope, BOSScope, CommentScope, MeasScope, ForecastScope, MeasScope, InsurancePolicyScope, TaskScope (:pull:`127`)
  * Adds Generic Scope member to: BillOfMaterials, BillOfServices, Checklist, Comment, Task, EnergyModel, Forecast, InsurancePolicy, Measurement, Production (:pull:`127`)
  * Changes IrradPlaneOfArrayMeas inheritance from MeasScope to generic Scope (:pull:`127`)
+ * Removes Comment from Measurement Object (:pull:`127`)
+ * Removes  ForecastScopeID,  ForecastScopeType from Taxonomy (:pull:`127`)
 
 Unit changes
 ~~~~~~~~~~~~
