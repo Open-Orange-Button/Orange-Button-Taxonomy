@@ -14,13 +14,9 @@ Object changes
  * Signatory and Preparer now inherit from Entity rather than use Entity directly (:pull:`106`)
  * Removes EnergyMeasurement, EnergyMeasurements. Replaced by Production. (:pull:`117`)
  * Adds IrradPlaneOfArrayMeas. Remakes MeasScope to inherit from Scope. (:pull:`117`) 
- 
-
-Unit changes
-~~~~~~~~~~~~
-
-Object changes
-~~~~~~~~~~~~~~
+ * Removes and deletes Member : BOMScope, BOSScope, CommentScope, MeasScope, ForecastScope, MeasScope, InsurancePolicyScope, TaskScope (:pull:`127`)
+ * Adds Generic Scope member to: BillOfMaterials, BillOfServices, Checklist, Comment, Task, EnergyModel, Forecast, InsurancePolicy, Measurement, Production (:pull:`127`)
+ * Changes IrradPlaneOfArrayMeas inheritance from MeasScope to generic Scope (:pull:`127`)
 
 Unit changes
 ~~~~~~~~~~~~
