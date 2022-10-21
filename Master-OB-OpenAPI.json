@@ -25,11 +25,11 @@
           "EnergyModelOutput": {
             "$ref": "#/components/schemas/EnergyModelOutput"
           },
-          "EnergyModelScope": {
-            "$ref": "#/components/schemas/EnergyModelScope"
-          },
           "ModelRunDate": {
             "$ref": "#/components/schemas/ModelRunDate"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
           }
         },
         "x-ob-usage-tips": ""
@@ -1654,8 +1654,8 @@
           "Comments": {
             "$ref": "#/components/schemas/Comments"
           },
-          "TaskScope": {
-            "$ref": "#/components/schemas/TaskScope"
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
           }
         },
         "x-ob-usage-tips": ""
@@ -1879,28 +1879,6 @@
             "x-ob-item-type-group": ""
           }
         ]
-      },
-      "BillOfMaterials": {
-        "type": "object",
-        "description": "Bill of Materials for a System",
-        "properties": {
-          "ProdLineItems": {
-            "$ref": "#/components/schemas/ProdLineItems"
-          },
-          "BillOfMaterialsStatus": {
-            "$ref": "#/components/schemas/BillOfMaterialsStatus"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "BOMScope": {
-            "$ref": "#/components/schemas/BOMScope"
-          }
-        },
-        "x-ob-usage-tips": ""
       },
       "ProdLineItems": {
         "type": "array",
@@ -2666,6 +2644,9 @@
           },
           "Answers": {
             "$ref": "#/components/schemas/Answers"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
           }
         }
       },
@@ -4207,8 +4188,8 @@
           "BillOfServicesStatus": {
             "$ref": "#/components/schemas/BillOfServicesStatus"
           },
-          "BOSScope": {
-            "$ref": "#/components/schemas/BOSScope"
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
           }
         }
       },
@@ -6613,8 +6594,8 @@
           "Tags": {
             "$ref": "#/components/schemas/Tags"
           },
-          "CommentScope": {
-            "$ref": "#/components/schemas/CommentScope"
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
           }
         }
       },
@@ -10618,8 +10599,8 @@
           "TempModuleArray": {
             "$ref": "#/components/schemas/TempModuleArray"
           },
-          "ForecastScope": {
-            "$ref": "#/components/schemas/ForecastScope"
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
           }
         }
       },
@@ -10934,30 +10915,6 @@
           }
         ]
       },
-      "BOMScope": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Scope"
-          },
-          {
-            "type": "object",
-            "description": "Scope of the BillOfMaterials object.",
-            "properties": {}
-          }
-        ]
-      },
-      "EnergyModelScope": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Scope"
-          },
-          {
-            "type": "object",
-            "description": "Scope of an energy model",
-            "properties": {}
-          }
-        ]
-      },
       "ModelRunDate": {
         "allOf": [
           {
@@ -11014,42 +10971,6 @@
         "items": {
           "$ref": "#/components/schemas/EnergyModel"
         }
-      },
-      "BOSScope": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Scope"
-          },
-          {
-            "type": "object",
-            "description": "Scope of the BillOfServices object.",
-            "properties": {}
-          }
-        ]
-      },
-      "CommentScope": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Scope"
-          },
-          {
-            "type": "object",
-            "description": "Scope of Comment object.",
-            "properties": {}
-          }
-        ]
-      },
-      "TaskScope": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Scope"
-          },
-          {
-            "type": "object",
-            "description": "Scope of the Task object.",
-            "properties": {}
-          }
-        ]
       },
       "PerClaimAmount": {
         "allOf": [
@@ -11152,9 +11073,6 @@
           "InsurancePolicyID": {
             "$ref": "#/components/schemas/InsurancePolicyID"
           },
-          "InsurancePolicyScope": {
-            "$ref": "#/components/schemas/InsurancePolicyScope"
-          },
           "FileFolderURL": {
             "$ref": "#/components/schemas/FileFolderURL"
           },
@@ -11175,20 +11093,11 @@
           },
           "Comments": {
             "$ref": "#/components/schemas/Comments"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
           }
         }
-      },
-      "InsurancePolicyScope": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Scope"
-          },
-          {
-            "type": "object",
-            "description": "Scope of the InsurancePolicy object.",
-            "properties": {}
-          }
-        ]
       },
       "Signatory": {
         "allOf": [
@@ -11288,18 +11197,6 @@
           }
         ]
       },
-      "ForecastScope": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Scope"
-          },
-          {
-            "type": "object",
-            "description": "The scope of a forecast object, an instance of base class Scope",
-            "properties": {}
-          }
-        ]
-      },
       "Production": {
         "type": "object",
         "description": "A collection of electrical and related measurements with a common scope.",
@@ -11309,9 +11206,6 @@
           },
           "IrradGlobalHorizMeas": {
             "$ref": "#/components/schemas/IrradGlobalHorizMeas"
-          },
-          "MeasScope": {
-            "$ref": "#/components/schemas/MeasScope"
           },
           "PowerACMeas": {
             "$ref": "#/components/schemas/PowerACMeas"
@@ -11327,25 +11221,38 @@
           },
           "Comments": {
             "$ref": "#/components/schemas/Comments"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
           }
         }
       },
-      "MeasScope": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Scope"
+      "BillOfMaterials": {
+        "type": "object",
+        "description": "Bill of Materials for a System",
+        "properties": {
+          "ProdLineItems": {
+            "$ref": "#/components/schemas/ProdLineItems"
           },
-          {
-            "type": "object",
-            "description": "The scope of a set of measurements",
-            "properties": {}
+          "BillOfMaterialsStatus": {
+            "$ref": "#/components/schemas/BillOfMaterialsStatus"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
           }
-        ]
+        },
+        "x-ob-usage-tips": ""
       },
       "IrradPlaneOfArrayMeas": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/MeasScope"
+            "$ref": "#/components/schemas/Scope"
           },
           {
             "type": "object",
