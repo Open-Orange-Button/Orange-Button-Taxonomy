@@ -9473,6 +9473,9 @@
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
+          },
+          "BillOfMaterials": {
+            "$ref": "#/components/schemas/BillOfMaterials"
           }
         }
       },
@@ -11207,8 +11210,7 @@
         }
       },
       "BillOfMaterials": {
-        "type": "object",
-        "description": "Bill of Materials for a System",
+        "description": "Bill of Materials",
         "properties": {
           "ProdLineItems": {
             "$ref": "#/components/schemas/ProdLineItems"
@@ -11226,7 +11228,7 @@
             "$ref": "#/components/schemas/Scope"
           }
         },
-        "x-ob-usage-tips": ""
+        "type": "object"
       },
       "IrradPlaneOfArrayMeas": {
         "allOf": [

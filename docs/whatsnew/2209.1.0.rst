@@ -21,7 +21,8 @@ Object changes
  * Removes Comment from Measurement Object (:pull:`127`)
  * Removes  ForecastScopeID,  ForecastScopeType from Taxonomy (:pull:`127`)
  * Removes PVSystems and BatterySystems from Job, and moves them up level in Site object. (:pull:`130`)
- * Adds FileFolderURL and Description to Job (:pull:`130`)
+ * Adds BillOfMaterials FileFolderURL and Description to Job (:pull:`130`)
+ * Minor update to BillOfMaterials description (:pull:`130`)
 
 
 Unit changes
