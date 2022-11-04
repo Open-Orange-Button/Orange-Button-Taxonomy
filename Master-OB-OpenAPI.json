@@ -9467,6 +9467,12 @@
           },
           "Scope": {
             "$ref": "#/components/schemas/Scope"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
           }
         }
       },
