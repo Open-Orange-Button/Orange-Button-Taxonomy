@@ -14,7 +14,7 @@ rules:
   property-case-convention: off
   property-description: off
   property-inconsistent-name-and-type: off
-  
+
   element-valid-item-type:
     message: 'Item type does not exist: {{error}}'
     given: $.components.schemas[*].allOf[1][x-ob-item-type]
@@ -23,7 +23,7 @@ rules:
       function: validateXOBFields
       functionOptions:
         objectPath: x-ob-item-types
-  
+
   element-valid-item-type-group:
     message: 'Item type group does not exist: {{error}}'
     given: $.components.schemas[*].allOf[1][x-ob-item-type-group]
@@ -39,7 +39,7 @@ rules:
     severity: error
     then:
       function: refPathExists
-  
+
   item-type-group-valid-entries:
     description: The enums or units in the item type group exist in the item type definition.
     message: '{{error}}'
@@ -47,7 +47,7 @@ rules:
     severity: error
     then:
       function: validateItemTypeGroupEntries
-  
+
   element-valid-sample-value:
     description: >-
       Checks the following items about sample value:
@@ -63,7 +63,7 @@ rules:
     message: '{{error}}'
     # Give entire 'allOf' array of an element definition
     # Spectral resolves all $ref's, so allOf[0].properties.Value exists
-    given: $.components.schemas[*][?(@property === 'allOf' && @[0].properties.Value)]
+    given: $.components.schemas[*][?(@property === 'allOf' && @[0].properties && @[0].properties.Value)]
     severity: error
     then:
       function: validateXOBSampleValue
@@ -82,11 +82,11 @@ rules:
       For OB item types without enums or units, all schema definitions that use these
       OB item types should have the same OpenAPI type.
     message: '{{error}}'
-    given: $.components.schemas[*][?(@property === 'allOf' && @[0].properties.Value)]
+    given: $.components.schemas[*][?(@property === 'allOf' && @[0].properties && @[0].properties.Value)]
     severity: error
     then:
       function: validateItemTypeAgainstElementType
-  
+
   no-special-characters:
     description: Name must only contain characters in 0-9, A-Z, a-z, and _ (underscore).
     type: style
