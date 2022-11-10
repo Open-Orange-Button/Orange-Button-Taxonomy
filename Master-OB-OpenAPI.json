@@ -11231,6 +11231,21 @@
             }
           }
         ]
+      },
+      "OperatingReport": {
+        "type": "object",
+        "description": "Describes PV system output and related quantities for a period of time.",
+        "properties": {
+          "Production": {
+            "$ref": "#/components/schemas/Production"
+          },
+          "Forecast": {
+            "$ref": "#/components/schemas/Forecast"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          }
+        }
       }
     }
   },
