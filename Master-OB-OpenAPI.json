@@ -2217,34 +2217,6 @@
           }
         ]
       },
-      "HomeownersAssociation": {
-        "type": "object",
-        "description": "The Homeowner's Association of a site",
-        "properties": {
-          "HOAName": {
-            "$ref": "#/components/schemas/HOAName"
-          },
-          "Address": {
-            "$ref": "#/components/schemas/Address"
-          },
-          "Contacts": {
-            "$ref": "#/components/schemas/Contacts"
-          },
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "FeeStructures": {
-            "$ref": "#/components/schemas/FeeStructures"
-          },
-          "URL": {
-            "$ref": "#/components/schemas/URL"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
       "HOAName": {
         "allOf": [
           {
@@ -11256,6 +11228,41 @@
               },
               "ExceptionDescription": {
                 "$ref": "#/components/schemas/ExceptionDescription"
+              }
+            },
+            "x-ob-usage-tips": ""
+          }
+        ]
+      },
+      "HomeownersAssociation": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "The Homeowner's Association of a site",
+            "properties": {
+              "HOAName": {
+                "$ref": "#/components/schemas/HOAName"
+              },
+              "Address": {
+                "$ref": "#/components/schemas/Address"
+              },
+              "Contacts": {
+                "$ref": "#/components/schemas/Contacts"
+              },
+              "Description": {
+                "$ref": "#/components/schemas/Description"
+              },
+              "FileFolderURL": {
+                "$ref": "#/components/schemas/FileFolderURL"
+              },
+              "FeeStructures": {
+                "$ref": "#/components/schemas/FeeStructures"
+              },
+              "URL": {
+                "$ref": "#/components/schemas/URL"
               }
             },
             "x-ob-usage-tips": ""
