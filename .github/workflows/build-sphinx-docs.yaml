@@ -1,0 +1,40 @@
+name: Build Sphinx docs
+
+on:
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  build-sphinx-docs:
+    name: Build Sphinx docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v3
+        with:
+          ref: main
+          path: main
+      - name: Install Sphinx docs requirements
+        working-directory: main/docs/sphinx
+        run: |
+          pip3 install -U sphinx
+          pip3 install -r requirements.txt
+      - name: Rebuild Sphinx docs html
+        working-directory: main/docs/sphinx
+        run: make html
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+          path: gh-pages
+      - name: Copy Sphinx build to gh-pages
+        run: cp -r main/docs/sphinx/build/html/. gh-pages/.
+      - name: Commit and push docs to gh-pages
+        working-directory: gh-pages
+        run: |
+          git config user.name 'GitHub'
+          git config user.email 'github@Orange-Button-Taxonomy'
+          git add -A .
+          git commit -m 'Update Sphinx docs'
+          git push origin HEAD:gh-pages --force
+
