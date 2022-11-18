@@ -765,6 +765,12 @@
           },
           "AlternativeIdentifiers": {
             "$ref": "#/components/schemas/AlternativeIdentifiers"
+          },
+          "BatterySystems": {
+            "$ref": "#/components/schemas/BatterySystems"
+          },
+          "PVSystems": {
+            "$ref": "#/components/schemas/PVSystems"
           }
         },
         "x-ob-usage-tips": ""
@@ -9423,12 +9429,6 @@
         "type": "object",
         "description": "An overall contract with a Site owner",
         "properties": {
-          "PVSystems": {
-            "$ref": "#/components/schemas/PVSystems"
-          },
-          "BatterySystems": {
-            "$ref": "#/components/schemas/BatterySystems"
-          },
           "BillOfServices": {
             "$ref": "#/components/schemas/BillOfServices"
           },
@@ -9461,6 +9461,21 @@
           },
           "JobType": {
             "$ref": "#/components/schemas/JobType"
+          },
+          "SystemIDs": {
+            "$ref": "#/components/schemas/SystemIDs"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "BillOfMaterials": {
+            "$ref": "#/components/schemas/BillOfMaterials"
           }
         }
       },
@@ -11195,8 +11210,7 @@
         }
       },
       "BillOfMaterials": {
-        "type": "object",
-        "description": "Bill of Materials for a System",
+        "description": "Bill of Materials",
         "properties": {
           "ProdLineItems": {
             "$ref": "#/components/schemas/ProdLineItems"
@@ -11214,7 +11228,7 @@
             "$ref": "#/components/schemas/Scope"
           }
         },
-        "x-ob-usage-tips": ""
+        "type": "object"
       },
       "IrradPlaneOfArrayMeas": {
         "allOf": [
@@ -11231,6 +11245,12 @@
             }
           }
         ]
+      },
+      "SystemIDs": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/SystemID"
+        }
       }
     }
   },
