@@ -582,100 +582,6 @@
         },
         "x-ob-usage-tips": ""
       },
-      "AuthorityHavingJurisdiction": {
-        "type": "object",
-        "description": "The authority having jurisdiction over any permit, site, or governance decision",
-        "properties": {
-          "Address": {
-            "$ref": "#/components/schemas/Address"
-          },
-          "Contacts": {
-            "$ref": "#/components/schemas/Contacts"
-          },
-          "BuildingCode": {
-            "$ref": "#/components/schemas/BuildingCode"
-          },
-          "BuildingCodeNotes": {
-            "$ref": "#/components/schemas/BuildingCodeNotes"
-          },
-          "ElectricCode": {
-            "$ref": "#/components/schemas/ElectricCode"
-          },
-          "ElectricCodeNotes": {
-            "$ref": "#/components/schemas/ElectricCodeNotes"
-          },
-          "FireCode": {
-            "$ref": "#/components/schemas/FireCode"
-          },
-          "FireCodeNotes": {
-            "$ref": "#/components/schemas/FireCodeNotes"
-          },
-          "ResidentialCode": {
-            "$ref": "#/components/schemas/ResidentialCode"
-          },
-          "ResidentialCodeNotes": {
-            "$ref": "#/components/schemas/ResidentialCodeNotes"
-          },
-          "DocumentSubmissionMethodNotes": {
-            "$ref": "#/components/schemas/DocumentSubmissionMethodNotes"
-          },
-          "EngineeringReviewRequirements": {
-            "$ref": "#/components/schemas/EngineeringReviewRequirements"
-          },
-          "AHJID": {
-            "$ref": "#/components/schemas/AHJID"
-          },
-          "AHJName": {
-            "$ref": "#/components/schemas/AHJName"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "WindCode": {
-            "$ref": "#/components/schemas/WindCode"
-          },
-          "WindCodeNotes": {
-            "$ref": "#/components/schemas/WindCodeNotes"
-          },
-          "FeeStructures": {
-            "$ref": "#/components/schemas/FeeStructures"
-          },
-          "URL": {
-            "$ref": "#/components/schemas/URL"
-          },
-          "AHJCode": {
-            "$ref": "#/components/schemas/AHJCode"
-          },
-          "EstimatedTurnaroundDays": {
-            "$ref": "#/components/schemas/EstimatedTurnaroundDays"
-          },
-          "AHJInspections": {
-            "$ref": "#/components/schemas/AHJInspections"
-          },
-          "PermitIssueMethodNotes": {
-            "$ref": "#/components/schemas/PermitIssueMethodNotes"
-          },
-          "PermitIssueMethods": {
-            "$ref": "#/components/schemas/PermitIssueMethods"
-          },
-          "DocumentSubmissionMethods": {
-            "$ref": "#/components/schemas/DocumentSubmissionMethods"
-          },
-          "AHJLevelCode": {
-            "$ref": "#/components/schemas/AHJLevelCode"
-          },
-          "DelegatesToAHJID": {
-            "$ref": "#/components/schemas/DelegatesToAHJID"
-          },
-          "ExceptionDescription": {
-            "$ref": "#/components/schemas/ExceptionDescription"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
       "EngineeringReviewRequirements": {
         "type": "array",
         "items": {
@@ -8498,9 +8404,6 @@
           "CreditRatings": {
             "$ref": "#/components/schemas/CreditRatings"
           },
-          "EntityRoles": {
-            "$ref": "#/components/schemas/EntityRoles"
-          },
           "AlternativeIdentifiers": {
             "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
@@ -11101,6 +11004,9 @@
               },
               "SigningFor": {
                 "$ref": "#/components/schemas/SigningFor"
+              },
+              "EntityRole": {
+                "$ref": "#/components/schemas/EntityRole"
               }
             }
           }
@@ -11123,6 +11029,9 @@
               },
               "PreparerName": {
                 "$ref": "#/components/schemas/PreparerName"
+              },
+              "EntityRole": {
+                "$ref": "#/components/schemas/EntityRole"
               }
             }
           }
@@ -11251,6 +11160,107 @@
         "items": {
           "$ref": "#/components/schemas/SystemID"
         }
+      },
+      "AuthorityHavingJurisdiction": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "The authority having jurisdiction over any permit, site, or governance decision",
+            "properties": {
+              "Address": {
+                "$ref": "#/components/schemas/Address"
+              },
+              "Contacts": {
+                "$ref": "#/components/schemas/Contacts"
+              },
+              "BuildingCode": {
+                "$ref": "#/components/schemas/BuildingCode"
+              },
+              "BuildingCodeNotes": {
+                "$ref": "#/components/schemas/BuildingCodeNotes"
+              },
+              "ElectricCode": {
+                "$ref": "#/components/schemas/ElectricCode"
+              },
+              "ElectricCodeNotes": {
+                "$ref": "#/components/schemas/ElectricCodeNotes"
+              },
+              "FireCode": {
+                "$ref": "#/components/schemas/FireCode"
+              },
+              "FireCodeNotes": {
+                "$ref": "#/components/schemas/FireCodeNotes"
+              },
+              "ResidentialCode": {
+                "$ref": "#/components/schemas/ResidentialCode"
+              },
+              "ResidentialCodeNotes": {
+                "$ref": "#/components/schemas/ResidentialCodeNotes"
+              },
+              "DocumentSubmissionMethodNotes": {
+                "$ref": "#/components/schemas/DocumentSubmissionMethodNotes"
+              },
+              "EngineeringReviewRequirements": {
+                "$ref": "#/components/schemas/EngineeringReviewRequirements"
+              },
+              "AHJID": {
+                "$ref": "#/components/schemas/AHJID"
+              },
+              "AHJName": {
+                "$ref": "#/components/schemas/AHJName"
+              },
+              "FileFolderURL": {
+                "$ref": "#/components/schemas/FileFolderURL"
+              },
+              "Description": {
+                "$ref": "#/components/schemas/Description"
+              },
+              "WindCode": {
+                "$ref": "#/components/schemas/WindCode"
+              },
+              "WindCodeNotes": {
+                "$ref": "#/components/schemas/WindCodeNotes"
+              },
+              "FeeStructures": {
+                "$ref": "#/components/schemas/FeeStructures"
+              },
+              "URL": {
+                "$ref": "#/components/schemas/URL"
+              },
+              "AHJCode": {
+                "$ref": "#/components/schemas/AHJCode"
+              },
+              "EstimatedTurnaroundDays": {
+                "$ref": "#/components/schemas/EstimatedTurnaroundDays"
+              },
+              "AHJInspections": {
+                "$ref": "#/components/schemas/AHJInspections"
+              },
+              "PermitIssueMethodNotes": {
+                "$ref": "#/components/schemas/PermitIssueMethodNotes"
+              },
+              "PermitIssueMethods": {
+                "$ref": "#/components/schemas/PermitIssueMethods"
+              },
+              "DocumentSubmissionMethods": {
+                "$ref": "#/components/schemas/DocumentSubmissionMethods"
+              },
+              "AHJLevelCode": {
+                "$ref": "#/components/schemas/AHJLevelCode"
+              },
+              "DelegatesToAHJID": {
+                "$ref": "#/components/schemas/DelegatesToAHJID"
+              },
+              "ExceptionDescription": {
+                "$ref": "#/components/schemas/ExceptionDescription"
+              }
+            },
+            "x-ob-usage-tips": ""
+          }
+        ]
       }
     }
   },
