@@ -10862,6 +10862,9 @@
           },
           "EnergyACAnnual": {
             "$ref": "#/components/schemas/EnergyACAnnual"
+          },
+          "EnergyACModeled": {
+            "$ref": "#/components/schemas/EnergyACModeled"
           }
         }
       },
@@ -11250,6 +11253,83 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/SystemID"
+        }
+      },
+      "EnergyACModeled": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Modeled AC energy for a period of time.",
+            "x-ob-item-type": "EnergyItemType",
+            "x-ob-item-type-group": "OBElectricalEnergy",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "EndTime": "2020-01-05 17:00:00-05:00",
+              "StartTime": "2020-01-05 13:00:00-05:00",
+              "Unit": "kWh",
+              "Value": 150
+            }
+          }
+        ]
+      },
+      "PerformanceRatio": {
+        "type": "object",
+        "description": "Contains a Performance Ratio (PR) and information supporting the ratio's calculation.",
+        "properties": {
+          "EnergyAC": {
+            "$ref": "#/components/schemas/EnergyAC"
+          },
+          "EnergyACModeled": {
+            "$ref": "#/components/schemas/EnergyACModeled"
+          },
+          "EnergyACMeas": {
+            "$ref": "#/components/schemas/EnergyACMeas"
+          },
+          "EnergyModel": {
+            "$ref": "#/components/schemas/EnergyModel"
+          },
+          "PerfRatio": {
+            "$ref": "#/components/schemas/PerfRatio"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          }
+        },
+        "x-ob-usage-tips": "Use PerformanceRatio.EnergyAC for the numerator and PerformanceRatio.EnergyACModeled for the denominator."
+      },
+      "PerfRatio": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "A performance ratio (PR), which is the ratio of measured AC energy to modeled AC energy.",
+            "x-ob-item-type": "DecimalItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "2",
+              "EndTime": "2020 01-31 23:59:00-05:00",
+              "StartTime": "2020 01-01 00:00:00-05:00",
+              "Value": 0.95
+            }
+          }
+        ]
+      },
+      "PerformanceRatios": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PerformanceRatio"
         }
       }
     }
