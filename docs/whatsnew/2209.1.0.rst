@@ -9,7 +9,7 @@ Element changes
  * Adds JobType (:pull:`107`)
  * Adds PreparerName, SigningFor (:pull:`105`)
  * Adds SystemIDs array of SystemID elements. (:pull:`130`)
- * Adds EnergyACModeled and PerfRatio
+ * Adds EnergyACModeled and PerfRatio. (:pull:`138`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -24,7 +24,7 @@ Object changes
  * Removes PVSystems and BatterySystems from Job, and moves them up level in Site object. (:pull:`130`)
  * Adds BillOfMaterials FileFolderURL and Description to Job (:pull:`130`)
  * Minor update to BillOfMaterials description (:pull:`130`)
- * Add PerformanceRatio and PerformanceRatios
+ * Add PerformanceRatio and PerformanceRatios. (:pull:`138`)
 
 
 Unit changes
