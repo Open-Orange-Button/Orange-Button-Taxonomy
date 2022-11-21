@@ -11261,6 +11261,9 @@
           },
           "FileFolderURL": {
             "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "PerformanceRatios": {
+            "$ref": "#/components/schemas/PerformanceRatios"
           }
         }
       },
