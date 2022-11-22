@@ -11264,6 +11264,21 @@
           },
           "PerformanceRatios": {
             "$ref": "#/components/schemas/PerformanceRatios"
+          },
+          "RevenueAccrued": {
+            "$ref": "#/components/schemas/RevenueAccrued"
+          },
+          "RevenueForecasted": {
+            "$ref": "#/components/schemas/RevenueForecasted"
+          },
+          "ExpensesOperating": {
+            "$ref": "#/components/schemas/ExpensesOperating"
+          },
+          "EnergyACCurtailed": {
+            "$ref": "#/components/schemas/EnergyACCurtailed"
+          },
+          "Insolation": {
+            "$ref": "#/components/schemas/Insolation"
           }
         }
       },
@@ -11349,6 +11364,81 @@
         "items": {
           "$ref": "#/components/schemas/PerformanceRatio"
         }
+      },
+      "RevenueAccrued": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Revenue computed using accrual accounting",
+            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type-group": "OBMonetary",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "RevenueForecasted": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Revenue forecasted or projected using financial and other models.",
+            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ExpensesOperating": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Generally recurring costs associated with normal operations except for the portion of these expenses which can be clearly related to production and included in cost of sales or services. Includes selling, general and administrative expense.",
+            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "EnergyACCurtailed": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Energy (AC) that is lost due to curtailment in a time period",
+            "x-ob-item-type": "EnergyItemType",
+            "x-ob-item-type-group": "OBElectricalEnergy",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "Insolation": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Total solar irradiance on a surface for a period of time.",
+            "x-ob-item-type": "InsolationItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
       }
     }
   },
