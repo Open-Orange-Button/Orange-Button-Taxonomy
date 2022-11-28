@@ -11279,6 +11279,9 @@
           },
           "Insolation": {
             "$ref": "#/components/schemas/Insolation"
+          },
+          "EnergyAC": {
+            "$ref": "#/components/schemas/EnergyAC"
           }
         }
       },
