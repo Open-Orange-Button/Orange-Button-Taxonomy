@@ -25,6 +25,9 @@ Object changes
  * Adds BillOfMaterials FileFolderURL and Description to Job (:pull:`130`)
  * Minor update to BillOfMaterials description (:pull:`130`)
  * Add PerformanceRatio and PerformanceRatios. (:pull:`138`)
+ * Removed EntityRoles from Entity (:pull:`141`)
+ * Adds EntityRole to Preparer, Signatory  (:pull:`141`)
+ * Adds inheritance of Entity to AuthorityHavingJurisdiction and HomeownersAssociation (:pull:`141`)
 
 
 Unit changes
