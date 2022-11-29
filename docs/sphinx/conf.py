@@ -19,7 +19,6 @@ sys.path.insert(0, os.path.abspath('../../../'))
 sys.path.insert(0, os.path.abspath('../../../.github'))
 sys.path.insert(0, os.path.abspath('.'))
 
-import site_data
 
 # -- Project information -----------------------------------------------------
 
