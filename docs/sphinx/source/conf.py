@@ -19,7 +19,6 @@ sys.path.insert(0, os.path.abspath('../../../'))
 sys.path.insert(0, os.path.abspath('../../../.github'))
 sys.path.insert(0, os.path.abspath('.'))
 
-import site_data
 
 # -- Project information -----------------------------------------------------
 
@@ -87,15 +86,6 @@ html_theme_options = {
 
 html_sidebars = {
     'baseclasses': [],
-}
-
-html_context = {
-    'leaderboard': {
-        'leaderboard_entries': site_data.leaderboard_entry_list()
-    },
-    'test_cases': {
-        'test_case_data': site_data.test_set_name_to_parameters_and_image()
-    }
 }
 
 # extlinks alias
