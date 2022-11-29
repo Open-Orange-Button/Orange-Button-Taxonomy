@@ -89,15 +89,6 @@ html_sidebars = {
     'baseclasses': [],
 }
 
-html_context = {
-    'leaderboard': {
-        'leaderboard_entries': site_data.leaderboard_entry_list()
-    },
-    'test_cases': {
-        'test_case_data': site_data.test_set_name_to_parameters_and_image()
-    }
-}
-
 # extlinks alias
 extlinks = {
     'issue': ('https://github.com/Open-Orange-Button/Orange-Button-Taxonomy/issues/%s', '#%s'),
