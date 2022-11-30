@@ -31,7 +31,9 @@ jobs:
           ref: gh-pages
           path: gh-pages
       - name: Copy Sphinx build to gh-pages
-        run: cp -r main/docs/sphinx/build/html/. gh-pages/docs/.
+        run: |
+          mkdir -p gh-pages/docs
+          cp -r main/docs/sphinx/build/html/. gh-pages/docs/.
       - name: Commit and push docs to gh-pages
         working-directory: gh-pages
         run: |
