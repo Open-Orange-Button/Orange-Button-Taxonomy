@@ -11137,9 +11137,6 @@
           "Production": {
             "$ref": "#/components/schemas/Production"
           },
-          "Forecast": {
-            "$ref": "#/components/schemas/Forecast"
-          },
           "FileFolderURL": {
             "$ref": "#/components/schemas/FileFolderURL"
           },
@@ -11163,8 +11160,21 @@
           },
           "EnergyAC": {
             "$ref": "#/components/schemas/EnergyAC"
+          },
+          "AccountBalances": {
+            "$ref": "#/components/schemas/AccountBalances"
+          },
+          "AgingBuckets": {
+            "$ref": "#/components/schemas/AgingBuckets"
+          },
+          "ForecastedEnergy": {
+            "$ref": "#/components/schemas/ForecastedEnergy"
+          },
+          "ExpectedEnergy": {
+            "$ref": "#/components/schemas/ExpectedEnergy"
           }
-        }
+        },
+        "x-ob-usage-tips": "Use EnergyAC for total energy production over the report period, and use Production to contain arrays of measured energy, power, etc. Use ExpectedEnergy for modeled energy over the report period calculated from observed weather, and use ForecastedEnergy for modeled energy using other weather sources (e.g., TMY)."
       },
       "SystemIDs": {
         "type": "array",
@@ -11201,12 +11211,6 @@
           },
           "EnergyACModeled": {
             "$ref": "#/components/schemas/EnergyACModeled"
-          },
-          "EnergyACMeas": {
-            "$ref": "#/components/schemas/EnergyACMeas"
-          },
-          "EnergyModel": {
-            "$ref": "#/components/schemas/EnergyModel"
           },
           "PerfRatio": {
             "$ref": "#/components/schemas/PerfRatio"
@@ -11321,9 +11325,9 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
-					}
-				]
-			},
+          }
+        ]
+      },
       "AuthorityHavingJurisdiction": {
         "allOf": [
           {
@@ -11457,6 +11461,30 @@
               }
             },
             "x-ob-usage-tips": ""
+          }
+        ]
+      },
+      "ExpectedEnergy": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/EnergyModel"
+          },
+          {
+            "type": "object",
+            "description": "Energy from a performance model applied to actual weather.",
+            "properties": {}
+          }
+        ]
+      },
+      "ForecastedEnergy": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/EnergyModel"
+          },
+          {
+            "type": "object",
+            "description": "Energy from a performance model applied to assumed or forecasted weather.",
+            "properties": {}
           }
         ]
       }
