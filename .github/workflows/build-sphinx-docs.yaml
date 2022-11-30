@@ -1,8 +1,7 @@
 name: Build Sphinx docs
 
 on:
-  workflow_dispatch:
-  workflow_call:
+  push:
 
 jobs:
   build-sphinx-docs:
