@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>OpenAPI Orange Button Developer’s Guide &#8212; Open-Orange-Button 1.0 documentation</title>
+    <title>Schema overview &#8212; Open-Orange-Button 1.0 documentation</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
@@ -39,7 +39,8 @@
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Schema overview" href="overview.html" />
+    <link rel="next" title="Base Classes" href="baseclasses.html" />
+    <link rel="prev" title="OpenAPI Orange Button Developer’s Guide" href="index.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="en">
   </head>
@@ -60,7 +61,7 @@
   
 
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="index.html">
   
   
   
@@ -82,8 +83,8 @@
       
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
-    <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="overview.html">
+    <li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
   Schema overview
  </a>
 </li>
@@ -155,19 +156,14 @@
 
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   OpenAPI Orange Button Developer’s Guide
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#primitives">
+   Primitives
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#contents">
-   Contents
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#indices-and-tables">
-   Indices and tables
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#element-object-and-object-array">
+   Element, Object and Object Array
   </a>
  </li>
 </ul>
@@ -189,25 +185,32 @@
               
               <article class="bd-article" role="main">
                 
-  <section id="openapi-orange-button-developer-s-guide">
-<h1>OpenAPI Orange Button Developer’s Guide<a class="headerlink" href="#openapi-orange-button-developer-s-guide" title="Permalink to this heading">#</a></h1>
-</section>
-<section id="contents">
-<h1>Contents<a class="headerlink" href="#contents" title="Permalink to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Schema overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="baseclasses.html">Base Classes</a></li>
-</ul>
-</div>
-</section>
-<section id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading">#</a></h1>
+  <section id="schema-overview">
+<span id="overview"></span><h1>Schema overview<a class="headerlink" href="#schema-overview" title="Permalink to this heading">#</a></h1>
+<p>The Orange Button schema consists of json objects of the following types: Primitive, Element, Object, Object Array.</p>
+<section id="primitives">
+<h2>Primitives<a class="headerlink" href="#primitives" title="Permalink to this heading">#</a></h2>
+<p>There are six Primitives:
+* Value. Value contains the value of an Element. In an OB instance document, the json type of Value can be string, boolean, integer, or number,</p>
+<blockquote>
+<div><p>or an array of string, boolean, integer or number.</p>
+</div></blockquote>
 <ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+<li><p>StartTime. An ISO8601-compliant string defining the start of a time interval, or the single time, associated with Value.</p></li>
+<li><p>EndTime. An ISO8601-compliant string defining the end of a time interval associated with Value. EndTime is not used when a single StartTime is associated with a Value.</p></li>
+<li><p>Decimals. The number of digits after the decimal point of a Value with json type number.</p></li>
+<li><p>Precision. The number of digits, counting from the most significant, or left-most, digit, in a Value with json type number.</p></li>
+<li><p>Unit. A string corresponding to a UnitID from the OB Item Type list.</p></li>
 </ul>
+</section>
+<section id="element-object-and-object-array">
+<h2>Element, Object and Object Array<a class="headerlink" href="#element-object-and-object-array" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>OB Element: an object whose properties are Primitives.</p></li>
+<li><p>OB Object: a json object whose properties are OB Elements or OB Objects.</p></li>
+<li><p>OB Object Arrray: a json array of a single OB Object.</p></li>
+</ul>
+</section>
 </section>
 
 
@@ -218,10 +221,17 @@
               <footer class="bd-footer-article">
                   <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='right-next' id="next-link" href="overview.html" title="next page">
+  <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+      <i class="fas fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">OpenAPI Orange Button Developer’s Guide</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="baseclasses.html" title="next page">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">Schema overview</p>
+      <p class="prev-next-title">Base Classes</p>
   </div>
   <i class="fas fa-angle-right"></i>
   </a>
