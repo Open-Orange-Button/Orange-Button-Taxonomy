@@ -11172,6 +11172,9 @@
           },
           "ExpectedEnergy": {
             "$ref": "#/components/schemas/ExpectedEnergy"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
           }
         },
         "x-ob-usage-tips": "Use EnergyAC for total energy production over the report period, and use Production to contain arrays of measured energy, power, etc. Use ExpectedEnergy for modeled energy over the report period calculated from observed weather, and use ForecastedEnergy for modeled energy using other weather sources (e.g., TMY)."
