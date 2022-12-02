@@ -7,7 +7,7 @@ Base classes are Objects that are used to provide a common set of elements to ot
 
 Current base classes include:
 
-* Entity - text here to describe Entity
-* Scope
-* Product
+* Entity - elements that describe various organizations or individuals.
+* Product - elements that describe a produce (e.g., module or inverter).
+ 
  
