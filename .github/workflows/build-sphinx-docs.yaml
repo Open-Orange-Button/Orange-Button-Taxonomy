@@ -1,6 +1,6 @@
 name: Build Sphinx docs
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   build-sphinx-docs:
