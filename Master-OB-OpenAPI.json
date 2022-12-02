@@ -2582,6 +2582,12 @@
           },
           "AnswerOptions": {
             "$ref": "#/components/schemas/AnswerOptions"
+          },
+          "AnswerRangeMin": {
+            "$ref": "#/components/schemas/AnswerRangeMin"
+          },
+          "AnswerRangeMax": {
+            "$ref": "#/components/schemas/AnswerRangeMax"
           }
         }
       },
@@ -11266,6 +11272,40 @@
               }
             },
             "x-ob-usage-tips": ""
+          }
+        ]
+      },
+      "AnswerRangeMin": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
+          },
+          {
+            "type": "object",
+            "description": "Minimum range of acceptable input.",
+            "x-ob-item-type": "IntegerItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 40
+            }
+          }
+        ]
+      },
+      "AnswerRangeMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
+          },
+          {
+            "type": "object",
+            "description": "Maximum range of acceptable input.",
+            "x-ob-item-type": "IntegerItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 225
+            }
           }
         ]
       }
