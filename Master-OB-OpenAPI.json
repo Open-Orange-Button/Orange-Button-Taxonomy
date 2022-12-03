@@ -30,6 +30,9 @@
           },
           "Scope": {
             "$ref": "#/components/schemas/Scope"
+          },
+          "EnergyModelID": {
+            "$ref": "#/components/schemas/EnergyModelID"
           }
         },
         "x-ob-usage-tips": ""
@@ -11167,17 +11170,26 @@
           "AgingBuckets": {
             "$ref": "#/components/schemas/AgingBuckets"
           },
-          "ForecastedEnergy": {
-            "$ref": "#/components/schemas/ForecastedEnergy"
-          },
-          "ExpectedEnergy": {
-            "$ref": "#/components/schemas/ExpectedEnergy"
-          },
           "Scope": {
             "$ref": "#/components/schemas/Scope"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "OperatingReportID": {
+            "$ref": "#/components/schemas/OperatingReportID"
+          },
+          "ExpectedEnergyModel": {
+            "$ref": "#/components/schemas/ExpectedEnergyModel"
+          },
+          "ForecastEnergyModels": {
+            "$ref": "#/components/schemas/ForecastEnergyModels"
           }
         },
-        "x-ob-usage-tips": "Use EnergyAC for total energy production over the report period, and use Production to contain arrays of measured energy, power, etc. Use ExpectedEnergy for modeled energy over the report period calculated from observed weather, and use ForecastedEnergy for modeled energy using other weather sources (e.g., TMY)."
+        "x-ob-usage-tips": "Use EnergyAC for total energy production over the report period, and use Production to contain arrays of measured energy, power, etc. Use ExpectedEnergyModel for modeled energy over the report period calculated from observed weather, and use ForecastEnergyModels for modeled energy using other weather sources (e.g., TMY)."
       },
       "SystemIDs": {
         "type": "array",
@@ -11226,6 +11238,9 @@
           },
           "FileFolderURL": {
             "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "EnergyModelID": {
+            "$ref": "#/components/schemas/EnergyModelID"
           }
         },
         "x-ob-usage-tips": "Use PerformanceRatio.EnergyAC for the numerator and PerformanceRatio.EnergyACModeled for the denominator."
@@ -11467,7 +11482,37 @@
           }
         ]
       },
-      "ExpectedEnergy": {
+      "EnergyModelID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An identifier for an energy model.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "OperatingReportID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An identifier for an operating report.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ExpectedEnergyModel": {
         "allOf": [
           {
             "$ref": "#/components/schemas/EnergyModel"
@@ -11479,7 +11524,7 @@
           }
         ]
       },
-      "ForecastedEnergy": {
+      "ForecastEnergyModel": {
         "allOf": [
           {
             "$ref": "#/components/schemas/EnergyModel"
@@ -11490,6 +11535,12 @@
             "properties": {}
           }
         ]
+      },
+      "ForecastEnergyModels": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ForecastEnergyModel"
+        }
       }
     }
   },

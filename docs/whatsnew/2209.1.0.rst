@@ -9,7 +9,8 @@ Element changes
  * Adds JobType (:pull:`107`)
  * Adds PreparerName, SigningFor (:pull:`105`)
  * Adds SystemIDs array of SystemID elements. (:pull:`130`)
- * Adds EnergyACModeled and PerfRatio. (:pull:`138`)
+ * Adds EnergyACModeled P, EnergyACCurtailed, PerfRatio, EnergyModelID, Insolation. (:pull:`146`)
+ * Adds EnergyModelID, 
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -27,7 +28,8 @@ Object changes
  * Add PerformanceRatio and PerformanceRatios. (:pull:`138`)
  * Removed EntityRoles from Entity (:pull:`141`)
  * Adds EntityRole to Preparer, Signatory  (:pull:`141`)
- * Adds inheritance of Entity to AuthorityHavingJurisdiction and HomeownersAssociation (:pull:`141`)
+ * Adds inheritance of Entity to AuthorityHavingJurisdiction and HomeownersAssociation (:pull:`141`).
+ * Adds ExpectedEnergyModel, ForecastEnergyModel, ForecastEnergyModels, PerformanceRatio, PerformanceRatios. (:pull:`146`)
 
 
 Unit changes
