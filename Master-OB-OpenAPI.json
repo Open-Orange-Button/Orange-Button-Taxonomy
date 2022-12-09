@@ -30,6 +30,9 @@
           },
           "Scope": {
             "$ref": "#/components/schemas/Scope"
+          },
+          "EnergyModelID": {
+            "$ref": "#/components/schemas/EnergyModelID"
           }
         },
         "x-ob-usage-tips": ""
@@ -10737,6 +10740,9 @@
           },
           "EnergyACAnnual": {
             "$ref": "#/components/schemas/EnergyACAnnual"
+          },
+          "EnergyACModeled": {
+            "$ref": "#/components/schemas/EnergyACModeled"
           }
         }
       },
@@ -11127,11 +11133,218 @@
           }
         ]
       },
+      "OperatingReport": {
+        "type": "object",
+        "description": "Describes PV system output and related quantities for a period of time.",
+        "properties": {
+          "Production": {
+            "$ref": "#/components/schemas/Production"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "PerformanceRatios": {
+            "$ref": "#/components/schemas/PerformanceRatios"
+          },
+          "RevenueAccrued": {
+            "$ref": "#/components/schemas/RevenueAccrued"
+          },
+          "RevenueForecasted": {
+            "$ref": "#/components/schemas/RevenueForecasted"
+          },
+          "ExpensesOperating": {
+            "$ref": "#/components/schemas/ExpensesOperating"
+          },
+          "EnergyACCurtailed": {
+            "$ref": "#/components/schemas/EnergyACCurtailed"
+          },
+          "Insolation": {
+            "$ref": "#/components/schemas/Insolation"
+          },
+          "EnergyAC": {
+            "$ref": "#/components/schemas/EnergyAC"
+          },
+          "AccountBalances": {
+            "$ref": "#/components/schemas/AccountBalances"
+          },
+          "AgingBuckets": {
+            "$ref": "#/components/schemas/AgingBuckets"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "OperatingReportID": {
+            "$ref": "#/components/schemas/OperatingReportID"
+          },
+          "ExpectedEnergyModel": {
+            "$ref": "#/components/schemas/ExpectedEnergyModel"
+          },
+          "ForecastEnergyModels": {
+            "$ref": "#/components/schemas/ForecastEnergyModels"
+          }
+        },
+        "x-ob-usage-tips": "Use EnergyAC for total energy production over the report period, and use Production to contain arrays of measured energy, power, etc. Use ExpectedEnergyModel for modeled energy over the report period calculated from observed weather, and use ForecastEnergyModels for modeled energy using other weather sources (e.g., TMY)."
+      },
       "SystemIDs": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/SystemID"
         }
+      },
+      "EnergyACModeled": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Modeled AC energy for a period of time.",
+            "x-ob-item-type": "EnergyItemType",
+            "x-ob-item-type-group": "OBElectricalEnergy",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "EndTime": "2020-01-05 17:00:00-05:00",
+              "StartTime": "2020-01-05 13:00:00-05:00",
+              "Unit": "kWh",
+              "Value": 150
+            }
+          }
+        ]
+      },
+      "PerformanceRatio": {
+        "type": "object",
+        "description": "Contains a Performance Ratio (PR) and information supporting the ratio's calculation.",
+        "properties": {
+          "EnergyAC": {
+            "$ref": "#/components/schemas/EnergyAC"
+          },
+          "EnergyACModeled": {
+            "$ref": "#/components/schemas/EnergyACModeled"
+          },
+          "PerfRatio": {
+            "$ref": "#/components/schemas/PerfRatio"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "EnergyModelID": {
+            "$ref": "#/components/schemas/EnergyModelID"
+          }
+        },
+        "x-ob-usage-tips": "Use PerformanceRatio.EnergyAC for the numerator and PerformanceRatio.EnergyACModeled for the denominator."
+      },
+      "PerfRatio": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "A performance ratio (PR), which is the ratio of measured AC energy to modeled AC energy.",
+            "x-ob-item-type": "DecimalItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Decimals": "2",
+              "EndTime": "2020 01-31 23:59:00-05:00",
+              "StartTime": "2020 01-01 00:00:00-05:00",
+              "Value": 0.95
+            }
+          }
+        ]
+      },
+      "PerformanceRatios": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PerformanceRatio"
+        }
+      },
+      "RevenueAccrued": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Revenue computed using accrual accounting",
+            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type-group": "OBMonetary",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "RevenueForecasted": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Revenue forecasted or projected using financial and other models.",
+            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ExpensesOperating": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Generally recurring costs associated with normal operations except for the portion of these expenses which can be clearly related to production and included in cost of sales or services. Includes selling, general and administrative expense.",
+            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "EnergyACCurtailed": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Energy (AC) that is lost due to curtailment in a time period",
+            "x-ob-item-type": "EnergyItemType",
+            "x-ob-item-type-group": "OBElectricalEnergy",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "Insolation": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Total solar irradiance on a surface for a period of time.",
+            "x-ob-item-type": "InsolationItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
       },
       "AuthorityHavingJurisdiction": {
         "allOf": [
@@ -11268,6 +11481,66 @@
             "x-ob-usage-tips": ""
           }
         ]
+      },
+      "EnergyModelID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An identifier for an energy model.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "OperatingReportID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An identifier for an operating report.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ExpectedEnergyModel": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/EnergyModel"
+          },
+          {
+            "type": "object",
+            "description": "Energy from a performance model applied to actual weather.",
+            "properties": {}
+          }
+        ]
+      },
+      "ForecastEnergyModel": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/EnergyModel"
+          },
+          {
+            "type": "object",
+            "description": "Energy from a performance model applied to assumed or forecasted weather.",
+            "properties": {}
+          }
+        ]
+      },
+      "ForecastEnergyModels": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ForecastEnergyModel"
+        }
       }
     }
   },
