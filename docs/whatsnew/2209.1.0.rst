@@ -10,7 +10,6 @@ Element changes
  * Adds PreparerName, SigningFor (:pull:`105`)
  * Adds SystemIDs array of SystemID elements. (:pull:`130`)
  * Adds EnergyACModeled P, EnergyACCurtailed, PerfRatio, EnergyModelID, Insolation. (:pull:`146`)
- * Adds EnergyModelID,
  * Adds AnswerRangeMin and AnswerRangeMax (:pull:`164`)
 
 Object changes
