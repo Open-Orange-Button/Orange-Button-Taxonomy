@@ -10,8 +10,8 @@ Element changes
  * Adds PreparerName, SigningFor (:pull:`105`)
  * Adds SystemIDs array of SystemID elements. (:pull:`130`)
  * Adds EnergyACModeled P, EnergyACCurtailed, PerfRatio, EnergyModelID, Insolation. (:pull:`146`)
- * Adds EnergyModelID,
  * Adds InsurerName, Owner Name (:pull:`165`)
+ * Adds AnswerRangeMin and AnswerRangeMax (:pull:`164`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -32,6 +32,8 @@ Object changes
  * Adds inheritance of Entity to AuthorityHavingJurisdiction and HomeownersAssociation (:pull:`141`).
  * Adds ExpectedEnergyModel, ForecastEnergyModel, ForecastEnergyModels, PerformanceRatio, PerformanceRatios. (:pull:`146`)
  * Adds Insurer, Owner (:pull:`165`)
+ * Adds AnswerRangeMin and AnswerRangeMax to Questions Object(:pull:`164`)
+
 
 
 Unit changes
