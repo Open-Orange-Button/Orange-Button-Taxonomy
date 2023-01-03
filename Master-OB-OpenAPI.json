@@ -11548,6 +11548,55 @@
           "$ref": "#/components/schemas/ForecastEnergyModel"
         }
       },
+      "Insurer": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "A person or company that underwrites an insurance risk; the party in an insurance contract undertaking to pay compensation.",
+            "properties": {
+              "InsurerName": {
+                "$ref": "#/components/schemas/InsurerName"
+              }
+            }
+          }
+        ]
+      },
+      "InsurerName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of Insurer.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "John Smith"
+            }
+          }
+        ]
+      },
+      "Owner": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "Individual or entity that owns property.",
+            "properties": {
+              "OwnerName": {
+                "$ref": "#/components/schemas/OwnerName"
+              }
+            }
+          }
+        ]
+      },
       "AnswerRangeMin": {
         "allOf": [
           {
@@ -11561,6 +11610,23 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": 40
+            }
+          }
+        ]
+      },
+      "OwnerName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of the Owner",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "John Smith"
             }
           }
         ]
