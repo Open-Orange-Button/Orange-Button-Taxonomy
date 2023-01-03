@@ -1625,7 +1625,9 @@
             "description": "Name of utility company where the grid connection will reside.",
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "Arizona Public Service"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -2335,7 +2337,9 @@
             "description": "The output phase type of a device",
             "x-ob-item-type": "InterconnectionPhaseTypeItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "Single"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -3987,7 +3991,9 @@
             "description": "A quantity",
             "x-ob-item-type": "IntegerItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": 10
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -4451,7 +4457,9 @@
             "description": "Universally unique identifier for the site.",
             "x-ob-item-type": "UUIDItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "de35e71d-98de-422c-bae9-290b0c00338d"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -4904,7 +4912,9 @@
             "description": "Description of mandatory requirements for access to the site, such as background checks.",
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "Gate code: 1234"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -5029,7 +5039,9 @@
             "description": "Name of the product, for example ABC Brand Inverter.",
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "Q.PEAK DUO BLK-G10+/AC 360-365"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -5291,7 +5303,9 @@
             "description": "Name of the product or equipment manufacturer.",
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "Hanwha"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -5381,7 +5395,9 @@
             "description": "A product code is a standardized, unique human-readable identifier that is compact,and can be easily parsed. It consists of an entity code concatenated to a product specific identification string, separated by a hyphen. A product string is up to 16 characters, comprised of upper case letters, number, and hyphens (Ã¢â‚¬Ëœ-Ã¢â‚¬Ëœ).\nThe format of a product code is:\n[EntityCode]-[ProductString], e.g., UEE-E2000-3-XFM for company Universal Energy Enterprises with Entity Code UEE and Product String of E2000-3-XFM.    ",
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "IQ7PLUS-72-ACM-US"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -5521,7 +5537,9 @@
             "description": "Assessors parcel number, or APN, which is a number assigned to parcels of real property by the tax assessor of a particular jurisdiction for purposes of identification and record-keeping.",
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "0562 08020006A1"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -5650,7 +5668,9 @@
             "description": "Name of the site.",
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "Proj: 1234"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -5719,7 +5739,9 @@
             "description": "Identifier of the municipal authority, for example, town, city or county, that has jurisdiction to define local code requirements.",
             "x-ob-item-type": "UUIDItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "15e50b0b-998b-4079-a276-d46f91fa897a"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -6503,7 +6525,9 @@
             "x-ob-item-type": "UUIDItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "82b2f9ea-0a88-464f-80ef-6712662eef68"
+            }
           }
         ]
       },
@@ -6518,7 +6542,9 @@
             "x-ob-item-type": "DateItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "2022-12-28T19:49:26Z"
+            }
           }
         ]
       },
@@ -6533,7 +6559,9 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "10 gauge wire is required for this project."
+            }
           }
         ]
       },
@@ -7628,7 +7656,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "03/18/2022"
+              "Value": "2022-3-18"
             }
           }
         ]
@@ -7644,7 +7672,9 @@
             "x-ob-item-type": "DateItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "2022-4-21"
+            }
           }
         ]
       },
@@ -7659,7 +7689,9 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "SunSpec Modbus for IEEE 1547"
+            }
           }
         ]
       },
@@ -9676,7 +9708,9 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "120EA8A25E5D487BF68B5F7096440019"
+            }
           }
         ]
       },
@@ -10177,7 +10211,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "\"945d3284-145f-4edd-a062-9d8daddd3b4b\""
+              "Value": "945d3284-145f-4edd-a062-9d8daddd3b4b"
             }
           }
         ]
@@ -10520,7 +10554,9 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "82b2f9ea-0a88-464f-80ef-6712662eef68"
+            }
           }
         ]
       },
@@ -10535,7 +10571,9 @@
             "x-ob-item-type": "ScopeTypeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "Site"
+            }
           }
         ]
       },
@@ -10644,7 +10682,9 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "82b2f9ea-0a88-464f-80ef-6712662eef68"
+            }
           }
         ]
       },
@@ -10780,7 +10820,9 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "For installations under single management, where documented safe switching procedures are established and maintained for disconnection, and where the installation is monitored by qualified individuals, the disconnecting means shall be permitted to be located elsewhere on the premises."
+            }
           }
         ]
       },
