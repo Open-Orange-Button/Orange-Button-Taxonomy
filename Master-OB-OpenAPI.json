@@ -11659,7 +11659,7 @@
           {
             "type": "object",
             "description": "Unique identifier for the Product. ",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "UUIDItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
