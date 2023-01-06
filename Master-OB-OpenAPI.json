@@ -11647,6 +11647,120 @@
             }
           }
         ]
+      },
+      "PerformanceIndex": {
+        "type": "object",
+        "description": "Contains various performance indexes and information supporting these values.",
+        "properties": {
+          "PerformanceIndexEnergy": {
+            "$ref": "#/components/schemas/PerformanceIndexEnergy"
+          },
+          "PerformanceIndexPower": {
+            "$ref": "#/components/schemas/PerformanceIndexPower"
+          },
+          "EnergyAC": {
+            "$ref": "#/components/schemas/EnergyAC"
+          },
+          "EnergyACModeled": {
+            "$ref": "#/components/schemas/EnergyACModeled"
+          },
+          "PowerAC": {
+            "$ref": "#/components/schemas/PowerAC"
+          },
+          "EnergyModelID": {
+            "$ref": "#/components/schemas/EnergyModelID"
+          },
+          "PowerACCorrected": {
+            "$ref": "#/components/schemas/PowerACCorrected"
+          },
+          "PowerACModeled": {
+            "$ref": "#/components/schemas/PowerACModeled"
+          },
+          "PowerCorrFactor": {
+            "$ref": "#/components/schemas/PowerCorrFactor"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          }
+        }
+      },
+      "PerformanceIndexEnergy": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The ratio of actual energy to modeled energy.",
+            "x-ob-item-type": "DecimalItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "PerformanceIndexPower": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The ratio of actual AC power to modeled AC power",
+            "x-ob-item-type": "DecimalItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "PowerACModeled": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "AC power determined by a model.",
+            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "PowerACCorrected": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Modeled AC power multiplied by a correction factor to account for the difference between modeled and actual conditions.",
+            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "Use PowerCorrFactor to record the correction factor.",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "PowerCorrFactor": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "A correction factor that is applied to modeled AC power to account for differences between modeled and actual weather.",
+            "x-ob-item-type": "DecimalItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
       }
     }
   },
