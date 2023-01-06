@@ -12,6 +12,7 @@ Element changes
  * Adds EnergyACModeled P, EnergyACCurtailed, PerfRatio, EnergyModelID, Insolation. (:pull:`146`)
  * Adds InsurerName, Owner Name (:pull:`165`)
  * Adds AnswerRangeMin and AnswerRangeMax (:pull:`164`)
+ * Adds ProdID to Product Superclass (:pull:`174`)
 
 Object changes
 ~~~~~~~~~~~~~~
