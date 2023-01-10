@@ -11658,7 +11658,7 @@
           },
           {
             "type": "object",
-            "description": "Unique identifier for the Product. ",
+            "description": "Unique identifier for the Product.",
             "x-ob-item-type": "UUIDItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
