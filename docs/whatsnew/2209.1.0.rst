@@ -13,6 +13,7 @@ Element changes
  * Adds InsurerName, Owner Name (:pull:`165`)
  * Adds AnswerRangeMin and AnswerRangeMax (:pull:`164`)
  * Adds PerformanceIndexEnergy, PerformanceIndexPower, PowerACModeled, PowerACCorrected, PowerCorrFactor (:pull:`173`)
+ * Adds ProdID to Product Superclass (:pull:`174`)
 
 Object changes
 ~~~~~~~~~~~~~~
