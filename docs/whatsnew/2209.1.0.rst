@@ -12,6 +12,7 @@ Element changes
  * Adds EnergyACModeled P, EnergyACCurtailed, PerfRatio, EnergyModelID, Insolation. (:pull:`146`)
  * Adds InsurerName, Owner Name (:pull:`165`)
  * Adds AnswerRangeMin and AnswerRangeMax (:pull:`164`)
+ * Adds PerformanceIndexEnergy, PerformanceIndexPower, PowerACModeled, PowerACCorrected, PowerCorrFactor (:pull:`173`)
  * Adds ProdID to Product Superclass (:pull:`174`)
 
 Object changes
@@ -33,8 +34,8 @@ Object changes
  * Adds inheritance of Entity to AuthorityHavingJurisdiction and HomeownersAssociation (:pull:`141`).
  * Adds ExpectedEnergyModel, ForecastEnergyModel, ForecastEnergyModels, PerformanceRatio, PerformanceRatios. (:pull:`146`)
  * Adds Insurer, Owner (:pull:`165`)
- * Adds AnswerRangeMin and AnswerRangeMax to Questions Object(:pull:`164`)
-
+ * Adds AnswerRangeMin and AnswerRangeMax to Questions Object (:pull:`164`)
+ * Adds PerformanceIndex and PerformanceIndexes (:pull:`173`)
 
 
 Unit changes
