@@ -81,6 +81,9 @@
           },
           "AlternativeIdentifiers": {
             "$ref": "#/components/schemas/AlternativeIdentifiers"
+          },
+          "ProdID": {
+            "$ref": "#/components/schemas/ProdID"
           }
         },
         "x-ob-usage-tips": ""
@@ -11686,6 +11689,23 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": 225
+            }
+          }
+        ]
+      },
+      "ProdID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Unique identifier for the Product.",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "d522ff95-43c2-41e5-83e1-911c1f3ad81f"
             }
           }
         ]
