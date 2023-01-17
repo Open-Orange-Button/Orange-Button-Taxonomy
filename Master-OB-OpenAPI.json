@@ -81,6 +81,9 @@
           },
           "AlternativeIdentifiers": {
             "$ref": "#/components/schemas/AlternativeIdentifiers"
+          },
+          "ProdID": {
+            "$ref": "#/components/schemas/ProdID"
           }
         },
         "x-ob-usage-tips": ""
@@ -1625,7 +1628,9 @@
             "description": "Name of utility company where the grid connection will reside.",
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "Arizona Public Service"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -2335,7 +2340,9 @@
             "description": "The output phase type of a device",
             "x-ob-item-type": "InterconnectionPhaseTypeItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "Single"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -3987,7 +3994,9 @@
             "description": "A quantity",
             "x-ob-item-type": "IntegerItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": 10
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -4451,7 +4460,9 @@
             "description": "Universally unique identifier for the site.",
             "x-ob-item-type": "UUIDItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "de35e71d-98de-422c-bae9-290b0c00338d"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -4904,7 +4915,9 @@
             "description": "Description of mandatory requirements for access to the site, such as background checks.",
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "Gate code: 1234"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -5029,7 +5042,9 @@
             "description": "Name of the product, for example ABC Brand Inverter.",
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "Q.PEAK DUO BLK-G10+/AC 360-365"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -5291,7 +5306,9 @@
             "description": "Name of the product or equipment manufacturer.",
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "Hanwha"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -5378,10 +5395,12 @@
           },
           {
             "type": "object",
-            "description": "A product code is a standardized, unique human-readable identifier that is compact,and can be easily parsed. It consists of an entity code concatenated to a product specific identification string, separated by a hyphen. A product string is up to 16 characters, comprised of upper case letters, number, and hyphens (Ã¢â‚¬Ëœ-Ã¢â‚¬Ëœ).\nThe format of a product code is:\n[EntityCode]-[ProductString], e.g., UEE-E2000-3-XFM for company Universal Energy Enterprises with Entity Code UEE and Product String of E2000-3-XFM.    ",
+            "description": "A product code is a standardized, unique human-readable identifier that is compact,and can be easily parsed. It consists of an entity code concatenated to a product specific identification string, separated by a hyphen. A product string is comprised of upper case letters, number, and hyphens. The format of a product code is:[EntityCode]-[ProductString], e.g., UEE-E2000-3-XFM for company Universal Energy Enterprises with Entity Code UEE and Product String of E2000-3-XFM.    ",
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "SMA-SB7-7-1SP-US-41-NWF"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -5523,7 +5542,9 @@
             "description": "Assessors parcel number, or APN, which is a number assigned to parcels of real property by the tax assessor of a particular jurisdiction for purposes of identification and record-keeping.",
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "0562 08020006A1"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -5652,7 +5673,9 @@
             "description": "Name of the site.",
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "Proj: 1234"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -5721,7 +5744,9 @@
             "description": "Identifier of the municipal authority, for example, town, city or county, that has jurisdiction to define local code requirements.",
             "x-ob-item-type": "UUIDItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "15e50b0b-998b-4079-a276-d46f91fa897a"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -6505,7 +6530,9 @@
             "x-ob-item-type": "UUIDItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "82b2f9ea-0a88-464f-80ef-6712662eef68"
+            }
           }
         ]
       },
@@ -6521,7 +6548,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "2020-02-08T09:30:00"
+              "Value": "2022-12-28T19:49:26Z"
             }
           }
         ]
@@ -6537,7 +6564,9 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "10 gauge wire is required for this project."
+            }
           }
         ]
       },
@@ -7632,7 +7661,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "2022-03-12"
+              "Value": "2022-3-18"
             }
           }
         ]
@@ -7649,7 +7678,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "2022-03-12"
+              "Value": "2022-4-21"
             }
           }
         ]
@@ -7665,7 +7694,9 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "SunSpec Modbus for IEEE 1547"
+            }
           }
         ]
       },
@@ -9682,7 +9713,9 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "120EA8A25E5D487BF68B5F7096440019"
+            }
           }
         ]
       },
@@ -10183,7 +10216,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "\"945d3284-145f-4edd-a062-9d8daddd3b4b\""
+              "Value": "945d3284-145f-4edd-a062-9d8daddd3b4b"
             }
           }
         ]
@@ -10526,7 +10559,9 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "82b2f9ea-0a88-464f-80ef-6712662eef68"
+            }
           }
         ]
       },
@@ -10541,7 +10576,9 @@
             "x-ob-item-type": "ScopeTypeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "Site"
+            }
           }
         ]
       },
@@ -10650,7 +10687,9 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "82b2f9ea-0a88-464f-80ef-6712662eef68"
+            }
           }
         ]
       },
@@ -10786,7 +10825,9 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "For installations under single management, where documented safe switching procedures are established and maintained for disconnection, and where the installation is monitored by qualified individuals, the disconnecting means shall be permitted to be located elsewhere on the premises."
+            }
           }
         ]
       },
@@ -11199,6 +11240,9 @@
           },
           "ForecastEnergyModels": {
             "$ref": "#/components/schemas/ForecastEnergyModels"
+          },
+          "PerformanceIndexes": {
+            "$ref": "#/components/schemas/PerformanceIndexes"
           }
         },
         "x-ob-usage-tips": "Use EnergyAC for total energy production over the report period, and use Production to contain arrays of measured energy, power, etc. Use ExpectedEnergyModel for modeled energy over the report period calculated from observed weather, and use ForecastEnergyModels for modeled energy using other weather sources (e.g., TMY)."
@@ -11650,6 +11694,143 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": 225
+            }
+          }
+        ]
+      },
+      "PerformanceIndex": {
+        "type": "object",
+        "description": "Contains various performance indexes and information supporting these values.",
+        "properties": {
+          "PerformanceIndexEnergy": {
+            "$ref": "#/components/schemas/PerformanceIndexEnergy"
+          },
+          "PerformanceIndexPower": {
+            "$ref": "#/components/schemas/PerformanceIndexPower"
+          },
+          "EnergyAC": {
+            "$ref": "#/components/schemas/EnergyAC"
+          },
+          "EnergyACModeled": {
+            "$ref": "#/components/schemas/EnergyACModeled"
+          },
+          "PowerAC": {
+            "$ref": "#/components/schemas/PowerAC"
+          },
+          "EnergyModelID": {
+            "$ref": "#/components/schemas/EnergyModelID"
+          },
+          "PowerACCorrected": {
+            "$ref": "#/components/schemas/PowerACCorrected"
+          },
+          "PowerACModeled": {
+            "$ref": "#/components/schemas/PowerACModeled"
+          },
+          "PowerCorrFactor": {
+            "$ref": "#/components/schemas/PowerCorrFactor"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          }
+        }
+      },
+      "PerformanceIndexEnergy": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The ratio of actual energy to modeled energy.",
+            "x-ob-item-type": "DecimalItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "PerformanceIndexPower": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The ratio of actual AC power to modeled AC power",
+            "x-ob-item-type": "DecimalItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "PowerACModeled": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "AC power determined by a model.",
+            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "PowerACCorrected": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Modeled AC power multiplied by a correction factor to account for the difference between modeled and actual conditions.",
+            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "Use PowerCorrFactor to record the correction factor.",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "PowerCorrFactor": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "A correction factor that is applied to modeled AC power to account for differences between modeled and actual weather.",
+            "x-ob-item-type": "DecimalItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "PerformanceIndexes": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PerformanceIndex"
+        }
+			},
+      "ProdID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Unique identifier for the Product.",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "d522ff95-43c2-41e5-83e1-911c1f3ad81f"
             }
           }
         ]
