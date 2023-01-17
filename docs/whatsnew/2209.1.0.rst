@@ -12,6 +12,7 @@ Element changes
  * Adds EnergyACModeled P, EnergyACCurtailed, PerfRatio, EnergyModelID, Insolation. (:pull:`146`)
  * Adds InsurerName, Owner Name (:pull:`165`)
  * Adds AnswerRangeMin and AnswerRangeMax (:pull:`164`)
+ * Changes ChecklistDate and CommentDate Item Type to DateTimeItemType (:pull:`179`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -39,6 +40,7 @@ Object changes
 Unit changes
 ~~~~~~~~~~~~
  * Adds JobTypeItemType (:pull:`107`)
+ * Adds DateTimeItemType (:pull:`179`)
 
 Bug fixes
 ~~~~~~~~~
