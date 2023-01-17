@@ -2721,7 +2721,7 @@
           {
             "type": "object",
             "description": "The date of the Checklist",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "DateTimeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "EndTime": "2011-10-05T16:48:00.000Z",
@@ -5459,7 +5459,9 @@
             "description": "Date of last calibration",
             "x-ob-item-type": "DateItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "22-02-22"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -6515,10 +6517,12 @@
           {
             "type": "object",
             "description": "Date of a comment",
-            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type": "DateTimeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "2020-02-08T09:30:00"
+            }
           }
         ]
       },
@@ -7628,7 +7632,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "03/18/2022"
+              "Value": "2022-03-12"
             }
           }
         ]
@@ -7644,7 +7648,9 @@
             "x-ob-item-type": "DateItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "2022-03-12"
+            }
           }
         ]
       },
@@ -9643,7 +9649,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "12/25/2021"
+              "Value": "2021-12-25"
             }
           }
         ]
@@ -9713,7 +9719,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "02/22/2022"
+              "Value": "2022-02-22"
             }
           }
         ]
@@ -17046,6 +17052,9 @@
           "description": "Building integrated PV and Storage Installation."
         }
       }
+    },
+    "DateTimeItemType": {
+      "description": "ISO-8601 formatted date/time string."
     }
   },
   "x-ob-item-type-groups": {
