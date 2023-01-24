@@ -3279,6 +3279,9 @@
           },
           "FirmwareVersions": {
             "$ref": "#/components/schemas/FirmwareVersions"
+          },
+          "StandardTypeProduct": {
+            "$ref": "#/components/schemas/StandardTypeProduct"
           }
         }
       },
@@ -7723,7 +7726,7 @@
           {
             "type": "object",
             "description": "A value from the enumerated list of the possible certifications that a product can have.",
-            "x-ob-item-type": "StandardTypeItemType",
+            "x-ob-item-type": "CertificationTypeProductItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -11829,6 +11832,23 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "d522ff95-43c2-41e5-83e1-911c1f3ad81f"
+            }
+          }
+        ]
+      },
+      "StandardTypeProduct": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A value from the enumerated list of the possible standards that a product can have.",
+            "x-ob-item-type": "StandardTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "IEC61215_2016"
             }
           }
         ]
@@ -17233,7 +17253,7 @@
       }
     },
     "StandardTypeItemType": {
-      "description": "Standard type for which a specific certification is applied. ID Format: {standard name/number}_{document part}{amendment_sequence}_{publication_year}",
+      "description": "Standard type for which a specific certification is applied. ID Format: {standard name/number}_{document part}{amendment alpha sequence}_{publication_year}.",
       "enums": {
         "IEC61215_2016": {
           "label": "IEC 61215:2016",
