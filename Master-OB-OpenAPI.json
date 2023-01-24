@@ -17233,7 +17233,7 @@
       }
     },
     "StandardTypeItemType": {
-      "description": "Standard type that a specific certification applies to. ID Format: OrganizationStandard_Year. ",
+      "description": "Standard type for which a specific certification is applied. ID Format: {standard name/number}_{document part}{amendment_sequence}_{publication_year}",
       "enums": {
         "IEC61215_2016": {
           "label": "IEC 61215:2016",
@@ -17248,11 +17248,11 @@
           "description": "Photovoltaic (PV) module performance testing and energy rating"
         },
         "UL61730_2017": {
-          "label": "UL 61730 2017",
+          "label": "UL 61730:2017",
           "description": "New Harmonized Safety Standard for PV Modules"
         },
         "UL1741SC_2023": {
-          "label": "UL 1741 SC - 2023",
+          "label": "UL 1741 SC:2023",
           "description": "Safety and functional performance standard for electric vehicle supply equipment that must comply with IEEE 1547-2018"
         },
         "IEC61646_2008": {
@@ -17264,7 +17264,7 @@
           "description": "Electric vehicle charging standard developed by Society of Automotive Engineers"
         },
         "SAE3068_2018": {
-          "label": "SAE 3068 2018",
+          "label": "SAE 3068:2018",
           "description": "Electric vehicle charging standard developed by Society of Automotive Engineers"
         },
         "IEC61701_2020": {
@@ -17312,11 +17312,11 @@
           "description": "SunSpec 2030.5 Common Smart Inverter Profile (CSIP) Attestation. Inverter was connected to gateway during compatibility testing."
         },
         "UL9540_2021": {
-          "label": "UL 9540 2021",
+          "label": "UL 9540:2021",
           "description": "Energy Storage Systems Standard"
         },
         "UL1741SB_2021": {
-          "label": "UL1741SB 2021",
+          "label": "UL1741SB:2021",
           "description": "Inverters, Converters, Controllers and Interconnection System Equipment for Use With Distributed Energy Resources"
         }
       }
