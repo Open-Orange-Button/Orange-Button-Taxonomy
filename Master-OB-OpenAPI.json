@@ -7723,7 +7723,7 @@
           {
             "type": "object",
             "description": "A value from the enumerated list of the possible certifications that a product can have.",
-            "x-ob-item-type": "CertificationTypeProductItemType",
+            "x-ob-item-type": "StandardTypeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -11815,7 +11815,7 @@
         "items": {
           "$ref": "#/components/schemas/PerformanceIndex"
         }
-			},
+      },
       "ProdID": {
         "allOf": [
           {
@@ -17229,6 +17229,95 @@
         "BIPV_ST": {
           "label": "BIPV+ST",
           "description": "Building integrated PV and Storage Installation."
+        }
+      }
+    },
+    "StandardTypeItemType": {
+      "description": "Standard type that a specific certification applies to. ID Format: OrganizationStandard_Year. ",
+      "enums": {
+        "IEC61215_2016": {
+          "label": "IEC 61215:2016",
+          "description": "Terrestrial photovoltaic (PV) modules - Design qualification and type approval"
+        },
+        "IEC61215_2021": {
+          "label": "IEC 61215:2021",
+          "description": "Terrestrial photovoltaic (PV) modules - Design qualification and type approval"
+        },
+        "IEC61853_1_2011": {
+          "label": "IEC 61853-1:2011",
+          "description": "Photovoltaic (PV) module performance testing and energy rating"
+        },
+        "UL61730_2017": {
+          "label": "UL 61730 2017",
+          "description": "New Harmonized Safety Standard for PV Modules"
+        },
+        "UL1741SC_2023": {
+          "label": "UL 1741 SC - 2023",
+          "description": "Safety and functional performance standard for electric vehicle supply equipment that must comply with IEEE 1547-2018"
+        },
+        "IEC61646_2008": {
+          "label": "IEC 61646:2008",
+          "description": "Thin-film terrestrial photovoltaic (PV) modules - Design qualification and type approval"
+        },
+        "SAE3072": {
+          "label": "SAE 3072",
+          "description": "Electric vehicle charging standard developed by Society of Automotive Engineers"
+        },
+        "SAE3068_2018": {
+          "label": "SAE 3068 2018",
+          "description": "Electric vehicle charging standard developed by Society of Automotive Engineers"
+        },
+        "IEC61701_2020": {
+          "label": "IEC 61701:2020 ",
+          "description": "Photovoltaic (PV) modules - Salt mist corrosion testing"
+        },
+        "IEC61730_2016": {
+          "label": "IEC 61730:2016",
+          "description": "Photovoltaic (PV) module safety qualification"
+        },
+        "IEC60364_4_41_2005": {
+          "label": "IEC60364-4-41:2005",
+          "description": "Low voltage electrical installations - Part 4-41: Protection for safety - Protection against electric shock"
+        },
+        "IEC62108_2022": {
+          "label": "IEC 62108:2022",
+          "description": "Concentrator photovoltaic (CPV) modules and assemblies - Design qualification and type approval"
+        },
+        "IEC61683_1999": {
+          "label": "IEC 61683:1999",
+          "description": "Photovoltaic systems - Power conditioners - Procedure for measuring efficiency"
+        },
+        "IEC62109_1_2010": {
+          "label": "IEC62109-1:2010",
+          "description": "Safety of power converters for use in photovoltaic power systems - Part 1: General requirements"
+        },
+        "IEC62109_2_2011": {
+          "label": "IEC62109-2:2011",
+          "description": "Safety of power converters for use in photovoltaic power systems - Part 2: Particular requirements for inverters"
+        },
+        "IEC61010_1_2010": {
+          "label": "IEC 61010-1:2010",
+          "description": "Safety requirements for electrical equipment for measurement, control, and laboratory use - Part 1: General requirements"
+        },
+        "UL1973_2_2018": {
+          "label": "UL1973 Edition 2: 2018",
+          "description": "Standard For Batteries For Use In Stationary, Vehicle Auxiliary Power And Light Electric Rail (LER) Applications"
+        },
+        "CSIP": {
+          "label": "CSIP",
+          "description": "SunSpec 2030.5 Common Smart Inverter Profile (CSIP) Certification"
+        },
+        "CSIP_NRTL": {
+          "label": "CSIP_NRTL",
+          "description": "SunSpec 2030.5 Common Smart Inverter Profile (CSIP) Attestation. Inverter was connected to gateway during compatibility testing."
+        },
+        "UL9540_2021": {
+          "label": "UL 9540 2021",
+          "description": "Energy Storage Systems Standard"
+        },
+        "UL1741SB_2021": {
+          "label": "UL1741SB 2021",
+          "description": "Inverters, Converters, Controllers and Interconnection System Equipment for Use With Distributed Energy Resources"
         }
       }
     }
