@@ -17338,6 +17338,10 @@
         "UL1741SB_2021": {
           "label": "UL1741SB:2021",
           "description": "Inverters, Converters, Controllers and Interconnection System Equipment for Use With Distributed Energy Resources"
+        },
+        "UL1741SA_2021": {
+          "label": "UL 1741SA 2021",
+          "description": "Standard for Inverters, Converters, Controllers and Interconnection System Equipment for Use with Distributed Energy Resources"
         }
       }
     }
