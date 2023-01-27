@@ -17253,7 +17253,7 @@
       }
     },
     "StandardTypeItemType": {
-      "description": "Standard type for which a specific certification is applied. ID Format: {standard name/number}_{document part}{amendment alpha sequence}_{publication_year}.",
+      "description": "Standard type for which a specific certification is applied. ID Format: {standard name/number}_{publication_year}_{document part}{amendment alpha sequence}. If we do not have a part number, all parts of the standard are presumed to be included. ",
       "enums": {
         "IEC61215_2016": {
           "label": "IEC 61215:2016",
@@ -17342,6 +17342,50 @@
         "UL1741SA_2021": {
           "label": "UL 1741SA 2021",
           "description": "Standard for Inverters, Converters, Controllers and Interconnection System Equipment for Use with Distributed Energy Resources"
+        },
+        "UL1741SA_2021_8": {
+          "label": "UL1741 Supplement A 2021 Section 8",
+          "description": ""
+        },
+        "UL1741SA_2021_9": {
+          "label": "UL1741 Supplement A 2021 Section 9",
+          "description": ""
+        },
+        "UL1741SA_2021_10": {
+          "label": "UL1741 Supplement A 2021 Section 10",
+          "description": ""
+        },
+        "UL1741SA_2021_11": {
+          "label": "UL1741 Supplement A 2021 Section 11",
+          "description": ""
+        },
+        "UL1741SA_2021_12": {
+          "label": "UL1741 Supplement A 2021 Section 12",
+          "description": ""
+        },
+        "UL1741SA_2021_13": {
+          "label": "UL1741 Supplement A 2021 Section 13",
+          "description": ""
+        },
+        "UL1741SA_2021_14": {
+          "label": "UL1741 Supplement A 2021 Section 14",
+          "description": ""
+        },
+        "UL1741SA_2021_15": {
+          "label": "UL1741 Supplement A 2021 Section 15",
+          "description": ""
+        },
+        "UL1741SA_2021_16": {
+          "label": "UL1741 Supplement A 2021 Section 16",
+          "description": ""
+        },
+        "UL1741SA_2021_17": {
+          "label": "UL1741 Supplement A 2021 Section 17",
+          "description": ""
+        },
+        "UL1741SA_2021_18": {
+          "label": "UL1741 Supplement A 2021 Section 18",
+          "description": ""
         }
       }
     }
