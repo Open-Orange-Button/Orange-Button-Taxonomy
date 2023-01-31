@@ -17375,10 +17375,6 @@
           "label": "UL1741 Supplement A 2021 Section 15",
           "description": ""
         },
-        "UL1741SA_2021_16": {
-          "label": "UL1741 Supplement A 2021 Section 16",
-          "description": ""
-        },
         "UL1741SA_2021_17": {
           "label": "UL1741 Supplement A 2021 Section 17",
           "description": ""
@@ -17386,6 +17382,22 @@
         "UL1741SA_2021_18": {
           "label": "UL1741 Supplement A 2021 Section 18",
           "description": ""
+        },
+        "UL1703_2002": {
+          "label": "UL 1703:2002",
+          "description": "UL Standard for Safety for Flat-Plate Photovoltaic Modules and Panels"
+        },
+        "UL9540_2016": {
+          "label": "UL 9540:2016",
+          "description": "Energy Storage System (ESS) Requirements"
+        },
+        "UL9540_2020": {
+          "label": "UL 9540:2020",
+          "description": "Energy Storage System (ESS) Requirements"
+        },
+        "JA12_2019": {
+          "label": "Joint Appendix 12 : 2019",
+          "description": "Qualification Requirements for Battery Storage System "
         }
       }
     }
