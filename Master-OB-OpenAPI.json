@@ -3280,8 +3280,8 @@
           "FirmwareVersions": {
             "$ref": "#/components/schemas/FirmwareVersions"
           },
-          "StandardTypeProduct": {
-            "$ref": "#/components/schemas/StandardTypeProduct"
+          "CertificationStandard": {
+            "$ref": "#/components/schemas/CertificationStandard"
           }
         }
       },
@@ -11836,7 +11836,7 @@
           }
         ]
       },
-      "StandardTypeProduct": {
+      "CertificationStandard": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementString"
