@@ -17255,7 +17255,7 @@
       }
     },
     "StandardTypeItemType": {
-      "description": "Standard type for which a specific certification is applied. ID Format: {standard name/number}_{publication_year}_{document part}{amendment alpha sequence}. If we do not have a part number, all parts of the standard are presumed to be included. ",
+      "description": "Standard type for which a specific certification is applied. ID Format: {standard name/number}_{document part}_{publication_year}_{document section}{alpha sequence}. If document part is omitted, all parts of the standard are presumed to be included. The alpha sequence (a, b, c, ...) is only used to create distinct Unit IDs where two IDs would be identical without an alpha sequence. ",
       "enums": {
         "IEC61215_2016": {
           "label": "IEC 61215:2016",
@@ -17271,7 +17271,7 @@
         },
         "UL61730_2017": {
           "label": "UL 61730:2017",
-          "description": "New Harmonized Safety Standard for PV Modules"
+          "description": "Photovoltaic (PV) Module Safety Qualification"
         },
         "UL1741SC_2023": {
           "label": "UL 1741 SC:2023",
@@ -17281,13 +17281,13 @@
           "label": "IEC 61646:2008",
           "description": "Thin-film terrestrial photovoltaic (PV) modules - Design qualification and type approval"
         },
-        "SAE3072": {
-          "label": "SAE 3072",
-          "description": "Electric vehicle charging standard developed by Society of Automotive Engineers"
+        "SAEJ3072_2021": {
+          "label": "SAE J3072:2021",
+          "description": "Interconnection Requirements for Onboard, Grid Support Inverter Systems"
         },
-        "SAE3068_2018": {
-          "label": "SAE 3068:2018",
-          "description": "Electric vehicle charging standard developed by Society of Automotive Engineers"
+        "SAEJ3068_2018": {
+          "label": "SAE J3068:2018",
+          "description": "Electric Vehicle Power Transfer System Using a Three-Phase Capable Coupler"
         },
         "IEC61701_2020": {
           "label": "IEC 61701:2020 ",
@@ -17325,8 +17325,8 @@
           "label": "UL1973 Edition 2: 2018",
           "description": "Standard For Batteries For Use In Stationary, Vehicle Auxiliary Power And Light Electric Rail (LER) Applications"
         },
-        "CSIP": {
-          "label": "CSIP",
+        "CSIP_2018": {
+          "label": "CSIP Version 2.1:2018",
           "description": "SunSpec 2030.5 Common Smart Inverter Profile (CSIP) Certification"
         },
         "CSIP_NRTL": {
