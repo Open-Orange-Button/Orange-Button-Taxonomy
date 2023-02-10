@@ -17333,10 +17333,6 @@
           "label": "CSIP_NRTL",
           "description": "SunSpec 2030.5 Common Smart Inverter Profile (CSIP) Attestation. Inverter was connected to gateway during compatibility testing."
         },
-        "UL9540_2021": {
-          "label": "UL 9540:2021",
-          "description": "Energy Storage Systems Standard"
-        },
         "UL1741SB_2021": {
           "label": "UL1741SB:2021",
           "description": "Inverters, Converters, Controllers and Interconnection System Equipment for Use With Distributed Energy Resources"
@@ -17395,7 +17391,7 @@
         },
         "UL9540_2020": {
           "label": "UL 9540:2020",
-          "description": "Energy Storage System (ESS) Requirements"
+          "description": "Energy Storage Systems and Equipment"
         },
         "JA12_2019": {
           "label": "Joint Appendix 12 : 2019",
