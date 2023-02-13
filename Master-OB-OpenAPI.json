@@ -5270,7 +5270,7 @@
             "type": "object",
             "description": "Percent of AC capacity available during a period of time.",
             "x-ob-item-type": "PercentItemType",
-            "x-ob-usage-tips": "",
+            "x-ob-usage-tips": "For time-based Availability, calculate Avail = (UpTime) / (UpTime + DownTime)",
             "x-ob-sample-value": {
               "Value": 95
             },
@@ -11815,7 +11815,7 @@
         "items": {
           "$ref": "#/components/schemas/PerformanceIndex"
         }
-			},
+      },
       "ProdID": {
         "allOf": [
           {
@@ -11830,6 +11830,102 @@
             "x-ob-sample-value": {
               "Value": "d522ff95-43c2-41e5-83e1-911c1f3ad81f"
             }
+          }
+        ]
+      },
+      "UpTime": {
+        "type": "object",
+        "description": "An object containing data describing a time period during which a PV system is capable of operating.",
+        "properties": {
+          "Duration": {
+            "$ref": "#/components/schemas/Duration"
+          },
+          "CapacityAC": {
+            "$ref": "#/components/schemas/CapacityAC"
+          },
+          "OperationalStatus": {
+            "$ref": "#/components/schemas/OperationalStatus"
+          },
+          "OperationalStatusAlt": {
+            "$ref": "#/components/schemas/OperationalStatusAlt"
+          }
+        }
+      },
+      "OperationalStatusAlt": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "show a different item typue",
+            "x-ob-item-type": "SystemStatusItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "DownTime": {
+        "type": "object",
+        "description": "An object containing data describing a time period during which a PV system is not capable of operating.",
+        "properties": {
+          "Duration": {
+            "$ref": "#/components/schemas/Duration"
+          },
+          "CapacityAC": {
+            "$ref": "#/components/schemas/CapacityAC"
+          },
+          "OperationalStatus": {
+            "$ref": "#/components/schemas/OperationalStatus"
+          },
+          "OperationalStatusAlt": {
+            "$ref": "#/components/schemas/OperationalStatusAlt"
+          }
+        }
+      },
+      "Availability": {
+        "type": "object",
+        "description": "An object describing an availability metric",
+        "properties": {
+          "UpTime": {
+            "$ref": "#/components/schemas/UpTime"
+          },
+          "DownTime": {
+            "$ref": "#/components/schemas/DownTime"
+          },
+          "Avail": {
+            "$ref": "#/components/schemas/Avail"
+          },
+          "AvailabilityStandard": {
+            "$ref": "#/components/schemas/AvailabilityStandard"
+          },
+          "DeviceID": {
+            "$ref": "#/components/schemas/DeviceID"
+          },
+          "SystemID": {
+            "$ref": "#/components/schemas/SystemID"
+          },
+          "PortfolioID": {
+            "$ref": "#/components/schemas/PortfolioID"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          }
+        }
+      },
+      "AvailabilityStandard": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The document describing the calculation of an availability value",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
           }
         ]
       }
@@ -17229,6 +17325,31 @@
         "BIPV_ST": {
           "label": "BIPV+ST",
           "description": "Building integrated PV and Storage Installation."
+        }
+      }
+    },
+    "SystemStatusItemType": {
+      "description": "An enumeration of PV system operating status types.",
+      "enums": {
+        "Curtailed": {
+          "label": "Curtailed",
+          "description": ""
+        },
+        "Operating": {
+          "label": "Operating",
+          "description": ""
+        },
+        "ForcedOutage": {
+          "label": "Non-Operational, Forced Outage",
+          "description": ""
+        },
+        "Maintenance": {
+          "label": "Nonoperational, Maintenance",
+          "description": ""
+        },
+        "NonOperationalResource": {
+          "label": "Non-operational, low resource",
+          "description": ""
         }
       }
     }
