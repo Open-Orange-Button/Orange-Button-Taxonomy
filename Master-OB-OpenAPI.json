@@ -17255,7 +17255,7 @@
       }
     },
     "StandardTypeItemType": {
-      "description": "Standard type for which a specific certification is applied. ID Format: {standard name/number}_{document part}_{publication_year}_{document section}{alpha sequence}. If document part is omitted, all parts of the standard are presumed to be included. The alpha sequence (a, b, c, ...) is only used to create distinct Unit IDs where two IDs would be identical without an alpha sequence. ",
+      "description": "Standard type for which a specific certification is applied. The UnitID format follows the pattern: document identifier, publication year, section of document, using underscore (_) as a separator. Some standards are published as multiple documents, e.g., IEC 61853 is published in four parts. In these cases the document identifier includes the part, e.g., \"IEC61853_1\", \"IEC61853_2\", etc.\n\nMore precisely the Unit ID is: {standard name/number}_{document part (optional)}_{publication_year}_{document section (optional)}{alpha sequence (optional)}. If the document part is omitted, all parts of the standard are presumed to be included. The alpha sequence (a, b, c, ...) is only used to create distinct Unit IDs where two IDs would be identical without an alpha sequence. ",
       "enums": {
         "IEC61215_2016": {
           "label": "IEC 61215:2016",
@@ -17328,10 +17328,6 @@
         "CSIP_2018": {
           "label": "CSIP Version 2.1:2018",
           "description": "SunSpec 2030.5 Common Smart Inverter Profile (CSIP) Certification"
-        },
-        "CSIP_NRTL": {
-          "label": "CSIP_NRTL",
-          "description": "SunSpec 2030.5 Common Smart Inverter Profile (CSIP) Attestation. Inverter was connected to gateway during compatibility testing."
         },
         "UL1741SB_2021": {
           "label": "UL1741SB:2021",
