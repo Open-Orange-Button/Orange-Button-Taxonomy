@@ -3279,6 +3279,9 @@
           },
           "FirmwareVersions": {
             "$ref": "#/components/schemas/FirmwareVersions"
+          },
+          "CertificationStandard": {
+            "$ref": "#/components/schemas/CertificationStandard"
           }
         }
       },
@@ -11817,7 +11820,7 @@
         "items": {
           "$ref": "#/components/schemas/PerformanceIndex"
         }
-			},
+      },
       "ProdID": {
         "allOf": [
           {
@@ -11831,6 +11834,23 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "d522ff95-43c2-41e5-83e1-911c1f3ad81f"
+            }
+          }
+        ]
+      },
+      "CertificationStandard": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A value from the enumerated list of the possible standards that a product can have.",
+            "x-ob-item-type": "StandardTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "IEC61215_2016"
             }
           }
         ]
@@ -17231,6 +17251,147 @@
         "BIPV_ST": {
           "label": "BIPV+ST",
           "description": "Building integrated PV and Storage Installation."
+        }
+      }
+    },
+    "StandardTypeItemType": {
+      "description": "Standard type for which a specific certification is applied. The UnitID format follows the pattern: document identifier, publication year, section of document, using underscore (_) as a separator. Some standards are published as multiple documents, e.g., IEC 61853 is published in four parts. In these cases the document identifier includes the part, e.g., \"IEC61853_1\", \"IEC61853_2\", etc.\n\nMore precisely the Unit ID is: {standard name/number}_{document part (optional)}_{publication_year}_{document section (optional)}{alpha sequence (optional)}. If the document part is omitted, all parts of the standard are presumed to be included. The alpha sequence (a, b, c, ...) is only used to create distinct Unit IDs where two IDs would be identical without an alpha sequence. ",
+      "enums": {
+        "IEC61215_2016": {
+          "label": "IEC 61215:2016",
+          "description": "Terrestrial photovoltaic (PV) modules - Design qualification and type approval"
+        },
+        "IEC61215_2021": {
+          "label": "IEC 61215:2021",
+          "description": "Terrestrial photovoltaic (PV) modules - Design qualification and type approval"
+        },
+        "IEC61853_1_2011": {
+          "label": "IEC 61853-1:2011",
+          "description": "Photovoltaic (PV) module performance testing and energy rating"
+        },
+        "UL61730_2017": {
+          "label": "UL 61730:2017",
+          "description": "Photovoltaic (PV) Module Safety Qualification"
+        },
+        "UL1741SC_2023": {
+          "label": "UL 1741 SC:2023",
+          "description": "Safety and functional performance standard for electric vehicle supply equipment that must comply with IEEE 1547-2018"
+        },
+        "IEC61646_2008": {
+          "label": "IEC 61646:2008",
+          "description": "Thin-film terrestrial photovoltaic (PV) modules - Design qualification and type approval"
+        },
+        "SAEJ3072_2021": {
+          "label": "SAE J3072:2021",
+          "description": "Interconnection Requirements for Onboard, Grid Support Inverter Systems"
+        },
+        "SAEJ3068_2018": {
+          "label": "SAE J3068:2018",
+          "description": "Electric Vehicle Power Transfer System Using a Three-Phase Capable Coupler"
+        },
+        "IEC61701_2020": {
+          "label": "IEC 61701:2020 ",
+          "description": "Photovoltaic (PV) modules - Salt mist corrosion testing"
+        },
+        "IEC61730_2016": {
+          "label": "IEC 61730:2016",
+          "description": "Photovoltaic (PV) module safety qualification"
+        },
+        "IEC60364_4_41_2005": {
+          "label": "IEC60364-4-41:2005",
+          "description": "Low voltage electrical installations - Part 4-41: Protection for safety - Protection against electric shock"
+        },
+        "IEC62108_2022": {
+          "label": "IEC 62108:2022",
+          "description": "Concentrator photovoltaic (CPV) modules and assemblies - Design qualification and type approval"
+        },
+        "IEC61683_1999": {
+          "label": "IEC 61683:1999",
+          "description": "Photovoltaic systems - Power conditioners - Procedure for measuring efficiency"
+        },
+        "IEC62109_1_2010": {
+          "label": "IEC62109-1:2010",
+          "description": "Safety of power converters for use in photovoltaic power systems - Part 1: General requirements"
+        },
+        "IEC62109_2_2011": {
+          "label": "IEC62109-2:2011",
+          "description": "Safety of power converters for use in photovoltaic power systems - Part 2: Particular requirements for inverters"
+        },
+        "IEC61010_1_2010": {
+          "label": "IEC 61010-1:2010",
+          "description": "Safety requirements for electrical equipment for measurement, control, and laboratory use - Part 1: General requirements"
+        },
+        "UL1973_2_2018": {
+          "label": "UL1973 Edition 2: 2018",
+          "description": "Standard For Batteries For Use In Stationary, Vehicle Auxiliary Power And Light Electric Rail (LER) Applications"
+        },
+        "CSIP_2018": {
+          "label": "CSIP Version 2.1:2018",
+          "description": "SunSpec 2030.5 Common Smart Inverter Profile (CSIP) Certification"
+        },
+        "UL1741SB_2021": {
+          "label": "UL1741SB:2021",
+          "description": "Inverters, Converters, Controllers and Interconnection System Equipment for Use With Distributed Energy Resources"
+        },
+        "UL1741SA_2021": {
+          "label": "UL 1741SA 2021",
+          "description": "Standard for Inverters, Converters, Controllers and Interconnection System Equipment for Use with Distributed Energy Resources"
+        },
+        "UL1741SA_2021_8": {
+          "label": "UL1741 Supplement A 2021 Section 8",
+          "description": ""
+        },
+        "UL1741SA_2021_9": {
+          "label": "UL1741 Supplement A 2021 Section 9",
+          "description": ""
+        },
+        "UL1741SA_2021_10": {
+          "label": "UL1741 Supplement A 2021 Section 10",
+          "description": ""
+        },
+        "UL1741SA_2021_11": {
+          "label": "UL1741 Supplement A 2021 Section 11",
+          "description": ""
+        },
+        "UL1741SA_2021_12": {
+          "label": "UL1741 Supplement A 2021 Section 12",
+          "description": ""
+        },
+        "UL1741SA_2021_13": {
+          "label": "UL1741 Supplement A 2021 Section 13",
+          "description": ""
+        },
+        "UL1741SA_2021_14": {
+          "label": "UL1741 Supplement A 2021 Section 14",
+          "description": ""
+        },
+        "UL1741SA_2021_15": {
+          "label": "UL1741 Supplement A 2021 Section 15",
+          "description": ""
+        },
+        "UL1741SA_2021_17": {
+          "label": "UL1741 Supplement A 2021 Section 17",
+          "description": ""
+        },
+        "UL1741SA_2021_18": {
+          "label": "UL1741 Supplement A 2021 Section 18",
+          "description": ""
+        },
+        "UL1703_2002": {
+          "label": "UL 1703:2002",
+          "description": "UL Standard for Safety for Flat-Plate Photovoltaic Modules and Panels"
+        },
+        "UL9540_2016": {
+          "label": "UL 9540:2016",
+          "description": "Energy Storage System (ESS) Requirements"
+        },
+        "UL9540_2020": {
+          "label": "UL 9540:2020",
+          "description": "Energy Storage Systems and Equipment"
+        },
+        "JA12_2019": {
+          "label": "Joint Appendix 12 : 2019",
+          "description": "Qualification Requirements for Battery Storage System "
         }
       }
     },
