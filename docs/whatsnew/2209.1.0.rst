@@ -16,6 +16,7 @@ Element changes
  * Adds PerformanceIndexEnergy, PerformanceIndexPower, PowerACModeled, PowerACCorrected, PowerCorrFactor (:pull:`173`)
  * Adds ProdID to Product Superclass (:pull:`174`)
  * Changes the item type of CertificationStandard to StandardTypeItemType (:pull:`180`)
+ * Adds UpTimeTotal and DownTimeTotal (:pull:`187`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -38,7 +39,8 @@ Object changes
  * Adds Insurer, Owner (:pull:`165`)
  * Adds AnswerRangeMin and AnswerRangeMax to Questions Object (:pull:`164`)
  * Adds PerformanceIndex and PerformanceIndexes (:pull:`173`)
-
+ * Adds Availability, Availabilities, AvailabilityReport, UpTime, UpTimes, DownTime, DownTimes (:pull:`187`)
+ 
 
 Unit changes
 ~~~~~~~~~~~~
