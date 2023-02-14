@@ -5273,7 +5273,7 @@
             "type": "object",
             "description": "Percent of AC capacity available during a period of time.",
             "x-ob-item-type": "PercentItemType",
-            "x-ob-usage-tips": "For time-based Availability, calculate Avail = (UpTime) / (UpTime + DownTime)",
+            "x-ob-usage-tips": "For time-based Availability, calculate Avail = (UpTimeTotal) / (UpTimeTotal + DownTimeTotal)",
             "x-ob-sample-value": {
               "Value": 95
             },
@@ -11842,17 +11842,14 @@
         "type": "object",
         "description": "An object containing data describing a time period during which a PV system is capable of operating.",
         "properties": {
-          "Duration": {
-            "$ref": "#/components/schemas/Duration"
-          },
-          "CapacityAC": {
-            "$ref": "#/components/schemas/CapacityAC"
-          },
           "OperationalStatus": {
             "$ref": "#/components/schemas/OperationalStatus"
           },
           "OperationalStatusAlt": {
             "$ref": "#/components/schemas/OperationalStatusAlt"
+          },
+          "CapacityFractionAC": {
+            "$ref": "#/components/schemas/CapacityFractionAC"
           }
         }
       },
@@ -11875,47 +11872,14 @@
         "type": "object",
         "description": "An object containing data describing a time period during which a PV system is not capable of operating.",
         "properties": {
-          "Duration": {
-            "$ref": "#/components/schemas/Duration"
-          },
-          "CapacityAC": {
-            "$ref": "#/components/schemas/CapacityAC"
-          },
           "OperationalStatus": {
             "$ref": "#/components/schemas/OperationalStatus"
           },
           "OperationalStatusAlt": {
             "$ref": "#/components/schemas/OperationalStatusAlt"
-          }
-        }
-      },
-      "Availability": {
-        "type": "object",
-        "description": "An object describing an availability metric",
-        "properties": {
-          "UpTime": {
-            "$ref": "#/components/schemas/UpTime"
           },
-          "DownTime": {
-            "$ref": "#/components/schemas/DownTime"
-          },
-          "Avail": {
-            "$ref": "#/components/schemas/Avail"
-          },
-          "AvailabilityStandard": {
-            "$ref": "#/components/schemas/AvailabilityStandard"
-          },
-          "DeviceID": {
-            "$ref": "#/components/schemas/DeviceID"
-          },
-          "SystemID": {
-            "$ref": "#/components/schemas/SystemID"
-          },
-          "PortfolioID": {
-            "$ref": "#/components/schemas/PortfolioID"
-          },
-          "Scope": {
-            "$ref": "#/components/schemas/Scope"
+          "CapacityFractionAC": {
+            "$ref": "#/components/schemas/CapacityFractionAC"
           }
         }
       },
@@ -11927,13 +11891,13 @@
           {
             "type": "object",
             "description": "The document describing the calculation of an availability value",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "StandardTypeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
-					}
-			  ]
-		  },
+          }
+        ]
+      },
       "CertificationStandard": {
         "allOf": [
           {
@@ -11950,6 +11914,113 @@
             }
           }
         ]
+      },
+      "CapacityFractionAC": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "A fraction of nominal AC capacity",
+            "x-ob-item-type": "PowerItemType",
+            "x-ob-item-type-group": "OBElectricalPower",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "UpTimeTotal": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Total duration of time when a device or system is capable of operations.",
+            "x-ob-item-type": "DurationItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "DownTimeTotal": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Total duration of time when a device or system is not capable of operations.",
+            "x-ob-item-type": "DurationItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "DownTimes": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/DownTime"
+        }
+      },
+      "UpTimes": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/UpTime"
+        }
+      },
+      "AvailabilityReport": {
+        "type": "object",
+        "description": "An object describing an availability metric",
+        "properties": {
+          "AvailabilityStandard": {
+            "$ref": "#/components/schemas/AvailabilityStandard"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "UpTimes": {
+            "$ref": "#/components/schemas/UpTimes"
+          },
+          "DownTimes": {
+            "$ref": "#/components/schemas/DownTimes"
+          },
+          "Availabilities": {
+            "$ref": "#/components/schemas/Availabilities"
+          }
+        },
+        "x-ob-usage-tips": "Use Availabilities to report a sequence (array) of availabilities. Use Scope to report the scope of the availability calculation (device, system, portfolio of systems. Use UpTime and DownTime to record details of periods of up or down time."
+      },
+      "Availability": {
+        "type": "object",
+        "description": "A group of elements reporting availability calculations",
+        "properties": {
+          "Avail": {
+            "$ref": "#/components/schemas/Avail"
+          },
+          "UpTimeTotal": {
+            "$ref": "#/components/schemas/UpTimeTotal"
+          },
+          "DownTimeTotal": {
+            "$ref": "#/components/schemas/DownTimeTotal"
+          },
+          "EnergyAC": {
+            "$ref": "#/components/schemas/EnergyAC"
+          },
+          "EnergyACModeled": {
+            "$ref": "#/components/schemas/EnergyACModeled"
+          }
+        },
+        "x-ob-usage-tips": "Time-based availability is calculated as (up time) / (up time + down time). Use Avail to record the value and time period. Use UpTimeTotal and DownTimeTotal to report the up time and down time components."
+      },
+      "Availabilities": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Availability"
+        }
       }
     }
   },
@@ -17374,7 +17445,7 @@
           "description": ""
         }
       }
-		},
+    },
     "StandardTypeItemType": {
       "description": "Standard type for which a specific certification is applied. The UnitID format follows the pattern: document identifier, publication year, section of document, using underscore (_) as a separator. Some standards are published as multiple documents, e.g., IEC 61853 is published in four parts. In these cases the document identifier includes the part, e.g., \"IEC61853_1\", \"IEC61853_2\", etc.\n\nMore precisely the Unit ID is: {standard name/number}_{document part (optional)}_{publication_year}_{document section (optional)}{alpha sequence (optional)}. If the document part is omitted, all parts of the standard are presumed to be included. The alpha sequence (a, b, c, ...) is only used to create distinct Unit IDs where two IDs would be identical without an alpha sequence. ",
       "enums": {
