@@ -5395,11 +5395,11 @@
           },
           {
             "type": "object",
-            "description": "A product code is a standardized, unique human-readable identifier that is compact,and can be easily parsed. It consists of an entity code concatenated to a product specific identification string, separated by a hyphen. A product string is comprised of upper case letters, number, and hyphens. The format of a product code is:[EntityCode]-[ProductString], e.g., UEE-E2000-3-XFM for company Universal Energy Enterprises with Entity Code UEE and Product String of E2000-3-XFM.    ",
+            "description": "A product code is a standardized, unique human-readable identifier that is compact,and can be easily parsed. It consists of an entity code concatenated to a product specific identification string, separated by a hyphen. A product string is comprised of upper case letters, number, and underscores. Any character that is not a letter or number is a special character and will be replaced by an underscore. All letter characters will be upper case.  In cases of clashes with identical ProdCode append {ProdCode}-{incremental number}The format of a product code is:[EntityCode]-[ProductString], e.g., “HANWH-Q_PEAK_DUO_BLK_G10__AC_365”",
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "SMA-SB7-7-1SP-US-41-NWF"
+              "Value": "HANWH-Q_PEAK_DUO_BLK_G10__AC_365"
             },
             "x-ob-item-type-group": ""
           }
@@ -11815,7 +11815,7 @@
         "items": {
           "$ref": "#/components/schemas/PerformanceIndex"
         }
-			},
+      },
       "ProdID": {
         "allOf": [
           {
