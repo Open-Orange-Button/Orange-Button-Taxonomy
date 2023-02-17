@@ -11828,28 +11828,10 @@
           "OperationalStatus": {
             "$ref": "#/components/schemas/OperationalStatus"
           },
-          "OperationalStatusAlt": {
-            "$ref": "#/components/schemas/OperationalStatusAlt"
-          },
           "CapacityFractionAC": {
             "$ref": "#/components/schemas/CapacityFractionAC"
           }
         }
-      },
-      "OperationalStatusAlt": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "show a different item typue",
-            "x-ob-item-type": "SystemStatusItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
       },
       "DownTime": {
         "type": "object",
@@ -11857,9 +11839,6 @@
         "properties": {
           "OperationalStatus": {
             "$ref": "#/components/schemas/OperationalStatus"
-          },
-          "OperationalStatusAlt": {
-            "$ref": "#/components/schemas/OperationalStatusAlt"
           },
           "CapacityFractionAC": {
             "$ref": "#/components/schemas/CapacityFractionAC"
@@ -17457,31 +17436,6 @@
         "BIPV_ST": {
           "label": "BIPV+ST",
           "description": "Building integrated PV and Storage Installation."
-        }
-      }
-    },
-    "SystemStatusItemType": {
-      "description": "An enumeration of PV system operating status types.",
-      "enums": {
-        "Curtailed": {
-          "label": "Curtailed",
-          "description": ""
-        },
-        "Operating": {
-          "label": "Operating",
-          "description": ""
-        },
-        "ForcedOutage": {
-          "label": "Non-Operational, Forced Outage",
-          "description": ""
-        },
-        "Maintenance": {
-          "label": "Nonoperational, Maintenance",
-          "description": ""
-        },
-        "NonOperationalResource": {
-          "label": "Non-operational, low resource",
-          "description": ""
         }
       }
     },
