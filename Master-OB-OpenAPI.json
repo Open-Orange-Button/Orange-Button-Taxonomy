@@ -334,11 +334,11 @@
           "CurtailLimit": {
             "$ref": "#/components/schemas/CurtailLimit"
           },
-          "Avail": {
-            "$ref": "#/components/schemas/Avail"
-          },
           "SystemPF": {
             "$ref": "#/components/schemas/SystemPF"
+          },
+          "AvailCapacity": {
+            "$ref": "#/components/schemas/AvailCapacity"
           }
         },
         "x-ob-usage-tips": ""
@@ -5260,23 +5260,6 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {},
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "Avail": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Percent of AC capacity available during a period of time.",
-            "x-ob-item-type": "PercentItemType",
-            "x-ob-usage-tips": "For time-based Availability, calculate Avail = (UpTimeTotal) / (UpTimeTotal + DownTimeTotal)",
-            "x-ob-sample-value": {
-              "Value": 95
-            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -11998,9 +11981,6 @@
         "type": "object",
         "description": "A group of elements reporting availability calculations",
         "properties": {
-          "Avail": {
-            "$ref": "#/components/schemas/Avail"
-          },
           "UpTimeTotal": {
             "$ref": "#/components/schemas/UpTimeTotal"
           },
@@ -12012,6 +11992,18 @@
           },
           "EnergyACModeled": {
             "$ref": "#/components/schemas/EnergyACModeled"
+          },
+          "AvailOperational": {
+            "$ref": "#/components/schemas/AvailOperational"
+          },
+          "AvailTechnical": {
+            "$ref": "#/components/schemas/AvailTechnical"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "AvailCapacity": {
+            "$ref": "#/components/schemas/AvailCapacity"
           }
         },
         "x-ob-usage-tips": "Time-based availability is calculated as (up time) / (up time + down time). Use Avail to record the value and time period. Use UpTimeTotal and DownTimeTotal to report the up time and down time components."
@@ -12021,6 +12013,53 @@
         "items": {
           "$ref": "#/components/schemas/Availability"
         }
+      },
+      "AvailOperational": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The fraction of time that a system is operational. Calculated as (up time) / (up time + down time). For operational availability, up time includes the time the device or system is generating power. All other time is down time. ",
+            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "AvailTechnical": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The fraction of time that a device or system is capable of generating power. Calculated as (up time) / (up time + down time). For technical availability, up time includes time that the system is generating power, or could generate power but is outside environmental limits, is subject to grid outage or is directed to be offline. Down time includes time offline for equipment failure and repair.",
+            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "AvailCapacity": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Percent of AC capacity available during a period of time.",
+            "x-ob-item-type": "PercentItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 95
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
       }
     }
   },
