@@ -15165,6 +15165,118 @@
         "Curtailed": {
           "label": "Curtailed",
           "description": ""
+        },
+        "Emergency": {
+          "label": "Emergency",
+          "description": ""
+        },
+        "Environment": {
+          "label": "Environment",
+          "description": ""
+        },
+        "Forced": {
+          "label": "Forced",
+          "description": ""
+        },
+        "Grid": {
+          "label": "Grid",
+          "description": ""
+        },
+        "Islanded": {
+          "label": "Islanded",
+          "description": ""
+        },
+        "Shutdown": {
+          "label": "Shutdown",
+          "description": ""
+        },
+        "Standby": {
+          "label": "Standby",
+          "description": ""
+        },
+        "Operational": {
+          "label": "Operational",
+          "description": ""
+        },
+        "UnderMaintenance": {
+          "label": "Under Maintenance",
+          "description": ""
+        },
+        "CommunicationFailure": {
+          "label": "Communication Failure",
+          "description": ""
+        },
+        "Decommissioned": {
+          "label": "Decommissioned",
+          "description": ""
+        },
+        "InformationUnavailable": {
+          "label": "Information Unavailable",
+          "description": ""
+        },
+        "InformationAvailable": {
+          "label": "Information Available",
+          "description": ""
+        },
+        "Nonoperative": {
+          "label": "Nonoperative",
+          "description": ""
+        },
+        "Operative": {
+          "label": "Operative",
+          "description": ""
+        },
+        "ForceMajeure": {
+          "label": "Force Majeure",
+          "description": ""
+        },
+        "Suspended": {
+          "label": "Suspended",
+          "description": ""
+        },
+        "ForcedOutage": {
+          "label": "Forced Outage",
+          "description": ""
+        },
+        "PlannedCorrectiveAction": {
+          "label": "Planned Corrective Action",
+          "description": ""
+        },
+        "ScheduledMaintnence": {
+          "label": "Scheduled Maintnence",
+          "description": ""
+        },
+        "OutOfService": {
+          "label": "Out Of Service",
+          "description": ""
+        },
+        "InService": {
+          "label": "In Service",
+          "description": ""
+        },
+        "OutOfElectricalSpecification": {
+          "label": "Out Of Electrical Specification",
+          "description": ""
+        },
+        "RequestedShutdown": {
+          "label": "Requested Shutdown",
+          "description": ""
+        },
+        "OutOfEnvironmentalSpecification": {
+          "label": "Out Of Environmental Specification",
+          "description": ""
+        },
+        "ServiceSetsPoints": {
+          "label": "Service Sets Points",
+          "description": ""
+        },
+        "PartialCapability": {
+          "label": "Partial Capability",
+          "description": ""
+        },
+        "FullCapability": {
+          "label": "Full Capability",
+          "description": ""
         }
       }
     },
