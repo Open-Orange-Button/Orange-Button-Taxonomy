@@ -11947,14 +11947,14 @@
           "Scope": {
             "$ref": "#/components/schemas/Scope"
           },
-          "UpTimes": {
-            "$ref": "#/components/schemas/UpTimes"
-          },
-          "DownTimes": {
-            "$ref": "#/components/schemas/DownTimes"
-          },
           "Availabilities": {
             "$ref": "#/components/schemas/Availabilities"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
           }
         },
         "x-ob-usage-tips": "Use Availabilities to report a sequence (array) of availabilities. Use Scope to report the scope of the availability calculation (device, system, portfolio of systems. Use UpTime and DownTime to record details of periods of up or down time."
