@@ -7334,6 +7334,9 @@
               },
               "CECListingDate": {
                 "$ref": "#/components/schemas/CECListingDate"
+              },
+              "ModuleArea": {
+                "$ref": "#/components/schemas/ModuleArea"
               }
             }
           }

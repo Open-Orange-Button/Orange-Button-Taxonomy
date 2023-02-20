@@ -40,7 +40,7 @@ Object changes
  * Adds AnswerRangeMin and AnswerRangeMax to Questions Object (:pull:`164`)
  * Adds PerformanceIndex and PerformanceIndexes (:pull:`173`)
  * Adds Availability, Availabilities, AvailabilityReport, UpTime, UpTimes, DownTime, DownTimes (:pull:`187`)
- 
+ * Adds ModuleArea to ProdModule (:pull:`189`)
 
 Unit changes
 ~~~~~~~~~~~~
