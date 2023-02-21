@@ -15170,10 +15170,6 @@
           "label": "Emergency",
           "description": ""
         },
-        "Environment": {
-          "label": "Environment",
-          "description": ""
-        },
         "Forced": {
           "label": "Forced",
           "description": ""
@@ -15194,20 +15190,12 @@
           "label": "Standby",
           "description": ""
         },
-        "Operational": {
-          "label": "Operational",
-          "description": ""
-        },
         "UnderMaintenance": {
           "label": "Under Maintenance",
           "description": ""
         },
         "CommunicationFailure": {
           "label": "Communication Failure",
-          "description": ""
-        },
-        "Decommissioned": {
-          "label": "Decommissioned",
           "description": ""
         },
         "InformationUnavailable": {
