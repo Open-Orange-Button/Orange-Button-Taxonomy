@@ -12042,6 +12042,12 @@
             "x-ob-item-type-group": ""
           }
         ]
+      },
+      "SubstituteProducts": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Product"
+        }
       }
     }
   },
