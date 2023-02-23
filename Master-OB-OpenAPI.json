@@ -6665,8 +6665,6 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "EndTime": "2020-11-30",
-              "StartTime": "2045-11-30",
               "Unit": "Y",
               "Value": 25
             }
