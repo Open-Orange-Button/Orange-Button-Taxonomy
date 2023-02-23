@@ -15170,10 +15170,6 @@
           "label": "Emergency",
           "description": ""
         },
-        "Forced": {
-          "label": "Forced",
-          "description": ""
-        },
         "Grid": {
           "label": "Grid",
           "description": ""
