@@ -1656,11 +1656,11 @@
         "type": "object",
         "description": "The energy consumption history of a site",
         "properties": {
-          "SiteID": {
-            "$ref": "#/components/schemas/SiteID"
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
           },
-          "EnergyUsages": {
-            "$ref": "#/components/schemas/EnergyUsages"
+          "EnergyACArray": {
+            "$ref": "#/components/schemas/EnergyACArray"
           }
         },
         "x-ob-usage-tips": ""
@@ -10378,10 +10378,7 @@
         ]
       },
       "EnergyACArray": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/EnergyAC"
-        }
+        "description": "An array of EnergyAC, which is energy (AC) measured for a period of time."
       },
       "ForecastName": {
         "allOf": [
