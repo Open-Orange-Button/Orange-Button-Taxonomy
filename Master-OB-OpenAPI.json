@@ -1646,8 +1646,11 @@
         "type": "object",
         "description": "A value of energy consumed in one time period",
         "properties": {
-          "EnergyAC": {
-            "$ref": "#/components/schemas/EnergyAC"
+          "EnergyACArray": {
+            "$ref": "#/components/schemas/EnergyACArray"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
           }
         },
         "x-ob-usage-tips": ""
@@ -10378,7 +10381,10 @@
         ]
       },
       "EnergyACArray": {
-        "description": "An array of EnergyAC, which is energy (AC) measured for a period of time."
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/EnergyAC"
+        }
       },
       "ForecastName": {
         "allOf": [
