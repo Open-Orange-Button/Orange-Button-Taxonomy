@@ -1493,7 +1493,7 @@
             "type": "object",
             "description": "A generic URL to a file folder or a single file for transmitting documents",
             "x-ob-item-type": "StringItemType",
-            "x-ob-usage-tips": "",
+            "x-ob-usage-tips": "It is important to consider the permissions settings on any documents noted within the FileFolderURL object. User may adjust permissions to enable expanded access to documentation. ",
             "x-ob-sample-value": {
               "Value": "https://www.lg.com/us/business/download/resources/BT00002151/[Print]%20Neon_2_60_BF_80308_ck_FRD_v4.pdf"
             },
