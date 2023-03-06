@@ -84,6 +84,9 @@
           },
           "ProdID": {
             "$ref": "#/components/schemas/ProdID"
+          },
+          "SubstituteProducts": {
+            "$ref": "#/components/schemas/SubstituteProducts"
           }
         },
         "x-ob-usage-tips": ""
@@ -11230,6 +11233,9 @@
           },
           "PerformanceIndexes": {
             "$ref": "#/components/schemas/PerformanceIndexes"
+          },
+          "AvailabilityReport": {
+            "$ref": "#/components/schemas/AvailabilityReport"
           }
         },
         "x-ob-usage-tips": "Use EnergyAC for total energy production over the report period, and use Production to contain arrays of measured energy, power, etc. Use ExpectedEnergyModel for modeled energy over the report period calculated from observed weather, and use ForecastEnergyModels for modeled energy using other weather sources (e.g., TMY)."
@@ -11945,14 +11951,14 @@
           "Scope": {
             "$ref": "#/components/schemas/Scope"
           },
-          "UpTimes": {
-            "$ref": "#/components/schemas/UpTimes"
-          },
-          "DownTimes": {
-            "$ref": "#/components/schemas/DownTimes"
-          },
           "Availabilities": {
             "$ref": "#/components/schemas/Availabilities"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
           }
         },
         "x-ob-usage-tips": "Use Availabilities to report a sequence (array) of availabilities. Use Scope to report the scope of the availability calculation (device, system, portfolio of systems. Use UpTime and DownTime to record details of periods of up or down time."
@@ -12040,6 +12046,33 @@
             "x-ob-item-type-group": ""
           }
         ]
+      },
+      "SubstituteProduct": {
+        "type": "object",
+        "description": "A product that can serve as a replacement for a given Product.",
+        "properties": {
+          "ProdCode": {
+            "$ref": "#/components/schemas/ProdCode"
+          },
+          "ProdID": {
+            "$ref": "#/components/schemas/ProdID"
+          },
+          "ProdMfr": {
+            "$ref": "#/components/schemas/ProdMfr"
+          },
+          "ProdName": {
+            "$ref": "#/components/schemas/ProdName"
+          },
+          "ProdType": {
+            "$ref": "#/components/schemas/ProdType"
+          }
+        }
+      },
+      "SubstituteProducts": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/SubstituteProduct"
+        }
       }
     }
   },
@@ -17609,6 +17642,10 @@
         "JA12_2019": {
           "label": "Joint Appendix 12 : 2019",
           "description": "Qualification Requirements for Battery Storage System "
+        },
+        "IECTS63019_2019": {
+          "label": "IEC TS 63109 Ed. 1",
+          "description": "Photovoltaic power systems (PVPS) – Information model for availability"
         }
       }
     },
