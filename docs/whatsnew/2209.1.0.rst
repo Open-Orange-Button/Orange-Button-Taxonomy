@@ -41,15 +41,17 @@ Object changes
  * Adds PerformanceIndex and PerformanceIndexes (:pull:`173`)
  * Adds Availability, Availabilities, AvailabilityReport, UpTime, UpTimes, DownTime, DownTimes (:pull:`187`)
  * Adds ModuleArea to ProdModule (:pull:`189`)
+ * Adds SubstituteProduct and SubstituteProducts objects (:pull:`194`)
  * In EnergyConsumption, SiteID is replaced by Scope, and EnergyAC is replaced by EnergyACArray (:pull:`196`)
  * In EnergyUsage, Scope is added, and EnergyAC is replaced by EnergyACArray (:pull:`196`)
- 
 
 Unit changes
 ~~~~~~~~~~~~
  * Adds JobTypeItemType (:pull:`107`)
  * Adds DateTimeItemType (:pull:`179`)
  * Adds StandardTypeItemType (:pull:`180`)
+ * Add value IECTS63019 to StandardTypeItemType (:pull:`192`)
+ 
 
 Bug fixes
 ~~~~~~~~~
