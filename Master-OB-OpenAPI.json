@@ -12048,7 +12048,7 @@
       },
       "SubstituteProduct": {
         "type": "object",
-        "description": "A product that can serve as a replacement to a given Product in cases of limited availability.",
+        "description": "A product that can serve as a replacement for a given Product.",
         "properties": {
           "ProdCode": {
             "$ref": "#/components/schemas/ProdCode"
