@@ -48,6 +48,8 @@ Unit changes
  * Adds JobTypeItemType (:pull:`107`)
  * Adds DateTimeItemType (:pull:`179`)
  * Adds StandardTypeItemType (:pull:`180`)
+ * Add value IECTS63019 to StandardTypeItemType (:pull:`192`)
+ 
 
 Bug fixes
 ~~~~~~~~~
