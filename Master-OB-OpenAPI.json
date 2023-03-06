@@ -13384,8 +13384,8 @@
         }
       }
     },
-    "ModuleItemType": {
-      "description": "Module type in terms of its intended use or features. Use CellTechnologyTypeItemType to specify the cell type.",
+    "ModuleStyleItemType": {
+      "description": "Module type in terms of its intended use, style or features. Use CellTechnologyTypeItemType to specify the cell type.",
       "enums": {
         "BIPV": {
           "label": "Building integrated PV",
