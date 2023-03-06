@@ -84,6 +84,9 @@
           },
           "ProdID": {
             "$ref": "#/components/schemas/ProdID"
+          },
+          "SubstituteProducts": {
+            "$ref": "#/components/schemas/SubstituteProducts"
           }
         },
         "x-ob-usage-tips": ""
@@ -12040,6 +12043,33 @@
             "x-ob-item-type-group": ""
           }
         ]
+      },
+      "SubstituteProduct": {
+        "type": "object",
+        "description": "A product that can serve as a replacement for a given Product.",
+        "properties": {
+          "ProdCode": {
+            "$ref": "#/components/schemas/ProdCode"
+          },
+          "ProdID": {
+            "$ref": "#/components/schemas/ProdID"
+          },
+          "ProdMfr": {
+            "$ref": "#/components/schemas/ProdMfr"
+          },
+          "ProdName": {
+            "$ref": "#/components/schemas/ProdName"
+          },
+          "ProdType": {
+            "$ref": "#/components/schemas/ProdType"
+          }
+        }
+      },
+      "SubstituteProducts": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/SubstituteProduct"
+        }
       }
     }
   },
