@@ -13392,7 +13392,7 @@
           "description": ""
         },
         "Bifacial": {
-          "label": "",
+          "label": "Bifacial PV",
           "description": ""
         },
         "CPV": {
@@ -13407,9 +13407,9 @@
           "label": "",
           "description": ""
         },
-        "PV": {
-          "label": "Photovoltaic",
-          "description": "Flat, non-concentrating PV"
+        "MonoPV": {
+          "label": "Monofacial PV",
+          "description": "Flat, non-concentrating, rectangular, monofacial PV"
         }
       }
     },
@@ -16979,9 +16979,9 @@
           "label": "polySi",
           "description": "Poly- or multi-crystalline silicon"
         },
-        "HIT": {
-          "label": "HIT",
-          "description": "Heterojunction with Intrinsic thin-layer"
+        "HJT": {
+          "label": "HJT",
+          "description": "Heterojunction silicon"
         },
         "ASi": {
           "label": "aSi",
