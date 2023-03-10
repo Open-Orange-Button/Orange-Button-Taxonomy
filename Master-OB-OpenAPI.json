@@ -13384,88 +13384,19 @@
         }
       }
     },
-    "ModuleTechnologyItemType": {
-      "description": "",
+    "ModuleStyleItemType": {
+      "description": "Module type in terms of its intended use, style or features. Use CellTechnologyTypeItemType to specify the cell type.",
       "enums": {
-        "Mono_C_Si": {
-          "label": "",
-          "description": ""
-        },
-        "Multi_C_Si": {
-          "label": "",
-          "description": ""
-        },
-        "ThinFilm": {
-          "label": "",
-          "description": ""
-        },
-        "Other": {
-          "label": "",
-          "description": ""
-        }
-      }
-    },
-    "ModuleItemType": {
-      "description": "",
-      "enums": {
-        "ASi": {
-          "label": "",
-          "description": ""
-        },
-        "ASi_Triple": {
-          "label": "",
-          "description": ""
-        },
-        "ASi_Tandem": {
-          "label": "",
-          "description": ""
-        },
-        "ASi_Single": {
-          "label": "",
-          "description": ""
-        },
         "BIPV": {
-          "label": "",
+          "label": "Building integrated PV",
           "description": ""
         },
-        "BiFacial": {
-          "label": "",
-          "description": ""
-        },
-        "CdTe": {
-          "label": "",
-          "description": ""
-        },
-        "CIGS": {
-          "label": "",
+        "Bifacial": {
+          "label": "Bifacial PV",
           "description": ""
         },
         "CPV": {
-          "label": "",
-          "description": ""
-        },
-        "CSi": {
-          "label": "",
-          "description": ""
-        },
-        "MonoSi": {
-          "label": "",
-          "description": ""
-        },
-        "MultiSi": {
-          "label": "",
-          "description": ""
-        },
-        "PSi": {
-          "label": "",
-          "description": ""
-        },
-        "TFSI": {
-          "label": "",
-          "description": ""
-        },
-        "HIT": {
-          "label": "",
+          "label": "Concentrating PV",
           "description": ""
         },
         "Ribbon": {
@@ -13475,6 +13406,10 @@
         "Other": {
           "label": "",
           "description": ""
+        },
+        "MonoPV": {
+          "label": "Monofacial PV",
+          "description": "Flat, non-concentrating, rectangular, monofacial PV"
         }
       }
     },
@@ -17042,11 +16977,11 @@
         },
         "PolySi": {
           "label": "polySi",
-          "description": "Polycrystalline silicon"
+          "description": "Poly- or multi-crystalline silicon"
         },
-        "HIT": {
-          "label": "HIT",
-          "description": "Heterojunction with Intrinsic thin-layer"
+        "HJT": {
+          "label": "HJT",
+          "description": "Heterojunction silicon"
         },
         "ASi": {
           "label": "aSi",
@@ -17064,13 +16999,13 @@
           "label": "CdTe",
           "description": "Cadmium telluride thin film"
         },
-        "Heterojunction": {
-          "label": "heterojunction",
-          "description": ""
-        },
         "Other": {
           "label": "Other",
           "description": ""
+        },
+        "ASi_tandem": {
+          "label": "aSi tandem",
+          "description": "Amorphous silicon tandem"
         }
       }
     },
