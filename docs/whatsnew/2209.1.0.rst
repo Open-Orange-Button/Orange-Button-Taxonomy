@@ -42,6 +42,8 @@ Object changes
  * Adds Availability, Availabilities, AvailabilityReport, UpTime, UpTimes, DownTime, DownTimes (:pull:`187`)
  * Adds ModuleArea to ProdModule (:pull:`189`)
  * Adds SubstituteProduct and SubstituteProducts objects (:pull:`194`)
+ * In EnergyConsumption, SiteID is replaced by Scope, and EnergyAC is replaced by EnergyACArray (:pull:`196`)
+ * In EnergyUsage, Scope is added, and EnergyAC is replaced by EnergyACArray (:pull:`196`)
 
 Unit changes
 ~~~~~~~~~~~~
