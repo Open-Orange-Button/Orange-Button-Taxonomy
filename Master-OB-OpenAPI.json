@@ -9390,6 +9390,9 @@
           },
           "BillOfMaterials": {
             "$ref": "#/components/schemas/BillOfMaterials"
+          },
+          "TimeEntries": {
+            "$ref": "#/components/schemas/TimeEntries"
           }
         }
       },
@@ -12102,6 +12105,149 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/SoilingRatio"
+        }
+      },
+      "Laborer": {
+        "type": "object",
+        "description": "Individual that provides a service or performs a task.",
+        "properties": {
+          "FirstName": {
+            "$ref": "#/components/schemas/FirstName"
+          },
+          "LastName": {
+            "$ref": "#/components/schemas/LastName"
+          },
+          "HomePhone": {
+            "$ref": "#/components/schemas/HomePhone"
+          },
+          "MobilePhone": {
+            "$ref": "#/components/schemas/MobilePhone"
+          },
+          "WorkPhone": {
+            "$ref": "#/components/schemas/WorkPhone"
+          },
+          "PreferredContactMethod": {
+            "$ref": "#/components/schemas/PreferredContactMethod"
+          },
+          "Title": {
+            "$ref": "#/components/schemas/Title"
+          },
+          "Address": {
+            "$ref": "#/components/schemas/Address"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Email": {
+            "$ref": "#/components/schemas/Email"
+          },
+          "ContactTimezone": {
+            "$ref": "#/components/schemas/ContactTimezone"
+          },
+          "LaborerID": {
+            "$ref": "#/components/schemas/LaborerID"
+          }
+        }
+      },
+      "LaborerID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A unique identifier for the Laborer",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2c7cefef-412b-4900-a7af-3a6fcacaf0b7"
+            }
+          }
+        ]
+      },
+      "JobRole": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Description of the role an individual is performing on a given Job. This determines their OES wage level in prevailing wage Jobs. ",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Electrician"
+            }
+          }
+        ]
+      },
+      "TimeEntry": {
+        "type": "object",
+        "description": "A record of time logged to a given Job.",
+        "properties": {
+          "TimeEntryID": {
+            "$ref": "#/components/schemas/TimeEntryID"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Laborer": {
+            "$ref": "#/components/schemas/Laborer"
+          },
+          "JobRole": {
+            "$ref": "#/components/schemas/JobRole"
+          },
+          "Duration": {
+            "$ref": "#/components/schemas/Duration"
+          },
+          "TimeEntryDate": {
+            "$ref": "#/components/schemas/TimeEntryDate"
+          }
+        }
+      },
+      "TimeEntryID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Unique identifier of this TimeEntry",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "cac773e0-26cd-4785-9421-d100c77f5ff4"
+            }
+          }
+        ]
+      },
+      "TimeEntryDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date of this TimeEntry",
+            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2023-03-12"
+            }
+          }
+        ]
+      },
+      "TimeEntries": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/TimeEntry"
         }
       }
     }
