@@ -17,6 +17,7 @@ Element changes
  * Adds ProdID to Product Superclass (:pull:`174`)
  * Changes the item type of CertificationStandard to StandardTypeItemType (:pull:`180`)
  * Adds UpTimeTotal and DownTimeTotal (:pull:`187`)
+ * Adds JobRole, TimeEntryDate, TimeEntryID, LaborerID (:pull:`205`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -44,6 +45,7 @@ Object changes
  * Adds SubstituteProduct and SubstituteProducts objects (:pull:`194`)
  * In EnergyConsumption, SiteID is replaced by Scope, and EnergyAC is replaced by EnergyACArray (:pull:`196`)
  * In EnergyUsage, Scope is added, and EnergyAC is replaced by EnergyACArray (:pull:`196`)
+ * Creates TimeEntries, TimeEntry, Laborer (:pull:`205`)
 
 Unit changes
 ~~~~~~~~~~~~
