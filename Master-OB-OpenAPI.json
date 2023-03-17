@@ -12107,23 +12107,6 @@
           "$ref": "#/components/schemas/SoilingRatio"
         }
       },
-      "JobRole": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Description of the role an individual is performing on a given Job. This determines their OES wage level in prevailing wage Jobs. ",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "Electrician"
-            }
-          }
-        ]
-      },
       "TimeEntry": {
         "type": "object",
         "description": "A record of time logged to a given Job.",
@@ -12134,9 +12117,6 @@
           "Description": {
             "$ref": "#/components/schemas/Description"
           },
-          "JobRole": {
-            "$ref": "#/components/schemas/JobRole"
-          },
           "Duration": {
             "$ref": "#/components/schemas/Duration"
           },
@@ -12145,6 +12125,9 @@
           },
           "Worker": {
             "$ref": "#/components/schemas/Worker"
+          },
+          "JobRoleName": {
+            "$ref": "#/components/schemas/JobRoleName"
           }
         }
       },
@@ -12246,6 +12229,23 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "2c7cefef-412b-4900-a7af-3a6fcacaf0b7"
+            }
+          }
+        ]
+      },
+      "JobRoleName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Description of the role an individual is performing on a given Job. This determines their OES wage level in prevailing wage Jobs. ",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Electrician"
             }
           }
         ]
