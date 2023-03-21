@@ -1659,7 +1659,7 @@
         "x-ob-usage-tips": "EnergyConsumption + EnergyProduction = EnergyUsage"
       },
       "EnergyConsumption": {
-        "description": "Energy consumed from external sources",
+        "description": "Energy consumed from all sources",
         "properties": {
           "Scope": {
             "$ref": "#/components/schemas/Scope"
@@ -1669,7 +1669,7 @@
           }
         },
         "type": "object",
-        "x-ob-usage-tips": "EnergyConsumption + EnergyProduction = EnergyUsage"
+        "x-ob-usage-tips": ""
       },
       "CapacityDC": {
         "allOf": [
@@ -12091,7 +12091,7 @@
             "$ref": "#/components/schemas/EnergyACArray"
           }
         },
-        "x-ob-usage-tips": "EnergyConsumption + EnergyProduction = EnergyUsage"
+        "x-ob-usage-tips": ""
       },
       "SoilingRatio": {
         "allOf": [
@@ -12115,6 +12115,42 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/SoilingRatio"
+        }
+      },
+      "EnergyImport": {
+        "type": "object",
+        "description": "Energy imported from external sources",
+        "properties": {
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "EnergyACArray": {
+            "$ref": "#/components/schemas/EnergyACArray"
+          }
+        }
+      },
+      "EnergyExport": {
+        "type": "object",
+        "description": "Energy exported from internal production",
+        "properties": {
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "EnergyACArray": {
+            "$ref": "#/components/schemas/EnergyACArray"
+          }
+        }
+      },
+      "EnergySelfConsumption": {
+        "type": "object",
+        "description": "Energy consumed locally that is not metered",
+        "properties": {
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "EnergyACArray": {
+            "$ref": "#/components/schemas/EnergyACArray"
+          }
         }
       }
     }
