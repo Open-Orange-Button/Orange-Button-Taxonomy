@@ -51,7 +51,9 @@ Unit changes
  * Adds DateTimeItemType (:pull:`179`)
  * Adds StandardTypeItemType (:pull:`180`)
  * Add value IECTS63019 to StandardTypeItemType (:pull:`192`)
- 
+ * Rename ModuleTechnologyItemType to ModuleStyleItemType, move values referring to cell technology to CellTechnologyItemType (:pull:`197`)
+ * Clarify some enumerations for CellTechnologyItemType (:pull:`197`)
+  
 
 Bug fixes
 ~~~~~~~~~

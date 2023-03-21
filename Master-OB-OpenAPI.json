@@ -11239,6 +11239,9 @@
           },
           "AvailabilityReport": {
             "$ref": "#/components/schemas/AvailabilityReport"
+          },
+          "SoilingRatios": {
+            "$ref": "#/components/schemas/SoilingRatios"
           }
         },
         "x-ob-usage-tips": "Use EnergyAC for total energy production over the report period, and use Production to contain arrays of measured energy, power, etc. Use ExpectedEnergyModel for modeled energy over the report period calculated from observed weather, and use ForecastEnergyModels for modeled energy using other weather sources (e.g., TMY)."
@@ -12089,6 +12092,30 @@
           }
         },
         "x-ob-usage-tips": "EnergyConsumption + EnergyProduction = EnergyUsage"
+      },
+      "SoilingRatio": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The ratio of power from a module or array without cleaning to power at clean conditions.",
+            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "percent",
+              "Value": 0.95
+            }
+          }
+        ]
+      },
+      "SoilingRatios": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/SoilingRatio"
+        }
       }
     }
   },
@@ -13400,88 +13427,19 @@
         }
       }
     },
-    "ModuleTechnologyItemType": {
-      "description": "",
+    "ModuleStyleItemType": {
+      "description": "Module type in terms of its intended use, style or features. Use CellTechnologyTypeItemType to specify the cell type.",
       "enums": {
-        "Mono_C_Si": {
-          "label": "",
-          "description": ""
-        },
-        "Multi_C_Si": {
-          "label": "",
-          "description": ""
-        },
-        "ThinFilm": {
-          "label": "",
-          "description": ""
-        },
-        "Other": {
-          "label": "",
-          "description": ""
-        }
-      }
-    },
-    "ModuleItemType": {
-      "description": "",
-      "enums": {
-        "ASi": {
-          "label": "",
-          "description": ""
-        },
-        "ASi_Triple": {
-          "label": "",
-          "description": ""
-        },
-        "ASi_Tandem": {
-          "label": "",
-          "description": ""
-        },
-        "ASi_Single": {
-          "label": "",
-          "description": ""
-        },
         "BIPV": {
-          "label": "",
+          "label": "Building integrated PV",
           "description": ""
         },
-        "BiFacial": {
-          "label": "",
-          "description": ""
-        },
-        "CdTe": {
-          "label": "",
-          "description": ""
-        },
-        "CIGS": {
-          "label": "",
+        "Bifacial": {
+          "label": "Bifacial PV",
           "description": ""
         },
         "CPV": {
-          "label": "",
-          "description": ""
-        },
-        "CSi": {
-          "label": "",
-          "description": ""
-        },
-        "MonoSi": {
-          "label": "",
-          "description": ""
-        },
-        "MultiSi": {
-          "label": "",
-          "description": ""
-        },
-        "PSi": {
-          "label": "",
-          "description": ""
-        },
-        "TFSI": {
-          "label": "",
-          "description": ""
-        },
-        "HIT": {
-          "label": "",
+          "label": "Concentrating PV",
           "description": ""
         },
         "Ribbon": {
@@ -13491,6 +13449,10 @@
         "Other": {
           "label": "",
           "description": ""
+        },
+        "MonoPV": {
+          "label": "Monofacial PV",
+          "description": "Flat, non-concentrating, rectangular, monofacial PV"
         }
       }
     },
@@ -17058,11 +17020,11 @@
         },
         "PolySi": {
           "label": "polySi",
-          "description": "Polycrystalline silicon"
+          "description": "Poly- or multi-crystalline silicon"
         },
-        "HIT": {
-          "label": "HIT",
-          "description": "Heterojunction with Intrinsic thin-layer"
+        "HJT": {
+          "label": "HJT",
+          "description": "Heterojunction silicon"
         },
         "ASi": {
           "label": "aSi",
@@ -17080,13 +17042,13 @@
           "label": "CdTe",
           "description": "Cadmium telluride thin film"
         },
-        "Heterojunction": {
-          "label": "heterojunction",
-          "description": ""
-        },
         "Other": {
           "label": "Other",
           "description": ""
+        },
+        "ASi_tandem": {
+          "label": "aSi tandem",
+          "description": "Amorphous silicon tandem"
         }
       }
     },
