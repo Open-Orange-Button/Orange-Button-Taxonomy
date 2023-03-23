@@ -1645,19 +1645,6 @@
         },
         "x-ob-usage-tips": ""
       },
-      "EnergyUsage": {
-        "description": "Energy used from all sources, internal and external",
-        "properties": {
-          "EnergyACArray": {
-            "$ref": "#/components/schemas/EnergyACArray"
-          },
-          "Scope": {
-            "$ref": "#/components/schemas/Scope"
-          }
-        },
-        "type": "object",
-        "x-ob-usage-tips": "EnergyConsumption + EnergyProduction = EnergyUsage"
-      },
       "EnergyConsumption": {
         "description": "Energy consumed from all sources",
         "properties": {
@@ -3114,12 +3101,6 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/EnergyConsumption"
-        }
-      },
-      "EnergyUsages": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/EnergyUsage"
         }
       },
       "ProdDatasheet": {
@@ -12142,8 +12123,7 @@
         }
       },
       "EnergySelfConsumption": {
-        "type": "object",
-        "description": "Energy consumed locally that is not metered",
+        "description": "Energy consumed internally from internal production",
         "properties": {
           "Scope": {
             "$ref": "#/components/schemas/Scope"
@@ -12151,7 +12131,8 @@
           "EnergyACArray": {
             "$ref": "#/components/schemas/EnergyACArray"
           }
-        }
+        },
+        "type": "object"
       }
     }
   },
