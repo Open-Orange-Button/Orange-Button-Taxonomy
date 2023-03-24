@@ -7,8 +7,8 @@ Contents
 .. toctree::
    :maxdepth: 1
 
-	 userguide/index
-   devguide/index
+   overview
+   baseclasses
 
 
 
