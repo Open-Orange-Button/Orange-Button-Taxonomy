@@ -7,7 +7,7 @@ Contents
 .. toctree::
    :maxdepth: 1
 
-	 userguide/index
+  userguide/index
    devguide/index
 
 
