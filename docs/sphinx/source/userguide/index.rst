@@ -5,9 +5,7 @@ Contents
 ========
 
 .. toctree::
-
    OperatingReport
-
 
 
 Indices and tables

@@ -6,9 +6,8 @@ Contents
 
 .. toctree::
 
-	 userguide/index
-   devguide/index
-
+  userguide/index
+  devguide/index
 
 
 Indices and tables
