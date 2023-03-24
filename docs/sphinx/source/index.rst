@@ -1,15 +1,13 @@
-OpenAPI Orange Button Developer's Guide
-=======================================
+OpenAPI Orange Button
+=====================
 
 Contents
 ========
 
 .. toctree::
-   :maxdepth: 1
 
-  userguide/index
+   userguide/index
    devguide/index
-
 
 
 Indices and tables
