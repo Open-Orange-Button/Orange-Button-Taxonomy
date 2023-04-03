@@ -1656,7 +1656,7 @@
           }
         },
         "type": "object",
-        "x-ob-usage-tips": ""
+        "x-ob-usage-tips": "EnergyConsumption = EnergyProduction + EnergyImport - EnergyExport"
       },
       "CapacityDC": {
         "allOf": [
@@ -12072,7 +12072,7 @@
             "$ref": "#/components/schemas/EnergyACArray"
           }
         },
-        "x-ob-usage-tips": ""
+        "x-ob-usage-tips": "EnergyConsumption = EnergyProduction + EnergyImport - EnergyExport"
       },
       "SoilingRatio": {
         "allOf": [
@@ -12108,7 +12108,8 @@
           "EnergyACArray": {
             "$ref": "#/components/schemas/EnergyACArray"
           }
-        }
+        },
+        "x-ob-usage-tips": "EnergyConsumption = EnergyProduction + EnergyImport - EnergyExport"
       },
       "EnergyExport": {
         "type": "object",
@@ -12120,10 +12121,11 @@
           "EnergyACArray": {
             "$ref": "#/components/schemas/EnergyACArray"
           }
-        }
+        },
+        "x-ob-usage-tips": "EnergyConsumption = EnergyProduction + EnergyImport - EnergyExport"
       },
-      "EnergySelfConsumption": {
-        "description": "Energy consumed internally from internal production",
+      "EnergyParasiticConsumption": {
+        "description": "Parasitic energy consumption by a system's devices.",
         "properties": {
           "Scope": {
             "$ref": "#/components/schemas/Scope"
