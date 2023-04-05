@@ -686,6 +686,9 @@
           },
           "PVSystems": {
             "$ref": "#/components/schemas/PVSystems"
+          },
+          "SiteStatus": {
+            "$ref": "#/components/schemas/SiteStatus"
           }
         },
         "x-ob-usage-tips": ""
@@ -9393,6 +9396,9 @@
           },
           "BillOfMaterials": {
             "$ref": "#/components/schemas/BillOfMaterials"
+          },
+          "JobStatus": {
+            "$ref": "#/components/schemas/JobStatus"
           }
         }
       },
@@ -12106,6 +12112,40 @@
         "items": {
           "$ref": "#/components/schemas/SoilingRatio"
         }
+      },
+      "JobStatus": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A value that describes the working status of given Job. ",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "\"Working\""
+            }
+          }
+        ]
+      },
+      "SiteStatus": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An element that represents the status of a given Site.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "\"Active\""
+            }
+          }
+        ]
       }
     }
   },
