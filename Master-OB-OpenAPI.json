@@ -12004,7 +12004,11 @@
         "x-ob-usage-tips": "Time-based availability is calculated as (up time) / (up time + down time). Use Avail to record the value and time period. Use UpTimeTotal and DownTimeTotal to report the up time and down time components."
       },
       "Availabilities": {
-        "description": "An array of Availability objects."
+        "type": "array",
+        "description": "An array of Availability objects.",
+        "items": {
+          "$ref": "#/components/schemas/Availability"
+        }
       },
       "AvailOperational": {
         "allOf": [
