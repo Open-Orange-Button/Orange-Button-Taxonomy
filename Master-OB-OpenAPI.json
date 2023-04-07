@@ -12125,7 +12125,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "\"Working\""
+              "Value": "Working"
             }
           }
         ]
@@ -12142,7 +12142,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "\"Active\""
+              "Value": "Active"
             }
           }
         ]
