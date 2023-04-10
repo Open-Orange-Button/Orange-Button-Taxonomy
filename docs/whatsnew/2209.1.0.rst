@@ -44,6 +44,8 @@ Object changes
  * Adds SubstituteProduct and SubstituteProducts objects (:pull:`194`)
  * In EnergyConsumption, SiteID is replaced by Scope, and EnergyAC is replaced by EnergyACArray (:pull:`196`)
  * In EnergyUsage, Scope is added, and EnergyAC is replaced by EnergyACArray (:pull:`196`)
+ * Adds Scope and Description to PerformanceIndex (:pull:`219`)
+ * Adds Scope to PerformanceRatio (:pull:`219`)
 
 Unit changes
 ~~~~~~~~~~~~

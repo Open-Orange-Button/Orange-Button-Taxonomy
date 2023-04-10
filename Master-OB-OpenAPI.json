@@ -11299,6 +11299,9 @@
           },
           "EnergyModelID": {
             "$ref": "#/components/schemas/EnergyModelID"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
           }
         },
         "x-ob-usage-tips": "Use PerformanceRatio.EnergyAC for the numerator and PerformanceRatio.EnergyACModeled for the denominator."
@@ -11736,6 +11739,12 @@
           },
           "Comments": {
             "$ref": "#/components/schemas/Comments"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
           }
         }
       },
