@@ -17,6 +17,8 @@ Element changes
  * Adds ProdID to Product Superclass (:pull:`174`)
  * Changes the item type of CertificationStandard to StandardTypeItemType (:pull:`180`)
  * Adds UpTimeTotal and DownTimeTotal (:pull:`187`)
+ * Adds EnergyProduction, EnergyImport, EnergyExport and EnergyParasiticConsumption (:pull:`209`)
+ * Deletes element EnergyUsage and change definition of EnergyConsumption (:pull:`209`)
 
 Object changes
 ~~~~~~~~~~~~~~

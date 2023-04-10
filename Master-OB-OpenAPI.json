@@ -1645,22 +1645,8 @@
         },
         "x-ob-usage-tips": ""
       },
-      "EnergyUsage": {
-        "type": "object",
-        "description": "A value of energy consumed in one time period",
-        "properties": {
-          "EnergyACArray": {
-            "$ref": "#/components/schemas/EnergyACArray"
-          },
-          "Scope": {
-            "$ref": "#/components/schemas/Scope"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
       "EnergyConsumption": {
-        "type": "object",
-        "description": "The energy consumption history of a site",
+        "description": "Energy consumed from all sources",
         "properties": {
           "Scope": {
             "$ref": "#/components/schemas/Scope"
@@ -1669,7 +1655,8 @@
             "$ref": "#/components/schemas/EnergyACArray"
           }
         },
-        "x-ob-usage-tips": ""
+        "type": "object",
+        "x-ob-usage-tips": "EnergyConsumption = EnergyProduction + EnergyImport - EnergyExport"
       },
       "CapacityDC": {
         "allOf": [
@@ -3114,12 +3101,6 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/EnergyConsumption"
-        }
-      },
-      "EnergyUsages": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/EnergyUsage"
         }
       },
       "ProdDatasheet": {
@@ -12092,6 +12073,19 @@
           "$ref": "#/components/schemas/SubstituteProduct"
         }
       },
+      "EnergyProduction": {
+        "type": "object",
+        "description": "Energy produced from internal sources",
+        "properties": {
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "EnergyACArray": {
+            "$ref": "#/components/schemas/EnergyACArray"
+          }
+        },
+        "x-ob-usage-tips": "EnergyConsumption = EnergyProduction + EnergyImport - EnergyExport"
+      },
       "SoilingRatio": {
         "allOf": [
           {
@@ -12115,6 +12109,44 @@
         "items": {
           "$ref": "#/components/schemas/SoilingRatio"
         }
+      },
+      "EnergyImport": {
+        "type": "object",
+        "description": "Energy imported from external sources",
+        "properties": {
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "EnergyACArray": {
+            "$ref": "#/components/schemas/EnergyACArray"
+          }
+        },
+        "x-ob-usage-tips": "EnergyConsumption = EnergyProduction + EnergyImport - EnergyExport"
+      },
+      "EnergyExport": {
+        "type": "object",
+        "description": "Energy exported from internal production",
+        "properties": {
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "EnergyACArray": {
+            "$ref": "#/components/schemas/EnergyACArray"
+          }
+        },
+        "x-ob-usage-tips": "EnergyConsumption = EnergyProduction + EnergyImport - EnergyExport"
+      },
+      "EnergyParasiticConsumption": {
+        "description": "Parasitic energy consumption by a system's devices.",
+        "properties": {
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "EnergyACArray": {
+            "$ref": "#/components/schemas/EnergyACArray"
+          }
+        },
+        "type": "object"
       }
     }
   },
