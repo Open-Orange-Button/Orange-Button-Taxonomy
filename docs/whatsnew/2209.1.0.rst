@@ -18,7 +18,8 @@ Element changes
  * Changes the item type of CertificationStandard to StandardTypeItemType (:pull:`180`)
  * Adds UpTimeTotal and DownTimeTotal (:pull:`187`)
  * Adds JobRoleName, TimeEntryDate, TimeEntryID, WorkerID (:pull:`205`)
-
+ * Adds EnergyProduction, EnergyImport, EnergyExport and EnergyParasiticConsumption (:pull:`209`)
+ * Deletes element EnergyUsage and change definition of EnergyConsumption (:pull:`209`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -46,8 +47,14 @@ Object changes
  * Adds SubstituteProduct and SubstituteProducts objects (:pull:`194`)
  * In EnergyConsumption, SiteID is replaced by Scope, and EnergyAC is replaced by EnergyACArray (:pull:`196`)
  * In EnergyUsage, Scope is added, and EnergyAC is replaced by EnergyACArray (:pull:`196`)
+<<<<<<< HEAD
  * Creates TimeEntries, TimeEntry, Worker, EmploymentType and EmploymentTypeItemType(:pull:`205`)
  * Adds Scope to TimeEntry(:pull:`205`)
+=======
+ * Adds Scope and Description to PerformanceIndex (:pull:`219`)
+ * Adds Scope to PerformanceRatio (:pull:`219`)
+
+>>>>>>> 1348053fd4579c073551d38b47e67846d4777b1d
 Unit changes
 ~~~~~~~~~~~~
  * Adds JobTypeItemType (:pull:`107`)
