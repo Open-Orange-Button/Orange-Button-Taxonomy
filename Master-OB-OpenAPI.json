@@ -5342,7 +5342,7 @@
           },
           {
             "type": "object",
-            "description": "True if power meter is revenue grade quality.",
+            "description": "True if Product is revenue grade quality.",
             "x-ob-item-type": "BooleanItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {},
@@ -6356,6 +6356,9 @@
               },
               "CECListingDate": {
                 "$ref": "#/components/schemas/CECListingDate"
+              },
+              "RevenueGrade": {
+                "$ref": "#/components/schemas/RevenueGrade"
               }
             }
           }

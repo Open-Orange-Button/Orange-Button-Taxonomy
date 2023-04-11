@@ -1,5 +1,9 @@
-OpenAPI Orange Button Developer's Guide
-=======================================
+OpenAPI Orange Button
+=====================
+
+The Open Orange Button taxonomy provides a common set of terms and information models for solar power-related data exchange.
+This implementation in json is compliant with OpenAPI 3.0.
+
 
 Contents
 ========
@@ -7,15 +11,15 @@ Contents
 .. toctree::
    :maxdepth: 1
 
-   overview
-   baseclasses
-
+   userguide/index
+   devguide/index
+	 whatsnew
+	 contributing
 
 
 Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
 
