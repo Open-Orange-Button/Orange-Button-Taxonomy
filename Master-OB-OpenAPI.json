@@ -12128,6 +12128,9 @@
           },
           "JobRoleName": {
             "$ref": "#/components/schemas/JobRoleName"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
           }
         }
       },
@@ -12213,6 +12216,9 @@
           },
           "WorkerID": {
             "$ref": "#/components/schemas/WorkerID"
+          },
+          "EmploymentType": {
+            "$ref": "#/components/schemas/EmploymentType"
           }
         }
       },
@@ -12246,6 +12252,23 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Electrician"
+            }
+          }
+        ]
+      },
+      "EmploymentType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An enumerated list of applicable employment types.",
+            "x-ob-item-type": "EmployeeTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "IndependentContractor"
             }
           }
         ]
@@ -17606,6 +17629,10 @@
         "Site": {
           "label": "Site",
           "description": ""
+        },
+        "Task": {
+          "label": "Task",
+          "description": ""
         }
       }
     },
@@ -17827,6 +17854,39 @@
     },
     "DateTimeItemType": {
       "description": "ISO-8601 formatted date/time string."
+    },
+    "EmployeeTypeItemType": {
+      "description": "",
+      "enums": {
+        "FullTime": {
+          "label": "Full Time",
+          "description": ""
+        },
+        "PartTime": {
+          "label": "Part Time",
+          "description": ""
+        },
+        "Contract": {
+          "label": "Contract",
+          "description": ""
+        },
+        "IndependentContractor": {
+          "label": "Independent Contractor",
+          "description": ""
+        },
+        "Temp": {
+          "label": "Temporary",
+          "description": ""
+        },
+        "OnCall": {
+          "label": "On Call",
+          "description": ""
+        },
+        "Volunteer": {
+          "label": "Volunteer",
+          "description": ""
+        }
+      }
     }
   },
   "x-ob-item-type-groups": {
