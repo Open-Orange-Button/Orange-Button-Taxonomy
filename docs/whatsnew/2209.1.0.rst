@@ -19,6 +19,7 @@ Element changes
  * Adds UpTimeTotal and DownTimeTotal (:pull:`187`)
  * Adds JobRoleName, TimeEntryDate, TimeEntryID, WorkerID (:pull:`205`)
 
+
 Object changes
 ~~~~~~~~~~~~~~
  * Signatory and Preparer now inherit from Entity rather than use Entity directly (:pull:`106`)
@@ -45,8 +46,8 @@ Object changes
  * Adds SubstituteProduct and SubstituteProducts objects (:pull:`194`)
  * In EnergyConsumption, SiteID is replaced by Scope, and EnergyAC is replaced by EnergyACArray (:pull:`196`)
  * In EnergyUsage, Scope is added, and EnergyAC is replaced by EnergyACArray (:pull:`196`)
- * Creates TimeEntries, TimeEntry, Worker (:pull:`205`)
-
+ * Creates TimeEntries, TimeEntry, Worker, EmploymentType and EmploymentTypeItemType(:pull:`205`)
+ * Adds Scope to TimeEntry(:pull:`205`)
 Unit changes
 ~~~~~~~~~~~~
  * Adds JobTypeItemType (:pull:`107`)
