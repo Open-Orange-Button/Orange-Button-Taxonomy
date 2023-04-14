@@ -19,6 +19,7 @@ Element changes
  * Adds UpTimeTotal and DownTimeTotal (:pull:`187`)
  * Adds EnergyProduction, EnergyImport, EnergyExport and EnergyParasiticConsumption (:pull:`209`)
  * Deletes element EnergyUsage and change definition of EnergyConsumption (:pull:`209`)
+ * Creates DataType, ElementID, ElementName, ElementValue, ElementItemType (:pull:`224`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -48,6 +49,7 @@ Object changes
  * In EnergyUsage, Scope is added, and EnergyAC is replaced by EnergyACArray (:pull:`196`)
  * Adds Scope and Description to PerformanceIndex (:pull:`219`)
  * Adds Scope to PerformanceRatio (:pull:`219`)
+ * Creates CustomElement and CustomElements array (:pull:`224`)
 
 Unit changes
 ~~~~~~~~~~~~
