@@ -12147,6 +12147,81 @@
           }
         },
         "type": "object"
+      },
+      "CustomField": {
+        "type": "object",
+        "description": "Object the represents custom data elements that are not represented explicitly in the taxonomy. ",
+        "properties": {
+          "FieldID": {
+            "$ref": "#/components/schemas/FieldID"
+          },
+          "FieldName": {
+            "$ref": "#/components/schemas/FieldName"
+          },
+          "FieldDataType": {
+            "$ref": "#/components/schemas/FieldDataType"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          }
+        }
+      },
+      "FieldID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Unique identifier of the CustomElement as represented in the host environment.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "custentity_pes_roofing_amount"
+            }
+          }
+        ]
+      },
+      "FieldName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of the CustomElement within the host environment.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Roofing Amount"
+            }
+          }
+        ]
+      },
+      "FieldDataType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Expected data type of the input for the given CustomElement",
+            "x-ob-item-type": "DataTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "String"
+            }
+          }
+        ]
+      },
+      "CustomFields": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/CustomField"
+        }
       }
     }
   },
@@ -17725,6 +17800,27 @@
     },
     "DateTimeItemType": {
       "description": "ISO-8601 formatted date/time string."
+    },
+    "DataTypeItemType": {
+      "description": "",
+      "enums": {
+        "Bool": {
+          "label": "Boolean",
+          "description": ""
+        },
+        "String": {
+          "label": "String",
+          "description": ""
+        },
+        "Number": {
+          "label": "Number",
+          "description": ""
+        },
+        "Integer": {
+          "label": "Integer",
+          "description": ""
+        }
+      }
     }
   },
   "x-ob-item-type-groups": {
