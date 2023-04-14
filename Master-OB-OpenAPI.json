@@ -686,6 +686,9 @@
           },
           "PVSystems": {
             "$ref": "#/components/schemas/PVSystems"
+          },
+          "CustomElements": {
+            "$ref": "#/components/schemas/CustomElements"
           }
         },
         "x-ob-usage-tips": ""
@@ -12148,59 +12151,7 @@
         },
         "type": "object"
       },
-      "CustomField": {
-        "type": "object",
-        "description": "Object the represents custom data elements that are not represented explicitly in the taxonomy. ",
-        "properties": {
-          "FieldID": {
-            "$ref": "#/components/schemas/FieldID"
-          },
-          "FieldName": {
-            "$ref": "#/components/schemas/FieldName"
-          },
-          "FieldDataType": {
-            "$ref": "#/components/schemas/FieldDataType"
-          },
-          "Scope": {
-            "$ref": "#/components/schemas/Scope"
-          }
-        }
-      },
-      "FieldID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Unique identifier of the CustomElement as represented in the host environment.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "custentity_pes_roofing_amount"
-            }
-          }
-        ]
-      },
-      "FieldName": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Name of the CustomElement within the host environment.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "Roofing Amount"
-            }
-          }
-        ]
-      },
-      "FieldDataType": {
+      "DataType": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementString"
@@ -12217,11 +12168,104 @@
           }
         ]
       },
-      "CustomFields": {
+      "CustomElement": {
+        "type": "object",
+        "description": "Object the represents custom data elements that are not represented explicitly in the taxonomy. ",
+        "properties": {
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "DataType": {
+            "$ref": "#/components/schemas/DataType"
+          },
+          "ElementID": {
+            "$ref": "#/components/schemas/ElementID"
+          },
+          "ElementName": {
+            "$ref": "#/components/schemas/ElementName"
+          },
+          "ElementValue": {
+            "$ref": "#/components/schemas/ElementValue"
+          },
+          "ElementItemType": {
+            "$ref": "#/components/schemas/ElementItemType"
+          }
+        }
+      },
+      "ElementID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Unique identifier of the CustomElement as represented in the host environment.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "custentity_pes_roofing_amount"
+            }
+          }
+        ]
+      },
+      "ElementName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of the CustomElement within the host environment.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Roofing Amount"
+            }
+          }
+        ]
+      },
+      "CustomElements": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/CustomField"
+          "$ref": "#/components/schemas/CustomElement"
         }
+      },
+      "ElementValue": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The Value of the CustomElement in this instance.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "1025",
+              "Unit": "USD"
+            }
+          }
+        ]
+      },
+      "ElementItemType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The Orange Button ItemType that the CustomElement represents in this instance.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "CurrencyTypeItemType"
+            }
+          }
+        ]
       }
     }
   },
@@ -17818,6 +17862,10 @@
         },
         "Integer": {
           "label": "Integer",
+          "description": ""
+        },
+        "Array": {
+          "label": "Array",
           "description": ""
         }
       }
