@@ -12244,8 +12244,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "1025",
-              "Unit": "USD"
+              "Value": "1025"
             }
           }
         ]
