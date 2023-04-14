@@ -17728,16 +17728,8 @@
           "label": "Completed",
           "description": ""
         },
-        "SalesPostponed": {
-          "label": "Sales-Postponed\t",
-          "description": ""
-        },
-        "SalesClosed": {
-          "label": "Sales-Closed",
-          "description": ""
-        },
-        "Lost": {
-          "label": "Lost",
+        "SalesLost": {
+          "label": "Sales-Lost",
           "description": ""
         }
       }
