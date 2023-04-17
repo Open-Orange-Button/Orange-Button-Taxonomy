@@ -47,14 +47,11 @@ Object changes
  * Adds SubstituteProduct and SubstituteProducts objects (:pull:`194`)
  * In EnergyConsumption, SiteID is replaced by Scope, and EnergyAC is replaced by EnergyACArray (:pull:`196`)
  * In EnergyUsage, Scope is added, and EnergyAC is replaced by EnergyACArray (:pull:`196`)
-<<<<<<< HEAD
  * Creates TimeEntries, TimeEntry, Worker, EmploymentType and EmploymentTypeItemType(:pull:`205`)
  * Adds Scope to TimeEntry(:pull:`205`)
-=======
  * Adds Scope and Description to PerformanceIndex (:pull:`219`)
  * Adds Scope to PerformanceRatio (:pull:`219`)
 
->>>>>>> 1348053fd4579c073551d38b47e67846d4777b1d
 Unit changes
 ~~~~~~~~~~~~
  * Adds JobTypeItemType (:pull:`107`)
