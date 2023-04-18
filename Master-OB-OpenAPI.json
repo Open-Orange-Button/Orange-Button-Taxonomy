@@ -9377,6 +9377,9 @@
           },
           "JobStatus": {
             "$ref": "#/components/schemas/JobStatus"
+          },
+          "TimeEntries": {
+            "$ref": "#/components/schemas/TimeEntries"
           }
         }
       },
@@ -12126,6 +12129,172 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Working"
+            }
+          }
+        ]
+      },
+      "TimeEntry": {
+        "type": "object",
+        "description": "A record of time logged to a given Job.",
+        "properties": {
+          "TimeEntryID": {
+            "$ref": "#/components/schemas/TimeEntryID"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Duration": {
+            "$ref": "#/components/schemas/Duration"
+          },
+          "TimeEntryDate": {
+            "$ref": "#/components/schemas/TimeEntryDate"
+          },
+          "Worker": {
+            "$ref": "#/components/schemas/Worker"
+          },
+          "JobRoleName": {
+            "$ref": "#/components/schemas/JobRoleName"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          }
+        }
+      },
+      "TimeEntryID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Unique identifier of this TimeEntry",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "cac773e0-26cd-4785-9421-d100c77f5ff4"
+            }
+          }
+        ]
+      },
+      "TimeEntryDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date of this TimeEntry",
+            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2023-03-12"
+            }
+          }
+        ]
+      },
+      "TimeEntries": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/TimeEntry"
+        }
+      },
+      "Worker": {
+        "type": "object",
+        "description": "Individual that provides a service or performs a task.",
+        "properties": {
+          "FirstName": {
+            "$ref": "#/components/schemas/FirstName"
+          },
+          "LastName": {
+            "$ref": "#/components/schemas/LastName"
+          },
+          "HomePhone": {
+            "$ref": "#/components/schemas/HomePhone"
+          },
+          "MobilePhone": {
+            "$ref": "#/components/schemas/MobilePhone"
+          },
+          "WorkPhone": {
+            "$ref": "#/components/schemas/WorkPhone"
+          },
+          "PreferredContactMethod": {
+            "$ref": "#/components/schemas/PreferredContactMethod"
+          },
+          "Title": {
+            "$ref": "#/components/schemas/Title"
+          },
+          "Address": {
+            "$ref": "#/components/schemas/Address"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Email": {
+            "$ref": "#/components/schemas/Email"
+          },
+          "ContactTimezone": {
+            "$ref": "#/components/schemas/ContactTimezone"
+          },
+          "WorkerID": {
+            "$ref": "#/components/schemas/WorkerID"
+          },
+          "EmploymentType": {
+            "$ref": "#/components/schemas/EmploymentType"
+          }
+        }
+      },
+      "WorkerID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A unique identifier for the Laborer",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2c7cefef-412b-4900-a7af-3a6fcacaf0b7"
+            }
+          }
+        ]
+      },
+      "JobRoleName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Description of the role an individual is performing on a given Job. This determines their OES wage level in prevailing wage Jobs. ",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Electrician"
+            }
+          }
+        ]
+      },
+      "EmploymentType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An enumerated list of applicable employment types.",
+            "x-ob-item-type": "EmployeeTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "IndependentContractor"
             }
           }
         ]
@@ -17524,6 +17693,10 @@
         "Site": {
           "label": "Site",
           "description": ""
+        },
+        "Task": {
+          "label": "Task",
+          "description": ""
         }
       }
     },
@@ -17771,6 +17944,39 @@
         },
         "SalesLost": {
           "label": "Sales-Lost",
+          "description": ""
+        }
+      }
+    },
+    "EmployeeTypeItemType": {
+      "description": "",
+      "enums": {
+        "FullTime": {
+          "label": "Full Time",
+          "description": ""
+        },
+        "PartTime": {
+          "label": "Part Time",
+          "description": ""
+        },
+        "Contract": {
+          "label": "Contract",
+          "description": ""
+        },
+        "IndependentContractor": {
+          "label": "Independent Contractor",
+          "description": ""
+        },
+        "Temp": {
+          "label": "Temporary",
+          "description": ""
+        },
+        "OnCall": {
+          "label": "On Call",
+          "description": ""
+        },
+        "Volunteer": {
+          "label": "Volunteer",
           "description": ""
         }
       }
