@@ -11944,8 +11944,7 @@
         }
       },
       "AvailabilityReport": {
-        "type": "object",
-        "description": "An object describing an availability metric",
+        "description": "A summary report of availability metrics.",
         "properties": {
           "AvailabilityStandard": {
             "$ref": "#/components/schemas/AvailabilityStandard"
@@ -11953,33 +11952,14 @@
           "Scope": {
             "$ref": "#/components/schemas/Scope"
           },
-          "Availabilities": {
-            "$ref": "#/components/schemas/Availabilities"
-          },
           "Comments": {
             "$ref": "#/components/schemas/Comments"
           },
           "FileFolderURL": {
             "$ref": "#/components/schemas/FileFolderURL"
-          }
-        },
-        "x-ob-usage-tips": "Use Availabilities to report a sequence (array) of availabilities. Use Scope to report the scope of the availability calculation (device, system, portfolio of systems. Use UpTime and DownTime to record details of periods of up or down time."
-      },
-      "Availability": {
-        "type": "object",
-        "description": "A group of elements reporting availability calculations",
-        "properties": {
-          "UpTimeTotal": {
-            "$ref": "#/components/schemas/UpTimeTotal"
           },
-          "DownTimeTotal": {
-            "$ref": "#/components/schemas/DownTimeTotal"
-          },
-          "EnergyAC": {
-            "$ref": "#/components/schemas/EnergyAC"
-          },
-          "EnergyACModeled": {
-            "$ref": "#/components/schemas/EnergyACModeled"
+          "AvailCapacity": {
+            "$ref": "#/components/schemas/AvailCapacity"
           },
           "AvailOperational": {
             "$ref": "#/components/schemas/AvailOperational"
@@ -11990,17 +11970,26 @@
           "Description": {
             "$ref": "#/components/schemas/Description"
           },
-          "AvailCapacity": {
-            "$ref": "#/components/schemas/AvailCapacity"
+          "EnergyAC": {
+            "$ref": "#/components/schemas/EnergyAC"
+          },
+          "EnergyACModeled": {
+            "$ref": "#/components/schemas/EnergyACModeled"
+          },
+          "UpTimeTotal": {
+            "$ref": "#/components/schemas/UpTimeTotal"
+          },
+          "AvailContractual": {
+            "$ref": "#/components/schemas/AvailContractual"
+          },
+          "AvailContractualMin": {
+            "$ref": "#/components/schemas/AvailContractualMin"
+          },
+          "DownTimeTotal": {
+            "$ref": "#/components/schemas/DownTimeTotal"
           }
         },
-        "x-ob-usage-tips": "Time-based availability is calculated as (up time) / (up time + down time). Use Avail to record the value and time period. Use UpTimeTotal and DownTimeTotal to report the up time and down time components."
-      },
-      "Availabilities": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/Availability"
-        }
+        "type": "object"
       },
       "AvailOperational": {
         "allOf": [
@@ -12316,6 +12305,36 @@
           }
         },
         "type": "object"
+      },
+      "AvailContractual": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Availability determined as defined in a contract, which can be assigned to FileFolderURL. Contractual Availability is calculated as (useful time - down time + excluded time) / (useful time) where \"useful time\" is the time with irradiance above a minimum threshold.",
+            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "AvailContractualMin": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "A minimum guaranteed contractual availability.",
+            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
       }
     }
   },
