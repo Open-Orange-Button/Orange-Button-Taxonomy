@@ -9375,6 +9375,9 @@
           "BillOfMaterials": {
             "$ref": "#/components/schemas/BillOfMaterials"
           },
+          "JobStatus": {
+            "$ref": "#/components/schemas/JobStatus"
+          },
           "TimeEntries": {
             "$ref": "#/components/schemas/TimeEntries"
           }
@@ -12112,6 +12115,23 @@
         "items": {
           "$ref": "#/components/schemas/SoilingRatio"
         }
+      },
+      "JobStatus": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A value that describes the working status of given Job. ",
+            "x-ob-item-type": "JobStatusItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Working"
+            }
+          }
+        ]
       },
       "TimeEntry": {
         "type": "object",
@@ -17898,6 +17918,35 @@
     },
     "DateTimeItemType": {
       "description": "ISO-8601 formatted date/time string."
+    },
+    "JobStatusItemType": {
+      "description": "Represents the working status of a Job.",
+      "enums": {
+        "SalesQualification": {
+          "label": "Sales-Qualification",
+          "description": ""
+        },
+        "Working": {
+          "label": "Working",
+          "description": ""
+        },
+        "OnHold": {
+          "label": "On-Hold",
+          "description": ""
+        },
+        "Cancelled": {
+          "label": "Cancelled",
+          "description": ""
+        },
+        "Completed": {
+          "label": "Completed",
+          "description": ""
+        },
+        "SalesLost": {
+          "label": "Sales-Lost",
+          "description": ""
+        }
+      }
     },
     "EmployeeTypeItemType": {
       "description": "",

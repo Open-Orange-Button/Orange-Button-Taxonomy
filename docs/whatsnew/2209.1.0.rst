@@ -17,6 +17,7 @@ Element changes
  * Adds ProdID to Product Superclass (:pull:`174`)
  * Changes the item type of CertificationStandard to StandardTypeItemType (:pull:`180`)
  * Adds UpTimeTotal and DownTimeTotal (:pull:`187`)
+ * Adds JobStatus (:pull:`221`)
  * Adds JobRoleName, TimeEntryDate, TimeEntryID, WorkerID (:pull:`205`)
  * Adds EnergyProduction, EnergyImport, EnergyExport and EnergyParasiticConsumption (:pull:`209`)
  * Deletes element EnergyUsage and change definition of EnergyConsumption (:pull:`209`)
@@ -47,6 +48,7 @@ Object changes
  * Adds SubstituteProduct and SubstituteProducts objects (:pull:`194`)
  * In EnergyConsumption, SiteID is replaced by Scope, and EnergyAC is replaced by EnergyACArray (:pull:`196`)
  * In EnergyUsage, Scope is added, and EnergyAC is replaced by EnergyACArray (:pull:`196`)
+ * Adds JobStatus to Job object (:pull:`221`)
  * Creates TimeEntries, TimeEntry, Worker, EmploymentType and EmploymentTypeItemType(:pull:`205`)
  * Adds Scope to TimeEntry(:pull:`205`)
  * Adds Scope and Description to PerformanceIndex (:pull:`219`)
@@ -60,6 +62,7 @@ Unit changes
  * Add value IECTS63019 to StandardTypeItemType (:pull:`192`)
  * Rename ModuleTechnologyItemType to ModuleStyleItemType, move values referring to cell technology to CellTechnologyItemType (:pull:`197`)
  * Clarify some enumerations for CellTechnologyItemType (:pull:`197`)
+ * Creates JobStatusItemType and creates Enum List of values (:pull:`221`)
   
 
 Bug fixes
