@@ -10181,6 +10181,9 @@
           },
           "AlternativeIdentifiers": {
             "$ref": "#/components/schemas/AlternativeIdentifiers"
+          },
+          "CustomElements": {
+            "$ref": "#/components/schemas/CustomElements"
           }
         }
       },
