@@ -3086,7 +3086,9 @@
             "description": "The type of aging bucket",
             "x-ob-item-type": "AgingBucketTypeItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "AgingBalance61To90Days"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -5171,7 +5173,9 @@
             "description": "Weather source used for the model, for example: ground measurements, NSRDB TMY3, SolarAnywhere v3.0, SolarGIS vX.Y",
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "NSRDB TMY3"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -10825,7 +10829,9 @@
             "x-ob-item-type": "DateItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "2023-04-24T19:10:54+0000"
+            }
           }
         ]
       },
@@ -10841,7 +10847,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "{\"Value\": \"Hay-Davies\"}"
+              "Value": "Hay-Davies"
             }
           }
         ]
@@ -11330,7 +11336,10 @@
             "x-ob-item-type": "MonetaryItemType",
             "x-ob-item-type-group": "OBMonetary",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "USD",
+              "Value": 2500
+            }
           }
         ]
       },
@@ -11343,9 +11352,12 @@
             "type": "object",
             "description": "Revenue forecasted or projected using financial and other models.",
             "x-ob-item-type": "MonetaryItemType",
-            "x-ob-item-type-group": "",
+            "x-ob-item-type-group": "OBMonetary",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "USD",
+              "Value": 3000
+            }
           }
         ]
       },
@@ -11360,7 +11372,10 @@
             "x-ob-item-type": "MonetaryItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "USD",
+              "Value": 1000
+            }
           }
         ]
       },
@@ -11375,7 +11390,10 @@
             "x-ob-item-type": "EnergyItemType",
             "x-ob-item-type-group": "OBElectricalEnergy",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "kWh",
+              "Value": 20.45
+            }
           }
         ]
       },
@@ -11390,7 +11408,10 @@
             "x-ob-item-type": "InsolationItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "Wh_per_sqm",
+              "Value": 800
+            }
           }
         ]
       },
@@ -11541,7 +11562,9 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "systemname_date_time"
+            }
           }
         ]
       },
@@ -11556,7 +11579,9 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "system_1_may_2020"
+            }
           }
         ]
       },
@@ -11746,7 +11771,9 @@
             "x-ob-item-type": "DecimalItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": 0.85
+            }
           }
         ]
       },
@@ -11761,7 +11788,9 @@
             "x-ob-item-type": "DecimalItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": 0.85
+            }
           }
         ]
       },
@@ -11776,7 +11805,10 @@
             "x-ob-item-type": "PowerItemType",
             "x-ob-item-type-group": "OBElectricalPower",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "W",
+              "Value": 50
+            }
           }
         ]
       },
@@ -11791,7 +11823,10 @@
             "x-ob-item-type": "PowerItemType",
             "x-ob-item-type-group": "OBElectricalPower",
             "x-ob-usage-tips": "Use PowerCorrFactor to record the correction factor.",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "W",
+              "Value": 48.5
+            }
           }
         ]
       },
@@ -11806,7 +11841,9 @@
             "x-ob-item-type": "DecimalItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": 0.97
+            }
           }
         ]
       },
