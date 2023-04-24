@@ -11868,7 +11868,9 @@
             "x-ob-item-type": "StandardTypeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "SPEOM_2021"
+            }
           }
         ]
       },
@@ -11915,7 +11917,10 @@
             "x-ob-item-type": "DurationItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "H",
+              "Value": 18
+            }
           }
         ]
       },
@@ -11930,7 +11935,10 @@
             "x-ob-item-type": "DurationItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "MM",
+              "Value": 30
+            }
           }
         ]
       },
@@ -12005,7 +12013,10 @@
             "x-ob-item-type": "PercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "percent",
+              "Value": 90
+            }
           }
         ]
       },
@@ -12020,7 +12031,10 @@
             "x-ob-item-type": "PercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "percent",
+              "Value": 97
+            }
           }
         ]
       },
@@ -12035,6 +12049,7 @@
             "x-ob-item-type": "PercentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "percent",
               "Value": 95
             },
             "x-ob-item-type-group": ""
@@ -12337,7 +12352,10 @@
             "x-ob-item-type": "PercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "percent",
+              "Value": 95
+            }
           }
         ]
       },
@@ -12352,7 +12370,10 @@
             "x-ob-item-type": "PercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "percent",
+              "Value": 98
+            }
           }
         ]
       }
@@ -17932,6 +17953,10 @@
         "IECTS63019_2019": {
           "label": "IEC TS 63109 Ed. 1",
           "description": "Photovoltaic power systems (PVPS) – Information model for availability"
+        },
+        "SPEOM_2021": {
+          "label": "SPE O&M Guide v5.0:2021",
+          "description": "SolarPower Europe Operations and Maintenance Best Practices Guidelines, ver 5.0, 2021\""
         }
       }
     },
