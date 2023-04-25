@@ -21,6 +21,7 @@ Element changes
  * Adds JobRoleName, TimeEntryDate, TimeEntryID, WorkerID (:pull:`205`)
  * Adds EnergyProduction, EnergyImport, EnergyExport and EnergyParasiticConsumption (:pull:`209`)
  * Deletes element EnergyUsage and change definition of EnergyConsumption (:pull:`209`)
+ * Adds VoltageDC and VoltageDCArray (:pull:`229`)
 
 Object changes
 ~~~~~~~~~~~~~~
