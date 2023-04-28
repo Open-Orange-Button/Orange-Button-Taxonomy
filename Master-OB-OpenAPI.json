@@ -12052,7 +12052,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "percent",
-              "Value": 90
+              "Value": 0.9
             }
           }
         ]
@@ -12070,7 +12070,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "percent",
-              "Value": 97
+              "Value": 0.97
             }
           }
         ]
@@ -12087,7 +12087,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "percent",
-              "Value": 95
+              "Value": 0.95
             },
             "x-ob-item-type-group": ""
           }
@@ -12391,7 +12391,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "percent",
-              "Value": 95
+              "Value": 0.95
             }
           }
         ]
@@ -12409,7 +12409,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "percent",
-              "Value": 98
+              "Value": 0.98
             }
           }
         ]
@@ -17055,7 +17055,7 @@
       }
     },
     "PercentItemType": {
-      "description": "Percent unit",
+      "description": "Percent unit, described as a value between 0 and 1.",
       "units": {
         "percent": {
           "label": "Percent",
