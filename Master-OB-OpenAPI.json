@@ -12372,6 +12372,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "StartTime": "2023-04-28T21:50:16.364Z",
               "Unit": "V",
               "Value": 40
             }
