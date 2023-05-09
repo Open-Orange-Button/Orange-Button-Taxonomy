@@ -17055,7 +17055,7 @@
       }
     },
     "PercentItemType": {
-      "description": "Percent unit, described as a value between 0 and 1.",
+      "description": "Percent unit, described as a value between 0 and 1 per the GAAP standards. For example 95% would be displayed as 0.95. Values can exceed . For example 120%  would be displayed as 1.20, as in cases where energy production exceeded expected or modeled values. ",
       "units": {
         "percent": {
           "label": "Percent",
