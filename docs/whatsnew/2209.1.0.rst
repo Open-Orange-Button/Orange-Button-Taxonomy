@@ -63,6 +63,7 @@ Unit changes
  * Rename ModuleTechnologyItemType to ModuleStyleItemType, move values referring to cell technology to CellTechnologyItemType (:pull:`197`)
  * Clarify some enumerations for CellTechnologyItemType (:pull:`197`)
  * Creates JobStatusItemType and creates Enum List of values (:pull:`221`)
+ * Creates DecimalPercentItemType and creates DecimalPercent unit. (:pull:`228`)
   
 
 Bug fixes
