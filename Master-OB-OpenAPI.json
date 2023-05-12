@@ -12051,7 +12051,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Unit": "DecimalPercent",
+              "Unit": "decimal_percent",
               "Value": 0.9
             }
           }
@@ -12069,7 +12069,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Unit": "DecimalPercent",
+              "Unit": "decimal_percent",
               "Value": 0.97
             }
           }
@@ -12086,7 +12086,7 @@
             "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Unit": "DecimalPercent",
+              "Unit": "decimal_percent",
               "Value": 0.95
             },
             "x-ob-item-type-group": ""
@@ -12390,7 +12390,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Unit": "DecimalPercent",
+              "Unit": "decimal_percent",
               "Value": 0.95
             }
           }
@@ -12408,7 +12408,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Unit": "DecimalPercent",
+              "Unit": "decimal_percent",
               "Value": 0.98
             }
           }
@@ -17055,7 +17055,7 @@
       }
     },
     "PercentItemType": {
-      "description": "Percent unit, described as a value between 0 and 100. ",
+      "description": "Percent unit, where 100% is entered as 100. For example 95% would be entered as 95. ",
       "units": {
         "percent": {
           "label": "Percent",
@@ -18063,9 +18063,9 @@
       }
     },
     "DecimalPercentItemType": {
-      "description": "Percent unit, described as a value between 0 and 1 per the GAAP standards. For example 95% would be displayed as 0.95. Values can exceed . For example 120%  would be displayed as 1.20, as in cases where energy production exceeded expected or modeled values. ",
+      "description": "Percent as a fraction, where 100% is entered as 1.0. For example 95% would be displayed as 0.95.",
       "units": {
-        "DecimalPercent": {
+        "decimal_percent": {
           "label": "Decimal Percent",
           "description": ""
         }
