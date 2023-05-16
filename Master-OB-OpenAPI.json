@@ -18063,7 +18063,7 @@
       }
     },
     "DecimalPercentItemType": {
-      "description": "Percent as a fraction, where 100% is entered as 1.0. For example 95% would be displayed as 0.95.",
+      "description": "Percent as a fraction, where 100% is stored as 1.0. For example 95% would be represented as 0.95.",
       "units": {
         "decimal_percent": {
           "label": "Decimal Percent",
