@@ -12371,7 +12371,8 @@
           "ElementItemType": {
             "$ref": "#/components/schemas/ElementItemType"
           }
-        }
+        },
+        "x-ob-usage-tips": "The CustomElement is intended for use solely for data points that are not supported by, or included in, the Orange Button Taxonomy. Some examples are: Data points that have not yet been adopted as industry standard, and as such have not been included in the Orange Button Taxonomy. Additionally, proprietary data that may be necessary for an integration, however, does not correspond to an Orange Button Element can be passed using the CustomElement. \n\nAbuse of this element negatively impacts the transparent transfer of data, so only use when absolutely necessary. We will revoke your Orange Button Sticker and membership in the club for instances of misuse. "
       },
       "ElementID": {
         "allOf": [
@@ -18143,6 +18144,19 @@
         "Volunteer": {
           "label": "Volunteer",
           "description": ""
+        }
+      }
+    },
+    "BLOBTypeItemType": {
+      "description": "A BLOB (binary large object) is a varying-length binary string that can be up to 2,147,483,647 characters long. Like other binary types, BLOB strings are not associated with a code page. In addition, BLOB strings do not hold character data.",
+      "enums": {
+        "Base64": {
+          "label": "Base 64",
+          "description": "Base 64 encoded binary large object (BLOB). "
+        },
+        "UTF8": {
+          "label": "UTF-8",
+          "description": "UTF-8 is an encoding system for Unicode. It can translate any Unicode character to a matching unique binary string, and can also translate the binary string back to a Unicode character. This is the meaning of “UTF”, or “Unicode Transformation Format."
         }
       }
     }
