@@ -54,6 +54,7 @@ Object changes
  * Adds Scope to TimeEntry(:pull:`205`)
  * Adds Scope and Description to PerformanceIndex (:pull:`219`)
  * Adds Scope to PerformanceRatio (:pull:`219`)
+ * Creates AvailabilityReports object Array. (:pull:`228`)
 
 Unit changes
 ~~~~~~~~~~~~

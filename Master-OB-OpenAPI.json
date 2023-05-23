@@ -3785,7 +3785,7 @@
             "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Unit": "percent",
+              "Unit": "decimal_percent",
               "Value": 0.0299
             },
             "x-ob-item-type-group": ""
@@ -12429,6 +12429,12 @@
             }
           }
         ]
+      },
+      "AvailabilityReports": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/AvailabilityReport"
+        }
       }
     }
   },
