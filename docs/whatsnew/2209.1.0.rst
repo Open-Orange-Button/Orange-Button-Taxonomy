@@ -21,6 +21,7 @@ Element changes
  * Adds JobRoleName, TimeEntryDate, TimeEntryID, WorkerID (:pull:`205`)
  * Adds EnergyProduction, EnergyImport, EnergyExport and EnergyParasiticConsumption (:pull:`209`)
  * Deletes element EnergyUsage and change definition of EnergyConsumption (:pull:`209`)
+ * Updates Sample Values for all elements that previously represented PercentItemType to match DecimalPercentItemType standard (:pull:`228`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -64,7 +65,7 @@ Unit changes
  * Clarify some enumerations for CellTechnologyItemType (:pull:`197`)
  * Creates JobStatusItemType and creates Enum List of values (:pull:`221`)
  * Creates DecimalPercentItemType and creates DecimalPercent unit. (:pull:`228`)
-  
+ * Removes PercentItemType. (:pull:`228`)
 
 Bug fixes
 ~~~~~~~~~
