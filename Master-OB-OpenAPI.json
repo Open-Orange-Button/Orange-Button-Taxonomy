@@ -17076,15 +17076,6 @@
         }
       }
     },
-    "PercentItemType": {
-      "description": "Percent unit, where 100% is entered as 100. For example 95% would be entered as 95. ",
-      "units": {
-        "percent": {
-          "label": "Percent",
-          "description": ""
-        }
-      }
-    },
     "PerUnitItemType": {
       "description": "Per unit. Unit source prefixes: us-types",
       "units": {
