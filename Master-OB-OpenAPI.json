@@ -3086,7 +3086,9 @@
             "description": "The type of aging bucket",
             "x-ob-item-type": "AgingBucketTypeItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "AgingBalance61To90Days"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -3780,10 +3782,11 @@
           {
             "type": "object",
             "description": "The percentage rate of the loan",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 2.99
+              "Unit": "decimal_percent",
+              "Value": 0.0299
             },
             "x-ob-item-type-group": ""
           }
@@ -4465,10 +4468,11 @@
           {
             "type": "object",
             "description": "Ratio between the amount of moisture in the air and the maximum amount of moisture that could be present in the air at current air temperature.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 33
+              "Unit": "decimal_percent",
+              "Value": 0.33
             },
             "x-ob-item-type-group": ""
           }
@@ -4920,10 +4924,11 @@
           {
             "type": "object",
             "description": "Power factor setting of the power system which is defined as the ratio of the real power flowing to the load, to the apparent power in the circuit. It is a dimensionless number in the closed internal of -1 to +1.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 95
+              "Unit": "decimal_percent",
+              "Value": 0.95
             },
             "x-ob-item-type-group": ""
           }
@@ -5171,7 +5176,9 @@
             "description": "Weather source used for the model, for example: ground measurements, NSRDB TMY3, SolarAnywhere v3.0, SolarGIS vX.Y",
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Value": "NSRDB TMY3"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -5481,10 +5488,11 @@
           {
             "type": "object",
             "description": "Maximum coefficient of variation (ratio of standard deviation to mean) of irradiance during a window of data.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 5
+              "Unit": "decimal_percent",
+              "Value": 0.05
             },
             "x-ob-item-type-group": ""
           }
@@ -6755,10 +6763,11 @@
           {
             "type": "object",
             "description": "The efficiency of the solar module at standard test condition (STC).",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 18.3
+              "Unit": "decimal_percent",
+              "Value": 0.183
             },
             "x-ob-item-type-group": ""
           }
@@ -6772,11 +6781,11 @@
           {
             "type": "object",
             "description": "The specified range within which a solar panel could overperform its rated power at Standard Test Conditions.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 1.5,
-              "Unit": "percent"
+              "Unit": "decimal_percent",
+              "Value": 0.015
             },
             "x-ob-item-type-group": ""
           }
@@ -7176,10 +7185,11 @@
           {
             "type": "object",
             "description": "The specified range within which a solar panel could underperform its rated power at Standard Test Conditions.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 1.5
+              "Unit": "decimal_percent",
+              "Value": 0.015
             },
             "x-ob-item-type-group": ""
           }
@@ -7872,12 +7882,12 @@
           {
             "type": "object",
             "description": "CEC-weighted DC/AC conversion efficiency.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 94.2,
-              "Unit": "percent"
+              "Unit": "decimal_percent",
+              "Value": 0.942
             }
           }
         ]
@@ -7890,12 +7900,12 @@
           {
             "type": "object",
             "description": "DC/AC conversion efficiency determined according to the IEC 61683 standard.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 93.4,
-              "Unit": "percent"
+              "Unit": "decimal_percent",
+              "Value": 0.934
             }
           }
         ]
@@ -7908,12 +7918,12 @@
           {
             "type": "object",
             "description": "Manufacturer's stated maximum DC/AC conversion efficiency",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 96.2,
-              "Unit": "percent"
+              "Unit": "decimal_percent",
+              "Value": 0.962
             }
           }
         ]
@@ -7926,12 +7936,12 @@
           {
             "type": "object",
             "description": "DC/AC conversion efficiency at Vmax and specified DC input power",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 0.935,
-              "Unit": "percent"
+              "Unit": "decimal_percent",
+              "Value": 0.935
             }
           }
         ]
@@ -7944,12 +7954,12 @@
           {
             "type": "object",
             "description": "DC/AC conversion efficiency at Vmin and specified DC input power",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 92.5,
-              "Unit": "percent"
+              "Unit": "decimal_percent",
+              "Value": 92.5
             }
           }
         ]
@@ -7962,12 +7972,12 @@
           {
             "type": "object",
             "description": "DC/AC conversion efficiency at Vnom and specified DC input power",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 93.2,
-              "Unit": "percent"
+              "Unit": "decimal_percent",
+              "Value": 0.932
             }
           }
         ]
@@ -8649,11 +8659,12 @@
           {
             "type": "object",
             "description": "Maximum Depth of Discharge without damaging battery hardware",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 98
+              "Unit": "decimal_percent",
+              "Value": 0.98
             }
           }
         ]
@@ -9267,10 +9278,13 @@
           {
             "type": "object",
             "description": "The total harmonic distortion (THD) of the power of an inverter, defined as the ratio of the sum of power of all harmonics to the power of the fundamental frequency.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "decimal_percent",
+              "Value": 0.95
+            }
           }
         ]
       },
@@ -9282,10 +9296,13 @@
           {
             "type": "object",
             "description": "The total harmonic distortion (THD) of the power of an inverter, defined as the ratio of the sum of current in all harmonics to the current in the fundamental frequency.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "decimal_percent",
+              "Value": 0.95
+            }
           }
         ]
       },
@@ -9297,11 +9314,12 @@
           {
             "type": "object",
             "description": "Maximum efficiency of a DC-DC optimizer",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 99.5
+              "Unit": "decimal_percent",
+              "Value": 0.995
             }
           }
         ]
@@ -9314,11 +9332,12 @@
           {
             "type": "object",
             "description": "Weighted efficiency of a DC-DC optimizer",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 99.5
+              "Unit": "decimal_percent",
+              "Value": 0.995
             }
           }
         ]
@@ -9926,12 +9945,12 @@
           {
             "type": "object",
             "description": "Weighted DC/AC conversion efficiency at Vmax. Weighting according to CEC specification. ",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 93.5,
-              "Unit": "percent"
+              "Unit": "decimal_percent",
+              "Value": 0.935
             }
           }
         ]
@@ -9944,12 +9963,12 @@
           {
             "type": "object",
             "description": "Weighted DC/AC conversion efficiency at Vmin. Weighted based on CEC specifications.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 92.5,
-              "Unit": "percent"
+              "Unit": "decimal_percent",
+              "Value": 0.925
             }
           }
         ]
@@ -9962,12 +9981,12 @@
           {
             "type": "object",
             "description": "Weighted DC/AC conversion efficiency at Vnom. Weighted based on CEC specifications.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 93.2,
-              "Unit": "percent"
+              "Unit": "decimal_percent",
+              "Value": 0.932
             }
           }
         ]
@@ -10022,7 +10041,7 @@
           {
             "type": "object",
             "description": "Energy measurement accuracy, as defined by ANSI C12.20. The value is percent over or under the exact measurement. ",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "In 2022 if the meter is marked for Performance Based Incentive (PBI) then enter 2% or less. ",
             "x-ob-sample-value": {
@@ -10347,11 +10366,12 @@
           {
             "type": "object",
             "description": "Percent of energy retained during full charge/discharge cycle",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 98.5
+              "Unit": "decimal_percent",
+              "Value": 0.985
             }
           }
         ]
@@ -10825,7 +10845,9 @@
             "x-ob-item-type": "DateItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "2023-04-24T19:10:54+0000"
+            }
           }
         ]
       },
@@ -10841,7 +10863,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "{\"Value\": \"Hay-Davies\"}"
+              "Value": "Hay-Davies"
             }
           }
         ]
@@ -11330,7 +11352,10 @@
             "x-ob-item-type": "MonetaryItemType",
             "x-ob-item-type-group": "OBMonetary",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "USD",
+              "Value": 2500
+            }
           }
         ]
       },
@@ -11343,9 +11368,12 @@
             "type": "object",
             "description": "Revenue forecasted or projected using financial and other models.",
             "x-ob-item-type": "MonetaryItemType",
-            "x-ob-item-type-group": "",
+            "x-ob-item-type-group": "OBMonetary",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "USD",
+              "Value": 3000
+            }
           }
         ]
       },
@@ -11360,7 +11388,10 @@
             "x-ob-item-type": "MonetaryItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "USD",
+              "Value": 1000
+            }
           }
         ]
       },
@@ -11375,7 +11406,10 @@
             "x-ob-item-type": "EnergyItemType",
             "x-ob-item-type-group": "OBElectricalEnergy",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "kWh",
+              "Value": 20.45
+            }
           }
         ]
       },
@@ -11390,7 +11424,10 @@
             "x-ob-item-type": "InsolationItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "Wh_per_sqm",
+              "Value": 800
+            }
           }
         ]
       },
@@ -11541,7 +11578,9 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "systemname_date_time"
+            }
           }
         ]
       },
@@ -11556,7 +11595,9 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "system_1_may_2020"
+            }
           }
         ]
       },
@@ -11746,7 +11787,9 @@
             "x-ob-item-type": "DecimalItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": 0.85
+            }
           }
         ]
       },
@@ -11761,7 +11804,9 @@
             "x-ob-item-type": "DecimalItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": 0.85
+            }
           }
         ]
       },
@@ -11776,7 +11821,10 @@
             "x-ob-item-type": "PowerItemType",
             "x-ob-item-type-group": "OBElectricalPower",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "W",
+              "Value": 50
+            }
           }
         ]
       },
@@ -11791,7 +11839,10 @@
             "x-ob-item-type": "PowerItemType",
             "x-ob-item-type-group": "OBElectricalPower",
             "x-ob-usage-tips": "Use PowerCorrFactor to record the correction factor.",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "W",
+              "Value": 48.5
+            }
           }
         ]
       },
@@ -11806,7 +11857,9 @@
             "x-ob-item-type": "DecimalItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": 0.97
+            }
           }
         ]
       },
@@ -11868,7 +11921,9 @@
             "x-ob-item-type": "StandardTypeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "SPEOM_2021"
+            }
           }
         ]
       },
@@ -11915,7 +11970,10 @@
             "x-ob-item-type": "DurationItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "H",
+              "Value": 18
+            }
           }
         ]
       },
@@ -11930,7 +11988,10 @@
             "x-ob-item-type": "DurationItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "MM",
+              "Value": 30
+            }
           }
         ]
       },
@@ -12002,10 +12063,13 @@
           {
             "type": "object",
             "description": "The fraction of time that a system is operational. Calculated as (up time) / (up time + down time). For operational availability, up time includes the time the device or system is generating power. All other time is down time. ",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "decimal_percent",
+              "Value": 0.9
+            }
           }
         ]
       },
@@ -12017,10 +12081,13 @@
           {
             "type": "object",
             "description": "The fraction of time that a device or system is capable of generating power. Calculated as (up time) / (up time + down time). For technical availability, up time includes time that the system is generating power, or could generate power but is outside environmental limits, is subject to grid outage or is directed to be offline. Down time includes time offline for equipment failure and repair.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "decimal_percent",
+              "Value": 0.97
+            }
           }
         ]
       },
@@ -12032,10 +12099,11 @@
           {
             "type": "object",
             "description": "Percent of AC capacity available during a period of time.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": 95
+              "Unit": "decimal_percent",
+              "Value": 0.95
             },
             "x-ob-item-type-group": ""
           }
@@ -12089,11 +12157,11 @@
           {
             "type": "object",
             "description": "The ratio of power from a module or array without cleaning to power at clean conditions.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Unit": "percent",
+              "Unit": "decimal_percent",
               "Value": 0.95
             }
           }
@@ -12334,10 +12402,13 @@
           {
             "type": "object",
             "description": "Availability determined as defined in a contract, which can be assigned to FileFolderURL. Contractual Availability is calculated as (useful time - down time + excluded time) / (useful time) where \"useful time\" is the time with irradiance above a minimum threshold.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "decimal_percent",
+              "Value": 0.95
+            }
           }
         ]
       },
@@ -12349,12 +12420,21 @@
           {
             "type": "object",
             "description": "A minimum guaranteed contractual availability.",
-            "x-ob-item-type": "PercentItemType",
+            "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "decimal_percent",
+              "Value": 0.98
+            }
           }
         ]
+      },
+      "AvailabilityReports": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/AvailabilityReport"
+        }
       }
     }
   },
@@ -16996,15 +17076,6 @@
         }
       }
     },
-    "PercentItemType": {
-      "description": "Percent unit",
-      "units": {
-        "percent": {
-          "label": "Percent",
-          "description": ""
-        }
-      }
-    },
     "PerUnitItemType": {
       "description": "Per unit. Unit source prefixes: us-types",
       "units": {
@@ -17932,6 +18003,10 @@
         "IECTS63019_2019": {
           "label": "IEC TS 63109 Ed. 1",
           "description": "Photovoltaic power systems (PVPS) – Information model for availability"
+        },
+        "SPEOM_2021": {
+          "label": "SPE O&M Guide v5.0:2021",
+          "description": "SolarPower Europe Operations and Maintenance Best Practices Guidelines, ver 5.0, 2021\""
         }
       }
     },
@@ -17996,6 +18071,15 @@
         },
         "Volunteer": {
           "label": "Volunteer",
+          "description": ""
+        }
+      }
+    },
+    "DecimalPercentItemType": {
+      "description": "Percent as a fraction, where 100% is stored as 1.0. For example 95% would be represented as 0.95.",
+      "units": {
+        "decimal_percent": {
+          "label": "Decimal Percent",
           "description": ""
         }
       }
