@@ -18158,11 +18158,11 @@
       "enums": {
         "Base64": {
           "label": "Base 64",
-          "description": "Base 64 encoded binary large object (BLOB). "
+          "description": "Base 64 encoded binary."
         },
         "UTF8": {
           "label": "UTF-8",
-          "description": "UTF-8 is an encoding system for Unicode. It can translate any Unicode character to a matching unique binary string, and can also translate the binary string back to a Unicode character. This is the meaning of “UTF”, or “Unicode Transformation Format."
+          "description": "UTF-8 is an encoding system for Unicode. It can translate any Unicode character to a matching unique binary string, and can also translate the binary string back to a Unicode character. This is the meaning of “UTF”, or “Unicode Transformation Format.\""
         }
       }
     }
