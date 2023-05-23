@@ -55,6 +55,7 @@ Object changes
  * Adds Scope and Description to PerformanceIndex (:pull:`219`)
  * Adds Scope to PerformanceRatio (:pull:`219`)
  * Creates CustomElement and CustomElements array (:pull:`224`)
+ * Adds CustomElements to AvailabilityReport and OperatingReport (:pull:`224`)
 
 Unit changes
 ~~~~~~~~~~~~
