@@ -22,6 +22,7 @@ Element changes
  * Adds EnergyProduction, EnergyImport, EnergyExport and EnergyParasiticConsumption (:pull:`209`)
  * Deletes element EnergyUsage and change definition of EnergyConsumption (:pull:`209`)
  * Creates DataType, ElementID, ElementName, ElementValue, ElementItemType (:pull:`224`)
+ * Updates Sample Values for all elements that previously represented PercentItemType to match DecimalPercentItemType standard (:pull:`228`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -56,6 +57,7 @@ Object changes
  * Adds Scope to PerformanceRatio (:pull:`219`)
  * Creates CustomElement and CustomElements array (:pull:`224`)
  * Adds CustomElements to AvailabilityReport and OperatingReport (:pull:`224`)
+ * Creates AvailabilityReports object Array. (:pull:`228`)
 
 Unit changes
 ~~~~~~~~~~~~
@@ -66,7 +68,8 @@ Unit changes
  * Rename ModuleTechnologyItemType to ModuleStyleItemType, move values referring to cell technology to CellTechnologyItemType (:pull:`197`)
  * Clarify some enumerations for CellTechnologyItemType (:pull:`197`)
  * Creates JobStatusItemType and creates Enum List of values (:pull:`221`)
-  
+ * Creates DecimalPercentItemType and creates DecimalPercent unit. (:pull:`228`)
+ * Removes PercentItemType. (:pull:`228`)
 
 Bug fixes
 ~~~~~~~~~
