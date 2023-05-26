@@ -10633,7 +10633,11 @@
           {
             "type": "object",
             "description": "Object containing VoltageDC measurements.",
-            "properties": {}
+            "properties": {
+              "VoltageDCArray": {
+                "$ref": "#/components/schemas/VoltageDCArray"
+              }
+            }
           }
         ]
       },
@@ -12557,6 +12561,31 @@
             }
           }
         ]
+      },
+      "VoltageDC": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Voltage (DC) measured at an instant in time.",
+            "x-ob-item-type": "VoltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "StartTime": "2023-04-28T21:50:16.364Z",
+              "Unit": "V",
+              "Value": 40
+            }
+          }
+        ]
+      },
+      "VoltageDCArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/VoltageDC"
+        }
       },
       "AvailabilityReports": {
         "type": "array",
