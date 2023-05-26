@@ -1,7 +1,7 @@
 
-.. _whatsnew_220910:
+.. _whatsnew_230500:
 
-2209.1.0
+2305.0.0
 --------
 
 Element changes
