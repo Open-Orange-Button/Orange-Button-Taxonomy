@@ -18229,7 +18229,7 @@
       }
     },
     "BLOBTypeItemType": {
-      "description": "A BLOB (binary large object) is a varying-length binary string that can be up to 2,147,483,647 characters long. Like other binary types, BLOB strings are not associated with a code page. In addition, BLOB strings do not hold character data.",
+      "description": "A BLOB (binary large object) is a varying-length string that encodes binary data. Do not use BLOB for character data, use StringTypeItemType instead.",
       "enums": {
         "Base64": {
           "label": "Base 64",
