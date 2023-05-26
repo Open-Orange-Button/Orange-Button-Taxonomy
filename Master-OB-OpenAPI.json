@@ -12446,7 +12446,7 @@
             "$ref": "#/components/schemas/ElementItemType"
           }
         },
-        "x-ob-usage-tips": "The CustomElement is intended for use solely for data points that are not supported by, or included in, the Orange Button Taxonomy. Some examples are: Data points that have not yet been adopted as industry standard, and as such have not been included in the Orange Button Taxonomy. Additionally, proprietary data that may be necessary for an integration, however, does not correspond to an Orange Button Element can be passed using the CustomElement. \n\nAbuse of this element negatively impacts the transparent transfer of data, so only use when absolutely necessary. We will revoke your Orange Button Sticker and membership in the club for instances of misuse. "
+        "x-ob-usage-tips": "The CustomElement is intended solely for data that are not supported by, or included in, the Orange Button Taxonomy. Some examples are: data terms that have not yet been adopted as industry standard, and proprietary data that does not have a corresponding Orange Button Element. Abuse of this element negatively impacts the transparent transfer of data, so only use when absolutely necessary. We will revoke your Orange Button Sticker and membership in the club for instances of misuse. "
       },
       "ElementID": {
         "allOf": [
