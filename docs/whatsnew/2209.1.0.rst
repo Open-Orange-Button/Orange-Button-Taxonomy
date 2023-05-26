@@ -21,6 +21,7 @@ Element changes
  * Adds JobRoleName, TimeEntryDate, TimeEntryID, WorkerID (:pull:`205`)
  * Adds EnergyProduction, EnergyImport, EnergyExport and EnergyParasiticConsumption (:pull:`209`)
  * Deletes element EnergyUsage and change definition of EnergyConsumption (:pull:`209`)
+ * Creates DataType, ElementID, ElementName, ElementValue, ElementItemType (:pull:`224`)
  * Updates Sample Values for all elements that previously represented PercentItemType to match DecimalPercentItemType standard (:pull:`228`)
 
 Object changes
@@ -54,6 +55,8 @@ Object changes
  * Adds Scope to TimeEntry(:pull:`205`)
  * Adds Scope and Description to PerformanceIndex (:pull:`219`)
  * Adds Scope to PerformanceRatio (:pull:`219`)
+ * Creates CustomElement and CustomElements array (:pull:`224`)
+ * Adds CustomElements to AvailabilityReport and OperatingReport (:pull:`224`)
  * Creates AvailabilityReports object Array. (:pull:`228`)
 
 Unit changes
