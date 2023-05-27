@@ -58,9 +58,9 @@ rules:
       - Value has the correct OpenAPI type
       - If the schema definition OB item type defines enums or units:
         - When enums are defined, Value is an enum of the OB item type.
-          - If the schema definition has an OB item type group, Value is an enum of the item type group.
-        - When units are defined, Unit is a unit of the OB item type.
-          - If the schema definition has an OB item type group, Unit is a unit of the item type group.
+          - If the schema definition has an OB item type group, Value is in the item type group.
+        - When units are defined, sample value has a Unit defined by the OB item type.
+          - If the schema definition has an OB item type group, Unit is in the item type group.
       - Additional validation rules for each primitive can be added to validateXOBSampleValue.
     message: '{{error}}'
     # Give entire 'allOf' array of an element definition
