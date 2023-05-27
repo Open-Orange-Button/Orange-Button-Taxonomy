@@ -5,7 +5,7 @@
  * shows that schema rules of IBM OAS only check schema definitions that are used in an OpenAPI path, not those only defined in OpenAPI components.
  */
 const IBMOAS = require('@ibm-cloud/openapi-ruleset');
-const { schemas: locationsWhereSchemaCanBeUsed } = require('@ibm-cloud/openapi-ruleset/src/collections/index.js');
+const { schemas: locationsWhereSchemaCanBeUsed } = require('@ibm-cloud/openapi-ruleset-utilities/src/collections/index.js');
 Object.values(IBMOAS.rules).forEach(ruleDef => {
   // A schema rule is identified by what JSONPaths it is given to check.
   let isSchemaRule = Array.isArray(ruleDef.given) && ruleDef.given.every(location => locationsWhereSchemaCanBeUsed.includes(location));

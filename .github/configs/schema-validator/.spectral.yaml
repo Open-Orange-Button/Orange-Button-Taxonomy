@@ -1,19 +1,21 @@
 extends: 'ibm-oas-wrapper-check-components.js'
 functions: [spellcheckSubstrings,
+            noSuperclassFieldShadowing,
             validateXOBFields,
             refPathExists,
             validateItemTypeGroupEntries,
             validateXOBSampleValue,
             validateItemTypeAgainstElementType]
 rules:
-  enum-case-convention: off
-  major-version-in-path: off
+  ibm-array-attributes: off
+  ibm-enum-casing-convention: off
+  ibm-major-version-in-path: off
   openapi-tags: off
   oas3-api-servers: off
   oas3-unused-component: off
-  property-case-convention: off
-  property-description: off
-  property-inconsistent-name-and-type: off
+  ibm-property-casing-convention: off
+  ibm-property-description: off
+  ibm-property-consistent-name-and-type: off
 
   element-valid-item-type:
     message: 'Item type does not exist: {{error}}'
@@ -86,6 +88,14 @@ rules:
     severity: error
     then:
       function: validateItemTypeAgainstElementType
+
+  no-superclass-field-shadowing:
+    description: Check that OB Objects do not define fields whose names conflict with the fields of their superclass.
+    message: '{{error}}'
+    given: $.components.schemas[*][?(@property === 'allOf' && !(@[0].properties && @[0].properties.Value))]
+    severity: error
+    then:
+      function: noSuperclassFieldShadowing
 
   no-special-characters:
     description: Name must only contain characters in 0-9, A-Z, a-z, and _ (underscore).

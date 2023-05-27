@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Validate OB OpenAPI
         uses: char0n/swagger-editor-validate@master
         with:
@@ -19,14 +19,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '18'
       - name: Install IBM OpenAPI Validator with Its Spectral OpenAPI Ruleset
-        run: npm install -g ibm-openapi-validator@0.76.2 && npm install @ibm-cloud/openapi-ruleset@0.25.2
+        run: npm install -g ibm-openapi-validator@1.1.1 && npm install @ibm-cloud/openapi-ruleset@1.1.1
       - name: Install Typo.js Spellchecker
-        run: npm install typo-js@1.2.1
+        run: npm install typo-js@1.2.2
       - name: Run validator
         run: lint-openapi Master-OB-OpenAPI.json -r ./.github/configs/schema-validator/.spectral.yaml
