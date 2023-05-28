@@ -1690,6 +1690,7 @@
             "x-ob-item-type": "PerUnitItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "pu",
               "Value": 4
             },
             "x-ob-item-type-group": ""
@@ -3056,6 +3057,7 @@
             "x-ob-item-type": "PureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "pure",
               "Value": 30
             },
             "x-ob-item-type-group": ""
@@ -3073,6 +3075,7 @@
             "x-ob-item-type": "PureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "pure",
               "Value": 31
             },
             "x-ob-item-type-group": ""
@@ -6304,9 +6307,6 @@
               "Grounding": {
                 "$ref": "#/components/schemas/Grounding"
               },
-              "Dimension": {
-                "$ref": "#/components/schemas/Dimension"
-              },
               "InverterEfficiency": {
                 "$ref": "#/components/schemas/InverterEfficiency"
               },
@@ -6859,6 +6859,7 @@
             "x-ob-item-type": "TempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "W_per_Cel",
               "Value": -0.37
             },
             "x-ob-item-type-group": ""
@@ -6876,6 +6877,7 @@
             "x-ob-item-type": "TempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "V_per_Cel",
               "Value": -0.304
             },
             "x-ob-item-type-group": ""
@@ -6893,6 +6895,7 @@
             "x-ob-item-type": "TempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "A_per_Cel",
               "Value": 0.05
             },
             "x-ob-item-type-group": ""
@@ -6910,6 +6913,7 @@
             "x-ob-item-type": "TempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "V_per_Cel",
               "Value": -0.304
             },
             "x-ob-item-type-group": ""
@@ -6927,6 +6931,7 @@
             "x-ob-item-type": "TempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "A_per_Cel",
               "Value": 0.05
             },
             "x-ob-item-type-group": ""
@@ -7086,6 +7091,7 @@
             "x-ob-item-type": "PureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "pure",
               "Value": 3
             },
             "x-ob-item-type-group": ""
@@ -7246,18 +7252,6 @@
               "ProdCell": {
                 "$ref": "#/components/schemas/ProdCell"
               },
-              "ProdCode": {
-                "$ref": "#/components/schemas/ProdCode"
-              },
-              "Description": {
-                "$ref": "#/components/schemas/Description"
-              },
-              "FileFolderURL": {
-                "$ref": "#/components/schemas/FileFolderURL"
-              },
-              "ProdDatasheet": {
-                "$ref": "#/components/schemas/ProdDatasheet"
-              },
               "ProdGlazing": {
                 "$ref": "#/components/schemas/ProdGlazing"
               },
@@ -7272,9 +7266,6 @@
               },
               "CableConnector": {
                 "$ref": "#/components/schemas/CableConnector"
-              },
-              "Dimension": {
-                "$ref": "#/components/schemas/Dimension"
               },
               "PowerToleranceMin": {
                 "$ref": "#/components/schemas/PowerToleranceMin"
@@ -7311,9 +7302,6 @@
               },
               "ShadeResponse": {
                 "$ref": "#/components/schemas/ShadeResponse"
-              },
-              "Warranties": {
-                "$ref": "#/components/schemas/Warranties"
               },
               "CECNotes": {
                 "$ref": "#/components/schemas/CECNotes"
@@ -8584,17 +8572,8 @@
               "Description": {
                 "$ref": "#/components/schemas/Description"
               },
-              "Contacts": {
-                "$ref": "#/components/schemas/Contacts"
-              },
-              "Addresses": {
-                "$ref": "#/components/schemas/Addresses"
-              },
               "FileFolderURL": {
                 "$ref": "#/components/schemas/FileFolderURL"
-              },
-              "URL": {
-                "$ref": "#/components/schemas/URL"
               }
             },
             "x-ob-usage-tips": ""
@@ -10331,9 +10310,6 @@
               "CapacityDC": {
                 "$ref": "#/components/schemas/CapacityDC"
               },
-              "Description": {
-                "$ref": "#/components/schemas/Description"
-              },
               "ElectricalServiceID": {
                 "$ref": "#/components/schemas/ElectricalServiceID"
               },
@@ -11456,9 +11432,6 @@
               "Address": {
                 "$ref": "#/components/schemas/Address"
               },
-              "Contacts": {
-                "$ref": "#/components/schemas/Contacts"
-              },
               "BuildingCode": {
                 "$ref": "#/components/schemas/BuildingCode"
               },
@@ -11510,9 +11483,6 @@
               "FeeStructures": {
                 "$ref": "#/components/schemas/FeeStructures"
               },
-              "URL": {
-                "$ref": "#/components/schemas/URL"
-              },
               "AHJCode": {
                 "$ref": "#/components/schemas/AHJCode"
               },
@@ -11560,9 +11530,6 @@
               "Address": {
                 "$ref": "#/components/schemas/Address"
               },
-              "Contacts": {
-                "$ref": "#/components/schemas/Contacts"
-              },
               "Description": {
                 "$ref": "#/components/schemas/Description"
               },
@@ -11571,9 +11538,6 @@
               },
               "FeeStructures": {
                 "$ref": "#/components/schemas/FeeStructures"
-              },
-              "URL": {
-                "$ref": "#/components/schemas/URL"
               }
             },
             "x-ob-usage-tips": ""
