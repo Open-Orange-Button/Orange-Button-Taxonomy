@@ -7344,35 +7344,19 @@
         ]
       },
       "ProdCell": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Product"
+        "type": "object",
+        "description": "A subcomponent of a ProdModule",
+        "properties": {
+          "CellColor": {
+            "$ref": "#/components/schemas/CellColor"
           },
-          {
-            "type": "object",
-            "description": "A subcomponent of a ProdModule",
-            "properties": {
-              "Description": {
-                "$ref": "#/components/schemas/Description"
-              },
-              "FileFolderURL": {
-                "$ref": "#/components/schemas/FileFolderURL"
-              },
-              "ProdCode": {
-                "$ref": "#/components/schemas/ProdCode"
-              },
-              "CellColor": {
-                "$ref": "#/components/schemas/CellColor"
-              },
-              "CellCutType": {
-                "$ref": "#/components/schemas/CellCutType"
-              },
-              "CellTechnologyType": {
-                "$ref": "#/components/schemas/CellTechnologyType"
-              }
-            }
+          "CellCutType": {
+            "$ref": "#/components/schemas/CellCutType"
+          },
+          "CellTechnologyType": {
+            "$ref": "#/components/schemas/CellTechnologyType"
           }
-        ]
+        }
       },
       "ProdGlazing": {
         "type": "object",
