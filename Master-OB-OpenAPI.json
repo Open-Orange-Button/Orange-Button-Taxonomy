@@ -7340,15 +7340,6 @@
             "type": "object",
             "description": "A subcomponent of a ProdModule",
             "properties": {
-              "Description": {
-                "$ref": "#/components/schemas/Description"
-              },
-              "FileFolderURL": {
-                "$ref": "#/components/schemas/FileFolderURL"
-              },
-              "ProdCode": {
-                "$ref": "#/components/schemas/ProdCode"
-              },
               "CellColor": {
                 "$ref": "#/components/schemas/CellColor"
               },
