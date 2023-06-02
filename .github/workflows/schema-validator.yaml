@@ -26,8 +26,8 @@ jobs:
           - element-valid-openapi-type-and-item-type
           - element-valid-sample-value
           - ibm
-          - item-type-group-vaild-type
           - item-type-group-valid-entries
+          - item-type-group-valid-type
           - no-special-characters
           - no-superclass-field-shadowing
           - spellcheck-upper-camel-case-substrings

@@ -1,5 +1,4 @@
 extends: 'ibm-oas-wrapper-check-components.js'
-
 rules:
   ibm-array-attributes: off
   ibm-enum-casing-convention: off
