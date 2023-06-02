@@ -7,7 +7,7 @@ rules:
       - $.x-ob-item-types[*]~ # OB Item Types
       - $.x-ob-item-types[*].enums[*]~ # OB Item Type Enums
       - $.x-ob-item-type-groups[*]~ # OB Item Type Groups
-    severity: warn
+    severity: error
     then:
       function: pattern
       functionOptions:
