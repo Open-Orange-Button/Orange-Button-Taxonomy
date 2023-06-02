@@ -24,6 +24,7 @@ Testing
 
 Documentation
 ~~~~~~~~~~~~~
+ -Adds Usage Tip to Scope object (:pull:`245`)
 
 
 Contributors
