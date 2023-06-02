@@ -1,0 +1,26 @@
+functions: [validateXOBSampleValue]
+rules:
+  element-valid-sample-value:
+    description: >-
+      Checks the following items about sample value:
+      - It is an object. The object may be empty (see requireAtLeastOneField).
+      - Its fields are only primitives.
+      - Value has the correct OpenAPI type
+      - If the schema definition OB item type defines enums or units:
+        - When enums are defined, Value is an enum of the OB item type.
+          - If the schema definition has an OB item type group, Value is in the item type group.
+        - When units are defined, sample value has a Unit defined by the OB item type.
+          - If the schema definition has an OB item type group, Unit is in the item type group.
+      - Additional validation rules for each primitive can be added to validateXOBSampleValue.
+    message: '{{error}}'
+    # Give entire 'allOf' array of an element definition
+    # Spectral resolves all $ref's, so allOf[0].properties.Value exists
+    given: $.components.schemas[*][?(@property === 'allOf' && @[0].properties && @[0].properties.Value)]
+    severity: error
+    then:
+      function: validateXOBSampleValue
+      functionOptions:
+        # Require sample value be a nonempty object
+        requireAtLeastOneField: false
+        enumItemTypeIgnoreList:
+          - UUIDItemType # Value is checked against the regex of UUID

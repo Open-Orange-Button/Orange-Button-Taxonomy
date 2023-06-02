@@ -1,0 +1,10 @@
+functions: [validateXOBFields]
+rules:
+  element-valid-item-type:
+    message: 'Item type does not exist: {{error}}'
+    given: $.components.schemas[*].allOf[1][x-ob-item-type]
+    severity: error
+    then:
+      function: validateXOBFields
+      functionOptions:
+        objectPath: x-ob-item-types

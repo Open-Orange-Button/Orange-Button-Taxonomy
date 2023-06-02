@@ -1,0 +1,21 @@
+functions: [spellcheckSubstrings]
+rules:
+  spellcheck-upper-camel-case-substrings:
+    description: Checks if the entire string or all substrings matching substringMatch are in any of the dictionaries.
+    message: 'These substrings are not in the dictionary: {{error}}'
+    type: style
+    given:
+      - $.components.schemas[*]~ # Schema Element and Object Names
+      - $.x-ob-item-types[*]~ # OB Item Types
+      - $.x-ob-item-types[*].enums[*]~ # OB Item Type Enums
+      - $.x-ob-item-type-groups[*]~ # OB Item Type Groups
+    severity: error
+    then:
+      function: spellcheckSubstrings
+      functionOptions:
+        substringMatch: '[0-9]+|[A-Z][a-z]+|[A-Z]+s|[A-Z]+(?![a-z])'
+        dictionaries:
+          - name: en_US
+            path: node_modules/typo-js/dictionaries
+          - name: OB-words
+            path: .github/configs/schema-validator/OB-dictionaries

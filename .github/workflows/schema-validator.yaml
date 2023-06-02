@@ -17,6 +17,20 @@ jobs:
   ob-open-api-validator:
     name: OB OpenAPI Validator
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        rule:
+          - element-valid-item-type-group
+          - element-valid-item-type
+          - element-valid-openapi-type-and-item-type
+          - element-valid-sample-value
+          - ibm
+          - item-type-group-vaild-type
+          - item-type-group-valid-entries
+          - no-special-characters
+          - no-superclass-field-shadowing
+          - spellcheck-upper-camel-case-substrings
+          - upper-camel-case-with-all-caps-acronyms
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -29,4 +43,4 @@ jobs:
       - name: Install Typo.js Spellchecker
         run: npm install typo-js@1.2.2
       - name: Run validator
-        run: lint-openapi Master-OB-OpenAPI.json -r ./.github/configs/schema-validator/.spectral.yaml
+        run: lint-openapi Master-OB-OpenAPI.json -r ./.github/configs/schema-validator/${{ matrix.rule }}.yaml

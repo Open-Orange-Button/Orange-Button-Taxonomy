@@ -1,0 +1,14 @@
+rules:
+  no-special-characters:
+    description: Name must only contain characters in 0-9, A-Z, a-z, and _ (underscore).
+    type: style
+    given:
+      - $.components.schemas[*]~ # Schema Element and Object Names
+      - $.x-ob-item-types[*]~ # OB Item Types
+      - $.x-ob-item-types[*].enums[*]~ # OB Item Type Enums
+      - $.x-ob-item-type-groups[*]~ # OB Item Type Groups
+    severity: error
+    then:
+      function: pattern
+      functionOptions:
+        match: ^[0-9A-Za-z_]+$

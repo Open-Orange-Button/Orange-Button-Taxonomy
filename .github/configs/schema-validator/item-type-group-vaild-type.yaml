@@ -1,0 +1,8 @@
+functions: [refPathExists]
+rules:
+  item-type-group-valid-type:
+    message: 'Item type group references an item type that does not exist: {{error}}'
+    given: $[x-ob-item-type-groups][*].type
+    severity: error
+    then:
+      function: refPathExists

@@ -1,0 +1,9 @@
+functions: [noSuperclassFieldShadowing]
+rules:
+  no-superclass-field-shadowing:
+    description: Check that OB Objects do not define fields whose names conflict with the fields of their superclass.
+    message: '{{error}}'
+    given: $.components.schemas[*][?(@property === 'allOf' && !(@[0].properties && @[0].properties.Value))]
+    severity: error
+    then:
+      function: noSuperclassFieldShadowing

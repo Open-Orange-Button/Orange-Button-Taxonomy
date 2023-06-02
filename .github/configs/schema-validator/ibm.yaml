@@ -1,0 +1,12 @@
+extends: 'ibm-oas-wrapper-check-components.js'
+
+rules:
+  ibm-array-attributes: off
+  ibm-enum-casing-convention: off
+  ibm-major-version-in-path: off
+  openapi-tags: off
+  oas3-api-servers: off
+  oas3-unused-component: off
+  ibm-property-casing-convention: off
+  ibm-property-description: off
+  ibm-property-consistent-name-and-type: off

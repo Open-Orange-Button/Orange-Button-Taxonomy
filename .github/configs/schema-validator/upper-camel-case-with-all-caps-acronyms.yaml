@@ -1,0 +1,14 @@
+rules:
+  upper-camel-case-with-all-caps-acronyms:
+    description: Name should follow the upper camel case convention with all-caps acronyms.
+    type: style
+    given:
+      - $.components.schemas[*]~ # Schema Element and Object Names
+      - $.x-ob-item-types[*]~ # OB Item Types
+      - $.x-ob-item-types[*].enums[*]~ # OB Item Type Enums
+      - $.x-ob-item-type-groups[*]~ # OB Item Type Groups
+    severity: warn
+    then:
+      function: pattern
+      functionOptions:
+        match: ^[0-9A-Z][a-z0-9_]*([A-Z]+[a-z0-9_]*)*$ # modified version of k8s_camel_case to allow upper case letter beginning
