@@ -6,6 +6,7 @@ XXXX.0.0
 
 Element changes
 ~~~~~~~~~~~~~~~
+ - JobType name changed to SolarAPPJobType (:pull:`244`)
 
 Object changes
 ~~~~~~~~~~~~~~
