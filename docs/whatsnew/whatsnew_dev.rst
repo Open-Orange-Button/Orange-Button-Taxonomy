@@ -24,7 +24,7 @@ Testing
 
 Documentation
 ~~~~~~~~~~~~~
-
+ * Updates StartTime documentation to share dual usage purposes of StartTime value. (:pull:`247`)
 
 Contributors
 ~~~~~~~~~~~~
