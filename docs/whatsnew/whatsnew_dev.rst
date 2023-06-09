@@ -28,6 +28,7 @@ Testing
 
 Documentation
 ~~~~~~~~~~~~~
+ * Adds Usage Tip to Scope object (:pull:`245`)
  * Updates StartTime documentation to share dual usage purposes of StartTime value. (:pull:`247`)
 
 Contributors
