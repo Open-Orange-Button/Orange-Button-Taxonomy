@@ -13,6 +13,7 @@ Object changes
 
 Unit changes
 ~~~~~~~~~~~~
+ * Updates JobTypeItemType to SolarAPPJobTypeItemType (:pull:`244`)
 
 Bug fixes
 ~~~~~~~~~

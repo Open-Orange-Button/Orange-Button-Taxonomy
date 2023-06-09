@@ -12584,7 +12584,7 @@
           {
             "type": "object",
             "description": "Description of the high-level technical elements within a job. ",
-            "x-ob-item-type": "JobTypeItemType",
+            "x-ob-item-type": "SolarAPPJobTypeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -17997,7 +17997,7 @@
         }
       }
     },
-    "JobTypeItemType": {
+    "SolarAPPJobTypeItemType": {
       "description": "High-level technical components contained within a Job. Enumerated values are sourced to match values required by SolarAPP.",
       "enums": {
         "PV": {
