@@ -6465,38 +6465,6 @@
           }
         ]
       },
-      "ProductWarranty": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The length of a product Warranty in Years",
-            "x-ob-item-type": "DurationItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "PowerWarranty": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "A description of the warranty for power output if applicable",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "12 Years of 90.2% Output Power, 30 Years of 80.7% Output Power"
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "PowerMaximum": {
         "allOf": [
           {
@@ -7000,12 +6968,6 @@
             "type": "object",
             "description": "A solar module product",
             "properties": {
-              "ProductWarranty": {
-                "$ref": "#/components/schemas/ProductWarranty"
-              },
-              "PowerWarranty": {
-                "$ref": "#/components/schemas/PowerWarranty"
-              },
               "ModuleEfficiency": {
                 "$ref": "#/components/schemas/ModuleEfficiency"
               },
