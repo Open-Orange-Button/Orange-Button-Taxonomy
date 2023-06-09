@@ -9134,9 +9134,6 @@
           "JobID": {
             "$ref": "#/components/schemas/JobID"
           },
-          "JobType": {
-            "$ref": "#/components/schemas/JobType"
-          },
           "SystemIDs": {
             "$ref": "#/components/schemas/SystemIDs"
           },
@@ -9157,6 +9154,9 @@
           },
           "TimeEntries": {
             "$ref": "#/components/schemas/TimeEntries"
+          },
+          "SolarAPPJobType": {
+            "$ref": "#/components/schemas/SolarAPPJobType"
           }
         }
       },
@@ -10872,23 +10872,6 @@
           }
         ]
       },
-      "JobType": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Description of the high-level technical elements within a job. ",
-            "x-ob-item-type": "JobTypeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "PV_ST"
-            }
-          }
-        ]
-      },
       "Production": {
         "type": "object",
         "description": "A collection of electrical and related measurements with a common scope.",
@@ -12347,6 +12330,23 @@
         "items": {
           "$ref": "#/components/schemas/AvailabilityReport"
         }
+      },
+      "SolarAPPJobType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Description of the high-level technical elements within a job. ",
+            "x-ob-item-type": "SolarAPPJobTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "PV_ST"
+            }
+          }
+        ]
       }
     }
   },
@@ -17752,7 +17752,7 @@
         }
       }
     },
-    "JobTypeItemType": {
+    "SolarAPPJobTypeItemType": {
       "description": "High-level technical components contained within a Job. Enumerated values are sourced to match values required by SolarAPP.",
       "enums": {
         "PV": {

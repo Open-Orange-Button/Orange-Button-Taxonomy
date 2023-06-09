@@ -6,7 +6,8 @@ XXXX.0.0
 
 Element changes
 ~~~~~~~~~~~~~~~
-* Removes ProductWarranty, PowerWarranty, EquipTypeWarr, EquipTypeWarrEndDate, EquipTypeWarrOutput, EquipTypeWarrStartDate, EquipTypeWarrStartDateMilestone, EquipTypeWarrTerm, ModuleMaterialsAndWorkmanShipWarrInitiationDate, ModulePerfWarrEndDate, ModulePerfWarrGuaranteedOutput, TrackerMaterialsWorkmanshipWarrExp, TrackerMaterialsWorkmanshipWarrInitiation (:pull:`246`)
+ * JobType name changed to SolarAPPJobType (:pull:`244`)
+ * Removes ProductWarranty, PowerWarranty, EquipTypeWarr, EquipTypeWarrEndDate, EquipTypeWarrOutput, EquipTypeWarrStartDate, EquipTypeWarrStartDateMilestone, EquipTypeWarrTerm, ModuleMaterialsAndWorkmanShipWarrInitiationDate, ModulePerfWarrEndDate, ModulePerfWarrGuaranteedOutput, TrackerMaterialsWorkmanshipWarrExp, TrackerMaterialsWorkmanshipWarrInitiation (:pull:`246`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -14,6 +15,7 @@ Object changes
 
 Unit changes
 ~~~~~~~~~~~~
+ * Updates JobTypeItemType to SolarAPPJobTypeItemType (:pull:`244`)
 
 Bug fixes
 ~~~~~~~~~
