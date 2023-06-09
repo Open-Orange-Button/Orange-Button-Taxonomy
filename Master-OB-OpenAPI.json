@@ -10556,7 +10556,7 @@
             "$ref": "#/components/schemas/Description"
           }
         },
-        "x-ob-usage-tips": "Scope is an element designed to allow Orange Button users to add context to the object it is included in. For example, if a user is trying to share BillOfMaterials information for a given Job, they would be able to share only the BillOfMaterials object and provide context by setting the JobID in the ScopeID field and setting the ScopeType to Job. By following this approach, users can narrow payloads to the specific target data while maintaining the necessary context that allows the Orange Button Taxonomy to be so powerful. "
+        "x-ob-usage-tips": "Scope is an element designed to allow Orange Button users to add context to the object it is included in. For example, if a user is trying to share BillOfMaterials information for a given Job, they would be able to share only the BillOfMaterials object and provide context by setting the JobID in the ScopeID field and setting the ScopeType to Job. By following this approach, users can narrow payloads to the specific target data while contributing the necessary context that allows the Orange Button Taxonomy to be so powerful. "
       },
       "ScopeID": {
         "allOf": [
