@@ -6,10 +6,12 @@ XXXX.0.0
 
 Element changes
 ~~~~~~~~~~~~~~~
- - JobType name changed to SolarAPPJobType (:pull:`244`)
+ * JobType name changed to SolarAPPJobType (:pull:`244`)
+ * Removes ProductWarranty, PowerWarranty, EquipTypeWarr, EquipTypeWarrEndDate, EquipTypeWarrOutput, EquipTypeWarrStartDate, EquipTypeWarrStartDateMilestone, EquipTypeWarrTerm, ModuleMaterialsAndWorkmanShipWarrInitiationDate, ModulePerfWarrEndDate, ModulePerfWarrGuaranteedOutput, TrackerMaterialsWorkmanshipWarrExp, TrackerMaterialsWorkmanshipWarrInitiation (:pull:`246`)
 
 Object changes
 ~~~~~~~~~~~~~~
+ * Removes DeviceWarranty (:pull:`246`)
 
 Unit changes
 ~~~~~~~~~~~~
@@ -26,7 +28,7 @@ Testing
 
 Documentation
 ~~~~~~~~~~~~~
-
+ * Updates StartTime documentation to share dual usage purposes of StartTime value. (:pull:`247`)
 
 Contributors
 ~~~~~~~~~~~~
