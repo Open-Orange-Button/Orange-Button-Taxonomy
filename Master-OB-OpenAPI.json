@@ -169,50 +169,8 @@
           "ManualLink": {
             "$ref": "#/components/schemas/ManualLink"
           },
-          "DeviceWarranty": {
-            "$ref": "#/components/schemas/DeviceWarranty"
-          },
           "OrientationInformation": {
             "$ref": "#/components/schemas/OrientationInformation"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
-      "DeviceWarranty": {
-        "type": "object",
-        "properties": {
-          "EquipTypeWarrOutput": {
-            "$ref": "#/components/schemas/EquipTypeWarrOutput"
-          },
-          "EquipTypeWarrStartDateMilestone": {
-            "$ref": "#/components/schemas/EquipTypeWarrStartDateMilestone"
-          },
-          "EquipTypeWarr": {
-            "$ref": "#/components/schemas/EquipTypeWarr"
-          },
-          "EquipTypeWarrTerm": {
-            "$ref": "#/components/schemas/EquipTypeWarrTerm"
-          },
-          "EquipTypeWarrStartDate": {
-            "$ref": "#/components/schemas/EquipTypeWarrStartDate"
-          },
-          "EquipTypeWarrEndDate": {
-            "$ref": "#/components/schemas/EquipTypeWarrEndDate"
-          },
-          "ModulePerfWarrEndDate": {
-            "$ref": "#/components/schemas/ModulePerfWarrEndDate"
-          },
-          "ModulePerfWarrGuaranteedOutput": {
-            "$ref": "#/components/schemas/ModulePerfWarrGuaranteedOutput"
-          },
-          "ModuleMaterialsAndWorkmanShipWarrInitiationDate": {
-            "$ref": "#/components/schemas/ModuleMaterialsAndWorkmanShipWarrInitiationDate"
-          },
-          "TrackerMaterialsWorkmanshipWarrExp": {
-            "$ref": "#/components/schemas/TrackerMaterialsWorkmanshipWarrExp"
-          },
-          "TrackerMaterialsWorkmanshipWarrInitiation": {
-            "$ref": "#/components/schemas/TrackerMaterialsWorkmanshipWarrInitiation"
           }
         },
         "x-ob-usage-tips": ""
@@ -4416,36 +4374,6 @@
           }
         ]
       },
-      "ModuleMaterialsAndWorkmanShipWarrInitiationDate": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Initiation date of the Materials and Workmanship Warranty.",
-            "x-ob-item-type": "DateItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "ModulePerfWarrEndDate": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Date performance warranty expires. The performance warranty guarantees that a solar panel will operate with a given level of efficiency over its lifetime.",
-            "x-ob-item-type": "DateItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "SiteID": {
         "allOf": [
           {
@@ -4577,21 +4505,6 @@
               "Unit": "V",
               "Value": 39.83
             }
-          }
-        ]
-      },
-      "TrackerMaterialsWorkmanshipWarrInitiation": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Tracker Materials & Workmanship Warranty initiation date.",
-            "x-ob-item-type": "DateItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
-            "x-ob-item-type-group": ""
           }
         ]
       },
@@ -4807,21 +4720,6 @@
           }
         ]
       },
-      "TrackerMaterialsWorkmanshipWarrExp": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Tracker Materials & Workmanship Warranty expiration date.",
-            "x-ob-item-type": "DateItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "PowerDC": {
         "allOf": [
           {
@@ -4937,21 +4835,6 @@
           }
         ]
       },
-      "EquipTypeWarr": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Description of the warranty available on a type of equipment.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "IrradGlobalHorizontal": {
         "allOf": [
           {
@@ -5015,21 +4898,6 @@
           }
         ]
       },
-      "EquipTypeWarrStartDateMilestone": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Description of start date milestone, for example, delivery of the equipment at the site.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "ProdName": {
         "allOf": [
           {
@@ -5074,21 +4942,6 @@
             "type": "object",
             "description": "Indicator that data passes checks for alignment between an irradiance instrument and a PV system's plane of array.",
             "x-ob-item-type": "BooleanItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "EquipTypeWarrOutput": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Description of the warranted output.",
-            "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {},
             "x-ob-item-type-group": ""
@@ -5201,21 +5054,6 @@
           }
         ]
       },
-      "EquipTypeWarrTerm": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Duration of the product warranty term offered by the manufacturer in the format P1Y1M1D. The value should be entered using the ISO8601 format of PnYnMnDTnHnMnS. For example, a 5-year term would be represented as P5Y, a 3-month term as P3M, and a 4-year, 6-month and 10-day term would be represented as P4Y6M10D.",
-            "x-ob-item-type": "DurationItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "PrecipitationType": {
         "allOf": [
           {
@@ -5292,21 +5130,6 @@
             "x-ob-sample-value": {
               "Value": "Hanwha"
             },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "EquipTypeWarrEndDate": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "End date of the equipment warranty.",
-            "x-ob-item-type": "DateItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
             "x-ob-item-type-group": ""
           }
         ]
@@ -5468,21 +5291,6 @@
           }
         ]
       },
-      "ModulePerfWarrGuaranteedOutput": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Description of the amount of production guaranteed by a solar panel performance warranty, which will guarantee a percentage of production depending on the age of the module. For example, guarantees 80% production after 25 years.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "FilterIrradStabilityMax": {
         "allOf": [
           {
@@ -5628,21 +5436,6 @@
               "Unit": "W_per_sqm",
               "Value": 150
             },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "EquipTypeWarrStartDate": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Start date of the equipment warranty.",
-            "x-ob-item-type": "DateItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
             "x-ob-item-type-group": ""
           }
         ]
@@ -6672,38 +6465,6 @@
           }
         ]
       },
-      "ProductWarranty": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The length of a product Warranty in Years",
-            "x-ob-item-type": "DurationItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "PowerWarranty": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "A description of the warranty for power output if applicable",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "12 Years of 90.2% Output Power, 30 Years of 80.7% Output Power"
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "PowerMaximum": {
         "allOf": [
           {
@@ -7207,12 +6968,6 @@
             "type": "object",
             "description": "A solar module product",
             "properties": {
-              "ProductWarranty": {
-                "$ref": "#/components/schemas/ProductWarranty"
-              },
-              "PowerWarranty": {
-                "$ref": "#/components/schemas/PowerWarranty"
-              },
               "ModuleEfficiency": {
                 "$ref": "#/components/schemas/ModuleEfficiency"
               },
