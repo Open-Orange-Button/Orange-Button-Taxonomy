@@ -6,9 +6,11 @@ XXXX.0.0
 
 Element changes
 ~~~~~~~~~~~~~~~
+* Removes ProductWarranty, PowerWarranty, EquipTypeWarr, EquipTypeWarrEndDate, EquipTypeWarrOutput, EquipTypeWarrStartDate, EquipTypeWarrStartDateMilestone, EquipTypeWarrTerm, ModuleMaterialsAndWorkmanShipWarrInitiationDate, ModulePerfWarrEndDate, ModulePerfWarrGuaranteedOutput, TrackerMaterialsWorkmanshipWarrExp, TrackerMaterialsWorkmanshipWarrInitiation (:pull:`246`)
 
 Object changes
 ~~~~~~~~~~~~~~
+ * Removes DeviceWarranty (:pull:`246`)
 
 Unit changes
 ~~~~~~~~~~~~
@@ -24,8 +26,8 @@ Testing
 
 Documentation
 ~~~~~~~~~~~~~
- -Adds Usage Tip to Scope object (:pull:`245`)
-
+ * Adds Usage Tip to Scope object (:pull:`245`)
+ * Updates StartTime documentation to share dual usage purposes of StartTime value. (:pull:`247`)
 
 Contributors
 ~~~~~~~~~~~~
