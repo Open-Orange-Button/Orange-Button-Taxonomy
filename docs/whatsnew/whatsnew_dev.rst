@@ -10,7 +10,7 @@ Element changes
 
 Object changes
 ~~~~~~~~~~~~~~
- 8 Removes DeviceWarranty (:pull:`246`)
+ * Removes DeviceWarranty (:pull:`246`)
 
 Unit changes
 ~~~~~~~~~~~~
