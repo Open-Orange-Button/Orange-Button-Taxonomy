@@ -5640,12 +5640,12 @@
         "x-ob-usage-tips": ""
       },
       "Decimals": {
-        "type": "string",
+        "type": "integer",
         "description": "Decimals of the instance element",
         "x-ob-usage-tips": ""
       },
       "Precision": {
-        "type": "string",
+        "type": "integer",
         "description": "Precision of the instance element",
         "x-ob-usage-tips": ""
       },
