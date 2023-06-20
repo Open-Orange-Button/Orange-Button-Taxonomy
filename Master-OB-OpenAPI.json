@@ -9786,6 +9786,12 @@
               },
               "DisplayDescription": {
                 "$ref": "#/components/schemas/DisplayDescription"
+              },
+              "CECPBIMeter": {
+                "$ref": "#/components/schemas/CECPBIMeter"
+              },
+              "CommunicationProtocol": {
+                "$ref": "#/components/schemas/CommunicationProtocol"
               }
             }
           }
@@ -9816,7 +9822,7 @@
           {
             "type": "object",
             "description": "Type of display on a device. ",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "DisplayTypeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -12345,6 +12351,23 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "PV_ST"
+            }
+          }
+        ]
+      },
+      "CECPBIMeter": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "Value that describes whether a meter qualifies for the California Energy Commission Performance Based Incentive. ",
+            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": true
             }
           }
         ]
@@ -18031,6 +18054,43 @@
       "units": {
         "decimal_percent": {
           "label": "Decimal Percent",
+          "description": ""
+        }
+      }
+    },
+    "DisplayTypeItemType": {
+      "description": "",
+      "enums": {
+        "LCD": {
+          "label": "LCD",
+          "description": ""
+        },
+        "RemoteDisplay": {
+          "label": "Remote Display",
+          "description": "Display attached to meter via cable."
+        },
+        "Web": {
+          "label": "Web",
+          "description": "Local Wifi or Internet based connection."
+        },
+        "Other": {
+          "label": "Other",
+          "description": "Used for unique or proprietary displays. "
+        },
+        "Bluetooth": {
+          "label": "Bluetooth",
+          "description": "Display coupled via mobile or laptop application."
+        },
+        "ComputerMonitor": {
+          "label": "ComputerMonitor",
+          "description": ""
+        },
+        "Cyclometer": {
+          "label": "Cyclometer",
+          "description": "Mechanical display. "
+        },
+        "None": {
+          "label": "None",
           "description": ""
         }
       }
