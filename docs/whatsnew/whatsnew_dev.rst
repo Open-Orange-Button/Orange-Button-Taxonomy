@@ -16,6 +16,7 @@ Object changes
 Unit changes
 ~~~~~~~~~~~~
  * Updates JobTypeItemType to SolarAPPJobTypeItemType (:pull:`244`)
+ * Adds IEEE 2030.5 and IEEE 2800 enums to CertificationTypeProductItemType (:pull:`251`)
 
 Bug fixes
 ~~~~~~~~~
