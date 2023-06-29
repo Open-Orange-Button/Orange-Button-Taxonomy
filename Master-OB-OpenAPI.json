@@ -9792,6 +9792,15 @@
               },
               "CommunicationProtocol": {
                 "$ref": "#/components/schemas/CommunicationProtocol"
+              },
+              "DisplayType": {
+                "$ref": "#/components/schemas/DisplayType"
+              },
+              "DisplayProximity": {
+                "$ref": "#/components/schemas/DisplayProximity"
+              },
+              "DisplayIsCECCompliant": {
+                "$ref": "#/components/schemas/DisplayIsCECCompliant"
               }
             }
           }
@@ -9822,9 +9831,9 @@
           {
             "type": "object",
             "description": "Type of display on a device. ",
-            "x-ob-item-type": "DisplayTypeItemType",
+            "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
+            "x-ob-usage-tips": "Designed to be used when DisplayType element does not apply to product. ",
             "x-ob-sample-value": {
               "Value": "LCD"
             }
@@ -12363,6 +12372,59 @@
           {
             "type": "object",
             "description": "Value that describes whether a meter qualifies for the California Energy Commission Performance Based Incentive. ",
+            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": true
+            }
+          }
+        ]
+      },
+      "DisplayType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementArrayString"
+          },
+          {
+            "type": "object",
+            "description": "An array of DisplayTypes supported by the ProdMeter.",
+            "x-ob-item-type": "DisplayTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": [
+                "LCD"
+              ]
+            }
+          }
+        ]
+      },
+      "DisplayProximity": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The location or means by which a display is able to visualize data collected by the product. ",
+            "x-ob-item-type": "DisplayProximityItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Local"
+            }
+          }
+        ]
+      },
+      "DisplayIsCECCompliant": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "Describes whether a display meets CEC (California Energy Commission) compliance codes. ",
             "x-ob-item-type": "BooleanItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -18092,6 +18154,23 @@
         "None": {
           "label": "None",
           "description": ""
+        }
+      }
+    },
+    "DisplayProximityItemType": {
+      "description": "Represents the location/configuration of a display for a Product, specifically the ProdMeter.",
+      "enums": {
+        "Local": {
+          "label": "Local",
+          "description": "The display is attached to or connected physically to the product."
+        },
+        "Web_Virtual": {
+          "label": "Web/Virtual",
+          "description": "The display of information is provided through wirelessly connected devices such as a phone or tablet."
+        },
+        "None": {
+          "label": "None",
+          "description": "The product does not have, nor supports a display."
         }
       }
     }
