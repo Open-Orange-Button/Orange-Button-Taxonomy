@@ -17928,6 +17928,14 @@
         "SPEOM_2021": {
           "label": "SPE O&M Guide v5.0:2021",
           "description": "SolarPower Europe Operations and Maintenance Best Practices Guidelines, ver 5.0, 2021\""
+        },
+        "IEEE2030_5_2018": {
+          "label": "IEEE 2030.5 : 2018",
+          "description": "IEEE Draft Standard for Smart Energy Profile Application Protocol"
+        },
+        "IEEE2800_2022": {
+          "label": "IEEE 2800 : 2022",
+          "description": "IEEE Standard for Interconnection and Interoperability of Inverter-Based Resources (IBRs) Interconnecting with Associated Transmission Electric Power Systems"
         }
       }
     },
