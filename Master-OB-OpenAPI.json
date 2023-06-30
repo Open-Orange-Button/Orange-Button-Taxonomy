@@ -3221,9 +3221,6 @@
           "CertificationName": {
             "$ref": "#/components/schemas/CertificationName"
           },
-          "CertificationTypeProduct": {
-            "$ref": "#/components/schemas/CertificationTypeProduct"
-          },
           "CertificateValue": {
             "$ref": "#/components/schemas/CertificateValue"
           },
@@ -7458,23 +7455,6 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "ABC-123"
-            }
-          }
-        ]
-      },
-      "CertificationTypeProduct": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "A value from the enumerated list of the possible certifications that a product can have.",
-            "x-ob-item-type": "CertificationTypeProductItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "UL1741"
             }
           }
         ]
@@ -16739,103 +16719,6 @@
         },
         "GeneralContractor": {
           "label": "GeneralContractor",
-          "description": ""
-        }
-      }
-    },
-    "CertificationTypeProductItemType": {
-      "description": "",
-      "enums": {
-        "IEC61215": {
-          "label": "IEC61215",
-          "description": ""
-        },
-        "IEC61646": {
-          "label": "IEC61646",
-          "description": ""
-        },
-        "IEC61701": {
-          "label": "IEC61701",
-          "description": ""
-        },
-        "IEC61730": {
-          "label": "IEC61730",
-          "description": ""
-        },
-        "IEC60364_4_41": {
-          "label": "IEC60364-4-41",
-          "description": ""
-        },
-        "IEC62108": {
-          "label": "IEC62108",
-          "description": ""
-        },
-        "UL1703": {
-          "label": "UL1703",
-          "description": ""
-        },
-        "Other": {
-          "label": "Other",
-          "description": ""
-        },
-        "UL1741SA": {
-          "label": "UL1741SA",
-          "description": ""
-        },
-        "IEC61683": {
-          "label": "IEC61683",
-          "description": ""
-        },
-        "IEC62109_1": {
-          "label": "IEC62109-1",
-          "description": ""
-        },
-        "IEC62109_2": {
-          "label": "IEC62109-2",
-          "description": ""
-        },
-        "EN61000": {
-          "label": "EN61000",
-          "description": ""
-        },
-        "IEC61010": {
-          "label": "IEC61010",
-          "description": ""
-        },
-        "UL1741": {
-          "label": "UL1741",
-          "description": ""
-        },
-        "UL2703": {
-          "label": "UL2703",
-          "description": ""
-        },
-        "UL3741": {
-          "label": "UL3741",
-          "description": ""
-        },
-        "UL1973_2_2018": {
-          "label": "UL1973 Edition 2: 2018",
-          "description": ""
-        },
-        "JA12": {
-          "label": "JA12",
-          "description": ""
-        },
-        "CSIP": {
-          "label": "CSIP",
-          "description": "SunSpec 2030.5 Common Smart Inverter Profile (CSIP) Certification"
-        },
-        "CSIP_NRTL": {
-          "label": "CSIP NRTL Attestation",
-          "description": "SunSpec 2030.5 Common Smart Inverter Profile (CSIP) Attestation. Inverter was connected to gateway during compatibility testing."
-        },
-        "UL9540": {
-          "label": "UL9540",
-          "description": ""
-        },
-        "UL1741SB": {
-          "label": "UL1741SB",
           "description": ""
         }
       }
