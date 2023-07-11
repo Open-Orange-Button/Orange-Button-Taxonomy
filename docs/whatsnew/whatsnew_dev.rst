@@ -18,20 +18,20 @@ Unit changes
 ~~~~~~~~~~~~
  * Updates JobTypeItemType to SolarAPPJobTypeItemType (:pull:`244`)
  * Removes CertificationTypeProductItemType (:pull:`255`)
+ * Adds IEEE 2030.5 and IEEE 2800 enums to StandardTypeItemType (:pull:`251`)
 
 Bug fixes
 ~~~~~~~~~
-
+ * Updated datatype of Decimals and Precision primitives to integer. (:pull:`248`)
 
 Testing
-~~~~~~~d
-
-
+~~~~~~~
 
 Documentation
 ~~~~~~~~~~~~~
  * Adds Usage Tip to Scope object (:pull:`245`)
  * Updates StartTime documentation to share dual usage purposes of StartTime value. (:pull:`247`)
+ * Updates documentation for EnergyCapacityNominal (:pull:`249`)
 
 Contributors
 ~~~~~~~~~~~~
