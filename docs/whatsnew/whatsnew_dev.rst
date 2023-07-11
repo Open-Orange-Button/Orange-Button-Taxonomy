@@ -8,12 +8,12 @@ Element changes
 ~~~~~~~~~~~~~~~
  * JobType name changed to SolarAPPJobType (:pull:`244`)
  * Removes ProductWarranty, PowerWarranty, EquipTypeWarr, EquipTypeWarrEndDate, EquipTypeWarrOutput, EquipTypeWarrStartDate, EquipTypeWarrStartDateMilestone, EquipTypeWarrTerm, ModuleMaterialsAndWorkmanShipWarrInitiationDate, ModulePerfWarrEndDate, ModulePerfWarrGuaranteedOutput, TrackerMaterialsWorkmanshipWarrExp, TrackerMaterialsWorkmanshipWarrInitiation (:pull:`246`)
- * Creates CECPBIMeter, DisplayProximity, DisplayType, DisplayIsCECCompliant (:pull:`250`)
+ * Creates CECPBIMeter, DisplayProximity, DisplayTypes, DisplayIsCECCompliant (:pull:`250`)
 
 Object changes
 ~~~~~~~~~~~~~~
  * Removes DeviceWarranty (:pull:`246`)
- * Adds CECPBIMeter, DisplayProximity, DisplayType, DisplayIsCECCompliant and CommunicationProtocol to ProdMeter (:pull:`250`)
+ * Adds CECPBIMeter, DisplayProximity, DisplayTypes, DisplayIsCECCompliant and CommunicationProtocol to ProdMeter (:pull:`250`)
 
 Unit changes
 ~~~~~~~~~~~~
