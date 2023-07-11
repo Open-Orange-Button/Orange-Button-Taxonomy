@@ -8398,7 +8398,7 @@
           },
           {
             "type": "object",
-            "description": "Maximum DC Theoretical Energy Capacity",
+            "description": "The nominal capacity of a storage device. Normally calculated by the manufacturer at a specified rate of discharge. (See manufacturer's data sheet for more details - this is not a standardized practice as of June 2023.)",
             "x-ob-item-type": "EnergyItemType",
             "x-ob-item-type-group": "OBElectricalEnergy",
             "x-ob-usage-tips": "",
