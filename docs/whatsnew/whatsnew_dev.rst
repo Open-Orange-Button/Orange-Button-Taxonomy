@@ -19,7 +19,7 @@ Unit changes
 
 Bug fixes
 ~~~~~~~~~
-
+ * Updated datatype of Decimals and Precision primitives to integer. (:pull:`248`)
 
 Testing
 ~~~~~~~
