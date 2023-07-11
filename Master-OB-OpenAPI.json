@@ -9793,14 +9793,14 @@
               "CommunicationProtocol": {
                 "$ref": "#/components/schemas/CommunicationProtocol"
               },
-              "DisplayType": {
-                "$ref": "#/components/schemas/DisplayType"
-              },
               "DisplayProximity": {
                 "$ref": "#/components/schemas/DisplayProximity"
               },
               "DisplayIsCECCompliant": {
                 "$ref": "#/components/schemas/DisplayIsCECCompliant"
+              },
+              "DisplayTypes": {
+                "$ref": "#/components/schemas/DisplayTypes"
               }
             }
           }
@@ -9835,7 +9835,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "Designed to be used when DisplayType element does not apply to product. ",
             "x-ob-sample-value": {
-              "Value": "LCD"
+              "Value": "Display via Apple Vision Pro"
             }
           }
         ]
@@ -12381,25 +12381,6 @@
           }
         ]
       },
-      "DisplayType": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementArrayString"
-          },
-          {
-            "type": "object",
-            "description": "An array of DisplayTypes supported by the ProdMeter.",
-            "x-ob-item-type": "DisplayTypeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": [
-                "LCD"
-              ]
-            }
-          }
-        ]
-      },
       "DisplayProximity": {
         "allOf": [
           {
@@ -12430,6 +12411,25 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": true
+            }
+          }
+        ]
+      },
+      "DisplayTypes": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementArrayString"
+          },
+          {
+            "type": "object",
+            "description": "An array of DisplayTypes supported by the ProdMeter.",
+            "x-ob-item-type": "DisplayTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": [
+                "LCD"
+              ]
             }
           }
         ]
