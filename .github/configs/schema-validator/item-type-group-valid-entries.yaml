@@ -1,0 +1,9 @@
+functions: [validateItemTypeGroupEntries]
+rules:
+  item-type-group-valid-entries:
+    description: The enums or units in the item type group exist in the item type definition.
+    message: '{{error}}'
+    given: $[x-ob-item-type-groups][*]~
+    severity: error
+    then:
+      function: validateItemTypeGroupEntries

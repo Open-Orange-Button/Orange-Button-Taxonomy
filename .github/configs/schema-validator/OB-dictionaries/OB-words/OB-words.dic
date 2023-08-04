@@ -1,47 +1,52 @@
 0
 ACH//Automated Clearing House
-Addr//Address
 AGM//Absorbent Glass Mat
 AHJ//Authority Having Jurisdiction
 AHJID//Authority Having Jurisdiction Identifier
+Addr//Address
 Amb//Ambient
 App//Application
 ASCE//American Society of Civil Engineers
 ASHRAE//American Society of Heating, Refrigerating and Air-Conditioning
 ASTME//American Society of Tool and Manufacturing Engineers
 AWG//American Wire Gauge
+BIPV//Building-Integrated Photovoltaics
 Backsheet
 Bifacial
-BIPV//Building-Integrated Photovoltaics
+Bool
 Boreal
 Busbar
 CEC//California Energy Commission
 CIGS//Copper Indium Gallium Diselenide Selenium
+CPV//Concentrator Photovoltaic
+CSIP//Common Smart Inverter Profile
 Coeff//Coefficient
 Cond//Condition
 Counterparty
-CPV//Concentrator Photovoltaic
-CSIP//Common Smart Inverter Profile
 Datasheet
 Derate
 Diene
+ESS//Energy Storage System
 EWG//Environmental Working Group
 Facil//Facilitator
-ProForma
 Frameless
-Gauge
-Geocoding
+Forecasted
 GIS//Geographic Information System
 GML//Generalized Markup Language
 GPS//Global Positioning System
+Gauge
+Geocoding
+HJT//Heterojunction Technology
+HOA//Homeowners Association
 Hemiboreal
 Heterojunction
-HOA//Homeowners Association
+Horiz//Horizontal
 IBC//International Building Code
 IEC//International Electric Code
+IECTS//International Electrotechnical Commission Technical Specification
 IFC//International Fire Code
-Insolation
 IRC//International Residential Code
+Insolation
 Irrad//Irradiance
 Irradiance
 JA//Joint Appendix
@@ -50,60 +55,65 @@ KML//Keyhole Markup Language
 Koppen
 LIC//Low Irradiance Condition
 LiPoly
-Maint//Maintenance
 MCER//Risk-Targeted Maximum Considered Earthquake
+MOR//Monthly Operating Report
+MPPT//Maximum Power Point Tracker
+MPPTs//Maximum Power Point Trackers
+Maint//Maintenance
+Majeure
 Megathermal
 Mesothermal
 Meth//Method
 Microthermal
 Modbus
-MOR//Monthly Operating Report
-MPPT//Maximum Power Point Tracker
-MPPTs//Maximum Power Point Trackers
 Nanogrid
 NEC//National Electric Code
 NiMH//Nickel Metal Hydride
 NOCT//Nominal Operating Cell Temperature
+NRTL//Nationally Recognized Testing Laboratory
 Nom//Nominal
 Noncurrent
 Noninterest
 Nonposting
-NRTL//Nationally Recognized Testing Laboratory
 Num//Number
 Obligee
 Offline
 Online
+PPA//Power Purchase Agreement
+PSA//Power Sale Agreement
+PTC//PVUSA Test Condition
+PV//Photovoltaic
+PVUSA//Photovoltaics for Utility Scale Applications
 Perf//Performance
 Polyolefin
 PolySi
-PPA//Power Purchase Agreement
 Pre
-PSA//Power Sale Agreement
-PTC//PVUSA Test Condition
+ProForma
 Purch//Purchase
-PV//Photovoltaic
-PVUSA//Photovoltaics for Utility Scale Applications
 QF//Qualifying Facility
 REbusDCNanogrid
 Reqrmnts//Requirements
 Rpt//Reporting
 Rtg//Rating
+SAEJ//Society of Automotive Engineers J
 SBS//Styrene-Butadiene-Styrene
-Shapefile
+SPEOM//SolarPower Europe Operations and Maintenance
 SPV//Special Purpose Vehicle
 STC//Standard Test Condition
+Shapefile
 Sublimits
 Subpanel
 TCPIP//Transmission Control Protocol/Internet Protocol
-Terpolymer
 TFSI//Thin Film Silicon
 THWN//Thermoplastic Heat and Water Resistant
+Terpolymer
 Transformerless
-Unbilled
+UTF//Unicode Transformation Format
 UUID//Universally Unique Identifier
+Unbilled
 Voc//Open-Circuit Voltage
-Warr//Warranty
 WIFI//Wireless Fidelity
+Warr//Warranty
 Workmans
 Wtd//Weighted
 Zigbee

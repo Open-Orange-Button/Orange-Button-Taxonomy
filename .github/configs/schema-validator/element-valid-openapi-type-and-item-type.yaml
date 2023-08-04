@@ -1,0 +1,15 @@
+functions: [validateItemTypeAgainstElementType]
+rules:
+  element-valid-openapi-type-and-item-type:
+    description: >-
+      Check that the element's OpenAPI type and OB item type are compatible.
+      OpenAPI 'integer' and 'number' types are only compatible with OB unit item types.
+      OpenAPI 'string' type is only compatible with OB enum item types.
+      OpenAPI 'boolean' type is only compatible with the BooleanItemType.
+      For OB item types without enums or units, all schema definitions that use these
+      OB item types should have the same OpenAPI type.
+    message: '{{error}}'
+    given: $.components.schemas[*][?(@property === 'allOf' && @[0].properties && @[0].properties.Value)]
+    severity: error
+    then:
+      function: validateItemTypeAgainstElementType
