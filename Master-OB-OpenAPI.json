@@ -87,6 +87,9 @@
           },
           "SubstituteProducts": {
             "$ref": "#/components/schemas/SubstituteProducts"
+          },
+          "ManufacturerUPC": {
+            "$ref": "#/components/schemas/ManufacturerUPC"
           }
         },
         "x-ob-usage-tips": ""
@@ -12410,6 +12413,23 @@
               "Value": [
                 "LCD"
               ]
+            }
+          }
+        ]
+      },
+      "ManufacturerUPC": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Universal Product Code (UPC) (technically refers to UPC-A) consists of 12 digits that are uniquely assigned to each trade item. This value is assigned by the manufacturer of the trade item/product. ",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "036000291452"
             }
           }
         ]
