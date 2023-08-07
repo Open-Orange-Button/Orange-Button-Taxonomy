@@ -10,6 +10,7 @@ Element changes
  * Removes ProductWarranty, PowerWarranty, EquipTypeWarr, EquipTypeWarrEndDate, EquipTypeWarrOutput, EquipTypeWarrStartDate, EquipTypeWarrStartDateMilestone, EquipTypeWarrTerm, ModuleMaterialsAndWorkmanShipWarrInitiationDate, ModulePerfWarrEndDate, ModulePerfWarrGuaranteedOutput, TrackerMaterialsWorkmanshipWarrExp, TrackerMaterialsWorkmanshipWarrInitiation (:pull:`246`)
  * Removes CertificationTypeProduct (:pull:`255`)
  * Creates CECPBIMeter, DisplayProximity, DisplayTypes, DisplayIsCECCompliant (:pull:`250`)
+ * Creates IdentifierType and adds to AlternativeIdentifier (:pull:`260`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -22,6 +23,7 @@ Unit changes
  * Removes CertificationTypeProductItemType (:pull:`255`)
  * Creates DisplayTypeItemType, DisplayProximityItemType and enumerated lists for both. (:pull:`250`)
  * Adds IEEE 2030.5 and IEEE 2800 enums to StandardTypeItemType (:pull:`251`)
+ * Adds IdentifierTypeItemType and enums (:pull:`260`)
 
 Bug fixes
 ~~~~~~~~~
