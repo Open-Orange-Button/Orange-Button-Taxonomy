@@ -9567,6 +9567,9 @@
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
+          },
+          "IdentifierType": {
+            "$ref": "#/components/schemas/IdentifierType"
           }
         }
       },
@@ -12410,6 +12413,23 @@
               "Value": [
                 "LCD"
               ]
+            }
+          }
+        ]
+      },
+      "IdentifierType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of unique identifier used to represent a unique datapoint as the AlternativeIdentifier. ",
+            "x-ob-item-type": "IdentifierTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "UUID"
             }
           }
         ]
@@ -18062,6 +18082,27 @@
         "None": {
           "label": "None",
           "description": "The product does not have, nor supports a display."
+        }
+      }
+    },
+    "IdentifierTypeItemType": {
+      "description": "",
+      "enums": {
+        "UUID": {
+          "label": "UUID",
+          "description": ""
+        },
+        "UPC": {
+          "label": "UPC",
+          "description": ""
+        },
+        "ProdCode": {
+          "label": "ProdCode",
+          "description": ""
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
         }
       }
     }
