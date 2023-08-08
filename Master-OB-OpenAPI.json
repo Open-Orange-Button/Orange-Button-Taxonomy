@@ -18103,14 +18103,6 @@
         "Other": {
           "label": "Other",
           "description": ""
-        },
-        "NumericID": {
-          "label": "Numeric ID",
-          "description": ""
-        },
-        "StringID": {
-          "label": "String ID",
-          "description": ""
         }
       }
     }
