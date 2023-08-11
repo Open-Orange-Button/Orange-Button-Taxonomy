@@ -1538,6 +1538,9 @@
           },
           "Scope": {
             "$ref": "#/components/schemas/Scope"
+          },
+          "PaymentAccount": {
+            "$ref": "#/components/schemas/PaymentAccount"
           }
         },
         "x-ob-usage-tips": ""
@@ -8149,6 +8152,9 @@
           },
           "AlternativeIdentifiers": {
             "$ref": "#/components/schemas/AlternativeIdentifiers"
+          },
+          "PaymentAccounts": {
+            "$ref": "#/components/schemas/PaymentAccounts"
           }
         }
       },
@@ -12413,6 +12419,85 @@
             }
           }
         ]
+      },
+      "PaymentAccount": {
+        "type": "object",
+        "description": "The named account at the payment processor that can be used to fund the transaction. ",
+        "properties": {
+          "PaymentToken": {
+            "$ref": "#/components/schemas/PaymentToken"
+          },
+          "PaymentAccountName": {
+            "$ref": "#/components/schemas/PaymentAccountName"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
+          },
+          "Tags": {
+            "$ref": "#/components/schemas/Tags"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          }
+        }
+      },
+      "PaymentToken": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The token assigned by the payment processor to represent a previously stored payment method. This value should not contain any information that is subject to Payment Card Industry (PCI) compliance.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "tok_1Ne36S2eZvKYlo2CsVv8aURt"
+            }
+          }
+        ]
+      },
+      "PaymentAccountName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The name of the account that is meaningful to the person making the payment. This does not need to be unique or meaningful to anyone else. This value is not subject to Payment Card Industry (PCI) compliance.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "MyBusinessCard"
+            }
+          }
+        ]
+      },
+      "PaymentAmount": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "This value represents the expected amount of the payment. Is not subject to Payment Card Industry (PCI) compliance.",
+            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type-group": "OBMonetary",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "USD",
+              "Value": 45.99
+            }
+          }
+        ]
+      },
+      "PaymentAccounts": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PaymentAccount"
+        }
       }
     }
   },
