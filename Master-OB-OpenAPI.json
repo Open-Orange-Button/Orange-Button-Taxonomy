@@ -2964,27 +2964,6 @@
           "$ref": "#/components/schemas/AccountBalance"
         }
       },
-      "MonthlyOperatingReport": {
-        "type": "object",
-        "description": "The Monthly Operating Report Data",
-        "properties": {
-          "AccountBalances": {
-            "$ref": "#/components/schemas/AccountBalances"
-          },
-          "AgingBuckets": {
-            "$ref": "#/components/schemas/AgingBuckets"
-          },
-          "SiteID": {
-            "$ref": "#/components/schemas/SiteID"
-          },
-          "Contacts": {
-            "$ref": "#/components/schemas/Contacts"
-          },
-          "EnergyConsumptions": {
-            "$ref": "#/components/schemas/EnergyConsumptions"
-          }
-        }
-      },
       "AgingBucket": {
         "type": "object",
         "description": "Sum of the aging amounts of transactions for a particular time period",
@@ -15147,23 +15126,6 @@
           "description": ""
         },
         "High": {
-          "label": "",
-          "description": ""
-        }
-      }
-    },
-    "MORLevelItemType": {
-      "description": "",
-      "enums": {
-        "SiteLevel": {
-          "label": "",
-          "description": ""
-        },
-        "FundLevel": {
-          "label": "",
-          "description": ""
-        },
-        "ProjectLevel": {
           "label": "",
           "description": ""
         }
