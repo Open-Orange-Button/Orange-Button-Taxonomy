@@ -1539,8 +1539,8 @@
           "Scope": {
             "$ref": "#/components/schemas/Scope"
           },
-          "PaymentAccount": {
-            "$ref": "#/components/schemas/PaymentAccount"
+          "PaymentMethod": {
+            "$ref": "#/components/schemas/PaymentMethod"
           }
         },
         "x-ob-usage-tips": ""
@@ -12420,27 +12420,6 @@
           }
         ]
       },
-      "PaymentAccount": {
-        "type": "object",
-        "description": "The named account at the payment processor that can be used to fund the transaction. ",
-        "properties": {
-          "PaymentToken": {
-            "$ref": "#/components/schemas/PaymentToken"
-          },
-          "PaymentAccountName": {
-            "$ref": "#/components/schemas/PaymentAccountName"
-          },
-          "AlternativeIdentifiers": {
-            "$ref": "#/components/schemas/AlternativeIdentifiers"
-          },
-          "Tags": {
-            "$ref": "#/components/schemas/Tags"
-          },
-          "Comments": {
-            "$ref": "#/components/schemas/Comments"
-          }
-        }
-      },
       "PaymentToken": {
         "allOf": [
           {
@@ -12458,7 +12437,34 @@
           }
         ]
       },
-      "PaymentAccountName": {
+      "PaymentAccounts": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PaymentMethod"
+        }
+      },
+      "PaymentMethod": {
+        "description": "The named method of payment(s) at the payment processor that can be used to fund the transaction(s). Used for expenses related to a task, non-payroll related payments and other payments that may not be included in existing contractual payments.",
+        "properties": {
+          "PaymentToken": {
+            "$ref": "#/components/schemas/PaymentToken"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
+          },
+          "Tags": {
+            "$ref": "#/components/schemas/Tags"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "PaymentMethodName": {
+            "$ref": "#/components/schemas/PaymentMethodName"
+          }
+        },
+        "type": "object"
+      },
+      "PaymentMethodName": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementString"
@@ -12474,30 +12480,6 @@
             }
           }
         ]
-      },
-      "PaymentAmount": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "This value represents the expected amount of the payment. Is not subject to Payment Card Industry (PCI) compliance.",
-            "x-ob-item-type": "MonetaryItemType",
-            "x-ob-item-type-group": "OBMonetary",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "USD",
-              "Value": 45.99
-            }
-          }
-        ]
-      },
-      "PaymentAccounts": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/PaymentAccount"
-        }
       }
     }
   },
