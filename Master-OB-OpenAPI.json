@@ -87,6 +87,9 @@
           },
           "SubstituteProducts": {
             "$ref": "#/components/schemas/SubstituteProducts"
+          },
+          "ManufacturerUPC": {
+            "$ref": "#/components/schemas/ManufacturerUPC"
           }
         },
         "x-ob-usage-tips": ""
@@ -2959,27 +2962,6 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/AccountBalance"
-        }
-      },
-      "MonthlyOperatingReport": {
-        "type": "object",
-        "description": "The Monthly Operating Report Data",
-        "properties": {
-          "AccountBalances": {
-            "$ref": "#/components/schemas/AccountBalances"
-          },
-          "AgingBuckets": {
-            "$ref": "#/components/schemas/AgingBuckets"
-          },
-          "SiteID": {
-            "$ref": "#/components/schemas/SiteID"
-          },
-          "Contacts": {
-            "$ref": "#/components/schemas/Contacts"
-          },
-          "EnergyConsumptions": {
-            "$ref": "#/components/schemas/EnergyConsumptions"
-          }
         }
       },
       "AgingBucket": {
@@ -12433,6 +12415,22 @@
             }
           }
         ]
+      },
+        "ManufacturerUPC": {
+          "allOf": [
+            {
+              "$ref": "#/components/schemas/TaxonomyElementString"
+            },
+            {
+            "description": "Universal Product Code (UPC) (technically refers to UPC-A) consists of 12 digits that are uniquely assigned to each trade item. This value is assigned by the manufacturer of the trade item/product. ",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "036000291452"
+            }
+          }
+        ]
       }
     }
   },
@@ -15147,23 +15145,6 @@
           "description": ""
         },
         "High": {
-          "label": "",
-          "description": ""
-        }
-      }
-    },
-    "MORLevelItemType": {
-      "description": "",
-      "enums": {
-        "SiteLevel": {
-          "label": "",
-          "description": ""
-        },
-        "FundLevel": {
-          "label": "",
-          "description": ""
-        },
-        "ProjectLevel": {
           "label": "",
           "description": ""
         }

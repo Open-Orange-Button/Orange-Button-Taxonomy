@@ -11,11 +11,14 @@ Element changes
  * Removes CertificationTypeProduct (:pull:`255`)
  * Creates CECPBIMeter, DisplayProximity, DisplayTypes, DisplayIsCECCompliant (:pull:`250`)
  * Creates IdentifierType and adds to AlternativeIdentifier (:pull:`260`)
+ * Creates ManufacturerUPC (:pull:`259`)
 
 Object changes
 ~~~~~~~~~~~~~~
  * Removes DeviceWarranty (:pull:`246`)
  * Adds CECPBIMeter, DisplayProximity, DisplayTypes, DisplayIsCECCompliant and CommunicationProtocol to ProdMeter (:pull:`250`)
+ * Removes old MonthlyOperatingReport, replaced by OperatingReport (:pull:`257`)
+ * Adds ManufacturerUPC to Product (:pull:`259`)
 
 Unit changes
 ~~~~~~~~~~~~
@@ -24,6 +27,7 @@ Unit changes
  * Creates DisplayTypeItemType, DisplayProximityItemType and enumerated lists for both. (:pull:`250`)
  * Adds IEEE 2030.5 and IEEE 2800 enums to StandardTypeItemType (:pull:`251`)
  * Adds IdentifierTypeItemType and enums (:pull:`260`)
+ * Removes MORLevelItemType (:pull:`257`)
 
 Bug fixes
 ~~~~~~~~~
