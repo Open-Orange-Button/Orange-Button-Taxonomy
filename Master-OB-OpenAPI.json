@@ -87,6 +87,9 @@
           },
           "SubstituteProducts": {
             "$ref": "#/components/schemas/SubstituteProducts"
+          },
+          "ManufacturerUPC": {
+            "$ref": "#/components/schemas/ManufacturerUPC"
           }
         },
         "x-ob-usage-tips": ""
@@ -2962,27 +2965,6 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/AccountBalance"
-        }
-      },
-      "MonthlyOperatingReport": {
-        "type": "object",
-        "description": "The Monthly Operating Report Data",
-        "properties": {
-          "AccountBalances": {
-            "$ref": "#/components/schemas/AccountBalances"
-          },
-          "AgingBuckets": {
-            "$ref": "#/components/schemas/AgingBuckets"
-          },
-          "SiteID": {
-            "$ref": "#/components/schemas/SiteID"
-          },
-          "Contacts": {
-            "$ref": "#/components/schemas/Contacts"
-          },
-          "EnergyConsumptions": {
-            "$ref": "#/components/schemas/EnergyConsumptions"
-          }
         }
       },
       "AgingBucket": {
@@ -8152,6 +8134,9 @@
           },
           "AlternativeIdentifiers": {
             "$ref": "#/components/schemas/AlternativeIdentifiers"
+          },
+          "PaymentMethods": {
+            "$ref": "#/components/schemas/PaymentMethods"
           }
         }
       },
@@ -9570,6 +9555,9 @@
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
+          },
+          "IdentifierType": {
+            "$ref": "#/components/schemas/IdentifierType"
           }
         }
       },
@@ -12434,6 +12422,23 @@
           }
         ]
       },
+      "IdentifierType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of unique identifier used to represent a unique datapoint as the AlternativeIdentifier. ",
+            "x-ob-item-type": "IdentifierTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "UUID"
+            }
+          }
+        ]
+      },
       "PaymentMethod": {
         "description": "The named method of payment(s) at the payment processor that can be used to fund the transaction(s). Used for expenses related to a task, non-payroll related payments and other payments that may not be included in existing contractual payments.",
         "properties": {
@@ -12468,6 +12473,23 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "MyBusinessCard"
+            }
+          }
+        ]
+      },
+      "ManufacturerUPC": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Universal Product Code (UPC) (technically refers to UPC-A) consists of 12 digits that are uniquely assigned to each trade item. This value is assigned by the manufacturer of the trade item/product. ",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "036000291452"
             }
           }
         ]
@@ -15191,23 +15213,6 @@
           "description": ""
         },
         "High": {
-          "label": "",
-          "description": ""
-        }
-      }
-    },
-    "MORLevelItemType": {
-      "description": "",
-      "enums": {
-        "SiteLevel": {
-          "label": "",
-          "description": ""
-        },
-        "FundLevel": {
-          "label": "",
-          "description": ""
-        },
-        "ProjectLevel": {
           "label": "",
           "description": ""
         }
@@ -18126,6 +18131,27 @@
         "None": {
           "label": "None",
           "description": "The product does not have, nor supports a display."
+        }
+      }
+    },
+    "IdentifierTypeItemType": {
+      "description": "",
+      "enums": {
+        "UUID": {
+          "label": "UUID",
+          "description": ""
+        },
+        "UPC": {
+          "label": "UPC",
+          "description": ""
+        },
+        "ProdCode": {
+          "label": "ProdCode",
+          "description": ""
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
         }
       }
     }
