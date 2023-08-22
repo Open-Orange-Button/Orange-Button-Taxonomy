@@ -8152,9 +8152,6 @@
           },
           "AlternativeIdentifiers": {
             "$ref": "#/components/schemas/AlternativeIdentifiers"
-          },
-          "PaymentAccounts": {
-            "$ref": "#/components/schemas/PaymentAccounts"
           }
         }
       },
@@ -12437,12 +12434,6 @@
           }
         ]
       },
-      "PaymentAccounts": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/PaymentMethod"
-        }
-      },
       "PaymentMethod": {
         "description": "The named method of payment(s) at the payment processor that can be used to fund the transaction(s). Used for expenses related to a task, non-payroll related payments and other payments that may not be included in existing contractual payments.",
         "properties": {
@@ -12480,6 +12471,12 @@
             }
           }
         ]
+      },
+      "PaymentMethods": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PaymentMethod"
+        }
       }
     }
   },
