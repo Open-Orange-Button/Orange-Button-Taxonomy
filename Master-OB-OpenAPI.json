@@ -9944,6 +9944,9 @@
           },
           "CustomElements": {
             "$ref": "#/components/schemas/CustomElements"
+          },
+          "SystemState": {
+            "$ref": "#/components/schemas/SystemState"
           }
         }
       },
@@ -12477,21 +12480,6 @@
           }
         ]
       },
-      "ProjectStatus": {
-        "description": "A summary of a project's status at a moment in time.",
-        "properties": {
-          "IsCancelled": {
-            "$ref": "#/components/schemas/IsCancelled"
-          },
-          "IsPaused": {
-            "$ref": "#/components/schemas/IsPaused"
-          },
-          "Stage": {
-            "$ref": "#/components/schemas/Stage"
-          }
-        },
-        "type": "object"
-      },
       "SystemState": {
         "allOf": [
           {
@@ -12506,6 +12494,21 @@
             "x-ob-sample-value": {}
           }
         ]
+      },
+      "SystemStatus": {
+        "description": "A summary of a system's status at a moment in time.",
+        "properties": {
+          "IsCancelled": {
+            "$ref": "#/components/schemas/IsCancelled"
+          },
+          "IsPaused": {
+            "$ref": "#/components/schemas/IsPaused"
+          },
+          "Stage": {
+            "$ref": "#/components/schemas/Stage"
+          }
+        },
+        "type": "object"
       }
     }
   },
