@@ -10,6 +10,7 @@ Element changes
  * Removes ProductWarranty, PowerWarranty, EquipTypeWarr, EquipTypeWarrEndDate, EquipTypeWarrOutput, EquipTypeWarrStartDate, EquipTypeWarrStartDateMilestone, EquipTypeWarrTerm, ModuleMaterialsAndWorkmanShipWarrInitiationDate, ModulePerfWarrEndDate, ModulePerfWarrGuaranteedOutput, TrackerMaterialsWorkmanshipWarrExp, TrackerMaterialsWorkmanshipWarrInitiation (:pull:`246`)
  * Removes CertificationTypeProduct (:pull:`255`)
  * Creates CECPBIMeter, DisplayProximity, DisplayTypes, DisplayIsCECCompliant (:pull:`250`)
+ * Creates PaymentToken, PaymentMethodName (:pull:`262`)
  * Creates IdentifierType and adds to AlternativeIdentifier (:pull:`260`)
  * Creates ManufacturerUPC (:pull:`259`)
 
@@ -17,6 +18,7 @@ Object changes
 ~~~~~~~~~~~~~~
  * Removes DeviceWarranty (:pull:`246`)
  * Adds CECPBIMeter, DisplayProximity, DisplayTypes, DisplayIsCECCompliant and CommunicationProtocol to ProdMeter (:pull:`250`)
+ * Creates PaymentMethod object (:pull:`262`)
  * Removes old MonthlyOperatingReport, replaced by OperatingReport (:pull:`257`)
  * Adds ManufacturerUPC to Product (:pull:`259`)
 

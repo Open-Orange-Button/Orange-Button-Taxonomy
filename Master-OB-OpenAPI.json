@@ -1541,6 +1541,9 @@
           },
           "Scope": {
             "$ref": "#/components/schemas/Scope"
+          },
+          "PaymentMethod": {
+            "$ref": "#/components/schemas/PaymentMethod"
           }
         },
         "x-ob-usage-tips": ""
@@ -8131,6 +8134,9 @@
           },
           "AlternativeIdentifiers": {
             "$ref": "#/components/schemas/AlternativeIdentifiers"
+          },
+          "PaymentMethods": {
+            "$ref": "#/components/schemas/PaymentMethods"
           }
         }
       },
@@ -12399,6 +12405,23 @@
           }
         ]
       },
+      "PaymentToken": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The token assigned by the payment processor to represent a previously stored payment method. This value should not contain any information that is subject to Payment Card Industry (PCI) compliance.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "tok_1Ne36S2eZvKYlo2CsVv8aURt"
+            }
+          }
+        ]
+      },
       "IdentifierType": {
         "allOf": [
           {
@@ -12416,12 +12439,51 @@
           }
         ]
       },
-        "ManufacturerUPC": {
-          "allOf": [
-            {
-              "$ref": "#/components/schemas/TaxonomyElementString"
-            },
-            {
+      "PaymentMethod": {
+        "description": "The named method of payment(s) at the payment processor that can be used to fund the transaction(s). Used for expenses related to a task, non-payroll related payments and other payments that may not be included in existing contractual payments.",
+        "properties": {
+          "PaymentToken": {
+            "$ref": "#/components/schemas/PaymentToken"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
+          },
+          "Tags": {
+            "$ref": "#/components/schemas/Tags"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "PaymentMethodName": {
+            "$ref": "#/components/schemas/PaymentMethodName"
+          }
+        },
+        "type": "object"
+      },
+      "PaymentMethodName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The name of the account that is meaningful to the person making the payment. This does not need to be unique or meaningful to anyone else. This value is not subject to Payment Card Industry (PCI) compliance.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "MyBusinessCard"
+            }
+          }
+        ]
+      },
+      "ManufacturerUPC": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
             "description": "Universal Product Code (UPC) (technically refers to UPC-A) consists of 12 digits that are uniquely assigned to each trade item. This value is assigned by the manufacturer of the trade item/product. ",
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
@@ -12431,6 +12493,12 @@
             }
           }
         ]
+      },
+      "PaymentMethods": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PaymentMethod"
+        }
       }
     }
   },
