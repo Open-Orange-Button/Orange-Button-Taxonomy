@@ -12313,10 +12313,7 @@
         }
       },
       "AvailabilityReports": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/AvailabilityReport"
-        }
+        "description": "An Array of AvailabilityReports object."
       },
       "SolarAPPJobType": {
         "allOf": [
