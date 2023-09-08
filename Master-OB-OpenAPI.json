@@ -12581,6 +12581,75 @@
         },
         "type": "object",
         "x-ob-usage-tips": "Use Stage for the lifecycle stage Value. IsCancelled and IsPaused refer to the Stage value, and can record when a stage is paused or cancelled."
+      },
+      "Node": {
+        "description": "Node in the electrical topology of a circuit",
+        "properties": {
+          "NodeType": {
+            "$ref": "#/components/schemas/NodeType"
+          },
+          "NodeID": {
+            "$ref": "#/components/schemas/NodeID"
+          },
+          "ChildNodeIDs": {
+            "$ref": "#/components/schemas/ChildNodeIDs"
+          }
+        },
+        "type": "object",
+        "x-ob-usage-tips": "* Each relevant component of the electrical installation is represented by a “node”\n* The nodes connections represent the order and structure in which components are connected to each other. \n* The “node” doesn’t represent a single piece of equipment, like a main service panel or an inverter. Instead the node represents a functional component of the equipment itself. \n* Each functional piece should be as “atomic” as possible in its functionality. E.g. even though a breaker has many components within it, a breaker is its smallest functional form. \n* For example a Powerwall+ is composed of the following functional components:\n** AC Output\n** DC Input (aka MPPT)\n** Energy Storage Unit\n* Nodes have an “Enclosing Hardware” property. This allows you to determine which nodes belong to, for example, a certain Powerwall+."
+      },
+      "NodeType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of the electrical topology node type",
+            "x-ob-item-type": "NodeTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Busbar"
+            }
+          }
+        ]
+      },
+      "NodeID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Unique identifier",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "Topology": {
+        "description": "Electrical topology describing a circuit layout; directed graph.",
+        "properties": {
+          "Nodes": {
+            "$ref": "#/components/schemas/Nodes"
+          }
+        },
+        "type": "object"
+      },
+      "ChildNodeIDs": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/NodeID"
+        }
+      },
+      "Nodes": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Node"
+        }
       }
     }
   },
@@ -18191,6 +18260,23 @@
         "Proposed": {
           "label": "Proposed",
           "description": ""
+        }
+      }
+    },
+    "NodeTypeItemType": {
+      "description": "Name of the electrical topology node type",
+      "enums": {
+        "Busbar": {
+          "label": "Busbar",
+          "description": ""
+        },
+        "DCInput": {
+          "label": "DC Input",
+          "description": "MPPT or DC input for batteries on inverters"
+        },
+        "ACOutput": {
+          "label": "AC Output",
+          "description": "AC Output of a generation source"
         }
       }
     }
