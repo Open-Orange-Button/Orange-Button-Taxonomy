@@ -14,6 +14,7 @@ Element changes
  * Creates IdentifierType and adds to AlternativeIdentifier (:pull:`260`)
  * Creates ManufacturerUPC (:pull:`259`)
  * Creates SystemState, IsCancelled, IsPaused, Stage (:pull:`264`)
+ * Creates NodeID, ChildNodeIDs (:pull:`268`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -23,6 +24,8 @@ Object changes
  * Removes old MonthlyOperatingReport, replaced by OperatingReport (:pull:`257`)
  * Adds ManufacturerUPC to Product (:pull:`259`)
  * Adds SystemStatus (:pull:`264`)
+ * Adds Node, Topology, Nodes (:pull:`268`)
+
 Unit changes
 ~~~~~~~~~~~~
  * Updates JobTypeItemType to SolarAPPJobTypeItemType (:pull:`244`)
@@ -33,7 +36,7 @@ Unit changes
  * Removes MORLevelItemType (:pull:`257`)
  * Rename OperationalStatusItemType to SystemStateItemType and edit its values (:pull:`264`)
  * Adds StageItemType (:pull`264`)
-
+ * Adds NodeTypeItemType (:pull:`268`)
 
 Bug fixes
 ~~~~~~~~~
@@ -53,4 +56,5 @@ Contributors
  * Kevin Kirkley (:ghuser:`kevinkirkl3y`)
  * Tyler Hagen (:ghuser:`THagen-BB`)
  * Cliff Hansen (:ghuser:`cwhanse`)
+ * Sebastian Lopez (:ghuser:`sebastian9`)
   
