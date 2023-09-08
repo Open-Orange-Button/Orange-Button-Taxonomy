@@ -13,8 +13,10 @@ AWG//American Wire Gauge
 Backsheet
 Bifacial
 BIPV//Building-Integrated Photovoltaics
+Bluetooth
 Boreal
 Busbar
+Cancelled
 CEC//California Energy Commission
 CIGS//Copper Indium Gallium Diselenide Selenium
 Coeff//Coefficient
@@ -25,9 +27,10 @@ CSIP//Common Smart Inverter Profile
 Datasheet
 Derate
 Diene
+ESS//Energy Storage System
 EWG//Environmental Working Group
 Facil//Facilitator
-ProForma
+Forecasted
 Frameless
 Gauge
 Geocoding
@@ -38,6 +41,7 @@ Hemiboreal
 Heterojunction
 HOA//Homeowners Association
 IBC//International Building Code
+ID//Identifier
 IEC//International Electric Code
 IFC//International Fire Code
 Insolation
@@ -48,9 +52,11 @@ JA//Joint Appendix
 JSON//JavaScript Object Notation
 KML//Keyhole Markup Language
 Koppen
+LCD//Liquid Crystal Display
 LIC//Low Irradiance Condition
 LiPoly
 Maint//Maintenance
+Majeure
 MCER//Risk-Targeted Maximum Considered Earthquake
 Megathermal
 Mesothermal
@@ -78,6 +84,7 @@ Polyolefin
 PolySi
 PPA//Power Purchase Agreement
 Pre
+ProForma
 PSA//Power Sale Agreement
 PTC//PVUSA Test Condition
 Purch//Purchase
