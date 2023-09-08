@@ -13,6 +13,7 @@ Element changes
  * Creates PaymentToken, PaymentMethodName (:pull:`262`)
  * Creates IdentifierType and adds to AlternativeIdentifier (:pull:`260`)
  * Creates ManufacturerUPC (:pull:`259`)
+ * Creates SystemState, IsCancelled, IsPaused, Stage (:pull:`264`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -21,7 +22,7 @@ Object changes
  * Creates PaymentMethod object (:pull:`262`)
  * Removes old MonthlyOperatingReport, replaced by OperatingReport (:pull:`257`)
  * Adds ManufacturerUPC to Product (:pull:`259`)
-
+ * Adds SystemStatus (:pull:`264`)
 Unit changes
 ~~~~~~~~~~~~
  * Updates JobTypeItemType to SolarAPPJobTypeItemType (:pull:`244`)
@@ -30,6 +31,9 @@ Unit changes
  * Adds IEEE 2030.5 and IEEE 2800 enums to StandardTypeItemType (:pull:`251`)
  * Adds IdentifierTypeItemType and enums (:pull:`260`)
  * Removes MORLevelItemType (:pull:`257`)
+ * Rename OperationalStatusItemType to SystemStateItemType and edit its values (:pull:`264`)
+ * Adds StageItemType (:pull`264`)
+
 
 Bug fixes
 ~~~~~~~~~

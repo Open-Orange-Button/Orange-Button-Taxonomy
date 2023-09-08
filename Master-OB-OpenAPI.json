@@ -1717,7 +1717,7 @@
           {
             "type": "object",
             "description": "The status of the operation of the PVSystem",
-            "x-ob-item-type": "OperationalStatusItemType",
+            "x-ob-item-type": "SystemStateItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Online"
@@ -9950,6 +9950,12 @@
           },
           "CustomElements": {
             "$ref": "#/components/schemas/CustomElements"
+          },
+          "SystemState": {
+            "$ref": "#/components/schemas/SystemState"
+          },
+          "SystemStage": {
+            "$ref": "#/components/schemas/SystemStage"
           }
         }
       },
@@ -12494,11 +12500,87 @@
           }
         ]
       },
+      "IsCancelled": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "True if the associated object (project, process, task, etc.) is Cancelled.",
+            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IsPaused": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "True if the associated object (project, process, task, etc.) is Paused.",
+            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "Stage": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An enumerated value describing a stage in a process",
+            "x-ob-item-type": "StageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "SystemState": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "State of a system at a moment in time. Used primarily for system availability.",
+            "x-ob-item-type": "SystemStateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
       "PaymentMethods": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/PaymentMethod"
         }
+      },
+      "SystemStage": {
+        "description": "The lifecycle stage of a system.",
+        "properties": {
+          "IsCancelled": {
+            "$ref": "#/components/schemas/IsCancelled"
+          },
+          "IsPaused": {
+            "$ref": "#/components/schemas/IsPaused"
+          },
+          "Stage": {
+            "$ref": "#/components/schemas/Stage"
+          }
+        },
+        "type": "object",
+        "x-ob-usage-tips": "Use Stage for the lifecycle stage Value. IsCancelled and IsPaused refer to the Stage value, and can record when a stage is paused or cancelled."
       }
     }
   },
@@ -15714,71 +15796,15 @@
         }
       }
     },
-    "OperationalStatusItemType": {
+    "SystemStateItemType": {
       "description": "",
       "enums": {
-        "Online": {
-          "label": "Online",
-          "description": ""
-        },
-        "Offline": {
-          "label": "Offline",
-          "description": ""
-        },
-        "Curtailed": {
-          "label": "Curtailed",
-          "description": ""
-        },
-        "Emergency": {
-          "label": "Emergency",
-          "description": ""
-        },
-        "Grid": {
-          "label": "Grid",
-          "description": ""
-        },
-        "Islanded": {
-          "label": "Islanded",
-          "description": ""
-        },
-        "Shutdown": {
-          "label": "Shutdown",
-          "description": ""
-        },
-        "Standby": {
-          "label": "Standby",
-          "description": ""
-        },
-        "UnderMaintenance": {
-          "label": "Under Maintenance",
-          "description": ""
-        },
-        "CommunicationFailure": {
-          "label": "Communication Failure",
-          "description": ""
-        },
         "InformationUnavailable": {
           "label": "Information Unavailable",
           "description": ""
         },
-        "InformationAvailable": {
-          "label": "Information Available",
-          "description": ""
-        },
-        "Nonoperative": {
-          "label": "Nonoperative",
-          "description": ""
-        },
-        "Operative": {
-          "label": "Operative",
-          "description": ""
-        },
         "ForceMajeure": {
           "label": "Force Majeure",
-          "description": ""
-        },
-        "Suspended": {
-          "label": "Suspended",
           "description": ""
         },
         "ForcedOutage": {
@@ -15789,16 +15815,8 @@
           "label": "Planned Corrective Action",
           "description": ""
         },
-        "ScheduledMaintnence": {
-          "label": "Scheduled Maintnence",
-          "description": ""
-        },
-        "OutOfService": {
-          "label": "Out Of Service",
-          "description": ""
-        },
-        "InService": {
-          "label": "In Service",
+        "ScheduledMaintenance": {
+          "label": "Scheduled Maintenance",
           "description": ""
         },
         "OutOfElectricalSpecification": {
@@ -18151,6 +18169,27 @@
         },
         "Other": {
           "label": "Other",
+          "description": ""
+        }
+      }
+    },
+    "StageItemType": {
+      "description": "A dictionary of terms describing a stage in a process, such as building or installing a PV system.",
+      "enums": {
+        "Commissioned": {
+          "label": "Commissioned",
+          "description": ""
+        },
+        "Decommissioned": {
+          "label": "Decommissioned",
+          "description": ""
+        },
+        "Construction": {
+          "label": "Construction",
+          "description": ""
+        },
+        "Proposed": {
+          "label": "Proposed",
           "description": ""
         }
       }
