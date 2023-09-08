@@ -15815,8 +15815,8 @@
           "label": "Planned Corrective Action",
           "description": ""
         },
-        "ScheduledMaintenence": {
-          "label": "Scheduled Maintenence",
+        "ScheduledMaintenance": {
+          "label": "Scheduled Maintenance",
           "description": ""
         },
         "OutOfElectricalSpecification": {
