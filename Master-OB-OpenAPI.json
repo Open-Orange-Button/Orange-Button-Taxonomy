@@ -9953,6 +9953,9 @@
           },
           "SystemState": {
             "$ref": "#/components/schemas/SystemState"
+          },
+          "SystemStage": {
+            "$ref": "#/components/schemas/SystemStage"
           }
         }
       },
@@ -12557,8 +12560,14 @@
           }
         ]
       },
-      "SystemStatus": {
-        "description": "A summary of a system's status at a moment in time.",
+      "PaymentMethods": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PaymentMethod"
+        }
+      },
+      "SystemStage": {
+        "description": "The lifecycle stage of a system.",
         "properties": {
           "IsCancelled": {
             "$ref": "#/components/schemas/IsCancelled"
@@ -12570,13 +12579,8 @@
             "$ref": "#/components/schemas/Stage"
           }
         },
-        "type": "object"
-      },
-      "PaymentMethods": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/PaymentMethod"
-        }
+        "type": "object",
+        "x-ob-usage-tips": "Use Stage for the lifecycle stage Value. IsCancelled and IsPaused refer to the Stage value, and can record when a stage is paused or cancelled."
       }
     }
   },
