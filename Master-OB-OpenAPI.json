@@ -12626,7 +12626,9 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "89e6e3a1-bb5f-4a3f-9649-0b6c1594593a"
+            }
           }
         ]
       },
