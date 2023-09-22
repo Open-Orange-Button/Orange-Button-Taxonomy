@@ -1720,7 +1720,7 @@
             "x-ob-item-type": "SystemStateItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "Full Capability"
+              "Value": "FullCapability"
             },
             "x-ob-item-type-group": ""
           }
