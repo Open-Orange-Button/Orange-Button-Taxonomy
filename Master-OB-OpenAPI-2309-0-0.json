@@ -90,9 +90,6 @@
           },
           "ManufacturerUPC": {
             "$ref": "#/components/schemas/ManufacturerUPC"
-          },
-          "Topology": {
-            "$ref": "#/components/schemas/Topology"
           }
         },
         "x-ob-usage-tips": ""
@@ -6129,9 +6126,6 @@
               },
               "RevenueGrade": {
                 "$ref": "#/components/schemas/RevenueGrade"
-              },
-              "CurrentFaultSupplyMax": {
-                "$ref": "#/components/schemas/CurrentFaultSupplyMax"
               }
             }
           }
@@ -9962,9 +9956,6 @@
           },
           "SystemStage": {
             "$ref": "#/components/schemas/SystemStage"
-          },
-          "Topology": {
-            "$ref": "#/components/schemas/Topology"
           }
         }
       },
@@ -12590,107 +12581,6 @@
         },
         "type": "object",
         "x-ob-usage-tips": "Use Stage for the lifecycle stage Value. IsCancelled and IsPaused refer to the Stage value, and can record when a stage is paused or cancelled."
-      },
-      "Node": {
-        "description": "Node in the electrical topology of a circuit",
-        "properties": {
-          "NodeType": {
-            "$ref": "#/components/schemas/NodeType"
-          },
-          "NodeID": {
-            "$ref": "#/components/schemas/NodeID"
-          },
-          "ChildNodeIDs": {
-            "$ref": "#/components/schemas/ChildNodeIDs"
-          },
-          "DeviceID": {
-            "$ref": "#/components/schemas/DeviceID"
-          }
-        },
-        "type": "object",
-        "x-ob-usage-tips": "* Each relevant component of the electrical installation is represented by a “node”\n* The nodes connections represent the order and structure in which components are connected to each other. \n* The “node” doesn’t represent a single piece of equipment, like a main service panel or an inverter. Instead the node represents a functional component of the equipment itself. \n* Each functional piece should be as “atomic” as possible in its functionality. E.g. even though a breaker has many components within it, a breaker is its smallest functional form. \n* For example a Powerwall+ is composed of the following functional components:\n** AC Output\n** DC Input (aka MPPT)\n** Energy Storage Unit\n* Nodes have an “Enclosing Hardware” property. This allows you to determine which nodes belong to, for example, a certain Powerwall+."
-      },
-      "NodeType": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Name of the electrical topology node type",
-            "x-ob-item-type": "NodeTypeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "Busbar"
-            }
-          }
-        ]
-      },
-      "NodeID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Unique identifier",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "89e6e3a1-bb5f-4a3f-9649-0b6c1594593a"
-            }
-          }
-        ]
-      },
-      "Topology": {
-        "description": "Electrical topology describing a circuit layout; directed graph.",
-        "properties": {
-          "Nodes": {
-            "$ref": "#/components/schemas/Nodes"
-          }
-        },
-        "type": "object"
-      },
-      "ChildNodeIDs": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/NodeID"
-        }
-      },
-      "Nodes": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/Node"
-        }
-      },
-      "ProdBreaker": {
-        "type": "object",
-        "description": "Circuit Breaker",
-        "properties": {
-          "CurrentACMax": {
-            "$ref": "#/components/schemas/CurrentACMax"
-          },
-          "CurrentFaultSupplyMax": {
-            "$ref": "#/components/schemas/CurrentFaultSupplyMax"
-          }
-        }
-      },
-      "CurrentFaultSupplyMax": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementInteger"
-          },
-          {
-            "type": "object",
-            "description": "Used for the fault current rating of electrical equipment.",
-            "x-ob-item-type": "ElectricCurrentItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "Breakers usually have a short circuit current rating of 10kAIC",
-            "x-ob-sample-value": {}
-          }
-        ]
       }
     }
   },
@@ -18301,107 +18191,6 @@
         "Proposed": {
           "label": "Proposed",
           "description": ""
-        }
-      }
-    },
-    "NodeTypeItemType": {
-      "description": "Name of the electrical topology node type",
-      "enums": {
-        "Root": {
-          "label": "Root",
-          "description": "The root of the directed graph."
-        },
-        "UtilityGrid": {
-          "label": "Utility Grid",
-          "description": "Interconnected network for electricity delivery from producers to consumers"
-        },
-        "Meter": {
-          "label": "Meter",
-          "description": "A device for measuring electricity usage. This can be used for the whole house or for dedicated production sources."
-        },
-        "Busbar": {
-          "label": "Busbar",
-          "description": "Generic conductor onto which breakers are mounted and connected. Busbars are usually found inside electrical panels. One electrical panel can have one or more busbars."
-        },
-        "DCInput": {
-          "label": "DC Input",
-          "description": "MPPT or DC input for batteries on inverters"
-        },
-        "ACOutput": {
-          "label": "AC Output",
-          "description": "AC Output of a generation source"
-        },
-        "EnergyStorageUnit": {
-          "label": "Energy Storage Unit",
-          "description": "This type represents a functional piece of equipment which sole purpose is to store energy. The way in which such unit is connected to other components (aka DC coupled vs AC coupled is not a property of this type)"
-        },
-        "Breaker": {
-          "label": "Breaker",
-          "description": "Circuit Breaker"
-        },
-        "ACDisconnect": {
-          "label": "AC Disconnect",
-          "description": "Standalone disconnect switch for AC circuits."
-        },
-        "DCDisconnect": {
-          "label": "DC Disconnect",
-          "description": "Standalone disconnect switch for DC circuits."
-        },
-        "LowVoltageDisconnect": {
-          "label": "Low Voltage Disconnect",
-          "description": "Disconnect switch that opens the circuit by sending a signal to a relay when the voltage drops below a certain threshold."
-        },
-        "ElectricalLoad": {
-          "label": "Electrical Load",
-          "description": "High level abstraction of a load. This can be a single load or a group of loads."
-        },
-        "Lug": {
-          "label": "Lug",
-          "description": "Generic lug for connecting wires, usually connected to a busbar, but it can also be inside a Microgrid Interconnection Device or other product types."
-        },
-        "PVBranchConnector": {
-          "label": "PV Branch Connector",
-          "description": "Device used to combine series PV strings in parallel."
-        },
-        "Module": {
-          "label": "Module",
-          "description": "Photovoltaic Module"
-        },
-        "Ground": {
-          "label": "Ground",
-          "description": "Node representing the grounding mechanism of the system"
-        },
-        "TapConnector": {
-          "label": "Tap Connector",
-          "description": "Connector used for connecting a conductor in parallel to a feeder conductor. Usually used in \"Load Side Taps\" with piercing connectors."
-        },
-        "BackupRelay": {
-          "label": "Backup Relay",
-          "description": "Relay whose purpose is to isolate home loads for the utility grid in case of a grid outage."
-        },
-        "ManualTransferSwitch": {
-          "label": "Manual Transfer Switch",
-          "description": "Switch used to manually transfer loads between two sources. Usually used to transfer loads between the utility grid and a backup generator."
-        },
-        "LoadSheddingRelay": {
-          "label": "Load Shedding Relay",
-          "description": "Relay whose purpose is to shed loads during a grid outage to avoid the loss of backup sources."
-        },
-        "MiddleCircuitInterrupter": {
-          "label": "Middle Circuit Interrupter",
-          "description": "Rapid shutdown device used with a Photovoltaic array to reduce the voltage in case of rapid shutdown initiation."
-        },
-        "CurrentTransformer": {
-          "label": "Current Transformer",
-          "description": "Current transformer used to measure current in a conductor."
-        },
-        "TerminalJumper": {
-          "label": "Terminal Jumper",
-          "description": "Jumper used to connect two terminals together, allowing for parallel strings to be split prior to the inverter."
-        },
-        "FixedStringVoltageDCDCConverter": {
-          "label": "Fixed String Voltage DC-DC Converter",
-          "description": "DC-DC power optimizer that maintains a fixed string voltage regardless of string characteristics and environmental conditions."
         }
       }
     }
