@@ -90,6 +90,9 @@
           },
           "ManufacturerUPC": {
             "$ref": "#/components/schemas/ManufacturerUPC"
+          },
+          "Topology": {
+            "$ref": "#/components/schemas/Topology"
           }
         },
         "x-ob-usage-tips": ""
@@ -9956,6 +9959,9 @@
           },
           "SystemStage": {
             "$ref": "#/components/schemas/SystemStage"
+          },
+          "Topology": {
+            "$ref": "#/components/schemas/Topology"
           }
         }
       },
@@ -12593,6 +12599,9 @@
           },
           "ChildNodeIDs": {
             "$ref": "#/components/schemas/ChildNodeIDs"
+          },
+          "DeviceID": {
+            "$ref": "#/components/schemas/DeviceID"
           }
         },
         "type": "object",
