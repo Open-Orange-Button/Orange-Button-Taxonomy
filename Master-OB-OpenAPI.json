@@ -92,7 +92,7 @@
             "$ref": "#/components/schemas/ManufacturerUPC"
           }
         },
-        "x-ob-usage-tips": ""
+        "x-ob-usage-tips": "Product is the base class object representing a generalized Product object. Following the Factory Pattern of development: \"A creational pattern that provides an interface for creating objects but allows subclasses to decide which class to instantiate.\" Users are able to instantiate specific product types through the reference of the ProdType element. For example: If a user wants to share data related to an Inverter product. They would set the ProdType of the Product to be \"Inverter\", the resulting instantiated object would be the of a ProdInverter which includes additional data specific to Inverter products."
       },
       "Device": {
         "type": "object",
