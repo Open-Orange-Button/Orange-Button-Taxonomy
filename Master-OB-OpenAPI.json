@@ -6129,6 +6129,9 @@
               },
               "RevenueGrade": {
                 "$ref": "#/components/schemas/RevenueGrade"
+              },
+              "CurrentFaultSupplyMax": {
+                "$ref": "#/components/schemas/CurrentFaultSupplyMax"
               }
             }
           }
