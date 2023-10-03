@@ -12661,6 +12661,33 @@
         "items": {
           "$ref": "#/components/schemas/Node"
         }
+      },
+      "ProdBreaker": {
+        "type": "object",
+        "description": "Circuit Breaker",
+        "properties": {
+          "CurrentACMax": {
+            "$ref": "#/components/schemas/CurrentACMax"
+          },
+          "CurrentFaultSupplyMax": {
+            "$ref": "#/components/schemas/CurrentFaultSupplyMax"
+          }
+        }
+      },
+      "CurrentFaultSupplyMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
+          },
+          {
+            "type": "object",
+            "description": "Used for the fault current rating of electrical equipment.",
+            "x-ob-item-type": "ElectricCurrentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "Breakers usually have a short circuit current rating of 10kAIC",
+            "x-ob-sample-value": {}
+          }
+        ]
       }
     }
   },
