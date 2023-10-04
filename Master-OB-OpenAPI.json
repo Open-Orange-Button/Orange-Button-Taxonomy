@@ -12684,7 +12684,7 @@
           },
           {
             "type": "object",
-            "description": "Used for the fault current rating of electrical equipment.",
+            "description": "Fault current rating of electrical equipment.",
             "x-ob-item-type": "ElectricCurrentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "Breakers usually have a short circuit current rating of 10kAIC",
