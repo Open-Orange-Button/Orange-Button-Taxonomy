@@ -11893,6 +11893,7 @@
           "EnergyACArray": {
             "$ref": "#/components/schemas/EnergyACArray"
           }
+				},
         "x-ob-usage-tips": "EnergyConsumption = EnergyProduction + EnergyImport - EnergyExport"
       },
       "JobStatus": {
