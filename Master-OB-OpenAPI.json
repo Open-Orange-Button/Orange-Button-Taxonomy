@@ -10993,11 +10993,11 @@
           "AvailabilityReport": {
             "$ref": "#/components/schemas/AvailabilityReport"
           },
-          "SoilingRatios": {
-            "$ref": "#/components/schemas/SoilingRatios"
-          },
           "CustomElements": {
             "$ref": "#/components/schemas/CustomElements"
+          },
+          "SoilingReport": {
+            "$ref": "#/components/schemas/SoilingReport"
           }
         },
         "x-ob-usage-tips": "Use EnergyAC for total energy production over the report period, and use Production to contain arrays of measured energy, power, etc. Use ExpectedEnergyModel for modeled energy over the report period calculated from observed weather, and use ForecastEnergyModels for modeled energy using other weather sources (e.g., TMY)."
@@ -11893,32 +11893,8 @@
           "EnergyACArray": {
             "$ref": "#/components/schemas/EnergyACArray"
           }
-        },
+				},
         "x-ob-usage-tips": "EnergyConsumption = EnergyProduction + EnergyImport - EnergyExport"
-      },
-      "SoilingRatio": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The ratio of power from a module or array without cleaning to power at clean conditions.",
-            "x-ob-item-type": "DecimalPercentItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "decimal_percent",
-              "Value": 0.95
-            }
-          }
-        ]
-      },
-      "SoilingRatios": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/SoilingRatio"
-        }
       },
       "JobStatus": {
         "allOf": [
@@ -12581,6 +12557,87 @@
         },
         "type": "object",
         "x-ob-usage-tips": "Use Stage for the lifecycle stage Value. IsCancelled and IsPaused refer to the Stage value, and can record when a stage is paused or cancelled."
+      },
+      "SoilingRatioIrrad": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Ratio of the irradiance measured by a soiled device to the irradiance measured by a clean device.",
+            "x-ob-item-type": "DecimalItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "See also SoilingRatioPower and SoilingRatioEnergy",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "SoilingRatioEnergy": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Ratio of the energy from a soiled device or system to the energy from a clean device or system.",
+            "x-ob-item-type": "DecimalItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "See also SoilingRatioPower and SoilingRatioIrrad",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "SoilingRatioPower": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Ratio of the power from a soiling device to the power from a clean device. Termed \"soiling ratio\" in IEC 61724-1 Ed. 2.0.",
+            "x-ob-item-type": "DecimalItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "See also SoilingRatioIrrad and SoilingRatioEnergy",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "SoilingReport": {
+        "type": "object",
+        "description": "A group of elements for reporting soiling for irradiance, power or energy",
+        "properties": {
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "SoilingRatioEnergyArray": {
+            "$ref": "#/components/schemas/SoilingRatioEnergyArray"
+          },
+          "SoilingRatioIrradArray": {
+            "$ref": "#/components/schemas/SoilingRatioIrradArray"
+          },
+          "SoilingRatioPowerArray": {
+            "$ref": "#/components/schemas/SoilingRatioPowerArray"
+          }
+        }
+      },
+      "SoilingRatioEnergyArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/SoilingRatioEnergy"
+        }
+      },
+      "SoilingRatioIrradArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/SoilingRatioIrrad"
+        }
+      },
+      "SoilingRatioPowerArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/SoilingRatioPower"
+        }
       }
     }
   },
