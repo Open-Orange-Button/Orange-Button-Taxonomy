@@ -11893,7 +11893,7 @@
           "EnergyACArray": {
             "$ref": "#/components/schemas/EnergyACArray"
           }
-				},
+        },
         "x-ob-usage-tips": "EnergyConsumption = EnergyProduction + EnergyImport - EnergyExport"
       },
       "JobStatus": {
@@ -15926,72 +15926,72 @@
     "ProdTypeItemType": {
       "description": "",
       "enums": {
-        "Module": {
-          "label": "Module",
+        "ProdModule": {
+          "label": "ProdModule",
           "description": ""
         },
-        "Optimizer": {
-          "label": "Optimizer",
+        "ProdOptimizer": {
+          "label": "ProdOptimizer",
           "description": ""
         },
-        "DCDisconnectSwitch": {
-          "label": "DCDisconnectSwitch",
+        "ProdDCDisconnectSwitch": {
+          "label": "ProdDCDisconnectSwitch",
           "description": ""
         },
-        "ACDisconnectSwitch": {
-          "label": "ACDisconnectSwitch",
+        "ProdACDisconnectSwitch": {
+          "label": "ProdACDisconnectSwitch",
           "description": ""
         },
-        "Inverter": {
-          "label": "Inverter",
+        "ProdInverter": {
+          "label": "ProdInverter",
           "description": ""
         },
-        "Tracker": {
-          "label": "Tracker",
+        "ProdTracker": {
+          "label": "ProdTracker",
           "description": ""
         },
-        "MetStation": {
-          "label": "MetStation",
+        "ProdMetStation": {
+          "label": "ProdMetStation",
           "description": ""
         },
-        "Transformer": {
-          "label": "Transformer",
+        "ProdTransformer": {
+          "label": "ProdTransformer",
           "description": ""
         },
-        "Battery": {
-          "label": "Battery",
+        "ProdBattery": {
+          "label": "ProdBattery",
           "description": ""
         },
-        "BatteryManagementSystem": {
-          "label": "BatteryManagementSystem",
+        "ProdBatteryManagementSystem": {
+          "label": "ProdBatteryManagementSystem",
           "description": ""
         },
-        "Logger": {
-          "label": "Logger",
+        "ProdLogger": {
+          "label": "ProdLogger",
           "description": ""
         },
-        "Meter": {
-          "label": "Meter",
+        "ProdMeter": {
+          "label": "ProdMeter",
           "description": ""
         },
-        "String": {
-          "label": "String",
+        "ProdString": {
+          "label": "ProdString",
           "description": ""
         },
-        "Mounting": {
-          "label": "Mounting",
+        "ProdMounting": {
+          "label": "ProdMounting",
           "description": ""
         },
-        "Combiner": {
-          "label": "Combiner",
+        "ProdCombiner": {
+          "label": "ProdCombiner",
           "description": ""
         },
-        "Racking": {
-          "label": "Racking",
+        "ProdRacking": {
+          "label": "ProdRacking",
           "description": ""
         },
-        "Wire": {
-          "label": "Wire",
+        "ProdWire": {
+          "label": "ProdWire",
           "description": ""
         }
       }
@@ -17811,6 +17811,10 @@
         },
         "Task": {
           "label": "Task",
+          "description": ""
+        },
+        "Project": {
+          "label": "Project",
           "description": ""
         }
       }
