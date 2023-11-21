@@ -15927,71 +15927,71 @@
       "description": "",
       "enums": {
         "ProdModule": {
-          "label": "ProdModule",
+          "label": "Module",
           "description": ""
         },
         "ProdOptimizer": {
-          "label": "ProdOptimizer",
+          "label": "Optimizer",
           "description": ""
         },
         "ProdDCDisconnectSwitch": {
-          "label": "ProdDCDisconnectSwitch",
+          "label": "DCDisconnectSwitch",
           "description": ""
         },
         "ProdACDisconnectSwitch": {
-          "label": "ProdACDisconnectSwitch",
+          "label": "ACDisconnectSwitch",
           "description": ""
         },
         "ProdInverter": {
-          "label": "ProdInverter",
+          "label": "Inverter",
           "description": ""
         },
         "ProdTracker": {
-          "label": "ProdTracker",
+          "label": "Tracker",
           "description": ""
         },
         "ProdMetStation": {
-          "label": "ProdMetStation",
+          "label": "MetStation",
           "description": ""
         },
         "ProdTransformer": {
-          "label": "ProdTransformer",
+          "label": "Transformer",
           "description": ""
         },
         "ProdBattery": {
-          "label": "ProdBattery",
+          "label": "Battery",
           "description": ""
         },
         "ProdBatteryManagementSystem": {
-          "label": "ProdBatteryManagementSystem",
+          "label": "BatteryManagementSystem",
           "description": ""
         },
         "ProdLogger": {
-          "label": "ProdLogger",
+          "label": "Logger",
           "description": ""
         },
         "ProdMeter": {
-          "label": "ProdMeter",
+          "label": "Meter",
           "description": ""
         },
         "ProdString": {
-          "label": "ProdString",
+          "label": "String",
           "description": ""
         },
         "ProdMounting": {
-          "label": "ProdMounting",
+          "label": "Mounting",
           "description": ""
         },
         "ProdCombiner": {
-          "label": "ProdCombiner",
+          "label": "Combiner",
           "description": ""
         },
         "ProdRacking": {
-          "label": "ProdRacking",
+          "label": "Racking",
           "description": ""
         },
         "ProdWire": {
-          "label": "ProdWire",
+          "label": "Wire",
           "description": ""
         }
       }
