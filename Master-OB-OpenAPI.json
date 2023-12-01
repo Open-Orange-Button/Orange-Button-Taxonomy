@@ -11893,7 +11893,7 @@
           "EnergyACArray": {
             "$ref": "#/components/schemas/EnergyACArray"
           }
-				},
+        },
         "x-ob-usage-tips": "EnergyConsumption = EnergyProduction + EnergyImport - EnergyExport"
       },
       "JobStatus": {
@@ -15926,71 +15926,71 @@
     "ProdTypeItemType": {
       "description": "",
       "enums": {
-        "Module": {
+        "ProdModule": {
           "label": "Module",
           "description": ""
         },
-        "Optimizer": {
+        "ProdOptimizer": {
           "label": "Optimizer",
           "description": ""
         },
-        "DCDisconnectSwitch": {
+        "ProdDCDisconnectSwitch": {
           "label": "DCDisconnectSwitch",
           "description": ""
         },
-        "ACDisconnectSwitch": {
+        "ProdACDisconnectSwitch": {
           "label": "ACDisconnectSwitch",
           "description": ""
         },
-        "Inverter": {
+        "ProdInverter": {
           "label": "Inverter",
           "description": ""
         },
-        "Tracker": {
+        "ProdTracker": {
           "label": "Tracker",
           "description": ""
         },
-        "MetStation": {
+        "ProdMetStation": {
           "label": "MetStation",
           "description": ""
         },
-        "Transformer": {
+        "ProdTransformer": {
           "label": "Transformer",
           "description": ""
         },
-        "Battery": {
+        "ProdBattery": {
           "label": "Battery",
           "description": ""
         },
-        "BatteryManagementSystem": {
+        "ProdBatteryManagementSystem": {
           "label": "BatteryManagementSystem",
           "description": ""
         },
-        "Logger": {
+        "ProdLogger": {
           "label": "Logger",
           "description": ""
         },
-        "Meter": {
+        "ProdMeter": {
           "label": "Meter",
           "description": ""
         },
-        "String": {
+        "ProdString": {
           "label": "String",
           "description": ""
         },
-        "Mounting": {
+        "ProdMounting": {
           "label": "Mounting",
           "description": ""
         },
-        "Combiner": {
+        "ProdCombiner": {
           "label": "Combiner",
           "description": ""
         },
-        "Racking": {
+        "ProdRacking": {
           "label": "Racking",
           "description": ""
         },
-        "Wire": {
+        "ProdWire": {
           "label": "Wire",
           "description": ""
         }
@@ -17811,6 +17811,10 @@
         },
         "Task": {
           "label": "Task",
+          "description": ""
+        },
+        "Project": {
+          "label": "Project",
           "description": ""
         }
       }

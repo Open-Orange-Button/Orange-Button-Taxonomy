@@ -15,7 +15,8 @@ Object changes
 
 Unit changes
 ~~~~~~~~~~~~
-
+ * Updates ProdTypeItemType Enum list to include Prod Prefix on ID of enums  (:pull:`279`)
+ * Adds Project Enum to ScopeTypeItemType enum list (:pull:`279`)
 Bug fixes
 ~~~~~~~~~
 
