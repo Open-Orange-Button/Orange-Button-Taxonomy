@@ -10954,9 +10954,6 @@
           "ExpensesOperating": {
             "$ref": "#/components/schemas/ExpensesOperating"
           },
-          "EnergyACCurtailed": {
-            "$ref": "#/components/schemas/EnergyACCurtailed"
-          },
           "Insolation": {
             "$ref": "#/components/schemas/Insolation"
           },
@@ -10998,6 +10995,9 @@
           },
           "SoilingReport": {
             "$ref": "#/components/schemas/SoilingReport"
+          },
+          "EnergyLosses": {
+            "$ref": "#/components/schemas/EnergyLosses"
           }
         },
         "x-ob-usage-tips": "Use EnergyAC for total energy production over the report period, and use Production to contain arrays of measured energy, power, etc. Use ExpectedEnergyModel for modeled energy over the report period calculated from observed weather, and use ForecastEnergyModels for modeled energy using other weather sources (e.g., TMY)."
@@ -11135,24 +11135,6 @@
             "x-ob-sample-value": {
               "Unit": "USD",
               "Value": 1000
-            }
-          }
-        ]
-      },
-      "EnergyACCurtailed": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Energy (AC) that is lost due to curtailment in a time period",
-            "x-ob-item-type": "EnergyItemType",
-            "x-ob-item-type-group": "OBElectricalEnergy",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "kWh",
-              "Value": 20.45
             }
           }
         ]
@@ -12638,6 +12620,80 @@
         "items": {
           "$ref": "#/components/schemas/SoilingRatioPower"
         }
+      },
+      "LossReport": {
+        "type": "object",
+        "description": "Energy losses for a period of time. Energy losses should be distinct and non-duplicative, so that EnergyACMeas + Sum of losses = EnergyAC modeled",
+        "properties": {}
+      },
+      "EnergyLoss": {
+        "type": "object",
+        "description": "A collection of terms that describe an energy loss for photovoltaic systems.",
+        "properties": {
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "EnergyACLoss": {
+            "$ref": "#/components/schemas/EnergyACLoss"
+          },
+          "EnergyACLossReason": {
+            "$ref": "#/components/schemas/EnergyACLossReason"
+          },
+          "IsRecoverable": {
+            "$ref": "#/components/schemas/IsRecoverable"
+          }
+        }
+      },
+      "EnergyACLoss": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Energy production lost",
+            "x-ob-item-type": "EnergyItemType",
+            "x-ob-item-type-group": "OBElectricalEnergy",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "EnergyACLossReason": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Reason for an energy loss",
+            "x-ob-item-type": "EnergyLossItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "EnergyLosses": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/EnergyLoss"
+        }
+      },
+      "IsRecoverable": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "True if energy loss is recoverable by maintenance or other action.",
+            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
       }
     }
   },
@@ -18252,6 +18308,51 @@
         "Proposed": {
           "label": "Proposed",
           "description": ""
+        }
+      }
+    },
+    "EnergyLossItemType": {
+      "description": "An enumeration of causes for energy loss",
+      "enums": {
+        "Curtail": {
+          "label": "Forced curtailment",
+          "description": "Energy loss due to external requirement to curtail production."
+        },
+        "Failure": {
+          "label": "Failure",
+          "description": "Energy loss due to equipment failure."
+        },
+        "ForceMajeure": {
+          "label": "Force majeure",
+          "description": "Energy loss due to force majeure."
+        },
+        "Outage": {
+          "label": "Grid outage",
+          "description": "Energy loss due to grid outage."
+        },
+        "Inoperative": {
+          "label": "Inoperative",
+          "description": "Energy loss due to inoperative equipment."
+        },
+        "Maintenance": {
+          "label": "Maintenance",
+          "description": "Energy loss due to equipment being offline for maintenance."
+        },
+        "Snow": {
+          "label": "Snow",
+          "description": "Energy loss due to snow."
+        },
+        "Soiling": {
+          "label": "Soiling",
+          "description": "Energy loss due to soiling."
+        },
+        "Vegetation": {
+          "label": "Vegetation curtailment",
+          "description": "Energy loss due to shading from vegetation."
+        },
+        "WindStow": {
+          "label": "Wind stow",
+          "description": "Energy loss due to trackers moving to stow position."
         }
       }
     }
