@@ -18326,7 +18326,11 @@
           "label": "Force majeure",
           "description": "Energy loss due to force majeure."
         },
-        "Outage": {
+        "GridDisturbance": {
+          "label": "Grid disturbance",
+          "description": "Energy production lost due to grid disturbances"
+        },
+        "GridOutage": {
           "label": "Grid outage",
           "description": "Energy loss due to grid outage."
         },
@@ -18338,6 +18342,18 @@
           "label": "Maintenance",
           "description": "Energy loss due to equipment being offline for maintenance."
         },
+        "Offline": {
+          "label": "Offline",
+          "description": "Energy production loss due to equipment being offline"
+        },
+  			"Other": {
+          "label": "Other",
+          "description": "Energy production loss due to other causes"
+        },
+        "Safety": {
+          "label": "Safety",
+          "description": "Energy production loss due to safety concerns"
+        },
         "Snow": {
           "label": "Snow",
           "description": "Energy loss due to snow."
@@ -18347,14 +18363,14 @@
           "description": "Energy loss due to soiling."
         },
         "Vegetation": {
-          "label": "Vegetation curtailment",
+          "label": "Vegetation",
           "description": "Energy loss due to shading from vegetation."
         },
         "WindStow": {
           "label": "Wind stow",
           "description": "Energy loss due to trackers moving to stow position."
         }
-      }
+			}
     }
   },
   "x-ob-item-type-groups": {
