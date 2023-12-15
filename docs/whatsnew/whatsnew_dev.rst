@@ -8,7 +8,7 @@ Element changes
 ~~~~~~~~~~~~~~~
 * Removes SoilingRatio, SoilingRatios (:pull:`274`)
 * Adds SoilingRatioEnergy, SoilingRatioIrrad, SoilingRatioPower, and corresponding Arrays (:pull:`274`)
-* Adds EnergyACLoss, EnergyACLossReason, IsRecoverable (:pull:`XXX`)
+* Adds EnergyACLoss, EnergyACLossReason, IsRecoverable. Removes EnergyACCurtailed (:pull:`XXX`)
 
 Object changes
 ~~~~~~~~~~~~~~
