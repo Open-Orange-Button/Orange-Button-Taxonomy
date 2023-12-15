@@ -10996,8 +10996,8 @@
           "SoilingReport": {
             "$ref": "#/components/schemas/SoilingReport"
           },
-          "EnergyLosses": {
-            "$ref": "#/components/schemas/EnergyLosses"
+          "LossReport": {
+            "$ref": "#/components/schemas/LossReport"
           }
         },
         "x-ob-usage-tips": "Use EnergyAC for total energy production over the report period, and use Production to contain arrays of measured energy, power, etc. Use ExpectedEnergyModel for modeled energy over the report period calculated from observed weather, and use ForecastEnergyModels for modeled energy using other weather sources (e.g., TMY)."
@@ -12624,7 +12624,14 @@
       "LossReport": {
         "type": "object",
         "description": "Energy losses for a period of time. Energy losses should be distinct and non-duplicative, so that EnergyACMeas + Sum of losses = EnergyAC modeled",
-        "properties": {}
+        "properties": {
+          "EnergyLosses": {
+            "$ref": "#/components/schemas/EnergyLosses"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          }
+        }
       },
       "EnergyLoss": {
         "type": "object",
@@ -12636,11 +12643,14 @@
           "EnergyACLoss": {
             "$ref": "#/components/schemas/EnergyACLoss"
           },
-          "EnergyACLossReason": {
-            "$ref": "#/components/schemas/EnergyACLossReason"
-          },
           "IsRecoverable": {
             "$ref": "#/components/schemas/IsRecoverable"
+          },
+          "EnergyLossCause": {
+            "$ref": "#/components/schemas/EnergyLossCause"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
           }
         }
       },
@@ -12654,21 +12664,6 @@
             "description": "Energy production lost",
             "x-ob-item-type": "EnergyItemType",
             "x-ob-item-type-group": "OBElectricalEnergy",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "EnergyACLossReason": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Reason for an energy loss",
-            "x-ob-item-type": "EnergyLossItemType",
-            "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
           }
@@ -12689,6 +12684,21 @@
             "type": "object",
             "description": "True if energy loss is recoverable by maintenance or other action.",
             "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "EnergyLossCause": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Cause of an energy loss",
+            "x-ob-item-type": "EnergyLossItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -18346,7 +18356,7 @@
           "label": "Offline",
           "description": "Energy production loss due to equipment being offline"
         },
-  			"Other": {
+        "Other": {
           "label": "Other",
           "description": "Energy production loss due to other causes"
         },
@@ -18370,7 +18380,7 @@
           "label": "Wind stow",
           "description": "Energy loss due to trackers moving to stow position."
         }
-			}
+      }
     }
   },
   "x-ob-item-type-groups": {
