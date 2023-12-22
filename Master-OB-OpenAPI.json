@@ -123,6 +123,12 @@
           },
           "Orientation": {
             "$ref": "#/components/schemas/Orientation"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "Tasks": {
+            "$ref": "#/components/schemas/Tasks"
           }
         },
         "x-ob-usage-tips": ""
