@@ -12,6 +12,7 @@ Element changes
 Object changes
 ~~~~~~~~~~~~~~
 * Creates SoilingReport and adds to OperatingReport (:pull:`274`)
+* Adds Comments and Tasks to Device (:pull:`283`)
 
 Unit changes
 ~~~~~~~~~~~~
