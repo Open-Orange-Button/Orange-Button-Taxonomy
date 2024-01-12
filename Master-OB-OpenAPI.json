@@ -12704,6 +12704,186 @@
             "x-ob-sample-value": {}
           }
         ]
+      },
+      "FailureID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A unique identifier for a failure record",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "FailureDateDetected": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The date and time that a failure was detected",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "FailureRecord": {
+        "type": "object",
+        "description": "A collection of data describing a failure. Failure is the termination of the ability of an item to perform a required function.",
+        "properties": {
+          "FailureID": {
+            "$ref": "#/components/schemas/FailureID"
+          },
+          "FailureDateDetected": {
+            "$ref": "#/components/schemas/FailureDateDetected"
+          },
+          "ImpactSafety": {
+            "$ref": "#/components/schemas/ImpactSafety"
+          },
+          "ImpactCapability": {
+            "$ref": "#/components/schemas/ImpactCapability"
+          },
+          "ImpactProduction": {
+            "$ref": "#/components/schemas/ImpactProduction"
+          },
+          "FailureMode": {
+            "$ref": "#/components/schemas/FailureMode"
+          },
+          "FailureCause": {
+            "$ref": "#/components/schemas/FailureCause"
+          },
+          "FailureOperatingCondition": {
+            "$ref": "#/components/schemas/FailureOperatingCondition"
+          }
+        }
+      },
+      "ImpactSafety": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The impact on safety of an Issue or Failure",
+            "x-ob-item-type": "ImpactSafetyItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "FailureDetectionMethod": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The method for detecting a failure",
+            "x-ob-item-type": "FailureDetectionMethodItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ImpactProduction": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The impact on production of a Failure",
+            "x-ob-item-type": "ImpactProductionItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ImpactCapability": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The impact on an item's capability of an Issue or Failure",
+            "x-ob-item-type": "ImpactCapabilityItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "FailureMechanism": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The process that leads to a failure",
+            "x-ob-item-type": "FailureMechanismCategoryItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "FailureMode": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The manner in which a failure occurs.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "FailureCause": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A general category of the cause of a Failure",
+            "x-ob-item-type": "FailureCauseCategoryItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "FailureOperatingCondition": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The operating condition of an item when a failure occurs",
+            "x-ob-item-type": "FailureOperatingConditionItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
       }
     }
   },
@@ -18379,6 +18559,181 @@
         "WindStow": {
           "label": "Wind stow",
           "description": "Energy loss due to trackers moving to stow position."
+        }
+      }
+    },
+    "ImpactSafetyItemType": {
+      "description": "The effect on safety of an Issue or Failure.",
+      "enums": {
+        "Critical": {
+          "label": "Critical",
+          "description": "Critical impact requires ceasing operations"
+        },
+        "High": {
+          "label": "High",
+          "description": "High impact requires orderly shutdown of operation"
+        },
+        "Low": {
+          "label": "Low",
+          "description": "Low impact indicates operations continue with precautions"
+        },
+        "Negligible": {
+          "label": "Negligible",
+          "description": "Operations continue without precautions"
+        }
+      }
+    },
+    "FailureDetectionMethodItemType": {
+      "description": "Methods for detection of failures",
+      "enums": {
+        "Inspection": {
+          "label": "Inspection",
+          "description": ""
+        },
+        "Monitoring": {
+          "label": "Monitoring",
+          "description": "Detection by analysis of monitoring data"
+        },
+        "Alarm": {
+          "label": "Alarm",
+          "description": ""
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
+        },
+        "Maintenance": {
+          "label": "Maintenance",
+          "description": "Failure detected during periodic, routine or scheduled maintenance"
+        },
+        "Demand": {
+          "label": "Demand",
+          "description": "Failure discovered during an attempt to activate an item"
+        },
+        "Corrective": {
+          "label": "Corrective",
+          "description": "Failure discovered during a corrective maintenance activity"
+        }
+      }
+    },
+    "ImpactProductionItemType": {
+      "description": "The impact on energy production of an Issue or Failure",
+      "enums": {
+        "Critical": {
+          "label": "Critical",
+          "description": "Energy production ceases"
+        },
+        "Degraded": {
+          "label": "Degraded",
+          "description": "Energy production continues at a reduced capacity"
+        },
+        "Incipient": {
+          "label": "Incipient",
+          "description": "Energy production may be affected in the future"
+        },
+        "Negligible": {
+          "label": "Negligible",
+          "description": "Energy production is unaffected"
+        }
+      }
+    },
+    "ImpactCapabilityItemType": {
+      "description": "The impact on an item's capability of an Issue or Failure",
+      "enums": {
+        "Critical": {
+          "label": "Critical",
+          "description": ""
+        },
+        "Degraded": {
+          "label": "Degraded",
+          "description": ""
+        },
+        "Incipient": {
+          "label": "Incipient",
+          "description": ""
+        },
+        "Negligible": {
+          "label": "Negligible",
+          "description": ""
+        }
+      }
+    },
+    "FailureMechanismCategoryItemType": {
+      "description": "Categories of failure mechanisms from ISO 14224",
+      "enums": {
+        "Mechanical": {
+          "label": "Mechanical",
+          "description": ""
+        },
+        "Material": {
+          "label": "Material",
+          "description": ""
+        },
+        "Electrical": {
+          "label": "Electrical",
+          "description": ""
+        },
+        "Instrument": {
+          "label": "Instrument",
+          "description": ""
+        },
+        "External": {
+          "label": "External",
+          "description": ""
+        },
+        "Misc": {
+          "label": "Misc",
+          "description": ""
+        }
+      }
+    },
+    "FailureCauseCategoryItemType": {
+      "description": "Categories of failure causes from ISO 14224",
+      "enums": {
+        "Fabrication": {
+          "label": "Fabrication",
+          "description": ""
+        },
+        "Installation": {
+          "label": "Installation",
+          "description": ""
+        },
+        "Operations": {
+          "label": "Operations",
+          "description": "Failures resulting from wear-out, out-of-spec operations, operating errors."
+        },
+        "Maintenance": {
+          "label": "Maintenance",
+          "description": "Failures related to maintenance errors"
+        },
+        "Management": {
+          "label": "Management",
+          "description": "Failures related to documentation, configuration, quality assurance or planning"
+        },
+        "Design": {
+          "label": "Design",
+          "description": "Failures related to improper design or to item or material selection"
+        }
+      }
+    },
+    "FailureOperatingConditionItemType": {
+      "description": "The operating state of an item when a failure occurs, from ISO 14224",
+      "enums": {
+        "Running": {
+          "label": "Running",
+          "description": ""
+        },
+        "StartUp": {
+          "label": "StartUp",
+          "description": ""
+        },
+        "Testing": {
+          "label": "Testing",
+          "description": ""
+        },
+        "Idle": {
+          "label": "Idle",
+          "description": ""
         }
       }
     }
