@@ -18763,8 +18763,8 @@
           "description": "Added to ISO 14224:2016 enumeration"
         },
         "Electrical_NoPower": {
-          "label": "4.4b Electrical-FaultyPower",
-          "description": "Faulty power supply. Added to ISO 14224:2016 enumeration"
+          "label": "4.3b Electrical-NoPower",
+          "description": "Failed power supply. Added to ISO 14224:2016 enumeration"
         },
         "Electrical_FaultyVoltage": {
           "label": "4.4a Electrical-FaultyVoltage",
@@ -18774,13 +18774,9 @@
           "label": "4.5a Electrical-GroundFault",
           "description": "From ISO 14224:2016, Table B.2"
         },
-        "Electrical_": {
+        "Electrical_Resistance": {
           "label": "4.5c Electrical-Resistance",
           "description": "Abnormal resistance. Added to From ISO 14224:2016 enumeration"
-        },
-        "External": {
-          "label": "External",
-          "description": "From ISO 14224:2016, Table B.2"
         },
         "External_General": {
           "label": "5.0 External-General",
@@ -18790,11 +18786,11 @@
           "label": "5.1 External-Blockage",
           "description": "From ISO 14224:2016, Table B.2"
         },
-        "External-Contamination": {
+        "External_Contamination": {
           "label": "5.2 External-Contamination",
           "description": "From ISO 14224:2016, Table B.2"
         },
-        "External-Misc": {
+        "External_Misc": {
           "label": "5.3 External-Miscellaneous",
           "description": "From ISO 14224:2016, Table B.2"
         },
@@ -18817,6 +18813,10 @@
         "Misc_Unknown": {
           "label": "6.4 Misc-Unknown",
           "description": "No information on failure mechanism. From ISO 14224:2016, Table B.2"
+        },
+        "Electrical_FaultyPower": {
+          "label": "4.4b Electrical-FaultyPower",
+          "description": "Faulty power supply. Added to ISO 14224 Table B.2"
         }
       }
     },
