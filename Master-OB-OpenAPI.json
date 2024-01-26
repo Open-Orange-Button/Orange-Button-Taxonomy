@@ -12754,14 +12754,17 @@
           "ImpactProduction": {
             "$ref": "#/components/schemas/ImpactProduction"
           },
-          "FailureMode": {
-            "$ref": "#/components/schemas/FailureMode"
-          },
           "FailureCause": {
             "$ref": "#/components/schemas/FailureCause"
           },
           "FailureOperatingCondition": {
             "$ref": "#/components/schemas/FailureOperatingCondition"
+          },
+          "FailureMechanism": {
+            "$ref": "#/components/schemas/FailureMechanism"
+          },
+          "FailureDetectionMethod": {
+            "$ref": "#/components/schemas/FailureDetectionMethod"
           }
         }
       },
@@ -12833,7 +12836,7 @@
           {
             "type": "object",
             "description": "The process that leads to a failure",
-            "x-ob-item-type": "FailureMechanismCategoryItemType",
+            "x-ob-item-type": "FailureMechanismItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -18658,32 +18661,168 @@
         }
       }
     },
-    "FailureMechanismCategoryItemType": {
+    "FailureMechanismItemType": {
       "description": "Categories of failure mechanisms from ISO 14224",
       "enums": {
-        "Mechanical": {
-          "label": "Mechanical",
-          "description": ""
+        "Mechanical_General": {
+          "label": "1.0 Mechanical-General",
+          "description": "From ISO 14224:2016, Table B.2"
         },
-        "Material": {
-          "label": "Material",
-          "description": ""
+        "Mechanical_Leakage": {
+          "label": "1.1 Mechanical-Leakage",
+          "description": "External or internal leakage. From ISO 14224:2016, Table B.2"
         },
-        "Electrical": {
-          "label": "Electrical",
-          "description": ""
+        "Mechanical_Vibration": {
+          "label": "1.2 Mechanical-Vibration",
+          "description": "Abnormal vibration. From ISO 14224:2016, Table B.2"
         },
-        "Instrument": {
-          "label": "Instrument",
-          "description": ""
+        "Mechanical_Position": {
+          "label": "1.3 Mechanical-Position",
+          "description": "Faulty clearance or alignment. From ISO 14224:2016, Table B.2"
+        },
+        "Mechanical_Deformation": {
+          "label": "1.4 Mechanical-Deformation",
+          "description": "Distortion, bending, buckling, denting, yeilding, shrinking, blistering, creeping. From ISO 14224:2016, Table B.2"
+        },
+        "Mechanical_Looseness": {
+          "label": "1.5 Mechanical-Looseness",
+          "description": "Disconnection, loose items. From ISO 14224:2016, Table B.2"
+        },
+        "Mechanical_Sticking": {
+          "label": "1.6 Mechanical-Sticking",
+          "description": "Sticking, seizure or jamming due to reasons other than deformation or clearance/alignment. From ISO 14224:2016, Table B.2"
+        },
+        "Material_General": {
+          "label": "2.0 Material-General",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "Material_Corrosion": {
+          "label": "2.2 Material-Corrosion",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "Material_Erosion": {
+          "label": "2.3 Material-Erosion",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "Material_Wear": {
+          "label": "2.4 Material-Wear",
+          "description": "Abrasion, scoring, galling, scuffing, fretting. From ISO 14224:2016, Table B.2"
+        },
+        "Material_Breakage": {
+          "label": "2.5 Material-Breakage",
+          "description": "Fracture, breach, cracking. From ISO 14224:2016, Table B.2"
+        },
+        "Material_Fatigue": {
+          "label": "2.6 Material-Fatigue",
+          "description": "Failure traced to fatigue. From ISO 14224:2016, Table B.2"
+        },
+        "Material_Overheating": {
+          "label": "2.7 Material-Overheating",
+          "description": "Failure due to overheating, burning. From ISO 14224:2016, Table B.2"
+        },
+        "Material_Burst": {
+          "label": "2.8 Material-Burst",
+          "description": "Explosion, implosion, bursting. From ISO 14224:2016, Table B.2"
+        },
+        "Instrument_General": {
+          "label": "3.0 Instrument-General",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "Instrument_Control": {
+          "label": "3.1 Instrument-Control",
+          "description": "No or faulty regulation. From ISO 14224:2016, Table B.2"
+        },
+        "Instrument_NoSignal": {
+          "label": "3.2 Instrument-Signal",
+          "description": "No signal, indication or alarm when expected. From ISO 14224:2016, Table B.2"
+        },
+        "Instrument_FaultySignal": {
+          "label": "3.3 Instrument-Faulty Signal",
+          "description": "Signal, indication or alarm is erroneous, spurious, or intermittent. From ISO 14224:2016, Table B.2"
+        },
+        "Instrument_Adjustment": {
+          "label": "3.4 Instrument-Adjustment",
+          "description": "Out of adjustment or calibration, or calibration drift. From ISO 14224:2016, Table B.2"
+        },
+        "Instrument_Software": {
+          "label": "3.5 Instrument-Software",
+          "description": "Instrument failure due to software error. From ISO 14224:2016, Table B.2"
+        },
+        "Instrument_CommonCause": {
+          "label": "3.6 Instrument-CommonCause",
+          "description": "Failures related to a common cause. From ISO 14224:2016, Table B.2"
+        },
+        "Electrical_General": {
+          "label": "4.0 Electrical-General",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "Electrical_ShortCircuit": {
+          "label": "4.1 Electrical-ShortCircuit",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "Electrical_OpenCircuit": {
+          "label": "4.2 Electrical-OpenCircuit",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "Electrical_NoVoltage": {
+          "label": "4.3a Electrical-NoVoltage",
+          "description": "Added to ISO 14224:2016 enumeration"
+        },
+        "Electrical_NoPower": {
+          "label": "4.4b Electrical-FaultyPower",
+          "description": "Faulty power supply. Added to ISO 14224:2016 enumeration"
+        },
+        "Electrical_FaultyVoltage": {
+          "label": "4.4a Electrical-FaultyVoltage",
+          "description": "Added to  ISO 14224:2016 enumeration"
+        },
+        "Electrical_GroundFault": {
+          "label": "4.5a Electrical-GroundFault",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "Electrical_": {
+          "label": "4.5c Electrical-Resistance",
+          "description": "Abnormal resistance. Added to From ISO 14224:2016 enumeration"
         },
         "External": {
           "label": "External",
-          "description": ""
+          "description": "From ISO 14224:2016, Table B.2"
         },
-        "Misc": {
-          "label": "Misc",
-          "description": ""
+        "External_General": {
+          "label": "5.0 External-General",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "External_Blockage": {
+          "label": "5.1 External-Blockage",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "External-Contamination": {
+          "label": "5.2 External-Contamination",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "External-Misc": {
+          "label": "5.3 External-Miscellaneous",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "Misc_General": {
+          "label": "6.0 Misc-General",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "Misc_NoCause": {
+          "label": "6.1 Misc-NoCause",
+          "description": "No failure mechanism found or identified. From ISO 14224:2016, Table B.2"
+        },
+        "Misc_Combined": {
+          "label": "6.2 Misc-CombinedCauses",
+          "description": "Several mechanism, none predominant. From ISO 14224:2016, Table B.2"
+        },
+        "Misc_Other": {
+          "label": "6.3 Misc-Other",
+          "description": "Failure mechanism is not in the enumerations. From ISO 14224:2016, Table B.2"
+        },
+        "Misc_Unknown": {
+          "label": "6.4 Misc-Unknown",
+          "description": "No information on failure mechanism. From ISO 14224:2016, Table B.2"
         }
       }
     },
