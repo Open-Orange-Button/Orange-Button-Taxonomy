@@ -12829,7 +12829,7 @@
           },
           {
             "type": "object",
-            "description": "The process that leads to a failure",
+            "description": "The physical, chemical or other process that leads to a failure",
             "x-ob-item-type": "FailureMechanismItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -12859,8 +12859,8 @@
           },
           {
             "type": "object",
-            "description": "A general category of the cause of a Failure",
-            "x-ob-item-type": "FailureCauseCategoryItemType",
+            "description": "Circumstances associated with the design, manufacture, installation, use and maintenance that have led to a failure",
+            "x-ob-item-type": "FailureCauseItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -18820,32 +18820,68 @@
         }
       }
     },
-    "FailureCauseCategoryItemType": {
+    "FailureCauseItemType": {
       "description": "Categories of failure causes from ISO 14224",
       "enums": {
-        "Fabrication": {
-          "label": "Fabrication",
-          "description": ""
+        "Design_General": {
+          "label": "1.0 Design-General",
+          "description": "Failures related to improper design, no further details. From ISO 14224:2016, Table B.3"
         },
-        "Installation": {
-          "label": "Installation",
-          "description": ""
+        "Design_Sizing": {
+          "label": "1.1a Design-Sizing",
+          "description": "Failures related to improper dimensioning. From ISO 14224:2016, Table B.3"
         },
-        "Operations": {
-          "label": "Operations",
-          "description": "Failures resulting from wear-out, out-of-spec operations, operating errors."
+        "Design_Capacity": {
+          "label": "1.1b Design-Capacity",
+          "description": "Failures related to improper capacity. From ISO 14224:2016, Table B.3"
         },
-        "Maintenance": {
-          "label": "Maintenance",
-          "description": "Failures related to maintenance errors"
+        "Design_Material": {
+          "label": "1.2 Design-Material",
+          "description": "Failures related to improper material selection. From ISO 14224:2016, Table B.3"
         },
-        "Management": {
-          "label": "Management",
-          "description": "Failures related to documentation, configuration, quality assurance or planning"
+        "Fabrication_General": {
+          "label": "2.0 Fabrication-General",
+          "description": "Failures related to improper fabrication or installation, no further details. From ISO 14224:2016, Table B.3"
         },
-        "Design": {
-          "label": "Design",
-          "description": "Failures related to improper design or to item or material selection"
+        "Fabrication_Manufacture": {
+          "label": "2.1 Fabrication-Manufacture",
+          "description": "Failures related to improper manufacture. From ISO 14224:2016, Table B.3"
+        },
+        "Fabrication_Installation": {
+          "label": "2.2 Fabrication-Installation",
+          "description": "Failures related to improper installation. From ISO 14224:2016, Table B.3"
+        },
+        "Operations_General": {
+          "label": "3.0 Operations-General",
+          "description": "Failures related to operations, use or maintenance, no further details. From ISO 14224:2016, Table B.3"
+        },
+        "Operations_OutOfSpec": {
+          "label": "3.1 Operations-OutOfSpec",
+          "description": "Failures related to out of specification operations. From ISO 14224:2016, Table B.3"
+        },
+        "Operations_OpError": {
+          "label": "3.2 Operations-OpError",
+          "description": "Failures related to operating errors. From ISO 14224:2016, Table B.3"
+        },
+        "Operations_MaintError": {
+          "label": "3.3 Operations-MaintError",
+          "description": "Failures related to maintenance errors. From ISO 14224:2016, Table B.3"
+        },
+        "Operations_Wear": {
+          "label": "3.4 Operations-Wear",
+          "description": "Failures related to expected wear. From ISO 14224:2016, Table B.3"
+        },
+        "Management_General": {
+          "label": "4.0 Management-General",
+          "description": "Failures related to management, no further details. From ISO 14224:2016, Table B.3"
+        },
+        "Management_Document": {
+          "label": "4.1 Management-Document",
+          "description": "Failures related to documents: procedures, specifications, drawings, reports. From ISO 14224:2016, Table B.3"
+        },
+        "Management_Process": {
+          "label": "4.2 Management-Process",
+          "description": "Failures related to planning, organization, or quality assurance. From ISO 14224:2016, Table B.3"
         }
       }
     },
