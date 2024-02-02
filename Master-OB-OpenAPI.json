@@ -12837,21 +12837,6 @@
           }
         ]
       },
-      "FailureMode": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The manner in which a failure occurs.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
       "FailureCause": {
         "allOf": [
           {
@@ -18773,7 +18758,7 @@
         "Electrical_FaultyPower": {
           "label": "4.4b Electrical-FaultyPower",
           "description": "Faulty power supply. Added to ISO 14224 Table B.2"
-  			},
+        },
         "Electrical_GroundFault": {
           "label": "4.5a Electrical-GroundFault",
           "description": "From ISO 14224:2016, Table B.2"
