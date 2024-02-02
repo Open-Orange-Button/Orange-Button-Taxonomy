@@ -18564,19 +18564,19 @@
       "enums": {
         "Critical": {
           "label": "Critical",
-          "description": "Critical impact requires ceasing operations"
+          "description": "Critical safety impact or hazard requires immediately ceasing operations"
         },
         "High": {
           "label": "High",
-          "description": "High impact requires orderly shutdown of operation"
+          "description": "Failure creates safety hazard or risk that requires orderly shutdown of operation"
         },
         "Low": {
           "label": "Low",
-          "description": "Low impact indicates operations continue with precautions"
+          "description": "Safety hazard or risk is present but manageable, operations continue with precautions"
         },
         "Negligible": {
           "label": "Negligible",
-          "description": "Operations continue without precautions"
+          "description": "No safety hazard or risk, operations continue without precautions"
         }
       }
     },
@@ -18622,15 +18622,15 @@
         },
         "Degraded": {
           "label": "Degraded",
-          "description": "Energy production continues at a reduced capacity"
+          "description": "Energy production continues at a reduced level"
         },
         "Incipient": {
           "label": "Incipient",
-          "description": "Energy production may be affected in the future"
+          "description": "Energy production continues but may be affected in the future"
         },
         "Negligible": {
           "label": "Negligible",
-          "description": "Energy production is unaffected"
+          "description": "Energy production is not affected"
         }
       }
     },
@@ -18639,19 +18639,19 @@
       "enums": {
         "Critical": {
           "label": "Critical",
-          "description": ""
+          "description": "Failure entirely compromises the capability of the item to perform its function."
         },
         "Degraded": {
           "label": "Degraded",
-          "description": ""
+          "description": "Failure reduces the capability of the item to perform its function."
         },
         "Incipient": {
           "label": "Incipient",
-          "description": ""
+          "description": "The item's capability to perform its function may be affected in the future."
         },
         "Negligible": {
           "label": "Negligible",
-          "description": ""
+          "description": "No effect on the capability of the item."
         }
       }
     },
@@ -18768,15 +18768,23 @@
         },
         "Electrical_FaultyVoltage": {
           "label": "4.4a Electrical-FaultyVoltage",
-          "description": "Added to  ISO 14224:2016 enumeration"
+          "description": "Added to ISO 14224:2016 enumeration"
         },
+        "Electrical_FaultyPower": {
+          "label": "4.4b Electrical-FaultyPower",
+          "description": "Faulty power supply. Added to ISO 14224 Table B.2"
+  			},
         "Electrical_GroundFault": {
           "label": "4.5a Electrical-GroundFault",
           "description": "From ISO 14224:2016, Table B.2"
         },
+        "Electrical_ArcFault": {
+          "label": "4.5b Electrical-ArcFault",
+          "description": "Added to ISO 14224:2016, Table B.2"
+        },
         "Electrical_Resistance": {
           "label": "4.5c Electrical-Resistance",
-          "description": "Abnormal resistance. Added to From ISO 14224:2016 enumeration"
+          "description": "Abnormal resistance. Added to ISO 14224:2016 enumeration"
         },
         "External_General": {
           "label": "5.0 External-General",
@@ -18813,10 +18821,6 @@
         "Misc_Unknown": {
           "label": "6.4 Misc-Unknown",
           "description": "No information on failure mechanism. From ISO 14224:2016, Table B.2"
-        },
-        "Electrical_FaultyPower": {
-          "label": "4.4b Electrical-FaultyPower",
-          "description": "Faulty power supply. Added to ISO 14224 Table B.2"
         }
       }
     },
