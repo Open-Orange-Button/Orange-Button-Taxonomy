@@ -12698,6 +12698,174 @@
             "x-ob-sample-value": {}
           }
         ]
+      },
+      "FailureID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A unique identifier for a failure record",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "FailureDateDetected": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The date and time that a failure was detected",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "FailureRecord": {
+        "type": "object",
+        "description": "A collection of data describing a failure. Failure is the termination of the ability of an item to perform a required function.",
+        "properties": {
+          "FailureID": {
+            "$ref": "#/components/schemas/FailureID"
+          },
+          "FailureDateDetected": {
+            "$ref": "#/components/schemas/FailureDateDetected"
+          },
+          "ImpactSafety": {
+            "$ref": "#/components/schemas/ImpactSafety"
+          },
+          "ImpactCapability": {
+            "$ref": "#/components/schemas/ImpactCapability"
+          },
+          "ImpactProduction": {
+            "$ref": "#/components/schemas/ImpactProduction"
+          },
+          "FailureCause": {
+            "$ref": "#/components/schemas/FailureCause"
+          },
+          "FailureOperatingCondition": {
+            "$ref": "#/components/schemas/FailureOperatingCondition"
+          },
+          "FailureMechanism": {
+            "$ref": "#/components/schemas/FailureMechanism"
+          },
+          "FailureDetectionMethod": {
+            "$ref": "#/components/schemas/FailureDetectionMethod"
+          }
+        }
+      },
+      "ImpactSafety": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The impact on safety of an Issue or Failure",
+            "x-ob-item-type": "ImpactSafetyItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "FailureDetectionMethod": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The method for detecting a failure",
+            "x-ob-item-type": "FailureDetectionMethodItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ImpactProduction": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The impact on production of a Failure",
+            "x-ob-item-type": "ImpactProductionItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ImpactCapability": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The impact on an item's capability of an Issue or Failure",
+            "x-ob-item-type": "ImpactCapabilityItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "FailureMechanism": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The physical, chemical or other process that leads to a failure",
+            "x-ob-item-type": "FailureMechanismItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "FailureCause": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Circumstances associated with the design, manufacture, installation, use and maintenance that have led to a failure",
+            "x-ob-item-type": "FailureCauseItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "FailureOperatingCondition": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The operating condition of an item when a failure occurs",
+            "x-ob-item-type": "FailureOperatingConditionItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
       }
     }
   },
@@ -18373,6 +18541,357 @@
         "WindStow": {
           "label": "Wind stow",
           "description": "Energy loss due to trackers moving to stow position."
+        }
+      }
+    },
+    "ImpactSafetyItemType": {
+      "description": "The effect on safety of an Issue or Failure.",
+      "enums": {
+        "Critical": {
+          "label": "Critical",
+          "description": "Critical safety impact or hazard requires immediately ceasing operations"
+        },
+        "High": {
+          "label": "High",
+          "description": "Failure creates safety hazard or risk that requires orderly shutdown of operation"
+        },
+        "Low": {
+          "label": "Low",
+          "description": "Safety hazard or risk is present but manageable, operations continue with precautions"
+        },
+        "Negligible": {
+          "label": "Negligible",
+          "description": "No safety hazard or risk, operations continue without precautions"
+        }
+      }
+    },
+    "FailureDetectionMethodItemType": {
+      "description": "Methods for detection of failures",
+      "enums": {
+        "Inspection": {
+          "label": "Inspection",
+          "description": ""
+        },
+        "Monitoring": {
+          "label": "Monitoring",
+          "description": "Detection by analysis of monitoring data"
+        },
+        "Alarm": {
+          "label": "Alarm",
+          "description": ""
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
+        },
+        "Maintenance": {
+          "label": "Maintenance",
+          "description": "Failure detected during periodic, routine or scheduled maintenance"
+        },
+        "Demand": {
+          "label": "Demand",
+          "description": "Failure discovered during an attempt to activate an item"
+        },
+        "Corrective": {
+          "label": "Corrective",
+          "description": "Failure discovered during a corrective maintenance activity"
+        }
+      }
+    },
+    "ImpactProductionItemType": {
+      "description": "The impact on energy production of an Issue or Failure",
+      "enums": {
+        "Critical": {
+          "label": "Critical",
+          "description": "Energy production ceases"
+        },
+        "Degraded": {
+          "label": "Degraded",
+          "description": "Energy production continues at a reduced level"
+        },
+        "Incipient": {
+          "label": "Incipient",
+          "description": "Energy production continues but may be affected in the future"
+        },
+        "Negligible": {
+          "label": "Negligible",
+          "description": "Energy production is not affected"
+        }
+      }
+    },
+    "ImpactCapabilityItemType": {
+      "description": "The impact on an item's capability of an Issue or Failure",
+      "enums": {
+        "Critical": {
+          "label": "Critical",
+          "description": "Failure entirely compromises the capability of the item to perform its function."
+        },
+        "Degraded": {
+          "label": "Degraded",
+          "description": "Failure reduces the capability of the item to perform its function."
+        },
+        "Incipient": {
+          "label": "Incipient",
+          "description": "The item's capability to perform its function may be affected in the future."
+        },
+        "Negligible": {
+          "label": "Negligible",
+          "description": "No effect on the capability of the item."
+        }
+      }
+    },
+    "FailureMechanismItemType": {
+      "description": "Categories of failure mechanisms from ISO 14224",
+      "enums": {
+        "Mechanical_General": {
+          "label": "1.0 Mechanical-General",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "Mechanical_Leakage": {
+          "label": "1.1 Mechanical-Leakage",
+          "description": "External or internal leakage. From ISO 14224:2016, Table B.2"
+        },
+        "Mechanical_Vibration": {
+          "label": "1.2 Mechanical-Vibration",
+          "description": "Abnormal vibration. From ISO 14224:2016, Table B.2"
+        },
+        "Mechanical_Position": {
+          "label": "1.3 Mechanical-Position",
+          "description": "Faulty clearance or alignment. From ISO 14224:2016, Table B.2"
+        },
+        "Mechanical_Deformation": {
+          "label": "1.4 Mechanical-Deformation",
+          "description": "Distortion, bending, buckling, denting, yeilding, shrinking, blistering, creeping. From ISO 14224:2016, Table B.2"
+        },
+        "Mechanical_Looseness": {
+          "label": "1.5 Mechanical-Looseness",
+          "description": "Disconnection, loose items. From ISO 14224:2016, Table B.2"
+        },
+        "Mechanical_Sticking": {
+          "label": "1.6 Mechanical-Sticking",
+          "description": "Sticking, seizure or jamming due to reasons other than deformation or clearance/alignment. From ISO 14224:2016, Table B.2"
+        },
+        "Material_General": {
+          "label": "2.0 Material-General",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "Material_Corrosion": {
+          "label": "2.2 Material-Corrosion",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "Material_Erosion": {
+          "label": "2.3 Material-Erosion",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "Material_Wear": {
+          "label": "2.4 Material-Wear",
+          "description": "Abrasion, scoring, galling, scuffing, fretting. From ISO 14224:2016, Table B.2"
+        },
+        "Material_Breakage": {
+          "label": "2.5 Material-Breakage",
+          "description": "Fracture, breach, cracking. From ISO 14224:2016, Table B.2"
+        },
+        "Material_Fatigue": {
+          "label": "2.6 Material-Fatigue",
+          "description": "Failure traced to fatigue. From ISO 14224:2016, Table B.2"
+        },
+        "Material_Overheating": {
+          "label": "2.7 Material-Overheating",
+          "description": "Failure due to overheating, burning. From ISO 14224:2016, Table B.2"
+        },
+        "Material_Burst": {
+          "label": "2.8 Material-Burst",
+          "description": "Explosion, implosion, bursting. From ISO 14224:2016, Table B.2"
+        },
+        "Instrument_General": {
+          "label": "3.0 Instrument-General",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "Instrument_Control": {
+          "label": "3.1 Instrument-Control",
+          "description": "No or faulty regulation. From ISO 14224:2016, Table B.2"
+        },
+        "Instrument_NoSignal": {
+          "label": "3.2 Instrument-Signal",
+          "description": "No signal, indication or alarm when expected. From ISO 14224:2016, Table B.2"
+        },
+        "Instrument_FaultySignal": {
+          "label": "3.3 Instrument-Faulty Signal",
+          "description": "Signal, indication or alarm is erroneous, spurious, or intermittent. From ISO 14224:2016, Table B.2"
+        },
+        "Instrument_Adjustment": {
+          "label": "3.4 Instrument-Adjustment",
+          "description": "Out of adjustment or calibration, or calibration drift. From ISO 14224:2016, Table B.2"
+        },
+        "Instrument_Software": {
+          "label": "3.5 Instrument-Software",
+          "description": "Instrument failure due to software error. From ISO 14224:2016, Table B.2"
+        },
+        "Instrument_CommonCause": {
+          "label": "3.6 Instrument-CommonCause",
+          "description": "Failures related to a common cause. From ISO 14224:2016, Table B.2"
+        },
+        "Electrical_General": {
+          "label": "4.0 Electrical-General",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "Electrical_ShortCircuit": {
+          "label": "4.1 Electrical-ShortCircuit",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "Electrical_OpenCircuit": {
+          "label": "4.2 Electrical-OpenCircuit",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "Electrical_NoVoltage": {
+          "label": "4.3a Electrical-NoVoltage",
+          "description": "Added to ISO 14224:2016 enumeration"
+        },
+        "Electrical_NoPower": {
+          "label": "4.3b Electrical-NoPower",
+          "description": "Failed power supply. Added to ISO 14224:2016 enumeration"
+        },
+        "Electrical_FaultyVoltage": {
+          "label": "4.4a Electrical-FaultyVoltage",
+          "description": "Added to ISO 14224:2016 enumeration"
+        },
+        "Electrical_FaultyPower": {
+          "label": "4.4b Electrical-FaultyPower",
+          "description": "Faulty power supply. Added to ISO 14224 Table B.2"
+        },
+        "Electrical_GroundFault": {
+          "label": "4.5a Electrical-GroundFault",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "Electrical_ArcFault": {
+          "label": "4.5b Electrical-ArcFault",
+          "description": "Added to ISO 14224:2016, Table B.2"
+        },
+        "Electrical_Resistance": {
+          "label": "4.5c Electrical-Resistance",
+          "description": "Abnormal resistance. Added to ISO 14224:2016 enumeration"
+        },
+        "External_General": {
+          "label": "5.0 External-General",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "External_Blockage": {
+          "label": "5.1 External-Blockage",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "External_Contamination": {
+          "label": "5.2 External-Contamination",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "External_Misc": {
+          "label": "5.3 External-Miscellaneous",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "Misc_General": {
+          "label": "6.0 Misc-General",
+          "description": "From ISO 14224:2016, Table B.2"
+        },
+        "Misc_NoCause": {
+          "label": "6.1 Misc-NoCause",
+          "description": "No failure mechanism found or identified. From ISO 14224:2016, Table B.2"
+        },
+        "Misc_Combined": {
+          "label": "6.2 Misc-CombinedCauses",
+          "description": "Several mechanism, none predominant. From ISO 14224:2016, Table B.2"
+        },
+        "Misc_Other": {
+          "label": "6.3 Misc-Other",
+          "description": "Failure mechanism is not in the enumerations. From ISO 14224:2016, Table B.2"
+        },
+        "Misc_Unknown": {
+          "label": "6.4 Misc-Unknown",
+          "description": "No information on failure mechanism. From ISO 14224:2016, Table B.2"
+        }
+      }
+    },
+    "FailureCauseItemType": {
+      "description": "Categories of failure causes from ISO 14224",
+      "enums": {
+        "Design_General": {
+          "label": "1.0 Design-General",
+          "description": "Failures related to improper design, no further details. From ISO 14224:2016, Table B.3"
+        },
+        "Design_Sizing": {
+          "label": "1.1a Design-Sizing",
+          "description": "Failures related to improper dimensioning. From ISO 14224:2016, Table B.3"
+        },
+        "Design_Capacity": {
+          "label": "1.1b Design-Capacity",
+          "description": "Failures related to improper capacity. From ISO 14224:2016, Table B.3"
+        },
+        "Design_Material": {
+          "label": "1.2 Design-Material",
+          "description": "Failures related to improper material selection. From ISO 14224:2016, Table B.3"
+        },
+        "Fabrication_General": {
+          "label": "2.0 Fabrication-General",
+          "description": "Failures related to improper fabrication or installation, no further details. From ISO 14224:2016, Table B.3"
+        },
+        "Fabrication_Manufacture": {
+          "label": "2.1 Fabrication-Manufacture",
+          "description": "Failures related to improper manufacture. From ISO 14224:2016, Table B.3"
+        },
+        "Fabrication_Installation": {
+          "label": "2.2 Fabrication-Installation",
+          "description": "Failures related to improper installation. From ISO 14224:2016, Table B.3"
+        },
+        "Operations_General": {
+          "label": "3.0 Operations-General",
+          "description": "Failures related to operations, use or maintenance, no further details. From ISO 14224:2016, Table B.3"
+        },
+        "Operations_OutOfSpec": {
+          "label": "3.1 Operations-OutOfSpec",
+          "description": "Failures related to out of specification operations. From ISO 14224:2016, Table B.3"
+        },
+        "Operations_OpError": {
+          "label": "3.2 Operations-OpError",
+          "description": "Failures related to operating errors. From ISO 14224:2016, Table B.3"
+        },
+        "Operations_MaintError": {
+          "label": "3.3 Operations-MaintError",
+          "description": "Failures related to maintenance errors. From ISO 14224:2016, Table B.3"
+        },
+        "Operations_Wear": {
+          "label": "3.4 Operations-Wear",
+          "description": "Failures related to expected wear. From ISO 14224:2016, Table B.3"
+        },
+        "Management_General": {
+          "label": "4.0 Management-General",
+          "description": "Failures related to management, no further details. From ISO 14224:2016, Table B.3"
+        },
+        "Management_Document": {
+          "label": "4.1 Management-Document",
+          "description": "Failures related to documents: procedures, specifications, drawings, reports. From ISO 14224:2016, Table B.3"
+        },
+        "Management_Process": {
+          "label": "4.2 Management-Process",
+          "description": "Failures related to planning, organization, or quality assurance. From ISO 14224:2016, Table B.3"
+        }
+      }
+    },
+    "FailureOperatingConditionItemType": {
+      "description": "The operating state of an item when a failure occurs, from ISO 14224",
+      "enums": {
+        "Running": {
+          "label": "Running",
+          "description": ""
+        },
+        "StartUp": {
+          "label": "StartUp",
+          "description": ""
+        },
+        "Testing": {
+          "label": "Testing",
+          "description": ""
+        },
+        "Idle": {
+          "label": "Idle",
+          "description": ""
         }
       }
     }
