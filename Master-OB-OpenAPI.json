@@ -9494,6 +9494,9 @@
           },
           "Checksum": {
             "$ref": "#/components/schemas/Checksum"
+          },
+          "ChecksumType": {
+            "$ref": "#/components/schemas/ChecksumType"
           }
         }
       },
@@ -12864,6 +12867,23 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ChecksumType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Type of Checksum that is employed by Firmware to detect errors and verify data integrity.",
+            "x-ob-item-type": "ChecksumTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "CRC"
+            }
           }
         ]
       }
@@ -18891,6 +18911,35 @@
         },
         "Idle": {
           "label": "Idle",
+          "description": ""
+        }
+      }
+    },
+    "ChecksumTypeItemType": {
+      "description": "",
+      "enums": {
+        "CRC": {
+          "label": "CRC",
+          "description": ""
+        },
+        "MD5": {
+          "label": "MD5",
+          "description": ""
+        },
+        "SHA1": {
+          "label": "SHA1",
+          "description": ""
+        },
+        "SHA2": {
+          "label": "SHA2",
+          "description": ""
+        },
+        "SHA3": {
+          "label": "SHA3",
+          "description": ""
+        },
+        "Keccak_256": {
+          "label": "Keccak-256",
           "description": ""
         }
       }
