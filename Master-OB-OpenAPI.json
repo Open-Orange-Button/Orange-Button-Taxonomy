@@ -18920,27 +18920,27 @@
       "enums": {
         "CRC": {
           "label": "CRC",
-          "description": ""
+          "description": "Cyclical Redundancy Check - NIST SP 800-72"
         },
         "MD5": {
           "label": "MD5",
-          "description": ""
+          "description": "Message Digest 5 - NIST SP 800-45 Version 2, NIST SP 800-101 Rev. 1"
         },
         "SHA1": {
           "label": "SHA1",
-          "description": ""
+          "description": "Secure Hash Algorithm 1 - NIST SP 800-22 Rev. 1a"
         },
         "SHA2": {
           "label": "SHA2",
-          "description": ""
+          "description": "Secure Hash Algorithm 2 - CNSSI 4009-2015"
         },
         "SHA3": {
           "label": "SHA3",
-          "description": ""
+          "description": "Secure Hash Algorithm 3 - NIST SP 800-185"
         },
         "Keccak_256": {
           "label": "Keccak-256",
-          "description": ""
+          "description": "The family of all sponge functions with a KECCAK-f permutation as the underlying function and multi-rate padding as the padding rule. KECCAK was originally specified in [2], and standardized in FIPS 202. -  NIST SP 800-185"
         }
       }
     }
