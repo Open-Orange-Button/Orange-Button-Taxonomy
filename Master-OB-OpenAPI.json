@@ -9431,21 +9431,19 @@
         ]
       },
       "Checksum": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+        "type": "object",
+        "description": "An object that describes the key, type and supporting information related to employing Checksums to manage data accuracy. ",
+        "properties": {
+          "ChecksumKey": {
+            "$ref": "#/components/schemas/ChecksumKey"
           },
-          {
-            "type": "object",
-            "description": "Value used to confirm integrity of data or code. ",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "120EA8A25E5D487BF68B5F7096440019"
-            }
+          "ChecksumType": {
+            "$ref": "#/components/schemas/ChecksumType"
+          },
+          "ChecksumDetail": {
+            "$ref": "#/components/schemas/ChecksumDetail"
           }
-        ]
+        }
       },
       "CompatibleWith": {
         "type": "array",
@@ -9494,9 +9492,6 @@
           },
           "Checksum": {
             "$ref": "#/components/schemas/Checksum"
-          },
-          "ChecksumType": {
-            "$ref": "#/components/schemas/ChecksumType"
           }
         }
       },
@@ -12884,6 +12879,38 @@
             "x-ob-sample-value": {
               "Value": "CRC"
             }
+          }
+        ]
+      },
+      "ChecksumKey": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The value used to validate the accuracy of data through the use of a Checksum Algorithm.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "120EA8A25E5D487BF68B5F7096440019"
+            }
+          }
+        ]
+      },
+      "ChecksumDetail": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Supporting information used to provide additional context to the type of Checksum algorithm used to validate data.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
           }
         ]
       }
@@ -18924,23 +18951,23 @@
         },
         "MD5": {
           "label": "MD5",
-          "description": "Message Digest 5 - NIST SP 800-45 Version 2, NIST SP 800-101 Rev. 1"
+          "description": "Message Digest 5 -  RFC 1321, April 1992. "
         },
         "SHA1": {
           "label": "SHA1",
-          "description": "Secure Hash Algorithm 1 - NIST SP 800-22 Rev. 1a"
+          "description": "Secure Hash Algorithm 1 - FIPS 180-2"
         },
         "SHA2": {
           "label": "SHA2",
-          "description": "Secure Hash Algorithm 2 - CNSSI 4009-2015"
+          "description": "Secure Hash Algorithm 2 - FIPS 180-2"
         },
         "SHA3": {
           "label": "SHA3",
-          "description": "Secure Hash Algorithm 3 - NIST SP 800-185"
+          "description": "Secure Hash Algorithm 3 - FIPS 180-2"
         },
         "Keccak_256": {
           "label": "Keccak-256",
-          "description": "The family of all sponge functions with a KECCAK-f permutation as the underlying function and multi-rate padding as the padding rule. KECCAK was originally specified in [2], and standardized in FIPS 202. -  NIST SP 800-185"
+          "description": "Reference FIPS 202"
         }
       }
     }
