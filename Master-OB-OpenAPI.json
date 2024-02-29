@@ -9431,21 +9431,19 @@
         ]
       },
       "Checksum": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+        "type": "object",
+        "description": "An object that describes the key, type and supporting information related to employing Checksums to manage data accuracy. ",
+        "properties": {
+          "ChecksumKey": {
+            "$ref": "#/components/schemas/ChecksumKey"
           },
-          {
-            "type": "object",
-            "description": "Value used to confirm integrity of data or code. ",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "120EA8A25E5D487BF68B5F7096440019"
-            }
+          "ChecksumType": {
+            "$ref": "#/components/schemas/ChecksumType"
+          },
+          "ChecksumDetail": {
+            "$ref": "#/components/schemas/ChecksumDetail"
           }
-        ]
+        }
       },
       "CompatibleWith": {
         "type": "array",
@@ -12861,6 +12859,55 @@
             "type": "object",
             "description": "The operating condition of an item when a failure occurs",
             "x-ob-item-type": "FailureOperatingConditionItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ChecksumType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Type of Checksum that is employed by Firmware to detect errors and verify data integrity.",
+            "x-ob-item-type": "ChecksumTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "CRC"
+            }
+          }
+        ]
+      },
+      "ChecksumKey": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The value used to validate the accuracy of data through the use of a Checksum Algorithm.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "120EA8A25E5D487BF68B5F7096440019"
+            }
+          }
+        ]
+      },
+      "ChecksumDetail": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Supporting information used to provide additional context to the type of Checksum algorithm used to validate data.",
+            "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -18892,6 +18939,35 @@
         "Idle": {
           "label": "Idle",
           "description": ""
+        }
+      }
+    },
+    "ChecksumTypeItemType": {
+      "description": "",
+      "enums": {
+        "CRC": {
+          "label": "CRC",
+          "description": "Cyclical Redundancy Check - NIST SP 800-72"
+        },
+        "MD5": {
+          "label": "MD5",
+          "description": "Message Digest 5 -  RFC 1321, April 1992. "
+        },
+        "SHA1": {
+          "label": "SHA1",
+          "description": "Secure Hash Algorithm 1 - FIPS 180-2"
+        },
+        "SHA2": {
+          "label": "SHA2",
+          "description": "Secure Hash Algorithm 2 - FIPS 180-2"
+        },
+        "SHA3": {
+          "label": "SHA3",
+          "description": "Secure Hash Algorithm 3 - FIPS 180-2"
+        },
+        "Keccak_256": {
+          "label": "Keccak-256",
+          "description": "Reference FIPS 202"
         }
       }
     }
