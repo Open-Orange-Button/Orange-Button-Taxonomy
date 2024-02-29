@@ -12927,7 +12927,7 @@
           {
             "type": "object",
             "description": "The type of a device",
-            "x-ob-item-type": "DeviceItemType",
+            "x-ob-item-type": "DeviceTypeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -15432,7 +15432,7 @@
         }
       }
     },
-    "DeviceItemType": {
+    "DeviceTypeItemType": {
       "description": "",
       "enums": {
         "Battery": {
@@ -15480,6 +15480,10 @@
           "description": ""
         },
         "Optimizer": {
+          "label": "",
+          "description": ""
+        },
+        "Other": {
           "label": "",
           "description": ""
         },
@@ -15539,7 +15543,7 @@
           "label": "",
           "description": ""
         }
-  		}
+      }
     },
     "ProjectPhaseItemType": {
       "description": "",
@@ -18806,7 +18810,7 @@
         },
         "High": {
           "label": "High",
-          "description": "Failure creates safety hazard or risk that requires orderly shutdown of operation"
+          "description": "Safety hazard or risk that requires orderly shutdown of operation"
         },
         "Low": {
           "label": "Low",
@@ -18815,6 +18819,10 @@
         "Negligible": {
           "label": "Negligible",
           "description": "No safety hazard or risk, operations continue without precautions"
+        },
+        "Incipient": {
+          "label": "Incipient",
+          "description": "A safety hazard is not present, but the Issue or Failure may create a hazard in the future"
         }
       }
     },
@@ -18877,11 +18885,11 @@
       "enums": {
         "Critical": {
           "label": "Critical",
-          "description": "Failure entirely compromises the capability of the item to perform its function."
+          "description": "The item cannot perform its function to any degree. "
         },
         "Degraded": {
           "label": "Degraded",
-          "description": "Failure reduces the capability of the item to perform its function."
+          "description": "The capability of the item to perform its function is reduced."
         },
         "Incipient": {
           "label": "Incipient",
@@ -19162,7 +19170,7 @@
         "DAQ": {
           "label": "Data Acquisition System",
           "description": ""
-				},
+        },
         "ESS": {
           "label": "Energy Storage System",
           "description": ""
@@ -19174,7 +19182,11 @@
         "MetStation": {
           "label": "Meteorological Station",
           "description": ""
-				},
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
+        },
         "PVString": {
           "label": "PV string",
           "description": ""
@@ -19182,7 +19194,7 @@
         "SCADA": {
           "label": "SCADA System",
           "description": ""
-				},
+        },
         "Tracker": {
           "label": "Tracker",
           "description": ""
@@ -19265,6 +19277,10 @@
           "description": ""
         },
         "Network": {
+          "label": "",
+          "description": ""
+        },
+        "Other": {
           "label": "",
           "description": ""
         },
