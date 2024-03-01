@@ -38,7 +38,7 @@
         "x-ob-usage-tips": ""
       },
       "Product": {
-        "type": "object",
+        "description": "An item or equipment that is packaged and sold as a unit.",
         "properties": {
           "ProdName": {
             "$ref": "#/components/schemas/ProdName"
@@ -92,10 +92,10 @@
             "$ref": "#/components/schemas/ManufacturerUPC"
           }
         },
-        "x-ob-usage-tips": ""
+        "type": "object"
       },
       "Device": {
-        "type": "object",
+        "description": "A singular instance of a Product, usually with a serial number or other unique identifier.",
         "properties": {
           "DeviceID": {
             "$ref": "#/components/schemas/DeviceID"
@@ -140,7 +140,7 @@
             "$ref": "#/components/schemas/DeviceName"
           }
         },
-        "x-ob-usage-tips": ""
+        "type": "object"
       },
       "DataRecord": {
         "type": "object",
@@ -12938,8 +12938,7 @@
         ]
       },
       "Assembly": {
-        "type": "object",
-        "description": "A collection of Devices that collectively form a logical unit or perform a collective function",
+        "description": "A collection of Devices that together forms a logical unit or perform a collective function. For example, an PV string is a collection of module Devices.",
         "properties": {
           "AssemblyID": {
             "$ref": "#/components/schemas/AssemblyID"
@@ -12953,7 +12952,8 @@
           "AssemblyName": {
             "$ref": "#/components/schemas/AssemblyName"
           }
-        }
+        },
+        "type": "object"
       },
       "AssemblyType": {
         "allOf": [
