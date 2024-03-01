@@ -38,7 +38,7 @@
         "x-ob-usage-tips": ""
       },
       "Product": {
-        "type": "object",
+        "description": "An item or equipment that is packaged and sold as a unit.",
         "properties": {
           "ProdName": {
             "$ref": "#/components/schemas/ProdName"
@@ -92,19 +92,13 @@
             "$ref": "#/components/schemas/ManufacturerUPC"
           }
         },
-        "x-ob-usage-tips": ""
+        "type": "object"
       },
       "Device": {
-        "type": "object",
+        "description": "A singular instance of a Product, usually with a serial number or other unique identifier.",
         "properties": {
-          "DeviceID": {
-            "$ref": "#/components/schemas/DeviceID"
-          },
           "SerialNum": {
             "$ref": "#/components/schemas/SerialNum"
-          },
-          "DeviceMaintenance": {
-            "$ref": "#/components/schemas/DeviceMaintenance"
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
@@ -112,41 +106,47 @@
           "URL": {
             "$ref": "#/components/schemas/URL"
           },
-          "Product": {
-            "$ref": "#/components/schemas/Product"
-          },
           "ProdCode": {
             "$ref": "#/components/schemas/ProdCode"
           },
-          "Location": {
-            "$ref": "#/components/schemas/Location"
+          "ProdID": {
+            "$ref": "#/components/schemas/ProdID"
           },
-          "Orientation": {
-            "$ref": "#/components/schemas/Orientation"
+          "Firmware": {
+            "$ref": "#/components/schemas/Firmware"
+          },
+          "MaintDateLast": {
+            "$ref": "#/components/schemas/MaintDateLast"
+          },
+          "InServiceDate": {
+            "$ref": "#/components/schemas/InServiceDate"
+          },
+          "Calibration": {
+            "$ref": "#/components/schemas/Calibration"
+          },
+          "Warranties": {
+            "$ref": "#/components/schemas/Warranties"
+          },
+          "DeviceType": {
+            "$ref": "#/components/schemas/DeviceType"
+          },
+          "Components": {
+            "$ref": "#/components/schemas/Components"
+          },
+          "DeviceName": {
+            "$ref": "#/components/schemas/DeviceName"
+          },
+          "DeviceUUID": {
+            "$ref": "#/components/schemas/DeviceUUID"
           }
         },
-        "x-ob-usage-tips": ""
+        "type": "object"
       },
       "DataRecord": {
         "type": "object",
         "properties": {
-          "DeviceID": {
-            "$ref": "#/components/schemas/DeviceID"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
-      "DeviceMaintenance": {
-        "type": "object",
-        "properties": {
-          "MaintDateLast": {
-            "$ref": "#/components/schemas/MaintDateLast"
-          },
-          "CalibrationDateLast": {
-            "$ref": "#/components/schemas/CalibrationDateLast"
-          },
-          "CalibrationMeth": {
-            "$ref": "#/components/schemas/CalibrationMeth"
+          "DeviceUUID": {
+            "$ref": "#/components/schemas/DeviceUUID"
           }
         },
         "x-ob-usage-tips": ""
@@ -4643,7 +4643,7 @@
           },
           {
             "type": "object",
-            "description": "Serial number of the device.",
+            "description": "Manufacturer's serial number of a device.",
             "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {},
@@ -5287,21 +5287,6 @@
               "Unit": "decimal_percent",
               "Value": 0.05
             },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "DeviceID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Identifier for an individual piece of equipment used in a system, for example, ABC Brand inverter with serial number xxxx.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
             "x-ob-item-type-group": ""
           }
         ]
@@ -12865,6 +12850,111 @@
           }
         ]
       },
+      "DateMaintLast": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Most recent date that a device was maintained.",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "InspectionDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date of an inspection.",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "For a device, the most recent inspection",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "InServiceDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date that a device is first placed in service.",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "Calibration": {
+        "type": "object",
+        "properties": {
+          "CalibrationDateLast": {
+            "$ref": "#/components/schemas/CalibrationDateLast"
+          },
+          "CalibrationMeth": {
+            "$ref": "#/components/schemas/CalibrationMeth"
+          }
+        },
+        "x-ob-usage-tips": ""
+      },
+      "DeviceType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of a device",
+            "x-ob-item-type": "DeviceTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "Assembly": {
+        "description": "A collection of Devices that together forms a logical unit or perform a collective function. For example, an PV string is a collection of module Devices.",
+        "properties": {
+          "AssemblyType": {
+            "$ref": "#/components/schemas/AssemblyType"
+          },
+          "Devices": {
+            "$ref": "#/components/schemas/Devices"
+          },
+          "AssemblyName": {
+            "$ref": "#/components/schemas/AssemblyName"
+          },
+          "AssemblyUUID": {
+            "$ref": "#/components/schemas/AssemblyUUID"
+          }
+        },
+        "type": "object"
+      },
+      "AssemblyType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of an Assembly",
+            "x-ob-item-type": "AssemblyTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
       "ChecksumType": {
         "allOf": [
           {
@@ -12881,6 +12971,21 @@
             }
           }
         ]
+      },
+      "Component": {
+        "type": "object",
+        "description": "A part or component of a Device",
+        "properties": {
+          "ComponentType": {
+            "$ref": "#/components/schemas/ComponentType"
+          },
+          "ComponentName": {
+            "$ref": "#/components/schemas/ComponentName"
+          },
+          "ComponentUUID": {
+            "$ref": "#/components/schemas/ComponentUUID"
+          }
+        }
       },
       "ChecksumKey": {
         "allOf": [
@@ -12911,6 +13016,117 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ComponentType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of a Component",
+            "x-ob-item-type": "ComponentTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "Components": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Component"
+        }
+      },
+      "DeviceName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A user-defined name for a device",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "AssemblyName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A user-defined name for an Assembly",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ComponentName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A user-defined name for a Component",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "AssemblyUUID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An identifier for an Assembly",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ComponentUUID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An identifier for a component",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "DeviceUUID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "UUID for an individual piece of equipment.",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-usage-tips": "Use SerialNum for the manufacturer's serial number.",
+            "x-ob-sample-value": {},
+            "x-ob-item-type-group": ""
           }
         ]
       }
@@ -15270,66 +15486,114 @@
         }
       }
     },
-    "DeviceItemType": {
+    "DeviceTypeItemType": {
       "description": "",
       "enums": {
-        "ModuleMember": {
+        "Battery": {
           "label": "",
           "description": ""
         },
-        "OptimizerMember": {
+        "BatteryManagementSystem": {
           "label": "",
           "description": ""
         },
-        "DCDisconnectSwitchMember": {
+        "Combiner": {
           "label": "",
           "description": ""
         },
-        "ACDisconnectSwitchMember": {
+        "DisconnectSwitchAC": {
           "label": "",
           "description": ""
         },
-        "InverterMember": {
+        "DisconnectSwitchDC": {
           "label": "",
           "description": ""
         },
-        "TrackerMember": {
+        "Inverter": {
           "label": "",
           "description": ""
         },
-        "CombinerMember": {
+        "Logger": {
           "label": "",
           "description": ""
         },
-        "MetStationMember": {
+        "Meter": {
           "label": "",
           "description": ""
         },
-        "TransformerMember": {
+        "Modem": {
           "label": "",
           "description": ""
         },
-        "BatteryMember": {
+        "Module": {
           "label": "",
           "description": ""
         },
-        "BatteryManagementSystemMember": {
+        "Mounting": {
           "label": "",
           "description": ""
         },
-        "LoggerMember": {
+        "Optimizer": {
           "label": "",
           "description": ""
         },
-        "MeterMember": {
+        "Other": {
           "label": "",
           "description": ""
         },
-        "StringMember": {
+        "PowerSupply": {
           "label": "",
           "description": ""
         },
-        "MountingMember": {
+        "Pyranometer": {
+          "label": "",
+          "description": ""
+        },
+        "RapidShutdown": {
+          "label": "",
+          "description": ""
+        },
+        "ReferenceCell": {
+          "label": "",
+          "description": ""
+        },
+        "String": {
+          "label": "",
+          "description": ""
+        },
+        "Switch": {
+          "label": "",
+          "description": ""
+        },
+        "TemperatureSensor": {
+          "label": "",
+          "description": ""
+        },
+        "Tracker": {
+          "label": "",
+          "description": ""
+        },
+        "TrackerMotor": {
+          "label": "",
+          "description": ""
+        },
+        "TrackerController": {
+          "label": "",
+          "description": ""
+        },
+        "TrackerStructure": {
+          "label": "",
+          "description": ""
+        },
+        "Transformer": {
+          "label": "",
+          "description": ""
+        },
+        "UPS": {
+          "label": "Uninterruptible Power Supply",
+          "description": ""
+        },
+        "WindSpeedSensor": {
           "label": "",
           "description": ""
         }
@@ -18600,7 +18864,7 @@
         },
         "High": {
           "label": "High",
-          "description": "Failure creates safety hazard or risk that requires orderly shutdown of operation"
+          "description": "Safety hazard or risk that requires orderly shutdown of operation"
         },
         "Low": {
           "label": "Low",
@@ -18609,6 +18873,10 @@
         "Negligible": {
           "label": "Negligible",
           "description": "No safety hazard or risk, operations continue without precautions"
+        },
+        "Incipient": {
+          "label": "Incipient",
+          "description": "A safety hazard is not present, but the Issue or Failure may create a hazard in the future"
         }
       }
     },
@@ -18671,11 +18939,11 @@
       "enums": {
         "Critical": {
           "label": "Critical",
-          "description": "Failure entirely compromises the capability of the item to perform its function."
+          "description": "The item cannot perform its function to any degree. "
         },
         "Degraded": {
           "label": "Degraded",
-          "description": "Failure reduces the capability of the item to perform its function."
+          "description": "The capability of the item to perform its function is reduced."
         },
         "Incipient": {
           "label": "Incipient",
@@ -18938,6 +19206,148 @@
         },
         "Idle": {
           "label": "Idle",
+          "description": ""
+        }
+      }
+    },
+    "AssemblyTypeItemType": {
+      "description": "",
+      "enums": {
+        "CollectionAC": {
+          "label": "AC Collection",
+          "description": ""
+        },
+        "CollectionDC": {
+          "label": "DC Collection",
+          "description": ""
+        },
+        "DAQ": {
+          "label": "Data Acquisition System",
+          "description": ""
+        },
+        "ESS": {
+          "label": "Energy Storage System",
+          "description": ""
+        },
+        "InverterBlock": {
+          "label": "Inverter block",
+          "description": ""
+        },
+        "MetStation": {
+          "label": "Meteorological Station",
+          "description": ""
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
+        },
+        "PVString": {
+          "label": "PV string",
+          "description": ""
+        },
+        "SCADA": {
+          "label": "SCADA System",
+          "description": ""
+        },
+        "Tracker": {
+          "label": "Tracker",
+          "description": ""
+        },
+        "Transformer": {
+          "label": "Transformer",
+          "description": ""
+        }
+      }
+    },
+    "ComponentTypeItemType": {
+      "description": "Enumeration of component types",
+      "enums": {
+        "Antenna": {
+          "label": "",
+          "description": ""
+        },
+        "Bracket": {
+          "label": "",
+          "description": ""
+        },
+        "Breaker": {
+          "label": "Breaker",
+          "description": ""
+        },
+        "Connector": {
+          "label": "Connector",
+          "description": ""
+        },
+        "Contactor": {
+          "label": "",
+          "description": ""
+        },
+        "Enclosure": {
+          "label": "Enclosure",
+          "description": ""
+        },
+        "Fan": {
+          "label": "",
+          "description": ""
+        },
+        "Frame": {
+          "label": "Frame",
+          "description": ""
+        },
+        "Fuse": {
+          "label": "Fuse",
+          "description": ""
+        },
+        "Gauge": {
+          "label": "",
+          "description": ""
+        },
+        "Glass": {
+          "label": "",
+          "description": ""
+        },
+        "Ground": {
+          "label": "",
+          "description": ""
+        },
+        "IGBT": {
+          "label": "Insulated-Gate Bipolar Transistor",
+          "description": "Used in inverters"
+        },
+        "Insulation": {
+          "label": "",
+          "description": ""
+        },
+        "JunctionBox": {
+          "label": "Junction Box",
+          "description": ""
+        },
+        "Modem": {
+          "label": "",
+          "description": ""
+        },
+        "Motherboard": {
+          "label": "",
+          "description": ""
+        },
+        "Network": {
+          "label": "",
+          "description": ""
+        },
+        "Other": {
+          "label": "",
+          "description": ""
+        },
+        "PowerSupply": {
+          "label": "",
+          "description": ""
+        },
+        "Switch": {
+          "label": "Switch",
+          "description": ""
+        },
+        "Wire": {
+          "label": "Wire",
           "description": ""
         }
       }
