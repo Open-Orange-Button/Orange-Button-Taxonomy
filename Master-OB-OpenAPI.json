@@ -97,9 +97,6 @@
       "Device": {
         "description": "A singular instance of a Product, usually with a serial number or other unique identifier.",
         "properties": {
-          "DeviceID": {
-            "$ref": "#/components/schemas/DeviceID"
-          },
           "SerialNum": {
             "$ref": "#/components/schemas/SerialNum"
           },
@@ -138,6 +135,9 @@
           },
           "DeviceName": {
             "$ref": "#/components/schemas/DeviceName"
+          },
+          "DeviceUUID": {
+            "$ref": "#/components/schemas/DeviceUUID"
           }
         },
         "type": "object"
@@ -145,8 +145,8 @@
       "DataRecord": {
         "type": "object",
         "properties": {
-          "DeviceID": {
-            "$ref": "#/components/schemas/DeviceID"
+          "DeviceUUID": {
+            "$ref": "#/components/schemas/DeviceUUID"
           }
         },
         "x-ob-usage-tips": ""
@@ -5287,21 +5287,6 @@
               "Unit": "decimal_percent",
               "Value": 0.05
             },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "DeviceID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "UUID for an individual piece of equipment.",
-            "x-ob-item-type": "UUIDItemType",
-            "x-ob-usage-tips": "Use SerialNum for the manufacturer's serial number.",
-            "x-ob-sample-value": {},
             "x-ob-item-type-group": ""
           }
         ]
@@ -12940,9 +12925,6 @@
       "Assembly": {
         "description": "A collection of Devices that together forms a logical unit or perform a collective function. For example, an PV string is a collection of module Devices.",
         "properties": {
-          "AssemblyID": {
-            "$ref": "#/components/schemas/AssemblyID"
-          },
           "AssemblyType": {
             "$ref": "#/components/schemas/AssemblyType"
           },
@@ -12951,6 +12933,9 @@
           },
           "AssemblyName": {
             "$ref": "#/components/schemas/AssemblyName"
+          },
+          "AssemblyUUID": {
+            "$ref": "#/components/schemas/AssemblyUUID"
           }
         },
         "type": "object"
@@ -12987,33 +12972,18 @@
           }
         ]
       },
-      "AssemblyID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "An identifier for an Assembly",
-            "x-ob-item-type": "UUIDItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
       "Component": {
         "type": "object",
         "description": "A part or component of a Device",
         "properties": {
-          "ComponentID": {
-            "$ref": "#/components/schemas/ComponentID"
-          },
           "ComponentType": {
             "$ref": "#/components/schemas/ComponentType"
           },
           "ComponentName": {
             "$ref": "#/components/schemas/ComponentName"
+          },
+          "ComponentUUID": {
+            "$ref": "#/components/schemas/ComponentUUID"
           }
         }
       },
@@ -13043,21 +13013,6 @@
             "type": "object",
             "description": "Supporting information used to provide additional context to the type of Checksum algorithm used to validate data.",
             "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "ComponentID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "An identifier for a component",
-            "x-ob-item-type": "UUIDItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -13127,6 +13082,51 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "AssemblyUUID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An identifier for an Assembly",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ComponentUUID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An identifier for a component",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "DeviceUUID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "UUID for an individual piece of equipment.",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-usage-tips": "Use SerialNum for the manufacturer's serial number.",
+            "x-ob-sample-value": {},
+            "x-ob-item-type-group": ""
           }
         ]
       }
