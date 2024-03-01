@@ -135,6 +135,9 @@
           },
           "Components": {
             "$ref": "#/components/schemas/Components"
+          },
+          "DeviceName": {
+            "$ref": "#/components/schemas/DeviceName"
           }
         },
         "x-ob-usage-tips": ""
@@ -5295,8 +5298,8 @@
           },
           {
             "type": "object",
-            "description": "Identifier for an individual piece of equipment.",
-            "x-ob-item-type": "StringItemType",
+            "description": "UUID for an individual piece of equipment.",
+            "x-ob-item-type": "UUIDItemType",
             "x-ob-usage-tips": "Use SerialNum for the manufacturer's serial number.",
             "x-ob-sample-value": {},
             "x-ob-item-type-group": ""
@@ -12946,6 +12949,9 @@
           },
           "Devices": {
             "$ref": "#/components/schemas/Devices"
+          },
+          "AssemblyName": {
+            "$ref": "#/components/schemas/AssemblyName"
           }
         }
       },
@@ -12989,7 +12995,7 @@
           {
             "type": "object",
             "description": "An identifier for an Assembly",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "UUIDItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -13005,6 +13011,9 @@
           },
           "ComponentType": {
             "$ref": "#/components/schemas/ComponentType"
+          },
+          "ComponentName": {
+            "$ref": "#/components/schemas/ComponentName"
           }
         }
       },
@@ -13048,7 +13057,7 @@
           {
             "type": "object",
             "description": "An identifier for a component",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "UUIDItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -13075,6 +13084,51 @@
         "items": {
           "$ref": "#/components/schemas/Component"
         }
+      },
+      "DeviceName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A user-defined name for a device",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "AssemblyName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A user-defined name for an Assembly",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ComponentName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A user-defined name for a Component",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
       }
     }
   },
