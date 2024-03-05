@@ -139,8 +139,8 @@
           "DeviceUUID": {
             "$ref": "#/components/schemas/DeviceUUID"
           },
-          "PrivateKeyAddress": {
-            "$ref": "#/components/schemas/PrivateKeyAddress"
+          "PrivateKeyAddresses": {
+            "$ref": "#/components/schemas/PrivateKeyAddresses"
           }
         },
         "type": "object"
@@ -13133,7 +13133,7 @@
           }
         ]
       },
-      "PrivateKeyAddress": {
+      "PrivateKeyAddresses": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementArrayString"
