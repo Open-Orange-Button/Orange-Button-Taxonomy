@@ -9,7 +9,7 @@ Element changes
 * Adds FailureCause, FailureDateDetected, FailureDetectionMethod, FailureID, FailureMechanism, FailureOperatingCondition, ImpactCapability, ImpactProduction, ImpactSafety (:pull`287`)
 * Adds ChecksumType (:pull:`291`)
 * Adds ChecksumKey, ChecksumDetail (:pull:`291`)
-* Adds PrivateKeyAddress (:pull:`297`)
+* Adds PrivateKeyAddresses (:pull:`297`)
 
 Object changes
 ~~~~~~~~~~~~~~
