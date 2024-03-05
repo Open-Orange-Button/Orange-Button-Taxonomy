@@ -13129,6 +13129,180 @@
             "x-ob-item-type-group": ""
           }
         ]
+      },
+      "IssueUUID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A UUID for a OMIssue",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IssueID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A user-defined identifier for an OMIssue",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IssueDateFound": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The date or datetime that an OMIssue is identified.",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "OMIssue": {
+        "type": "object",
+        "description": "A record of a condition of a PV system or equipment that may merit investigation or action.",
+        "properties": {
+          "IssueDateFound": {
+            "$ref": "#/components/schemas/IssueDateFound"
+          },
+          "IssueID": {
+            "$ref": "#/components/schemas/IssueID"
+          },
+          "IssueUUID": {
+            "$ref": "#/components/schemas/IssueUUID"
+          },
+          "FailureRecord": {
+            "$ref": "#/components/schemas/FailureRecord"
+          },
+          "ImpactSafety": {
+            "$ref": "#/components/schemas/ImpactSafety"
+          },
+          "ImpactProduction": {
+            "$ref": "#/components/schemas/ImpactProduction"
+          },
+          "ImpactCapability": {
+            "$ref": "#/components/schemas/ImpactCapability"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "IssueCause": {
+            "$ref": "#/components/schemas/IssueCause"
+          },
+          "IssueCauseConfidenceLevel": {
+            "$ref": "#/components/schemas/IssueCauseConfidenceLevel"
+          },
+          "IssueConfidenceLevel": {
+            "$ref": "#/components/schemas/IssueConfidenceLevel"
+          },
+          "IssueStatus": {
+            "$ref": "#/components/schemas/IssueStatus"
+          },
+          "EnergyLoss": {
+            "$ref": "#/components/schemas/EnergyLoss"
+          }
+        }
+      },
+      "IssueType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A category for an OMIssue",
+            "x-ob-item-type": "IssueTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IssueStatus": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The status of an OMIssue",
+            "x-ob-item-type": "IssueStatusItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IssueConfidenceLevel": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The level of confidence that an OMIssue is factual",
+            "x-ob-item-type": "ConfidenceItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IssueCause": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The cause underlying an OMIssue",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IssueCauseConfidenceLevel": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The level of confidence that the cause of an OMIssue is accurate.",
+            "x-ob-item-type": "ConfidenceItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
       }
     }
   },
@@ -19378,6 +19552,130 @@
         "Keccak_256": {
           "label": "Keccak-256",
           "description": "Reference FIPS 202"
+        }
+      }
+    },
+    "ConfidenceItemType": {
+      "description": "",
+      "enums": {
+        "Certain": {
+          "label": "Certain",
+          "description": ""
+        },
+        "High": {
+          "label": "High",
+          "description": "More than 50% likely to be factual."
+        },
+        "Moderate": {
+          "label": "Moderate",
+          "description": "Equally likely to be factual or not."
+        },
+        "Low": {
+          "label": "Low",
+          "description": "Less than 50% likely to be factual."
+        },
+        "Unknown": {
+          "label": "Unknown",
+          "description": ""
+        }
+      }
+    },
+    "IssueStatusItemType": {
+      "description": "",
+      "enums": {
+        "UnderInvestigation": {
+          "label": "UnderInvestigation",
+          "description": ""
+        },
+        "AssignedForAction": {
+          "label": "AssignedForAction",
+          "description": ""
+        },
+        "Closed": {
+          "label": "Closed",
+          "description": ""
+        }
+      }
+    },
+    "IssuePriorityItemType": {
+      "description": "",
+      "enums": {
+        "High": {
+          "label": "High",
+          "description": ""
+        },
+        "Medium": {
+          "label": "Medium",
+          "description": ""
+        },
+        "Low": {
+          "label": "Low",
+          "description": ""
+        }
+      }
+    },
+    "IssueTypeItemType": {
+      "description": "IssueType comprises two parts separated by an underscore: a general category and a category-specific subcategory. ",
+      "enums": {
+        "Data_MetStation": {
+          "label": "Data-MetStation",
+          "description": ""
+        },
+        "Data_SCADA": {
+          "label": "Data-SCADA",
+          "description": ""
+        },
+        "Data_Monitoring": {
+          "label": "Data-Monitoring",
+          "description": ""
+        },
+        "Energy_CollectionAC": {
+          "label": "Energy-CollectionAC",
+          "description": "Issue related to the AC collection system"
+        },
+        "Energy_CollectionDC": {
+          "label": "Energy-CollectionDC",
+          "description": "Issue related to the DC collection system"
+        },
+        "Energy_Inverter": {
+          "label": "Energy-Inverter",
+          "description": ""
+        },
+        "Energy_Tracker": {
+          "label": "Energy-Tracker",
+          "description": ""
+        },
+        "Energy_PVString": {
+          "label": "Energy-PVString",
+          "description": ""
+        },
+        "Energy_PVModule": {
+          "label": "Energy-PVModule",
+          "description": ""
+        },
+        "External_Outage": {
+          "label": "External-Outage",
+          "description": "Issue related to grid outage"
+        },
+        "External_GridDisturbance": {
+          "label": "External-GridDisturbance",
+          "description": "Issue related to grid power"
+        },
+        "External_Shading": {
+          "label": "External-Shading",
+          "description": "Issue related to shading from external objects"
+        },
+        "Software_Communications": {
+          "label": "Software-Communications",
+          "description": ""
+        },
+        "Software_DataManagement": {
+          "label": "Software-DataManagement",
+          "description": ""
+        },
+        "Software_Controls": {
+          "label": "Software-Controls",
+          "description": ""
         }
       }
     }
