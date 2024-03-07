@@ -13133,10 +13133,10 @@
           }
         ]
       },
-      "PrivateKeyAddresses": {
+      "PrivateKeyAddress": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementArrayString"
+            "$ref": "#/components/schemas/TaxonomyElementString"
           },
           {
             "type": "object",
@@ -13145,12 +13145,16 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "The PKA is defined in the following way: TYPE = addr-type-identifier HASH = hash-function ( public-key-material ) CHECK = check-sum ( TYPE | HASH ) PKA = TYPE | HASH | CHECK",
             "x-ob-sample-value": {
-              "Value": [
-                "1E99423A4ED27608A15A2616A2B0E9E52CED330AC530EDCC32C8FFC6A526AEDD"
-              ]
+              "Value": "1E99423A4ED27608A15A2616A2B0E9E52CED330AC530EDCC32C8FFC6A526AEDD"
             }
           }
         ]
+      },
+      "PrivateKeyAddresses": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PrivateKeyAddress"
+        }
       }
     }
   },
