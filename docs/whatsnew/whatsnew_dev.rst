@@ -9,12 +9,13 @@ Element changes
 * Adds FailureCause, FailureDateDetected, FailureDetectionMethod, FailureID, FailureMechanism, FailureOperatingCondition, ImpactCapability, ImpactProduction, ImpactSafety (:pull`287`)
 * Adds ChecksumType (:pull:`291`)
 * Adds ChecksumKey, ChecksumDetail (:pull:`291`)
-* Adds PrivateKeyAddresses (:pull:`297`)
+* Adds PrivateKeyAddress (:pull:`297`)
 
 Object changes
 ~~~~~~~~~~~~~~
 * Removes Firmwares array, adds Firmware to ProdCertification. Removes Applied Date, Certification Date from Firmware (:pull:`280`)
 * Add Failure (:pull:`287`)
+* Adds PrivateKeyAddresses array object (:pull:`297`)
 
 Unit changes
 ~~~~~~~~~~~~
