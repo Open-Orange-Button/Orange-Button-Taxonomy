@@ -15,7 +15,7 @@ Object changes
 ~~~~~~~~~~~~~~
 * Removes Firmwares array, adds Firmware to ProdCertification. Removes Applied Date, Certification Date from Firmware (:pull:`280`)
 * Add Failure (:pull:`287`)
-* Adds PrivateKeyAddresses array object (:pull:`297`)
+* Adds PrivateKeyAddresses array object and adds PrivateKeyAddresses to Device (:pull:`297`)
 
 Unit changes
 ~~~~~~~~~~~~
