@@ -13140,7 +13140,7 @@
           },
           {
             "type": "object",
-            "description": "The Private Key Address (PKA) is derived from an asymmetric private/public key pair, typically generated on the device itself and stored securely, preferably in a hardware-secured environment like a Secure Element (SE). Private keys remain within this secure environment to prevent exposure. The PKA consists of a type identifier, the hash output of public-key-material, and optionally, a CRC check for error detection, ensuring uniqueness and integrity. Transferring private keys between secure hardware instances is possible but encrypted and requires additional credentials. Although PKAs are intended to be globally unique, the possibility of collision exists due to random key generation, with protocols for handling such events outside the scope of the specification.",
+            "description": "The purpose of this concept is to provide a cryptographically secure identity for a device. The Private Key Address (PKA) is derived from an asymmetric private/public key pair, typically generated on the device itself and stored securely, preferably in a hardware-secured environment like a Secure Element (SE). Private keys remain within this secure environment to prevent exposure. The PKA consists of a type identifier, the hash output of public-key-material, and optionally, a CRC check for error detection, ensuring uniqueness and integrity.",
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "The PKA is defined in the following way: TYPE = addr-type-identifier HASH = hash-function ( public-key-material ) CHECK = check-sum ( TYPE | HASH ) PKA = TYPE | HASH | CHECK",
