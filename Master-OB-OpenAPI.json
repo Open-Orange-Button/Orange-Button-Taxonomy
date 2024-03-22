@@ -12628,6 +12628,9 @@
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
+          },
+          "CapacityFractionAC": {
+            "$ref": "#/components/schemas/CapacityFractionAC"
           }
         }
       },
@@ -13188,9 +13191,6 @@
           "IssueUUID": {
             "$ref": "#/components/schemas/IssueUUID"
           },
-          "FailureRecord": {
-            "$ref": "#/components/schemas/FailureRecord"
-          },
           "ImpactSafety": {
             "$ref": "#/components/schemas/ImpactSafety"
           },
@@ -13226,6 +13226,12 @@
           },
           "EnergyLoss": {
             "$ref": "#/components/schemas/EnergyLoss"
+          },
+          "FailureRecords": {
+            "$ref": "#/components/schemas/FailureRecords"
+          },
+          "ExternalConditions": {
+            "$ref": "#/components/schemas/ExternalConditions"
           }
         }
       },
@@ -13303,6 +13309,33 @@
             "x-ob-sample-value": {}
           }
         ]
+      },
+      "FailureRecords": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/FailureRecord"
+        }
+      },
+      "ExternalCondition": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An event or condition outside of a PV system that affects the PV system's operation or condition.",
+            "x-ob-item-type": "ExternalConditionItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ExternalConditions": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ExternalCondition"
+        }
       }
     }
   },
@@ -19105,6 +19138,10 @@
         "Negligible": {
           "label": "Negligible",
           "description": "Energy production is not affected"
+        },
+        "Unknown": {
+          "label": "Unknown",
+          "description": ""
         }
       }
     },
@@ -19126,6 +19163,10 @@
         "Negligible": {
           "label": "Negligible",
           "description": "No effect on the capability of the item."
+        },
+        "Unknown": {
+          "label": "Unknown",
+          "description": ""
         }
       }
     },
@@ -19676,6 +19717,79 @@
         "Software_Controls": {
           "label": "Software-Controls",
           "description": ""
+        }
+      }
+    },
+    "ExternalConditionItemType": {
+      "description": "An enumeration of external conditions or events that may affect a PV system's production, reliability or condition. ",
+      "enums": {
+        "None": {
+          "label": "None",
+          "description": ""
+        },
+        "Flood": {
+          "label": "Flood",
+          "description": ""
+        },
+        "Fire": {
+          "label": "Fire",
+          "description": "Includes wildfires but not smoke from wildfires"
+        },
+        "Smoke": {
+          "label": "Smoke",
+          "description": "Smoke and/or ash from fires"
+        },
+        "LIghtning": {
+          "label": "Lightning",
+          "description": ""
+        },
+        "Hail": {
+          "label": "Hail",
+          "description": ""
+        },
+        "Geomagnetic": {
+          "label": "Geomagnetic Disturbance",
+          "description": ""
+        },
+        "Earthquake": {
+          "label": "Earthquake",
+          "description": ""
+        },
+        "Wind": {
+          "label": "Wind",
+          "description": ""
+        },
+        "Hurricane": {
+          "label": "Hurricane",
+          "description": ""
+        },
+        "Tornado": {
+          "label": "Tornado",
+          "description": ""
+        },
+        "Eruption": {
+          "label": "Volcanic Eruption",
+          "description": ""
+        },
+        "SnowIce": {
+          "label": "Snow or Icing",
+          "description": ""
+        },
+        "Landslide": {
+          "label": "Landslide",
+          "description": ""
+        },
+        "TemperatureAirHot": {
+          "label": "Temperature, Air, Hot",
+          "description": ""
+        },
+        "TemperatureAirCold": {
+          "label": "Temperature, Air, Cold",
+          "description": ""
+        },
+        "Disturbance": {
+          "label": "Disturbance",
+          "description": "Human-caused disturbances"
         }
       }
     }
