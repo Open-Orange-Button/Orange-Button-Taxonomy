@@ -138,6 +138,9 @@
           },
           "DeviceUUID": {
             "$ref": "#/components/schemas/DeviceUUID"
+          },
+          "PrivateKeyAddresses": {
+            "$ref": "#/components/schemas/PrivateKeyAddresses"
           }
         },
         "type": "object"
@@ -13129,6 +13132,29 @@
             "x-ob-item-type-group": ""
           }
         ]
+      },
+      "PrivateKeyAddress": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "This concept provides a cryptographically secure identity for a device and originates from the distributed ledger or blockchain technologies. The Private Key Address (PKA) is derived from an asymmetric private/public key pair, typically generated on the device itself and stored securely, preferably in a hardware-secured environment like a Secure Element (SE). Private keys remain within this secure environment to prevent exposure. The PrivateKeyAddress consists of a type identifier, the hash output of public-key-material, and optionally, a CRC check for error detection, ensuring uniqueness and integrity.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "1E99423A4ED27608A15A2616A2B0E9E52CED330AC530EDCC32C8FFC6A526AEDD"
+            }
+          }
+        ]
+      },
+      "PrivateKeyAddresses": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PrivateKeyAddress"
+        }
       }
     }
   },
