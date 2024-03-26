@@ -19077,13 +19077,17 @@
           "label": "Low",
           "description": "Safety hazard or risk is present but manageable, operations continue with precautions"
         },
-        "Negligible": {
-          "label": "Negligible",
-          "description": "No safety hazard or risk, operations continue without precautions"
-        },
         "Incipient": {
           "label": "Incipient",
           "description": "A safety hazard is not present, but the Issue or Failure may create a hazard in the future"
+				},
+        "Negligible": {
+          "label": "Negligible",
+          "description": "No safety hazard or risk, operations continue without precautions"
+				},
+        "Unknown": {
+          "label": "Unknown",
+          "description": ""
         }
       }
     },
