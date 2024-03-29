@@ -13350,7 +13350,7 @@
           {
             "type": "object",
             "description": "The method for detecting an Issue or failure.",
-            "x-ob-item-type": "FailureDetectionMethodItemType",
+            "x-ob-item-type": "DetectionMethodItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -19156,7 +19156,7 @@
         }
       }
     },
-    "FailureDetectionMethodItemType": {
+    "DetectionMethodItemType": {
       "description": "Methods for detection of issues or failures",
       "enums": {
         "Inspection": {
