@@ -12746,8 +12746,8 @@
           "FailureMechanism": {
             "$ref": "#/components/schemas/FailureMechanism"
           },
-          "FailureDetectionMethod": {
-            "$ref": "#/components/schemas/FailureDetectionMethod"
+          "DetectionMethod": {
+            "$ref": "#/components/schemas/DetectionMethod"
           }
         }
       },
@@ -12760,21 +12760,6 @@
             "type": "object",
             "description": "The impact on safety of an Issue or Failure",
             "x-ob-item-type": "ImpactSafetyItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "FailureDetectionMethod": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The method for detecting a failure",
-            "x-ob-item-type": "FailureDetectionMethodItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -13166,28 +13151,10 @@
           }
         ]
       },
-      "IssueDateFound": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The date or datetime that an OMIssue is identified.",
-            "x-ob-item-type": "DateTimeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
       "OMIssue": {
         "type": "object",
         "description": "A record of a condition of a PV system or equipment that may merit investigation or action.",
         "properties": {
-          "IssueDateFound": {
-            "$ref": "#/components/schemas/IssueDateFound"
-          },
           "IssueID": {
             "$ref": "#/components/schemas/IssueID"
           },
@@ -13235,6 +13202,18 @@
           },
           "ExternalConditions": {
             "$ref": "#/components/schemas/ExternalConditions"
+          },
+          "DetectionMethod": {
+            "$ref": "#/components/schemas/DetectionMethod"
+          },
+          "IssueResolvedDate": {
+            "$ref": "#/components/schemas/IssueResolvedDate"
+          },
+          "UpdateLast": {
+            "$ref": "#/components/schemas/UpdateLast"
+          },
+          "IssueFoundDate": {
+            "$ref": "#/components/schemas/IssueFoundDate"
           }
         }
       },
@@ -13338,8 +13317,8 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ExternalCondition"
-				}
-			},
+        }
+      },
       "PrivateKeyAddress": {
         "allOf": [
           {
@@ -13362,6 +13341,66 @@
         "items": {
           "$ref": "#/components/schemas/PrivateKeyAddress"
         }
+      },
+      "DetectionMethod": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The method for detecting an Issue or failure.",
+            "x-ob-item-type": "FailureDetectionMethodItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IssueResolvedDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date of the resolution of an Issue",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "UpdateLast": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Datetime of the latest update",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IssueFoundDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The date or datetime that an OMIssue is identified.",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
       }
     }
   },
@@ -19106,11 +19145,11 @@
         "Incipient": {
           "label": "Incipient",
           "description": "A safety hazard is not present, but the Issue or Failure may create a hazard in the future"
-				},
+        },
         "Negligible": {
           "label": "Negligible",
           "description": "No safety hazard or risk, operations continue without precautions"
-				},
+        },
         "Unknown": {
           "label": "Unknown",
           "description": ""
@@ -19118,7 +19157,7 @@
       }
     },
     "FailureDetectionMethodItemType": {
-      "description": "Methods for detection of failures",
+      "description": "Methods for detection of issues or failures",
       "enums": {
         "Inspection": {
           "label": "Inspection",
@@ -19136,17 +19175,21 @@
           "label": "Other",
           "description": ""
         },
-        "Maintenance": {
-          "label": "Maintenance",
-          "description": "Failure detected during periodic, routine or scheduled maintenance"
+        "MaintenanceScheduled": {
+          "label": "Maintenance, Scheduled",
+          "description": "Detected during scheduled, periodic or preventative maintenance"
         },
         "Demand": {
           "label": "Demand",
-          "description": "Failure discovered during an attempt to activate an item"
+          "description": "Discovered during an attempt to activate an item"
         },
-        "Corrective": {
-          "label": "Corrective",
-          "description": "Failure discovered during a corrective maintenance activity"
+        "MaintenanceCorrective": {
+          "label": "Maintenance, Corrective",
+          "description": "Discovered during a corrective maintenance activity"
+        },
+        "PerformanceAnalysis": {
+          "label": "Performance Analysis",
+          "description": "Detected by analysis of performance data"
         }
       }
     },
@@ -19769,7 +19812,7 @@
           "label": "Smoke",
           "description": "Smoke and/or ash from fires"
         },
-        "LIghtning": {
+        "Lightning": {
           "label": "Lightning",
           "description": ""
         },
