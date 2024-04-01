@@ -13206,14 +13206,17 @@
           "DetectionMethod": {
             "$ref": "#/components/schemas/DetectionMethod"
           },
-          "IssueResolvedDate": {
-            "$ref": "#/components/schemas/IssueResolvedDate"
-          },
           "UpdateLast": {
             "$ref": "#/components/schemas/UpdateLast"
           },
           "IssueFoundDate": {
             "$ref": "#/components/schemas/IssueFoundDate"
+          },
+          "IssueResolution": {
+            "$ref": "#/components/schemas/IssueResolution"
+          },
+          "IssueResolutionDate": {
+            "$ref": "#/components/schemas/IssueResolutionDate"
           }
         }
       },
@@ -13357,21 +13360,6 @@
           }
         ]
       },
-      "IssueResolvedDate": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Date of the resolution of an Issue",
-            "x-ob-item-type": "DateTimeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
       "UpdateLast": {
         "allOf": [
           {
@@ -13395,6 +13383,36 @@
           {
             "type": "object",
             "description": "The date or datetime that an OMIssue is identified.",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IssueResolution": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Record of actions or decisions taken to resolve or address an Issue.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IssueResolutionDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date of the resolution of an Issue",
             "x-ob-item-type": "DateTimeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -19177,7 +19195,7 @@
         },
         "MaintenanceScheduled": {
           "label": "Maintenance, Scheduled",
-          "description": "Detected during scheduled, periodic or preventative maintenance"
+          "description": "Detected during scheduled, periodic or preventive maintenance"
         },
         "Demand": {
           "label": "Demand",
@@ -19190,6 +19208,10 @@
         "PerformanceAnalysis": {
           "label": "Performance Analysis",
           "description": "Detected by analysis of performance data"
+        },
+        "Forecast": {
+          "label": "Forecast",
+          "description": "Issue identified by means of a forecast or prediction"
         }
       }
     },
@@ -19697,16 +19719,24 @@
     "IssueStatusItemType": {
       "description": "",
       "enums": {
-        "UnderInvestigation": {
-          "label": "UnderInvestigation",
+        "Open": {
+          "label": "Open",
           "description": ""
         },
-        "AssignedForAction": {
-          "label": "AssignedForAction",
+        "Assigned": {
+          "label": "Assigned",
           "description": ""
         },
-        "Closed": {
-          "label": "Closed",
+        "Resolved": {
+          "label": "Resolved",
+          "description": ""
+        },
+        "Deferred": {
+          "label": "Deferred",
+          "description": ""
+        },
+        "Canceled": {
+          "label": "Canceled",
           "description": ""
         }
       }
