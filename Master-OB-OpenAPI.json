@@ -13419,6 +13419,181 @@
             "x-ob-sample-value": {}
           }
         ]
+      },
+      "OMTask": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Task"
+          },
+          {
+            "type": "object",
+            "description": "A Task object customized for Operations and Maintenance",
+            "properties": {
+              "TaskPriority": {
+                "$ref": "#/components/schemas/TaskPriority"
+              },
+              "UpdateLast": {
+                "$ref": "#/components/schemas/UpdateLast"
+              },
+              "MaintenanceType": {
+                "$ref": "#/components/schemas/MaintenanceType"
+              },
+              "OMIssues": {
+                "$ref": "#/components/schemas/OMIssues"
+              },
+              "TaskBudget": {
+                "$ref": "#/components/schemas/TaskBudget"
+              },
+              "TaskStatusFinal": {
+                "$ref": "#/components/schemas/TaskStatusFinal"
+              },
+              "TaskStartedDate": {
+                "$ref": "#/components/schemas/TaskStartedDate"
+              },
+              "TaskResolution": {
+                "$ref": "#/components/schemas/TaskResolution"
+              }
+            }
+          }
+        ]
+      },
+      "TaskPriority": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Priority of a Task",
+            "x-ob-item-type": "TaskPriorityItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "OMIssues": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/OMIssue"
+        }
+      },
+      "MaintenanceType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Category of maintenance activity or action",
+            "x-ob-item-type": "MaintenanceTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TaskWorkPlan": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A work plan for a task",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TaskBudget": {
+        "type": "object",
+        "description": "A collection of terms that specify budgeted resources for a task",
+        "properties": {
+          "TaskBudgetFunds": {
+            "$ref": "#/components/schemas/TaskBudgetFunds"
+          },
+          "TaskBudgetHours": {
+            "$ref": "#/components/schemas/TaskBudgetHours"
+          }
+        }
+      },
+      "TaskBudgetHours": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Labor hour budget for a task",
+            "x-ob-item-type": "DurationItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TaskBudgetFunds": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Funds budget for a task.",
+            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type-group": "OBMonetary",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TaskStartedDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date and time that a Task is started",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TaskStatusFinal": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The final status of a Task",
+            "x-ob-item-type": "TaskStatusFinalItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TaskResolution": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Description of the outcome of a Task.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
       }
     }
   },
@@ -19893,6 +20068,69 @@
         "Disturbance": {
           "label": "Disturbance",
           "description": "Human-caused disturbances"
+        }
+      }
+    },
+    "TaskPriorityItemType": {
+      "description": "",
+      "enums": {
+        "Critical": {
+          "label": "Critical",
+          "description": ""
+        },
+        "High": {
+          "label": "High",
+          "description": ""
+        },
+        "Medium": {
+          "label": "Medium",
+          "description": ""
+        },
+        "Low": {
+          "label": "Low",
+          "description": ""
+        }
+      }
+    },
+    "MaintenanceTypeItemType": {
+      "description": "",
+      "enums": {
+        "Corrective": {
+          "label": "Corrective",
+          "description": ""
+        },
+        "Preventive": {
+          "label": "Preventive",
+          "description": ""
+        },
+        "Periodic": {
+          "label": "Periodic",
+          "description": "Use for Scheduled Maintenance also"
+        },
+        "Predictive": {
+          "label": "Predictive",
+          "description": ""
+        }
+      }
+    },
+    "TaskStatusFinalItemType": {
+      "description": "The final status of a Task",
+      "enums": {
+        "Complete": {
+          "label": "Complete",
+          "description": ""
+        },
+        "Incomplete": {
+          "label": "Incomplete",
+          "description": ""
+        },
+        "NotStarted": {
+          "label": "NotStarted",
+          "description": ""
+        },
+        "Canceled": {
+          "label": "Canceled",
+          "description": ""
         }
       }
     }
