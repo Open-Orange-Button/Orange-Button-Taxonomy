@@ -19419,7 +19419,7 @@
         },
         "Monitoring": {
           "label": "Monitoring",
-          "description": "Detection by analysis of monitoring data"
+          "description": "Detection by inspecting monitoring data"
         },
         "Alarm": {
           "label": "Alarm",
@@ -19441,12 +19441,12 @@
           "label": "Maintenance, Corrective",
           "description": "Discovered during a corrective maintenance activity"
         },
-        "PerformanceAnalysis": {
-          "label": "Performance Analysis",
-          "description": "Detected by analysis of performance data"
+        "Analysis": {
+          "label": "Analysis",
+          "description": "Detected by analysis of data"
         },
-        "Forecast": {
-          "label": "Forecast",
+        "Prediction": {
+          "label": "Prediction",
           "description": "Issue identified by means of a forecast or prediction"
         }
       }
