@@ -1547,6 +1547,9 @@
           },
           "PaymentMethod": {
             "$ref": "#/components/schemas/PaymentMethod"
+          },
+          "TaskCreatedDate": {
+            "$ref": "#/components/schemas/TaskCreatedDate"
           }
         },
         "x-ob-usage-tips": ""
@@ -13444,14 +13447,14 @@
               "TaskBudget": {
                 "$ref": "#/components/schemas/TaskBudget"
               },
-              "TaskStatusFinal": {
-                "$ref": "#/components/schemas/TaskStatusFinal"
-              },
               "TaskStartedDate": {
                 "$ref": "#/components/schemas/TaskStartedDate"
               },
-              "TaskResolution": {
-                "$ref": "#/components/schemas/TaskResolution"
+              "TaskResult": {
+                "$ref": "#/components/schemas/TaskResult"
+              },
+              "OMTaskType": {
+                "$ref": "#/components/schemas/OMTaskType"
               }
             }
           }
@@ -13580,7 +13583,7 @@
           }
         ]
       },
-      "TaskResolution": {
+      "TaskResult": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementString"
@@ -13589,6 +13592,36 @@
             "type": "object",
             "description": "Description of the outcome of a Task.",
             "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TaskCreatedDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The datetime a task is created",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "OMTaskType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of an Operations and Maintenace task",
+            "x-ob-item-type": "OMTaskType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -16853,6 +16886,10 @@
         },
         "Completed": {
           "label": "Completed",
+          "description": ""
+        },
+        "Canceled": {
+          "label": "Canceled",
           "description": ""
         }
       }
@@ -20130,6 +20167,51 @@
         },
         "Canceled": {
           "label": "Canceled",
+          "description": ""
+        }
+      }
+    },
+    "OMTaskType": {
+      "description": "The types of Operations and Maintenance tasks",
+      "enums": {
+        "Replace": {
+          "label": "Replace",
+          "description": ""
+        },
+        "Repair": {
+          "label": "Repair",
+          "description": ""
+        },
+        "Adjust": {
+          "label": "Adjust",
+          "description": ""
+        },
+        "Modify": {
+          "label": "Modify",
+          "description": ""
+        },
+        "Refit": {
+          "label": "Refit",
+          "description": ""
+        },
+        "Inspect": {
+          "label": "Inspect",
+          "description": ""
+        },
+        "Service": {
+          "label": "Service",
+          "description": ""
+        },
+        "Test": {
+          "label": "Test",
+          "description": ""
+        },
+        "Measure": {
+          "label": "Measure",
+          "description": ""
+        },
+        "Edit": {
+          "label": "Edit",
           "description": ""
         }
       }
