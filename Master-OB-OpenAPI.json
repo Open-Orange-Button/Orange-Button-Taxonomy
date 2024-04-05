@@ -13455,6 +13455,9 @@
               },
               "OMTaskType": {
                 "$ref": "#/components/schemas/OMTaskType"
+              },
+              "OMTaskResources": {
+                "$ref": "#/components/schemas/OMTaskResources"
               }
             }
           }
@@ -13627,6 +13630,27 @@
             "x-ob-sample-value": {}
           }
         ]
+      },
+      "OMTaskResource": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Equipment or supplies needed to perform an OM task",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "OMTaskResources": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/OMTaskResource"
+        }
       }
     }
   },
