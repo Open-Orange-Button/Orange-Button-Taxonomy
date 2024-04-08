@@ -20186,20 +20186,19 @@
       "enums": {
         "Corrective": {
           "label": "Corrective",
-          "description": ""
+          "description": "Maintenance in response to an observed condition or failure. From ISO 14224"
         },
         "Preventive": {
           "label": "Preventive",
-          "description": ""
-        },
-        "Periodic": {
-          "label": "Periodic",
-          "description": "Use for Scheduled Maintenance also"
+          "description": "Maintenance at predetermined intervals or prescribed criteria. From ISO 14224"
         },
         "Predictive": {
           "label": "Predictive",
-          "description": ""
-        }
+          "description": "Maintenance prompted by prediction of a condition or failure, prior to observing the condition or failure."
+        },
+        "Opportunistic": {
+          "label": "Opportunistic",
+          "description": "Maintenance that is deferred or advanced in time to when an unplanned opportunity arises. From ISO 14224"				
       }
     },
     "TaskStatusFinalItemType": {
