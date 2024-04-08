@@ -13447,14 +13447,17 @@
               "TaskBudget": {
                 "$ref": "#/components/schemas/TaskBudget"
               },
-              "TaskStatusFinal": {
-                "$ref": "#/components/schemas/TaskStatusFinal"
-              },
               "TaskStartedDate": {
                 "$ref": "#/components/schemas/TaskStartedDate"
               },
-              "TaskResolution": {
-                "$ref": "#/components/schemas/TaskResolution"
+              "TaskResult": {
+                "$ref": "#/components/schemas/TaskResult"
+              },
+              "OMTaskType": {
+                "$ref": "#/components/schemas/OMTaskType"
+              },
+              "OMTaskResource": {
+                "$ref": "#/components/schemas/OMTaskResource"
               }
             }
           }
@@ -13598,244 +13601,6 @@
           }
         ]
       },
-      "DetectionMethod": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The method for detecting an Issue or failure.",
-            "x-ob-item-type": "DetectionMethodItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "UpdateLast": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Datetime of the latest update",
-            "x-ob-item-type": "DateTimeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "IssueFoundDate": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The date or datetime that an OMIssue is identified.",
-            "x-ob-item-type": "DateTimeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "IssueResolution": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Record of actions or decisions taken to resolve or address an Issue.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "IssueResolutionDate": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Date of the resolution of an Issue",
-            "x-ob-item-type": "DateTimeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "OMTask": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Task"
-          },
-          {
-            "type": "object",
-            "description": "A Task object customized for Operations and Maintenance",
-            "properties": {
-              "TaskPriority": {
-                "$ref": "#/components/schemas/TaskPriority"
-              },
-              "UpdateLast": {
-                "$ref": "#/components/schemas/UpdateLast"
-              },
-              "MaintenanceType": {
-                "$ref": "#/components/schemas/MaintenanceType"
-              },
-              "OMIssues": {
-                "$ref": "#/components/schemas/OMIssues"
-              },
-              "TaskBudget": {
-                "$ref": "#/components/schemas/TaskBudget"
-              },
-              "TaskStartedDate": {
-                "$ref": "#/components/schemas/TaskStartedDate"
-              },
-              "TaskResult": {
-                "$ref": "#/components/schemas/TaskResult"
-              },
-              "OMTaskType": {
-                "$ref": "#/components/schemas/OMTaskType"
-              },
-              "OMTaskResources": {
-                "$ref": "#/components/schemas/OMTaskResources"
-              }
-            }
-          }
-        ]
-      },
-      "TaskPriority": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Priority of a Task",
-            "x-ob-item-type": "TaskPriorityItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "OMIssues": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/OMIssue"
-        }
-      },
-      "MaintenanceType": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Category of maintenance activity or action",
-            "x-ob-item-type": "MaintenanceTypeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "TaskWorkPlan": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "A work plan for a task",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "TaskBudget": {
-        "type": "object",
-        "description": "A collection of terms that specify budgeted resources for a task",
-        "properties": {
-          "TaskBudgetFunds": {
-            "$ref": "#/components/schemas/TaskBudgetFunds"
-          },
-          "TaskBudgetHours": {
-            "$ref": "#/components/schemas/TaskBudgetHours"
-          }
-        }
-      },
-      "TaskBudgetHours": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Labor hour budget for a task",
-            "x-ob-item-type": "DurationItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "TaskBudgetFunds": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Funds budget for a task.",
-            "x-ob-item-type": "MonetaryItemType",
-            "x-ob-item-type-group": "OBMonetary",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "TaskStartedDate": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Date and time that a Task is started",
-            "x-ob-item-type": "DateTimeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "TaskStatusFinal": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The final status of a Task",
-            "x-ob-item-type": "TaskStatusFinalItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
       "TaskResult": {
         "allOf": [
           {
@@ -13882,24 +13647,33 @@
         ]
       },
       "OMTaskResource": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+        "type": "object",
+        "description": "Tools, equipment or supplies needed for a OMTask",
+        "properties": {
+          "ProdLineItems": {
+            "$ref": "#/components/schemas/ProdLineItems"
           },
-          {
-            "type": "object",
-            "description": "Equipment or supplies needed to perform an OM task",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+          "EquipmentList": {
+            "$ref": "#/components/schemas/EquipmentList"
           }
-        ]
+        }
       },
-      "OMTaskResources": {
+      "Equipment": {
+        "type": "object",
+        "description": "An tool or equipment item",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Quantity": {
+            "$ref": "#/components/schemas/Quantity"
+          }
+        }
+      },
+      "EquipmentList": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/OMTaskResource"
+          "$ref": "#/components/schemas/Equipment"
         }
       }
     }
