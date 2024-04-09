@@ -8125,6 +8125,9 @@
           },
           "PaymentMethods": {
             "$ref": "#/components/schemas/PaymentMethods"
+          },
+          "EntityRole": {
+            "$ref": "#/components/schemas/EntityRole"
           }
         }
       },
@@ -18511,6 +18514,14 @@
         },
         "Insurer": {
           "label": "Insurer",
+          "description": ""
+        },
+        "TestLab": {
+          "label": "Test Lab",
+          "description": ""
+        },
+        "CertificationAgency": {
+          "label": "Certification Agency",
           "description": ""
         }
       }
