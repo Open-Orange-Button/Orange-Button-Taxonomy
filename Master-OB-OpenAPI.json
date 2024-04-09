@@ -1757,7 +1757,7 @@
             "x-ob-item-type": "ProdTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "Module"
+              "Value": "ProdModule"
             },
             "x-ob-item-type-group": ""
           }
@@ -10755,6 +10755,9 @@
           },
           "Scope": {
             "$ref": "#/components/schemas/Scope"
+          },
+          "InsuranceType": {
+            "$ref": "#/components/schemas/InsuranceType"
           }
         }
       },
@@ -13592,6 +13595,23 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "InsuranceType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Specific type of insurance provided by Entity.",
+            "x-ob-item-type": "InsuranceTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "GeneralLiability"
+            }
           }
         ]
       }
@@ -18489,36 +18509,8 @@
           "label": "Surety",
           "description": ""
         },
-        "InsurerWorkersCompensation": {
-          "label": "Insurer, Workers Compensation",
-          "description": ""
-        },
-        "InsurerGeneralLiability": {
-          "label": "Insurer, General Liability",
-          "description": ""
-        },
-        "InsurerProperty": {
-          "label": "Insurer, Property",
-          "description": ""
-        },
-        "InsurerBusinessInterruption": {
-          "label": "Insurer, Business Interruption",
-          "description": ""
-        },
-        "InsurerConstructionAllRisk": {
-          "label": "Insurer, Construction All Risk",
-          "description": ""
-        },
-        "InsurerAutomobile": {
-          "label": "Insurer, Automobile",
-          "description": ""
-        },
-        "InsurerProjectPerformance": {
-          "label": "Insurer, Project Performance",
-          "description": ""
-        },
-        "InsurerUmbrellaExcessLiability": {
-          "label": "Insurer, Umbrella Excess Liability",
+        "Insurer": {
+          "label": "Insurer",
           "description": ""
         }
       }
@@ -20130,6 +20122,43 @@
         },
         "Canceled": {
           "label": "Canceled",
+          "description": ""
+        }
+      }
+    },
+    "InsuranceTypeItemType": {
+      "description": "Specific types of insurance that can be provided by an Entity.",
+      "enums": {
+        "WorkersCompensation": {
+          "label": "Workers Compensation",
+          "description": ""
+        },
+        "GeneralLiability": {
+          "label": "General Liability",
+          "description": ""
+        },
+        "Property": {
+          "label": "Property",
+          "description": ""
+        },
+        "BusinessInterruption": {
+          "label": "Business Interruption",
+          "description": ""
+        },
+        "ConstructionAllRisk": {
+          "label": "Construction All Risk",
+          "description": ""
+        },
+        "Automobile": {
+          "label": "Automobile",
+          "description": ""
+        },
+        "ProjectPerformance": {
+          "label": "Project Performance",
+          "description": ""
+        },
+        "UmbrellaExcessLiability": {
+          "label": "Umbrella Excess Liability",
           "description": ""
         }
       }
