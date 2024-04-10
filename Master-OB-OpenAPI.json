@@ -13458,6 +13458,15 @@
               },
               "OMTaskResource": {
                 "$ref": "#/components/schemas/OMTaskResource"
+              },
+              "OMJobSiteAnalysis": {
+                "$ref": "#/components/schemas/OMJobSiteAnalysis"
+              },
+              "OMWorkPlan": {
+                "$ref": "#/components/schemas/OMWorkPlan"
+              },
+              "OMSkillQualLevel": {
+                "$ref": "#/components/schemas/OMSkillQualLevel"
               }
             }
           }
@@ -13653,28 +13662,118 @@
           "ProdLineItems": {
             "$ref": "#/components/schemas/ProdLineItems"
           },
-          "EquipmentList": {
-            "$ref": "#/components/schemas/EquipmentList"
+          "ToolList": {
+            "$ref": "#/components/schemas/ToolList"
+          },
+          "PPEList": {
+            "$ref": "#/components/schemas/PPEList"
+          },
+          "ConsumableList": {
+            "$ref": "#/components/schemas/ConsumableList"
           }
         }
       },
-      "Equipment": {
+      "ToolItem": {
         "type": "object",
-        "description": "An tool or equipment item",
+        "description": "A tool or piece of equipment",
         "properties": {
           "Description": {
             "$ref": "#/components/schemas/Description"
           },
-          "Quantity": {
-            "$ref": "#/components/schemas/Quantity"
+          "Amount": {
+            "$ref": "#/components/schemas/Amount"
+          },
+          "ProdName": {
+            "$ref": "#/components/schemas/ProdName"
           }
         }
       },
-      "EquipmentList": {
+      "ToolList": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/Equipment"
+          "$ref": "#/components/schemas/ToolItem"
         }
+      },
+      "ConsumableItem": {
+        "type": "object",
+        "description": "A part, supply item or article that is not normally tracked by serial number",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Amount": {
+            "$ref": "#/components/schemas/Amount"
+          }
+        }
+      },
+      "ConsumableList": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ConsumableItem"
+        }
+      },
+      "PPEItem": {
+        "type": "object",
+        "description": "A article of personal protection equipment (PPE)",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Amount": {
+            "$ref": "#/components/schemas/Amount"
+          }
+        }
+      },
+      "PPEList": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PPEItem"
+        }
+      },
+      "OMWorkPlan": {
+        "type": "object",
+        "description": "A step by step procedure for carrying out an operations and maintenance (OM) task",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          }
+        }
+      },
+      "OMJobSiteAnalysis": {
+        "type": "object",
+        "description": "A hazards and safety analysis and mitigation plan for activity-level work at a site.",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          }
+        }
+      },
+      "OMSkillQualLevel": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Skill, qualification or certification necessary to perform an operations and maintenance (OM) task",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
       }
     }
   },
@@ -20198,8 +20297,8 @@
         },
         "Opportunistic": {
           "label": "Opportunistic",
-          "description": "Maintenance that is deferred or advanced in time to when an unplanned opportunity arises. From ISO 14224"				
-				}
+          "description": "Maintenance that is deferred or advanced in time to when an unplanned opportunity arises. From ISO 14224"
+        }
       }
     },
     "TaskStatusFinalItemType": {
