@@ -12631,6 +12631,9 @@
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
+          },
+          "CapacityFractionAC": {
+            "$ref": "#/components/schemas/CapacityFractionAC"
           }
         }
       },
@@ -12743,8 +12746,8 @@
           "FailureMechanism": {
             "$ref": "#/components/schemas/FailureMechanism"
           },
-          "FailureDetectionMethod": {
-            "$ref": "#/components/schemas/FailureDetectionMethod"
+          "DetectionMethod": {
+            "$ref": "#/components/schemas/DetectionMethod"
           }
         }
       },
@@ -12757,21 +12760,6 @@
             "type": "object",
             "description": "The impact on safety of an Issue or Failure",
             "x-ob-item-type": "ImpactSafetyItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "FailureDetectionMethod": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The method for detecting a failure",
-            "x-ob-item-type": "FailureDetectionMethodItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -13132,6 +13120,206 @@
             "x-ob-item-type-group": ""
           }
         ]
+      },"IssueUUID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A UUID for a OMIssue",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IssueID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A user-defined identifier for an OMIssue",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "OMIssue": {
+        "type": "object",
+        "description": "A record of a condition of a PV system or equipment that may merit investigation or action.",
+        "properties": {
+          "IssueID": {
+            "$ref": "#/components/schemas/IssueID"
+          },
+          "IssueUUID": {
+            "$ref": "#/components/schemas/IssueUUID"
+          },
+          "ImpactSafety": {
+            "$ref": "#/components/schemas/ImpactSafety"
+          },
+          "ImpactProduction": {
+            "$ref": "#/components/schemas/ImpactProduction"
+          },
+          "ImpactCapability": {
+            "$ref": "#/components/schemas/ImpactCapability"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "IssueCause": {
+            "$ref": "#/components/schemas/IssueCause"
+          },
+          "IssueCauseConfidenceLevel": {
+            "$ref": "#/components/schemas/IssueCauseConfidenceLevel"
+          },
+          "IssueConfidenceLevel": {
+            "$ref": "#/components/schemas/IssueConfidenceLevel"
+          },
+          "IssueStatus": {
+            "$ref": "#/components/schemas/IssueStatus"
+          },
+          "EnergyLoss": {
+            "$ref": "#/components/schemas/EnergyLoss"
+          },
+          "FailureRecords": {
+            "$ref": "#/components/schemas/FailureRecords"
+          },
+          "ExternalConditions": {
+            "$ref": "#/components/schemas/ExternalConditions"
+          },
+          "DetectionMethod": {
+            "$ref": "#/components/schemas/DetectionMethod"
+          },
+          "UpdateLast": {
+            "$ref": "#/components/schemas/UpdateLast"
+          },
+          "IssueFoundDate": {
+            "$ref": "#/components/schemas/IssueFoundDate"
+          },
+          "IssueResolution": {
+            "$ref": "#/components/schemas/IssueResolution"
+          },
+          "IssueResolutionDate": {
+            "$ref": "#/components/schemas/IssueResolutionDate"
+          }
+        }
+      },
+      "IssueType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A category for an OMIssue",
+            "x-ob-item-type": "IssueTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IssueStatus": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The status of an OMIssue",
+            "x-ob-item-type": "IssueStatusItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IssueConfidenceLevel": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The level of confidence that an OMIssue is factual",
+            "x-ob-item-type": "ConfidenceItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IssueCause": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The cause underlying an OMIssue",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IssueCauseConfidenceLevel": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The level of confidence that the cause of an OMIssue is accurate.",
+            "x-ob-item-type": "ConfidenceItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "FailureRecords": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/FailureRecord"
+        }
+      },
+      "ExternalCondition": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An event or condition outside of a PV system that affects the PV system's operation or condition.",
+            "x-ob-item-type": "ExternalConditionItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ExternalConditions": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ExternalCondition"
+        }
       },
       "CryptographicKeyID": {
         "allOf": [
@@ -13155,6 +13343,256 @@
         "items": {
           "$ref": "#/components/schemas/CryptographicKeyID"
         }
+      },
+      "DetectionMethod": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The method for detecting an Issue or failure.",
+            "x-ob-item-type": "DetectionMethodItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "UpdateLast": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Datetime of the latest update",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IssueFoundDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The date or datetime that an OMIssue is identified.",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IssueResolution": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Record of actions or decisions taken to resolve or address an Issue.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IssueResolutionDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date of the resolution of an Issue",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "OMTask": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Task"
+          },
+          {
+            "type": "object",
+            "description": "A Task object customized for Operations and Maintenance",
+            "properties": {
+              "TaskPriority": {
+                "$ref": "#/components/schemas/TaskPriority"
+              },
+              "UpdateLast": {
+                "$ref": "#/components/schemas/UpdateLast"
+              },
+              "MaintenanceType": {
+                "$ref": "#/components/schemas/MaintenanceType"
+              },
+              "OMIssues": {
+                "$ref": "#/components/schemas/OMIssues"
+              },
+              "TaskBudget": {
+                "$ref": "#/components/schemas/TaskBudget"
+              },
+              "TaskStatusFinal": {
+                "$ref": "#/components/schemas/TaskStatusFinal"
+              },
+              "TaskStartedDate": {
+                "$ref": "#/components/schemas/TaskStartedDate"
+              },
+              "TaskResolution": {
+                "$ref": "#/components/schemas/TaskResolution"
+              }
+            }
+          }
+        ]
+      },
+      "TaskPriority": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Priority of a Task",
+            "x-ob-item-type": "TaskPriorityItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "OMIssues": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/OMIssue"
+        }
+      },
+      "MaintenanceType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Category of maintenance activity or action",
+            "x-ob-item-type": "MaintenanceTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TaskWorkPlan": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A work plan for a task",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TaskBudget": {
+        "type": "object",
+        "description": "A collection of terms that specify budgeted resources for a task",
+        "properties": {
+          "TaskBudgetFunds": {
+            "$ref": "#/components/schemas/TaskBudgetFunds"
+          },
+          "TaskBudgetHours": {
+            "$ref": "#/components/schemas/TaskBudgetHours"
+          }
+        }
+      },
+      "TaskBudgetHours": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Labor hour budget for a task",
+            "x-ob-item-type": "DurationItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TaskBudgetFunds": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Funds budget for a task.",
+            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type-group": "OBMonetary",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TaskStartedDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date and time that a Task is started",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TaskStatusFinal": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The final status of a Task",
+            "x-ob-item-type": "TaskStatusFinalItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TaskResolution": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Description of the outcome of a Task.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
       }
     }
   },
@@ -18896,18 +19334,22 @@
           "label": "Low",
           "description": "Safety hazard or risk is present but manageable, operations continue with precautions"
         },
+        "Incipient": {
+          "label": "Incipient",
+          "description": "A safety hazard is not present, but the Issue or Failure may create a hazard in the future"
+        },
         "Negligible": {
           "label": "Negligible",
           "description": "No safety hazard or risk, operations continue without precautions"
         },
-        "Incipient": {
-          "label": "Incipient",
-          "description": "A safety hazard is not present, but the Issue or Failure may create a hazard in the future"
+        "Unknown": {
+          "label": "Unknown",
+          "description": ""
         }
       }
     },
-    "FailureDetectionMethodItemType": {
-      "description": "Methods for detection of failures",
+    "DetectionMethodItemType": {
+      "description": "Methods for detection of issues or failures",
       "enums": {
         "Inspection": {
           "label": "Inspection",
@@ -18915,7 +19357,7 @@
         },
         "Monitoring": {
           "label": "Monitoring",
-          "description": "Detection by analysis of monitoring data"
+          "description": "Detection by inspecting monitoring data"
         },
         "Alarm": {
           "label": "Alarm",
@@ -18925,17 +19367,25 @@
           "label": "Other",
           "description": ""
         },
-        "Maintenance": {
-          "label": "Maintenance",
-          "description": "Failure detected during periodic, routine or scheduled maintenance"
+        "MaintenanceScheduled": {
+          "label": "Maintenance, Scheduled",
+          "description": "Detected during scheduled, periodic or preventive maintenance"
         },
         "Demand": {
           "label": "Demand",
-          "description": "Failure discovered during an attempt to activate an item"
+          "description": "Discovered during an attempt to activate an item"
         },
-        "Corrective": {
-          "label": "Corrective",
-          "description": "Failure discovered during a corrective maintenance activity"
+        "MaintenanceCorrective": {
+          "label": "Maintenance, Corrective",
+          "description": "Discovered during a corrective maintenance activity"
+        },
+        "Analysis": {
+          "label": "Analysis",
+          "description": "Detected by analysis of data"
+        },
+        "Prediction": {
+          "label": "Prediction",
+          "description": "Issue identified by means of a forecast or prediction"
         }
       }
     },
@@ -18957,6 +19407,10 @@
         "Negligible": {
           "label": "Negligible",
           "description": "Energy production is not affected"
+        },
+        "Unknown": {
+          "label": "Unknown",
+          "description": ""
         }
       }
     },
@@ -18978,6 +19432,10 @@
         "Negligible": {
           "label": "Negligible",
           "description": "No effect on the capability of the item."
+        },
+        "Unknown": {
+          "label": "Unknown",
+          "description": ""
         }
       }
     },
@@ -19404,6 +19862,274 @@
         "Keccak_256": {
           "label": "Keccak-256",
           "description": "Reference FIPS 202"
+        }
+      }
+    },
+    "ConfidenceItemType": {
+      "description": "",
+      "enums": {
+        "Certain": {
+          "label": "Certain",
+          "description": ""
+        },
+        "High": {
+          "label": "High",
+          "description": "More than 50% likely to be factual."
+        },
+        "Moderate": {
+          "label": "Moderate",
+          "description": "Equally likely to be factual or not."
+        },
+        "Low": {
+          "label": "Low",
+          "description": "Less than 50% likely to be factual."
+        },
+        "Unknown": {
+          "label": "Unknown",
+          "description": ""
+        }
+      }
+    },
+    "IssueStatusItemType": {
+      "description": "",
+      "enums": {
+        "Open": {
+          "label": "Open",
+          "description": ""
+        },
+        "Assigned": {
+          "label": "Assigned",
+          "description": ""
+        },
+        "Resolved": {
+          "label": "Resolved",
+          "description": ""
+        },
+        "Deferred": {
+          "label": "Deferred",
+          "description": ""
+        },
+        "Canceled": {
+          "label": "Canceled",
+          "description": ""
+        }
+      }
+    },
+    "IssuePriorityItemType": {
+      "description": "",
+      "enums": {
+        "High": {
+          "label": "High",
+          "description": ""
+        },
+        "Medium": {
+          "label": "Medium",
+          "description": ""
+        },
+        "Low": {
+          "label": "Low",
+          "description": ""
+        }
+      }
+    },
+    "IssueTypeItemType": {
+      "description": "IssueType comprises two parts separated by an underscore: a general category and a category-specific subcategory. ",
+      "enums": {
+        "Data_MetStation": {
+          "label": "Data-MetStation",
+          "description": ""
+        },
+        "Data_SCADA": {
+          "label": "Data-SCADA",
+          "description": ""
+        },
+        "Data_Monitoring": {
+          "label": "Data-Monitoring",
+          "description": ""
+        },
+        "Energy_CollectionAC": {
+          "label": "Energy-CollectionAC",
+          "description": "Issue related to the AC collection system"
+        },
+        "Energy_CollectionDC": {
+          "label": "Energy-CollectionDC",
+          "description": "Issue related to the DC collection system"
+        },
+        "Energy_Inverter": {
+          "label": "Energy-Inverter",
+          "description": ""
+        },
+        "Energy_Tracker": {
+          "label": "Energy-Tracker",
+          "description": ""
+        },
+        "Energy_PVString": {
+          "label": "Energy-PVString",
+          "description": ""
+        },
+        "Energy_PVModule": {
+          "label": "Energy-PVModule",
+          "description": ""
+        },
+        "External_Outage": {
+          "label": "External-Outage",
+          "description": "Issue related to grid outage"
+        },
+        "External_GridDisturbance": {
+          "label": "External-GridDisturbance",
+          "description": "Issue related to grid power"
+        },
+        "External_Shading": {
+          "label": "External-Shading",
+          "description": "Issue related to shading from external objects"
+        },
+        "Software_Communications": {
+          "label": "Software-Communications",
+          "description": ""
+        },
+        "Software_DataManagement": {
+          "label": "Software-DataManagement",
+          "description": ""
+        },
+        "Software_Controls": {
+          "label": "Software-Controls",
+          "description": ""
+        }
+      }
+    },
+    "ExternalConditionItemType": {
+      "description": "An enumeration of external conditions or events that may affect a PV system's production, reliability or condition. ",
+      "enums": {
+        "None": {
+          "label": "None",
+          "description": ""
+        },
+        "Flood": {
+          "label": "Flood",
+          "description": ""
+        },
+        "Fire": {
+          "label": "Fire",
+          "description": "Includes wildfires but not smoke from wildfires"
+        },
+        "Smoke": {
+          "label": "Smoke",
+          "description": "Smoke and/or ash from fires"
+        },
+        "Lightning": {
+          "label": "Lightning",
+          "description": ""
+        },
+        "Hail": {
+          "label": "Hail",
+          "description": ""
+        },
+        "Geomagnetic": {
+          "label": "Geomagnetic Disturbance",
+          "description": ""
+        },
+        "Earthquake": {
+          "label": "Earthquake",
+          "description": ""
+        },
+        "Wind": {
+          "label": "Wind",
+          "description": ""
+        },
+        "Hurricane": {
+          "label": "Hurricane",
+          "description": ""
+        },
+        "Tornado": {
+          "label": "Tornado",
+          "description": ""
+        },
+        "Eruption": {
+          "label": "Volcanic Eruption",
+          "description": ""
+        },
+        "SnowIce": {
+          "label": "Snow or Icing",
+          "description": ""
+        },
+        "Landslide": {
+          "label": "Landslide",
+          "description": ""
+        },
+        "TemperatureAirHot": {
+          "label": "Temperature, Air, Hot",
+          "description": ""
+        },
+        "TemperatureAirCold": {
+          "label": "Temperature, Air, Cold",
+          "description": ""
+        },
+        "Disturbance": {
+          "label": "Disturbance",
+          "description": "Human-caused disturbances"
+        }
+      }
+    },
+    "TaskPriorityItemType": {
+      "description": "",
+      "enums": {
+        "Critical": {
+          "label": "Critical",
+          "description": ""
+        },
+        "High": {
+          "label": "High",
+          "description": ""
+        },
+        "Medium": {
+          "label": "Medium",
+          "description": ""
+        },
+        "Low": {
+          "label": "Low",
+          "description": ""
+        }
+      }
+    },
+    "MaintenanceTypeItemType": {
+      "description": "",
+      "enums": {
+        "Corrective": {
+          "label": "Corrective",
+          "description": ""
+        },
+        "Preventive": {
+          "label": "Preventive",
+          "description": ""
+        },
+        "Periodic": {
+          "label": "Periodic",
+          "description": "Use for Scheduled Maintenance also"
+        },
+        "Predictive": {
+          "label": "Predictive",
+          "description": ""
+        }
+      }
+    },
+    "TaskStatusFinalItemType": {
+      "description": "The final status of a Task",
+      "enums": {
+        "Complete": {
+          "label": "Complete",
+          "description": ""
+        },
+        "Incomplete": {
+          "label": "Incomplete",
+          "description": ""
+        },
+        "NotStarted": {
+          "label": "NotStarted",
+          "description": ""
+        },
+        "Canceled": {
+          "label": "Canceled",
+          "description": ""
         }
       }
     }
