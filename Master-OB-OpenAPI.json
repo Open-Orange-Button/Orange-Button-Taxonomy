@@ -1550,6 +1550,9 @@
           },
           "TaskCreatedDate": {
             "$ref": "#/components/schemas/TaskCreatedDate"
+          },
+          "TaskStartedDate": {
+            "$ref": "#/components/schemas/TaskStartedDate"
           }
         },
         "x-ob-usage-tips": ""
@@ -13447,9 +13450,6 @@
               "TaskBudget": {
                 "$ref": "#/components/schemas/TaskBudget"
               },
-              "TaskStartedDate": {
-                "$ref": "#/components/schemas/TaskStartedDate"
-              },
               "TaskResult": {
                 "$ref": "#/components/schemas/TaskResult"
               },
@@ -13662,14 +13662,14 @@
           "ProdLineItems": {
             "$ref": "#/components/schemas/ProdLineItems"
           },
-          "ToolList": {
-            "$ref": "#/components/schemas/ToolList"
+          "ToolItems": {
+            "$ref": "#/components/schemas/ToolItems"
           },
-          "PPEList": {
-            "$ref": "#/components/schemas/PPEList"
+          "PPEItems": {
+            "$ref": "#/components/schemas/PPEItems"
           },
-          "ConsumableList": {
-            "$ref": "#/components/schemas/ConsumableList"
+          "ConsumableItems": {
+            "$ref": "#/components/schemas/ConsumableItems"
           }
         }
       },
@@ -13682,13 +13682,10 @@
           },
           "Amount": {
             "$ref": "#/components/schemas/Amount"
-          },
-          "ProdName": {
-            "$ref": "#/components/schemas/ProdName"
           }
         }
       },
-      "ToolList": {
+      "ToolItems": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ToolItem"
@@ -13706,7 +13703,7 @@
           }
         }
       },
-      "ConsumableList": {
+      "ConsumableItems": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ConsumableItem"
@@ -13724,7 +13721,7 @@
           }
         }
       },
-      "PPEList": {
+      "PPEItems": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/PPEItem"
@@ -13742,6 +13739,9 @@
           },
           "Comments": {
             "$ref": "#/components/schemas/Comments"
+          },
+          "Tags": {
+            "$ref": "#/components/schemas/Tags"
           }
         }
       },
@@ -13757,6 +13757,9 @@
           },
           "Comments": {
             "$ref": "#/components/schemas/Comments"
+          },
+          "Tags": {
+            "$ref": "#/components/schemas/Tags"
           }
         }
       },
