@@ -139,8 +139,8 @@
           "DeviceUUID": {
             "$ref": "#/components/schemas/DeviceUUID"
           },
-          "PrivateKeyAddresses": {
-            "$ref": "#/components/schemas/PrivateKeyAddresses"
+          "CryptographicKeyIDs": {
+            "$ref": "#/components/schemas/CryptographicKeyIDs"
           }
         },
         "type": "object"
@@ -13111,8 +13111,7 @@
             "x-ob-item-type-group": ""
           }
         ]
-      },
-      "IssueUUID": {
+      },"IssueUUID": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementString"
@@ -13313,14 +13312,14 @@
           "$ref": "#/components/schemas/ExternalCondition"
         }
       },
-      "PrivateKeyAddress": {
+      "CryptographicKeyID": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementString"
           },
           {
             "type": "object",
-            "description": "This concept provides a cryptographically secure identity for a device and originates from the distributed ledger or blockchain technologies. The Private Key Address (PKA) is derived from an asymmetric private/public key pair, typically generated on the device itself and stored securely, preferably in a hardware-secured environment like a Secure Element (SE). Private keys remain within this secure environment to prevent exposure. The PrivateKeyAddress consists of a type identifier, the hash output of public-key-material, and optionally, a CRC check for error detection, ensuring uniqueness and integrity.",
+            "description": "This concept provides a cryptographically secure identity for a device and originates from the distributed ledger or blockchain technologies. The Cryptographic Key ID is derived from an asymmetric private/public key pair, typically generated on the device itself and stored securely, preferably in a hardware-secured environment like a Secure Element (SE). Private keys remain within this secure environment to prevent exposure. The CryptographicKeyID consists of a type identifier, the hash output of public-key-material, and optionally, a CRC check for error detection, ensuring uniqueness and integrity.",
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -13330,10 +13329,10 @@
           }
         ]
       },
-      "PrivateKeyAddresses": {
+      "CryptographicKeyIDs": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/PrivateKeyAddress"
+          "$ref": "#/components/schemas/CryptographicKeyID"
         }
       },
       "DetectionMethod": {
