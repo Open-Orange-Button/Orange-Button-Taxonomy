@@ -1757,7 +1757,7 @@
             "x-ob-item-type": "ProdTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "Module"
+              "Value": "ProdModule"
             },
             "x-ob-item-type-group": ""
           }
@@ -3217,24 +3217,9 @@
           },
           "Firmware": {
             "$ref": "#/components/schemas/Firmware"
-          }
-        }
-      },
-      "CertificationAgency": {
-        "type": "object",
-        "description": "The agency or testing center that grants the certification",
-        "properties": {
-          "Addresses": {
-            "$ref": "#/components/schemas/Addresses"
           },
-          "Contacts": {
-            "$ref": "#/components/schemas/Contacts"
-          },
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "CertificationAgencyName": {
-            "$ref": "#/components/schemas/CertificationAgencyName"
+          "TestLab": {
+            "$ref": "#/components/schemas/TestLab"
           }
         }
       },
@@ -8125,6 +8110,9 @@
           },
           "PaymentMethods": {
             "$ref": "#/components/schemas/PaymentMethods"
+          },
+          "EntityRole": {
+            "$ref": "#/components/schemas/EntityRole"
           }
         }
       },
@@ -10755,6 +10743,9 @@
           },
           "Scope": {
             "$ref": "#/components/schemas/Scope"
+          },
+          "InsuranceType": {
+            "$ref": "#/components/schemas/InsuranceType"
           }
         }
       },
@@ -13591,6 +13582,75 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "InsuranceType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Specific type of insurance provided by Entity.",
+            "x-ob-item-type": "InsuranceTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "GeneralLiability"
+            }
+          }
+        ]
+      },
+      "CertificationAgency": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "The agency or testing center that grants the certification",
+            "properties": {
+              "Description": {
+                "$ref": "#/components/schemas/Description"
+              },
+              "CertificationAgencyName": {
+                "$ref": "#/components/schemas/CertificationAgencyName"
+              }
+            }
+          }
+        ]
+      },
+      "TestLabName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of the TestLab",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "UL"
+            }
+          }
+        ]
+      },
+      "TestLab": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "A laboratory that performs testing to standards. Implementation partner rather than the certifier of the standard. ",
+            "properties": {
+              "TestLabName": {
+                "$ref": "#/components/schemas/TestLabName"
+              }
+            }
           }
         ]
       }
@@ -18488,36 +18548,16 @@
           "label": "Surety",
           "description": ""
         },
-        "InsurerWorkersCompensation": {
-          "label": "Insurer, Workers Compensation",
+        "Insurer": {
+          "label": "Insurer",
           "description": ""
         },
-        "InsurerGeneralLiability": {
-          "label": "Insurer, General Liability",
+        "TestLab": {
+          "label": "Test Lab",
           "description": ""
         },
-        "InsurerProperty": {
-          "label": "Insurer, Property",
-          "description": ""
-        },
-        "InsurerBusinessInterruption": {
-          "label": "Insurer, Business Interruption",
-          "description": ""
-        },
-        "InsurerConstructionAllRisk": {
-          "label": "Insurer, Construction All Risk",
-          "description": ""
-        },
-        "InsurerAutomobile": {
-          "label": "Insurer, Automobile",
-          "description": ""
-        },
-        "InsurerProjectPerformance": {
-          "label": "Insurer, Project Performance",
-          "description": ""
-        },
-        "InsurerUmbrellaExcessLiability": {
-          "label": "Insurer, Umbrella Excess Liability",
+        "CertificationAgency": {
+          "label": "Certification Agency",
           "description": ""
         }
       }
@@ -20129,6 +20169,43 @@
         },
         "Canceled": {
           "label": "Canceled",
+          "description": ""
+        }
+      }
+    },
+    "InsuranceTypeItemType": {
+      "description": "Specific types of insurance that can be provided by an Entity.",
+      "enums": {
+        "WorkersCompensation": {
+          "label": "Workers Compensation",
+          "description": ""
+        },
+        "GeneralLiability": {
+          "label": "General Liability",
+          "description": ""
+        },
+        "Property": {
+          "label": "Property",
+          "description": ""
+        },
+        "BusinessInterruption": {
+          "label": "Business Interruption",
+          "description": ""
+        },
+        "ConstructionAllRisk": {
+          "label": "Construction All Risk",
+          "description": ""
+        },
+        "Automobile": {
+          "label": "Automobile",
+          "description": ""
+        },
+        "ProjectPerformance": {
+          "label": "Project Performance",
+          "description": ""
+        },
+        "UmbrellaExcessLiability": {
+          "label": "Umbrella Excess Liability",
           "description": ""
         }
       }
