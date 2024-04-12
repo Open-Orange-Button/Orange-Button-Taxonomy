@@ -3217,24 +3217,9 @@
           },
           "Firmware": {
             "$ref": "#/components/schemas/Firmware"
-          }
-        }
-      },
-      "CertificationAgency": {
-        "type": "object",
-        "description": "The agency or testing center that grants the certification",
-        "properties": {
-          "Addresses": {
-            "$ref": "#/components/schemas/Addresses"
           },
-          "Contacts": {
-            "$ref": "#/components/schemas/Contacts"
-          },
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "CertificationAgencyName": {
-            "$ref": "#/components/schemas/CertificationAgencyName"
+          "TestLab": {
+            "$ref": "#/components/schemas/TestLab"
           }
         }
       },
@@ -13614,6 +13599,58 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "GeneralLiability"
+            }
+          }
+        ]
+      },
+      "CertificationAgency": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "The agency or testing center that grants the certification",
+            "properties": {
+              "Description": {
+                "$ref": "#/components/schemas/Description"
+              },
+              "CertificationAgencyName": {
+                "$ref": "#/components/schemas/CertificationAgencyName"
+              }
+            }
+          }
+        ]
+      },
+      "TestLabName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of the TestLab",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "UL"
+            }
+          }
+        ]
+      },
+      "TestLab": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "A laboratory that performs testing to standards. Implementation partner rather than the certifier of the standard. ",
+            "properties": {
+              "TestLabName": {
+                "$ref": "#/components/schemas/TestLabName"
+              }
             }
           }
         ]

@@ -11,6 +11,7 @@ Element changes
 * Adds ChecksumKey, ChecksumDetail (:pull:`291`)
 * Updates sample value of ProdType (:pull:`298`)
 * Creates InsuranceType element
+* Creates TestLabName (:pull:`305`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -18,6 +19,7 @@ Object changes
 * Add Failure (:pull:`287`)
 * Adds InsuranceType to InsurancePolicy object.(:pull:`305`)
 * Adds EntityRole to Entity object.(:pull:`305`)
+* Creates TestLab object and adds it to CertificationAgency (:pull:`305`)
 
 Unit changes
 ~~~~~~~~~~~~
