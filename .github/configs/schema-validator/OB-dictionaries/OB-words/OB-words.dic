@@ -14,6 +14,7 @@ Backsheet
 Bifacial
 BIPV//Building-Integrated Photovoltaics
 Bluetooth
+Bool//Boolean
 Boreal
 Busbar
 Cancelled
@@ -21,9 +22,12 @@ CEC//California Energy Commission
 CIGS//Copper Indium Gallium Diselenide Selenium
 Coeff//Coefficient
 Cond//Condition
+Contactor
 Counterparty
 CPV//Concentrator Photovoltaic
+CRC//Cyclic Redundancy Check
 CSIP//Common Smart Inverter Profile
+DAQ//Data Acquisition System
 Datasheet
 Derate
 Diene
@@ -39,17 +43,22 @@ GML//Generalized Markup Language
 GPS//Global Positioning System
 Hemiboreal
 Heterojunction
+HJT//Heterojunction Technology
 HOA//Homeowners Association
+Horiz//Horizontal
 IBC//International Building Code
 ID//Identifier
-IEC//International Electric Code
+IDs//Identifiers
+IEC//International Electrical Commission
 IFC//International Fire Code
+IGBT//Insulated-Gate Bipolar Transistor 
 Insolation
 IRC//International Residential Code
 Irrad//Irradiance
 Irradiance
 JA//Joint Appendix
 JSON//JavaScript Object Notation
+Keccak
 KML//Keyhole Markup Language
 Koppen
 LCD//Liquid Crystal Display
@@ -83,6 +92,7 @@ Perf//Performance
 Polyolefin
 PolySi
 PPA//Power Purchase Agreement
+PPE//Personal Protection Equipment
 Pre
 ProForma
 PSA//Power Sale Agreement
@@ -90,12 +100,17 @@ PTC//PVUSA Test Condition
 Purch//Purchase
 PV//Photovoltaic
 PVUSA//Photovoltaics for Utility Scale Applications
+Pyranometer
 QF//Qualifying Facility
+Qual//Qualification
 REbusDCNanogrid
 Reqrmnts//Requirements
 Rpt//Reporting
 Rtg//Rating
+SAE//Society of Automotive Engineers
 SBS//Styrene-Butadiene-Styrene
+SCADA//Supervisory Control and Data Acquisition
+SHA//Secure Hash Algorithm
 Shapefile
 SPV//Special Purpose Vehicle
 STC//Standard Test Condition
@@ -107,6 +122,7 @@ TFSI//Thin Film Silicon
 THWN//Thermoplastic Heat and Water Resistant
 Transformerless
 Unbilled
+UTF//Unicode Transformation Format
 UUID//Universally Unique Identifier
 Voc//Open-Circuit Voltage
 Warr//Warranty
