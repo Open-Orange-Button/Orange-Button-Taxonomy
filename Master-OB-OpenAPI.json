@@ -12700,30 +12700,12 @@
           }
         ]
       },
-      "FailureDateDetected": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The date and time that a failure was detected",
-            "x-ob-item-type": "DateTimeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
       "FailureRecord": {
         "type": "object",
         "description": "A collection of data describing a failure. Failure is the termination of the ability of an item to perform a required function.",
         "properties": {
           "FailureID": {
             "$ref": "#/components/schemas/FailureID"
-          },
-          "FailureDateDetected": {
-            "$ref": "#/components/schemas/FailureDateDetected"
           },
           "ImpactSafety": {
             "$ref": "#/components/schemas/ImpactSafety"
@@ -12745,6 +12727,30 @@
           },
           "DetectionMethod": {
             "$ref": "#/components/schemas/DetectionMethod"
+          },
+          "FailureDetectedDate": {
+            "$ref": "#/components/schemas/FailureDetectedDate"
+          },
+          "FailureResolvedDate": {
+            "$ref": "#/components/schemas/FailureResolvedDate"
+          },
+          "FailureDate": {
+            "$ref": "#/components/schemas/FailureDate"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FailureResolution": {
+            "$ref": "#/components/schemas/FailureResolution"
+          },
+          "Tags": {
+            "$ref": "#/components/schemas/Tags"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
           }
         }
       },
@@ -13117,7 +13123,8 @@
             "x-ob-item-type-group": ""
           }
         ]
-      },"IssueUUID": {
+      },
+      "IssueUUID": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementString"
@@ -13801,9 +13808,9 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
-					}
-  			]
-  		},
+          }
+        ]
+      },
       "TestLabName": {
         "allOf": [
           {
@@ -13834,6 +13841,66 @@
                 "$ref": "#/components/schemas/TestLabName"
               }
             }
+          }
+        ]
+      },
+      "FailureDetectedDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The date and time that a failure was detected",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "FailureDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The datetime that the failure occurred",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "FailureResolvedDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The datetime that the failure is corrected or resolved.",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "FailureResolution": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The resolution of the failure",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
           }
         ]
       }
@@ -20406,9 +20473,9 @@
         "Edit": {
           "label": "Edit",
           "description": ""
-				}
-			}
-		},
+        }
+      }
+    },
     "InsuranceTypeItemType": {
       "description": "Specific types of insurance that can be provided by an Entity.",
       "enums": {
