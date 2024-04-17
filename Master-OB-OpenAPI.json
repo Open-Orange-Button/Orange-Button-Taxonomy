@@ -13713,8 +13713,8 @@
           "Description": {
             "$ref": "#/components/schemas/Description"
           },
-          "Amount": {
-            "$ref": "#/components/schemas/Amount"
+          "Quantity": {
+            "$ref": "#/components/schemas/Quantity"
           }
         }
       },
@@ -13731,8 +13731,8 @@
           "Description": {
             "$ref": "#/components/schemas/Description"
           },
-          "Amount": {
-            "$ref": "#/components/schemas/Amount"
+          "Quantity": {
+            "$ref": "#/components/schemas/Quantity"
           }
         }
       },
@@ -13749,8 +13749,8 @@
           "Description": {
             "$ref": "#/components/schemas/Description"
           },
-          "Amount": {
-            "$ref": "#/components/schemas/Amount"
+          "Quantity": {
+            "$ref": "#/components/schemas/Quantity"
           }
         }
       },
@@ -13903,6 +13903,17 @@
             "x-ob-sample-value": {}
           }
         ]
+      },
+      "OMWorkOrder": {
+        "type": "object",
+        "description": "A work order for operations and maintenance (OM). ",
+        "properties": {}
+      },
+      "OMTasks": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/OMTask"
+        }
       }
     }
   },
