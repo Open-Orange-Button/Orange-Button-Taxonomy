@@ -1547,6 +1547,12 @@
           },
           "PaymentMethod": {
             "$ref": "#/components/schemas/PaymentMethod"
+          },
+          "TaskCreatedDate": {
+            "$ref": "#/components/schemas/TaskCreatedDate"
+          },
+          "TaskStartedDate": {
+            "$ref": "#/components/schemas/TaskStartedDate"
           }
         },
         "x-ob-usage-tips": ""
@@ -12694,30 +12700,12 @@
           }
         ]
       },
-      "FailureDateDetected": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The date and time that a failure was detected",
-            "x-ob-item-type": "DateTimeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
       "FailureRecord": {
         "type": "object",
         "description": "A collection of data describing a failure. Failure is the termination of the ability of an item to perform a required function.",
         "properties": {
           "FailureID": {
             "$ref": "#/components/schemas/FailureID"
-          },
-          "FailureDateDetected": {
-            "$ref": "#/components/schemas/FailureDateDetected"
           },
           "ImpactSafety": {
             "$ref": "#/components/schemas/ImpactSafety"
@@ -12739,6 +12727,30 @@
           },
           "DetectionMethod": {
             "$ref": "#/components/schemas/DetectionMethod"
+          },
+          "FailureDetectedDate": {
+            "$ref": "#/components/schemas/FailureDetectedDate"
+          },
+          "FailureResolvedDate": {
+            "$ref": "#/components/schemas/FailureResolvedDate"
+          },
+          "FailureDate": {
+            "$ref": "#/components/schemas/FailureDate"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FailureResolution": {
+            "$ref": "#/components/schemas/FailureResolution"
+          },
+          "Tags": {
+            "$ref": "#/components/schemas/Tags"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
           }
         }
       },
@@ -13111,7 +13123,8 @@
             "x-ob-item-type-group": ""
           }
         ]
-      },"IssueUUID": {
+      },
+      "IssueUUID": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementString"
@@ -13434,14 +13447,23 @@
               "TaskBudget": {
                 "$ref": "#/components/schemas/TaskBudget"
               },
-              "TaskStatusFinal": {
-                "$ref": "#/components/schemas/TaskStatusFinal"
+              "TaskResult": {
+                "$ref": "#/components/schemas/TaskResult"
               },
-              "TaskStartedDate": {
-                "$ref": "#/components/schemas/TaskStartedDate"
+              "OMTaskType": {
+                "$ref": "#/components/schemas/OMTaskType"
               },
-              "TaskResolution": {
-                "$ref": "#/components/schemas/TaskResolution"
+              "OMTaskResource": {
+                "$ref": "#/components/schemas/OMTaskResource"
+              },
+              "OMJobSiteAnalysis": {
+                "$ref": "#/components/schemas/OMJobSiteAnalysis"
+              },
+              "OMWorkPlan": {
+                "$ref": "#/components/schemas/OMWorkPlan"
+              },
+              "OMSkillQualLevel": {
+                "$ref": "#/components/schemas/OMSkillQualLevel"
               }
             }
           }
@@ -13585,6 +13607,36 @@
           }
         ]
       },
+      "TaskResult": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Description of the outcome of a Task.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TaskCreatedDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The datetime a task is created",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
       "InsuranceType": {
         "allOf": [
           {
@@ -13621,6 +13673,144 @@
           }
         ]
       },
+      "OMTaskType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of an Operations and Maintenace task",
+            "x-ob-item-type": "OMTaskType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "OMTaskResource": {
+        "type": "object",
+        "description": "Tools, equipment or supplies needed for a OMTask",
+        "properties": {
+          "ProdLineItems": {
+            "$ref": "#/components/schemas/ProdLineItems"
+          },
+          "ToolItems": {
+            "$ref": "#/components/schemas/ToolItems"
+          },
+          "PPEItems": {
+            "$ref": "#/components/schemas/PPEItems"
+          },
+          "ConsumableItems": {
+            "$ref": "#/components/schemas/ConsumableItems"
+          }
+        }
+      },
+      "ToolItem": {
+        "type": "object",
+        "description": "A tool or piece of equipment",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Amount": {
+            "$ref": "#/components/schemas/Amount"
+          }
+        }
+      },
+      "ToolItems": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ToolItem"
+        }
+      },
+      "ConsumableItem": {
+        "type": "object",
+        "description": "A part, supply item or article that is not normally tracked by serial number",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Amount": {
+            "$ref": "#/components/schemas/Amount"
+          }
+        }
+      },
+      "ConsumableItems": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ConsumableItem"
+        }
+      },
+      "PPEItem": {
+        "type": "object",
+        "description": "A article of personal protection equipment (PPE)",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Amount": {
+            "$ref": "#/components/schemas/Amount"
+          }
+        }
+      },
+      "PPEItems": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PPEItem"
+        }
+      },
+      "OMWorkPlan": {
+        "type": "object",
+        "description": "A step by step procedure for carrying out an operations and maintenance (OM) task",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "Tags": {
+            "$ref": "#/components/schemas/Tags"
+          }
+        }
+      },
+      "OMJobSiteAnalysis": {
+        "type": "object",
+        "description": "A hazards and safety analysis and mitigation plan for activity-level work at a site.",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "Tags": {
+            "$ref": "#/components/schemas/Tags"
+          }
+        }
+      },
+      "OMSkillQualLevel": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Skill, qualification or certification necessary to perform an operations and maintenance (OM) task",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
       "TestLabName": {
         "allOf": [
           {
@@ -13651,6 +13841,66 @@
                 "$ref": "#/components/schemas/TestLabName"
               }
             }
+          }
+        ]
+      },
+      "FailureDetectedDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The date and time that a failure was detected",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "FailureDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The datetime that the failure occurred",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "FailureResolvedDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The datetime that the failure is corrected or resolved.",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "FailureResolution": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The resolution of the failure",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
           }
         ]
       }
@@ -16913,6 +17163,10 @@
         "Completed": {
           "label": "Completed",
           "description": ""
+        },
+        "Canceled": {
+          "label": "Canceled",
+          "description": ""
         }
       }
     },
@@ -17768,6 +18022,10 @@
         },
         "Other": {
           "label": "Other",
+          "description": ""
+        },
+        "OperationsMaintenance": {
+          "label": "Operations and Maintenance",
           "description": ""
         }
       }
@@ -20136,19 +20394,19 @@
       "enums": {
         "Corrective": {
           "label": "Corrective",
-          "description": ""
+          "description": "Maintenance in response to an observed condition or failure. From ISO 14224"
         },
         "Preventive": {
           "label": "Preventive",
-          "description": ""
-        },
-        "Periodic": {
-          "label": "Periodic",
-          "description": "Use for Scheduled Maintenance also"
+          "description": "Maintenance at predetermined intervals or prescribed criteria. From ISO 14224"
         },
         "Predictive": {
           "label": "Predictive",
-          "description": ""
+          "description": "Maintenance prompted by prediction of a condition or failure, prior to observing the condition or failure."
+        },
+        "Opportunistic": {
+          "label": "Opportunistic",
+          "description": "Maintenance that is deferred or advanced in time to when an unplanned opportunity arises. From ISO 14224"
         }
       }
     },
@@ -20169,6 +20427,51 @@
         },
         "Canceled": {
           "label": "Canceled",
+          "description": ""
+        }
+      }
+    },
+    "OMTaskType": {
+      "description": "The types of Operations and Maintenance tasks",
+      "enums": {
+        "Replace": {
+          "label": "Replace",
+          "description": ""
+        },
+        "Repair": {
+          "label": "Repair",
+          "description": ""
+        },
+        "Adjust": {
+          "label": "Adjust",
+          "description": ""
+        },
+        "Modify": {
+          "label": "Modify",
+          "description": ""
+        },
+        "Refit": {
+          "label": "Refit",
+          "description": ""
+        },
+        "Inspect": {
+          "label": "Inspect",
+          "description": ""
+        },
+        "Service": {
+          "label": "Service",
+          "description": ""
+        },
+        "Test": {
+          "label": "Test",
+          "description": ""
+        },
+        "Measure": {
+          "label": "Measure",
+          "description": ""
+        },
+        "Edit": {
+          "label": "Edit",
           "description": ""
         }
       }

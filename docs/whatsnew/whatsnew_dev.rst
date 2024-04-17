@@ -15,6 +15,7 @@ Element changes
 * Adds PrivateKeyAddress (:pull:`297`)
 * Adds IssueCause, IssueCauseConfidenceLevel, IssueConfidenceLevel, IssueID, IssueFoundDate, IssueStatus, IssueResolution, IssueResolutionDate, IssueUUID, UpdateLast, DetectionMethod (:pull:`296`)
 * Changes PrivateKeyAddress to CryptographicKeyID (:pull:`298`)
+* Adds TaskCreatedDate, TaskStartedDate, TaskResult, OMTaskType, OMSkillQualLevel. (:pull:`303`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -26,6 +27,7 @@ Object changes
 * Adds PrivateKeyAddresses array object and adds PrivateKeyAddresses to Device (:pull:`297`)
 * Removes PrivateKeyAddresses array object and replaces it with CryptographicKeyIDs and adds them to Device (:pull:`298`)
 * Adds OMIssue and OMIssues (:pull:`296`)
+* Adds OMTask, OMTaskResource, ToolItem and ToolItems, ConsumableItem and ConsumableItems, PPEItem and PPEItems, OMWorkPlan, OMJobSiteAnalysis. (:pull:`303`)
 
 Unit changes
 ~~~~~~~~~~~~
@@ -34,6 +36,7 @@ Unit changes
 * Adds InsuranceTypeItemType and enums related to Insurance Types. (:pull:`305`)
 * Removes enums from EntityRole that were related to specific Insurance types. (:pull:`305`)
 * Adds TestLab and CertificationAgency to enum list of EntityRole. (:pull:`305`)
+* Adds OMTaskTypeItemType. Adds Opportunistic to MaintenanceTypeItemType and removes Periodic. (:pull:`303`)
 
 Bug fixes
 ~~~~~~~~~
