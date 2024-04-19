@@ -16,6 +16,7 @@ Element changes
 * Adds IssueCause, IssueCauseConfidenceLevel, IssueConfidenceLevel, IssueID, IssueFoundDate, IssueStatus, IssueResolution, IssueResolutionDate, IssueUUID, UpdateLast, DetectionMethod (:pull:`296`)
 * Changes PrivateKeyAddress to CryptographicKeyID (:pull:`298`)
 * Adds TaskCreatedDate, TaskStartedDate, TaskResult, OMTaskType, OMSkillQualLevel. (:pull:`303`)
+* Updates CryptographicKeyID usage tips to include supplemental Lumian Information (:pull:`308`)
 
 Object changes
 ~~~~~~~~~~~~~~
