@@ -13505,21 +13505,6 @@
           }
         ]
       },
-      "TaskWorkPlan": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "A work plan for a task",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
       "TaskBudget": {
         "type": "object",
         "description": "A collection of terms that specify budgeted resources for a task",
@@ -13903,6 +13888,120 @@
             "x-ob-sample-value": {}
           }
         ]
+      },
+      "OMWorkOrder": {
+        "type": "object",
+        "description": "A work order for operations and maintenance (OM).",
+        "properties": {
+          "OMTasks": {
+            "$ref": "#/components/schemas/OMTasks"
+          },
+          "AccessInstructions": {
+            "$ref": "#/components/schemas/AccessInstructions"
+          },
+          "SafetyInstructions": {
+            "$ref": "#/components/schemas/SafetyInstructions"
+          },
+          "ScheduleWindow": {
+            "$ref": "#/components/schemas/ScheduleWindow"
+          },
+          "Tags": {
+            "$ref": "#/components/schemas/Tags"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Entitlements": {
+            "$ref": "#/components/schemas/Entitlements"
+          },
+          "OMJobSiteAnalysis": {
+            "$ref": "#/components/schemas/OMJobSiteAnalysis"
+          },
+          "OMTaskResource": {
+            "$ref": "#/components/schemas/OMTaskResource"
+          }
+        }
+      },
+      "OMTasks": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/OMTask"
+        }
+      },
+      "AccessInstructions": {
+        "type": "object",
+        "description": "Instructions for access to a site.",
+        "properties": {
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Contacts": {
+            "$ref": "#/components/schemas/Contacts"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          }
+        }
+      },
+      "SafetyInstructions": {
+        "type": "object",
+        "description": "Instructions regarding safety for a location or an activity.",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          }
+        }
+      },
+      "ScheduleWindow": {
+        "type": "object",
+        "description": "A generic window of time for an activity or access to a location.",
+        "properties": {
+          "Duration": {
+            "$ref": "#/components/schemas/Duration"
+          },
+          "ScheduleDate": {
+            "$ref": "#/components/schemas/ScheduleDate"
+          }
+        }
+      },
+      "ScheduleDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The datetime of a schedule event",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "Use StartTime and EndTime to describe an event with a window of time.",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "Entitlement": {
+        "type": "object",
+        "description": "A service or benefit to which a customer is entitled.",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          }
+        }
+      },
+      "Entitlements": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Entitlement"
+        }
       }
     }
   },
