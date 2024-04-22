@@ -13677,8 +13677,8 @@
           "Description": {
             "$ref": "#/components/schemas/Description"
           },
-          "Amount": {
-            "$ref": "#/components/schemas/Amount"
+          "Quantity": {
+            "$ref": "#/components/schemas/Quantity"
           }
         }
       },
@@ -13695,8 +13695,8 @@
           "Description": {
             "$ref": "#/components/schemas/Description"
           },
-          "Amount": {
-            "$ref": "#/components/schemas/Amount"
+          "Quantity": {
+            "$ref": "#/components/schemas/Quantity"
           }
         }
       },
@@ -13713,8 +13713,8 @@
           "Description": {
             "$ref": "#/components/schemas/Description"
           },
-          "Amount": {
-            "$ref": "#/components/schemas/Amount"
+          "Quantity": {
+            "$ref": "#/components/schemas/Quantity"
           }
         }
       },
