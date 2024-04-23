@@ -13878,9 +13878,6 @@
           "OMResource": {
             "$ref": "#/components/schemas/OMResource"
           },
-          "SiteVisit": {
-            "$ref": "#/components/schemas/SiteVisit"
-          },
           "OMTeam": {
             "$ref": "#/components/schemas/OMTeam"
           },
@@ -13889,6 +13886,9 @@
           },
           "CloseoutInstructions": {
             "$ref": "#/components/schemas/CloseoutInstructions"
+          },
+          "Scheduling": {
+            "$ref": "#/components/schemas/Scheduling"
           }
         }
       },
@@ -13913,6 +13913,9 @@
           },
           "Addresses": {
             "$ref": "#/components/schemas/Addresses"
+          },
+          "OperatingHours": {
+            "$ref": "#/components/schemas/OperatingHours"
           }
         }
       },
@@ -13960,21 +13963,6 @@
             "x-ob-sample-value": {}
           }
         ]
-      },
-      "SiteVisit": {
-        "description": "A window of time for an activity or access to a location.",
-        "properties": {
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "ScheduledDate": {
-            "$ref": "#/components/schemas/ScheduledDate"
-          },
-          "OperatingHours": {
-            "$ref": "#/components/schemas/OperatingHours"
-          }
-        },
-        "type": "object"
       },
       "OperatingHours": {
         "allOf": [
@@ -14131,6 +14119,18 @@
           },
           "FileFolderURL": {
             "$ref": "#/components/schemas/FileFolderURL"
+          }
+        },
+        "type": "object"
+      },
+      "Scheduling": {
+        "description": "A window of time for an activity or access to a location.",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "ScheduledDate": {
+            "$ref": "#/components/schemas/ScheduledDate"
           }
         },
         "type": "object"
