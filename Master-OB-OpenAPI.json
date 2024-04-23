@@ -13742,24 +13742,6 @@
           }
         }
       },
-      "OMJobSiteAnalysis": {
-        "type": "object",
-        "description": "A hazards and safety analysis and mitigation plan for activity-level work at a site.",
-        "properties": {
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "Comments": {
-            "$ref": "#/components/schemas/Comments"
-          },
-          "Tags": {
-            "$ref": "#/components/schemas/Tags"
-          }
-        }
-      },
       "OMSkillQualLevel": {
         "allOf": [
           {
@@ -13890,9 +13872,6 @@
           "FileFolderURL": {
             "$ref": "#/components/schemas/FileFolderURL"
           },
-          "OMJobSiteAnalysis": {
-            "$ref": "#/components/schemas/OMJobSiteAnalysis"
-          },
           "PaymentMethod": {
             "$ref": "#/components/schemas/PaymentMethod"
           },
@@ -13904,6 +13883,12 @@
           },
           "OMTeam": {
             "$ref": "#/components/schemas/OMTeam"
+          },
+          "JobSiteAnalysis": {
+            "$ref": "#/components/schemas/JobSiteAnalysis"
+          },
+          "CloseoutInstructions": {
+            "$ref": "#/components/schemas/CloseoutInstructions"
           }
         }
       },
@@ -14119,6 +14104,36 @@
             "x-ob-sample-value": {}
           }
         ]
+      },
+      "JobSiteAnalysis": {
+        "type": "object",
+        "description": "A hazards and safety analysis and mitigation plan for activity-level work at a site.",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "Tags": {
+            "$ref": "#/components/schemas/Tags"
+          }
+        }
+      },
+      "CloseoutInstructions": {
+        "description": "Instructions for closing or completing work at a site.",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          }
+        },
+        "type": "object"
       }
     }
   },
