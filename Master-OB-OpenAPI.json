@@ -13450,8 +13450,8 @@
               "TaskResult": {
                 "$ref": "#/components/schemas/TaskResult"
               },
-              "OMTaskType": {
-                "$ref": "#/components/schemas/OMTaskType"
+              "OMActivityType": {
+                "$ref": "#/components/schemas/OMActivityType"
               },
               "OMWorkPlan": {
                 "$ref": "#/components/schemas/OMWorkPlan"
@@ -13655,15 +13655,15 @@
           }
         ]
       },
-      "OMTaskType": {
+      "OMActivityType": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementString"
           },
           {
             "type": "object",
-            "description": "The type of an Operations and Maintenace task",
-            "x-ob-item-type": "OMTaskType",
+            "description": "The activity involved in an Operations and Maintenace task",
+            "x-ob-item-type": "OMActivityTypeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -20682,8 +20682,8 @@
         }
       }
     },
-    "OMTaskType": {
-      "description": "The types of Operations and Maintenance tasks",
+    "OMActivityTypeItemType": {
+      "description": "The activities of Operations and Maintenance tasks",
       "enums": {
         "Replace": {
           "label": "Replace",
@@ -20723,6 +20723,14 @@
         },
         "Edit": {
           "label": "Edit",
+          "description": ""
+        },
+        "Combination": {
+          "label": "Combination",
+          "description": "A combination of activities"
+        },
+        "Other": {
+          "label": "Other",
           "description": ""
         }
       }
