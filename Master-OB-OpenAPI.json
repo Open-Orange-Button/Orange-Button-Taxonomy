@@ -20687,23 +20687,23 @@
       "enums": {
         "Replace": {
           "label": "Replace",
-          "description": ""
+          "description": "Replacement of the item by a new or refurbished item of the same type and make. From ISO 14224"
         },
         "Repair": {
           "label": "Repair",
-          "description": ""
+          "description": "Restore an item to its intended function. Adapted from ISO 14224"
         },
         "Adjust": {
           "label": "Adjust",
-          "description": ""
+          "description": "Bring an out-of-specification condition into tolerance. From ISO 14224"
         },
         "Modify": {
           "label": "Modify",
-          "description": ""
+          "description": "Replace or change an item or part with an item/part of a different type, make, material or design. From ISO 14224"
         },
         "Refit": {
           "label": "Refit",
-          "description": ""
+          "description": "Minor repair or service to bring an item back to acceptable function. Adapted from ISO 14224"
         },
         "Inspect": {
           "label": "Inspect",
@@ -20711,11 +20711,11 @@
         },
         "Service": {
           "label": "Service",
-          "description": ""
+          "description": "Routine or periodic cleaning, adjustments or calibrations. Adapted from ISO 14224"
         },
         "Test": {
           "label": "Test",
-          "description": ""
+          "description": "Test of function or performance. From ISO 14224"
         },
         "Measure": {
           "label": "Measure",
@@ -20723,7 +20723,7 @@
         },
         "Edit": {
           "label": "Edit",
-          "description": ""
+          "description": "Change to labeling, signage or instructions."
         },
         "Combination": {
           "label": "Combination",
