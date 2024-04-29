@@ -17,6 +17,7 @@ Element changes
 * Changes PrivateKeyAddress to CryptographicKeyID (:pull:`298`)
 * Adds TaskCreatedDate, TaskStartedDate, TaskResult, OMTaskType, OMSkillQualLevel. (:pull:`303`)
 * Updates CryptographicKeyID usage tips to include supplemental Lumian Information (:pull:`308`)
+* Adds ScheduledDate, OperatingHours, TeamRole, SkillsQualsCerts and TeamName. (:pull:`310`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -28,7 +29,8 @@ Object changes
 * Adds PrivateKeyAddresses array object and adds PrivateKeyAddresses to Device (:pull:`297`)
 * Removes PrivateKeyAddresses array object and replaces it with CryptographicKeyIDs and adds them to Device (:pull:`298`)
 * Adds OMIssue and OMIssues (:pull:`296`)
-* Adds OMTask, OMTaskResource, ToolItem and ToolItems, ConsumableItem and ConsumableItems, PPEItem and PPEItems, OMWorkPlan, OMJobSiteAnalysis. (:pull:`303`)
+* Adds OMTask, OMTaskResource, ToolItem and ToolItems, ConsumableItem and ConsumableItems, PPEItem and PPEItems, OMWorkPlan, OMJobSiteAnalysis. (:pull:`303`) OMTaskResource renamed to OMResource in (:pull:`310`).
+* Adds ServiceLevelAgreement, AccessInstructions, SafetyInstructions, SiteVisit, TeamMember and TeamMembers and OMTeam (:pull:`310`)
 
 Unit changes
 ~~~~~~~~~~~~
@@ -38,6 +40,8 @@ Unit changes
 * Removes enums from EntityRole that were related to specific Insurance types. (:pull:`305`)
 * Adds TestLab and CertificationAgency to enum list of EntityRole. (:pull:`305`)
 * Adds OMTaskTypeItemType. Adds Opportunistic to MaintenanceTypeItemType and removes Periodic. (:pull:`303`)
+* Adds values Security, IT, Safety, Technician and Other to ContactTypeItemType. (:pull:`310`)
+
 
 Bug fixes
 ~~~~~~~~~

@@ -13450,20 +13450,17 @@
               "TaskResult": {
                 "$ref": "#/components/schemas/TaskResult"
               },
-              "OMTaskType": {
-                "$ref": "#/components/schemas/OMTaskType"
-              },
-              "OMTaskResource": {
-                "$ref": "#/components/schemas/OMTaskResource"
-              },
-              "OMJobSiteAnalysis": {
-                "$ref": "#/components/schemas/OMJobSiteAnalysis"
+              "OMActivityType": {
+                "$ref": "#/components/schemas/OMActivityType"
               },
               "OMWorkPlan": {
                 "$ref": "#/components/schemas/OMWorkPlan"
               },
               "OMSkillQualLevel": {
                 "$ref": "#/components/schemas/OMSkillQualLevel"
+              },
+              "ServiceLevelAgreement": {
+                "$ref": "#/components/schemas/ServiceLevelAgreement"
               }
             }
           }
@@ -13499,21 +13496,6 @@
             "type": "object",
             "description": "Category of maintenance activity or action",
             "x-ob-item-type": "MaintenanceTypeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "TaskWorkPlan": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "A work plan for a task",
-            "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -13673,38 +13655,20 @@
           }
         ]
       },
-      "OMTaskType": {
+      "OMActivityType": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementString"
           },
           {
             "type": "object",
-            "description": "The type of an Operations and Maintenace task",
-            "x-ob-item-type": "OMTaskType",
+            "description": "The activity involved in an Operations and Maintenace task",
+            "x-ob-item-type": "OMActivityTypeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
           }
         ]
-      },
-      "OMTaskResource": {
-        "type": "object",
-        "description": "Tools, equipment or supplies needed for a OMTask",
-        "properties": {
-          "ProdLineItems": {
-            "$ref": "#/components/schemas/ProdLineItems"
-          },
-          "ToolItems": {
-            "$ref": "#/components/schemas/ToolItems"
-          },
-          "PPEItems": {
-            "$ref": "#/components/schemas/PPEItems"
-          },
-          "ConsumableItems": {
-            "$ref": "#/components/schemas/ConsumableItems"
-          }
-        }
       },
       "ToolItem": {
         "type": "object",
@@ -13763,24 +13727,6 @@
       "OMWorkPlan": {
         "type": "object",
         "description": "A step by step procedure for carrying out an operations and maintenance (OM) task",
-        "properties": {
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "Comments": {
-            "$ref": "#/components/schemas/Comments"
-          },
-          "Tags": {
-            "$ref": "#/components/schemas/Tags"
-          }
-        }
-      },
-      "OMJobSiteAnalysis": {
-        "type": "object",
-        "description": "A hazards and safety analysis and mitigation plan for activity-level work at a site.",
         "properties": {
           "Description": {
             "$ref": "#/components/schemas/Description"
@@ -13906,14 +13852,288 @@
       },
       "OMWorkOrder": {
         "type": "object",
-        "description": "A work order for operations and maintenance (OM). ",
-        "properties": {}
+        "description": "A work order for operations and maintenance (OM).",
+        "properties": {
+          "OMTasks": {
+            "$ref": "#/components/schemas/OMTasks"
+          },
+          "AccessInstructions": {
+            "$ref": "#/components/schemas/AccessInstructions"
+          },
+          "SafetyInstructions": {
+            "$ref": "#/components/schemas/SafetyInstructions"
+          },
+          "Tags": {
+            "$ref": "#/components/schemas/Tags"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "PaymentMethod": {
+            "$ref": "#/components/schemas/PaymentMethod"
+          },
+          "OMResource": {
+            "$ref": "#/components/schemas/OMResource"
+          },
+          "OMTeam": {
+            "$ref": "#/components/schemas/OMTeam"
+          },
+          "JobSiteAnalysis": {
+            "$ref": "#/components/schemas/JobSiteAnalysis"
+          },
+          "CloseoutInstructions": {
+            "$ref": "#/components/schemas/CloseoutInstructions"
+          },
+          "Scheduling": {
+            "$ref": "#/components/schemas/Scheduling"
+          }
+        }
       },
       "OMTasks": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/OMTask"
         }
+      },
+      "AccessInstructions": {
+        "type": "object",
+        "description": "Instructions for access to a site.",
+        "properties": {
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Contacts": {
+            "$ref": "#/components/schemas/Contacts"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Addresses": {
+            "$ref": "#/components/schemas/Addresses"
+          },
+          "OperatingHours": {
+            "$ref": "#/components/schemas/OperatingHours"
+          }
+        }
+      },
+      "SafetyInstructions": {
+        "type": "object",
+        "description": "Instructions regarding safety for a location or an activity.",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          }
+        }
+      },
+      "OMResource": {
+        "type": "object",
+        "description": "Tools, equipment or supplies needed for a OMTask",
+        "properties": {
+          "ProdLineItems": {
+            "$ref": "#/components/schemas/ProdLineItems"
+          },
+          "ToolItems": {
+            "$ref": "#/components/schemas/ToolItems"
+          },
+          "PPEItems": {
+            "$ref": "#/components/schemas/PPEItems"
+          },
+          "ConsumableItems": {
+            "$ref": "#/components/schemas/ConsumableItems"
+          }
+        }
+      },
+      "ScheduledDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The datetime of a schedule event",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "Use StartTime and EndTime to describe an event with a window of time.",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "OperatingHours": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Description of operating hours of a facility, site or location.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ServiceLevelAgreement": {
+        "type": "object",
+        "description": "Contract or agreement between a service provider and a customer which outlines the terms and expectations of service to be provided, level of expected performance, performance measures, exclusions and redress.",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          }
+        }
+      },
+      "TeamMember": {
+        "type": "object",
+        "description": "A person who is part of a team",
+        "properties": {
+          "FirstName": {
+            "$ref": "#/components/schemas/FirstName"
+          },
+          "LastName": {
+            "$ref": "#/components/schemas/LastName"
+          },
+          "MobilePhone": {
+            "$ref": "#/components/schemas/MobilePhone"
+          },
+          "WorkPhone": {
+            "$ref": "#/components/schemas/WorkPhone"
+          },
+          "PreferredContactMethod": {
+            "$ref": "#/components/schemas/PreferredContactMethod"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Email": {
+            "$ref": "#/components/schemas/Email"
+          },
+          "ContactTimezone": {
+            "$ref": "#/components/schemas/ContactTimezone"
+          },
+          "SkillsQualsCerts": {
+            "$ref": "#/components/schemas/SkillsQualsCerts"
+          },
+          "TeamRole": {
+            "$ref": "#/components/schemas/TeamRole"
+          }
+        }
+      },
+      "TeamRole": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The role a person has on a team.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "SkillsQualsCerts": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Skills, qualifications and/or certifications of a person.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TeamMembers": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/TeamMember"
+        }
+      },
+      "OMTeam": {
+        "type": "object",
+        "description": "A crew or team for operations and maintenance (OM).",
+        "properties": {
+          "TeamMembers": {
+            "$ref": "#/components/schemas/TeamMembers"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "TeamName": {
+            "$ref": "#/components/schemas/TeamName"
+          }
+        }
+      },
+      "TeamName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A name or identifier for a team of persons.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "JobSiteAnalysis": {
+        "type": "object",
+        "description": "A hazards and safety analysis and mitigation plan for activity-level work at a site.",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "Tags": {
+            "$ref": "#/components/schemas/Tags"
+          }
+        }
+      },
+      "CloseoutInstructions": {
+        "description": "Instructions for closing or completing work at a site.",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          }
+        },
+        "type": "object"
+      },
+      "Scheduling": {
+        "description": "A window of time for an activity or access to a location.",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "ScheduledDate": {
+            "$ref": "#/components/schemas/ScheduledDate"
+          }
+        },
+        "type": "object"
       }
     }
   },
@@ -17081,6 +17301,26 @@
         },
         "Referrer": {
           "label": "Referrer",
+          "description": ""
+        },
+        "Security": {
+          "label": "Security",
+          "description": ""
+        },
+        "Safety": {
+          "label": "Safety",
+          "description": ""
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
+        },
+        "IT": {
+          "label": "Information Technology",
+          "description": ""
+        },
+        "Technician": {
+          "label": "Technician",
           "description": ""
         }
       }
@@ -20442,28 +20682,28 @@
         }
       }
     },
-    "OMTaskType": {
-      "description": "The types of Operations and Maintenance tasks",
+    "OMActivityTypeItemType": {
+      "description": "The activities of Operations and Maintenance tasks",
       "enums": {
         "Replace": {
           "label": "Replace",
-          "description": ""
+          "description": "Replacement of the item by a new or refurbished item of the same type and make. From ISO 14224"
         },
         "Repair": {
           "label": "Repair",
-          "description": ""
+          "description": "Restore an item to its intended function. Adapted from ISO 14224"
         },
         "Adjust": {
           "label": "Adjust",
-          "description": ""
+          "description": "Bring an out-of-specification condition into tolerance. From ISO 14224"
         },
         "Modify": {
           "label": "Modify",
-          "description": ""
+          "description": "Replace or change an item or part with an item/part of a different type, make, material or design. From ISO 14224"
         },
         "Refit": {
           "label": "Refit",
-          "description": ""
+          "description": "Minor repair or service to bring an item back to acceptable function. Adapted from ISO 14224"
         },
         "Inspect": {
           "label": "Inspect",
@@ -20471,11 +20711,11 @@
         },
         "Service": {
           "label": "Service",
-          "description": ""
+          "description": "Routine or periodic cleaning, adjustments or calibrations. Adapted from ISO 14224"
         },
         "Test": {
           "label": "Test",
-          "description": ""
+          "description": "Test of function or performance. From ISO 14224"
         },
         "Measure": {
           "label": "Measure",
@@ -20483,6 +20723,14 @@
         },
         "Edit": {
           "label": "Edit",
+          "description": "Change to labeling, signage or instructions."
+        },
+        "Combination": {
+          "label": "Combination",
+          "description": "A combination of activities"
+        },
+        "Other": {
+          "label": "Other",
           "description": ""
         }
       }
