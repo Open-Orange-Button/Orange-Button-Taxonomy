@@ -14134,6 +14134,117 @@
           }
         },
         "type": "object"
+      },
+      "TopologyType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of a topology.",
+            "x-ob-item-type": "TopologyTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TopologyUUID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A UUID for a topology.",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "NodeUUID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A UUID for a Node, which is an element of a topology.",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "Node": {
+        "type": "object",
+        "description": "A node is an element of the directed graph that comprises a Topology.",
+        "properties": {
+          "NodeUUID": {
+            "$ref": "#/components/schemas/NodeUUID"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "PVColladaID": {
+            "$ref": "#/components/schemas/PVColladaID"
+          }
+        }
+      },
+      "Topology": {
+        "type": "object",
+        "description": "A Topology is a directed graph comprised of Nodes.",
+        "properties": {
+          "TopologyType": {
+            "$ref": "#/components/schemas/TopologyType"
+          },
+          "TopologyUUID": {
+            "$ref": "#/components/schemas/TopologyUUID"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Nodes": {
+            "$ref": "#/components/schemas/Nodes"
+          },
+          "PVCollada": {
+            "$ref": "#/components/schemas/PVCollada"
+          }
+        }
+      },
+      "Nodes": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Node"
+        }
+      },
+      "PVCollada": {
+        "type": "object",
+        "description": "An object with elements for sharing a PVCollada xml file.",
+        "properties": {
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          }
+        }
+      },
+      "PVColladaID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An identifier for an object in a PVCollada file.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
       }
     }
   },
@@ -20769,6 +20880,23 @@
         "UmbrellaExcessLiability": {
           "label": "Umbrella Excess Liability",
           "description": ""
+        }
+      }
+    },
+    "TopologyTypeItemType": {
+      "description": "An enumeration of types of topologies. A topology is a directed graph of Nodes, which convey relational information.",
+      "enums": {
+        "Electrical": {
+          "label": "Electrical",
+          "description": "Topology which describes electrical relationships."
+        },
+        "Geographic": {
+          "label": "Geographic",
+          "description": "Topology which describes spatial relationships."
+        },
+        "Mechanical": {
+          "label": "Mechanical",
+          "description": "Topology which describes attachment, mounting and fastening."
         }
       }
     }
