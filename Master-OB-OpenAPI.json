@@ -18278,6 +18278,10 @@
         "OperationsMaintenance": {
           "label": "Operations and Maintenance",
           "description": ""
+        },
+        "PermissionToOperate": {
+          "label": "Permission To Operate",
+          "description": ""
         }
       }
     },
