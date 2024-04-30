@@ -41,6 +41,7 @@ Unit changes
 * Adds TestLab and CertificationAgency to enum list of EntityRole. (:pull:`305`)
 * Adds OMTaskTypeItemType. Adds Opportunistic to MaintenanceTypeItemType and removes Periodic. (:pull:`303`)
 * Adds values Security, IT, Safety, Technician and Other to ContactTypeItemType. (:pull:`310`)
+* Adds PermissionToOperate to TaskGroupItemType Enum list (:pull:`311`)
 
 
 Bug fixes
