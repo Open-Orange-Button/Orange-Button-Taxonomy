@@ -8494,6 +8494,9 @@
           },
           "AlternativeIdentifiers": {
             "$ref": "#/components/schemas/AlternativeIdentifiers"
+          },
+          "Warranties": {
+            "$ref": "#/components/schemas/Warranties"
           }
         }
       },
@@ -19018,19 +19021,19 @@
       "enums": {
         "Power": {
           "label": "Power",
-          "description": ""
+          "description": "Performance warranty"
         },
         "Service": {
           "label": "Service",
-          "description": ""
+          "description": "Workmanship warranty"
         },
         "Material": {
           "label": "Material",
-          "description": ""
+          "description": "Material and/or equipment warranty"
         },
         "Other": {
           "label": "Other",
-          "description": ""
+          "description": "Use Warranty.Description for other warranty"
         }
       }
     },
