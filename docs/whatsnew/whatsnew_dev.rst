@@ -31,6 +31,7 @@ Object changes
 * Adds OMIssue and OMIssues (:pull:`296`)
 * Adds OMTask, OMTaskResource, ToolItem and ToolItems, ConsumableItem and ConsumableItems, PPEItem and PPEItems, OMWorkPlan, OMJobSiteAnalysis. (:pull:`303`) OMTaskResource renamed to OMResource in (:pull:`310`).
 * Adds ServiceLevelAgreement, AccessInstructions, SafetyInstructions, SiteVisit, TeamMember and TeamMembers and OMTeam (:pull:`310`)
+* Adds Warranties to Contract Object (:pull:`314`)
 
 Unit changes
 ~~~~~~~~~~~~
@@ -41,7 +42,7 @@ Unit changes
 * Adds TestLab and CertificationAgency to enum list of EntityRole. (:pull:`305`)
 * Adds OMTaskTypeItemType. Adds Opportunistic to MaintenanceTypeItemType and removes Periodic. (:pull:`303`)
 * Adds values Security, IT, Safety, Technician and Other to ContactTypeItemType. (:pull:`310`)
-
+* Adds descriptions to warranty type enum values (:pull:`314`)
 
 Bug fixes
 ~~~~~~~~~
