@@ -19019,9 +19019,9 @@
     "WarrantyItemType": {
       "description": "Types of warranties",
       "enums": {
-        "Power": {
-          "label": "Power",
-          "description": "Performance warranty"
+        "Performance": {
+          "label": "Performance",
+          "description": "Performance warranty (e.g. DC Power generation, number battery cycles, etc.)"
         },
         "Service": {
           "label": "Service",
@@ -19033,7 +19033,7 @@
         },
         "Other": {
           "label": "Other",
-          "description": "Use Warranty.Description for other warranty"
+          "description": "Other type of warranty, use warranty description information"
         }
       }
     },
