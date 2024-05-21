@@ -42,7 +42,7 @@ Unit changes
 * Adds TestLab and CertificationAgency to enum list of EntityRole. (:pull:`305`)
 * Adds OMTaskTypeItemType. Adds Opportunistic to MaintenanceTypeItemType and removes Periodic. (:pull:`303`)
 * Adds values Security, IT, Safety, Technician and Other to ContactTypeItemType. (:pull:`310`)
-* Adds descriptions to warranty type enum values (:pull:`314`)
+* Renames WarrantyItemType value Power to Performance, and adds descriptions to enum values (:pull:`314`)
 
 Bug fixes
 ~~~~~~~~~
