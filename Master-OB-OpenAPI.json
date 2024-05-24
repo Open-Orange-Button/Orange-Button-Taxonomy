@@ -14243,9 +14243,6 @@
           },
           "Nodes": {
             "$ref": "#/components/schemas/Nodes"
-          },
-          "PVCollada": {
-            "$ref": "#/components/schemas/PVCollada"
           }
         }
       },
@@ -14253,15 +14250,6 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/Node"
-        }
-      },
-      "PVCollada": {
-        "type": "object",
-        "description": "An object with elements for sharing a PVCollada xml file.",
-        "properties": {
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          }
         }
       },
       "PVColladaID": {
