@@ -142,14 +142,11 @@
           "CryptographicKeyIDs": {
             "$ref": "#/components/schemas/CryptographicKeyIDs"
           },
-          "Node": {
-            "$ref": "#/components/schemas/Node"
-          },
           "IsMaintainable": {
             "$ref": "#/components/schemas/IsMaintainable"
           },
-          "IsReplaceable": {
-            "$ref": "#/components/schemas/IsReplaceable"
+          "Nodes": {
+            "$ref": "#/components/schemas/Nodes"
           }
         },
         "type": "object"
@@ -12997,11 +12994,11 @@
           "ComponentUUID": {
             "$ref": "#/components/schemas/ComponentUUID"
           },
-          "IsReplaceable": {
-            "$ref": "#/components/schemas/IsReplaceable"
-          },
           "IsMaintainable": {
             "$ref": "#/components/schemas/IsMaintainable"
+          },
+          "Nodes": {
+            "$ref": "#/components/schemas/Nodes"
           }
         }
       },
@@ -13244,9 +13241,6 @@
           },
           "IssueResolutionDate": {
             "$ref": "#/components/schemas/IssueResolutionDate"
-          },
-          "OMEquipmentIDs": {
-            "$ref": "#/components/schemas/OMEquipmentIDs"
           }
         }
       },
@@ -13488,9 +13482,6 @@
               },
               "ServiceLevelAgreement": {
                 "$ref": "#/components/schemas/ServiceLevelAgreement"
-              },
-              "OMEquipmentIDs": {
-                "$ref": "#/components/schemas/OMEquipmentIDs"
               }
             }
           }
@@ -14289,38 +14280,8 @@
           },
           {
             "type": "object",
-            "description": "True if an Assembly, Device or Component has replaceable or serviceable parts.",
+            "description": "True if an Assembly, Device or Component has parts that can be serviced or replaced without violating a warranty.",
             "x-ob-item-type": "BooleanItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "IsReplaceable": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementBoolean"
-          },
-          {
-            "type": "object",
-            "description": "True if a Device or Component can be replaced within a larger Assembly or Device",
-            "x-ob-item-type": "BooleanItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "OMEquipmentIDs": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementArrayString"
-          },
-          {
-            "type": "object",
-            "description": "An array of identifiers for equipment that is the subject of an OMIssue or OMTask",
-            "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
