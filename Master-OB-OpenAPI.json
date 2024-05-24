@@ -141,6 +141,15 @@
           },
           "CryptographicKeyIDs": {
             "$ref": "#/components/schemas/CryptographicKeyIDs"
+          },
+          "Node": {
+            "$ref": "#/components/schemas/Node"
+          },
+          "IsMaintainable": {
+            "$ref": "#/components/schemas/IsMaintainable"
+          },
+          "IsReplaceable": {
+            "$ref": "#/components/schemas/IsReplaceable"
           }
         },
         "type": "object"
@@ -10289,7 +10298,7 @@
           },
           {
             "type": "object",
-            "description": "An identifier for the device, system, portfolio, or region where data was collected.",
+            "description": "An identifier for the device, system, portfolio, region, etc.",
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -12933,6 +12942,12 @@
           },
           "AssemblyUUID": {
             "$ref": "#/components/schemas/AssemblyUUID"
+          },
+          "IsMaintainable": {
+            "$ref": "#/components/schemas/IsMaintainable"
+          },
+          "Nodes": {
+            "$ref": "#/components/schemas/Nodes"
           }
         },
         "type": "object"
@@ -12981,6 +12996,12 @@
           },
           "ComponentUUID": {
             "$ref": "#/components/schemas/ComponentUUID"
+          },
+          "IsReplaceable": {
+            "$ref": "#/components/schemas/IsReplaceable"
+          },
+          "IsMaintainable": {
+            "$ref": "#/components/schemas/IsMaintainable"
           }
         }
       },
@@ -13223,6 +13244,9 @@
           },
           "IssueResolutionDate": {
             "$ref": "#/components/schemas/IssueResolutionDate"
+          },
+          "OMEquipmentIDs": {
+            "$ref": "#/components/schemas/OMEquipmentIDs"
           }
         }
       },
@@ -13464,6 +13488,9 @@
               },
               "ServiceLevelAgreement": {
                 "$ref": "#/components/schemas/ServiceLevelAgreement"
+              },
+              "OMEquipmentIDs": {
+                "$ref": "#/components/schemas/OMEquipmentIDs"
               }
             }
           }
@@ -14184,8 +14211,7 @@
         ]
       },
       "Node": {
-        "type": "object",
-        "description": "A node is an element of the directed graph that comprises a Topology.",
+        "description": "A node is an element of a PVCollada file that describes geospatial positions and mechanical relationships.",
         "properties": {
           "NodeUUID": {
             "$ref": "#/components/schemas/NodeUUID"
@@ -14195,8 +14221,12 @@
           },
           "PVColladaID": {
             "$ref": "#/components/schemas/PVColladaID"
+          },
+          "PVColladaFileID": {
+            "$ref": "#/components/schemas/PVColladaFileID"
           }
-        }
+        },
+        "type": "object"
       },
       "Topology": {
         "type": "object",
@@ -14242,6 +14272,66 @@
           {
             "type": "object",
             "description": "An identifier for an object in a PVCollada file.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "PVColladaFileID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An identifier for a PVCollada file.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IsMaintainable": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "True if an Assembly, Device or Component has replaceable or serviceable parts.",
+            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IsReplaceable": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "True if a Device or Component can be replaced within a larger Assembly or Device",
+            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "OMEquipmentIDs": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementArrayString"
+          },
+          {
+            "type": "object",
+            "description": "An array of identifiers for equipment that is the subject of an OMIssue or OMTask",
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -19481,6 +19571,10 @@
         },
         "Project": {
           "label": "Project",
+          "description": ""
+        },
+        "Assembly": {
+          "label": "Assembly",
           "description": ""
         }
       }
