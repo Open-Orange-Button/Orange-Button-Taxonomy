@@ -20889,6 +20889,26 @@
         "Other": {
           "label": "Other",
           "description": ""
+        },
+        "Groundskeeping": {
+          "label": "Groundskeeping",
+          "description": "Manage ground surface, drainage, or foliage"
+        },
+        "Train": {
+          "label": "Train",
+          "description": "Train, educate or instruct people"
+        },
+        "Document": {
+          "label": "Document",
+          "description": "Create a record of a condition, configuration, status or state"
+        },
+        "Lockout": {
+          "label": "Lockout",
+          "description": "De-energize, secure or ensure safe operations of equipment"
+        },
+        "Decommission": {
+          "label": "Decommission",
+          "description": "Remove a device or system from operation"
         }
       }
     },
