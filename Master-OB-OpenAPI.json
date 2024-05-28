@@ -12945,6 +12945,9 @@
           },
           "Nodes": {
             "$ref": "#/components/schemas/Nodes"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
           }
         },
         "type": "object"
@@ -12999,6 +13002,9 @@
           },
           "Nodes": {
             "$ref": "#/components/schemas/Nodes"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
           }
         }
       },
@@ -14234,6 +14240,9 @@
           },
           "Nodes": {
             "$ref": "#/components/schemas/Nodes"
+          },
+          "Edges": {
+            "$ref": "#/components/schemas/Edges"
           }
         }
       },
@@ -14287,6 +14296,54 @@
             "x-ob-sample-value": {}
           }
         ]
+      },
+      "HeadNodeID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The identifier for the node that is the head or start of an edge in a graph.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TailNodeID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The note that is the tail or end of an edge in a graph.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "Edge": {
+        "type": "object",
+        "description": "A pair of nodes that define an edge in a graph.",
+        "properties": {
+          "HeadNodeID": {
+            "$ref": "#/components/schemas/HeadNodeID"
+          },
+          "TailNodeID": {
+            "$ref": "#/components/schemas/TailNodeID"
+          }
+        }
+      },
+      "Edges": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Edge"
+        }
       }
     }
   },
@@ -19492,7 +19549,7 @@
       }
     },
     "ScopeTypeItemType": {
-      "description": "An enumerated list of scope for a dataset.",
+      "description": "An enumerated list of scope for a dataset, action, task, etc.",
       "enums": {
         "Device": {
           "label": "Device",
@@ -19524,6 +19581,10 @@
         },
         "Assembly": {
           "label": "Assembly",
+          "description": ""
+        },
+        "Component": {
+          "label": "Component",
           "description": ""
         }
       }
