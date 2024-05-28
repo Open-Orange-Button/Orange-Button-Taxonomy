@@ -20864,7 +20864,7 @@
         },
         "Inspect": {
           "label": "Inspect",
-          "description": ""
+          "description": "Visual or physical assessment of equipment, system or site"
         },
         "Service": {
           "label": "Service",
@@ -20876,15 +20876,11 @@
         },
         "Measure": {
           "label": "Measure",
-          "description": ""
+          "description": "Use equipment to determine a physical or electrical value"
         },
         "Edit": {
           "label": "Edit",
           "description": "Change to labeling, signage or instructions."
-        },
-        "Combination": {
-          "label": "Combination",
-          "description": "A combination of activities"
         },
         "Other": {
           "label": "Other",
