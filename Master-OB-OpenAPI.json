@@ -9933,9 +9933,6 @@
           },
           "SystemStage": {
             "$ref": "#/components/schemas/SystemStage"
-          },
-          "PermissionToOperateDate": {
-            "$ref": "#/components/schemas/PermissionToOperateDate"
           }
         }
       },
@@ -10040,9 +10037,6 @@
               },
               "Production": {
                 "$ref": "#/components/schemas/Production"
-              },
-              "PermissionToOperateDate": {
-                "$ref": "#/components/schemas/PermissionToOperateDate"
               }
             },
             "x-ob-usage-tips": ""
@@ -10072,9 +10066,6 @@
               },
               "EnergyConsumptions": {
                 "$ref": "#/components/schemas/EnergyConsumptions"
-              },
-              "PermissionToOperateDate": {
-                "$ref": "#/components/schemas/PermissionToOperateDate"
               }
             }
           }
@@ -14146,23 +14137,6 @@
           }
         },
         "type": "object"
-      },
-      "PermissionToOperateDate": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Date of authorization granted by a utility or regulatory body allowing the DER to connect and interact with the power grid.",
-            "x-ob-item-type": "DateItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "2024-04-24"
-            }
-          }
-        ]
       }
     }
   },
