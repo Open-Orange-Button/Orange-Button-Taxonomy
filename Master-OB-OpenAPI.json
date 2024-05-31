@@ -8494,9 +8494,6 @@
           },
           "AlternativeIdentifiers": {
             "$ref": "#/components/schemas/AlternativeIdentifiers"
-          },
-          "Warranties": {
-            "$ref": "#/components/schemas/Warranties"
           }
         }
       },
@@ -19045,21 +19042,21 @@
     "WarrantyItemType": {
       "description": "Types of warranties",
       "enums": {
-        "Performance": {
-          "label": "Performance",
-          "description": "Performance warranty (e.g. DC Power generation, number battery cycles, etc.)"
+        "Power": {
+          "label": "Power",
+          "description": ""
         },
         "Service": {
           "label": "Service",
-          "description": "Workmanship warranty"
+          "description": ""
         },
         "Material": {
           "label": "Material",
-          "description": "Material and/or equipment warranty"
+          "description": ""
         },
         "Other": {
           "label": "Other",
-          "description": "Other type of warranty, use warranty description information"
+          "description": ""
         }
       }
     },
