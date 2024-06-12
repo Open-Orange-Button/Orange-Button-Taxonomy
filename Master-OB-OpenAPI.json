@@ -9936,6 +9936,9 @@
           },
           "PermissionToOperateDate": {
             "$ref": "#/components/schemas/PermissionToOperateDate"
+          },
+          "CommissionDate": {
+            "$ref": "#/components/schemas/CommissionDate"
           }
         }
       },
@@ -14153,7 +14156,24 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "2024-05-10"
+              "Value": "2024-02-25"
+            }
+          }
+        ]
+      },
+      "CommissionDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The commissioning date is when a solar energy system or battery storage is fully installed, tested, and operational.",
+            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2024-05-18"
             }
           }
         ]
