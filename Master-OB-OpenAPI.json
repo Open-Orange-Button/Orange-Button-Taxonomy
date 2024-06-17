@@ -14168,7 +14168,7 @@
           },
           {
             "type": "object",
-            "description": "The commissioning date is when a solar energy system or battery storage is fully installed, tested, and operational.",
+            "description": "Date when a solar energy system or battery storage is placed in service, meaning it has been installed, tested, and deemed operational for its intended use.",
             "x-ob-item-type": "DateItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
