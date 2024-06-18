@@ -14297,7 +14297,25 @@
           }
         ]
       },
-      "HeadNodeID": {
+      "Edge": {
+        "type": "object",
+        "description": "A pair of nodes that define an edge in a graph.",
+        "properties": {
+          "HeadNodeUUID": {
+            "$ref": "#/components/schemas/HeadNodeUUID"
+          },
+          "TailNodeUUID": {
+            "$ref": "#/components/schemas/TailNodeUUID"
+          }
+        }
+      },
+      "Edges": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Edge"
+        }
+      },
+      "HeadNodeUUID": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementString"
@@ -14312,7 +14330,7 @@
           }
         ]
       },
-      "TailNodeID": {
+      "TailNodeUUID": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementString"
@@ -14326,24 +14344,6 @@
             "x-ob-sample-value": {}
           }
         ]
-      },
-      "Edge": {
-        "type": "object",
-        "description": "A pair of nodes that define an edge in a graph.",
-        "properties": {
-          "HeadNodeID": {
-            "$ref": "#/components/schemas/HeadNodeID"
-          },
-          "TailNodeID": {
-            "$ref": "#/components/schemas/TailNodeID"
-          }
-        }
-      },
-      "Edges": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/Edge"
-        }
       }
     }
   },
