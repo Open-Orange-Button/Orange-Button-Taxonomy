@@ -9939,6 +9939,12 @@
           },
           "SystemStage": {
             "$ref": "#/components/schemas/SystemStage"
+          },
+          "PermissionToOperateDate": {
+            "$ref": "#/components/schemas/PermissionToOperateDate"
+          },
+          "CommissionDate": {
+            "$ref": "#/components/schemas/CommissionDate"
           }
         }
       },
@@ -14161,6 +14167,41 @@
           }
         },
         "type": "object"
+      },
+
+      "PermissionToOperateDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date of authorization granted by a utility or regulatory body allowing the DER to connect and interact with the power grid",
+            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2024-02-25"
+            }
+          }
+        ]
+      },
+      "CommissionDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date when a solar energy system or battery storage is placed in service, meaning it has been installed, tested, and deemed operational for its intended use.",
+            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2024-05-18"
+            }
+          }
+        ]
       },
       "TopologyType": {
         "allOf": [
