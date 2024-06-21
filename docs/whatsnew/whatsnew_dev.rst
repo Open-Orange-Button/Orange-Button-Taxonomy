@@ -33,7 +33,7 @@ Object changes
 * Adds OMTask, OMTaskResource, ToolItem and ToolItems, ConsumableItem and ConsumableItems, PPEItem and PPEItems, OMWorkPlan, OMJobSiteAnalysis. (:pull:`303`) OMTaskResource renamed to OMResource in (:pull:`310`).
 * Adds ServiceLevelAgreement, AccessInstructions, SafetyInstructions, SiteVisit, TeamMember and TeamMembers and OMTeam (:pull:`310`)
 * Adds Warranties to Contract Object (:pull:`314`)
-* Adds LoanID to Loan object (:pull:`319`)
+* Adds LoanID, AlternativeIdentifiers to Loan object (:pull:`319`)
 
 Unit changes
 ~~~~~~~~~~~~
