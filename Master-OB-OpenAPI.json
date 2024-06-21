@@ -3688,8 +3688,11 @@
           "Tasks": {
             "$ref": "#/components/schemas/Tasks"
           },
-          "UUID": {
-            "$ref": "#/components/schemas/UUID"
+          "LoanID": {
+            "$ref": "#/components/schemas/LoanID"
+          },
+          "AlternativeIdentifiers": {
+            "$ref": "#/components/schemas/AlternativeIdentifiers"
           }
         }
       },
@@ -14137,6 +14140,23 @@
           }
         },
         "type": "object"
+      },
+      "LoanID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Unique identifier for the Loan object",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "865465214"
+            }
+          }
+        ]
       }
     }
   },
@@ -18280,6 +18300,14 @@
         },
         "OperationsMaintenance": {
           "label": "Operations and Maintenance",
+          "description": ""
+        },
+        "NoticeToProceed": {
+          "label": "NoticeToProceed",
+          "description": ""
+        },
+        "PermissionToOperate": {
+          "label": "PermissionToOperate",
           "description": ""
         }
       }
