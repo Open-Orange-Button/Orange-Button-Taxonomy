@@ -14168,7 +14168,6 @@
         },
         "type": "object"
       },
-
       "PermissionToOperateDate": {
         "allOf": [
           {
@@ -20966,7 +20965,7 @@
         },
         "Inspect": {
           "label": "Inspect",
-          "description": ""
+          "description": "Visual or physical assessment of equipment, system or site"
         },
         "Service": {
           "label": "Service",
@@ -20978,19 +20977,35 @@
         },
         "Measure": {
           "label": "Measure",
-          "description": ""
+          "description": "Use equipment to determine a physical or electrical value"
         },
         "Edit": {
           "label": "Edit",
           "description": "Change to labeling, signage or instructions."
         },
-        "Combination": {
-          "label": "Combination",
-          "description": "A combination of activities"
-        },
         "Other": {
           "label": "Other",
           "description": ""
+        },
+        "Groundskeeping": {
+          "label": "Groundskeeping",
+          "description": "Manage ground surface, drainage, or foliage"
+        },
+        "Train": {
+          "label": "Train",
+          "description": "Train, educate or instruct people"
+        },
+        "Document": {
+          "label": "Document",
+          "description": "Create a record of a condition, configuration, status or state"
+        },
+        "Lockout": {
+          "label": "Lockout",
+          "description": "De-energize, secure or ensure safe operations of equipment"
+        },
+        "Decommission": {
+          "label": "Decommission",
+          "description": "Remove a device or system from operation"
         }
       }
     },
