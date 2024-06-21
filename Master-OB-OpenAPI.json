@@ -9939,6 +9939,12 @@
           },
           "SystemStage": {
             "$ref": "#/components/schemas/SystemStage"
+          },
+          "PermissionToOperateDate": {
+            "$ref": "#/components/schemas/PermissionToOperateDate"
+          },
+          "CommissionDate": {
+            "$ref": "#/components/schemas/CommissionDate"
           }
         }
       },
@@ -12945,6 +12951,9 @@
           },
           "Nodes": {
             "$ref": "#/components/schemas/Nodes"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
           }
         },
         "type": "object"
@@ -12999,6 +13008,9 @@
           },
           "Nodes": {
             "$ref": "#/components/schemas/Nodes"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
           }
         }
       },
@@ -14156,6 +14168,40 @@
         },
         "type": "object"
       },
+      "PermissionToOperateDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date of authorization granted by a utility or regulatory body allowing the DER to connect and interact with the power grid",
+            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2024-02-25"
+            }
+          }
+        ]
+      },
+      "CommissionDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date when a solar energy system or battery storage is placed in service, meaning it has been installed, tested, and deemed operational for its intended use.",
+            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2024-05-18"
+            }
+          }
+        ]
+      },
       "TopologyType": {
         "allOf": [
           {
@@ -14234,6 +14280,9 @@
           },
           "Nodes": {
             "$ref": "#/components/schemas/Nodes"
+          },
+          "Edges": {
+            "$ref": "#/components/schemas/Edges"
           }
         }
       },
@@ -14282,6 +14331,54 @@
             "type": "object",
             "description": "True if an Assembly, Device or Component has parts that can be serviced or replaced without violating a warranty.",
             "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "Edge": {
+        "type": "object",
+        "description": "A pair of nodes that define an edge in a graph.",
+        "properties": {
+          "HeadNodeUUID": {
+            "$ref": "#/components/schemas/HeadNodeUUID"
+          },
+          "TailNodeUUID": {
+            "$ref": "#/components/schemas/TailNodeUUID"
+          }
+        }
+      },
+      "Edges": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Edge"
+        }
+      },
+      "HeadNodeUUID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The identifier for the node that is the head or start of an edge in a graph.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TailNodeUUID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The note that is the tail or end of an edge in a graph.",
+            "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -19492,7 +19589,7 @@
       }
     },
     "ScopeTypeItemType": {
-      "description": "An enumerated list of scope for a dataset.",
+      "description": "An enumerated list of scope for a dataset, action, task, etc.",
       "enums": {
         "Device": {
           "label": "Device",
@@ -19524,6 +19621,10 @@
         },
         "Assembly": {
           "label": "Assembly",
+          "description": ""
+        },
+        "Component": {
+          "label": "Component",
           "description": ""
         }
       }
