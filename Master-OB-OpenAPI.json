@@ -14384,6 +14384,54 @@
             "x-ob-sample-value": {}
           }
         ]
+      },
+      "OMTaskResult": {
+        "type": "object",
+        "description": "A collection of data documenting results and completion of a OMTask",
+        "properties": {
+          "TaskID": {
+            "$ref": "#/components/schemas/TaskID"
+          },
+          "Contacts": {
+            "$ref": "#/components/schemas/Contacts"
+          },
+          "Checklist": {
+            "$ref": "#/components/schemas/Checklist"
+          },
+          "TaskStartedDate": {
+            "$ref": "#/components/schemas/TaskStartedDate"
+          },
+          "TaskCompletedDate": {
+            "$ref": "#/components/schemas/TaskCompletedDate"
+          },
+          "OMTaskNotes": {
+            "$ref": "#/components/schemas/OMTaskNotes"
+          },
+          "StartTime": {
+            "$ref": "#/components/schemas/StartTime"
+          },
+          "EndTime": {
+            "$ref": "#/components/schemas/EndTime"
+          }
+        }
+      },
+      "OMTaskNote": {
+        "type": "object",
+        "description": "Data and notes resulting from execution of a OMTask",
+        "properties": {
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          }
+        }
+      },
+      "OMTaskNotes": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/OMTaskNote"
+        }
       }
     }
   },
