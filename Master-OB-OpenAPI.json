@@ -3694,8 +3694,8 @@
           "Tasks": {
             "$ref": "#/components/schemas/Tasks"
           },
-          "UUID": {
-            "$ref": "#/components/schemas/UUID"
+          "LoanID": {
+            "$ref": "#/components/schemas/LoanID"
           }
         }
       },
@@ -18544,6 +18544,14 @@
         },
         "OperationsMaintenance": {
           "label": "Operations and Maintenance",
+          "description": ""
+        },
+        "NoticeToProceed": {
+          "label": "NoticeToProceed",
+          "description": ""
+        },
+        "PermissionToOperate": {
+          "label": "PermissionToOperate",
           "description": ""
         }
       }
