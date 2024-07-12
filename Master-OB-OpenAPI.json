@@ -14407,11 +14407,8 @@
           "OMTaskNotes": {
             "$ref": "#/components/schemas/OMTaskNotes"
           },
-          "StartTime": {
-            "$ref": "#/components/schemas/StartTime"
-          },
-          "EndTime": {
-            "$ref": "#/components/schemas/EndTime"
+          "TimeEntries": {
+            "$ref": "#/components/schemas/TimeEntries"
           }
         }
       },
