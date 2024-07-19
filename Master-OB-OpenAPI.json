@@ -11911,6 +11911,12 @@
           },
           "Scope": {
             "$ref": "#/components/schemas/Scope"
+          },
+          "TimeEntryEndTime": {
+            "$ref": "#/components/schemas/TimeEntryEndTime"
+          },
+          "TimeEntryStartTime": {
+            "$ref": "#/components/schemas/TimeEntryStartTime"
           }
         }
       },
@@ -13604,21 +13610,6 @@
           }
         ]
       },
-      "TaskResolution": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Description of the outcome of a Task.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
       "TaskCreatedDate": {
         "allOf": [
           {
@@ -14388,6 +14379,9 @@
           },
           "TimeEntries": {
             "$ref": "#/components/schemas/TimeEntries"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
           }
         }
       },
@@ -14425,6 +14419,42 @@
             }
           }
         ]
+      },
+      "TimeEntryStartTime": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The beginning time for a TimeEntry",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TimeEntryEndTime": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The ending time of a TimeEntry",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "OMTaskResults": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/OMTaskResult"
+        }
       }
     }
   },
