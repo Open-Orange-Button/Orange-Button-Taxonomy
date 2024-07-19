@@ -13480,9 +13480,6 @@
               "TaskBudget": {
                 "$ref": "#/components/schemas/TaskBudget"
               },
-              "TaskResult": {
-                "$ref": "#/components/schemas/TaskResult"
-              },
               "OMActivityType": {
                 "$ref": "#/components/schemas/OMActivityType"
               },
@@ -13608,21 +13605,6 @@
         ]
       },
       "TaskResolution": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Description of the outcome of a Task.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "TaskResult": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementString"
@@ -14395,9 +14377,6 @@
           "Contacts": {
             "$ref": "#/components/schemas/Contacts"
           },
-          "Checklist": {
-            "$ref": "#/components/schemas/Checklist"
-          },
           "TaskStartedDate": {
             "$ref": "#/components/schemas/TaskStartedDate"
           },
@@ -14429,7 +14408,7 @@
         "items": {
           "$ref": "#/components/schemas/OMTaskNote"
         }
-			},
+      },
       "LoanID": {
         "allOf": [
           {
