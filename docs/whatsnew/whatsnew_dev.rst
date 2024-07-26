@@ -21,7 +21,7 @@ Element changes
 * Adds PermissionToOperateDate and CommissionDate (:pull:`318`)
 * Adds IsMaintainable, TopologyType, TopologyUUID, NodeUUID, PVColladaID, PVColladaFileID, HeadNodeID, TailNodeID (:pull:`313`)
 * Adds LoanID (:pull:`319`)
-* Adds TimeEntryStartTime, TimeEntryEndTime, removes TaskResult (:pull`321`)
+* Adds TimeEntryStartTime, TimeEntryEndTime. Changes TaskResult to an Object (:pull`321`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -39,7 +39,7 @@ Object changes
 * Adds PermissionToOperateDate and CommissionDate to System (:pull:`318`)
 * Adds Node, Nodes, Edge, Edges, Topology (:pull:`313`)
 * Adds LoanID, AlternativeIdentifiers to Loan object (:pull:`319`)
-* Adds OMTaskResult, OMTaskNote, OMTaskResults and OMTaskNotes (:pull`321`)
+* Adds TaskResult and TaskResults (:pull`321`)
 
 Unit changes
 ~~~~~~~~~~~~
