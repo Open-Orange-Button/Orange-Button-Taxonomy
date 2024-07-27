@@ -6,20 +6,20 @@
 
 Element changes
 ~~~~~~~~~~~~~~~
-* Removes SoilingRatio, SoilingRatios (:pull:`274`)
-* Adds SoilingRatioEnergy, SoilingRatioIrrad, SoilingRatioPower, and corresponding Arrays (:pull:`274`)
-* Adds EnergyACLoss, EnergyACLossReason, IsRecoverable. Removes EnergyACCurtailed (:pull:`280`)
+* Removes SoilingRatio, SoilingRatios (#274)
+* Adds SoilingRatioEnergy, SoilingRatioIrrad, SoilingRatioPower, and corresponding Arrays (#274)
+* Adds EnergyACLoss, EnergyACLossReason, IsRecoverable. Removes EnergyACCurtailed (#280)
 
 Object changes
 ~~~~~~~~~~~~~~
-* Creates SoilingReport and adds to OperatingReport (:pull:`274`)
-* Adds LossReport, EnergyLoss, EnergyLosses (:pull:`280`)
+* Creates SoilingReport and adds to OperatingReport (#274)
+* Adds LossReport, EnergyLoss, EnergyLosses (#280)
 
 Unit changes
 ~~~~~~~~~~~~
- * Updates ProdTypeItemType Enum list to include Prod Prefix on ID of enums  (:pull:`279`)
- * Adds Project Enum to ScopeTypeItemType enum list (:pull:`279`)
- * Adds EnergyLossItemType (:pull:`280`)
+ * Updates ProdTypeItemType Enum list to include Prod Prefix on ID of enums  (#279)
+ * Adds Project Enum to ScopeTypeItemType enum list (#279)
+ * Adds EnergyLossItemType (#280)
 
 Bug fixes
 ~~~~~~~~~
@@ -32,5 +32,5 @@ Documentation
 
 Contributors
 ~~~~~~~~~~~~
-* Cliff Hansen (:ghuser:`cwhanse`)
+* Cliff Hansen (@cwhanse)
   
