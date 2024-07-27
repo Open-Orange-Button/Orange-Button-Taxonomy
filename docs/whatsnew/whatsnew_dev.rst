@@ -18,6 +18,9 @@ Element changes
 * Adds TaskCreatedDate, TaskStartedDate, TaskResult, OMTaskType, OMSkillQualLevel. (:pull:`303`)
 * Updates CryptographicKeyID usage tips to include supplemental Lumian Information (:pull:`308`)
 * Adds ScheduledDate, OperatingHours, TeamRole, SkillsQualsCerts and TeamName. (:pull:`310`)
+* Adds PermissionToOperateDate and CommissionDate (:pull:`318`)
+* Adds IsMaintainable, TopologyType, TopologyUUID, NodeUUID, PVColladaID, PVColladaFileID, HeadNodeID, TailNodeID (:pull:`313`)
+* Adds LoanID (:pull:`319`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -32,6 +35,9 @@ Object changes
 * Adds OMTask, OMTaskResource, ToolItem and ToolItems, ConsumableItem and ConsumableItems, PPEItem and PPEItems, OMWorkPlan, OMJobSiteAnalysis. (:pull:`303`) OMTaskResource renamed to OMResource in (:pull:`310`).
 * Adds ServiceLevelAgreement, AccessInstructions, SafetyInstructions, SiteVisit, TeamMember and TeamMembers and OMTeam (:pull:`310`)
 * Adds Warranties to Contract Object (:pull:`314`)
+* Adds PermissionToOperateDate and CommissionDate to System (:pull:`318`)
+* Adds Node, Nodes, Edge, Edges, Topology (:pull:`313`)
+* Adds LoanID, AlternativeIdentifiers to Loan object (:pull:`319`)
 
 Unit changes
 ~~~~~~~~~~~~
@@ -43,6 +49,8 @@ Unit changes
 * Adds OMTaskTypeItemType. Adds Opportunistic to MaintenanceTypeItemType and removes Periodic. (:pull:`303`)
 * Adds values Security, IT, Safety, Technician and Other to ContactTypeItemType. (:pull:`310`)
 * Renames WarrantyItemType value Power to Performance, and adds descriptions to enum values (:pull:`314`)
+* Adds TopologyTypeItemType (:pull:`313`)
+* Adds PermissionToOperate and NoticeToProceed enums to TaskGroupItemType (:pull:`319`)
 
 Bug fixes
 ~~~~~~~~~
@@ -57,4 +65,4 @@ Contributors
 ~~~~~~~~~~~~
  * Kevin Kirkley (:ghuser:`kevinkirkl3y`)
  * Cliff Hansen (:ghuser:`cwhanse`)
- 
+ * Andres Fajardo (:ghuser:`afajardodelgado`)

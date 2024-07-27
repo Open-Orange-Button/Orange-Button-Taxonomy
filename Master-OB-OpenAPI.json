@@ -141,6 +141,12 @@
           },
           "CryptographicKeyIDs": {
             "$ref": "#/components/schemas/CryptographicKeyIDs"
+          },
+          "IsMaintainable": {
+            "$ref": "#/components/schemas/IsMaintainable"
+          },
+          "Nodes": {
+            "$ref": "#/components/schemas/Nodes"
           }
         },
         "type": "object"
@@ -3688,8 +3694,8 @@
           "Tasks": {
             "$ref": "#/components/schemas/Tasks"
           },
-          "UUID": {
-            "$ref": "#/components/schemas/UUID"
+          "LoanID": {
+            "$ref": "#/components/schemas/LoanID"
           }
         }
       },
@@ -9936,6 +9942,12 @@
           },
           "SystemStage": {
             "$ref": "#/components/schemas/SystemStage"
+          },
+          "PermissionToOperateDate": {
+            "$ref": "#/components/schemas/PermissionToOperateDate"
+          },
+          "CommissionDate": {
+            "$ref": "#/components/schemas/CommissionDate"
           }
         }
       },
@@ -10292,7 +10304,7 @@
           },
           {
             "type": "object",
-            "description": "An identifier for the device, system, portfolio, or region where data was collected.",
+            "description": "An identifier for the device, system, portfolio, region, etc.",
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -12936,6 +12948,15 @@
           },
           "AssemblyUUID": {
             "$ref": "#/components/schemas/AssemblyUUID"
+          },
+          "IsMaintainable": {
+            "$ref": "#/components/schemas/IsMaintainable"
+          },
+          "Nodes": {
+            "$ref": "#/components/schemas/Nodes"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
           }
         },
         "type": "object"
@@ -12984,6 +13005,15 @@
           },
           "ComponentUUID": {
             "$ref": "#/components/schemas/ComponentUUID"
+          },
+          "IsMaintainable": {
+            "$ref": "#/components/schemas/IsMaintainable"
+          },
+          "Nodes": {
+            "$ref": "#/components/schemas/Nodes"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
           }
         }
       },
@@ -14153,6 +14183,240 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "PermissionToOperateDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date of authorization granted by a utility or regulatory body allowing the DER to connect and interact with the power grid",
+            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2024-02-25"
+            }
+          }
+        ]
+      },
+      "CommissionDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date when a solar energy system or battery storage is placed in service, meaning it has been installed, tested, and deemed operational for its intended use.",
+            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2024-05-18"
+            }
+          }
+        ]
+      },
+      "TopologyType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of a topology.",
+            "x-ob-item-type": "TopologyTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TopologyUUID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A UUID for a topology.",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "NodeUUID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A UUID for a Node, which is an element of a topology.",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "Node": {
+        "description": "A node is an element of a PVCollada file that describes geospatial positions and mechanical relationships.",
+        "properties": {
+          "NodeUUID": {
+            "$ref": "#/components/schemas/NodeUUID"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "PVColladaID": {
+            "$ref": "#/components/schemas/PVColladaID"
+          },
+          "PVColladaFileID": {
+            "$ref": "#/components/schemas/PVColladaFileID"
+          }
+        },
+        "type": "object"
+      },
+      "Topology": {
+        "type": "object",
+        "description": "A Topology is a directed graph comprised of Nodes.",
+        "properties": {
+          "TopologyType": {
+            "$ref": "#/components/schemas/TopologyType"
+          },
+          "TopologyUUID": {
+            "$ref": "#/components/schemas/TopologyUUID"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Nodes": {
+            "$ref": "#/components/schemas/Nodes"
+          },
+          "Edges": {
+            "$ref": "#/components/schemas/Edges"
+          }
+        }
+      },
+      "Nodes": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Node"
+        }
+      },
+      "PVColladaID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An identifier for an object in a PVCollada file.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "PVColladaFileID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An identifier for a PVCollada file.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "IsMaintainable": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "True if an Assembly, Device or Component has parts that can be serviced or replaced without violating a warranty.",
+            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "Edge": {
+        "type": "object",
+        "description": "A pair of nodes that define an edge in a graph.",
+        "properties": {
+          "HeadNodeUUID": {
+            "$ref": "#/components/schemas/HeadNodeUUID"
+          },
+          "TailNodeUUID": {
+            "$ref": "#/components/schemas/TailNodeUUID"
+          }
+        }
+      },
+      "Edges": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Edge"
+        }
+      },
+      "HeadNodeUUID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The identifier for the node that is the head or start of an edge in a graph.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TailNodeUUID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The note that is the tail or end of an edge in a graph.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "LoanID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Unique identifier for the Loan object",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "865465214"
+            }
           }
         ]
       }
@@ -18299,6 +18563,14 @@
         "OperationsMaintenance": {
           "label": "Operations and Maintenance",
           "description": ""
+        },
+        "NoticeToProceed": {
+          "label": "NoticeToProceed",
+          "description": ""
+        },
+        "PermissionToOperate": {
+          "label": "PermissionToOperate",
+          "description": ""
         }
       }
     },
@@ -19360,7 +19632,7 @@
       }
     },
     "ScopeTypeItemType": {
-      "description": "An enumerated list of scope for a dataset.",
+      "description": "An enumerated list of scope for a dataset, action, task, etc.",
       "enums": {
         "Device": {
           "label": "Device",
@@ -19388,6 +19660,14 @@
         },
         "Project": {
           "label": "Project",
+          "description": ""
+        },
+        "Assembly": {
+          "label": "Assembly",
+          "description": ""
+        },
+        "Component": {
+          "label": "Component",
           "description": ""
         }
       }
@@ -20728,7 +21008,7 @@
         },
         "Inspect": {
           "label": "Inspect",
-          "description": ""
+          "description": "Visual or physical assessment of equipment, system or site"
         },
         "Service": {
           "label": "Service",
@@ -20740,19 +21020,35 @@
         },
         "Measure": {
           "label": "Measure",
-          "description": ""
+          "description": "Use equipment to determine a physical or electrical value"
         },
         "Edit": {
           "label": "Edit",
           "description": "Change to labeling, signage or instructions."
         },
-        "Combination": {
-          "label": "Combination",
-          "description": "A combination of activities"
-        },
         "Other": {
           "label": "Other",
           "description": ""
+        },
+        "Groundskeeping": {
+          "label": "Groundskeeping",
+          "description": "Manage ground surface, drainage, or foliage"
+        },
+        "Train": {
+          "label": "Train",
+          "description": "Train, educate or instruct people"
+        },
+        "Document": {
+          "label": "Document",
+          "description": "Create a record of a condition, configuration, status or state"
+        },
+        "Lockout": {
+          "label": "Lockout",
+          "description": "De-energize, secure or ensure safe operations of equipment"
+        },
+        "Decommission": {
+          "label": "Decommission",
+          "description": "Remove a device or system from operation"
         }
       }
     },
@@ -20823,6 +21119,23 @@
         "ESA": {
           "label": "Energy Service Agreement",
           "description": "Similar to a PPA, but often includes additional energy efficiency measures and broader energy management services."
+        }
+      }
+    },
+    "TopologyTypeItemType": {
+      "description": "An enumeration of types of topologies. A topology is a directed graph of Nodes, which convey relational information.",
+      "enums": {
+        "Electrical": {
+          "label": "Electrical",
+          "description": "Topology which describes electrical relationships."
+        },
+        "Geographic": {
+          "label": "Geographic",
+          "description": "Topology which describes spatial relationships."
+        },
+        "Mechanical": {
+          "label": "Mechanical",
+          "description": "Topology which describes attachment, mounting and fastening."
         }
       }
     }
