@@ -14394,7 +14394,7 @@
             "$ref": "#/components/schemas/TaxonomyElementString"
           },
           {
-            "type": "object",=======
+            "type": "object",
             "description": "Types of agreements and financial arrangements for adopting solar power, defining ownership, financing, and operational responsibilities.",
             "x-ob-item-type": "ContractType",
             "x-ob-item-type-group": "",
