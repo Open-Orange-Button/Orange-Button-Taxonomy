@@ -1,0 +1,74 @@
+
+.. _whatsnew_240700:
+
+2407.0.0
+--------
+
+Element changes
+~~~~~~~~~~~~~~~
+* Adds FailureCause, FailureDateDetected, FailureDetectionMethod, FailureID, FailureMechanism, FailureOperatingCondition, ImpactCapability, ImpactProduction, ImpactSafety (#287)
+* Adds ChecksumType (#291)
+* Adds ChecksumKey, ChecksumDetail (#291)
+* Updates sample value of ProdType (#298)
+* Creates InsuranceType element
+* Creates TestLabName (#305)
+* Adds PrivateKeyAddress (#297)
+* Adds IssueCause, IssueCauseConfidenceLevel, IssueConfidenceLevel, IssueID, IssueFoundDate, IssueStatus, IssueResolution, IssueResolutionDate, IssueUUID, UpdateLast, DetectionMethod (#296)
+* Changes PrivateKeyAddress to CryptographicKeyID (#298)
+* Adds TaskCreatedDate, TaskStartedDate, TaskResult, OMTaskType, OMSkillQualLevel (#303)
+* Updates CryptographicKeyID usage tips to include supplemental Lumian Information (#308)
+* Adds ScheduledDate, OperatingHours, TeamRole, SkillsQualsCerts and TeamName. (#310)
+* Adds PermissionToOperateDate and CommissionDate (#318)
+* Adds IsMaintainable, TopologyType, TopologyUUID, NodeUUID, PVColladaID, PVColladaFileID, HeadNodeID, TailNodeID (#313)
+* Adds ContractType as new element (#324)
+* Adds LoanID (#319)
+* Adds TimeEntryStartTime, TimeEntryEndTime. Changes TaskResult to an Object (#321)
+
+Object changes
+~~~~~~~~~~~~~~
+* Removes Firmwares array, adds Firmware to ProdCertification. Removes Applied Date, Certification Date from Firmware (#280)
+* Add Failure (#287)
+* Adds InsuranceType to InsurancePolicy object (#305)
+* Adds EntityRole to Entity object (#305)
+* Creates TestLab object and adds it to CertificationAgency (#305)
+* Adds PrivateKeyAddresses array object and adds PrivateKeyAddresses to Device (#297)
+* Removes PrivateKeyAddresses array object and replaces it with CryptographicKeyIDs and adds them to Device (#298)
+* Adds OMIssue and OMIssues (#296)
+* Adds OMTask, OMTaskResource, ToolItem and ToolItems, ConsumableItem and ConsumableItems, PPEItem and PPEItems, OMWorkPlan, OMJobSiteAnalysis. (#303) OMTaskResource renamed to OMResource in (#310)
+* Adds ServiceLevelAgreement, AccessInstructions, SafetyInstructions, SiteVisit, TeamMember and TeamMembers and OMTeam (#310)
+* Adds Warranties to Contract Object (#314)
+* Adds PermissionToOperateDate and CommissionDate to System (#318)
+* Adds Node, Nodes, Edge, Edges, Topology (#313)
+* Add ContractType to Contract object (#324)
+* Adds LoanID, AlternativeIdentifiers to Loan object (#319)
+* Adds TaskResult and TaskResults (#321)
+
+Unit changes
+~~~~~~~~~~~~
+* Adds enumerations FailureDetectionMethodItemType, FailureMechanismItemType, FailureOperatingConditionItemType, ImpactCapabilityItemType, ImpactProductionItemType, ImpactSafetyItemType (#287)
+* Adds ChecksumTypeItemType and enums related to Checksum methods. (#291)
+* Adds InsuranceTypeItemType and enums related to Insurance Types. (#305)
+* Removes enums from EntityRole that were related to specific Insurance types (#305)
+* Adds TestLab and CertificationAgency to enum list of EntityRole (#305)
+* Adds OMTaskTypeItemType. Adds Opportunistic to MaintenanceTypeItemType and removes Periodic (#303)
+* Adds values Security, IT, Safety, Technician and Other to ContactTypeItemType (#310)
+* Renames WarrantyItemType value Power to Performance, and adds descriptions to enum values (#314)
+* Adds TopologyTypeItemType (#313)
+* Adds ContractType, and add new enums and enum descriptions for each (#324)
+* Adds PermissionToOperate and NoticeToProceed enums to TaskGroupItemType (#319)
+
+Bug fixes
+~~~~~~~~~
+
+Testing
+~~~~~~~
+
+Documentation
+~~~~~~~~~~~~~
+
+Contributors
+~~~~~~~~~~~~
+ * Kevin Kirkley (:ghuser:`kevinkirkl3y`)
+ * Cliff Hansen (:ghuser:`cwhanse`)
+ * Andres Fajardo (:ghuser:`afajardodelgado`)
+ 
