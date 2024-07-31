@@ -3694,8 +3694,8 @@
           "Tasks": {
             "$ref": "#/components/schemas/Tasks"
           },
-          "UUID": {
-            "$ref": "#/components/schemas/UUID"
+          "LoanID": {
+            "$ref": "#/components/schemas/LoanID"
           }
         }
       },
@@ -14394,12 +14394,30 @@
             "$ref": "#/components/schemas/TaxonomyElementString"
           },
           {
-            "type": "object",
+            "type": "object",=======
             "description": "Types of agreements and financial arrangements for adopting solar power, defining ownership, financing, and operational responsibilities.",
             "x-ob-item-type": "ContractType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
+            }
+          }
+        ]
+      },
+      "LoanID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Unique identifier for the Loan object",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "865465214"
+            }
           }
         ]
       }
@@ -18545,6 +18563,14 @@
         },
         "OperationsMaintenance": {
           "label": "Operations and Maintenance",
+          "description": ""
+        },
+        "NoticeToProceed": {
+          "label": "NoticeToProceed",
+          "description": ""
+        },
+        "PermissionToOperate": {
+          "label": "PermissionToOperate",
           "description": ""
         }
       }
