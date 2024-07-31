@@ -1559,6 +1559,12 @@
           },
           "TaskStartedDate": {
             "$ref": "#/components/schemas/TaskStartedDate"
+          },
+          "TaskResults": {
+            "$ref": "#/components/schemas/TaskResults"
+          },
+          "TimeEntries": {
+            "$ref": "#/components/schemas/TimeEntries"
           }
         },
         "x-ob-usage-tips": ""
@@ -8503,6 +8509,9 @@
           },
           "Warranties": {
             "$ref": "#/components/schemas/Warranties"
+          },
+          "ContractType": {
+            "$ref": "#/components/schemas/ContractType"
           }
         }
       },
@@ -11911,6 +11920,12 @@
           },
           "Scope": {
             "$ref": "#/components/schemas/Scope"
+          },
+          "TimeEntryEndTime": {
+            "$ref": "#/components/schemas/TimeEntryEndTime"
+          },
+          "TimeEntryStartTime": {
+            "$ref": "#/components/schemas/TimeEntryStartTime"
           }
         }
       },
@@ -13480,9 +13495,6 @@
               "TaskBudget": {
                 "$ref": "#/components/schemas/TaskBudget"
               },
-              "TaskResult": {
-                "$ref": "#/components/schemas/TaskResult"
-              },
               "OMActivityType": {
                 "$ref": "#/components/schemas/OMActivityType"
               },
@@ -13601,36 +13613,6 @@
             "type": "object",
             "description": "The final status of a Task",
             "x-ob-item-type": "TaskStatusFinalItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "TaskResolution": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Description of the outcome of a Task.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "TaskResult": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Description of the outcome of a Task.",
-            "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -14385,6 +14367,21 @@
           }
         ]
       },
+      "ContractType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Types of agreements and financial arrangements for adopting solar power, defining ownership, financing, and operational responsibilities.",
+            "x-ob-item-type": "ContractType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
       "LoanID": {
         "allOf": [
           {
@@ -14401,6 +14398,54 @@
             }
           }
         ]
+      },
+      "TimeEntryStartTime": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The beginning time for a TimeEntry",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TimeEntryEndTime": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The ending time of a TimeEntry",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TaskResult": {
+        "description": "Data and notes resulting from execution of a Task",
+        "properties": {
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          }
+        },
+        "type": "object"
+      },
+      "TaskResults": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/TaskResult"
+        }
       }
     }
   },
@@ -21085,6 +21130,51 @@
         "Mechanical": {
           "label": "Mechanical",
           "description": "Topology which describes attachment, mounting and fastening."
+        }
+      }
+    },
+    "ContractType": {
+      "description": "These contracts define the agreements around solar installations' ownership, financing, and operational responsibilities",
+      "enums": {
+        "PPA": {
+          "label": "Power Purchase Agreement",
+          "description": "Agreement to purchase the electricity generated by the solar system at a predetermined rate for a specified term, usually 20-25 years."
+        },
+        "Lease": {
+          "label": "Lease",
+          "description": "Agreement to pay fixed monthly fee to lease the solar system installed on their property."
+        },
+        "Cash": {
+          "label": "Cash",
+          "description": "Systems bought outright"
+        },
+        "Loan": {
+          "label": "Loan Financing",
+          "description": "Loan taken to purchase the solar system."
+        },
+        "CSS": {
+          "label": "Community Solar Subscription",
+          "description": "Subscription to a share of a community solar project"
+        },
+        "OM": {
+          "label": "Operations and Maintenance Contract",
+          "description": "Agreement to manage the maintenance and operations of the solar system."
+        },
+        "ESA": {
+          "label": "Energy Service Agreement",
+          "description": "Similar to a PPA, but often includes additional energy efficiency measures and broader energy management services."
+        },
+        "DR": {
+          "label": "Demand Response",
+          "description": "Agreement to adjust energy usage during peak times for incentives"
+        },
+        "VPP": {
+          "label": "Virtual Power Plant",
+          "description": "Agreement to participate in a program where aggregated DERs act as a single power source"
+        },
+        "Other": {
+          "label": "Other",
+          "description": "Other contract type not listed"
         }
       }
     }
