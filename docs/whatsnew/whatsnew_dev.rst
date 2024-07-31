@@ -20,6 +20,7 @@ Element changes
 * Adds ScheduledDate, OperatingHours, TeamRole, SkillsQualsCerts and TeamName. (:pull:`310`)
 * Adds PermissionToOperateDate and CommissionDate (:pull:`318`)
 * Adds IsMaintainable, TopologyType, TopologyUUID, NodeUUID, PVColladaID, PVColladaFileID, HeadNodeID, TailNodeID (:pull:`313`)
+* Adds ContractType as new element (:pull:`324`)
 * Adds LoanID (:pull:`319`)
 * Adds TimeEntryStartTime, TimeEntryEndTime. Changes TaskResult to an Object (:pull`321`)
 
@@ -38,8 +39,16 @@ Object changes
 * Adds Warranties to Contract Object (:pull:`314`)
 * Adds PermissionToOperateDate and CommissionDate to System (:pull:`318`)
 * Adds Node, Nodes, Edge, Edges, Topology (:pull:`313`)
+<<<<<<< HEAD
+* Add ContractType to Contract object (:pull:`324`)
+
+=======
 * Adds LoanID, AlternativeIdentifiers to Loan object (:pull:`319`)
+<<<<<<< HEAD
 * Adds TaskResult and TaskResults (:pull`321`)
+=======
+>>>>>>> cb54786feeb518494228538ea15ec401accd6ec5
+>>>>>>> cd27f61d404b67e887e7be644134fe046fca9f9c
 
 Unit changes
 ~~~~~~~~~~~~
@@ -52,7 +61,11 @@ Unit changes
 * Adds values Security, IT, Safety, Technician and Other to ContactTypeItemType. (:pull:`310`)
 * Renames WarrantyItemType value Power to Performance, and adds descriptions to enum values (:pull:`314`)
 * Adds TopologyTypeItemType (:pull:`313`)
+<<<<<<< HEAD
+* Adds ContractType, and add new enums and enum descriptions for each (:pull:`324`)
+=======
 * Adds PermissionToOperate and NoticeToProceed enums to TaskGroupItemType (:pull:`319`)
+>>>>>>> cb54786feeb518494228538ea15ec401accd6ec5
 
 Bug fixes
 ~~~~~~~~~
