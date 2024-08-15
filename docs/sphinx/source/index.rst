@@ -13,8 +13,7 @@ Contents
 
    userguide/index
    devguide/index
-	 whatsnew
-	 contributing
+   whatsnew/index
 
 
 Indices and tables
