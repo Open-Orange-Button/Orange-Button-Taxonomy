@@ -1,0 +1,94 @@
+
+.. _whatsnew_230500:
+
+2305.0.0
+--------
+
+Element changes
+~~~~~~~~~~~~~~~
+ * Adds JobType (:pull:`107`)
+ * Adds PreparerName, SigningFor (:pull:`105`)
+ * Adds SystemIDs array of SystemID elements. (:pull:`130`)
+ * Adds EnergyACModeled P, EnergyACCurtailed, PerfRatio, EnergyModelID, Insolation. (:pull:`146`)
+ * Adds InsurerName, Owner Name (:pull:`165`)
+ * Adds AnswerRangeMin and AnswerRangeMax (:pull:`164`)
+ * Changes ChecklistDate and CommentDate Item Type to DateTimeItemType (:pull:`179`)
+ * Adds PerformanceIndexEnergy, PerformanceIndexPower, PowerACModeled, PowerACCorrected, PowerCorrFactor (:pull:`173`)
+ * Adds ProdID to Product Superclass (:pull:`174`)
+ * Changes the item type of CertificationStandard to StandardTypeItemType (:pull:`180`)
+ * Adds UpTimeTotal and DownTimeTotal (:pull:`187`)
+ * Adds JobStatus (:pull:`221`)
+ * Adds JobRoleName, TimeEntryDate, TimeEntryID, WorkerID (:pull:`205`)
+ * Adds EnergyProduction, EnergyImport, EnergyExport and EnergyParasiticConsumption (:pull:`209`)
+ * Deletes element EnergyUsage and change definition of EnergyConsumption (:pull:`209`)
+ * Adds VoltageDC and VoltageDCArray (:pull:`229`)
+ * Creates DataType, ElementID, ElementName, ElementValue, ElementItemType (:pull:`224`)
+ * Updates Sample Values for all elements that previously represented PercentItemType to match DecimalPercentItemType standard (:pull:`228`)
+
+Object changes
+~~~~~~~~~~~~~~
+ * Signatory and Preparer now inherit from Entity rather than use Entity directly (:pull:`106`)
+ * Removes EnergyMeasurement, EnergyMeasurements. Replaced by Production. (:pull:`117`)
+ * Adds IrradPlaneOfArrayMeas. Remakes MeasScope to inherit from Scope. (:pull:`117`) 
+ * Removes and deletes Member : BOMScope, BOSScope, CommentScope, MeasScope, ForecastScope, MeasScope, InsurancePolicyScope, TaskScope (:pull:`127`)
+ * Adds Generic Scope member to: BillOfMaterials, BillOfServices, Checklist, Comment, Task, EnergyModel, Forecast, InsurancePolicy, Measurement, Production (:pull:`127`)
+ * Changes IrradPlaneOfArrayMeas inheritance from MeasScope to generic Scope (:pull:`127`)
+ * Removes Comment from Measurement Object (:pull:`127`)
+ * Removes  ForecastScopeID,  ForecastScopeType from Taxonomy (:pull:`127`)
+ * Removes PVSystems and BatterySystems from Job, and moves them up level in Site object. (:pull:`130`)
+ * Adds BillOfMaterials FileFolderURL and Description to Job (:pull:`130`)
+ * Minor update to BillOfMaterials description (:pull:`130`)
+ * Add PerformanceRatio and PerformanceRatios. (:pull:`138`)
+ * Removed EntityRoles from Entity (:pull:`141`)
+ * Adds EntityRole to Preparer, Signatory  (:pull:`141`)
+ * Adds inheritance of Entity to AuthorityHavingJurisdiction and HomeownersAssociation (:pull:`141`).
+ * Adds ExpectedEnergyModel, ForecastEnergyModel, ForecastEnergyModels, PerformanceRatio, PerformanceRatios. (:pull:`146`)
+ * Adds Insurer, Owner (:pull:`165`)
+ * Adds AnswerRangeMin and AnswerRangeMax to Questions Object (:pull:`164`)
+ * Adds PerformanceIndex and PerformanceIndexes (:pull:`173`)
+ * Adds Availability, Availabilities, AvailabilityReport, UpTime, UpTimes, DownTime, DownTimes (:pull:`187`)
+ * Adds ModuleArea to ProdModule (:pull:`189`)
+ * Adds SubstituteProduct and SubstituteProducts objects (:pull:`194`)
+ * In EnergyConsumption, SiteID is replaced by Scope, and EnergyAC is replaced by EnergyACArray (:pull:`196`)
+ * In EnergyUsage, Scope is added, and EnergyAC is replaced by EnergyACArray (:pull:`196`)
+ * Adds JobStatus to Job object (:pull:`221`)
+ * Creates TimeEntries, TimeEntry, Worker, EmploymentType and EmploymentTypeItemType(:pull:`205`)
+ * Adds Scope to TimeEntry(:pull:`205`)
+ * Adds Scope and Description to PerformanceIndex (:pull:`219`)
+ * Adds Scope to PerformanceRatio (:pull:`219`)
+ * Adds VoltageDCArray to VoltageDCMeas (:pull:`229`)
+ * Creates CustomElement and CustomElements array (:pull:`224`)
+ * Adds CustomElements to AvailabilityReport and OperatingReport (:pull:`224`)
+ * Creates AvailabilityReports object Array. (:pull:`228`)
+
+Unit changes
+~~~~~~~~~~~~
+ * Adds JobTypeItemType (:pull:`107`)
+ * Adds DateTimeItemType (:pull:`179`)
+ * Adds StandardTypeItemType (:pull:`180`)
+ * Add value IECTS63019 to StandardTypeItemType (:pull:`192`)
+ * Rename ModuleTechnologyItemType to ModuleStyleItemType, move values referring to cell technology to CellTechnologyItemType (:pull:`197`)
+ * Clarify some enumerations for CellTechnologyItemType (:pull:`197`)
+ * Creates JobStatusItemType and creates Enum List of values (:pull:`221`)
+ * Creates DecimalPercentItemType and creates DecimalPercent unit. (:pull:`228`)
+ * Removes PercentItemType. (:pull:`228`)
+
+Bug fixes
+~~~~~~~~~
+
+
+Testing
+~~~~~~~
+
+
+
+Documentation
+~~~~~~~~~~~~~
+
+
+Contributors
+~~~~~~~~~~~~
+ * Kevin Kirkley (:ghuser:`kevinkirkl3y`)
+ * Tyler Hagen (:ghuser:`THagen-BB`)
+ * Cliff Hansen (:ghuser:`cwhanse`)
+  

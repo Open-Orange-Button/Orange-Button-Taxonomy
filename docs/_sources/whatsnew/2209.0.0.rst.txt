@@ -1,0 +1,59 @@
+
+.. _whatsnew_220900:
+
+2209.0.0
+--------
+
+Element changes
+~~~~~~~~~~~~~~~
+* Adds JobID Element (:pull:`84`)
+* Adds DelegatesToAHJID, ExceptionDescription, AHJLevelCode (:pull:`91`)
+* Removes ModelWeatherSource (:pull:`88`)
+* Adds EnergyACAnnual, EnergyACAnnualP50, EnergyACAnnualP90, IrradTranspositionModel, ModelRunDate (:pull`88`)
+* Adds PerClaimAmount, AggregateAmount, DeductibleAmount, InsurancePolicyID, RiskTransferType (:pull:`103`)
+* Delete ForecastScopeID (:pull:`105`)
+
+Object changes
+~~~~~~~~~~~~~~
+* Add Scope, Measurement, EnergyACMeas, IrradGlobalHorizMeas, PowerACMeas, TempAmbMeas (:pull:`82`)
+* Removes ForecastScope (:pull:`82`)
+* Adds BOSScope to BillOfServices, BOMScope to BillOfMaterials, TaskScope to Tasks, CommentScope to Comments (:pull:`84`)
+* Creates EnergyModelInput, EnergyModelOutput, EnergyModelScope (:pull:`88`)
+* Removes EnergyPrediction, EnergyPredictions (:pull`88`)
+* EnergyModel elements changed (:pull:`88`)
+* Adds InsurancePolicy, InsurancePolicyScope (:pull:`103`)
+* Adds element CECListingDate to ProdModule, ProdInverter (:pull:`104`)
+* Remake ForecastScope and attach to Forecast (:pull:`105`)
+
+Unit changes
+~~~~~~~~~~~~
+* Adds DelegatesToAHJID, ExceptionDescription, AHJLevelCode (:pull:`91`)
+* RiskTransferTypeItemType (:pull:`103`)
+
+Object changes
+~~~~~~~~~~~~~~
+* Add Scope, Measurement, EnergyACMeas, IrradGlobalHorizMeas, PowerACMeas, TempAmbMeas (:pull:`82`)
+* Removes ForecastScope (:pull:`82`)
+
+Unit changes
+~~~~~~~~~~~~
+ * Add ScopeTypeItemType (:pull:`82`)
+ * Adds AHJLevelCodeItemType and Enums (:pull:`91`)
+
+Bug fixes
+~~~~~~~~~
+
+
+Testing
+~~~~~~~
+
+
+
+Documentation
+~~~~~~~~~~~~~
+
+
+Contributors
+~~~~~~~~~~~~
+* Kevin Kirkley (:ghuser:`kevinkirkl3y`)
+* Cliff Hansen (:ghuser:`cwhanse`)

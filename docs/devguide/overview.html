@@ -85,9 +85,15 @@
  </a>
 </li>
 
-<li class="toctree-l1 nav-item">
+<li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="index.html">
   OpenAPI Orange Button Developer’s Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../whatsnew/index.html">
+  What’s New
  </a>
 </li>
 
@@ -199,17 +205,12 @@
 <section id="primitives">
 <h2>Primitives<a class="headerlink" href="#primitives" title="Link to this heading">¶</a></h2>
 <p>There are six Primitives:
-* Value. Value contains the value of an Element. In an OB instance document, the json type of Value can be string, boolean, integer, or number,</p>
-<blockquote>
-<div><p>or an array of string, boolean, integer or number.</p>
-</div></blockquote>
-<ul class="simple">
-<li><p>StartTime. An ISO8601-compliant string defining the start of a time interval, or the single time, associated with Value.</p></li>
-<li><p>EndTime. An ISO8601-compliant string defining the end of a time interval associated with Value. EndTime is not used when a single StartTime is associated with a Value.</p></li>
-<li><p>Decimals. The number of digits after the decimal point of a Value with json type number.</p></li>
-<li><p>Precision. The number of digits, counting from the most significant, or left-most, digit, in a Value with json type number.</p></li>
-<li><p>Unit. A string corresponding to a UnitID from the OB Item Type list.</p></li>
-</ul>
+* Value. Value contains the value of an Element. In an OB instance document, the json type of Value can be string, boolean, integer, or number, or an array of string, boolean, integer or number.
+* StartTime. An ISO8601-compliant string defining the start of a time interval, or the single time, associated with Value.
+* EndTime. An ISO8601-compliant string defining the end of a time interval associated with Value. EndTime is not used when a single StartTime is associated with a Value.
+* Decimals. The number of digits after the decimal point of a Value with json type number.
+* Precision. The number of digits, counting from the most significant, or left-most, digit, in a Value with json type number.
+* Unit. A string corresponding to a UnitID from the OB Item Type list.</p>
 </section>
 <section id="element-object-and-object-array">
 <h2>Element, Object and Object Array<a class="headerlink" href="#element-object-and-object-array" title="Link to this heading">¶</a></h2>
