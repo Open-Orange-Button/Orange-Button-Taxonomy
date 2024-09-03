@@ -6,7 +6,7 @@ To report a bug, error or to describe a new feature, please open an Issue. To co
 
 # Using the taxonomy
 
-The Orange Button Solar Taxonomy is free to use consistent with the terms of its license. A webapp is available to explore and edit a copy of **Master-OB-OpenAPI.json**. You can find an instance of this editor that is free for you to use at https://obeditor.sunspec.org.
+The Orange Button Solar Taxonomy is free to use consistent with the terms of its license. A webapp is available to explore and edit a copy of **Master-OB-OpenAPI.json**. You can find an instance of this editor that is free for you to use at https://openobeditor.sunspec.org
 
 Code for the editor is open source and available on GitHub [here](https://github.com/Open-Orange-Button/Orange-Button-Editor). Issues, feature requests and contributions are welcome.
 
