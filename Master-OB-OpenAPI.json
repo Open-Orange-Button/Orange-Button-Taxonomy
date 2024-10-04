@@ -20117,11 +20117,11 @@
           "description": "A Legal Entity Identifier (LEI) is a 20-character alphanumeric code that uniquely identifies a legal entity that participates in financial transactions. The LEI is based on the ISO 17442 standard and is similar to a bar code for a store item."
         },
         "PEN": {
-          "label": "Private Enterprise Numbers",
+          "label": "Private Enterprise Number",
           "description": "Unique identifiers assigned by the Internet Assigned Numbers Authority (IANA) to organizations, allowing them to uniquely identify proprietary protocols, formats, or information relevant to their products and services. These numbers are typically used in network management protocols such as SNMP (Simple Network Management Protocol) to help differentiate between various vendors and their devices or applications."
         },
         "DID": {
-          "label": "Decentralized Identifiers",
+          "label": "Decentralized Identifier",
           "description": "A type of digital identifier that enables individuals or entities to create and control their own identity without relying on a centralized authority. DIDs are designed to be self-sovereign, meaning they can be created, updated, and managed directly by their owners, independent of third-party intermediaries.  DIDs are typically implemented using distributed ledger technologies (blockchains) or other decentralized networks, which provide a secure and tamper-proof environment for storing and managing identity-related information. Each DID resolves to a DID document, which contains cryptographic keys, authentication methods, and other metadata necessary for verifying ownership and facilitating trusted interactions between parties. This approach promotes privacy, security, and user control over personal data in digital identity systems"
         },
         "DUNS": {
