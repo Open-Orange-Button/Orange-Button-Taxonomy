@@ -9719,7 +9719,7 @@
           },
           {
             "type": "object",
-            "description": "Name of the data source.",
+            "description": "Name of the issuing data source, often referred to as the Issuer.",
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -12400,7 +12400,7 @@
           },
           {
             "type": "object",
-            "description": "The type of unique identifier used to represent a unique datapoint as the AlternativeIdentifier. ",
+            "description": "The format of a unique identifier used to represent a unique datapoint as the AlternativeIdentifier. ",
             "x-ob-item-type": "IdentifierTypeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
