@@ -12400,7 +12400,7 @@
           },
           {
             "type": "object",
-            "description": "The format of a unique identifier used to represent a unique datapoint as the AlternativeIdentifier.  The IdentifierType will determine the format of the Identifier.",
+            "description": "The IdentifierType will determine the format of a unique identifier used to represent a unique datapoint as the AlternativeIdentifier.",
             "x-ob-item-type": "IdentifierTypeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -20118,7 +20118,7 @@
         },
         "PEN": {
           "label": "Private Enterprise Number",
-          "description": "PEN is a unique identifier assigned by the Internet Assigned Numbers Authority (IANA) to organizations, allowing them to uniquely identify proprietary protocols, formats, or information relevant to their products and services. PEN numbers are typically used in network management protocols such as SNMP (Simple Network Management Protocol) to help differentiate between various vendors and their devices or applications."
+          "description": "Unique identifiers assigned by the Internet Assigned Numbers Authority (IANA) to organizations, allowing them to uniquely identify proprietary protocols, formats, or information relevant to their products and services. These numbers are typically used in network management protocols such as SNMP (Simple Network Management Protocol) to help differentiate between various vendors and their devices or applications."
         },
         "DID": {
           "label": "Decentralized Identifier",
