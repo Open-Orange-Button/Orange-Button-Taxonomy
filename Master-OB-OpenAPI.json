@@ -20118,7 +20118,7 @@
         },
         "PEN": {
           "label": "Private Enterprise Number",
-          "description": "Unique identifiers assigned by the Internet Assigned Numbers Authority (IANA) to organizations, allowing them to uniquely identify proprietary protocols, formats, or information relevant to their products and services. These numbers are typically used in network management protocols such as SNMP (Simple Network Management Protocol) to help differentiate between various vendors and their devices or applications."
+          "description": "PEN is a unique identifier assigned by the Internet Assigned Numbers Authority (IANA) to organizations, allowing them to uniquely identify proprietary protocols, formats, or information relevant to their products and services. PEN numbers are typically used in network management protocols such as SNMP (Simple Network Management Protocol) to help differentiate between various vendors and their devices or applications."
         },
         "DID": {
           "label": "Decentralized Identifier",
