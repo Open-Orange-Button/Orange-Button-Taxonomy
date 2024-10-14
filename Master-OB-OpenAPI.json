@@ -12400,7 +12400,7 @@
           },
           {
             "type": "object",
-            "description": "The IdentifierType will determine the format of a unique identifier used to represent a unique datapoint as the AlternativeIdentifier.",
+            "description": "The IdentifierType describes the format of an AlternativeIdentifier.",
             "x-ob-item-type": "IdentifierTypeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
