@@ -17634,6 +17634,10 @@
         "Technician": {
           "label": "Technician",
           "description": ""
+        },
+        "Occupant": {
+          "label": "Occupant",
+          "description": "An occupant is an individual or entity that resides in or uses a space, building, or property without owning it, typically for purposes such as living, working, or conducting business. Occupants may include Tenant or Resident, depending on the context."
         }
       }
     },
