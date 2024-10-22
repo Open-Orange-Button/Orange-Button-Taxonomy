@@ -14,6 +14,7 @@ Object changes
 
 Unit changes
 ~~~~~~~~~~~~
+ * Adds LEI, PEN, DID, DUNS to IdentifierTypeItemType enum list.
 
 
 Bug fixes
@@ -27,4 +28,4 @@ Documentation
 
 Contributors
 ~~~~~~~~~~~~
- 
+ * Kevin Kirkley (kevinkirkl3y)
