@@ -15,6 +15,7 @@ Object changes
 Unit changes
 ~~~~~~~~~~~~
  * Adds LEI, PEN, DID, DUNS to IdentifierTypeItemType enum list.
+ * Adds Occupant to ContactTypeItemType enum list.
 
 
 Bug fixes
