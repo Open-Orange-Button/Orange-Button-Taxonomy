@@ -17637,7 +17637,7 @@
         },
         "Occupant": {
           "label": "Occupant",
-          "description": "An occupant is an individual or entity that resides in or uses a space, building, or property, typically for purposes such as living, working, or conducting business. Occupants may include Tenant or Resident, depending on the context."
+          "description": "An occupant is an individual or entity that resides in or uses a space, building, or property, typically for purposes such as living, working, or conducting business. Occupants may include tenant or resident, depending on the context."
         }
       }
     },
