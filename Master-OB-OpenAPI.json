@@ -20134,7 +20134,7 @@
         },
         "DPP_EU": {
           "label": "EU Digital Product Passport",
-          "description": "The EU Digital Product Passport (DPP) is a digital record containing essential information about a product's lifecycle, designed to enhance transparency, sustainability, and circular economy practices within the European Union. The DPP includes data on a product's materials, production processes, carbon footprint, recycling potential, and repair options, accessible by consumers, regulators, and businesses. By providing detailed, traceable insights, the DPP enables better decision-making regarding product sourcing, usage, and disposal, ultimately fostering responsible consumption and supporting the EU’s Green Deal goals."
+          "description": "The EU Digital Product Passport (DPP_EU) is a digital record containing essential information about a product's lifecycle, designed to enhance transparency, sustainability, and circular economy practices within the European Union. The DPP includes data on a product's materials, production processes, carbon footprint, recycling potential, and repair options, accessible by consumers, regulators, and businesses. By providing detailed, traceable insights, the DPP enables better decision-making regarding product sourcing, usage, and disposal, ultimately fostering responsible consumption and supporting the EU’s Green Deal goals."
         }
       }
     },
