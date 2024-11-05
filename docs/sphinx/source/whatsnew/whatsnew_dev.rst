@@ -17,6 +17,7 @@ Unit changes
  * Adds LEI, PEN, DID, DUNS to IdentifierTypeItemType enum list.(#328)
  * Adds Occupant to ContactTypeItemType enum list. (#330)
  * Changes Homeowner to Owner in the ContactTypeItemType enum list. (#330)
+ * Adds EU Digital Product Passport to IdentifierTypeItemType. (#331)
 
 
 Bug fixes
