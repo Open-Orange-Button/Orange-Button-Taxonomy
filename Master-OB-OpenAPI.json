@@ -8512,6 +8512,12 @@
           },
           "ContractType": {
             "$ref": "#/components/schemas/ContractType"
+          },
+          "ContractTerms": {
+            "$ref": "#/components/schemas/ContractTerms"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
           }
         }
       },
@@ -14446,6 +14452,501 @@
         "items": {
           "$ref": "#/components/schemas/TaskResult"
         }
+      },
+      "ProgramName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of VPP Program",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "Use this field to store the name of the VPP Program that the site is enrolled in",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "EligibleDeviceType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "EligibleDeviceType",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "Set this to Battery for VPP Contract",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "MaxEventsPerSeason": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "MaxEventsPerSeason",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "Use this field to store the maximum number of events that are allowed for the site per season",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "EventDurationMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The maximum length of time of the VPP usage event when the asset owner agrees to relinquish to the energy aggregator or utility.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "Maximum duration for the event allowed by the program tariff ",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "SeasonStartDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date after which the program is effective for the season. Events are generally created after the season start",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "Aggregator": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "An entity responsible for planning, scheduling, accounting, billing, and settlement for energy deliveries from the aggregator's portfolio of sellers and/or buyers. Aggregators seek to bring together customers or generators so they can buy or sell power in bulk, making a profit on the transaction.",
+            "properties": {
+              "AggregatorName": {
+                "$ref": "#/components/schemas/AggregatorName"
+              },
+              "AggregatorType": {
+                "$ref": "#/components/schemas/AggregatorType"
+              }
+            }
+          }
+        ]
+      },
+      "AggregatorType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An AggregatorType describes the purpose the type of service being provided by the Aggregator",
+            "x-ob-item-type": "AggregatorTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Energy"
+            }
+          }
+        ]
+      },
+      "AggregatorName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The name of the entity responsible for providing the aggregation of services.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ServiceSchedule": {
+        "type": "object",
+        "description": "Schedule level terms for the contract",
+        "properties": {
+          "ServiceLevelAgreement": {
+            "$ref": "#/components/schemas/ServiceLevelAgreement"
+          },
+          "StartDate": {
+            "$ref": "#/components/schemas/StartDate"
+          },
+          "EndDate": {
+            "$ref": "#/components/schemas/EndDate"
+          },
+          "MaxEventDurationPerServiceSchedule": {
+            "$ref": "#/components/schemas/MaxEventDurationPerServiceSchedule"
+          },
+          "MaxEventsPerServiceSchedule": {
+            "$ref": "#/components/schemas/MaxEventsPerServiceSchedule"
+          },
+          "PaymentRateCapacity": {
+            "$ref": "#/components/schemas/PaymentRateCapacity"
+          },
+          "PaymentRateEnergy": {
+            "$ref": "#/components/schemas/PaymentRateEnergy"
+          },
+          "PaymentRateDuration": {
+            "$ref": "#/components/schemas/PaymentRateDuration"
+          },
+          "PaymentRatePerEvent": {
+            "$ref": "#/components/schemas/PaymentRatePerEvent"
+          }
+        }
+      },
+      "StartDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Service Start Date",
+            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "EndDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "End date for the service",
+            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "MaxEventsPerServiceSchedule": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
+          },
+          {
+            "type": "object",
+            "description": "Maximum number of Events for the service schedule",
+            "x-ob-item-type": "IntegerItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "MaxEventDurationPerServiceSchedule": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
+          },
+          {
+            "type": "object",
+            "description": "Maximum number of hours for an event scheduled in Service Schedule Period",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ContractTerm": {
+        "type": "object",
+        "description": "Specification of the terms for the contract",
+        "properties": {
+          "ServiceSchedules": {
+            "$ref": "#/components/schemas/ServiceSchedules"
+          },
+          "ServiceRequester": {
+            "$ref": "#/components/schemas/ServiceRequester"
+          },
+          "ServiceProvider": {
+            "$ref": "#/components/schemas/ServiceProvider"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Comments": {
+            "$ref": "#/components/schemas/Comments"
+          },
+          "ProdType": {
+            "$ref": "#/components/schemas/ProdType"
+          },
+          "Capacity": {
+            "$ref": "#/components/schemas/Capacity"
+          }
+        }
+      },
+      "ContractTerms": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ContractTerm"
+        }
+      },
+      "ServiceSchedules": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ServiceSchedule"
+        }
+      },
+      "ServiceProvider": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "Entity responsible for providing a service to another party that is a signatory in the contract",
+            "properties": {
+              "ServiceProviderName": {
+                "$ref": "#/components/schemas/ServiceProviderName"
+              },
+              "ServiceProviderID": {
+                "$ref": "#/components/schemas/ServiceProviderID"
+              }
+            }
+          }
+        ]
+      },
+      "ServiceProviderName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of the Service Provider",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ServiceProviderID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Unique identifier for the Service Provider",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ServiceRequester": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "Entity that is the beneficiary of the service from the ServiceProvider",
+            "properties": {
+              "ServiceRequesterName": {
+                "$ref": "#/components/schemas/ServiceRequesterName"
+              },
+              "ServiceRequesterID": {
+                "$ref": "#/components/schemas/ServiceRequesterID"
+              }
+            }
+          }
+        ]
+      },
+      "ServiceRequesterName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of the Service Requester",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ServiceRequesterID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Unique identifier for the Service Requester",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ContractType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Consolidated Contract Types",
+            "x-ob-item-type": "ContractTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "SignUpAmount": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Amount paid upfront for signing up in the program",
+            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "Capacity": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "This represents the amount of power that can be produced.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "Use this field to store the total system capacity for the site",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ContractES": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Contract"
+          },
+          {
+            "type": "object",
+            "description": "Contract describing the energy services between the service provider and the service requestor.",
+            "properties": {
+              "EffectiveDate": {
+                "$ref": "#/components/schemas/EffectiveDate"
+              },
+              "ExpirationDate": {
+                "$ref": "#/components/schemas/ExpirationDate"
+              },
+              "Aggregator": {
+                "$ref": "#/components/schemas/Aggregator"
+              },
+              "ContractTerms": {
+                "$ref": "#/components/schemas/ContractTerms"
+              },
+              "ProgramName": {
+                "$ref": "#/components/schemas/ProgramName"
+              },
+              "SignUpAmount": {
+                "$ref": "#/components/schemas/SignUpAmount"
+              }
+            }
+          }
+        ]
+      },
+      "PaymentRateCapacity": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Capacity payment per unit of power",
+            "x-ob-item-type": "MonetaryPerPowerItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "Use this to store the performance based incentive in $/kW",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "PaymentRateEnergy": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Payment rate for the energy transferred",
+            "x-ob-item-type": "MonetaryPerEnergyItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "PaymentRateDuration": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Payment rate per unit of time. For e.g. 200 USD/hour",
+            "x-ob-item-type": "MonetaryPerDurationItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "USD_per_h",
+              "Value": 200
+            }
+          }
+        ]
+      },
+      "PaymentRatePerEvent": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Payment rate for every event",
+            "x-ob-item-type": "MonetaryItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
       }
     }
   },
@@ -17877,6 +18378,14 @@
         "ProdWire": {
           "label": "Wire",
           "description": ""
+        },
+        "ProdGenerator": {
+          "label": "Generator",
+          "description": ""
+        },
+        "ProdThermostat": {
+          "label": "Thermostat",
+          "description": ""
         }
       }
     },
@@ -19392,6 +19901,18 @@
         "CertificationAgency": {
           "label": "Certification Agency",
           "description": ""
+        },
+        "Aggregator": {
+          "label": "Aggregator",
+          "description": "An entity responsible for planning, scheduling, accounting, billing, and settlement for energy deliveries from the aggregator's portfolio of sellers and/or buyers. Aggregators seek to bring together customers or generators so they can buy or sell power in bulk, making a profit on the transaction."
+        },
+        "PropertyOwner": {
+          "label": "Property Owner",
+          "description": "The entity or person that owns/has authority to manage the property"
+        },
+        "Financier": {
+          "label": "Financier",
+          "description": "The entity providing some or all of the financing "
         }
       }
     },
@@ -21157,50 +21678,58 @@
         }
       }
     },
-    "ContractType": {
-      "description": "These contracts define the agreements around solar installations' ownership, financing, and operational responsibilities",
+    "ContractTypeItemType": {
+      "description": "Different types of Contracts",
       "enums": {
-        "PPA": {
-          "label": "Power Purchase Agreement",
-          "description": "Agreement to purchase the electricity generated by the solar system at a predetermined rate for a specified term, usually 20-25 years."
-        },
-        "Lease": {
-          "label": "Lease",
-          "description": "Agreement to pay fixed monthly fee to lease the solar system installed on their property."
-        },
-        "Cash": {
-          "label": "Cash",
-          "description": "Systems bought outright"
-        },
-        "Loan": {
-          "label": "Loan Financing",
-          "description": "Loan taken to purchase the solar system."
-        },
-        "CSS": {
-          "label": "Community Solar Subscription",
-          "description": "Subscription to a share of a community solar project"
-        },
-        "OM": {
+        "ContractOM": {
           "label": "Operations and Maintenance Contract",
           "description": "Agreement to manage the maintenance and operations of the solar system."
         },
-        "ESA": {
-          "label": "Energy Service Agreement",
-          "description": "Similar to a PPA, but often includes additional energy efficiency measures and broader energy management services."
+        "ContractLoan": {
+          "label": "Loan Financing",
+          "description": "Loan taken to purchase the solar system."
         },
-        "DR": {
-          "label": "Demand Response",
-          "description": "Agreement to adjust energy usage during peak times for incentives"
+        "ContractLease": {
+          "label": "Lease",
+          "description": "Agreement to pay fixed monthly fee to lease the solar system installed on their property."
         },
-        "VPP": {
-          "label": "Virtual Power Plant",
-          "description": "Agreement to participate in a program where aggregated DERs act as a single power source"
+        "ContractCash": {
+          "label": "Cash",
+          "description": "Systems bought outright"
+        },
+        "ContractREC": {
+          "label": "Renewable Energy Credit Contract",
+          "description": "Agreement between the homeowner and the service provider (utility, OEM) to trade renewable generation credits in the SREC market"
         },
         "Other": {
           "label": "Other",
           "description": "Other contract type not listed"
+        },
+        "ContractES": {
+          "label": "Energy Services Contract",
+          "description": "Agreement between the service requestor (Utility/ Aggregator) and the service provider (homeowner/ system owner) to subscribe the asset as part of an aggregated distributed energy resources pool to provide energy services to the grid"
         }
       }
+    },
+    "AggregatorTypeItemType": {
+      "description": "",
+      "enums": {
+        "Energy": {
+          "label": "Energy",
+          "description": "An entity responsible for planning, scheduling, accounting, billing, and settlement for energy deliveries from the aggregator's portfolio of sellers and/or buyers. Aggregators seek to bring together customers or generators so they can buy or sell power in bulk, making a profit on the transaction."
+        },
+        "Loan": {
+          "label": "Loan",
+          "description": "A Loan Aggregator is responsible for pooling the loans for financial and/ or operational services"
+        },
+        "Lease": {
+          "label": "Lease",
+          "description": "A Lease Aggregator is responsible for pooling the loans for financial and/ or operational services"
+        }
+      }
+    },
+    "Receiver": {
+      "description": "Entity receiving the service from the provider"
     }
   },
   "x-ob-item-type-groups": {
