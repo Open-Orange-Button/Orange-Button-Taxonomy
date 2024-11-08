@@ -3993,23 +3993,6 @@
           }
         ]
       },
-      "ServiceProvider": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The name of the person or organization providing the service",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "Hampton's Trenching"
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "ServiceLineItems": {
         "type": "array",
         "items": {
