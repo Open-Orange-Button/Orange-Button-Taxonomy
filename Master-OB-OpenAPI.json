@@ -14428,7 +14428,7 @@
           },
           {
             "type": "object",
-            "description": "Name of VPP Program",
+            "description": "Name of the Program.",
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "Use this field to store the name of the VPP Program that the site is enrolled in",
@@ -14510,6 +14510,9 @@
               },
               "AggregatorType": {
                 "$ref": "#/components/schemas/AggregatorType"
+              },
+              "AggregatorID": {
+                "$ref": "#/components/schemas/AggregatorID"
               }
             }
           }
@@ -14799,7 +14802,7 @@
           },
           {
             "type": "object",
-            "description": "Amount paid upfront for signing up in the program",
+            "description": "Amount paid by service requestor for signing up in the program.",
             "x-ob-item-type": "MonetaryItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -14913,6 +14916,23 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "AggregatorID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Unique identifier that represents the Aggregator.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "1505"
+            }
           }
         ]
       }
@@ -21675,7 +21695,7 @@
         },
         "ContractES": {
           "label": "Energy Services Contract",
-          "description": "Agreement between the service requestor (Utility/ Aggregator) and the service provider (homeowner/ system owner) to subscribe the asset as part of an aggregated distributed energy resources pool to provide energy services to the grid"
+          "description": "Agreement between the service requestor (Utility/ Aggregator) and the service provider (homeowner/ system owner) to subscribe the asset as part of an aggregated distributed energy resources pool to provide energy services to the grid. Applies to contracts typically referred to  as VPP, Grid Services, Demand Response, Energy Arbitrage, Community Solar, and Power Purchase Agreement (PPA)."
         }
       }
     },
