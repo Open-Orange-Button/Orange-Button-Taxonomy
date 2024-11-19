@@ -14431,7 +14431,7 @@
             "description": "Name of the Program.",
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "Use this field to store the name of the VPP Program that the site is enrolled in",
+            "x-ob-usage-tips": "Use this field to store the name of the program that the site is enrolled in.",
             "x-ob-sample-value": {}
           }
         ]
