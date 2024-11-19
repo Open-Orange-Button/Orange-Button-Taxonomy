@@ -14802,7 +14802,7 @@
           },
           {
             "type": "object",
-            "description": "Amount paid by service requestor for signing up in the program.",
+            "description": "Amount paid by service requester for signing up in the program.",
             "x-ob-item-type": "MonetaryItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -14832,7 +14832,7 @@
           },
           {
             "type": "object",
-            "description": "Contract describing the energy services between the service provider and the service requestor.",
+            "description": "Contract describing the energy services between the service provider and the service requester.",
             "properties": {
               "EffectiveDate": {
                 "$ref": "#/components/schemas/EffectiveDate"
@@ -21695,7 +21695,7 @@
         },
         "ContractES": {
           "label": "Energy Services Contract",
-          "description": "Agreement between the service requestor (Utility/ Aggregator) and the service provider (homeowner/ system owner) to subscribe the asset as part of an aggregated distributed energy resources pool to provide energy services to the grid. Applies to contracts typically referred to  as VPP, Grid Services, Demand Response, Energy Arbitrage, Community Solar, and Power Purchase Agreement (PPA)."
+          "description": "Agreement between the service requester (Utility/ Aggregator) and the service provider (homeowner/ system owner) to subscribe the asset as part of an aggregated distributed energy resources pool to provide energy services to the grid. Applies to contracts typically referred to  as VPP, Grid Services, Demand Response, Energy Arbitrage, Community Solar, and Power Purchase Agreement (PPA)."
         }
       }
     },
