@@ -14436,51 +14436,6 @@
           }
         ]
       },
-      "EligibleDeviceType": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "EligibleDeviceType",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "Set this to Battery for VPP Contract",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "MaxEventsPerSeason": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "MaxEventsPerSeason",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "Use this field to store the maximum number of events that are allowed for the site per season",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "EventDurationMax": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The maximum length of time of the VPP usage event when the asset owner agrees to relinquish to the energy aggregator or utility.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "Maximum duration for the event allowed by the program tariff ",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
       "SeasonStartDate": {
         "allOf": [
           {
@@ -14503,7 +14458,7 @@
           },
           {
             "type": "object",
-            "description": "An entity responsible for planning, scheduling, accounting, billing, and settlement for energy deliveries from the aggregator's portfolio of sellers and/or buyers. Aggregators seek to bring together customers or generators so they can buy or sell power in bulk, making a profit on the transaction.",
+            "description": "An entity responsible for planning, scheduling, accounting, billing, and settlement for energy deliveries from the aggregator's portfolio of sellers and/or buyers.",
             "properties": {
               "AggregatorName": {
                 "$ref": "#/components/schemas/AggregatorName"
@@ -14525,7 +14480,7 @@
           },
           {
             "type": "object",
-            "description": "An AggregatorType describes the purpose the type of service being provided by the Aggregator",
+            "description": "An AggregatorType describes the purpose or the type of service being provided by the Aggregator.",
             "x-ob-item-type": "AggregatorTypeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -14557,18 +14512,6 @@
           "ServiceLevelAgreement": {
             "$ref": "#/components/schemas/ServiceLevelAgreement"
           },
-          "StartDate": {
-            "$ref": "#/components/schemas/StartDate"
-          },
-          "EndDate": {
-            "$ref": "#/components/schemas/EndDate"
-          },
-          "MaxEventDurationPerServiceSchedule": {
-            "$ref": "#/components/schemas/MaxEventDurationPerServiceSchedule"
-          },
-          "MaxEventsPerServiceSchedule": {
-            "$ref": "#/components/schemas/MaxEventsPerServiceSchedule"
-          },
           "PaymentRateCapacity": {
             "$ref": "#/components/schemas/PaymentRateCapacity"
           },
@@ -14580,68 +14523,20 @@
           },
           "PaymentRatePerEvent": {
             "$ref": "#/components/schemas/PaymentRatePerEvent"
+          },
+          "EventDurationMax": {
+            "$ref": "#/components/schemas/EventDurationMax"
+          },
+          "EventsMax": {
+            "$ref": "#/components/schemas/EventsMax"
+          },
+          "StartDateTime": {
+            "$ref": "#/components/schemas/StartDateTime"
+          },
+          "EndDateTime": {
+            "$ref": "#/components/schemas/EndDateTime"
           }
         }
-      },
-      "StartDate": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Service Start Date",
-            "x-ob-item-type": "DateItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "EndDate": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "End date for the service",
-            "x-ob-item-type": "DateItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "MaxEventsPerServiceSchedule": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementInteger"
-          },
-          {
-            "type": "object",
-            "description": "Maximum number of Events for the service schedule",
-            "x-ob-item-type": "IntegerItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "MaxEventDurationPerServiceSchedule": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementInteger"
-          },
-          {
-            "type": "object",
-            "description": "Maximum number of hours for an event scheduled in Service Schedule Period",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
       },
       "ContractTerm": {
         "type": "object",
@@ -14665,8 +14560,11 @@
           "ProdType": {
             "$ref": "#/components/schemas/ProdType"
           },
-          "Capacity": {
-            "$ref": "#/components/schemas/Capacity"
+          "CapacityAC": {
+            "$ref": "#/components/schemas/CapacityAC"
+          },
+          "CapacityDC": {
+            "$ref": "#/components/schemas/CapacityDC"
           }
         }
       },
@@ -14810,21 +14708,6 @@
           }
         ]
       },
-      "Capacity": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "This represents the amount of power that can be produced.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "Use this field to store the total system capacity for the site",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
       "ContractES": {
         "allOf": [
           {
@@ -14878,7 +14761,7 @@
           },
           {
             "type": "object",
-            "description": "Payment rate for the energy transferred",
+            "description": "Payment per unit of energy.",
             "x-ob-item-type": "MonetaryPerEnergyItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -14911,7 +14794,7 @@
           },
           {
             "type": "object",
-            "description": "Payment rate for every event",
+            "description": "Payment for every event.",
             "x-ob-item-type": "MonetaryItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -14933,6 +14816,69 @@
             "x-ob-sample-value": {
               "Value": "1505"
             }
+          }
+        ]
+      },
+      "EventDurationMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
+          },
+          {
+            "type": "object",
+            "description": "Maximum amount of time that an event can occur.",
+            "x-ob-item-type": "DurationItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "MM",
+              "Value": 90
+            }
+          }
+        ]
+      },
+      "EventsMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
+          },
+          {
+            "type": "object",
+            "description": "Maximum number of Events.",
+            "x-ob-item-type": "IntegerItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "StartDateTime": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Start datetime in ISO 8601 standard format where the time portion is optional. ",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "EndDateTime": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "End datetime in ISO 8601 standard format where the time portion is optional. ",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
           }
         ]
       }

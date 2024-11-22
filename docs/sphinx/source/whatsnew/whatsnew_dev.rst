@@ -6,7 +6,7 @@ XXXX.0.0
 
 Element changes
 ~~~~~~~~~~~~~~~
- * Adds ProgramName, EligibleDeviceType, MaxEventsPerSeason, EventDurationMax, SeasonStartDate, Aggregator, AggregatorType, AggregatorName, ServiceSchedule, MaxEventsPerServiceSchedule, MaxEventDurationPerServiceSchedule, ContractTerm, ContractTerms, ServiceSchedules, ServiceProvider, ServiceProviderName, ServiceProviderID, ServiceRequester, SignUpAmount, Capacity, PaymentRateCapacity, PaymentRateEnergy, PaymentRateDuration, PaymentRatePerEvent, Receiver elements. (#332)
+ * Adds ProgramName, StartDateTime, EndDateTime, Aggregator, AggregatorType, AggregatorName, ServiceSchedule, EventsMax, EventDurationMax, ContractTerm, ContractTerms, ServiceSchedules, ServiceProvider, ServiceProviderName, ServiceProviderID, ServiceRequester, SignUpAmount, PaymentRateCapacity, PaymentRateEnergy, PaymentRateDuration, PaymentRatePerEvent, Receiver elements. (#332)
 
 Object changes
 ~~~~~~~~~~~~~~
