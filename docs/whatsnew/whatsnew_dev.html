@@ -214,9 +214,20 @@
 <span id="whatsnew-dev"></span><h1>XXXX.0.0<a class="headerlink" href="#xxxx-0-0" title="Link to this heading">¶</a></h1>
 <section id="element-changes">
 <h2>Element changes<a class="headerlink" href="#element-changes" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Adds ProgramName, StartDateTime, EndDateTime, Aggregator, AggregatorType, AggregatorName, ServiceSchedule, EventsMax, EventDurationMax, ContractTerm, ContractTerms, ServiceSchedules, ServiceProvider, ServiceProviderName, ServiceProviderID, ServiceRequester, SignUpAmount, PaymentRateCapacity, PaymentRateEnergy, PaymentRateDuration, PaymentRatePerEvent, Receiver elements. (#332)</p></li>
+</ul>
+</div></blockquote>
 </section>
 <section id="object-changes">
 <h2>Object changes<a class="headerlink" href="#object-changes" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Adds ContractTerms and Scope to Contract object.(#332)</p></li>
+<li><p>Adds ContractES object.(#332)</p></li>
+</ul>
+</div></blockquote>
 </section>
 <section id="unit-changes">
 <h2>Unit changes<a class="headerlink" href="#unit-changes" title="Link to this heading">¶</a></h2>
@@ -226,6 +237,11 @@
 <li><p>Adds Occupant to ContactTypeItemType enum list. (#330)</p></li>
 <li><p>Changes Homeowner to Owner in the ContactTypeItemType enum list. (#330)</p></li>
 <li><p>Adds EU Digital Product Passport to IdentifierTypeItemType. (#331)</p></li>
+<li><p>ContractType changed to ContactTypeItemType.(#332)</p></li>
+<li><p>Updates enums of ContactTypeItemType to follow Contract[Type] format, adds ContractES.(#332)</p></li>
+<li><p>Adds ProdGenerator and ProdThermostat to ProdTypeItemType.(#332)</p></li>
+<li><p>Adds Aggregator, PropertyOwner, Financier to EntityTypeItemType Enums.(#332)</p></li>
+<li><p>Creates AggregatorTypeItemType, with Utility and ThirdParty as Enums.(#332)</p></li>
 </ul>
 </div></blockquote>
 </section>
