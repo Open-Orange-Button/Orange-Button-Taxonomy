@@ -23,7 +23,7 @@ Unit changes
  * Updates enums of ContactTypeItemType to follow Contract[Type] format, adds ContractES.(#332)
  * Adds ProdGenerator and ProdThermostat to ProdTypeItemType.(#332)
  * Adds Aggregator, PropertyOwner, Financier to EntityTypeItemType Enums.(#332)
- * Creates AggregatorTypeItemType, with Energy, Loan and Lease as Enums.(#332)
+ * Creates AggregatorTypeItemType, with Utility and ThirdParty as Enums.(#332)
 
 
 Bug fixes

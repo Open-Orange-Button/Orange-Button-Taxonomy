@@ -21648,17 +21648,13 @@
     "AggregatorTypeItemType": {
       "description": "",
       "enums": {
-        "Energy": {
-          "label": "Energy",
-          "description": "An entity responsible for planning, scheduling, accounting, billing, and settlement for energy deliveries from the aggregator's portfolio of sellers and/or buyers. Aggregators seek to bring together customers or generators so they can buy or sell power in bulk, making a profit on the transaction."
+        "Utility": {
+          "label": "Utility",
+          "description": "Utility performs its own aggregation. Examples: Investor-owned Utilities, Munis, Coops, Retailers."
         },
-        "Loan": {
-          "label": "Loan",
-          "description": "A Loan Aggregator is responsible for pooling the loans for financial and/ or operational services"
-        },
-        "Lease": {
-          "label": "Lease",
-          "description": "A Lease Aggregator is responsible for pooling the loans for financial and/ or operational services"
+        "ThirdParty": {
+          "label": "Third Party",
+          "description": "Aggregation service providers, market participants."
         }
       }
     },
