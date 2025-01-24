@@ -7,6 +7,7 @@ XXXX.0.0
 Element changes
 ~~~~~~~~~~~~~~~
  * Adds ProgramName, StartDateTime, EndDateTime, Aggregator, AggregatorType, AggregatorName, ServiceSchedule, EventsMax, EventDurationMax, ContractTerm, ContractTerms, ServiceSchedules, ServiceProvider, ServiceProviderName, ServiceProviderID, ServiceRequester, SignUpAmount, PaymentRateCapacity, PaymentRateEnergy, PaymentRateDuration, PaymentRatePerEvent, Receiver elements. (#332)
+ * Adds Language
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -24,6 +25,9 @@ Unit changes
  * Adds ProdGenerator and ProdThermostat to ProdTypeItemType.(#332)
  * Adds Aggregator, PropertyOwner, Financier to EntityTypeItemType Enums.(#332)
  * Creates AggregatorTypeItemType, with Utility and ThirdParty as Enums.(#332)
+ * Adds LanguageTypeItemType
+ * Adds UL1943_3_2022 to CertificationStandardTypeItemType Enum List (#334)
+ * Adds LeadAcid to BatteryChemistryTypeItemType Enum List (#334)
 
 
 Bug fixes
