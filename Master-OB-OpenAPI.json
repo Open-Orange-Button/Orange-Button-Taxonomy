@@ -1559,12 +1559,6 @@
           },
           "TaskStartedDate": {
             "$ref": "#/components/schemas/TaskStartedDate"
-          },
-          "TaskResults": {
-            "$ref": "#/components/schemas/TaskResults"
-          },
-          "TimeEntries": {
-            "$ref": "#/components/schemas/TimeEntries"
           }
         },
         "x-ob-usage-tips": ""
@@ -3988,6 +3982,23 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Trenching"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "ServiceProvider": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The name of the person or organization providing the service",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Hampton's Trenching"
             },
             "x-ob-item-type-group": ""
           }
@@ -8492,15 +8503,6 @@
           },
           "Warranties": {
             "$ref": "#/components/schemas/Warranties"
-          },
-          "ContractType": {
-            "$ref": "#/components/schemas/ContractType"
-          },
-          "ContractTerms": {
-            "$ref": "#/components/schemas/ContractTerms"
-          },
-          "Scope": {
-            "$ref": "#/components/schemas/Scope"
           }
         }
       },
@@ -9708,7 +9710,7 @@
           },
           {
             "type": "object",
-            "description": "Name of the issuing data source, often referred to as the Issuer.",
+            "description": "Name of the data source.",
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -11909,12 +11911,6 @@
           },
           "Scope": {
             "$ref": "#/components/schemas/Scope"
-          },
-          "TimeEntryEndTime": {
-            "$ref": "#/components/schemas/TimeEntryEndTime"
-          },
-          "TimeEntryStartTime": {
-            "$ref": "#/components/schemas/TimeEntryStartTime"
           }
         }
       },
@@ -12389,7 +12385,7 @@
           },
           {
             "type": "object",
-            "description": "The IdentifierType describes the format of an Identifier.",
+            "description": "The type of unique identifier used to represent a unique datapoint as the AlternativeIdentifier. ",
             "x-ob-item-type": "IdentifierTypeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -13484,6 +13480,9 @@
               "TaskBudget": {
                 "$ref": "#/components/schemas/TaskBudget"
               },
+              "TaskResult": {
+                "$ref": "#/components/schemas/TaskResult"
+              },
               "OMActivityType": {
                 "$ref": "#/components/schemas/OMActivityType"
               },
@@ -13602,6 +13601,36 @@
             "type": "object",
             "description": "The final status of a Task",
             "x-ob-item-type": "TaskStatusFinalItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TaskResolution": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Description of the outcome of a Task.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "TaskResult": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Description of the outcome of a Task.",
+            "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
@@ -14370,515 +14399,6 @@
             "x-ob-sample-value": {
               "Value": "865465214"
             }
-          }
-        ]
-      },
-      "TimeEntryStartTime": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The beginning time for a TimeEntry",
-            "x-ob-item-type": "DateTimeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "TimeEntryEndTime": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The ending time of a TimeEntry",
-            "x-ob-item-type": "DateTimeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "TaskResult": {
-        "description": "Data and notes resulting from execution of a Task",
-        "properties": {
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          }
-        },
-        "type": "object"
-      },
-      "TaskResults": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TaskResult"
-        }
-      },
-      "ProgramName": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Name of the Program.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "Use this field to store the name of the program that the site is enrolled in.",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "SeasonStartDate": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Date after which the program is effective for the season. Events are generally created after the season start",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "Aggregator": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Entity"
-          },
-          {
-            "type": "object",
-            "description": "An entity responsible for planning, scheduling, accounting, billing, and settlement for energy deliveries from the aggregator's portfolio of sellers and/or buyers.",
-            "properties": {
-              "AggregatorName": {
-                "$ref": "#/components/schemas/AggregatorName"
-              },
-              "AggregatorType": {
-                "$ref": "#/components/schemas/AggregatorType"
-              },
-              "AggregatorID": {
-                "$ref": "#/components/schemas/AggregatorID"
-              }
-            }
-          }
-        ]
-      },
-      "AggregatorType": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "An AggregatorType describes the purpose or the type of service being provided by the Aggregator.",
-            "x-ob-item-type": "AggregatorTypeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "Energy"
-            }
-          }
-        ]
-      },
-      "AggregatorName": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The name of the entity responsible for providing the aggregation of services.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "ServiceSchedule": {
-        "type": "object",
-        "description": "Schedule level terms for the contract",
-        "properties": {
-          "ServiceLevelAgreement": {
-            "$ref": "#/components/schemas/ServiceLevelAgreement"
-          },
-          "PaymentRateCapacity": {
-            "$ref": "#/components/schemas/PaymentRateCapacity"
-          },
-          "PaymentRateEnergy": {
-            "$ref": "#/components/schemas/PaymentRateEnergy"
-          },
-          "PaymentRateDuration": {
-            "$ref": "#/components/schemas/PaymentRateDuration"
-          },
-          "PaymentRatePerEvent": {
-            "$ref": "#/components/schemas/PaymentRatePerEvent"
-          },
-          "EventDurationMax": {
-            "$ref": "#/components/schemas/EventDurationMax"
-          },
-          "EventsMax": {
-            "$ref": "#/components/schemas/EventsMax"
-          },
-          "StartDateTime": {
-            "$ref": "#/components/schemas/StartDateTime"
-          },
-          "EndDateTime": {
-            "$ref": "#/components/schemas/EndDateTime"
-          }
-        }
-      },
-      "ContractTerm": {
-        "type": "object",
-        "description": "Specification of the terms for the contract",
-        "properties": {
-          "ServiceSchedules": {
-            "$ref": "#/components/schemas/ServiceSchedules"
-          },
-          "ServiceRequester": {
-            "$ref": "#/components/schemas/ServiceRequester"
-          },
-          "ServiceProvider": {
-            "$ref": "#/components/schemas/ServiceProvider"
-          },
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "Comments": {
-            "$ref": "#/components/schemas/Comments"
-          },
-          "ProdType": {
-            "$ref": "#/components/schemas/ProdType"
-          },
-          "CapacityAC": {
-            "$ref": "#/components/schemas/CapacityAC"
-          },
-          "CapacityDC": {
-            "$ref": "#/components/schemas/CapacityDC"
-          }
-        }
-      },
-      "ContractTerms": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ContractTerm"
-        }
-      },
-      "ServiceSchedules": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ServiceSchedule"
-        }
-      },
-      "ServiceProvider": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Entity"
-          },
-          {
-            "type": "object",
-            "description": "Entity responsible for providing a service to another party that is a signatory in the contract",
-            "properties": {
-              "ServiceProviderName": {
-                "$ref": "#/components/schemas/ServiceProviderName"
-              },
-              "ServiceProviderID": {
-                "$ref": "#/components/schemas/ServiceProviderID"
-              }
-            }
-          }
-        ]
-      },
-      "ServiceProviderName": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Name of the Service Provider",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "ServiceProviderID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Unique identifier for the Service Provider",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "ServiceRequester": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Entity"
-          },
-          {
-            "type": "object",
-            "description": "Entity that is the beneficiary of the service from the ServiceProvider",
-            "properties": {
-              "ServiceRequesterName": {
-                "$ref": "#/components/schemas/ServiceRequesterName"
-              },
-              "ServiceRequesterID": {
-                "$ref": "#/components/schemas/ServiceRequesterID"
-              }
-            }
-          }
-        ]
-      },
-      "ServiceRequesterName": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Name of the Service Requester",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "ServiceRequesterID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Unique identifier for the Service Requester",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "ContractType": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Consolidated Contract Types",
-            "x-ob-item-type": "ContractTypeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "SignUpAmount": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Amount paid by service requester for signing up in the program.",
-            "x-ob-item-type": "MonetaryItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "ContractES": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Contract"
-          },
-          {
-            "type": "object",
-            "description": "Contract describing the energy services between the service provider and the service requester.",
-            "properties": {
-              "EffectiveDate": {
-                "$ref": "#/components/schemas/EffectiveDate"
-              },
-              "ExpirationDate": {
-                "$ref": "#/components/schemas/ExpirationDate"
-              },
-              "Aggregator": {
-                "$ref": "#/components/schemas/Aggregator"
-              },
-              "ContractTerms": {
-                "$ref": "#/components/schemas/ContractTerms"
-              },
-              "ProgramName": {
-                "$ref": "#/components/schemas/ProgramName"
-              },
-              "SignUpAmount": {
-                "$ref": "#/components/schemas/SignUpAmount"
-              }
-            }
-          }
-        ]
-      },
-      "PaymentRateCapacity": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Capacity payment per unit of power",
-            "x-ob-item-type": "MonetaryPerPowerItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "Use this to store the performance based incentive in $/kW",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "PaymentRateEnergy": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Payment per unit of energy.",
-            "x-ob-item-type": "MonetaryPerEnergyItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "PaymentRateDuration": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Payment rate per unit of time. For e.g. 200 USD/hour",
-            "x-ob-item-type": "MonetaryPerDurationItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "USD_per_h",
-              "Value": 200
-            }
-          }
-        ]
-      },
-      "PaymentRatePerEvent": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Payment for every event.",
-            "x-ob-item-type": "MonetaryItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "AggregatorID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Unique identifier that represents the Aggregator.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "1505"
-            }
-          }
-        ]
-      },
-      "EventDurationMax": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementInteger"
-          },
-          {
-            "type": "object",
-            "description": "Maximum amount of time that an event can occur.",
-            "x-ob-item-type": "DurationItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "MM",
-              "Value": 90
-            }
-          }
-        ]
-      },
-      "EventsMax": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementInteger"
-          },
-          {
-            "type": "object",
-            "description": "Maximum number of Events.",
-            "x-ob-item-type": "IntegerItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "StartDateTime": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Start datetime in ISO 8601 standard format where the time portion is optional. ",
-            "x-ob-item-type": "DateTimeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "EndDateTime": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "End datetime in ISO 8601 standard format where the time portion is optional. ",
-            "x-ob-item-type": "DateTimeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
           }
         ]
       }
@@ -17998,8 +17518,8 @@
     "ContactTypeItemType": {
       "description": "",
       "enums": {
-        "Owner": {
-          "label": "Owner",
+        "Homeowner": {
+          "label": "Homeowner",
           "description": ""
         },
         "OffTaker": {
@@ -18069,10 +17589,6 @@
         "Technician": {
           "label": "Technician",
           "description": ""
-        },
-        "Occupant": {
-          "label": "Occupant",
-          "description": "An occupant is an individual or entity that resides in or uses a space, building, or property, typically for purposes such as living, working, or conducting business. Occupants may include tenant or resident, depending on the context."
         }
       }
     },
@@ -18311,14 +17827,6 @@
         },
         "ProdWire": {
           "label": "Wire",
-          "description": ""
-        },
-        "ProdGenerator": {
-          "label": "Generator",
-          "description": ""
-        },
-        "ProdThermostat": {
-          "label": "Thermostat",
           "description": ""
         }
       }
@@ -19835,18 +19343,6 @@
         "CertificationAgency": {
           "label": "Certification Agency",
           "description": ""
-        },
-        "Aggregator": {
-          "label": "Aggregator",
-          "description": "An entity responsible for planning, scheduling, accounting, billing, and settlement for energy deliveries from the aggregator's portfolio of sellers and/or buyers. Aggregators seek to bring together customers or generators so they can buy or sell power in bulk, making a profit on the transaction."
-        },
-        "PropertyOwner": {
-          "label": "Property Owner",
-          "description": "The entity or person that owns/has authority to manage the property"
-        },
-        "Financier": {
-          "label": "Financier",
-          "description": "The entity providing some or all of the financing "
         }
       }
     },
@@ -19908,6 +19404,10 @@
         "Other": {
           "label": "Other",
           "description": "Other"
+        },
+        "LeadAcid": {
+          "label": "Lead Acid",
+          "description": "Lead Acid (Non-specific) Please reference detailed Lead Acid type when available."
         }
       }
     },
@@ -20383,6 +19883,10 @@
         "IEEE2800_2022": {
           "label": "IEEE 2800 : 2022",
           "description": "IEEE Standard for Interconnection and Interoperability of Inverter-Based Resources (IBRs) Interconnecting with Associated Transmission Electric Power Systems"
+        },
+        "UL1973_3_2022": {
+          "label": "UL1973 Edition 3: 2022",
+          "description": "Standard For Batteries For Use In Stationary, Vehicle Auxiliary Power And Light Electric Rail (LER) Applications"
         }
       }
     },
@@ -20570,26 +20074,6 @@
         "Other": {
           "label": "Other",
           "description": ""
-        },
-        "LEI": {
-          "label": "Legal Entity Identifier",
-          "description": "A Legal Entity Identifier (LEI) is a 20-character alphanumeric code that uniquely identifies a legal entity that participates in financial transactions. The LEI is based on the ISO 17442 standard and is similar to a bar code for a store item."
-        },
-        "PEN": {
-          "label": "Private Enterprise Number",
-          "description": "Unique identifiers assigned by the Internet Assigned Numbers Authority (IANA) to organizations, allowing them to uniquely identify proprietary protocols, formats, or information relevant to their products and services. These numbers are typically used in network management protocols such as SNMP (Simple Network Management Protocol) to help differentiate between various vendors and their devices or applications."
-        },
-        "DID": {
-          "label": "Decentralized Identifier",
-          "description": "A type of digital identifier that enables individuals or entities to create and control their own identity without relying on a centralized authority. DIDs are designed to be self-sovereign, meaning they can be created, updated, and managed directly by their owners, independent of third-party intermediaries.  DIDs are typically implemented using distributed ledger technologies (blockchains) or other decentralized networks, which provide a secure and tamper-proof environment for storing and managing identity-related information. Each DID resolves to a DID document, which contains cryptographic keys, authentication methods, and other metadata necessary for verifying ownership and facilitating trusted interactions between parties. This approach promotes privacy, security, and user control over personal data in digital identity systems."
-        },
-        "DUNS": {
-          "label": "DUNS",
-          "description": "The Data Universal Numbering System (DUNS) is a proprietary system developed and maintained by Dun & Bradstreet (D&B) that assigns a unique numeric identifier, known as a DUNS number, to businesses and organizations worldwide. Each DUNS number is a nine-digit identifier that serves as a standard for identifying entities in financial, governmental, and commercial transactions.  The DUNS number helps establish a company's business credit profile, track its relationships with other entities, and support risk management and compliance. It is widely used by businesses, governments, and institutions to verify the credibility of organizations, assess potential partners or suppliers, and streamline global commerce."
-        },
-        "DPP_EU": {
-          "label": "EU Digital Product Passport",
-          "description": "The EU Digital Product Passport (DPP_EU) is a digital record containing essential information about a product's lifecycle, designed to enhance transparency, sustainability, and circular economy practices within the European Union. The DPP includes data on a product's materials, production processes, carbon footprint, recycling potential, and repair options, accessible by consumers, regulators, and businesses. By providing detailed, traceable insights, the DPP enables better decision-making regarding product sourcing, usage, and disposal, ultimately fostering responsible consumption and supporting the EU’s Green Deal goals."
         }
       }
     },
@@ -21611,55 +21095,6 @@
           "description": "Topology which describes attachment, mounting and fastening."
         }
       }
-    },
-    "ContractTypeItemType": {
-      "description": "Different types of Contracts",
-      "enums": {
-        "ContractOM": {
-          "label": "Operations and Maintenance Contract",
-          "description": "Agreement to manage the maintenance and operations of the solar system."
-        },
-        "ContractLoan": {
-          "label": "Loan Financing",
-          "description": "Loan taken to purchase the solar system."
-        },
-        "ContractLease": {
-          "label": "Lease",
-          "description": "Agreement to pay fixed monthly fee to lease the solar system installed on their property."
-        },
-        "ContractCash": {
-          "label": "Cash",
-          "description": "Systems bought outright"
-        },
-        "ContractREC": {
-          "label": "Renewable Energy Credit Contract",
-          "description": "Agreement between the homeowner and the service provider (utility, OEM) to trade renewable generation credits in the SREC market"
-        },
-        "Other": {
-          "label": "Other",
-          "description": "Other contract type not listed"
-        },
-        "ContractES": {
-          "label": "Energy Services Contract",
-          "description": "Agreement between the service requester (Utility/ Aggregator) and the service provider (homeowner/ system owner) to subscribe the asset as part of an aggregated distributed energy resources pool to provide energy services to the grid. Applies to contracts typically referred to  as VPP, Grid Services, Demand Response, Energy Arbitrage, Community Solar, and Power Purchase Agreement (PPA)."
-        }
-      }
-    },
-    "AggregatorTypeItemType": {
-      "description": "",
-      "enums": {
-        "Utility": {
-          "label": "Utility",
-          "description": "Utility performs its own aggregation. Examples: Investor-owned Utilities, Munis, Coops, Retailers."
-        },
-        "ThirdParty": {
-          "label": "Third Party",
-          "description": "Aggregation service providers, market participants."
-        }
-      }
-    },
-    "Receiver": {
-      "description": "Entity receiving the service from the provider"
     }
   },
   "x-ob-item-type-groups": {
