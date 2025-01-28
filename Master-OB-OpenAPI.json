@@ -19908,6 +19908,10 @@
         "Other": {
           "label": "Other",
           "description": "Other"
+        },
+        "LeadAcid": {
+          "label": "Lead Acid",
+          "description": "Lead Acid (Non-specific) Please reference detailed Lead Acid type when available."
         }
       }
     },
@@ -20383,6 +20387,10 @@
         "IEEE2800_2022": {
           "label": "IEEE 2800 : 2022",
           "description": "IEEE Standard for Interconnection and Interoperability of Inverter-Based Resources (IBRs) Interconnecting with Associated Transmission Electric Power Systems"
+        },
+        "UL1973_3_2022": {
+          "label": "UL1973 Edition 3: 2022",
+          "description": "Standard For Batteries For Use In Stationary, Vehicle Auxiliary Power And Light Electric Rail (LER) Applications."
         }
       }
     },

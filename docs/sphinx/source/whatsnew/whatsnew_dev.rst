@@ -24,6 +24,8 @@ Unit changes
  * Adds ProdGenerator and ProdThermostat to ProdTypeItemType.(#332)
  * Adds Aggregator, PropertyOwner, Financier to EntityTypeItemType Enums.(#332)
  * Creates AggregatorTypeItemType, with Utility and ThirdParty as Enums.(#332)
+ * Adds UL1943_3_2022 to CertificationStandardTypeItemType Enum List (#335)
+ * Adds LeadAcid to BatteryChemistryTypeItemType Enum List (#335)
 
 
 Bug fixes
