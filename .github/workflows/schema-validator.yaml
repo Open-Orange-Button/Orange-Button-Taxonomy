@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Validate OB OpenAPI
-        uses: char0n/swagger-editor-validate@master
+        uses: swaggerexpert/swagger-editor-validate@master
         with:
           definition-file: Master-OB-OpenAPI.json
 
