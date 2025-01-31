@@ -9,8 +9,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Install/Update Packages
+        run: sudo apt-get update && sudo apt-get install -y libnss3 libgdk-pixbuf2.0 libgtk-3-dev libxss-dev libasound2t64
       - name: Validate OB OpenAPI
-        uses: char0n/swagger-editor-validate@master
+        uses: swaggerexpert/swagger-editor-validate@master
         with:
           definition-file: Master-OB-OpenAPI.json
 
