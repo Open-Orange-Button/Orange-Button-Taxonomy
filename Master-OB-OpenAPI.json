@@ -19723,6 +19723,10 @@
         "ASi_tandem": {
           "label": "aSi tandem",
           "description": "Amorphous silicon tandem"
+        },
+        "ASi_nc": {
+          "label": "a-Si/nc",
+          "description": "Solar cells that combine amorphous silicon (a-Si) and nanocrystalline silicon (nc-Si)."
         }
       }
     },

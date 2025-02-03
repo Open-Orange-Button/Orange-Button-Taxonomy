@@ -26,6 +26,7 @@ Unit changes
  * Creates AggregatorTypeItemType, with Utility and ThirdParty as Enums.(#332)
  * Adds UL1943_3_2022 to CertificationStandardTypeItemType Enum List (#335)
  * Adds LeadAcid to BatteryChemistryTypeItemType Enum List (#335)
+ * Adds ASi_nc to CellTechnologyTypeItemType enum list
 
 
 Bug fixes
