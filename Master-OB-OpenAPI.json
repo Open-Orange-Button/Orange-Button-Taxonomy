@@ -14903,7 +14903,7 @@
           },
           {
             "type": "object",
-            "description": "Date that Entity listed the product with the qualification.",
+            "description": "Date that Entity listed the product as qualified.",
             "x-ob-item-type": "DateItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
