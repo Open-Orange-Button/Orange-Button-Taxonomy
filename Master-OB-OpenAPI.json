@@ -13419,8 +13419,8 @@
           },
           {
             "type": "object",
-            "description": "Date of the last update to the Product listing. ",
-            "x-ob-item-type": "DateItemType",
+            "description": "Datetime of the latest update",
+            "x-ob-item-type": "DateTimeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
