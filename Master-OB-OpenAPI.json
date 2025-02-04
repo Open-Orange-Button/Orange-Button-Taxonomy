@@ -14920,7 +14920,7 @@
           },
           {
             "type": "object",
-            "description": "Name of the Entity that listed the Product Qualification.",
+            "description": "Name of the Entity that listed the Product as qualified.",
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
