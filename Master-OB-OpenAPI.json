@@ -90,6 +90,9 @@
           },
           "ManufacturerUPC": {
             "$ref": "#/components/schemas/ManufacturerUPC"
+          },
+          "ProdQualifications": {
+            "$ref": "#/components/schemas/ProdQualifications"
           }
         },
         "type": "object"
@@ -8114,6 +8117,9 @@
           },
           "EntityRole": {
             "$ref": "#/components/schemas/EntityRole"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
           }
         }
       },
@@ -8221,6 +8227,12 @@
               },
               "EfficiencyBatteryRoundTrip": {
                 "$ref": "#/components/schemas/EfficiencyBatteryRoundTrip"
+              },
+              "CECListingDate": {
+                "$ref": "#/components/schemas/CECListingDate"
+              },
+              "CECNotes": {
+                "$ref": "#/components/schemas/CECNotes"
               }
             }
           }
@@ -13407,11 +13419,13 @@
           },
           {
             "type": "object",
-            "description": "Datetime of the latest update",
-            "x-ob-item-type": "DateTimeItemType",
+            "description": "Date of the last update to the Product listing. ",
+            "x-ob-item-type": "DateItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "2021-12-25"
+            }
           }
         ]
       },
@@ -14881,6 +14895,115 @@
             "x-ob-sample-value": {}
           }
         ]
+      },
+      "QualificationListingDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date that Entity listed the product with the qualification.",
+            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2021-12-25"
+            }
+          }
+        ]
+      },
+      "QualificationEntityName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of the Entity that listed the Product Qualification.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "CEC"
+            }
+          }
+        ]
+      },
+      "QualificationEntity": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "Entity that lists the Product Qualification.",
+            "properties": {
+              "QualificationEntityName": {
+                "$ref": "#/components/schemas/QualificationEntityName"
+              }
+            }
+          }
+        ]
+      },
+      "QualificationExpirationDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date the listed Qualification expires. ",
+            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2021-12-25"
+            }
+          }
+        ]
+      },
+      "QualificationNotes": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Notes pertaining to the listed Qualification.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ProdQualification": {
+        "type": "object",
+        "description": "Qualification that a specific Product has been authorized for.",
+        "properties": {
+          "QualificationEntity": {
+            "$ref": "#/components/schemas/QualificationEntity"
+          },
+          "QualificationExpirationDate": {
+            "$ref": "#/components/schemas/QualificationExpirationDate"
+          },
+          "QualificationListingDate": {
+            "$ref": "#/components/schemas/QualificationListingDate"
+          },
+          "QualificationNotes": {
+            "$ref": "#/components/schemas/QualificationNotes"
+          },
+          "UpdateLast": {
+            "$ref": "#/components/schemas/UpdateLast"
+          }
+        }
+      },
+      "ProdQualifications": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ProdQualification"
+        }
       }
     }
   },

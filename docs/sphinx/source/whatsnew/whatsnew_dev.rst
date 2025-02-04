@@ -7,11 +7,15 @@ XXXX.0.0
 Element changes
 ~~~~~~~~~~~~~~~
  * Adds ProgramName, StartDateTime, EndDateTime, Aggregator, AggregatorType, AggregatorName, ServiceSchedule, EventsMax, EventDurationMax, ContractTerm, ContractTerms, ServiceSchedules, ServiceProvider, ServiceProviderName, ServiceProviderID, ServiceRequester, SignUpAmount, PaymentRateCapacity, PaymentRateEnergy, PaymentRateDuration, PaymentRatePerEvent, Receiver elements. (#332)
+ * Adds QualificationListingDate, QualificationEntityName, QualificationExpirationDate, QualificationNotes
 
 Object changes
 ~~~~~~~~~~~~~~
  * Adds ContractTerms and Scope to Contract object.(#332)
  * Adds ContractES object.(#332)
+ * Adds ProdQualifications, ProdQualification, QualificationEntity
+ * Adds QualificationListingDate, QualificationEntityName, QualificationExpirationDate, QualificationNotes, Entity inheritance to ProdQualification
+ * Adds Description to Entity, CECListingDate and CECNotes to ProdBattery
 
 Unit changes
 ~~~~~~~~~~~~
