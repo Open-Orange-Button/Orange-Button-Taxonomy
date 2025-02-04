@@ -8227,12 +8227,6 @@
               },
               "EfficiencyBatteryRoundTrip": {
                 "$ref": "#/components/schemas/EfficiencyBatteryRoundTrip"
-              },
-              "CECListingDate": {
-                "$ref": "#/components/schemas/CECListingDate"
-              },
-              "CECNotes": {
-                "$ref": "#/components/schemas/CECNotes"
               }
             }
           }
