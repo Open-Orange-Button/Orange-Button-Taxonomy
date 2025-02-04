@@ -14937,7 +14937,7 @@
           },
           {
             "type": "object",
-            "description": "Entity that lists the Product Qualification.",
+            "description": "Entity that lists the Product as qualified.",
             "properties": {
               "QualificationEntityName": {
                 "$ref": "#/components/schemas/QualificationEntityName"
