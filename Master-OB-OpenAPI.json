@@ -19914,6 +19914,10 @@
         "Financier": {
           "label": "Financier",
           "description": "The entity providing some or all of the financing "
+        },
+        "QualifyingAgency": {
+          "label": "Qualifying Agency",
+          "description": ""
         }
       }
     },

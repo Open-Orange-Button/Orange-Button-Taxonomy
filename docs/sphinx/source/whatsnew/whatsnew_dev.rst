@@ -31,6 +31,7 @@ Unit changes
  * Creates AggregatorTypeItemType, with Utility and ThirdParty as Enums.(#332)
  * Adds UL1943_3_2022 to CertificationStandardTypeItemType Enum List (#335)
  * Adds LeadAcid to BatteryChemistryTypeItemType Enum List (#335)
+ * Adds QualifyingAgency enum to EntityRoleItemType Enum List (#338)
 
 
 Bug fixes
