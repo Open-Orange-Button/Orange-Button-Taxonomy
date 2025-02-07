@@ -14857,23 +14857,6 @@
           }
         ]
       },
-      "QualificationEntityName": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Name of the Entity that listed the Product as qualified.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "CEC"
-            }
-          }
-        ]
-      },
       "QualificationEntity": {
         "allOf": [
           {
@@ -14883,8 +14866,8 @@
             "type": "object",
             "description": "Entity that lists the Product as qualified.",
             "properties": {
-              "QualificationEntityName": {
-                "$ref": "#/components/schemas/QualificationEntityName"
+              "QualificationAgencyName": {
+                "$ref": "#/components/schemas/QualificationAgencyName"
               }
             }
           }
@@ -14948,6 +14931,23 @@
         "items": {
           "$ref": "#/components/schemas/ProdQualification"
         }
+      },
+      "QualificationAgencyName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of the Entity that listed the Product as qualified.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "CEC"
+            }
+          }
+        ]
       }
     }
   },
