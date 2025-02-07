@@ -9379,23 +9379,6 @@
           }
         ]
       },
-      "CECListingDate": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Date that CEC listed the product with the certification.",
-            "x-ob-item-type": "DateItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "2021-12-25"
-            }
-          }
-        ]
-      },
       "CertificationTypeSections": {
         "allOf": [
           {
@@ -9556,21 +9539,6 @@
             "x-ob-sample-value": {
               "Value": "be3827bd-0b57-4990-a757-7ee13348356f"
             }
-          }
-        ]
-      },
-      "CECNotes": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Notes from California Energy Commission (CEC) equipment list.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
           }
         ]
       },

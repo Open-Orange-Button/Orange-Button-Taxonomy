@@ -8,6 +8,7 @@ Element changes
 ~~~~~~~~~~~~~~~
  * Adds ProgramName, StartDateTime, EndDateTime, Aggregator, AggregatorType, AggregatorName, ServiceSchedule, EventsMax, EventDurationMax, ContractTerm, ContractTerms, ServiceSchedules, ServiceProvider, ServiceProviderName, ServiceProviderID, ServiceRequester, SignUpAmount, PaymentRateCapacity, PaymentRateEnergy, PaymentRateDuration, PaymentRatePerEvent, Receiver elements. (#332)
  * Adds QualificationListingDate, QualificationEntityName, QualificationExpirationDate, QualificationNotes (#338)
+ * Removes CECListingDate and CECNotes (#338)
 
 Object changes
 ~~~~~~~~~~~~~~
