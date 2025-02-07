@@ -6083,9 +6083,6 @@
               "IsHybrid": {
                 "$ref": "#/components/schemas/IsHybrid"
               },
-              "CECNotes": {
-                "$ref": "#/components/schemas/CECNotes"
-              },
               "HasMeter": {
                 "$ref": "#/components/schemas/HasMeter"
               },
@@ -6097,9 +6094,6 @@
               },
               "IsPVInputCapable": {
                 "$ref": "#/components/schemas/IsPVInputCapable"
-              },
-              "CECListingDate": {
-                "$ref": "#/components/schemas/CECListingDate"
               },
               "RevenueGrade": {
                 "$ref": "#/components/schemas/RevenueGrade"
@@ -7029,9 +7023,6 @@
               "Warranties": {
                 "$ref": "#/components/schemas/Warranties"
               },
-              "CECNotes": {
-                "$ref": "#/components/schemas/CECNotes"
-              },
               "PowerSTC": {
                 "$ref": "#/components/schemas/PowerSTC"
               },
@@ -7046,9 +7037,6 @@
               },
               "TemperatureCoefficientMaxPowerVoltage": {
                 "$ref": "#/components/schemas/TemperatureCoefficientMaxPowerVoltage"
-              },
-              "CECListingDate": {
-                "$ref": "#/components/schemas/CECListingDate"
               },
               "ModuleArea": {
                 "$ref": "#/components/schemas/ModuleArea"
@@ -9733,12 +9721,6 @@
             "type": "object",
             "description": "A device used to measure generated and/or consumed energy.",
             "properties": {
-              "CECNotes": {
-                "$ref": "#/components/schemas/CECNotes"
-              },
-              "CECListingDate": {
-                "$ref": "#/components/schemas/CECListingDate"
-              },
               "AccuracyClassANSI": {
                 "$ref": "#/components/schemas/AccuracyClassANSI"
               },
