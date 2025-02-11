@@ -14940,7 +14940,7 @@
           },
           {
             "type": "object",
-            "description": "Qualification that a specific Product meets requirements, usually from a regulatory or utility entity. Qualification differs from Certification, which attests that a product complies with a technical standard.",
+            "description": "Agency that lists the Product as qualified.",
             "properties": {
               "QualificationAgencyName": {
                 "$ref": "#/components/schemas/QualificationAgencyName"
