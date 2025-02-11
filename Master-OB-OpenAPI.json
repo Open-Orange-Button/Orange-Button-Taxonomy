@@ -14891,7 +14891,7 @@
       },
       "ProdQualification": {
         "type": "object",
-        "description": "Qualification that a specific Product has been authorized for.",
+        "description": "Qualification that a specific Product meets requirements, usually from a regulatory or utility entity. Qualification differs from Certification, which attests that a product complies with a technical standard.",
         "properties": {
           "QualificationExpirationDate": {
             "$ref": "#/components/schemas/QualificationExpirationDate"
