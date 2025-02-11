@@ -14857,22 +14857,6 @@
           }
         ]
       },
-      "QualificationEntity": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Entity"
-          },
-          {
-            "type": "object",
-            "description": "Entity that lists the Product as qualified.",
-            "properties": {
-              "QualificationAgencyName": {
-                "$ref": "#/components/schemas/QualificationAgencyName"
-              }
-            }
-          }
-        ]
-      },
       "QualificationExpirationDate": {
         "allOf": [
           {
@@ -14909,9 +14893,6 @@
         "type": "object",
         "description": "Qualification that a specific Product has been authorized for.",
         "properties": {
-          "QualificationEntity": {
-            "$ref": "#/components/schemas/QualificationEntity"
-          },
           "QualificationExpirationDate": {
             "$ref": "#/components/schemas/QualificationExpirationDate"
           },
@@ -14923,6 +14904,9 @@
           },
           "UpdateLast": {
             "$ref": "#/components/schemas/UpdateLast"
+          },
+          "QualifyingAgency": {
+            "$ref": "#/components/schemas/QualifyingAgency"
           }
         }
       },
@@ -14945,6 +14929,42 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "CEC"
+            }
+          }
+        ]
+      },
+      "QualifyingAgency": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "Qualification that a specific Product meets requirements, usually from a regulatory or utility entity. Qualification differs from Certification, which attests that a product complies with a technical standard.",
+            "properties": {
+              "QualificationAgencyName": {
+                "$ref": "#/components/schemas/QualificationAgencyName"
+              },
+              "QualifyingAgencyID": {
+                "$ref": "#/components/schemas/QualifyingAgencyID"
+              }
+            }
+          }
+        ]
+      },
+      "QualifyingAgencyID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Unique identifier of the Qualifying Agency.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "6b208a6b-358a-442f-a769-75c9059a7fe3"
             }
           }
         ]
@@ -20669,6 +20689,14 @@
         "DPP_EU": {
           "label": "EU Digital Product Passport",
           "description": "The EU Digital Product Passport (DPP_EU) is a digital record containing essential information about a product's lifecycle, designed to enhance transparency, sustainability, and circular economy practices within the European Union. The DPP includes data on a product's materials, production processes, carbon footprint, recycling potential, and repair options, accessible by consumers, regulators, and businesses. By providing detailed, traceable insights, the DPP enables better decision-making regarding product sourcing, usage, and disposal, ultimately fostering responsible consumption and supporting the EU’s Green Deal goals."
+        },
+        "FEIN": {
+          "label": "Federal Employer Identification Number",
+          "description": ""
+        },
+        "UEI": {
+          "label": "Unique Entity Identifier",
+          "description": ""
         }
       }
     },
