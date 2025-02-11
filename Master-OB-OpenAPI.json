@@ -8295,6 +8295,9 @@
               },
               "URL": {
                 "$ref": "#/components/schemas/URL"
+              },
+              "UtilityID": {
+                "$ref": "#/components/schemas/UtilityID"
               }
             },
             "x-ob-usage-tips": ""
@@ -8389,6 +8392,9 @@
             "properties": {
               "InstallerName": {
                 "$ref": "#/components/schemas/InstallerName"
+              },
+              "InstallerID": {
+                "$ref": "#/components/schemas/InstallerID"
               }
             }
           }
@@ -8402,7 +8408,14 @@
           {
             "type": "object",
             "description": "Entity that originates a project",
-            "properties": {}
+            "properties": {
+              "OriginatorID": {
+                "$ref": "#/components/schemas/OriginatorID"
+              },
+              "OriginatorName": {
+                "$ref": "#/components/schemas/OriginatorName"
+              }
+            }
           }
         ]
       },
@@ -10816,6 +10829,9 @@
               },
               "EntityRole": {
                 "$ref": "#/components/schemas/EntityRole"
+              },
+              "PreparerID": {
+                "$ref": "#/components/schemas/PreparerID"
               }
             }
           }
@@ -11277,6 +11293,9 @@
               },
               "URL": {
                 "$ref": "#/components/schemas/URL"
+              },
+              "HOAID": {
+                "$ref": "#/components/schemas/HOAID"
               }
             },
             "x-ob-usage-tips": ""
@@ -11358,6 +11377,9 @@
             "properties": {
               "InsurerName": {
                 "$ref": "#/components/schemas/InsurerName"
+              },
+              "InsurerID": {
+                "$ref": "#/components/schemas/InsurerID"
               }
             }
           }
@@ -11391,6 +11413,9 @@
             "properties": {
               "OwnerName": {
                 "$ref": "#/components/schemas/OwnerName"
+              },
+              "OwnerID": {
+                "$ref": "#/components/schemas/OwnerID"
               }
             }
           }
@@ -13654,6 +13679,9 @@
               },
               "CertificationAgencyName": {
                 "$ref": "#/components/schemas/CertificationAgencyName"
+              },
+              "CertificationAgencyID": {
+                "$ref": "#/components/schemas/CertificationAgencyID"
               }
             }
           }
@@ -13789,6 +13817,9 @@
             "properties": {
               "TestLabName": {
                 "$ref": "#/components/schemas/TestLabName"
+              },
+              "TestLabID": {
+                "$ref": "#/components/schemas/TestLabID"
               }
             }
           }
@@ -14879,6 +14910,176 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "CertificationAgencyID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Unique identifier that represents the CertificationAgency.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "6c5edfdf-74d2-47f9-8e2d-423376916567"
+            }
+          }
+        ]
+      },
+      "HOAID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Unique identifier for the HOA.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "6b208a6b-358a-442f-a769-75c9059a7fe3"
+            }
+          }
+        ]
+      },
+      "InstallerID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Unique identifier of the Installer.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "6b208a6b-358a-442f-a769-75c9059a7fe3"
+            }
+          }
+        ]
+      },
+      "InsurerID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Unique identifier of the Insurer.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "6b208a6b-358a-442f-a769-75c9059a7fe3"
+            }
+          }
+        ]
+      },
+      "OriginatorName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of the Originator",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Blu Opportunity"
+            }
+          }
+        ]
+      },
+      "OriginatorID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Unique identifier of the Originator",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "6b208a6b-358a-442f-a769-75c9059a7fe3"
+            }
+          }
+        ]
+      },
+      "OwnerID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Unique identifier of the Owner.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "6b208a6b-358a-442f-a769-75c9059a7fe3"
+            }
+          }
+        ]
+      },
+      "PreparerID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Unique identifier of the Preparer.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "6b208a6b-358a-442f-a769-75c9059a7fe3"
+            }
+          }
+        ]
+      },
+      "TestLabID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Unique identifier of the Test Lab.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "6b208a6b-358a-442f-a769-75c9059a7fe3"
+            }
+          }
+        ]
+      },
+      "UtilityID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Unique identifier of the Utility.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "6b208a6b-358a-442f-a769-75c9059a7fe3"
+            }
           }
         ]
       }
