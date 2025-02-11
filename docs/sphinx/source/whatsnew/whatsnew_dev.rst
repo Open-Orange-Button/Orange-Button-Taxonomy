@@ -7,6 +7,7 @@ XXXX.0.0
 Element changes
 ~~~~~~~~~~~~~~~
  * Adds ProgramName, StartDateTime, EndDateTime, Aggregator, AggregatorType, AggregatorName, ServiceSchedule, EventsMax, EventDurationMax, ContractTerm, ContractTerms, ServiceSchedules, ServiceProvider, ServiceProviderName, ServiceProviderID, ServiceRequester, SignUpAmount, PaymentRateCapacity, PaymentRateEnergy, PaymentRateDuration, PaymentRatePerEvent, Receiver elements. (#332)
+ * Adds UtilityID, InstallerID, OriginatorID, OriginatorName, PreparerID, HOAID, InsurerID, OwnerID, CertificationAgencyID, TestLabID (#339)
 
 Object changes
 ~~~~~~~~~~~~~~
