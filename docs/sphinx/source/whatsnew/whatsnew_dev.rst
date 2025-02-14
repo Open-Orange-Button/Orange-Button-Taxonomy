@@ -15,7 +15,7 @@ Object changes
  * Adds ContractTerms and Scope to Contract object.(#332)
  * Adds ContractES object.(#332)
  * Adds ProdQualifications, ProdQualification, QualificationEntity (#338)
- * Adds QualificationListingDate, QualificationAgencyName, QualificationExpirationDate, QualificationNotes, Entity inheritance to ProdQualification (#338)
+ * Adds QualificationListingDate, QualifyingAgencyName, QualificationExpirationDate, QualificationNotes, Entity inheritance to ProdQualification (#338)
  * Adds Description to Entity, CECListingDate and CECNotes to ProdBattery(#338)
 
 Unit changes

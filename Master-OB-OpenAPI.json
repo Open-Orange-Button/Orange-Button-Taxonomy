@@ -14916,23 +14916,6 @@
           "$ref": "#/components/schemas/ProdQualification"
         }
       },
-      "QualificationAgencyName": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Name of the Entity that listed the Product as qualified.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "CEC"
-            }
-          }
-        ]
-      },
       "QualifyingAgency": {
         "allOf": [
           {
@@ -14942,11 +14925,11 @@
             "type": "object",
             "description": "Qualification that a specific Product meets requirements, usually from a regulatory or utility entity. Qualification differs from Certification, which attests that a product complies with a technical standard.",
             "properties": {
-              "QualificationAgencyName": {
-                "$ref": "#/components/schemas/QualificationAgencyName"
-              },
               "QualifyingAgencyID": {
                 "$ref": "#/components/schemas/QualifyingAgencyID"
+              },
+              "QualifyingAgencyName": {
+                "$ref": "#/components/schemas/QualifyingAgencyName"
               }
             }
           }
@@ -14965,6 +14948,23 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "6b208a6b-358a-442f-a769-75c9059a7fe3"
+            }
+          }
+        ]
+      },
+      "QualifyingAgencyName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of the Entity that listed the Product as qualified.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "CEC"
             }
           }
         ]
