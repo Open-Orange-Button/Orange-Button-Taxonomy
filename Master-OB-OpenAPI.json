@@ -90,6 +90,9 @@
           },
           "ManufacturerUPC": {
             "$ref": "#/components/schemas/ManufacturerUPC"
+          },
+          "ProdQualifications": {
+            "$ref": "#/components/schemas/ProdQualifications"
           }
         },
         "type": "object"
@@ -6080,9 +6083,6 @@
               "IsHybrid": {
                 "$ref": "#/components/schemas/IsHybrid"
               },
-              "CECNotes": {
-                "$ref": "#/components/schemas/CECNotes"
-              },
               "HasMeter": {
                 "$ref": "#/components/schemas/HasMeter"
               },
@@ -6094,9 +6094,6 @@
               },
               "IsPVInputCapable": {
                 "$ref": "#/components/schemas/IsPVInputCapable"
-              },
-              "CECListingDate": {
-                "$ref": "#/components/schemas/CECListingDate"
               },
               "RevenueGrade": {
                 "$ref": "#/components/schemas/RevenueGrade"
@@ -7026,9 +7023,6 @@
               "Warranties": {
                 "$ref": "#/components/schemas/Warranties"
               },
-              "CECNotes": {
-                "$ref": "#/components/schemas/CECNotes"
-              },
               "PowerSTC": {
                 "$ref": "#/components/schemas/PowerSTC"
               },
@@ -7043,9 +7037,6 @@
               },
               "TemperatureCoefficientMaxPowerVoltage": {
                 "$ref": "#/components/schemas/TemperatureCoefficientMaxPowerVoltage"
-              },
-              "CECListingDate": {
-                "$ref": "#/components/schemas/CECListingDate"
               },
               "ModuleArea": {
                 "$ref": "#/components/schemas/ModuleArea"
@@ -8114,6 +8105,9 @@
           },
           "EntityRole": {
             "$ref": "#/components/schemas/EntityRole"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
           }
         }
       },
@@ -9385,23 +9379,6 @@
           }
         ]
       },
-      "CECListingDate": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Date that CEC listed the product with the certification.",
-            "x-ob-item-type": "DateItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "2021-12-25"
-            }
-          }
-        ]
-      },
       "CertificationTypeSections": {
         "allOf": [
           {
@@ -9565,21 +9542,6 @@
           }
         ]
       },
-      "CECNotes": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Notes from California Energy Commission (CEC) equipment list.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
       "IsSelectiveOptimization": {
         "allOf": [
           {
@@ -9727,12 +9689,6 @@
             "type": "object",
             "description": "A device used to measure generated and/or consumed energy.",
             "properties": {
-              "CECNotes": {
-                "$ref": "#/components/schemas/CECNotes"
-              },
-              "CECListingDate": {
-                "$ref": "#/components/schemas/CECListingDate"
-              },
               "AccuracyClassANSI": {
                 "$ref": "#/components/schemas/AccuracyClassANSI"
               },
@@ -13411,7 +13367,9 @@
             "x-ob-item-type": "DateTimeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Value": "2021-12-25"
+            }
           }
         ]
       },
@@ -14879,6 +14837,135 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "QualificationListingDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date that Entity listed the product as qualified.",
+            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2021-12-25"
+            }
+          }
+        ]
+      },
+      "QualificationExpirationDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date the listed Qualification expires. ",
+            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2021-12-25"
+            }
+          }
+        ]
+      },
+      "QualificationNotes": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Notes pertaining to the listed Qualification.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ProdQualification": {
+        "type": "object",
+        "description": "Qualification that a specific Product meets requirements, usually from a regulatory or utility entity. Qualification differs from Certification, which attests that a product complies with a technical standard.",
+        "properties": {
+          "QualificationExpirationDate": {
+            "$ref": "#/components/schemas/QualificationExpirationDate"
+          },
+          "QualificationListingDate": {
+            "$ref": "#/components/schemas/QualificationListingDate"
+          },
+          "QualificationNotes": {
+            "$ref": "#/components/schemas/QualificationNotes"
+          },
+          "UpdateLast": {
+            "$ref": "#/components/schemas/UpdateLast"
+          },
+          "QualifyingAgency": {
+            "$ref": "#/components/schemas/QualifyingAgency"
+          }
+        }
+      },
+      "ProdQualifications": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ProdQualification"
+        }
+      },
+      "QualifyingAgency": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "Agency that lists the Product as qualified.",
+            "properties": {
+              "QualifyingAgencyID": {
+                "$ref": "#/components/schemas/QualifyingAgencyID"
+              },
+              "QualifyingAgencyName": {
+                "$ref": "#/components/schemas/QualifyingAgencyName"
+              }
+            }
+          }
+        ]
+      },
+      "QualifyingAgencyID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Unique identifier of the Qualifying Agency.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "6b208a6b-358a-442f-a769-75c9059a7fe3"
+            }
+          }
+        ]
+      },
+      "QualifyingAgencyName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of the Entity that listed the Product as qualified.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "CEC"
+            }
           }
         ]
       }
@@ -19847,6 +19934,10 @@
         "Financier": {
           "label": "Financier",
           "description": "The entity providing some or all of the financing "
+        },
+        "QualifyingAgency": {
+          "label": "Qualifying Agency",
+          "description": ""
         }
       }
     },
@@ -20598,6 +20689,14 @@
         "DPP_EU": {
           "label": "EU Digital Product Passport",
           "description": "The EU Digital Product Passport (DPP_EU) is a digital record containing essential information about a product's lifecycle, designed to enhance transparency, sustainability, and circular economy practices within the European Union. The DPP includes data on a product's materials, production processes, carbon footprint, recycling potential, and repair options, accessible by consumers, regulators, and businesses. By providing detailed, traceable insights, the DPP enables better decision-making regarding product sourcing, usage, and disposal, ultimately fostering responsible consumption and supporting the EU’s Green Deal goals."
+        },
+        "FEIN": {
+          "label": "Federal Employer Identification Number",
+          "description": ""
+        },
+        "UEI": {
+          "label": "Unique Entity Identifier",
+          "description": ""
         }
       }
     },
