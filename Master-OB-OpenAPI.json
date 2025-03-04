@@ -7468,7 +7468,7 @@
           {
             "type": "object",
             "description": "What Color is the Module backsheet?",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "BacksheetColorItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -7502,7 +7502,7 @@
           {
             "type": "object",
             "description": "What Color is the Module Frame?",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "FrameColorItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -21968,6 +21968,44 @@
     },
     "Receiver": {
       "description": "Entity receiving the service from the provider"
+    },
+    "FrameColorItemType": {
+      "description": "",
+      "enums": {
+        "Silver": {
+          "label": "Silver",
+          "description": ""
+        },
+        "Black": {
+          "label": "Black",
+          "description": ""
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
+        },
+        "None": {
+          "label": "None",
+          "description": ""
+        }
+      }
+    },
+    "BacksheetColorItemType": {
+      "description": "",
+      "enums": {
+        "Black": {
+          "label": "Black",
+          "description": ""
+        },
+        "White": {
+          "label": "White",
+          "description": ""
+        },
+        "Glass": {
+          "label": "Glass",
+          "description": ""
+        }
+      }
     }
   },
   "x-ob-item-type-groups": {
