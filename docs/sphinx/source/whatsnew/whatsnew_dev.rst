@@ -34,7 +34,7 @@ Unit changes
  * Adds LeadAcid to BatteryChemistryTypeItemType Enum List (#335)
  * Adds QualifyingAgency enum to EntityRoleItemType Enum List (#338)
  * Adds UEI and FEIN to IdentifierTypeItemType Enum list (#338)
- * Adds BacksheetColorItemType and FrameColorItemType, populated enum list for each. (#339)
+ * Adds BacksheetColorItemType and FrameColorItemType, populated enum list for each. (#342)
 
 
 Bug fixes
