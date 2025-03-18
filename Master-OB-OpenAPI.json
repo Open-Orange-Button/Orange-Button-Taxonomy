@@ -20683,6 +20683,10 @@
         "UL1973_3_2022": {
           "label": "UL1973 Edition 3: 2022",
           "description": "Standard For Batteries For Use In Stationary, Vehicle Auxiliary Power And Light Electric Rail (LER) Applications."
+        },
+        "IEEE2030_5_2023": {
+          "label": "IEEE2030.5 : 2023",
+          "description": "IEEE Draft Standard for Smart Energy Profile Application Protocol\t"
         }
       }
     },

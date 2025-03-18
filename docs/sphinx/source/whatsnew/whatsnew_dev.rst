@@ -35,6 +35,7 @@ Unit changes
  * Adds QualifyingAgency enum to EntityRoleItemType Enum List (#338)
  * Adds UEI and FEIN to IdentifierTypeItemType Enum list (#338)
  * Adds BacksheetColorItemType and FrameColorItemType, populated enum list for each. (#342)
+ * Adds IEEE2030_5_2023 enum to StandardTypeItemType
 
 
 Bug fixes
