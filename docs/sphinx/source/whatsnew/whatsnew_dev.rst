@@ -20,6 +20,7 @@ Object changes
  * Adds QualificationListingDate, QualifyingAgencyName, QualificationExpirationDate, QualificationNotes, Entity inheritance to ProdQualification (#338)
  * Adds Description to Entity, CECListingDate and CECNotes to ProdBattery(#338)
  * Adds CommunicationStacks, CommunicationStack (#346)
+ * Removes CommunicationProtocol (#346)
 
 Unit changes
 ~~~~~~~~~~~~
@@ -41,6 +42,7 @@ Unit changes
  * Adds SEP2, DNP3, Modbus to ApplicationProtocolTypeItemType Enum List (#346)
  * Adds Ethernet, RS485, RS232 to PhysicalLayerTypeItemType (#346)
  * Adds TCP, Serial to TransportLayerTypeItemType (#346)
+ * Removes CommunicationProtocolItemType, CommunicationTransportLayerItemType	 (#346)
 
 
 Bug fixes
