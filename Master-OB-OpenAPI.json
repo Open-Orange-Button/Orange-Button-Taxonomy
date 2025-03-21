@@ -15172,8 +15172,8 @@
           },
           {
             "type": "object",
-            "description": "ApplicationProtocol",
-            "x-ob-item-type": "ApplicationProtocolItemType",
+            "description": "Protocol for Application Layer as referenced in OSI 7-layer stack",
+            "x-ob-item-type": "ApplicationProtocolTypeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -15189,8 +15189,8 @@
           },
           {
             "type": "object",
-            "description": "TransportLayer",
-            "x-ob-item-type": "TransportLayerItemType",
+            "description": "Protocol for Transport Layer as referenced in OSI 7-layer stack",
+            "x-ob-item-type": "TransportLayerTypeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -15206,8 +15206,8 @@
           },
           {
             "type": "object",
-            "description": "PhysicalLayer",
-            "x-ob-item-type": "PhysicalLayerItemType",
+            "description": "Protocol for Physical Layer as referenced in OSI 7-layer stack",
+            "x-ob-item-type": "PhysicalLayerTypeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -22034,7 +22034,7 @@
         }
       }
     },
-    "ApplicationProtocolItemType": {
+    "ApplicationProtocolTypeItemType": {
       "description": "",
       "enums": {
         "SEP2": {
@@ -22051,7 +22051,7 @@
         }
       }
     },
-    "TransportLayerItemType": {
+    "TransportLayerTypeItemType": {
       "description": "",
       "enums": {
         "TCP": {
@@ -22064,7 +22064,7 @@
         }
       }
     },
-    "PhysicalLayerItemType": {
+    "PhysicalLayerTypeItemType": {
       "description": "",
       "enums": {
         "Ethernet": {
