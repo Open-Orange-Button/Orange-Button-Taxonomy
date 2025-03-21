@@ -20335,23 +20335,6 @@
         }
       }
     },
-    "CommunicationTransportLayerItemType": {
-      "description": "",
-      "enums": {
-        "Ethernet": {
-          "label": "Ethernet",
-          "description": ""
-        },
-        "WIFI": {
-          "label": "WIFI",
-          "description": ""
-        },
-        "Zigbee": {
-          "label": "Zigbee",
-          "description": ""
-        }
-      }
-    },
     "ModuleRatingConditionItemType": {
       "description": "Conditions at which PV module electrical ratings are made.",
       "enums": {
