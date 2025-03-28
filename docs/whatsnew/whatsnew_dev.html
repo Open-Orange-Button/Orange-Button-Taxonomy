@@ -220,6 +220,7 @@
 <li><p>Adds UtilityID, InstallerID, OriginatorID, OriginatorName, PreparerID, HOAID, InsurerID, OwnerID, CertificationAgencyID, TestLabID (#339)</p></li>
 <li><p>Adds QualificationListingDate, QualifyingAgencyName, QualifyingAgencyID, QualificationExpirationDate, QualificationNotes (#338)</p></li>
 <li><p>Removes CECListingDate and CECNotes (#338)</p></li>
+<li><p>Adds TransportLayer, PhysicalLayer, ApplicationProtocol (#346)</p></li>
 </ul>
 </div></blockquote>
 </section>
@@ -232,6 +233,8 @@
 <li><p>Adds ProdQualifications, ProdQualification, QualifyingAgency (#338)</p></li>
 <li><p>Adds QualificationListingDate, QualifyingAgencyName, QualificationExpirationDate, QualificationNotes, Entity inheritance to ProdQualification (#338)</p></li>
 <li><p>Adds Description to Entity, CECListingDate and CECNotes to ProdBattery(#338)</p></li>
+<li><p>Adds CommunicationStacks, CommunicationStack (#346)</p></li>
+<li><p>Removes CommunicationProtocol (#346)</p></li>
 </ul>
 </div></blockquote>
 </section>
@@ -253,6 +256,11 @@
 <li><p>Adds QualifyingAgency enum to EntityRoleItemType Enum List (#338)</p></li>
 <li><p>Adds UEI and FEIN to IdentifierTypeItemType Enum list (#338)</p></li>
 <li><p>Adds BacksheetColorItemType and FrameColorItemType, populated enum list for each. (#342)</p></li>
+<li><p>Adds TransportLayerTypeItemType, PhysicalLayerTypeItemType, ApplicationProtocolTypeItemType (#346)</p></li>
+<li><p>Adds SEP2, DNP3, Modbus to ApplicationProtocolTypeItemType Enum List (#346)</p></li>
+<li><p>Adds Ethernet, RS485, RS232 to PhysicalLayerTypeItemType (#346)</p></li>
+<li><p>Adds TCP, Serial to TransportLayerTypeItemType (#346)</p></li>
+<li><p>Removes CommunicationProtocolItemType, CommunicationTransportLayerItemType    (#346)</p></li>
 </ul>
 </div></blockquote>
 </section>
@@ -270,6 +278,7 @@
 <blockquote>
 <div><ul class="simple">
 <li><p>Kevin Kirkley (kevinkirkl3y)</p></li>
+<li><p>Yaswanth Devisetti (Yaswanthd9)</p></li>
 </ul>
 </div></blockquote>
 </section>
