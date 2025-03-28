@@ -10937,6 +10937,9 @@
           },
           "LossReport": {
             "$ref": "#/components/schemas/LossReport"
+          },
+          "OMIssues": {
+            "$ref": "#/components/schemas/OMIssues"
           }
         },
         "x-ob-usage-tips": "Use EnergyAC for total energy production over the report period, and use Production to contain arrays of measured energy, power, etc. Use ExpectedEnergyModel for modeled energy over the report period calculated from observed weather, and use ForecastEnergyModels for modeled energy using other weather sources (e.g., TMY)."

@@ -19,6 +19,7 @@ Object changes
  * Adds ProdQualifications, ProdQualification, QualifyingAgency (#338)
  * Adds QualificationListingDate, QualifyingAgencyName, QualificationExpirationDate, QualificationNotes, Entity inheritance to ProdQualification (#338)
  * Adds Description to Entity, CECListingDate and CECNotes to ProdBattery(#338)
+ * Adds OMIssues object array to OperatingReport object (#349)
  * Adds CommunicationStacks, CommunicationStack (#346)
  * Removes CommunicationProtocol (#346)
 
