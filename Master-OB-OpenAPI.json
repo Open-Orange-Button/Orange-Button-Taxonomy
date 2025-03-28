@@ -93,6 +93,9 @@
           },
           "ProdQualifications": {
             "$ref": "#/components/schemas/ProdQualifications"
+          },
+          "CommunicationStacks": {
+            "$ref": "#/components/schemas/CommunicationStacks"
           }
         },
         "type": "object"
@@ -8204,9 +8207,6 @@
               "TemperatureMaximumOperating": {
                 "$ref": "#/components/schemas/TemperatureMaximumOperating"
               },
-              "CommunicationProtocol": {
-                "$ref": "#/components/schemas/CommunicationProtocol"
-              },
               "DCInput": {
                 "$ref": "#/components/schemas/DCInput"
               },
@@ -8433,23 +8433,6 @@
             "x-ob-sample-value": {
               "Value": 3000,
               "Unit": "m"
-            }
-          }
-        ]
-      },
-      "CommunicationProtocol": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Micro-grid communication protocol",
-            "x-ob-item-type": "CommunicationProtocolItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "RS485"
             }
           }
         ]
@@ -9332,9 +9315,6 @@
               "BatteryChemistryType": {
                 "$ref": "#/components/schemas/BatteryChemistryType"
               },
-              "CommunicationProtocol": {
-                "$ref": "#/components/schemas/CommunicationProtocol"
-              },
               "EnergyCapacityNominal": {
                 "$ref": "#/components/schemas/EnergyCapacityNominal"
               },
@@ -9710,9 +9690,6 @@
               },
               "CECPBIMeter": {
                 "$ref": "#/components/schemas/CECPBIMeter"
-              },
-              "CommunicationProtocol": {
-                "$ref": "#/components/schemas/CommunicationProtocol"
               },
               "DisplayProximity": {
                 "$ref": "#/components/schemas/DisplayProximity"
@@ -15169,6 +15146,81 @@
             }
           }
         ]
+      },
+      "CommunicationStack": {
+        "type": "object",
+        "description": "An object that describes commmunication capabilities",
+        "properties": {
+          "CertificationStandard": {
+            "$ref": "#/components/schemas/CertificationStandard"
+          },
+          "ApplicationProtocol": {
+            "$ref": "#/components/schemas/ApplicationProtocol"
+          },
+          "TransportLayer": {
+            "$ref": "#/components/schemas/TransportLayer"
+          },
+          "PhysicalLayer": {
+            "$ref": "#/components/schemas/PhysicalLayer"
+          }
+        }
+      },
+      "ApplicationProtocol": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Protocol for Application Layer as referenced in OSI 7-layer stack",
+            "x-ob-item-type": "ApplicationProtocolTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Modbus"
+            }
+          }
+        ]
+      },
+      "TransportLayer": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Protocol for Transport Layer as referenced in OSI 7-layer stack",
+            "x-ob-item-type": "TransportLayerTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "TCP"
+            }
+          }
+        ]
+      },
+      "PhysicalLayer": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Protocol for Physical Layer as referenced in OSI 7-layer stack",
+            "x-ob-item-type": "PhysicalLayerTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Ethernet"
+            }
+          }
+        ]
+      },
+      "CommunicationStacks": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/CommunicationStack"
+        }
       }
     }
   },
@@ -20207,31 +20259,6 @@
         }
       }
     },
-    "CommunicationProtocolItemType": {
-      "description": "",
-      "enums": {
-        "RS485": {
-          "label": "RS-485",
-          "description": ""
-        },
-        "CAN2_0B": {
-          "label": "CAN 2.0 B",
-          "description": ""
-        },
-        "REbusDCNanogrid": {
-          "label": "REbus DC Nanogrid",
-          "description": ""
-        },
-        "Modbus": {
-          "label": "Modbus",
-          "description": ""
-        },
-        "TCPIP": {
-          "label": "TCP/IP",
-          "description": ""
-        }
-      }
-    },
     "StipulationTypeItemType": {
       "description": "List of stipulation types",
       "enums": {
@@ -20305,23 +20332,6 @@
         "BoostBuck": {
           "label": "Boost-Buck",
           "description": "This optimizer is Boost-Buck"
-        }
-      }
-    },
-    "CommunicationTransportLayerItemType": {
-      "description": "",
-      "enums": {
-        "Ethernet": {
-          "label": "Ethernet",
-          "description": ""
-        },
-        "WIFI": {
-          "label": "WIFI",
-          "description": ""
-        },
-        "Zigbee": {
-          "label": "Zigbee",
-          "description": ""
         }
       }
     },
@@ -22003,6 +22013,53 @@
         },
         "Glass": {
           "label": "Glass",
+          "description": ""
+        }
+      }
+    },
+    "ApplicationProtocolTypeItemType": {
+      "description": "",
+      "enums": {
+        "SEP2": {
+          "label": "Smart Energy Profile 2",
+          "description": ""
+        },
+        "DNP3": {
+          "label": "Distributed Network Protocol 3 ",
+          "description": ""
+        },
+        "Modbus": {
+          "label": "SunSpec Modbus",
+          "description": ""
+        }
+      }
+    },
+    "TransportLayerTypeItemType": {
+      "description": "",
+      "enums": {
+        "TCP": {
+          "label": "TCP",
+          "description": ""
+        },
+        "Serial": {
+          "label": "Serial",
+          "description": ""
+        }
+      }
+    },
+    "PhysicalLayerTypeItemType": {
+      "description": "",
+      "enums": {
+        "Ethernet": {
+          "label": "Ethernet",
+          "description": ""
+        },
+        "RS485": {
+          "label": "RS485",
+          "description": ""
+        },
+        "RS232": {
+          "label": "RS232",
           "description": ""
         }
       }
