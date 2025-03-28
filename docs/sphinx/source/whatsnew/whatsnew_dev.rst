@@ -10,6 +10,7 @@ Element changes
  * Adds UtilityID, InstallerID, OriginatorID, OriginatorName, PreparerID, HOAID, InsurerID, OwnerID, CertificationAgencyID, TestLabID (#339)
  * Adds QualificationListingDate, QualifyingAgencyName, QualifyingAgencyID, QualificationExpirationDate, QualificationNotes (#338)
  * Removes CECListingDate and CECNotes (#338)
+ * Adds TransportLayer, PhysicalLayer, ApplicationProtocol (#346)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -18,6 +19,8 @@ Object changes
  * Adds ProdQualifications, ProdQualification, QualifyingAgency (#338)
  * Adds QualificationListingDate, QualifyingAgencyName, QualificationExpirationDate, QualificationNotes, Entity inheritance to ProdQualification (#338)
  * Adds Description to Entity, CECListingDate and CECNotes to ProdBattery(#338)
+ * Adds CommunicationStacks, CommunicationStack (#346)
+ * Removes CommunicationProtocol (#346)
 
 Unit changes
 ~~~~~~~~~~~~
@@ -36,6 +39,11 @@ Unit changes
  * Adds UEI and FEIN to IdentifierTypeItemType Enum list (#338)
  * Adds BacksheetColorItemType and FrameColorItemType, populated enum list for each. (#342)
  * Adds IEEE2030_5_2023 enum to StandardTypeItemType
+ * Adds TransportLayerTypeItemType, PhysicalLayerTypeItemType, ApplicationProtocolTypeItemType (#346)
+ * Adds SEP2, DNP3, Modbus to ApplicationProtocolTypeItemType Enum List (#346)
+ * Adds Ethernet, RS485, RS232 to PhysicalLayerTypeItemType (#346)
+ * Adds TCP, Serial to TransportLayerTypeItemType (#346)
+ * Removes CommunicationProtocolItemType, CommunicationTransportLayerItemType	 (#346)
 
 
 Bug fixes
@@ -50,3 +58,4 @@ Documentation
 Contributors
 ~~~~~~~~~~~~
  * Kevin Kirkley (kevinkirkl3y)
+ * Yaswanth Devisetti (Yaswanthd9)
