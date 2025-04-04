@@ -9,8 +9,7 @@ Primitives
 ----------
 
 There are six Primitives:
-* Value. Value contains the value of an Element. In an OB instance document, the json type of Value can be string, boolean, integer, or number,
- or an array of string, boolean, integer or number.
+* Value. Value contains the value of an Element. In an OB instance document, the json type of Value can be string, boolean, integer, or number, or an array of string, boolean, integer or number.
 * StartTime. An ISO8601-compliant string defining the start of a time interval, or the single time, associated with Value.
 * EndTime. An ISO8601-compliant string defining the end of a time interval associated with Value. EndTime is not used when a single StartTime is associated with a Value.
 * Decimals. The number of digits after the decimal point of a Value with json type number.

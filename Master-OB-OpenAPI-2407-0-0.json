@@ -3,7 +3,7 @@
   "info": {
     "version": "1.1.7",
     "title": "OB OpenAPI Taxonomy",
-    "description": "OB OpenAPI Definitions For Orange Button."
+    "description": "OB OpenAPI Definitions For Orange Button version 2407.0.0."
   },
   "paths": {},
   "servers": [],
@@ -90,12 +90,6 @@
           },
           "ManufacturerUPC": {
             "$ref": "#/components/schemas/ManufacturerUPC"
-          },
-          "ProdQualifications": {
-            "$ref": "#/components/schemas/ProdQualifications"
-          },
-          "CommunicationStacks": {
-            "$ref": "#/components/schemas/CommunicationStacks"
           }
         },
         "type": "object"
@@ -3999,6 +3993,23 @@
           }
         ]
       },
+      "ServiceProvider": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The name of the person or organization providing the service",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Hampton's Trenching"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
       "ServiceLineItems": {
         "type": "array",
         "items": {
@@ -6086,6 +6097,9 @@
               "IsHybrid": {
                 "$ref": "#/components/schemas/IsHybrid"
               },
+              "CECNotes": {
+                "$ref": "#/components/schemas/CECNotes"
+              },
               "HasMeter": {
                 "$ref": "#/components/schemas/HasMeter"
               },
@@ -6097,6 +6111,9 @@
               },
               "IsPVInputCapable": {
                 "$ref": "#/components/schemas/IsPVInputCapable"
+              },
+              "CECListingDate": {
+                "$ref": "#/components/schemas/CECListingDate"
               },
               "RevenueGrade": {
                 "$ref": "#/components/schemas/RevenueGrade"
@@ -7026,6 +7043,9 @@
               "Warranties": {
                 "$ref": "#/components/schemas/Warranties"
               },
+              "CECNotes": {
+                "$ref": "#/components/schemas/CECNotes"
+              },
               "PowerSTC": {
                 "$ref": "#/components/schemas/PowerSTC"
               },
@@ -7040,6 +7060,9 @@
               },
               "TemperatureCoefficientMaxPowerVoltage": {
                 "$ref": "#/components/schemas/TemperatureCoefficientMaxPowerVoltage"
+              },
+              "CECListingDate": {
+                "$ref": "#/components/schemas/CECListingDate"
               },
               "ModuleArea": {
                 "$ref": "#/components/schemas/ModuleArea"
@@ -7471,7 +7494,7 @@
           {
             "type": "object",
             "description": "What Color is the Module backsheet?",
-            "x-ob-item-type": "BacksheetColorItemType",
+            "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -7505,7 +7528,7 @@
           {
             "type": "object",
             "description": "What Color is the Module Frame?",
-            "x-ob-item-type": "FrameColorItemType",
+            "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -8108,9 +8131,6 @@
           },
           "EntityRole": {
             "$ref": "#/components/schemas/EntityRole"
-          },
-          "Description": {
-            "$ref": "#/components/schemas/Description"
           }
         }
       },
@@ -8207,6 +8227,9 @@
               "TemperatureMaximumOperating": {
                 "$ref": "#/components/schemas/TemperatureMaximumOperating"
               },
+              "CommunicationProtocol": {
+                "$ref": "#/components/schemas/CommunicationProtocol"
+              },
               "DCInput": {
                 "$ref": "#/components/schemas/DCInput"
               },
@@ -8289,9 +8312,6 @@
               },
               "URL": {
                 "$ref": "#/components/schemas/URL"
-              },
-              "UtilityID": {
-                "$ref": "#/components/schemas/UtilityID"
               }
             },
             "x-ob-usage-tips": ""
@@ -8386,9 +8406,6 @@
             "properties": {
               "InstallerName": {
                 "$ref": "#/components/schemas/InstallerName"
-              },
-              "InstallerID": {
-                "$ref": "#/components/schemas/InstallerID"
               }
             }
           }
@@ -8402,14 +8419,7 @@
           {
             "type": "object",
             "description": "Entity that originates a project",
-            "properties": {
-              "OriginatorID": {
-                "$ref": "#/components/schemas/OriginatorID"
-              },
-              "OriginatorName": {
-                "$ref": "#/components/schemas/OriginatorName"
-              }
-            }
+            "properties": {}
           }
         ]
       },
@@ -8433,6 +8443,23 @@
             "x-ob-sample-value": {
               "Value": 3000,
               "Unit": "m"
+            }
+          }
+        ]
+      },
+      "CommunicationProtocol": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Micro-grid communication protocol",
+            "x-ob-item-type": "CommunicationProtocolItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "RS485"
             }
           }
         ]
@@ -8485,12 +8512,6 @@
           },
           "ContractType": {
             "$ref": "#/components/schemas/ContractType"
-          },
-          "ContractTerms": {
-            "$ref": "#/components/schemas/ContractTerms"
-          },
-          "Scope": {
-            "$ref": "#/components/schemas/Scope"
           }
         }
       },
@@ -9315,6 +9336,9 @@
               "BatteryChemistryType": {
                 "$ref": "#/components/schemas/BatteryChemistryType"
               },
+              "CommunicationProtocol": {
+                "$ref": "#/components/schemas/CommunicationProtocol"
+              },
               "EnergyCapacityNominal": {
                 "$ref": "#/components/schemas/EnergyCapacityNominal"
               },
@@ -9368,6 +9392,23 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "A.4.0.B"
+            }
+          }
+        ]
+      },
+      "CECListingDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Date that CEC listed the product with the certification.",
+            "x-ob-item-type": "DateItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2021-12-25"
             }
           }
         ]
@@ -9535,6 +9576,21 @@
           }
         ]
       },
+      "CECNotes": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Notes from California Energy Commission (CEC) equipment list.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
       "IsSelectiveOptimization": {
         "allOf": [
           {
@@ -9663,7 +9719,7 @@
           },
           {
             "type": "object",
-            "description": "Name of the issuing data source, often referred to as the Issuer.",
+            "description": "Name of the data source.",
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -9682,6 +9738,12 @@
             "type": "object",
             "description": "A device used to measure generated and/or consumed energy.",
             "properties": {
+              "CECNotes": {
+                "$ref": "#/components/schemas/CECNotes"
+              },
+              "CECListingDate": {
+                "$ref": "#/components/schemas/CECListingDate"
+              },
               "AccuracyClassANSI": {
                 "$ref": "#/components/schemas/AccuracyClassANSI"
               },
@@ -9690,6 +9752,9 @@
               },
               "CECPBIMeter": {
                 "$ref": "#/components/schemas/CECPBIMeter"
+              },
+              "CommunicationProtocol": {
+                "$ref": "#/components/schemas/CommunicationProtocol"
               },
               "DisplayProximity": {
                 "$ref": "#/components/schemas/DisplayProximity"
@@ -10762,9 +10827,6 @@
               },
               "EntityRole": {
                 "$ref": "#/components/schemas/EntityRole"
-              },
-              "PreparerID": {
-                "$ref": "#/components/schemas/PreparerID"
               }
             }
           }
@@ -10937,9 +10999,6 @@
           },
           "LossReport": {
             "$ref": "#/components/schemas/LossReport"
-          },
-          "OMIssues": {
-            "$ref": "#/components/schemas/OMIssues"
           }
         },
         "x-ob-usage-tips": "Use EnergyAC for total energy production over the report period, and use Production to contain arrays of measured energy, power, etc. Use ExpectedEnergyModel for modeled energy over the report period calculated from observed weather, and use ForecastEnergyModels for modeled energy using other weather sources (e.g., TMY)."
@@ -11229,9 +11288,6 @@
               },
               "URL": {
                 "$ref": "#/components/schemas/URL"
-              },
-              "HOAID": {
-                "$ref": "#/components/schemas/HOAID"
               }
             },
             "x-ob-usage-tips": ""
@@ -11313,9 +11369,6 @@
             "properties": {
               "InsurerName": {
                 "$ref": "#/components/schemas/InsurerName"
-              },
-              "InsurerID": {
-                "$ref": "#/components/schemas/InsurerID"
               }
             }
           }
@@ -11349,9 +11402,6 @@
             "properties": {
               "OwnerName": {
                 "$ref": "#/components/schemas/OwnerName"
-              },
-              "OwnerID": {
-                "$ref": "#/components/schemas/OwnerID"
               }
             }
           }
@@ -12350,7 +12400,7 @@
           },
           {
             "type": "object",
-            "description": "The IdentifierType describes the format of an Identifier.",
+            "description": "The type of unique identifier used to represent a unique datapoint as the AlternativeIdentifier. ",
             "x-ob-item-type": "IdentifierTypeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -13372,9 +13422,7 @@
             "x-ob-item-type": "DateTimeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "2021-12-25"
-            }
+            "x-ob-sample-value": {}
           }
         ]
       },
@@ -13617,9 +13665,6 @@
               },
               "CertificationAgencyName": {
                 "$ref": "#/components/schemas/CertificationAgencyName"
-              },
-              "CertificationAgencyID": {
-                "$ref": "#/components/schemas/CertificationAgencyID"
               }
             }
           }
@@ -13755,9 +13800,6 @@
             "properties": {
               "TestLabName": {
                 "$ref": "#/components/schemas/TestLabName"
-              },
-              "TestLabID": {
-                "$ref": "#/components/schemas/TestLabID"
               }
             }
           }
@@ -14325,6 +14367,21 @@
           }
         ]
       },
+      "ContractType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Types of agreements and financial arrangements for adopting solar power, defining ownership, financing, and operational responsibilities.",
+            "x-ob-item-type": "ContractType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
       "LoanID": {
         "allOf": [
           {
@@ -14388,841 +14445,6 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/TaskResult"
-        }
-      },
-      "ProgramName": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Name of the Program.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "Use this field to store the name of the program that the site is enrolled in.",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "SeasonStartDate": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Date after which the program is effective for the season. Events are generally created after the season start",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "Aggregator": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Entity"
-          },
-          {
-            "type": "object",
-            "description": "An entity responsible for planning, scheduling, accounting, billing, and settlement for energy deliveries from the aggregator's portfolio of sellers and/or buyers.",
-            "properties": {
-              "AggregatorName": {
-                "$ref": "#/components/schemas/AggregatorName"
-              },
-              "AggregatorType": {
-                "$ref": "#/components/schemas/AggregatorType"
-              },
-              "AggregatorID": {
-                "$ref": "#/components/schemas/AggregatorID"
-              }
-            }
-          }
-        ]
-      },
-      "AggregatorType": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "An AggregatorType describes the purpose or the type of service being provided by the Aggregator.",
-            "x-ob-item-type": "AggregatorTypeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "Energy"
-            }
-          }
-        ]
-      },
-      "AggregatorName": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The name of the entity responsible for providing the aggregation of services.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "ServiceSchedule": {
-        "type": "object",
-        "description": "Schedule level terms for the contract",
-        "properties": {
-          "ServiceLevelAgreement": {
-            "$ref": "#/components/schemas/ServiceLevelAgreement"
-          },
-          "PaymentRateCapacity": {
-            "$ref": "#/components/schemas/PaymentRateCapacity"
-          },
-          "PaymentRateEnergy": {
-            "$ref": "#/components/schemas/PaymentRateEnergy"
-          },
-          "PaymentRateDuration": {
-            "$ref": "#/components/schemas/PaymentRateDuration"
-          },
-          "PaymentRatePerEvent": {
-            "$ref": "#/components/schemas/PaymentRatePerEvent"
-          },
-          "EventDurationMax": {
-            "$ref": "#/components/schemas/EventDurationMax"
-          },
-          "EventsMax": {
-            "$ref": "#/components/schemas/EventsMax"
-          },
-          "StartDateTime": {
-            "$ref": "#/components/schemas/StartDateTime"
-          },
-          "EndDateTime": {
-            "$ref": "#/components/schemas/EndDateTime"
-          }
-        }
-      },
-      "ContractTerm": {
-        "type": "object",
-        "description": "Specification of the terms for the contract",
-        "properties": {
-          "ServiceSchedules": {
-            "$ref": "#/components/schemas/ServiceSchedules"
-          },
-          "ServiceRequester": {
-            "$ref": "#/components/schemas/ServiceRequester"
-          },
-          "ServiceProvider": {
-            "$ref": "#/components/schemas/ServiceProvider"
-          },
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "Comments": {
-            "$ref": "#/components/schemas/Comments"
-          },
-          "ProdType": {
-            "$ref": "#/components/schemas/ProdType"
-          },
-          "CapacityAC": {
-            "$ref": "#/components/schemas/CapacityAC"
-          },
-          "CapacityDC": {
-            "$ref": "#/components/schemas/CapacityDC"
-          }
-        }
-      },
-      "ContractTerms": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ContractTerm"
-        }
-      },
-      "ServiceSchedules": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ServiceSchedule"
-        }
-      },
-      "ServiceProvider": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Entity"
-          },
-          {
-            "type": "object",
-            "description": "Entity responsible for providing a service to another party that is a signatory in the contract",
-            "properties": {
-              "ServiceProviderName": {
-                "$ref": "#/components/schemas/ServiceProviderName"
-              },
-              "ServiceProviderID": {
-                "$ref": "#/components/schemas/ServiceProviderID"
-              }
-            }
-          }
-        ]
-      },
-      "ServiceProviderName": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Name of the Service Provider",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "ServiceProviderID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Unique identifier for the Service Provider",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "ServiceRequester": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Entity"
-          },
-          {
-            "type": "object",
-            "description": "Entity that is the beneficiary of the service from the ServiceProvider",
-            "properties": {
-              "ServiceRequesterName": {
-                "$ref": "#/components/schemas/ServiceRequesterName"
-              },
-              "ServiceRequesterID": {
-                "$ref": "#/components/schemas/ServiceRequesterID"
-              }
-            }
-          }
-        ]
-      },
-      "ServiceRequesterName": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Name of the Service Requester",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "ServiceRequesterID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Unique identifier for the Service Requester",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "ContractType": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Consolidated Contract Types",
-            "x-ob-item-type": "ContractTypeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "SignUpAmount": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Amount paid by service requester for signing up in the program.",
-            "x-ob-item-type": "MonetaryItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "ContractES": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Contract"
-          },
-          {
-            "type": "object",
-            "description": "Contract describing the energy services between the service provider and the service requester.",
-            "properties": {
-              "EffectiveDate": {
-                "$ref": "#/components/schemas/EffectiveDate"
-              },
-              "ExpirationDate": {
-                "$ref": "#/components/schemas/ExpirationDate"
-              },
-              "Aggregator": {
-                "$ref": "#/components/schemas/Aggregator"
-              },
-              "ContractTerms": {
-                "$ref": "#/components/schemas/ContractTerms"
-              },
-              "ProgramName": {
-                "$ref": "#/components/schemas/ProgramName"
-              },
-              "SignUpAmount": {
-                "$ref": "#/components/schemas/SignUpAmount"
-              }
-            }
-          }
-        ]
-      },
-      "PaymentRateCapacity": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Capacity payment per unit of power",
-            "x-ob-item-type": "MonetaryPerPowerItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "Use this to store the performance based incentive in $/kW",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "PaymentRateEnergy": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Payment per unit of energy.",
-            "x-ob-item-type": "MonetaryPerEnergyItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "PaymentRateDuration": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Payment rate per unit of time. For e.g. 200 USD/hour",
-            "x-ob-item-type": "MonetaryPerDurationItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "USD_per_h",
-              "Value": 200
-            }
-          }
-        ]
-      },
-      "PaymentRatePerEvent": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Payment for every event.",
-            "x-ob-item-type": "MonetaryItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "AggregatorID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Unique identifier that represents the Aggregator.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "1505"
-            }
-          }
-        ]
-      },
-      "EventDurationMax": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementInteger"
-          },
-          {
-            "type": "object",
-            "description": "Maximum amount of time that an event can occur.",
-            "x-ob-item-type": "DurationItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "MM",
-              "Value": 90
-            }
-          }
-        ]
-      },
-      "EventsMax": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementInteger"
-          },
-          {
-            "type": "object",
-            "description": "Maximum number of Events.",
-            "x-ob-item-type": "IntegerItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "StartDateTime": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Start datetime in ISO 8601 standard format where the time portion is optional. ",
-            "x-ob-item-type": "DateTimeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "EndDateTime": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "End datetime in ISO 8601 standard format where the time portion is optional. ",
-            "x-ob-item-type": "DateTimeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "CertificationAgencyID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Unique identifier that represents the CertificationAgency.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "6c5edfdf-74d2-47f9-8e2d-423376916567"
-            }
-          }
-        ]
-      },
-      "HOAID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Unique identifier for the HOA.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "6b208a6b-358a-442f-a769-75c9059a7fe3"
-            }
-          }
-        ]
-      },
-      "InstallerID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Unique identifier of the Installer.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "6b208a6b-358a-442f-a769-75c9059a7fe3"
-            }
-          }
-        ]
-      },
-      "InsurerID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Unique identifier of the Insurer.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "6b208a6b-358a-442f-a769-75c9059a7fe3"
-            }
-          }
-        ]
-      },
-      "OriginatorName": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Name of the Originator",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "Blu Opportunity"
-            }
-          }
-        ]
-      },
-      "OriginatorID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Unique identifier of the Originator",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "6b208a6b-358a-442f-a769-75c9059a7fe3"
-            }
-          }
-        ]
-      },
-      "OwnerID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Unique identifier of the Owner.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "6b208a6b-358a-442f-a769-75c9059a7fe3"
-            }
-          }
-        ]
-      },
-      "PreparerID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Unique identifier of the Preparer.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "6b208a6b-358a-442f-a769-75c9059a7fe3"
-            }
-          }
-        ]
-      },
-      "TestLabID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Unique identifier of the Test Lab.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "6b208a6b-358a-442f-a769-75c9059a7fe3"
-            }
-          }
-        ]
-      },
-      "UtilityID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Unique identifier of the Utility.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "6b208a6b-358a-442f-a769-75c9059a7fe3"
-            }
-          }
-        ]
-      },
-      "QualificationListingDate": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Date that Entity listed the product as qualified.",
-            "x-ob-item-type": "DateItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "2021-12-25"
-            }
-          }
-        ]
-      },
-      "QualificationExpirationDate": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Date the listed Qualification expires. ",
-            "x-ob-item-type": "DateItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "2021-12-25"
-            }
-          }
-        ]
-      },
-      "QualificationNotes": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Notes pertaining to the listed Qualification.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "ProdQualification": {
-        "type": "object",
-        "description": "Qualification that a specific Product meets requirements, usually from a regulatory or utility entity. Qualification differs from Certification, which attests that a product complies with a technical standard.",
-        "properties": {
-          "QualificationExpirationDate": {
-            "$ref": "#/components/schemas/QualificationExpirationDate"
-          },
-          "QualificationListingDate": {
-            "$ref": "#/components/schemas/QualificationListingDate"
-          },
-          "QualificationNotes": {
-            "$ref": "#/components/schemas/QualificationNotes"
-          },
-          "UpdateLast": {
-            "$ref": "#/components/schemas/UpdateLast"
-          },
-          "QualifyingAgency": {
-            "$ref": "#/components/schemas/QualifyingAgency"
-          }
-        }
-      },
-      "ProdQualifications": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ProdQualification"
-        }
-      },
-      "QualifyingAgency": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Entity"
-          },
-          {
-            "type": "object",
-            "description": "Agency that lists the Product as qualified.",
-            "properties": {
-              "QualifyingAgencyID": {
-                "$ref": "#/components/schemas/QualifyingAgencyID"
-              },
-              "QualifyingAgencyName": {
-                "$ref": "#/components/schemas/QualifyingAgencyName"
-              }
-            }
-          }
-        ]
-      },
-      "QualifyingAgencyID": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Unique identifier of the Qualifying Agency.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "6b208a6b-358a-442f-a769-75c9059a7fe3"
-            }
-          }
-        ]
-      },
-      "QualifyingAgencyName": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Name of the Entity that listed the Product as qualified.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "CEC"
-            }
-          }
-        ]
-      },
-      "CommunicationStack": {
-        "type": "object",
-        "description": "An object that describes commmunication capabilities",
-        "properties": {
-          "CertificationStandard": {
-            "$ref": "#/components/schemas/CertificationStandard"
-          },
-          "ApplicationProtocol": {
-            "$ref": "#/components/schemas/ApplicationProtocol"
-          },
-          "TransportLayer": {
-            "$ref": "#/components/schemas/TransportLayer"
-          },
-          "PhysicalLayer": {
-            "$ref": "#/components/schemas/PhysicalLayer"
-          }
-        }
-      },
-      "ApplicationProtocol": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Protocol for Application Layer as referenced in OSI 7-layer stack",
-            "x-ob-item-type": "ApplicationProtocolTypeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "Modbus"
-            }
-          }
-        ]
-      },
-      "TransportLayer": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Protocol for Transport Layer as referenced in OSI 7-layer stack",
-            "x-ob-item-type": "TransportLayerTypeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "TCP"
-            }
-          }
-        ]
-      },
-      "PhysicalLayer": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Protocol for Physical Layer as referenced in OSI 7-layer stack",
-            "x-ob-item-type": "PhysicalLayerTypeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "Ethernet"
-            }
-          }
-        ]
-      },
-      "CommunicationStacks": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CommunicationStack"
         }
       }
     }
@@ -18341,8 +17563,8 @@
     "ContactTypeItemType": {
       "description": "",
       "enums": {
-        "Owner": {
-          "label": "Owner",
+        "Homeowner": {
+          "label": "Homeowner",
           "description": ""
         },
         "OffTaker": {
@@ -18412,10 +17634,6 @@
         "Technician": {
           "label": "Technician",
           "description": ""
-        },
-        "Occupant": {
-          "label": "Occupant",
-          "description": "An occupant is an individual or entity that resides in or uses a space, building, or property, typically for purposes such as living, working, or conducting business. Occupants may include tenant or resident, depending on the context."
         }
       }
     },
@@ -18654,14 +17872,6 @@
         },
         "ProdWire": {
           "label": "Wire",
-          "description": ""
-        },
-        "ProdGenerator": {
-          "label": "Generator",
-          "description": ""
-        },
-        "ProdThermostat": {
-          "label": "Thermostat",
           "description": ""
         }
       }
@@ -20178,22 +19388,6 @@
         "CertificationAgency": {
           "label": "Certification Agency",
           "description": ""
-        },
-        "Aggregator": {
-          "label": "Aggregator",
-          "description": "An entity responsible for planning, scheduling, accounting, billing, and settlement for energy deliveries from the aggregator's portfolio of sellers and/or buyers. Aggregators seek to bring together customers or generators so they can buy or sell power in bulk, making a profit on the transaction."
-        },
-        "PropertyOwner": {
-          "label": "Property Owner",
-          "description": "The entity or person that owns/has authority to manage the property"
-        },
-        "Financier": {
-          "label": "Financier",
-          "description": "The entity providing some or all of the financing "
-        },
-        "QualifyingAgency": {
-          "label": "Qualifying Agency",
-          "description": ""
         }
       }
     },
@@ -20255,10 +19449,31 @@
         "Other": {
           "label": "Other",
           "description": "Other"
+        }
+      }
+    },
+    "CommunicationProtocolItemType": {
+      "description": "",
+      "enums": {
+        "RS485": {
+          "label": "RS-485",
+          "description": ""
         },
-        "LeadAcid": {
-          "label": "Lead Acid",
-          "description": "Lead Acid (Non-specific) Please reference detailed Lead Acid type when available."
+        "CAN2_0B": {
+          "label": "CAN 2.0 B",
+          "description": ""
+        },
+        "REbusDCNanogrid": {
+          "label": "REbus DC Nanogrid",
+          "description": ""
+        },
+        "Modbus": {
+          "label": "Modbus",
+          "description": ""
+        },
+        "TCPIP": {
+          "label": "TCP/IP",
+          "description": ""
         }
       }
     },
@@ -20335,6 +19550,23 @@
         "BoostBuck": {
           "label": "Boost-Buck",
           "description": "This optimizer is Boost-Buck"
+        }
+      }
+    },
+    "CommunicationTransportLayerItemType": {
+      "description": "",
+      "enums": {
+        "Ethernet": {
+          "label": "Ethernet",
+          "description": ""
+        },
+        "WIFI": {
+          "label": "WIFI",
+          "description": ""
+        },
+        "Zigbee": {
+          "label": "Zigbee",
+          "description": ""
         }
       }
     },
@@ -20692,14 +19924,6 @@
         "IEEE2800_2022": {
           "label": "IEEE 2800 : 2022",
           "description": "IEEE Standard for Interconnection and Interoperability of Inverter-Based Resources (IBRs) Interconnecting with Associated Transmission Electric Power Systems"
-        },
-        "UL1973_3_2022": {
-          "label": "UL1973 Edition 3: 2022",
-          "description": "Standard For Batteries For Use In Stationary, Vehicle Auxiliary Power And Light Electric Rail (LER) Applications."
-        },
-        "IEEE2030_5_2023": {
-          "label": "IEEE2030.5 : 2023",
-          "description": "IEEE Standard for Smart Energy Profile Application Protocol"
         }
       }
     },
@@ -20886,34 +20110,6 @@
         },
         "Other": {
           "label": "Other",
-          "description": ""
-        },
-        "LEI": {
-          "label": "Legal Entity Identifier",
-          "description": "A Legal Entity Identifier (LEI) is a 20-character alphanumeric code that uniquely identifies a legal entity that participates in financial transactions. The LEI is based on the ISO 17442 standard and is similar to a bar code for a store item."
-        },
-        "PEN": {
-          "label": "Private Enterprise Number",
-          "description": "Unique identifiers assigned by the Internet Assigned Numbers Authority (IANA) to organizations, allowing them to uniquely identify proprietary protocols, formats, or information relevant to their products and services. These numbers are typically used in network management protocols such as SNMP (Simple Network Management Protocol) to help differentiate between various vendors and their devices or applications."
-        },
-        "DID": {
-          "label": "Decentralized Identifier",
-          "description": "A type of digital identifier that enables individuals or entities to create and control their own identity without relying on a centralized authority. DIDs are designed to be self-sovereign, meaning they can be created, updated, and managed directly by their owners, independent of third-party intermediaries.  DIDs are typically implemented using distributed ledger technologies (blockchains) or other decentralized networks, which provide a secure and tamper-proof environment for storing and managing identity-related information. Each DID resolves to a DID document, which contains cryptographic keys, authentication methods, and other metadata necessary for verifying ownership and facilitating trusted interactions between parties. This approach promotes privacy, security, and user control over personal data in digital identity systems."
-        },
-        "DUNS": {
-          "label": "DUNS",
-          "description": "The Data Universal Numbering System (DUNS) is a proprietary system developed and maintained by Dun & Bradstreet (D&B) that assigns a unique numeric identifier, known as a DUNS number, to businesses and organizations worldwide. Each DUNS number is a nine-digit identifier that serves as a standard for identifying entities in financial, governmental, and commercial transactions.  The DUNS number helps establish a company's business credit profile, track its relationships with other entities, and support risk management and compliance. It is widely used by businesses, governments, and institutions to verify the credibility of organizations, assess potential partners or suppliers, and streamline global commerce."
-        },
-        "DPP_EU": {
-          "label": "EU Digital Product Passport",
-          "description": "The EU Digital Product Passport (DPP_EU) is a digital record containing essential information about a product's lifecycle, designed to enhance transparency, sustainability, and circular economy practices within the European Union. The DPP includes data on a product's materials, production processes, carbon footprint, recycling potential, and repair options, accessible by consumers, regulators, and businesses. By providing detailed, traceable insights, the DPP enables better decision-making regarding product sourcing, usage, and disposal, ultimately fostering responsible consumption and supporting the EU’s Green Deal goals."
-        },
-        "FEIN": {
-          "label": "Federal Employer Identification Number",
-          "description": ""
-        },
-        "UEI": {
-          "label": "Unique Entity Identifier",
           "description": ""
         }
       }
@@ -21937,137 +21133,48 @@
         }
       }
     },
-    "ContractTypeItemType": {
-      "description": "Different types of Contracts",
+    "ContractType": {
+      "description": "These contracts define the agreements around solar installations' ownership, financing, and operational responsibilities",
       "enums": {
-        "ContractOM": {
-          "label": "Operations and Maintenance Contract",
-          "description": "Agreement to manage the maintenance and operations of the solar system."
+        "PPA": {
+          "label": "Power Purchase Agreement",
+          "description": "Agreement to purchase the electricity generated by the solar system at a predetermined rate for a specified term, usually 20-25 years."
         },
-        "ContractLoan": {
-          "label": "Loan Financing",
-          "description": "Loan taken to purchase the solar system."
-        },
-        "ContractLease": {
+        "Lease": {
           "label": "Lease",
           "description": "Agreement to pay fixed monthly fee to lease the solar system installed on their property."
         },
-        "ContractCash": {
+        "Cash": {
           "label": "Cash",
           "description": "Systems bought outright"
         },
-        "ContractREC": {
-          "label": "Renewable Energy Credit Contract",
-          "description": "Agreement between the homeowner and the service provider (utility, OEM) to trade renewable generation credits in the SREC market"
+        "Loan": {
+          "label": "Loan Financing",
+          "description": "Loan taken to purchase the solar system."
+        },
+        "CSS": {
+          "label": "Community Solar Subscription",
+          "description": "Subscription to a share of a community solar project"
+        },
+        "OM": {
+          "label": "Operations and Maintenance Contract",
+          "description": "Agreement to manage the maintenance and operations of the solar system."
+        },
+        "ESA": {
+          "label": "Energy Service Agreement",
+          "description": "Similar to a PPA, but often includes additional energy efficiency measures and broader energy management services."
+        },
+        "DR": {
+          "label": "Demand Response",
+          "description": "Agreement to adjust energy usage during peak times for incentives"
+        },
+        "VPP": {
+          "label": "Virtual Power Plant",
+          "description": "Agreement to participate in a program where aggregated DERs act as a single power source"
         },
         "Other": {
           "label": "Other",
           "description": "Other contract type not listed"
-        },
-        "ContractES": {
-          "label": "Energy Services Contract",
-          "description": "Agreement between the service requester (Utility/ Aggregator) and the service provider (homeowner/ system owner) to subscribe the asset as part of an aggregated distributed energy resources pool to provide energy services to the grid. Applies to contracts typically referred to  as VPP, Grid Services, Demand Response, Energy Arbitrage, Community Solar, and Power Purchase Agreement (PPA)."
-        }
-      }
-    },
-    "AggregatorTypeItemType": {
-      "description": "",
-      "enums": {
-        "Utility": {
-          "label": "Utility",
-          "description": "Utility performs its own aggregation. Examples: Investor-owned Utilities, Munis, Coops, Retailers."
-        },
-        "ThirdParty": {
-          "label": "Third Party",
-          "description": "Aggregation service providers, market participants."
-        }
-      }
-    },
-    "Receiver": {
-      "description": "Entity receiving the service from the provider"
-    },
-    "FrameColorItemType": {
-      "description": "",
-      "enums": {
-        "Silver": {
-          "label": "Silver",
-          "description": ""
-        },
-        "Black": {
-          "label": "Black",
-          "description": ""
-        },
-        "Other": {
-          "label": "Other",
-          "description": ""
-        },
-        "None": {
-          "label": "None",
-          "description": ""
-        }
-      }
-    },
-    "BacksheetColorItemType": {
-      "description": "",
-      "enums": {
-        "Black": {
-          "label": "Black",
-          "description": ""
-        },
-        "White": {
-          "label": "White",
-          "description": ""
-        },
-        "Glass": {
-          "label": "Glass",
-          "description": ""
-        }
-      }
-    },
-    "ApplicationProtocolTypeItemType": {
-      "description": "",
-      "enums": {
-        "SEP2": {
-          "label": "Smart Energy Profile 2",
-          "description": ""
-        },
-        "DNP3": {
-          "label": "Distributed Network Protocol 3 ",
-          "description": ""
-        },
-        "Modbus": {
-          "label": "SunSpec Modbus",
-          "description": ""
-        }
-      }
-    },
-    "TransportLayerTypeItemType": {
-      "description": "",
-      "enums": {
-        "TCP": {
-          "label": "TCP",
-          "description": ""
-        },
-        "Serial": {
-          "label": "Serial",
-          "description": ""
-        }
-      }
-    },
-    "PhysicalLayerTypeItemType": {
-      "description": "",
-      "enums": {
-        "Ethernet": {
-          "label": "Ethernet",
-          "description": ""
-        },
-        "RS485": {
-          "label": "RS485",
-          "description": ""
-        },
-        "RS232": {
-          "label": "RS232",
-          "description": ""
         }
       }
     }
