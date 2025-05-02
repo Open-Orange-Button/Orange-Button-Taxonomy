@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>XXXX.0.0 &#8212; Open-Orange-Button 1.0 documentation</title>
+    <title>2504.0.0 &#8212; Open-Orange-Button 1.0 documentation</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
@@ -210,16 +210,61 @@
               
               <article class="bd-article" role="main">
                 
-  <section id="xxxx-0-0">
-<span id="whatsnew-dev"></span><h1>XXXX.0.0<a class="headerlink" href="#xxxx-0-0" title="Link to this heading">¶</a></h1>
+  <section id="whatsnew-dev">
+<span id="id1"></span><h1>2504.0.0<a class="headerlink" href="#whatsnew-dev" title="Link to this heading">¶</a></h1>
 <section id="element-changes">
 <h2>Element changes<a class="headerlink" href="#element-changes" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Adds ProgramName, StartDateTime, EndDateTime, Aggregator, AggregatorType, AggregatorName, ServiceSchedule, EventsMax, EventDurationMax, ContractTerm, ContractTerms, ServiceSchedules, ServiceProvider, ServiceProviderName, ServiceProviderID, ServiceRequester, SignUpAmount, PaymentRateCapacity, PaymentRateEnergy, PaymentRateDuration, PaymentRatePerEvent, Receiver elements. (#332)</p></li>
+<li><p>Adds UtilityID, InstallerID, OriginatorID, OriginatorName, PreparerID, HOAID, InsurerID, OwnerID, CertificationAgencyID, TestLabID (#339)</p></li>
+<li><p>Adds QualificationListingDate, QualifyingAgencyName, QualifyingAgencyID, QualificationExpirationDate, QualificationNotes (#338)</p></li>
+<li><p>Removes CECListingDate and CECNotes (#338)</p></li>
+<li><p>Adds TransportLayer, PhysicalLayer, ApplicationProtocol (#346)</p></li>
+</ul>
+</div></blockquote>
 </section>
 <section id="object-changes">
 <h2>Object changes<a class="headerlink" href="#object-changes" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Adds ContractTerms and Scope to Contract object.(#332)</p></li>
+<li><p>Adds ContractES object.(#332)</p></li>
+<li><p>Adds ProdQualifications, ProdQualification, QualifyingAgency (#338)</p></li>
+<li><p>Adds QualificationListingDate, QualifyingAgencyName, QualificationExpirationDate, QualificationNotes, Entity inheritance to ProdQualification (#338)</p></li>
+<li><p>Adds Description to Entity, CECListingDate and CECNotes to ProdBattery(#338)</p></li>
+<li><p>Adds OMIssues object array to OperatingReport object (#349)</p></li>
+<li><p>Adds CommunicationStacks, CommunicationStack (#346)</p></li>
+<li><p>Removes CommunicationProtocol (#346)</p></li>
+</ul>
+</div></blockquote>
 </section>
 <section id="unit-changes">
 <h2>Unit changes<a class="headerlink" href="#unit-changes" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Adds LEI, PEN, DID, DUNS to IdentifierTypeItemType enum list.(#328)</p></li>
+<li><p>Adds Occupant to ContactTypeItemType enum list. (#330)</p></li>
+<li><p>Changes Homeowner to Owner in the ContactTypeItemType enum list. (#330)</p></li>
+<li><p>Adds EU Digital Product Passport to IdentifierTypeItemType. (#331)</p></li>
+<li><p>ContractType changed to ContactTypeItemType.(#332)</p></li>
+<li><p>Updates enums of ContactTypeItemType to follow Contract[Type] format, adds ContractES.(#332)</p></li>
+<li><p>Adds ProdGenerator and ProdThermostat to ProdTypeItemType.(#332)</p></li>
+<li><p>Adds Aggregator, PropertyOwner, Financier to EntityTypeItemType Enums.(#332)</p></li>
+<li><p>Creates AggregatorTypeItemType, with Utility and ThirdParty as Enums.(#332)</p></li>
+<li><p>Adds UL1943_3_2022 to CertificationStandardTypeItemType Enum List (#335)</p></li>
+<li><p>Adds LeadAcid to BatteryChemistryTypeItemType Enum List (#335)</p></li>
+<li><p>Adds QualifyingAgency enum to EntityRoleItemType Enum List (#338)</p></li>
+<li><p>Adds UEI and FEIN to IdentifierTypeItemType Enum list (#338)</p></li>
+<li><p>Adds BacksheetColorItemType and FrameColorItemType, populated enum list for each. (#342)</p></li>
+<li><p>Adds IEEE2030_5_2023 enum to StandardTypeItemType</p></li>
+<li><p>Adds TransportLayerTypeItemType, PhysicalLayerTypeItemType, ApplicationProtocolTypeItemType (#346)</p></li>
+<li><p>Adds SEP2, DNP3, Modbus to ApplicationProtocolTypeItemType Enum List (#346)</p></li>
+<li><p>Adds Ethernet, RS485, RS232 to PhysicalLayerTypeItemType (#346)</p></li>
+<li><p>Adds TCP, Serial to TransportLayerTypeItemType (#346)</p></li>
+<li><p>Removes CommunicationProtocolItemType, CommunicationTransportLayerItemType    (#346)</p></li>
+</ul>
+</div></blockquote>
 </section>
 <section id="bug-fixes">
 <h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
@@ -232,6 +277,12 @@
 </section>
 <section id="contributors">
 <h2>Contributors<a class="headerlink" href="#contributors" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>Kevin Kirkley (kevinkirkl3y)</p></li>
+<li><p>Yaswanth Devisetti (Yaswanthd9)</p></li>
+</ul>
+</div></blockquote>
 </section>
 </section>
 
