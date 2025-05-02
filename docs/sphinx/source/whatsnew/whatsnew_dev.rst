@@ -6,45 +6,12 @@ XXXX.0.0
 
 Element changes
 ~~~~~~~~~~~~~~~
- * Adds ProgramName, StartDateTime, EndDateTime, Aggregator, AggregatorType, AggregatorName, ServiceSchedule, EventsMax, EventDurationMax, ContractTerm, ContractTerms, ServiceSchedules, ServiceProvider, ServiceProviderName, ServiceProviderID, ServiceRequester, SignUpAmount, PaymentRateCapacity, PaymentRateEnergy, PaymentRateDuration, PaymentRatePerEvent, Receiver elements. (#332)
- * Adds UtilityID, InstallerID, OriginatorID, OriginatorName, PreparerID, HOAID, InsurerID, OwnerID, CertificationAgencyID, TestLabID (#339)
- * Adds QualificationListingDate, QualifyingAgencyName, QualifyingAgencyID, QualificationExpirationDate, QualificationNotes (#338)
- * Removes CECListingDate and CECNotes (#338)
- * Adds TransportLayer, PhysicalLayer, ApplicationProtocol (#346)
 
 Object changes
 ~~~~~~~~~~~~~~
- * Adds ContractTerms and Scope to Contract object.(#332)
- * Adds ContractES object.(#332)
- * Adds ProdQualifications, ProdQualification, QualifyingAgency (#338)
- * Adds QualificationListingDate, QualifyingAgencyName, QualificationExpirationDate, QualificationNotes, Entity inheritance to ProdQualification (#338)
- * Adds Description to Entity, CECListingDate and CECNotes to ProdBattery(#338)
- * Adds OMIssues object array to OperatingReport object (#349)
- * Adds CommunicationStacks, CommunicationStack (#346)
- * Removes CommunicationProtocol (#346)
 
 Unit changes
 ~~~~~~~~~~~~
- * Adds LEI, PEN, DID, DUNS to IdentifierTypeItemType enum list.(#328)
- * Adds Occupant to ContactTypeItemType enum list. (#330)
- * Changes Homeowner to Owner in the ContactTypeItemType enum list. (#330)
- * Adds EU Digital Product Passport to IdentifierTypeItemType. (#331)
- * ContractType changed to ContactTypeItemType.(#332)
- * Updates enums of ContactTypeItemType to follow Contract[Type] format, adds ContractES.(#332)
- * Adds ProdGenerator and ProdThermostat to ProdTypeItemType.(#332)
- * Adds Aggregator, PropertyOwner, Financier to EntityTypeItemType Enums.(#332)
- * Creates AggregatorTypeItemType, with Utility and ThirdParty as Enums.(#332)
- * Adds UL1943_3_2022 to CertificationStandardTypeItemType Enum List (#335)
- * Adds LeadAcid to BatteryChemistryTypeItemType Enum List (#335)
- * Adds QualifyingAgency enum to EntityRoleItemType Enum List (#338)
- * Adds UEI and FEIN to IdentifierTypeItemType Enum list (#338)
- * Adds BacksheetColorItemType and FrameColorItemType, populated enum list for each. (#342)
- * Adds IEEE2030_5_2023 enum to StandardTypeItemType
- * Adds TransportLayerTypeItemType, PhysicalLayerTypeItemType, ApplicationProtocolTypeItemType (#346)
- * Adds SEP2, DNP3, Modbus to ApplicationProtocolTypeItemType Enum List (#346)
- * Adds Ethernet, RS485, RS232 to PhysicalLayerTypeItemType (#346)
- * Adds TCP, Serial to TransportLayerTypeItemType (#346)
- * Removes CommunicationProtocolItemType, CommunicationTransportLayerItemType	 (#346)
 
 
 Bug fixes
@@ -58,5 +25,3 @@ Documentation
 
 Contributors
 ~~~~~~~~~~~~
- * Kevin Kirkley (kevinkirkl3y)
- * Yaswanth Devisetti (Yaswanthd9)
