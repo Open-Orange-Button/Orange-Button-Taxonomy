@@ -10093,7 +10093,8 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/PowerAC"
-        }
+        },
+        "deprecated": true
       },
       "ForecastSource": {
         "allOf": [

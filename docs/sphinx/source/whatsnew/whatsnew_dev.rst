@@ -6,13 +6,15 @@ XXXX.0.0
 
 Element changes
 ~~~~~~~~~~~~~~~
+* Adds LineFrequency, PowerPhase, PowerPhaseType, PowerType, VoltagePhase, Voltage, Power, Energy, Current, Energy, PowerFactor
 
 Object changes
 ~~~~~~~~~~~~~~
+* Adds VoltageTS, VoltageTSArray, EnergyTS, EnergyTSArray, PowerTS, PowerTSArray, CurrentTS, CurrentTSArray, ElectricalTS
 
 Unit changes
 ~~~~~~~~~~~~
-
+* Adds VoltagePhaseItemType, PowerTypeItemType, LineFrequencyItemType, VoltagePhaseItemType
 
 Bug fixes
 ~~~~~~~~~
@@ -25,3 +27,4 @@ Documentation
 
 Contributors
 ~~~~~~~~~~~~
+* Kevin Kirkley (kevinkirkl3y)
