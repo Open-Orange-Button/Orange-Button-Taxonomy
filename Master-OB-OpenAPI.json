@@ -2057,9 +2057,6 @@
           "TariffStructure": {
             "$ref": "#/components/schemas/TariffStructure"
           },
-          "PowerPhase": {
-            "$ref": "#/components/schemas/PowerPhase"
-          },
           "PowerPhaseType": {
             "$ref": "#/components/schemas/PowerPhaseType"
           }
@@ -7991,9 +7988,6 @@
           "VoltageACNom": {
             "$ref": "#/components/schemas/VoltageACNom"
           },
-          "FrequenciesAC": {
-            "$ref": "#/components/schemas/FrequenciesAC"
-          },
           "PowerACSurges": {
             "$ref": "#/components/schemas/PowerACSurges"
           },
@@ -8005,13 +7999,10 @@
           },
           "PowerPhaseType": {
             "$ref": "#/components/schemas/PowerPhaseType"
+          },
+          "LineFrequencies": {
+            "$ref": "#/components/schemas/LineFrequencies"
           }
-        }
-      },
-      "FrequenciesAC": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/Frequency"
         }
       },
       "PowerACSurges": {
@@ -8771,8 +8762,8 @@
           "CurrentACMax": {
             "$ref": "#/components/schemas/CurrentACMax"
           },
-          "FrequenciesAC": {
-            "$ref": "#/components/schemas/FrequenciesAC"
+          "LineFrequencies": {
+            "$ref": "#/components/schemas/LineFrequencies"
           }
         }
       },
@@ -8810,23 +8801,17 @@
           "PowerACApparentNom": {
             "$ref": "#/components/schemas/PowerACApparentNom"
           },
-          "InterconnectionLineCount": {
-            "$ref": "#/components/schemas/InterconnectionLineCount"
-          },
           "PowerACSurges": {
             "$ref": "#/components/schemas/PowerACSurges"
           },
           "CurrentACNom": {
             "$ref": "#/components/schemas/CurrentACNom"
           },
-          "FrequenciesAC": {
-            "$ref": "#/components/schemas/FrequenciesAC"
-          },
-          "PowerPhase": {
-            "$ref": "#/components/schemas/PowerPhase"
-          },
           "PowerPhaseType": {
             "$ref": "#/components/schemas/PowerPhaseType"
+          },
+          "LineFrequencies": {
+            "$ref": "#/components/schemas/LineFrequencies"
           }
         }
       },
@@ -15333,7 +15318,7 @@
           },
           {
             "type": "object",
-            "description": "Voltage (DC) measured at an instant in time.",
+            "description": "Voltage measured at an instant in time.",
             "x-ob-item-type": "VoltageItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -15443,6 +15428,9 @@
           },
           "LineFrequency": {
             "$ref": "#/components/schemas/LineFrequency"
+          },
+          "PowerPhase": {
+            "$ref": "#/components/schemas/PowerPhase"
           }
         }
       },
@@ -15570,6 +15558,12 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/PowerFactor"
+        }
+      },
+      "LineFrequencies": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/LineFrequency"
         }
       }
     }
@@ -22514,6 +22508,10 @@
         "Unspecified": {
           "label": "Unspecified",
           "description": "No phase designation applicable or not specified"
+        },
+        "LG": {
+          "label": "LG",
+          "description": "Line to Ground."
         }
       }
     }

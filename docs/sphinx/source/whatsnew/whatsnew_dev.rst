@@ -10,7 +10,8 @@ Element changes
 
 Object changes
 ~~~~~~~~~~~~~~
-* Adds VoltageTS, VoltageTSArray, EnergyTS, EnergyTSArray, PowerTS, PowerTSArray, CurrentTS, CurrentTSArray, ElectricalTS
+* Adds VoltageTS, VoltageTSArray, EnergyTS, EnergyTSArray, PowerTS, PowerTSArray, CurrentTS, CurrentTSArray, ElectricalTS, LineFrequencies
+* Removes FrequenciesAC from ACInput, ACOutput, InverterOutput
 
 Unit changes
 ~~~~~~~~~~~~
