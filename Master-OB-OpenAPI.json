@@ -10075,11 +10075,11 @@
         }
       },
       "PowerACArray": {
+        "description": "Deprecated. An array of PowerAC elements. Reference PowerTSArray.",
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/PowerAC"
-        },
-        "deprecated": true
+        }
       },
       "ForecastSource": {
         "allOf": [
@@ -15543,12 +15543,11 @@
           },
           {
             "type": "object",
-            "description": "The dimensionless ratio of active (real) power to apparent power in an AC electrical system, indicating how effectively electrical power is being converted into useful work. It reflects the phase alignment between voltage and current and ranges from 0 to 1.",
-            "x-ob-item-type": "DecimalPercentItemType",
+            "description": "The dimensionless ratio of active (real) power to apparent power in an AC electrical system, indicating how effectively electrical power is being converted into useful work. It reflects the phase alignment between voltage and current and ranges from -1 to 1.",
+            "x-ob-item-type": "DecimalItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Unit": "decimal_percent",
               "Value": 0.95
             }
           }
@@ -22445,7 +22444,11 @@
         },
         "Unspecified": {
           "label": "Unspecified",
-          "description": "Unspecified frequency, applicable to DC Systems."
+          "description": "Unspecified frequency."
+        },
+        "NA": {
+          "label": "Not Applicable",
+          "description": "Used for DC systems."
         }
       }
     },
