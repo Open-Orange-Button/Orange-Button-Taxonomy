@@ -8000,8 +8000,8 @@
           "PowerPhaseType": {
             "$ref": "#/components/schemas/PowerPhaseType"
           },
-          "LineFrequencies": {
-            "$ref": "#/components/schemas/LineFrequencies"
+          "LineFrequency": {
+            "$ref": "#/components/schemas/LineFrequency"
           }
         }
       },
