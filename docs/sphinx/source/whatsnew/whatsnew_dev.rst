@@ -6,7 +6,8 @@ XXXX.0.0
 
 Element changes
 ~~~~~~~~~~~~~~~
-* Adds LineFrequency, PowerPhase, PowerPhaseType, PowerType, VoltagePhase, Voltage, Power, Energy, Current, Energy, PowerFactor
+* Removes InterconnectionPhase, InterconnectionPhaseType. These elements are replaced by PowerPhase and PowerPhaseType.
+* Removes FrequencyAC and FrequenciesAC. These elements are replaced by LineFrequency and LineFrequencies.
 
 Object changes
 ~~~~~~~~~~~~~~
