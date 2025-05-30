@@ -10677,7 +10677,7 @@
           },
           {
             "type": "object",
-            "description": "Entity that has signed on behalf of the concerned parties",
+            "description": "Entity being represented by a signature.",
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
