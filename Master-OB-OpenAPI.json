@@ -7957,54 +7957,6 @@
           }
         ]
       },
-      "InverterOutput": {
-        "type": "object",
-        "description": "Output (AC) characteristics of an inverter",
-        "properties": {
-          "VoltageACMax": {
-            "$ref": "#/components/schemas/VoltageACMax"
-          },
-          "VoltageACMin": {
-            "$ref": "#/components/schemas/VoltageACMin"
-          },
-          "PowerACMax": {
-            "$ref": "#/components/schemas/PowerACMax"
-          },
-          "CurrentACMax": {
-            "$ref": "#/components/schemas/CurrentACMax"
-          },
-          "PowerFactorMax": {
-            "$ref": "#/components/schemas/PowerFactorMax"
-          },
-          "PowerFactorMin": {
-            "$ref": "#/components/schemas/PowerFactorMin"
-          },
-          "InterconnectionLineCount": {
-            "$ref": "#/components/schemas/InterconnectionLineCount"
-          },
-          "PowerACNom": {
-            "$ref": "#/components/schemas/PowerACNom"
-          },
-          "VoltageACNom": {
-            "$ref": "#/components/schemas/VoltageACNom"
-          },
-          "PowerACSurges": {
-            "$ref": "#/components/schemas/PowerACSurges"
-          },
-          "InverterSwitchoverTime": {
-            "$ref": "#/components/schemas/InverterSwitchoverTime"
-          },
-          "TotalHarmonicDistortionPower": {
-            "$ref": "#/components/schemas/TotalHarmonicDistortionPower"
-          },
-          "PowerPhaseType": {
-            "$ref": "#/components/schemas/PowerPhaseType"
-          },
-          "LineFrequency": {
-            "$ref": "#/components/schemas/LineFrequency"
-          }
-        }
-      },
       "PowerACSurges": {
         "type": "array",
         "items": {
@@ -8021,12 +7973,6 @@
           "Duration": {
             "$ref": "#/components/schemas/Duration"
           }
-        }
-      },
-      "InverterOutputs": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/InverterOutput"
         }
       },
       "Entity": {
