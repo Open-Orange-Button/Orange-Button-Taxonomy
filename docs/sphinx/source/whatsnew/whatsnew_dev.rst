@@ -12,7 +12,8 @@ Element changes
 Object changes
 ~~~~~~~~~~~~~~
 * Adds VoltageTS, VoltageTSArray, EnergyTS, EnergyTSArray, PowerTS, PowerTSArray, CurrentTS, CurrentTSArray, ElectricalTS, LineFrequencies
-* Removes FrequenciesAC from ACInput, ACOutput, InverterOutput
+* Removes FrequenciesAC from ACInput, ACOutput, 
+* Removes InverterOutput, InverterOutputs 
 
 Unit changes
 ~~~~~~~~~~~~
@@ -30,3 +31,4 @@ Documentation
 Contributors
 ~~~~~~~~~~~~
 * Kevin Kirkley (kevinkirkl3y)
+* Dan Kubler (DanKub-BB)
