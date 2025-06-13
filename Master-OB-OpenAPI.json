@@ -15305,6 +15305,30 @@
           }
         }
       },
+      "IrradianceArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Irradiance"
+        }
+      },
+      "IrradianceTS": {
+        "type": "object",
+        "description": "Time Series (TS) containing irradiance measurements, capturing the temporal behavior of solar radiation received by a surface. This object is commonly used in solar energy monitoring, forecasting, and performance analysis systems.",
+        "properties": {
+          "IrradianceType": {
+            "$ref": "#/components/schemas/IrradianceType"
+          },
+          "IrradianceArray": {
+            "$ref": "#/components/schemas/IrradianceArray"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "Device": {
+            "$ref": "#/components/schemas/Device"
+          }
+        }
+      },
       "EnergyTS": {
         "type": "object",
         "description": "Time Series (TS) containing energy measurements, capturing the accumulated or interval-based behavior of electrical energy generation, consumption, or transfer over time. This object is commonly used in energy monitoring, billing, forecasting, and performance analysis systems.",
