@@ -5884,7 +5884,7 @@
       },
       "PVArray": {
         "type": "object",
-        "description": "An array of modules within a PVSystem that have a common orientation.",
+        "description": "An array of modules within a PVSystem that have a common orientation. Sometimes referred to as 'Module Group'",
         "properties": {
           "PVStrings": {
             "$ref": "#/components/schemas/PVStrings"
