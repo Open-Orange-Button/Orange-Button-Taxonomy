@@ -15305,6 +15305,24 @@
           }
         }
       },
+      "Irradiance":{ 
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Irradiance measured at an instant in time.",
+            "x-ob-item-type": "IrradianceType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "Use to represent POA, GHI, DHI, or DNI irradiance values captured by a device over time.",
+            "x-ob-sample-value": {
+              "Unit": "W_per_m2",
+              "Value": 1000
+            }
+          }
+        ]
+      },
       "IrradianceArray": {
         "type": "array",
         "items": {
@@ -15315,9 +15333,6 @@
         "type": "object",
         "description": "Time Series (TS) containing irradiance measurements, capturing the temporal behavior of solar radiation received by a surface. This object is commonly used in solar energy monitoring, forecasting, and performance analysis systems.",
         "properties": {
-          "IrradianceType": {
-            "$ref": "#/components/schemas/IrradianceType"
-          },
           "IrradianceArray": {
             "$ref": "#/components/schemas/IrradianceArray"
           },
@@ -15420,6 +15435,12 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/VoltageTS"
+        }
+      },
+      "IrradianceTSArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/IrradianceTS"
         }
       },
       "ElectricalTS": {
@@ -16688,6 +16709,27 @@
         "GV": {
           "label": "Gigavolt",
           "description": "One thousand million volts"
+        }
+      }
+    },
+    "IrradianceType": {
+      "description": "Defines the type of irradiance measurement or specification.",
+      "enums": {
+        "POA": {
+          "label": "Plane of Array",
+          "description": "Irradiance measured on the plane of the solar array."
+        },
+        "GHI": {
+          "label": "Global Horizontal",
+          "description": "Irradiance measured on a horizontal surface."
+        },
+        "DNI": {
+          "label": "Direct Normal",
+          "description": "Irradiance from the sun directly, without scattering."
+        },
+        "DHI": {
+          "label": "Diffuse Horizontal",
+          "description": "Irradiance scattered by the atmosphere, measured on a horizontal surface."
         }
       }
     },
