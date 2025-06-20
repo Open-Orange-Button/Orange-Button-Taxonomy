@@ -5783,7 +5783,7 @@
           },
           {
             "type": "object",
-            "description": "Azimuth relative to North where North is 0 degrees and East is 90 degrees",
+            "description": "Azimuth relative to True North where North is 0 degrees and East is 90 degrees",
             "x-ob-item-type": "PlaneAngleItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
