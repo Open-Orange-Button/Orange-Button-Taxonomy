@@ -3,7 +3,7 @@
   "info": {
     "version": "1.1.7",
     "title": "OB OpenAPI Taxonomy",
-    "description": "OB OpenAPI Definitions For Orange Button."
+    "description": "OB OpenAPI Definitions For Orange Button version 2504.0.0."
   },
   "paths": {},
   "servers": [],
@@ -2054,11 +2054,14 @@
           "InterconnectionVoltage": {
             "$ref": "#/components/schemas/InterconnectionVoltage"
           },
+          "InterconnectionPhaseType": {
+            "$ref": "#/components/schemas/InterconnectionPhaseType"
+          },
+          "InterconnectionPhase": {
+            "$ref": "#/components/schemas/InterconnectionPhase"
+          },
           "TariffStructure": {
             "$ref": "#/components/schemas/TariffStructure"
-          },
-          "PowerPhaseType": {
-            "$ref": "#/components/schemas/PowerPhaseType"
           }
         },
         "x-ob-usage-tips": ""
@@ -2309,6 +2312,23 @@
             "x-ob-sample-value": {
               "Unit": "V",
               "Value": 14000
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "InterconnectionPhaseType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The output phase type of a device",
+            "x-ob-item-type": "InterconnectionPhaseTypeItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Single"
             },
             "x-ob-item-type-group": ""
           }
@@ -2729,6 +2749,23 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Single Phase"
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "InterconnectionPhase": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The phase of the interconnection",
+            "x-ob-item-type": "InterconnectionPhaseItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "A"
             },
             "x-ob-item-type-group": ""
           }
@@ -5884,7 +5921,7 @@
       },
       "PVArray": {
         "type": "object",
-        "description": "An array of modules within a PVSystem that have a common orientation. Sometimes referred to as 'Module Group'",
+        "description": "An array of modules within a PVSystem that have a common orientation.",
         "properties": {
           "PVStrings": {
             "$ref": "#/components/schemas/PVStrings"
@@ -7957,6 +7994,60 @@
           }
         ]
       },
+      "InverterOutput": {
+        "type": "object",
+        "description": "Output (AC) characteristics of an inverter",
+        "properties": {
+          "VoltageACMax": {
+            "$ref": "#/components/schemas/VoltageACMax"
+          },
+          "VoltageACMin": {
+            "$ref": "#/components/schemas/VoltageACMin"
+          },
+          "PowerACMax": {
+            "$ref": "#/components/schemas/PowerACMax"
+          },
+          "CurrentACMax": {
+            "$ref": "#/components/schemas/CurrentACMax"
+          },
+          "PowerFactorMax": {
+            "$ref": "#/components/schemas/PowerFactorMax"
+          },
+          "PowerFactorMin": {
+            "$ref": "#/components/schemas/PowerFactorMin"
+          },
+          "InterconnectionPhaseType": {
+            "$ref": "#/components/schemas/InterconnectionPhaseType"
+          },
+          "InterconnectionLineCount": {
+            "$ref": "#/components/schemas/InterconnectionLineCount"
+          },
+          "PowerACNom": {
+            "$ref": "#/components/schemas/PowerACNom"
+          },
+          "VoltageACNom": {
+            "$ref": "#/components/schemas/VoltageACNom"
+          },
+          "FrequenciesAC": {
+            "$ref": "#/components/schemas/FrequenciesAC"
+          },
+          "PowerACSurges": {
+            "$ref": "#/components/schemas/PowerACSurges"
+          },
+          "InverterSwitchoverTime": {
+            "$ref": "#/components/schemas/InverterSwitchoverTime"
+          },
+          "TotalHarmonicDistortionPower": {
+            "$ref": "#/components/schemas/TotalHarmonicDistortionPower"
+          }
+        }
+      },
+      "FrequenciesAC": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/FrequencyAC"
+        }
+      },
       "PowerACSurges": {
         "type": "array",
         "items": {
@@ -7973,6 +8064,12 @@
           "Duration": {
             "$ref": "#/components/schemas/Duration"
           }
+        }
+      },
+      "InverterOutputs": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/InverterOutput"
         }
       },
       "Entity": {
@@ -8708,8 +8805,8 @@
           "CurrentACMax": {
             "$ref": "#/components/schemas/CurrentACMax"
           },
-          "LineFrequencies": {
-            "$ref": "#/components/schemas/LineFrequencies"
+          "FrequenciesAC": {
+            "$ref": "#/components/schemas/FrequenciesAC"
           }
         }
       },
@@ -8747,17 +8844,23 @@
           "PowerACApparentNom": {
             "$ref": "#/components/schemas/PowerACApparentNom"
           },
+          "InterconnectionLineCount": {
+            "$ref": "#/components/schemas/InterconnectionLineCount"
+          },
+          "InterconnectionPhase": {
+            "$ref": "#/components/schemas/InterconnectionPhase"
+          },
+          "InterconnectionPhaseType": {
+            "$ref": "#/components/schemas/InterconnectionPhaseType"
+          },
           "PowerACSurges": {
             "$ref": "#/components/schemas/PowerACSurges"
           },
           "CurrentACNom": {
             "$ref": "#/components/schemas/CurrentACNom"
           },
-          "PowerPhaseType": {
-            "$ref": "#/components/schemas/PowerPhaseType"
-          },
-          "LineFrequencies": {
-            "$ref": "#/components/schemas/LineFrequencies"
+          "FrequenciesAC": {
+            "$ref": "#/components/schemas/FrequenciesAC"
           }
         }
       },
@@ -8820,6 +8923,21 @@
         "items": {
           "$ref": "#/components/schemas/ACOutput"
         }
+      },
+      "FrequencyAC": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Frequency (Hz) of a AC power device or system",
+            "x-ob-item-type": "FrequencyItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
       },
       "PowerDCMax": {
         "allOf": [
@@ -10021,7 +10139,6 @@
         }
       },
       "PowerACArray": {
-        "description": "Deprecated. An array of PowerAC elements. Reference PowerTSArray.",
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/PowerAC"
@@ -10677,7 +10794,7 @@
           },
           {
             "type": "object",
-            "description": "Entity being represented by a signature.",
+            "description": "Entity that has signed on behalf of the concerned parties",
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -15107,409 +15224,6 @@
         "items": {
           "$ref": "#/components/schemas/CommunicationStack"
         }
-      },
-      "PowerPhase": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The phase of the interconnection.",
-            "x-ob-item-type": "PowerPhaseItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "A"
-            }
-          }
-        ]
-      },
-      "PowerPhaseType": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The output phase type of a device.",
-            "x-ob-item-type": "PowerPhaseTypeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "Single"
-            }
-          }
-        ]
-      },
-      "PowerTS": {
-        "type": "object",
-        "description": "Time Series (TS) containing power measurements, capturing the temporal behavior of electrical power generation, consumption, or flow. This object is commonly used in energy monitoring, forecasting, and analysis systems.",
-        "properties": {
-          "LineFrequency": {
-            "$ref": "#/components/schemas/LineFrequency"
-          },
-          "PowerPhaseType": {
-            "$ref": "#/components/schemas/PowerPhaseType"
-          },
-          "PowerPhase": {
-            "$ref": "#/components/schemas/PowerPhase"
-          },
-          "Scope": {
-            "$ref": "#/components/schemas/Scope"
-          },
-          "Device": {
-            "$ref": "#/components/schemas/Device"
-          },
-          "PowerArray": {
-            "$ref": "#/components/schemas/PowerArray"
-          },
-          "PowerType": {
-            "$ref": "#/components/schemas/PowerType"
-          }
-        }
-      },
-      "Frequency": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Frequency (Hz) of a AC power device or system",
-            "x-ob-item-type": "FrequencyItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "LineFrequency": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementInteger"
-          },
-          {
-            "type": "object",
-            "description": "Frequency (Hz) of a AC power device or system. Nominal or Targeted Line Frequency. ",
-            "x-ob-item-type": "LineFrequencyItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "Power": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The rate at which electrical energy is transferred by an electric circuit.",
-            "x-ob-item-type": "PowerItemType",
-            "x-ob-item-type-group": "OBElectricalPower",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "kW",
-              "Value": 12.5
-            }
-          }
-        ]
-      },
-      "PowerArray": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/Power"
-        }
-      },
-      "PowerType": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Specifies the classification of electrical power being measured or analyzed in a system. ",
-            "x-ob-item-type": "PowerTypeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "Active"
-            }
-          }
-        ]
-      },
-      "VoltagePhase": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The electrical phase relationship to which a voltage measurement or specification applies.",
-            "x-ob-item-type": "VoltagePhaseItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "LN"
-            }
-          }
-        ]
-      },
-      "Voltage": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Voltage measured at an instant in time.",
-            "x-ob-item-type": "VoltageItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "V",
-              "Value": 120
-            }
-          }
-        ]
-      },
-      "VoltageArray": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/Voltage"
-        }
-      },
-      "VoltageTS": {
-        "type": "object",
-        "description": "Time Series (TS) containing voltage measurements, capturing the temporal behavior of electrical voltage levels across a system or component. This object is commonly used in energy monitoring, grid analysis, equipment diagnostics, and forecasting applications.",
-        "properties": {
-          "VoltageArray": {
-            "$ref": "#/components/schemas/VoltageArray"
-          },
-          "PowerType": {
-            "$ref": "#/components/schemas/PowerType"
-          },
-          "LineFrequency": {
-            "$ref": "#/components/schemas/LineFrequency"
-          },
-          "VoltagePhase": {
-            "$ref": "#/components/schemas/VoltagePhase"
-          },
-          "Scope": {
-            "$ref": "#/components/schemas/Scope"
-          },
-          "Device": {
-            "$ref": "#/components/schemas/Device"
-          }
-        }
-      },
-      "EnergyTS": {
-        "type": "object",
-        "description": "Time Series (TS) containing energy measurements, capturing the accumulated or interval-based behavior of electrical energy generation, consumption, or transfer over time. This object is commonly used in energy monitoring, billing, forecasting, and performance analysis systems.",
-        "properties": {
-          "LineFrequency": {
-            "$ref": "#/components/schemas/LineFrequency"
-          },
-          "PowerPhase": {
-            "$ref": "#/components/schemas/PowerPhase"
-          },
-          "PowerPhaseType": {
-            "$ref": "#/components/schemas/PowerPhaseType"
-          },
-          "PowerType": {
-            "$ref": "#/components/schemas/PowerType"
-          },
-          "Device": {
-            "$ref": "#/components/schemas/Device"
-          },
-          "Scope": {
-            "$ref": "#/components/schemas/Scope"
-          },
-          "EnergyArray": {
-            "$ref": "#/components/schemas/EnergyArray"
-          }
-        }
-      },
-      "CurrentTS": {
-        "type": "object",
-        "description": "Time Series (TS) containing current measurements, capturing the temporal behavior of electrical current flow through a system or component. This object is commonly used in energy monitoring, equipment diagnostics, load analysis, and forecasting applications.",
-        "properties": {
-          "LineFrequency": {
-            "$ref": "#/components/schemas/LineFrequency"
-          },
-          "PowerPhase": {
-            "$ref": "#/components/schemas/PowerPhase"
-          },
-          "PowerPhaseType": {
-            "$ref": "#/components/schemas/PowerPhaseType"
-          },
-          "PowerType": {
-            "$ref": "#/components/schemas/PowerType"
-          },
-          "Device": {
-            "$ref": "#/components/schemas/Device"
-          },
-          "Scope": {
-            "$ref": "#/components/schemas/Scope"
-          },
-          "CurrentArray": {
-            "$ref": "#/components/schemas/CurrentArray"
-          }
-        }
-      },
-      "PowerFactorTS": {
-        "type": "object",
-        "description": "Time Series (TS) containing power factor measurements, representing the ratio of active power to apparent power over time. This object is commonly used in power quality analysis, efficiency monitoring, and electrical system diagnostics.",
-        "properties": {
-          "PowerFactorArray": {
-            "$ref": "#/components/schemas/PowerFactorArray"
-          },
-          "Device": {
-            "$ref": "#/components/schemas/Device"
-          },
-          "Scope": {
-            "$ref": "#/components/schemas/Scope"
-          },
-          "LineFrequency": {
-            "$ref": "#/components/schemas/LineFrequency"
-          },
-          "PowerPhase": {
-            "$ref": "#/components/schemas/PowerPhase"
-          }
-        }
-      },
-      "PowerTSArray": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/PowerTS"
-        }
-      },
-      "EnergyTSArray": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/EnergyTS"
-        }
-      },
-      "VoltageTSArray": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/VoltageTS"
-        }
-      },
-      "ElectricalTS": {
-        "type": "object",
-        "description": "A composite time series object that groups multiple electrical measurement series to represent the temporal behavior of key electrical parameters in a unified structure. This object is commonly used in comprehensive energy monitoring, system diagnostics, forecasting, and performance analytics.",
-        "properties": {
-          "EnergyTSArray": {
-            "$ref": "#/components/schemas/EnergyTSArray"
-          },
-          "PowerTSArray": {
-            "$ref": "#/components/schemas/PowerTSArray"
-          },
-          "VoltageTSArray": {
-            "$ref": "#/components/schemas/VoltageTSArray"
-          },
-          "CurrentTSArray": {
-            "$ref": "#/components/schemas/CurrentTSArray"
-          },
-          "PowerFactorTSArray": {
-            "$ref": "#/components/schemas/PowerFactorTSArray"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          }
-        }
-      },
-      "CurrentTSArray": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CurrentTS"
-        }
-      },
-      "PowerFactorTSArray": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/PowerFactorTS"
-        }
-      },
-      "Energy": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The total amount of electrical work performed or transferred over time within an electric circuit.",
-            "x-ob-item-type": "EnergyItemType",
-            "x-ob-item-type-group": "OBElectricalEnergy",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "kWh",
-              "Value": 40
-            }
-          }
-        ]
-      },
-      "EnergyArray": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/Energy"
-        }
-      },
-      "Current": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The flow of electric charge through a conductor or circuit, typically measured in amperes (A). It represents the rate at which electrons pass a given point in the circuit.",
-            "x-ob-item-type": "ElectricCurrentItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "A",
-              "Value": 15
-            }
-          }
-        ]
-      },
-      "CurrentArray": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/Current"
-        }
-      },
-      "PowerFactor": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The dimensionless ratio of active (real) power to apparent power in an AC electrical system, indicating how effectively electrical power is being converted into useful work. It reflects the phase alignment between voltage and current and ranges from -1 to 1.",
-            "x-ob-item-type": "DecimalItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 0.95
-            }
-          }
-        ]
-      },
-      "PowerFactorArray": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/PowerFactor"
-        }
-      },
-      "LineFrequencies": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LineFrequency"
-        }
       }
     }
   },
@@ -15803,14 +15517,6 @@
         "VA": {
           "label": "Volt-ampere",
           "description": "A volt-ampere (VA) is the unit used for the apparent power in an electrical circuit, equal to the product of root-mean-square (RMS) voltage and RMS current. In direct current (DC) circuits, this product is equal to the real power (active power) in watts. Volt-amperes are useful only in the context of alternating current (AC) circuits."
-        },
-        "MVA": {
-          "label": "MVA",
-          "description": "Million Volt-Amperes"
-        },
-        "kVA": {
-          "label": "kVA",
-          "description": "Thousand Volt-Amperes"
         }
       }
     },
@@ -19175,7 +18881,7 @@
         }
       }
     },
-    "PowerPhaseTypeItemType": {
+    "InterconnectionPhaseTypeItemType": {
       "description": "",
       "enums": {
         "Single": {
@@ -19186,13 +18892,9 @@
           "label": "Three",
           "description": ""
         },
-        "Split": {
-          "label": "Split",
-          "description": "Split-phase is a type of single-phase power distribution, not a separate two-phase system. It utilizes two 120V AC lines, 180 degrees out of phase, and a common neutral to provide 240V between the hot lines. "
-        },
-        "Two": {
-          "label": "Two",
-          "description": "Characterized by two phases that are typically 90 degrees out of phase, requiring four conductors. "
+        "Double": {
+          "label": "Double",
+          "description": "Two-phase, also termed split phase or 2/3 phase."
         }
       }
     },
@@ -19263,7 +18965,7 @@
         }
       }
     },
-    "PowerPhaseItemType": {
+    "InterconnectionPhaseItemType": {
       "description": "",
       "enums": {
         "A": {
@@ -19276,14 +18978,6 @@
         },
         "C": {
           "label": "C",
-          "description": ""
-        },
-        "Unspecified": {
-          "label": "Unspecified",
-          "description": ""
-        },
-        "Total": {
-          "label": "Total",
           "description": ""
         }
       }
@@ -22376,93 +22070,6 @@
           "description": ""
         }
       }
-    },
-    "LineFrequencyItemType": {
-      "description": "Specifies the frequency of the alternating current (AC) electrical system in hertz (Hz). LineFrequency is a key electrical characteristic used to define the standard power system frequency for generation, transmission, and equipment compatibility.",
-      "enums": {
-        "50": {
-          "label": "50",
-          "description": ""
-        },
-        "60": {
-          "label": "60",
-          "description": ""
-        },
-        "Unspecified": {
-          "label": "Unspecified",
-          "description": "Unspecified frequency."
-        },
-        "NA": {
-          "label": "Not Applicable",
-          "description": "Used for DC systems."
-        }
-      }
-    },
-    "PowerTypeItemType": {
-      "description": "",
-      "enums": {
-        "Active": {
-          "label": "Active",
-          "description": "The real power that performs actual work in an electrical system. Measured in watts (W), it represents the usable energy consumed by devices."
-        },
-        "Reactive": {
-          "label": "Reactive",
-          "description": "The power that oscillates between source and load, stored and released by inductive and capacitive components. Measured in volt-amperes reactive (VAR), it does not perform work but is necessary to maintain voltage and magnetic fields."
-        },
-        "Apparent": {
-          "label": "Apparent",
-          "description": "The vector sum of active and reactive power. Measured in volt-amperes (VA), it represents the total power supplied through the system regardless of how much is actually used."
-        },
-        "Direct": {
-          "label": "Direct",
-          "description": "Power in a direct current (DC) system, where voltage and current are constant and unidirectional. Measured in watts (W), it is purely real power with no reactive component."
-        }
-      }
-    },
-    "VoltagePhaseItemType": {
-      "description": "Defines the electrical phase relationship for a voltage measurement or specification.",
-      "enums": {
-        "LL": {
-          "label": "LL",
-          "description": "Line-to-Line (unspecified phases)"
-        },
-        "LN": {
-          "label": "LN",
-          "description": "Line-to-Neutral (unspecified phases)"
-        },
-        "AN": {
-          "label": "AN",
-          "description": "Phase A to Neutral"
-        },
-        "BN": {
-          "label": "BN",
-          "description": "Phase B to Neutral"
-        },
-        "CN": {
-          "label": "CN",
-          "description": "Phase C to Neutral"
-        },
-        "AB": {
-          "label": "AB",
-          "description": "Phase A to Phase B"
-        },
-        "AC": {
-          "label": "AC",
-          "description": "Phase A to Phase C"
-        },
-        "BC": {
-          "label": "BC",
-          "description": "Phase B to Phase C"
-        },
-        "Unspecified": {
-          "label": "Unspecified",
-          "description": "No phase designation applicable or not specified"
-        },
-        "LG": {
-          "label": "LG",
-          "description": "Line to Ground."
-        }
-      }
     }
   },
   "x-ob-item-type-groups": {
@@ -22492,10 +22099,7 @@
         "kW",
         "MW",
         "W",
-        "var",
-        "VA",
-        "MVA",
-        "kVA"
+        "VA"
       ]
     },
     "MassUnitItemType": {
