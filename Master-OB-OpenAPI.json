@@ -15330,7 +15330,7 @@
         }
       },
       "IrradianceTS": {
-        "type": "object",
+        "type": "object", 
         "description": "Time Series (TS) containing irradiance measurements, capturing the temporal behavior of solar radiation received by a surface. This object is commonly used in solar energy monitoring, forecasting, and performance analysis systems.",
         "properties": {
           "IrradianceArray": {
