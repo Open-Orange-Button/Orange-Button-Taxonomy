@@ -15142,6 +15142,23 @@
           }
         ]
       },
+      "IrradianceType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Type of irradiance measurement.",
+            "x-ob-item-type": "IrradianceTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "POA"
+            }
+          }
+        ]
+      },
       "PowerTS": {
         "type": "object",
         "description": "Time Series (TS) containing power measurements, capturing the temporal behavior of electrical power generation, consumption, or flow. This object is commonly used in energy monitoring, forecasting, and analysis systems.",
@@ -15313,8 +15330,8 @@
           {
             "type": "object",
             "description": "Irradiance measured at an instant in time.",
-            "x-ob-item-type": "IrradianceType",
-            "x-ob-item-type-group": "",
+            "x-ob-item-type": "IrradianceItemType",
+            "x-ob-item-type-group": "OBIrradiance",
             "x-ob-usage-tips": "Use to represent POA, GHI, DHI, or DNI irradiance values captured by a device over time.",
             "x-ob-sample-value": {
               "Unit": "W_per_m2",
@@ -15335,6 +15352,9 @@
         "properties": {
           "IrradianceArray": {
             "$ref": "#/components/schemas/IrradianceArray"
+          },
+          "IrradianceType": {
+            "$ref": "#/components/schemas/IrradianceType"
           },
           "Scope": {
             "$ref": "#/components/schemas/Scope"
@@ -16712,7 +16732,7 @@
         }
       }
     },
-    "IrradianceType": {
+    "IrradianceTypeItemType": {
       "description": "Defines the type of irradiance measurement or specification.",
       "enums": {
         "POA": {
@@ -22574,6 +22594,14 @@
         "kt",
         "Mt",
         "Gt"
+      ]
+    },
+    "OBIrradiance": {
+      "type": "#/x-ob-item-types/IrradianceItemType",
+      "description": "Solar irradiance values",
+      "group": [
+        "W_per_sqm",
+        "kW_per_sqm"
       ]
     }
   }
