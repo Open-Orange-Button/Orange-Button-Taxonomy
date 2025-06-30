@@ -15329,12 +15329,12 @@
           },
           {
             "type": "object",
-            "description": "Irradiance measured at an instant in time.",
+            "description": "Irradiance, or the radiant flux per unit area.",
             "x-ob-item-type": "IrradianceItemType",
             "x-ob-item-type-group": "OBIrradiance",
-            "x-ob-usage-tips": "Use to represent POA, GHI, DHI, or DNI irradiance values captured by a device over time.",
+            "x-ob-usage-tips": "Use IrradianceType to indicate if POA, GHI, DHI, DNI, or other type listed.",
             "x-ob-sample-value": {
-              "Unit": "W_per_m2",
+              "Unit": "W_per_sqm",
               "Value": 1000
             }
           }
@@ -15348,7 +15348,7 @@
       },
       "IrradianceTS": {
         "type": "object", 
-        "description": "Time Series (TS) containing irradiance measurements, capturing the temporal behavior of solar radiation received by a surface. This object is commonly used in solar energy monitoring, forecasting, and performance analysis systems.",
+        "description": "Time Series (TS) containing irradiance measurements, capturing the temporal behavior of solar radiation received by a surface.",
         "properties": {
           "IrradianceArray": {
             "$ref": "#/components/schemas/IrradianceArray"
@@ -16737,11 +16737,11 @@
       "enums": {
         "POA": {
           "label": "Plane of Array",
-          "description": "Irradiance measured on the plane of the solar array."
+          "description": "Irradiance, both direct and diffuse, on the plane of the solar array."
         },
         "GHI": {
           "label": "Global Horizontal",
-          "description": "Irradiance measured on a horizontal surface."
+          "description": "Irradiance, both direct and diffuse, on a horizontal surface."
         },
         "DNI": {
           "label": "Direct Normal",
@@ -16749,7 +16749,7 @@
         },
         "DHI": {
           "label": "Diffuse Horizontal",
-          "description": "Irradiance scattered by the atmosphere, measured on a horizontal surface."
+          "description": "Irradiance scattered by the atmosphere or by reflections, measured on a horizontal surface."
         }
       }
     },
