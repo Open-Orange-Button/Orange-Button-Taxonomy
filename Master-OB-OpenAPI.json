@@ -15331,8 +15331,8 @@
             "type": "object",
             "description": "Irradiance, or the radiant flux per unit area.",
             "x-ob-item-type": "IrradianceItemType",
-            "x-ob-item-type-group": "OBIrradiance",
-            "x-ob-usage-tips": "Use IrradianceType to indicate if POA, GHI, DHI, DNI, or other type listed.",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "Use IrradianceType to indicate POA, GHI, DHI, DNI, or other type listed.",
             "x-ob-sample-value": {
               "Unit": "W_per_sqm",
               "Value": 1000
@@ -15361,6 +15361,9 @@
           },
           "Device": {
             "$ref": "#/components/schemas/Device"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
           }
         }
       },
@@ -16734,7 +16737,7 @@
     },
     "IrradianceTypeItemType": {
       "description": "Defines the type of irradiance measurement or specification.",
-      "enums": {
+      "units": {
         "POA": {
           "label": "Plane of Array",
           "description": "Irradiance, both direct and diffuse, on the plane of the solar array."
@@ -16750,6 +16753,10 @@
         "DHI": {
           "label": "Diffuse Horizontal",
           "description": "Irradiance scattered by the atmosphere or by reflections, measured on a horizontal surface."
+        },
+        "Other": {
+          "label": "Other",
+          "description": "Any other type of irradiance not specified above."
         }
       }
     },
@@ -22594,14 +22601,6 @@
         "kt",
         "Mt",
         "Gt"
-      ]
-    },
-    "OBIrradiance": {
-      "type": "#/x-ob-item-types/IrradianceItemType",
-      "description": "Solar irradiance values",
-      "group": [
-        "W_per_sqm",
-        "kW_per_sqm"
       ]
     }
   }
