@@ -14548,7 +14548,7 @@
       "SignUpAmount": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -14594,7 +14594,7 @@
       "PaymentRateCapacity": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -15204,7 +15204,7 @@
       "LineFrequency": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementInteger"
+            "$ref": "#/components/schemas/TaxonomyElementString"
           },
           {
             "type": "object",
@@ -16737,7 +16737,7 @@
     },
     "IrradianceTypeItemType": {
       "description": "Defines the type of irradiance measurement or specification.",
-      "units": {
+      "enums": {
         "POA": {
           "label": "Plane of Array",
           "description": "Irradiance, both direct and diffuse, on the plane of the solar array."
