@@ -15401,6 +15401,27 @@
           "$ref": "#/components/schemas/HumidityRelative"
         }
       },
+      "PressureAtmosphericTS": {
+        "type": "object",
+        "description": "Time Series (TS) containing atmospheric pressure measurements, capturing the behavior of air pressure in the environment.",
+        "properties": {
+          "PressureAtmosphericArray": {
+            "$ref": "#/components/schemas/PressureAtmosphericArray"
+          },
+          "Device": {
+            "$ref": "#/components/schemas/Device"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          }
+        }
+      },
+      "PressureAtmosphericArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PressureAtmospheric"
+        }
+      },
       "PowerTSArray": {
         "type": "array",
         "items": {
@@ -15423,6 +15444,12 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/HumidityRelativeTS"
+        }
+      },
+      "PressureAtmosphericTSArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PressureAtmosphericTS"
         }
       },
       "ElectricalTS": {
