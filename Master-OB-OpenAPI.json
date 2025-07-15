@@ -15419,6 +15419,12 @@
           "$ref": "#/components/schemas/VoltageTS"
         }
       },
+      "HumidityRelativeTSArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/HumidityRelativeTS"
+        }
+      },
       "ElectricalTS": {
         "type": "object",
         "description": "A composite time series object that groups multiple electrical measurement series to represent the temporal behavior of key electrical parameters in a unified structure. This object is commonly used in comprehensive energy monitoring, system diagnostics, forecasting, and performance analytics.",
