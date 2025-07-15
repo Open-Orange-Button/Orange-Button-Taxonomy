@@ -14548,7 +14548,7 @@
       "SignUpAmount": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -14594,7 +14594,7 @@
       "PaymentRateCapacity": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
@@ -15142,6 +15142,23 @@
           }
         ]
       },
+      "IrradianceType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Type of irradiance measurement.",
+            "x-ob-item-type": "IrradianceTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "POA"
+            }
+          }
+        ]
+      },
       "PowerTS": {
         "type": "object",
         "description": "Time Series (TS) containing power measurements, capturing the temporal behavior of electrical power generation, consumption, or flow. This object is commonly used in energy monitoring, forecasting, and analysis systems.",
@@ -15187,7 +15204,7 @@
       "LineFrequency": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementInteger"
+            "$ref": "#/components/schemas/TaxonomyElementString"
           },
           {
             "type": "object",
@@ -15305,6 +15322,51 @@
           }
         }
       },
+      "Irradiance":{ 
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Irradiance, or the radiant flux per unit area.",
+            "x-ob-item-type": "IrradianceItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "Use IrradianceType to indicate POA, GHI, DHI, DNI, or other type listed.",
+            "x-ob-sample-value": {
+              "Unit": "W_per_sqm",
+              "Value": 1000
+            }
+          }
+        ]
+      },
+      "IrradianceArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Irradiance"
+        }
+      },
+      "IrradianceTS": {
+        "type": "object", 
+        "description": "Time Series (TS) containing irradiance measurements, capturing the temporal behavior of solar radiation received by a surface.",
+        "properties": {
+          "IrradianceArray": {
+            "$ref": "#/components/schemas/IrradianceArray"
+          },
+          "IrradianceType": {
+            "$ref": "#/components/schemas/IrradianceType"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "Device": {
+            "$ref": "#/components/schemas/Device"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          }
+        }
+      },
       "EnergyTS": {
         "type": "object",
         "description": "Time Series (TS) containing energy measurements, capturing the accumulated or interval-based behavior of electrical energy generation, consumption, or transfer over time. This object is commonly used in energy monitoring, billing, forecasting, and performance analysis systems.",
@@ -15396,6 +15458,12 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/VoltageTS"
+        }
+      },
+      "IrradianceTSArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/IrradianceTS"
         }
       },
       "ElectricalTS": {
@@ -16664,6 +16732,31 @@
         "GV": {
           "label": "Gigavolt",
           "description": "One thousand million volts"
+        }
+      }
+    },
+    "IrradianceTypeItemType": {
+      "description": "Defines the type of irradiance measurement or specification.",
+      "enums": {
+        "POA": {
+          "label": "Plane of Array",
+          "description": "Irradiance, both direct and diffuse, on the plane of the solar array."
+        },
+        "GHI": {
+          "label": "Global Horizontal",
+          "description": "Irradiance, both direct and diffuse, on a horizontal surface."
+        },
+        "DNI": {
+          "label": "Direct Normal",
+          "description": "Irradiance from the sun directly, without scattering."
+        },
+        "DHI": {
+          "label": "Diffuse Horizontal",
+          "description": "Irradiance scattered by the atmosphere or by reflections, measured on a horizontal surface."
+        },
+        "Other": {
+          "label": "Other",
+          "description": "Any other type of irradiance not specified above."
         }
       }
     },
