@@ -15380,6 +15380,27 @@
           }
         }
       },
+      "HumidityRelativeTS": {
+        "type": "object",
+        "description": "Time Series (TS) containing relative humidity measurements, capturing the behavior of moisture content in the air.",
+        "properties": {
+          "HumidityRelativeArray": {
+            "$ref": "#/components/schemas/HumidityRelativeArray"
+          },
+          "Device": {
+            "$ref": "#/components/schemas/Device"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          }
+        }
+      },
+      "HumidityRelativeArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/HumidityRelative"
+        }
+      },
       "PowerTSArray": {
         "type": "array",
         "items": {
