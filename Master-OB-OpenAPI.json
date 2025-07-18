@@ -4568,7 +4568,7 @@
           },
           {
             "type": "object",
-            "description": "The air pressure at the location of the weather data record",
+            "description": "The air pressure.",
             "x-ob-item-type": "PressureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -15442,6 +15442,48 @@
           }
         }
       },
+      "HumidityRelativeTS": {
+        "type": "object",
+        "description": "Time Series (TS) containing relative humidity.",
+        "properties": {
+          "HumidityRelativeArray": {
+            "$ref": "#/components/schemas/HumidityRelativeArray"
+          },
+          "Device": {
+            "$ref": "#/components/schemas/Device"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          }
+        }
+      },
+      "HumidityRelativeArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/HumidityRelative"
+        }
+      },
+      "PressureAtmosphericTS": {
+        "type": "object",
+        "description": "Time Series (TS) containing atmospheric pressure.",
+        "properties": {
+          "PressureAtmosphericArray": {
+            "$ref": "#/components/schemas/PressureAtmosphericArray"
+          },
+          "Device": {
+            "$ref": "#/components/schemas/Device"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          }
+        }
+      },
+      "PressureAtmosphericArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PressureAtmospheric"
+        }
+      },
       "PowerTSArray": {
         "type": "array",
         "items": {
@@ -15458,6 +15500,18 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/VoltageTS"
+        }
+      },
+      "HumidityRelativeTSArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/HumidityRelativeTS"
+        }
+      },
+      "PressureAtmosphericTSArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/PressureAtmosphericTS"
         }
       },
       "IrradianceTSArray": {
