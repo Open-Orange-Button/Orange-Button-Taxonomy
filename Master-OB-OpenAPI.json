@@ -4568,7 +4568,7 @@
           },
           {
             "type": "object",
-            "description": "The air pressure at the location of the weather data record",
+            "description": "The air pressure.",
             "x-ob-item-type": "PressureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -15382,7 +15382,7 @@
       },
       "HumidityRelativeTS": {
         "type": "object",
-        "description": "Time Series (TS) containing relative humidity measurements, capturing the behavior of moisture content in the air.",
+        "description": "Time Series (TS) containing relative humidity.",
         "properties": {
           "HumidityRelativeArray": {
             "$ref": "#/components/schemas/HumidityRelativeArray"
@@ -15403,7 +15403,7 @@
       },
       "PressureAtmosphericTS": {
         "type": "object",
-        "description": "Time Series (TS) containing atmospheric pressure measurements, capturing the behavior of air pressure in the environment.",
+        "description": "Time Series (TS) containing atmospheric pressure.",
         "properties": {
           "PressureAtmosphericArray": {
             "$ref": "#/components/schemas/PressureAtmosphericArray"
