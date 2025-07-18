@@ -16,6 +16,7 @@ Object changes
 * Removes InverterOutput, InverterOutputs 
 * Adds HumidityRelativeTS, HumidityRelativeTSArray
 * Adds PressureAtmoshpericTS, PressureAtmosphericTSArray
+* Adds IrradianceTS, IrradianceTSArray
 
 Unit changes
 ~~~~~~~~~~~~
