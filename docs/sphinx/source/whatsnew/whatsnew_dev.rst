@@ -15,7 +15,7 @@ Object changes
 * Removes FrequenciesAC from ACInput, ACOutput, 
 * Removes InverterOutput, InverterOutputs 
 * Adds HumidityRelativeTS, HumidityRelativeTSArray
-* Adds PressureAtmoshpericTS, PressureAtmosphericTSArray
+* Adds PressureAtmosphericTS, PressureAtmosphericTSArray
 * Adds IrradianceTS, IrradianceTSArray
 
 Unit changes
