@@ -5478,7 +5478,7 @@
           },
           {
             "type": "object",
-            "description": "Amount of snowfall in a given period of time",
+            "description": "Accumulation of snowfall in a given period of time",
             "x-ob-item-type": "LengthItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -15166,7 +15166,7 @@
           },
           {
             "type": "object",
-            "description": "Type of snowfall measurement.",
+            "description": "Surface where accumulated snowfall is being measured.",
             "x-ob-item-type": "SnowfallSurfaceTypeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -15482,7 +15482,7 @@
       },
       "SnowfallTS": {
         "type": "object",
-        "description": "Time Series (TS) containing snowfall measurements.",
+        "description": "Time Series (TS) containing snowfall.",
         "properties": {
           "SnowfallArray": {
             "$ref": "#/components/schemas/SnowfallArray"
@@ -16877,7 +16877,7 @@
         },
         "Other": {
           "label": "Other",
-          "description": "Snowfall measured in other conditions."
+          "description": "Snowfall measured in other conditions. Please specify the conditions in the description."
         }
       }
     },
