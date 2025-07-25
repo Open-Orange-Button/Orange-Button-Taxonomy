@@ -15159,6 +15159,23 @@
           }
         ]
       },
+      "TemperatureType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The location of temperature measurement.",
+            "x-ob-item-type": "TemperatureTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Single"
+            }
+          }
+        ]
+      },
       "PowerTS": {
         "type": "object",
         "description": "Time Series (TS) containing power measurements, capturing the temporal behavior of electrical power generation, consumption, or flow. This object is commonly used in energy monitoring, forecasting, and analysis systems.",
@@ -15184,6 +15201,36 @@
           "PowerType": {
             "$ref": "#/components/schemas/PowerType"
           }
+        }
+      },
+      "TemperatureTS": {
+        "type": "object",
+        "description": "Time Series (TS) containing temperature.",
+        "properties": {
+          "TemperatureArray": {
+            "$ref": "#/components/schemas/TemperatureArray"
+          },
+          "TemperatureType": {
+            "$ref": "#/components/schemas/TemperatureType"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "Device": {
+            "$ref": "#/components/schemas/Device"
+          }
+        }
+      },
+      "TemperatureArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Temperature"
+        }
+      },
+      "TemperatureTSArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/TemperatureTS"
         }
       },
       "Frequency": {
@@ -15336,6 +15383,24 @@
             "x-ob-sample-value": {
               "Unit": "W_per_sqm",
               "Value": 1000
+            }
+          }
+        ]
+      },
+      "Temperature":{ 
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Temperature measured at a specific location.",
+            "x-ob-item-type": "TemperatureItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "Use TemperatureType to indicate Surface, Ambient, Internal, IGBT, or CPU.",
+            "x-ob-sample-value": {
+              "Unit": "Cel",
+              "Value": 25
             }
           }
         ]
@@ -16811,6 +16876,31 @@
         "Other": {
           "label": "Other",
           "description": "Any other type of irradiance not specified above."
+        }
+      }
+    },
+    "TemperatureTypeItemType": {
+      "description": "Defines the location of temperature measurement.",
+      "enums": {
+        "Surface": {
+          "label": "Surface",
+          "description": "Temperature measured on the surface of the solar array."
+        },
+        "Ambient": {
+          "label": "Ambient",
+          "description": "Temperature measured in the ambient environment."
+        },
+        "Internal": {
+          "label": "Internal",
+          "description": "Temperature measured inside the enclosure."
+        },
+        "IGBT": {
+          "label": "IGBT",
+          "description": "Temperature measured at the IGBT."
+        },
+        "CPU": {
+          "label": "CPU",
+          "description": "Temperature measured at the CPU."
         }
       }
     },
