@@ -15367,6 +15367,30 @@
           }
         }
       },
+      "WindSpeedArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/WindSpeed"
+        }
+      },
+      "WindSpeedTS": {
+        "type": "object", 
+        "description": "Time Series (TS) containing wind speed.",
+        "properties": {
+          "WindSpeedArray": {
+            "$ref": "#/components/schemas/WindSpeedArray"
+          },
+          "HeightAboveGround": {
+            "$ref": "#/components/schemas/HeightAboveGround"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "Device": {
+            "$ref": "#/components/schemas/Device"
+          }
+        }
+      },
       "EnergyTS": {
         "type": "object",
         "description": "Time Series (TS) containing energy measurements, capturing the accumulated or interval-based behavior of electrical energy generation, consumption, or transfer over time. This object is commonly used in energy monitoring, billing, forecasting, and performance analysis systems.",
@@ -15518,6 +15542,12 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/IrradianceTS"
+        }
+      },
+      "WindSpeedTSArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/WindSpeedTS"
         }
       },
       "ElectricalTS": {

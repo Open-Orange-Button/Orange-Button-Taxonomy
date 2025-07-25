@@ -17,6 +17,7 @@ Object changes
 * Adds HumidityRelativeTS, HumidityRelativeTSArray
 * Adds PressureAtmosphericTS, PressureAtmosphericTSArray
 * Adds IrradianceTS, IrradianceTSArray
+* Adds WindspeedTS, WindspeedTSArray
 
 Unit changes
 ~~~~~~~~~~~~
