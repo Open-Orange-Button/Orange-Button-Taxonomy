@@ -15397,7 +15397,7 @@
             "description": "Temperature measured at a specific location.",
             "x-ob-item-type": "TemperatureItemType",
             "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "Use TemperatureType to indicate Surface, Ambient, Internal, IGBT, or CPU.",
+            "x-ob-usage-tips": "Use TemperatureType to indicate Surface, Ambient, Internal, etc.",
             "x-ob-sample-value": {
               "Unit": "Cel",
               "Value": 25
