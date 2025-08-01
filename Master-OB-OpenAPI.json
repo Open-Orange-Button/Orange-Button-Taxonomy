@@ -5478,7 +5478,7 @@
           },
           {
             "type": "object",
-            "description": "Amount of snowfall in a given period of time",
+            "description": "Accumulation of snowfall in a given period of time",
             "x-ob-item-type": "LengthItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -15160,7 +15160,7 @@
         ]
       },
       "TemperatureType": {
-        "allOf": [
+      "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementString"
           },
@@ -15172,6 +15172,22 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Ambient"
+                }
+          }
+        ]
+      },
+      "SnowfallSurfaceType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "description": "Surface where accumulated snowfall is being measured.",
+            "x-ob-item-type": "SnowfallSurfaceTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Panel"
             }
           }
         ]
@@ -15528,6 +15544,33 @@
           "$ref": "#/components/schemas/HumidityRelative"
         }
       },
+      "SnowfallTS": {
+        "type": "object",
+        "description": "Time Series (TS) containing snowfall.",
+        "properties": {
+          "SnowfallArray": {
+            "$ref": "#/components/schemas/SnowfallArray"
+          },
+          "Device": {
+            "$ref": "#/components/schemas/Device"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "SnowfallSurfaceType": {
+            "$ref": "#/components/schemas/SnowfallSurfaceType"
+          }
+        }
+      },
+      "SnowfallArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Snowfall"
+        }
+      },
       "PressureAtmosphericTS": {
         "type": "object",
         "description": "Time Series (TS) containing atmospheric pressure.",
@@ -15583,6 +15626,12 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/IrradianceTS"
+        }
+      },
+      "SnowfallTSArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/SnowfallTS"
         }
       },
       "ElectricalTS": {
@@ -16901,6 +16950,23 @@
         "CPU": {
           "label": "CPU",
           "description": "Temperature measured at a CPU."
+        }
+      }
+    },
+    "SnowfallSurfaceTypeItemType": {
+      "description": "Defines the type of snowfall measurement or specification.",
+      "enums": {
+        "Panel": {
+          "label": "Panel",
+          "description": "Snowfall measured on the surface of the solar panel."
+        },
+        "Ground": {
+          "label": "Ground",
+          "description": "Snowfall measured on the ground."
+        },
+        "Other": {
+          "label": "Other",
+          "description": "Snowfall measured in other conditions. Please specify the conditions in the description.
         }
       }
     },
