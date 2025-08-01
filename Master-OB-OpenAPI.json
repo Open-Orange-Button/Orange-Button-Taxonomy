@@ -16896,7 +16896,7 @@
         },
         "IGBT": {
           "label": "IGBT",
-          "description": "Temperature measured at the IGBT."
+          "description": "Temperature measured at an IGBT."
         },
         "CPU": {
           "label": "CPU",
