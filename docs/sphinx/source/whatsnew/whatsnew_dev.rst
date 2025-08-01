@@ -14,6 +14,10 @@ Object changes
 * Adds VoltageTS, VoltageTSArray, EnergyTS, EnergyTSArray, PowerTS, PowerTSArray, CurrentTS, CurrentTSArray, ElectricalTS, LineFrequencies
 * Removes FrequenciesAC from ACInput, ACOutput, 
 * Removes InverterOutput, InverterOutputs 
+* Adds HumidityRelativeTS, HumidityRelativeTSArray
+* Adds PressureAtmosphericTS, PressureAtmosphericTSArray
+* Adds IrradianceTS, IrradianceTSArray
+* Adds SnowfallTS, SnowfallTSArray
 
 Unit changes
 ~~~~~~~~~~~~
