@@ -16892,7 +16892,7 @@
         },
         "Internal": {
           "label": "Internal",
-          "description": "Temperature measured inside the enclosure."
+          "description": "Temperature inside an enclosure or internal to a device."
         },
         "IGBT": {
           "label": "IGBT",
