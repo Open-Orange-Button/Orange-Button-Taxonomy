@@ -15507,6 +15507,33 @@
           "$ref": "#/components/schemas/Snowfall"
         }
       },
+      "RainfallTS": {
+        "type": "object",
+        "description": "Time Series (TS) containing rainfall.",
+        "properties": {
+          "RainfallArray": {
+            "$ref": "#/components/schemas/RainfallArray"
+          },
+          "Device": {
+            "$ref": "#/components/schemas/Device"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          }
+        }
+      },
+      "RainfallArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Rainfall"
+        }
+      },
+      "RainfallTSArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/RainfallTS"
+        }
+      },
       "PressureAtmosphericTS": {
         "type": "object",
         "description": "Time Series (TS) containing atmospheric pressure.",
