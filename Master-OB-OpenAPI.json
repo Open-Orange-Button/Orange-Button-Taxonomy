@@ -4271,6 +4271,8 @@
             "x-ob-item-type": "LengthItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "EndTime": "2020-02-08 09:59:59+07:00",
+              "StartTime": "2020-02-08 09:00:00+07:00",
               "Unit": "mm",
               "Value": 5
             },
@@ -5789,6 +5791,30 @@
             "x-ob-sample-value": {
               "Unit": "Degree",
               "Value": 180
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "WindDirectionTSArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/WindDirectionTS"
+        }
+      },
+      "WindDirection": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Wind Direction relative to True North where North is 0 degrees and East is 90 degrees.",
+            "x-ob-item-type": "PlaneAngleItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Degree",
+              "Value": 90
             },
             "x-ob-item-type-group": ""
           }
@@ -15159,13 +15185,29 @@
           }
         ]
       },
+      "TemperatureType": {
+      "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The location of temperature measurement.",
+            "x-ob-item-type": "TemperatureTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Ambient"
+                }
+          }
+        ]
+      },
       "SnowfallSurfaceType": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementString"
           },
           {
-            "type": "object",
             "description": "Surface where accumulated snowfall is being measured.",
             "x-ob-item-type": "SnowfallSurfaceTypeItemType",
             "x-ob-item-type-group": "",
@@ -15201,6 +15243,36 @@
           "PowerType": {
             "$ref": "#/components/schemas/PowerType"
           }
+        }
+      },
+      "TemperatureTS": {
+        "type": "object",
+        "description": "Time Series (TS) containing temperature.",
+        "properties": {
+          "TemperatureArray": {
+            "$ref": "#/components/schemas/TemperatureArray"
+          },
+          "TemperatureType": {
+            "$ref": "#/components/schemas/TemperatureType"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "Device": {
+            "$ref": "#/components/schemas/Device"
+          }
+        }
+      },
+      "TemperatureArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Temperature"
+        }
+      },
+      "TemperatureTSArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/TemperatureTS"
         }
       },
       "Frequency": {
@@ -15357,6 +15429,24 @@
           }
         ]
       },
+      "Temperature":{ 
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Temperature measured at a specific location.",
+            "x-ob-item-type": "TemperatureItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "Use TemperatureType to indicate Surface, Ambient, Internal, etc.",
+            "x-ob-sample-value": {
+              "Unit": "Cel",
+              "Value": 25
+            }
+          }
+        ]
+      },
       "IrradianceArray": {
         "type": "array",
         "items": {
@@ -15381,6 +15471,51 @@
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
+          }
+        }
+      },
+      "WindDirectionArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/WindDirection"
+        }
+      },
+      "WindDirectionTS": {
+        "type": "object",
+        "description": "Time Series (TS) containing wind direction measurements.",
+        "properties": {
+          "WindDirectionArray": {
+            "$ref": "#/components/schemas/WindDirectionArray"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "Device": {
+            "$ref": "#/components/schemas/Device"
+          }
+        }
+      },
+      "WindSpeedArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/WindSpeed"
+        }
+      },
+      "WindSpeedTS": {
+        "type": "object", 
+        "description": "Time Series (TS) containing wind speed.",
+        "properties": {
+          "WindSpeedArray": {
+            "$ref": "#/components/schemas/WindSpeedArray"
+          },
+          "HeightAboveGround": {
+            "$ref": "#/components/schemas/HeightAboveGround"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "Device": {
+            "$ref": "#/components/schemas/Device"
           }
         }
       },
@@ -15507,6 +15642,33 @@
           "$ref": "#/components/schemas/Snowfall"
         }
       },
+      "RainfallTS": {
+        "type": "object",
+        "description": "Time Series (TS) containing rainfall.",
+        "properties": {
+          "RainfallArray": {
+            "$ref": "#/components/schemas/RainfallArray"
+          },
+          "Device": {
+            "$ref": "#/components/schemas/Device"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          }
+        }
+      },
+      "RainfallArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Rainfall"
+        }
+      },
+      "RainfallTSArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/RainfallTS"
+        }
+      },
       "PressureAtmosphericTS": {
         "type": "object",
         "description": "Time Series (TS) containing atmospheric pressure.",
@@ -15562,6 +15724,12 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/IrradianceTS"
+        }
+      },
+      "WindSpeedTSArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/WindSpeedTS"
         }
       },
       "SnowfallTSArray": {
@@ -16861,6 +17029,31 @@
         "Other": {
           "label": "Other",
           "description": "Any other type of irradiance not specified above."
+        }
+      }
+    },
+    "TemperatureTypeItemType": {
+      "description": "Defines the location of temperature measurement.",
+      "enums": {
+        "Surface": {
+          "label": "Surface",
+          "description": "Temperature on a surface."
+        },
+        "Ambient": {
+          "label": "Ambient",
+          "description": "Temperature measured in the ambient environment."
+        },
+        "Internal": {
+          "label": "Internal",
+          "description": "Temperature inside an enclosure or internal to a device."
+        },
+        "IGBT": {
+          "label": "IGBT",
+          "description": "Temperature measured at an IGBT."
+        },
+        "CPU": {
+          "label": "CPU",
+          "description": "Temperature measured at a CPU."
         }
       }
     },
