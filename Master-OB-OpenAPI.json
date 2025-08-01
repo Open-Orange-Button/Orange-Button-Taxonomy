@@ -4271,6 +4271,8 @@
             "x-ob-item-type": "LengthItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "EndTime": "2020-02-08 09:59:59+07:00",
+              "StartTime": "2020-02-08 09:00:00+07:00",
               "Unit": "mm",
               "Value": 5
             },
@@ -15593,6 +15595,33 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/Snowfall"
+        }
+      },
+      "RainfallTS": {
+        "type": "object",
+        "description": "Time Series (TS) containing rainfall.",
+        "properties": {
+          "RainfallArray": {
+            "$ref": "#/components/schemas/RainfallArray"
+          },
+          "Device": {
+            "$ref": "#/components/schemas/Device"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          }
+        }
+      },
+      "RainfallArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Rainfall"
+        }
+      },
+      "RainfallTSArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/RainfallTS"
         }
       },
       "PressureAtmosphericTS": {
