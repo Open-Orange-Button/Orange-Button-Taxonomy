@@ -18,6 +18,8 @@ Object changes
 * Adds PressureAtmosphericTS, PressureAtmosphericTSArray
 * Adds IrradianceTS, IrradianceTSArray
 * Adds WindspeedTS, WindspeedTSArray
+* Adds TemperatureTS, TemperatureTSArray
+* Adds SnowfallTS, SnowfallTSArray
 
 Unit changes
 ~~~~~~~~~~~~

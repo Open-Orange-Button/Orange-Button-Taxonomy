@@ -5478,7 +5478,7 @@
           },
           {
             "type": "object",
-            "description": "Amount of snowfall in a given period of time",
+            "description": "Accumulation of snowfall in a given period of time",
             "x-ob-item-type": "LengthItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -15159,6 +15159,39 @@
           }
         ]
       },
+      "TemperatureType": {
+      "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The location of temperature measurement.",
+            "x-ob-item-type": "TemperatureTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Ambient"
+                }
+          }
+        ]
+      },
+      "SnowfallSurfaceType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "description": "Surface where accumulated snowfall is being measured.",
+            "x-ob-item-type": "SnowfallSurfaceTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Panel"
+            }
+          }
+        ]
+      },
       "PowerTS": {
         "type": "object",
         "description": "Time Series (TS) containing power measurements, capturing the temporal behavior of electrical power generation, consumption, or flow. This object is commonly used in energy monitoring, forecasting, and analysis systems.",
@@ -15184,6 +15217,36 @@
           "PowerType": {
             "$ref": "#/components/schemas/PowerType"
           }
+        }
+      },
+      "TemperatureTS": {
+        "type": "object",
+        "description": "Time Series (TS) containing temperature.",
+        "properties": {
+          "TemperatureArray": {
+            "$ref": "#/components/schemas/TemperatureArray"
+          },
+          "TemperatureType": {
+            "$ref": "#/components/schemas/TemperatureType"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "Device": {
+            "$ref": "#/components/schemas/Device"
+          }
+        }
+      },
+      "TemperatureArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Temperature"
+        }
+      },
+      "TemperatureTSArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/TemperatureTS"
         }
       },
       "Frequency": {
@@ -15340,6 +15403,24 @@
           }
         ]
       },
+      "Temperature":{ 
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Temperature measured at a specific location.",
+            "x-ob-item-type": "TemperatureItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "Use TemperatureType to indicate Surface, Ambient, Internal, etc.",
+            "x-ob-sample-value": {
+              "Unit": "Cel",
+              "Value": 25
+            }
+          }
+        ]
+      },
       "IrradianceArray": {
         "type": "array",
         "items": {
@@ -15487,6 +15568,33 @@
           "$ref": "#/components/schemas/HumidityRelative"
         }
       },
+      "SnowfallTS": {
+        "type": "object",
+        "description": "Time Series (TS) containing snowfall.",
+        "properties": {
+          "SnowfallArray": {
+            "$ref": "#/components/schemas/SnowfallArray"
+          },
+          "Device": {
+            "$ref": "#/components/schemas/Device"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "SnowfallSurfaceType": {
+            "$ref": "#/components/schemas/SnowfallSurfaceType"
+          }
+        }
+      },
+      "SnowfallArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Snowfall"
+        }
+      },
       "PressureAtmosphericTS": {
         "type": "object",
         "description": "Time Series (TS) containing atmospheric pressure.",
@@ -15548,6 +15656,12 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/WindSpeedTS"
+        }
+      },
+      "SnowfallTSArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/SnowfallTS"
         }
       },
       "ElectricalTS": {
@@ -16841,6 +16955,48 @@
         "Other": {
           "label": "Other",
           "description": "Any other type of irradiance not specified above."
+        }
+      }
+    },
+    "TemperatureTypeItemType": {
+      "description": "Defines the location of temperature measurement.",
+      "enums": {
+        "Surface": {
+          "label": "Surface",
+          "description": "Temperature on a surface."
+        },
+        "Ambient": {
+          "label": "Ambient",
+          "description": "Temperature measured in the ambient environment."
+        },
+        "Internal": {
+          "label": "Internal",
+          "description": "Temperature inside an enclosure or internal to a device."
+        },
+        "IGBT": {
+          "label": "IGBT",
+          "description": "Temperature measured at an IGBT."
+        },
+        "CPU": {
+          "label": "CPU",
+          "description": "Temperature measured at a CPU."
+        }
+      }
+    },
+    "SnowfallSurfaceTypeItemType": {
+      "description": "Defines the type of snowfall measurement or specification.",
+      "enums": {
+        "Panel": {
+          "label": "Panel",
+          "description": "Snowfall measured on the surface of the solar panel."
+        },
+        "Ground": {
+          "label": "Ground",
+          "description": "Snowfall measured on the ground."
+        },
+        "Other": {
+          "label": "Other",
+          "description": "Snowfall measured in other conditions. Please specify the conditions in the description."
         }
       }
     },
