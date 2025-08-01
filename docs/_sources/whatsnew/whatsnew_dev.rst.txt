@@ -20,6 +20,7 @@ Object changes
 * Adds WindspeedTS, WindspeedTSArray
 * Adds TemperatureTS, TemperatureTSArray
 * Adds SnowfallTS, SnowfallTSArray
+* Adds RainfallTS, RainfallTSArray
 
 Unit changes
 ~~~~~~~~~~~~
