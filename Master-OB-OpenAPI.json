@@ -16884,7 +16884,7 @@
       "enums": {
         "Surface": {
           "label": "Surface",
-          "description": "Temperature measured on the surface of the solar array."
+          "description": "Temperature on a surface."
         },
         "Ambient": {
           "label": "Ambient",
