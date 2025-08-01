@@ -16900,7 +16900,7 @@
         },
         "CPU": {
           "label": "CPU",
-          "description": "Temperature measured at the CPU."
+          "description": "Temperature measured at a CPU."
         }
       }
     },
