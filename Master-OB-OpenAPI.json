@@ -15159,13 +15159,29 @@
           }
         ]
       },
+      "TemperatureType": {
+      "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The location of temperature measurement.",
+            "x-ob-item-type": "TemperatureTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Ambient"
+                }
+          }
+        ]
+      },
       "SnowfallSurfaceType": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementString"
           },
           {
-            "type": "object",
             "description": "Surface where accumulated snowfall is being measured.",
             "x-ob-item-type": "SnowfallSurfaceTypeItemType",
             "x-ob-item-type-group": "",
@@ -15201,6 +15217,36 @@
           "PowerType": {
             "$ref": "#/components/schemas/PowerType"
           }
+        }
+      },
+      "TemperatureTS": {
+        "type": "object",
+        "description": "Time Series (TS) containing temperature.",
+        "properties": {
+          "TemperatureArray": {
+            "$ref": "#/components/schemas/TemperatureArray"
+          },
+          "TemperatureType": {
+            "$ref": "#/components/schemas/TemperatureType"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "Device": {
+            "$ref": "#/components/schemas/Device"
+          }
+        }
+      },
+      "TemperatureArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Temperature"
+        }
+      },
+      "TemperatureTSArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/TemperatureTS"
         }
       },
       "Frequency": {
@@ -15353,6 +15399,24 @@
             "x-ob-sample-value": {
               "Unit": "W_per_sqm",
               "Value": 1000
+            }
+          }
+        ]
+      },
+      "Temperature":{ 
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Temperature measured at a specific location.",
+            "x-ob-item-type": "TemperatureItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "Use TemperatureType to indicate Surface, Ambient, Internal, etc.",
+            "x-ob-sample-value": {
+              "Unit": "Cel",
+              "Value": 25
             }
           }
         ]
@@ -16861,6 +16925,31 @@
         "Other": {
           "label": "Other",
           "description": "Any other type of irradiance not specified above."
+        }
+      }
+    },
+    "TemperatureTypeItemType": {
+      "description": "Defines the location of temperature measurement.",
+      "enums": {
+        "Surface": {
+          "label": "Surface",
+          "description": "Temperature on a surface."
+        },
+        "Ambient": {
+          "label": "Ambient",
+          "description": "Temperature measured in the ambient environment."
+        },
+        "Internal": {
+          "label": "Internal",
+          "description": "Temperature inside an enclosure or internal to a device."
+        },
+        "IGBT": {
+          "label": "IGBT",
+          "description": "Temperature measured at an IGBT."
+        },
+        "CPU": {
+          "label": "CPU",
+          "description": "Temperature measured at a CPU."
         }
       }
     },
