@@ -15483,16 +15483,34 @@
         "description": "Time Series (TS) containing wind direction measurements.",
         "properties": {
           "WindDirectionArray": {
-            "$ref": "#/components/schemas/WindDirectionArray"
-          },
-          "HeightAboveGround": {
-            "$ref": "#/components/schemas/HeightAboveGround"
-          },
+            "$ref": "#/components/schemas/WindDirectionArray",
           "Device": {
             "$ref": "#/components/schemas/Device"
           },
           "Scope": {
             "$ref": "#/components/schemas/Scope"
+      },
+      "WindSpeedArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/WindSpeed"
+        }
+      },
+      "WindSpeedTS": {
+        "type": "object", 
+        "description": "Time Series (TS) containing wind speed.",
+        "properties": {
+          "WindSpeedArray": {
+            "$ref": "#/components/schemas/WindSpeedArray"
+          },
+          "HeightAboveGround": {
+            "$ref": "#/components/schemas/HeightAboveGround"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "Device": {
+            "$ref": "#/components/schemas/Device"
           }
         }
       },
@@ -15674,6 +15692,12 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/IrradianceTS"
+        }
+      },
+      "WindSpeedTSArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/WindSpeedTS"
         }
       },
       "SnowfallTSArray": {
