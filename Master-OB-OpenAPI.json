@@ -15483,12 +15483,15 @@
         "description": "Time Series (TS) containing wind direction measurements.",
         "properties": {
           "WindDirectionArray": {
-            "$ref": "#/components/schemas/WindDirectionArray",
-          "Device": {
-            "$ref": "#/components/schemas/Device"
+            "$ref": "#/components/schemas/WindDirectionArray"
           },
           "Scope": {
             "$ref": "#/components/schemas/Scope"
+          },
+          "Device": {
+            "$ref": "#/components/schemas/Device"
+          }
+        }
       },
       "WindSpeedArray": {
         "type": "array",
