@@ -4271,8 +4271,8 @@
             "x-ob-item-type": "LengthItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "EndTime": "'2020-12-30'",
-              "StartTime": "2020-01-01",
+              "EndTime": "2020-02-08 09:59:59+07:00",
+              "StartTime": "2020-02-08 09:00:00+07:00",
               "Unit": "mm",
               "Value": 5
             },
