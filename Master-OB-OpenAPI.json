@@ -5796,6 +5796,30 @@
           }
         ]
       },
+      "WindDirectionTSArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/WindDirectionTS"
+        }
+      },
+      "WindDirection": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Wind Direction relative to True North where North is 0 degrees and East is 90 degrees.",
+            "x-ob-item-type": "PlaneAngleItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "Degree",
+              "Value": 90
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
       "PVStringID": {
         "allOf": [
           {
@@ -15447,6 +15471,27 @@
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
+          }
+        }
+      },
+      "WindDirectionArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/WindDirection"
+        }
+      },
+      "WindDirectionTS": {
+        "type": "object",
+        "description": "Time Series (TS) containing wind direction measurements.",
+        "properties": {
+          "WindDirectionArray": {
+            "$ref": "#/components/schemas/WindDirectionArray"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "Device": {
+            "$ref": "#/components/schemas/Device"
           }
         }
       },
