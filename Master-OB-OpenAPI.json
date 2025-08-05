@@ -15759,6 +15759,48 @@
           },
           "FileFolderURL": {
             "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          }
+        }
+      },
+      "WeatherTS": {
+        "type": "object",
+        "description": "A composite time series object that groups multiple weather measurement series to represent the temporal behavior of key weather parameters in a unified structure. This object is commonly used in comprehensive weather monitoring, system diagnostics, forecasting, and performance analytics.",
+        "properties": {
+          "Device": {
+            "$ref": "#/components/schemas/Device"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "TemperatureTSArray": {
+            "$ref": "#/components/schemas/TemperatureTSArray"
+          },
+          "WindSpeedTSArray": {
+            "$ref": "#/components/schemas/WindSpeedTSArray"
+          },
+          "WindDirectionTSArray": {
+            "$ref": "#/components/schemas/WindDirectionTSArray"
+          },
+          "IrradianceTSArray": {
+            "$ref": "#/components/schemas/IrradianceTSArray"
+          },
+          "HumidityRelativeTSArray": {
+            "$ref": "#/components/schemas/HumidityRelativeTSArray"
+          },
+          "PressureAtmosphericTSArray": {
+            "$ref": "#/components/schemas/PressureAtmosphericTSArray"
+          },
+          "SnowfallTSArray": {
+            "$ref": "#/components/schemas/SnowfallTSArray"
+          },
+          "RainfallTSArray": {
+            "$ref": "#/components/schemas/RainfallTSArray"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
           }
         }
       },
