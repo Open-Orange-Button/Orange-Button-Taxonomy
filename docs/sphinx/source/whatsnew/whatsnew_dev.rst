@@ -24,6 +24,7 @@ Object changes
 * Add TemperatureTS, TemperatureTSArray
 * Add SnowfallTS, SnowfallTSArray
 * Add RainfallTS, RainfallTSArray
+* Adds scope to ElectricalTS, adds WeatherTS
 * Remove OrientationInformation, duplicative of Orientation
 
 Unit changes
