@@ -6,26 +6,29 @@ XXXX.0.0
 
 Element changes
 ~~~~~~~~~~~~~~~
-* Removes InterconnectionPhase, InterconnectionPhaseType. These elements are replaced by PowerPhase and PowerPhaseType.
-* Removes FrequencyAC and FrequenciesAC. These elements are replaced by LineFrequency and LineFrequencies.
+* Remove InterconnectionPhase, InterconnectionPhaseType. These elements are replaced by PowerPhase and PowerPhaseType.
+* Remove FrequencyAC and FrequenciesAC. These elements are replaced by LineFrequency and LineFrequencies.
+* Remove OrientationAzimuth and OrientationTilt. These elements are duplicative of Azimuth and Tilt.
+* Rename Roll to Rotation.
 
 Object changes
 ~~~~~~~~~~~~~~
-* Adds VoltageTS, VoltageTSArray, EnergyTS, EnergyTSArray, PowerTS, PowerTSArray, CurrentTS, CurrentTSArray, ElectricalTS, LineFrequencies
-* Removes FrequenciesAC from ACInput, ACOutput, 
-* Removes InverterOutput, InverterOutputs 
-* Adds HumidityRelativeTS, HumidityRelativeTSArray
-* Adds PressureAtmosphericTS, PressureAtmosphericTSArray
-* Adds IrradianceTS, IrradianceTSArray
-* Adds WinddirectionTS, WinddirectionTSArray
-* Adds WindspeedTS, WindspeedTSArray
-* Adds TemperatureTS, TemperatureTSArray
-* Adds SnowfallTS, SnowfallTSArray
-* Adds RainfallTS, RainfallTSArray
+* Add VoltageTS, VoltageTSArray, EnergyTS, EnergyTSArray, PowerTS, PowerTSArray, CurrentTS, CurrentTSArray, ElectricalTS, LineFrequencies
+* Remove FrequenciesAC from ACInput, ACOutput, 
+* Remove InverterOutput, InverterOutputs 
+* Add HumidityRelativeTS, HumidityRelativeTSArray
+* Add PressureAtmosphericTS, PressureAtmosphericTSArray
+* Add IrradianceTS, IrradianceTSArray
+* Add WinddirectionTS, WinddirectionTSArray
+* Add WindspeedTS, WindspeedTSArray
+* Add TemperatureTS, TemperatureTSArray
+* Add SnowfallTS, SnowfallTSArray
+* Add RainfallTS, RainfallTSArray
+* Remove OrientationInformation, duplicative of Orientation
 
 Unit changes
 ~~~~~~~~~~~~
-* Adds VoltagePhaseItemType, PowerTypeItemType, LineFrequencyItemType, VoltagePhaseItemType
+* Add VoltagePhaseItemType, PowerTypeItemType, LineFrequencyItemType, VoltagePhaseItemType
 
 Bug fixes
 ~~~~~~~~~
@@ -40,3 +43,4 @@ Contributors
 ~~~~~~~~~~~~
 * Kevin Kirkley (kevinkirkl3y)
 * Dan Kubler (DanKub-BB)
+* Cliff Hansen (cwhanse)
