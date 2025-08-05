@@ -22,6 +22,7 @@ Object changes
 * Adds TemperatureTS, TemperatureTSArray
 * Adds SnowfallTS, SnowfallTSArray
 * Adds RainfallTS, RainfallTSArray
+* Adds scope to ElectricalTS, adds WeatherTS
 
 Unit changes
 ~~~~~~~~~~~~
