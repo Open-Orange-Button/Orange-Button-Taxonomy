@@ -187,8 +187,11 @@
           "ManualLink": {
             "$ref": "#/components/schemas/ManualLink"
           },
-          "OrientationInformation": {
-            "$ref": "#/components/schemas/OrientationInformation"
+          "Orientation": {
+            "$ref": "#/components/schemas/Orientation"
+          },
+          "HeightAboveGround": {
+            "$ref": "#/components/schemas/HeightAboveGround"
           }
         },
         "x-ob-usage-tips": ""
@@ -207,21 +210,6 @@
         "properties": {
           "CurrentTransducerRatio": {
             "$ref": "#/components/schemas/CurrentTransducerRatio"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
-      "OrientationInformation": {
-        "type": "object",
-        "properties": {
-          "OrientationAzimuth": {
-            "$ref": "#/components/schemas/OrientationAzimuth"
-          },
-          "OrientationTilt": {
-            "$ref": "#/components/schemas/OrientationTilt"
-          },
-          "HeightAboveGround": {
-            "$ref": "#/components/schemas/HeightAboveGround"
           }
         },
         "x-ob-usage-tips": ""
@@ -328,17 +316,14 @@
           "SoilingInstrumentType": {
             "$ref": "#/components/schemas/SoilingInstrumentType"
           },
-          "OrientationAzimuth": {
-            "$ref": "#/components/schemas/OrientationAzimuth"
-          },
-          "OrientationTilt": {
-            "$ref": "#/components/schemas/OrientationTilt"
-          },
           "CalibrationDateLast": {
             "$ref": "#/components/schemas/CalibrationDateLast"
           },
           "MaintDateLast": {
             "$ref": "#/components/schemas/MaintDateLast"
+          },
+          "Orientation": {
+            "$ref": "#/components/schemas/Orientation"
           }
         },
         "x-ob-usage-tips": ""
@@ -4298,24 +4283,6 @@
           }
         ]
       },
-      "OrientationAzimuth": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Azimuth of the sun, measured in degrees. The horizontal angle measured clockwise from true north, e.g. True North = 0 degrees, East = 90 degrees, South = 180 degrees, etc.",
-            "x-ob-item-type": "PlaneAngleItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "Degree",
-              "Value": 45
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "SiteID": {
         "allOf": [
           {
@@ -4923,24 +4890,6 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": 0.3
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "OrientationTilt": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The array's tilt angle in degrees from horizontal, where zero degrees is horizontal, and 90 degrees is vertical and facing the equator (in both the southern and northern hemispheres)",
-            "x-ob-item-type": "PlaneAngleItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "Degree",
-              "Value": 25
             },
             "x-ob-item-type-group": ""
           }
@@ -5873,24 +5822,6 @@
           }
         ]
       },
-      "Roll": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Roll is a right-hand rotation about an oriented axis, with a positive value being a counter-clockwise rotation. In the context of a solar module, Roll is the rotation of the module about the vector normal to the module's plane that is oriented towards the sky.",
-            "x-ob-item-type": "PlaneAngleItemType",
-            "x-ob-usage-tips": "The Roll element of Orientation is used when solar modules are installed on a slant.",
-            "x-ob-sample-value": {
-              "Unit": "Degree",
-              "Value": 20
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "RoofPlaneID": {
         "allOf": [
           {
@@ -5992,8 +5923,8 @@
           "Tilt": {
             "$ref": "#/components/schemas/Tilt"
           },
-          "Roll": {
-            "$ref": "#/components/schemas/Roll"
+          "Rotation": {
+            "$ref": "#/components/schemas/Rotation"
           }
         },
         "type": "object"
@@ -15186,7 +15117,7 @@
         ]
       },
       "TemperatureType": {
-      "allOf": [
+        "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementString"
           },
@@ -15198,7 +15129,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "Ambient"
-                }
+            }
           }
         ]
       },
@@ -15411,7 +15342,7 @@
           }
         }
       },
-      "Irradiance":{ 
+      "Irradiance": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementNumber"
@@ -15429,7 +15360,7 @@
           }
         ]
       },
-      "Temperature":{ 
+      "Temperature": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementNumber"
@@ -15454,7 +15385,7 @@
         }
       },
       "IrradianceTS": {
-        "type": "object", 
+        "type": "object",
         "description": "Time Series (TS) containing irradiance measurements, capturing the temporal behavior of solar radiation received by a surface.",
         "properties": {
           "IrradianceArray": {
@@ -15502,7 +15433,7 @@
         }
       },
       "WindSpeedTS": {
-        "type": "object", 
+        "type": "object",
         "description": "Time Series (TS) containing wind speed.",
         "properties": {
           "WindSpeedArray": {
@@ -15892,6 +15823,24 @@
         "items": {
           "$ref": "#/components/schemas/LineFrequency"
         }
+      },
+      "Rotation": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Rotation about an oriented axis, with a positive being counter-clockwise (right hand) rotation. In the context of a solar module, rotation of the module is about the vector normal to the module's plane that is oriented towards the sky.",
+            "x-ob-item-type": "PlaneAngleItemType",
+            "x-ob-usage-tips": "The Roll element of Orientation is used when solar modules are installed on a slant.",
+            "x-ob-sample-value": {
+              "Unit": "Degree",
+              "Value": 20
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
       }
     }
   },
