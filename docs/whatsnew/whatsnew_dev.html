@@ -215,31 +215,34 @@
 <section id="element-changes">
 <h2>Element changes<a class="headerlink" href="#element-changes" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Removes InterconnectionPhase, InterconnectionPhaseType. These elements are replaced by PowerPhase and PowerPhaseType.</p></li>
-<li><p>Removes FrequencyAC and FrequenciesAC. These elements are replaced by LineFrequency and LineFrequencies.</p></li>
+<li><p>Remove InterconnectionPhase, InterconnectionPhaseType. These elements are replaced by PowerPhase and PowerPhaseType.</p></li>
+<li><p>Remove FrequencyAC and FrequenciesAC. These elements are replaced by LineFrequency and LineFrequencies.</p></li>
+<li><p>Remove OrientationAzimuth and OrientationTilt. These elements are duplicative of Azimuth and Tilt.</p></li>
+<li><p>Rename Roll to Rotation.</p></li>
 </ul>
 </section>
 <section id="object-changes">
 <h2>Object changes<a class="headerlink" href="#object-changes" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Adds VoltageTS, VoltageTSArray, EnergyTS, EnergyTSArray, PowerTS, PowerTSArray, CurrentTS, CurrentTSArray, ElectricalTS, LineFrequencies</p></li>
-<li><p>Removes FrequenciesAC from ACInput, ACOutput,</p></li>
-<li><p>Removes InverterOutput, InverterOutputs</p></li>
-<li><p>Adds HumidityRelativeTS, HumidityRelativeTSArray</p></li>
-<li><p>Adds PressureAtmosphericTS, PressureAtmosphericTSArray</p></li>
-<li><p>Adds IrradianceTS, IrradianceTSArray</p></li>
-<li><p>Adds WinddirectionTS, WinddirectionTSArray</p></li>
-<li><p>Adds WindspeedTS, WindspeedTSArray</p></li>
-<li><p>Adds TemperatureTS, TemperatureTSArray</p></li>
-<li><p>Adds SnowfallTS, SnowfallTSArray</p></li>
-<li><p>Adds RainfallTS, RainfallTSArray</p></li>
+<li><p>Add VoltageTS, VoltageTSArray, EnergyTS, EnergyTSArray, PowerTS, PowerTSArray, CurrentTS, CurrentTSArray, ElectricalTS, LineFrequencies</p></li>
+<li><p>Remove FrequenciesAC from ACInput, ACOutput,</p></li>
+<li><p>Remove InverterOutput, InverterOutputs</p></li>
+<li><p>Add HumidityRelativeTS, HumidityRelativeTSArray</p></li>
+<li><p>Add PressureAtmosphericTS, PressureAtmosphericTSArray</p></li>
+<li><p>Add IrradianceTS, IrradianceTSArray</p></li>
+<li><p>Add WinddirectionTS, WinddirectionTSArray</p></li>
+<li><p>Add WindspeedTS, WindspeedTSArray</p></li>
+<li><p>Add TemperatureTS, TemperatureTSArray</p></li>
+<li><p>Add SnowfallTS, SnowfallTSArray</p></li>
+<li><p>Add RainfallTS, RainfallTSArray</p></li>
 <li><p>Adds scope to ElectricalTS, adds WeatherTS</p></li>
+<li><p>Remove OrientationInformation, duplicative of Orientation</p></li>
 </ul>
 </section>
 <section id="unit-changes">
 <h2>Unit changes<a class="headerlink" href="#unit-changes" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>Adds VoltagePhaseItemType, PowerTypeItemType, LineFrequencyItemType, VoltagePhaseItemType</p></li>
+<li><p>Add VoltagePhaseItemType, PowerTypeItemType, LineFrequencyItemType, VoltagePhaseItemType</p></li>
 </ul>
 </section>
 <section id="bug-fixes">
@@ -256,6 +259,7 @@
 <ul class="simple">
 <li><p>Kevin Kirkley (kevinkirkl3y)</p></li>
 <li><p>Dan Kubler (DanKub-BB)</p></li>
+<li><p>Cliff Hansen (cwhanse)</p></li>
 </ul>
 </section>
 </section>
