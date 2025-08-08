@@ -157,15 +157,6 @@
         },
         "type": "object"
       },
-      "DataRecord": {
-        "type": "object",
-        "properties": {
-          "DeviceUUID": {
-            "$ref": "#/components/schemas/DeviceUUID"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
       "WeatherInstrumentDevice": {
         "type": "object",
         "properties": {
@@ -214,54 +205,6 @@
         },
         "x-ob-usage-tips": ""
       },
-      "WeatherDataRecord": {
-        "type": "object",
-        "properties": {
-          "IrradDirectNormal": {
-            "$ref": "#/components/schemas/IrradDirectNormal"
-          },
-          "IrradDiffuseHorizontal": {
-            "$ref": "#/components/schemas/IrradDiffuseHorizontal"
-          },
-          "IrradPlaneOfArray": {
-            "$ref": "#/components/schemas/IrradPlaneOfArray"
-          },
-          "IrradGlobalHorizontal": {
-            "$ref": "#/components/schemas/IrradGlobalHorizontal"
-          },
-          "TempAmb": {
-            "$ref": "#/components/schemas/TempAmb"
-          },
-          "WindSpeed": {
-            "$ref": "#/components/schemas/WindSpeed"
-          },
-          "HumidityRelative": {
-            "$ref": "#/components/schemas/HumidityRelative"
-          },
-          "PressureAtmospheric": {
-            "$ref": "#/components/schemas/PressureAtmospheric"
-          },
-          "Rainfall": {
-            "$ref": "#/components/schemas/Rainfall"
-          },
-          "Snowfall": {
-            "$ref": "#/components/schemas/Snowfall"
-          },
-          "PrecipitationType": {
-            "$ref": "#/components/schemas/PrecipitationType"
-          },
-          "Albedo": {
-            "$ref": "#/components/schemas/Albedo"
-          },
-          "SnowAccumulation": {
-            "$ref": "#/components/schemas/SnowAccumulation"
-          },
-          "ReferenceCellMeasurement": {
-            "$ref": "#/components/schemas/ReferenceCellMeasurement"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
       "ReferenceCellMeasurement": {
         "type": "object",
         "properties": {
@@ -273,39 +216,6 @@
           },
           "VoltageOpenCircuit": {
             "$ref": "#/components/schemas/VoltageOpenCircuit"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
-      "PowerMeasurements": {
-        "type": "object",
-        "properties": {
-          "PowerAC": {
-            "$ref": "#/components/schemas/PowerAC"
-          },
-          "PowerDC": {
-            "$ref": "#/components/schemas/PowerDC"
-          },
-          "EnergyAC": {
-            "$ref": "#/components/schemas/EnergyAC"
-          },
-          "TempMeter": {
-            "$ref": "#/components/schemas/TempMeter"
-          },
-          "TempModule": {
-            "$ref": "#/components/schemas/TempModule"
-          },
-          "TempCell": {
-            "$ref": "#/components/schemas/TempCell"
-          },
-          "CurtailLimit": {
-            "$ref": "#/components/schemas/CurtailLimit"
-          },
-          "SystemPF": {
-            "$ref": "#/components/schemas/SystemPF"
-          },
-          "AvailCapacity": {
-            "$ref": "#/components/schemas/AvailCapacity"
           }
         },
         "x-ob-usage-tips": ""
