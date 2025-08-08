@@ -10053,6 +10053,15 @@
           },
           "Scope": {
             "$ref": "#/components/schemas/Scope"
+          },
+          "WeatherTS": {
+            "$ref": "#/components/schemas/WeatherTS"
+          },
+          "ElectricalTS": {
+            "$ref": "#/components/schemas/ElectricalTS"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
           }
         }
       },
@@ -10671,6 +10680,15 @@
           },
           "Scope": {
             "$ref": "#/components/schemas/Scope"
+          },
+          "ElectricalTS": {
+            "$ref": "#/components/schemas/ElectricalTS"
+          },
+          "WeatherTS": {
+            "$ref": "#/components/schemas/WeatherTS"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
           }
         }
       },
