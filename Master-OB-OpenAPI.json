@@ -10059,6 +10059,9 @@
           },
           "ElectricalTS": {
             "$ref": "#/components/schemas/ElectricalTS"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
           }
         }
       },
@@ -10683,6 +10686,9 @@
           },
           "WeatherTS": {
             "$ref": "#/components/schemas/WeatherTS"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
           }
         }
       },
