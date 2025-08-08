@@ -157,15 +157,6 @@
         },
         "type": "object"
       },
-      "DataRecord": {
-        "type": "object",
-        "properties": {
-          "DeviceUUID": {
-            "$ref": "#/components/schemas/DeviceUUID"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
       "WeatherInstrumentDevice": {
         "type": "object",
         "properties": {
@@ -214,54 +205,6 @@
         },
         "x-ob-usage-tips": ""
       },
-      "WeatherDataRecord": {
-        "type": "object",
-        "properties": {
-          "IrradDirectNormal": {
-            "$ref": "#/components/schemas/IrradDirectNormal"
-          },
-          "IrradDiffuseHorizontal": {
-            "$ref": "#/components/schemas/IrradDiffuseHorizontal"
-          },
-          "IrradPlaneOfArray": {
-            "$ref": "#/components/schemas/IrradPlaneOfArray"
-          },
-          "IrradGlobalHorizontal": {
-            "$ref": "#/components/schemas/IrradGlobalHorizontal"
-          },
-          "TempAmb": {
-            "$ref": "#/components/schemas/TempAmb"
-          },
-          "WindSpeed": {
-            "$ref": "#/components/schemas/WindSpeed"
-          },
-          "HumidityRelative": {
-            "$ref": "#/components/schemas/HumidityRelative"
-          },
-          "PressureAtmospheric": {
-            "$ref": "#/components/schemas/PressureAtmospheric"
-          },
-          "Rainfall": {
-            "$ref": "#/components/schemas/Rainfall"
-          },
-          "Snowfall": {
-            "$ref": "#/components/schemas/Snowfall"
-          },
-          "PrecipitationType": {
-            "$ref": "#/components/schemas/PrecipitationType"
-          },
-          "Albedo": {
-            "$ref": "#/components/schemas/Albedo"
-          },
-          "SnowAccumulation": {
-            "$ref": "#/components/schemas/SnowAccumulation"
-          },
-          "ReferenceCellMeasurement": {
-            "$ref": "#/components/schemas/ReferenceCellMeasurement"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
       "ReferenceCellMeasurement": {
         "type": "object",
         "properties": {
@@ -273,39 +216,6 @@
           },
           "VoltageOpenCircuit": {
             "$ref": "#/components/schemas/VoltageOpenCircuit"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
-      "PowerMeasurements": {
-        "type": "object",
-        "properties": {
-          "PowerAC": {
-            "$ref": "#/components/schemas/PowerAC"
-          },
-          "PowerDC": {
-            "$ref": "#/components/schemas/PowerDC"
-          },
-          "EnergyAC": {
-            "$ref": "#/components/schemas/EnergyAC"
-          },
-          "TempMeter": {
-            "$ref": "#/components/schemas/TempMeter"
-          },
-          "TempModule": {
-            "$ref": "#/components/schemas/TempModule"
-          },
-          "TempCell": {
-            "$ref": "#/components/schemas/TempCell"
-          },
-          "CurtailLimit": {
-            "$ref": "#/components/schemas/CurtailLimit"
-          },
-          "SystemPF": {
-            "$ref": "#/components/schemas/SystemPF"
-          },
-          "AvailCapacity": {
-            "$ref": "#/components/schemas/AvailCapacity"
           }
         },
         "x-ob-usage-tips": ""
@@ -4593,24 +4503,6 @@
           }
         ]
       },
-      "IrradDirectNormal": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The amount of direct irradiance received per unit area on a surface that is perpendicular (or normal) to the direction of the sun. Direct irradiance, also termed beam irradiance, is not scattered or reflected by the atmosphere, clouds, or other surfaces before arriving at the surface of measurement. Direct normal irradiance is measured in watts per square meter.",
-            "x-ob-item-type": "IrradianceItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "W_per_sqm",
-              "Value": 900
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "FilterIrradMax": {
         "allOf": [
           {
@@ -5294,24 +5186,6 @@
             "x-ob-item-type": "BooleanItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {},
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "IrradDiffuseHorizontal": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The amount of diffuse radiation received per unit area on a horizontal surface. Diffuse irradiance arrives at the surface of measurement from any direction other than the direction of the sun. Diffuse horizontal irradiance is measured in watts per square meter.",
-            "x-ob-item-type": "IrradianceItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "W_per_sqm",
-              "Value": 150
-            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -9999,22 +9873,10 @@
           }
         ]
       },
-      "IrradGlobalHorizArray": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/IrradGlobalHorizontal"
-        }
-      },
       "TempModuleArray": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/TempModule"
-        }
-      },
-      "IrradPlaneOfArrayArray": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/IrradPlaneOfArray"
         }
       },
       "Forecast": {
@@ -10035,12 +9897,6 @@
           },
           "EnergyACArray": {
             "$ref": "#/components/schemas/EnergyACArray"
-          },
-          "IrradGlobalHorizArray": {
-            "$ref": "#/components/schemas/IrradGlobalHorizArray"
-          },
-          "IrradPlaneOfArrayArray": {
-            "$ref": "#/components/schemas/IrradPlaneOfArrayArray"
           },
           "PowerACArray": {
             "$ref": "#/components/schemas/PowerACArray"
@@ -10166,22 +10022,6 @@
             "properties": {
               "VoltageDCArray": {
                 "$ref": "#/components/schemas/VoltageDCArray"
-              }
-            }
-          }
-        ]
-      },
-      "IrradGlobalHorizMeas": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Measurement"
-          },
-          {
-            "type": "object",
-            "description": "An object containing Irradiance Global Horizontal (IrradGlobalHoriz) measurements.",
-            "properties": {
-              "IrradGlobalHorizArray": {
-                "$ref": "#/components/schemas/IrradGlobalHorizArray"
               }
             }
           }
@@ -10660,9 +10500,6 @@
           "EnergyACMeas": {
             "$ref": "#/components/schemas/EnergyACMeas"
           },
-          "IrradGlobalHorizMeas": {
-            "$ref": "#/components/schemas/IrradGlobalHorizMeas"
-          },
           "PowerACMeas": {
             "$ref": "#/components/schemas/PowerACMeas"
           },
@@ -10671,9 +10508,6 @@
           },
           "VoltageDCMeas": {
             "$ref": "#/components/schemas/VoltageDCMeas"
-          },
-          "IrradPlaneOfArrayMeas": {
-            "$ref": "#/components/schemas/IrradPlaneOfArrayMeas"
           },
           "Comments": {
             "$ref": "#/components/schemas/Comments"
@@ -10712,22 +10546,6 @@
           }
         },
         "type": "object"
-      },
-      "IrradPlaneOfArrayMeas": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Measurement"
-          },
-          {
-            "type": "object",
-            "description": "Measurements of plane-of-array (POA) irradiance",
-            "properties": {
-              "IrradPlaneOfArrayArray": {
-                "$ref": "#/components/schemas/IrradPlaneOfArrayArray"
-              }
-            }
-          }
-        ]
       },
       "OperatingReport": {
         "type": "object",
