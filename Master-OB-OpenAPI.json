@@ -1253,7 +1253,7 @@
             "x-ob-item-type": "ContactTypeItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "Homeowner"
+              "Value": "Owner"
             },
             "x-ob-item-type-group": ""
           }
@@ -7047,7 +7047,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "Power"
+              "Value": "Performance"
             }
           }
         ]
@@ -14222,7 +14222,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "Energy"
+              "Value": "Utility"
             }
           }
         ]
