@@ -39,6 +39,7 @@ Diene
 DHI//Diffuse Horizontal Irradiance
 DNI//Direct Normal Irradiance
 DNP//Distributed Network Protocol
+DPP//Digital Product Passport
 ESS//Energy Storage System
 EWG//Environmental Working Group
 Facil//Facilitator
@@ -124,6 +125,7 @@ Rtg//Rating
 SAE//Society of Automotive Engineers
 SBS//Styrene-Butadiene-Styrene
 SCADA//Supervisory Control and Data Acquisition
+SEP//Smart Ethernet Protocol
 SHA//Secure Hash Algorithm
 Shapefile
 SPV//Special Purpose Vehicle
