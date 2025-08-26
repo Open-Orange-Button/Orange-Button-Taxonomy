@@ -1,6 +1,7 @@
 0
 ACH//Automated Clearing House
 Addr//Address
+Aggregator
 AGM//Absorbent Glass Mat
 AHJ//Authority Having Jurisdiction
 AHJID//Authority Having Jurisdiction Identifier
@@ -14,12 +15,15 @@ Backsheet
 Bifacial
 BIPV//Building-Integrated Photovoltaics
 Bluetooth
+BN//Phase B to Neutral
 Bool//Boolean
 Boreal
 Busbar
 Cancelled
 CEC//California Energy Commission
+CECPBI//California Energy Commission Performance-Based Incentive
 CIGS//Copper Indium Gallium Diselenide Selenium
+CN//Phase C to Neutral
 Coeff//Coefficient
 Collada//Collada
 Cond//Condition
@@ -32,16 +36,22 @@ DAQ//Data Acquisition System
 Datasheet
 Derate
 Diene
+DHI//Diffuse Horizontal Irradiance
+DNI//Direct Normal Irradiance
+DNP//Distributed Network Protocol
 ESS//Energy Storage System
 EWG//Environmental Working Group
 Facil//Facilitator
+FEIN//Federal Employer Identification Number
 Forecasted
 Frameless
 Gauge
 Geocoding
+GHI//Global Horizontal Irradiance
 GIS//Geographic Information System
 GML//Generalized Markup Language
 GPS//Global Positioning System
+Groundskeeping
 Hemiboreal
 Heterojunction
 HJT//Heterojunction Technology
@@ -65,6 +75,7 @@ Koppen
 LCD//Liquid Crystal Display
 LIC//Low Irradiance Condition
 LiPoly
+LN//Line to Neutral
 Maint//Maintenance
 Majeure
 MCER//Risk-Targeted Maximum Considered Earthquake
@@ -90,6 +101,7 @@ Obligee
 Offline
 Online
 Perf//Performance
+POA//Plane of Array
 Polyolefin
 PolySi
 PPA//Power Purchase Agreement
@@ -123,6 +135,7 @@ Terpolymer
 TFSI//Thin Film Silicon
 THWN//Thermoplastic Heat and Water Resistant
 Transformerless
+UEI//Unique Entity Identifier
 Unbilled
 UTF//Unicode Transformation Format
 UUID//Universally Unique Identifier
