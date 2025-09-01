@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>XXXX.0.0 &#8212; Open-Orange-Button 1.0 documentation</title>
+    <title>2508.0.0 &#8212; Open-Orange-Button 1.0 documentation</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
@@ -210,16 +210,40 @@
               
               <article class="bd-article" role="main">
                 
-  <section id="xxxx-0-0">
-<span id="whatsnew-dev"></span><h1>XXXX.0.0<a class="headerlink" href="#xxxx-0-0" title="Link to this heading">¶</a></h1>
+  <section id="whatsnew-2508">
+<span id="id1"></span><h1>2508.0.0<a class="headerlink" href="#whatsnew-2508" title="Link to this heading">¶</a></h1>
 <section id="element-changes">
 <h2>Element changes<a class="headerlink" href="#element-changes" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Remove InterconnectionPhase, InterconnectionPhaseType. These elements are replaced by PowerPhase and PowerPhaseType.</p></li>
+<li><p>Remove FrequencyAC and FrequenciesAC. These elements are replaced by LineFrequency and LineFrequencies.</p></li>
+<li><p>Remove OrientationAzimuth and OrientationTilt. These elements are duplicative of Azimuth and Tilt.</p></li>
+<li><p>Rename Roll to Rotation.</p></li>
+</ul>
 </section>
 <section id="object-changes">
 <h2>Object changes<a class="headerlink" href="#object-changes" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Add VoltageTS, VoltageTSArray, EnergyTS, EnergyTSArray, PowerTS, PowerTSArray, CurrentTS, CurrentTSArray, ElectricalTS, LineFrequencies</p></li>
+<li><p>Remove FrequenciesAC from ACInput, ACOutput,</p></li>
+<li><p>Remove InverterOutput, InverterOutputs</p></li>
+<li><p>Add HumidityRelativeTS, HumidityRelativeTSArray</p></li>
+<li><p>Add PressureAtmosphericTS, PressureAtmosphericTSArray</p></li>
+<li><p>Add IrradianceTS, IrradianceTSArray</p></li>
+<li><p>Add WinddirectionTS, WinddirectionTSArray</p></li>
+<li><p>Add WindspeedTS, WindspeedTSArray</p></li>
+<li><p>Add TemperatureTS, TemperatureTSArray</p></li>
+<li><p>Add SnowfallTS, SnowfallTSArray</p></li>
+<li><p>Add RainfallTS, RainfallTSArray</p></li>
+<li><p>Adds scope to ElectricalTS, adds WeatherTS</p></li>
+<li><p>Remove OrientationInformation, duplicative of Orientation</p></li>
+</ul>
 </section>
 <section id="unit-changes">
 <h2>Unit changes<a class="headerlink" href="#unit-changes" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Add VoltagePhaseItemType, PowerTypeItemType, LineFrequencyItemType, VoltagePhaseItemType</p></li>
+</ul>
 </section>
 <section id="bug-fixes">
 <h2>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">¶</a></h2>
@@ -232,6 +256,11 @@
 </section>
 <section id="contributors">
 <h2>Contributors<a class="headerlink" href="#contributors" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Kevin Kirkley (kevinkirkl3y)</p></li>
+<li><p>Dan Kubler (DanKub-BB)</p></li>
+<li><p>Cliff Hansen (cwhanse)</p></li>
+</ul>
 </section>
 </section>
 
