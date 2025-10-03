@@ -5426,13 +5426,13 @@
         "x-ob-usage-tips": ""
       },
       "Decimals": {
+        "description": "Decimals of the instance element. Decimal is the number of meaningful digits relative to a decimal point. For example, 1.32 may have a Decimal value of 2, where 1100 may have a Decimal value of -2.",
         "type": "integer",
-        "description": "Decimals of the instance element",
         "x-ob-usage-tips": ""
       },
       "Precision": {
+        "description": "Precision of the instance element. Precision is the number of significant figures in a numeric value.",
         "type": "integer",
-        "description": "Precision of the instance element",
         "x-ob-usage-tips": ""
       },
       "StartTime": {
@@ -15651,8 +15651,11 @@
             "x-ob-item-type-group": "OBElectricalEnergy",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "EndTime": "2025-06-02 12:30:00",
+              "Precision": "3",
+              "StartTime": "2025-06-02 12:00:00",
               "Unit": "kWh",
-              "Value": 40
+              "Value": 40.1
             }
           }
         ]
