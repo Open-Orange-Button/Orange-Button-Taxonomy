@@ -22,7 +22,7 @@ Testing
 
 Documentation
 ~~~~~~~~~~~~~
-* Clarified documentation for primitives Decimal and Precision (:pull:`XXX`)
+* Clarified documentation for primitives Decimal and Precision (:pull:`394`)
 
 Contributors
 ~~~~~~~~~~~~
