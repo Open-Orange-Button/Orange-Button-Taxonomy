@@ -12986,6 +12986,9 @@
           },
           "IssueResolutionDate": {
             "$ref": "#/components/schemas/IssueResolutionDate"
+          },
+          "IssueRecommendation": {
+            "$ref": "#/components/schemas/IssueRecommendation"
           }
         }
       },
@@ -15775,6 +15778,18 @@
             "$ref": "#/components/schemas/FileFolderURL"
           }
         }
+      },
+      "IssueRecommendation": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Comment"
+          },
+          {
+            "type": "object",
+            "description": "Recommendation to respond to an OMIssue",
+            "properties": {}
+          }
+        ]
       }
     }
   },
