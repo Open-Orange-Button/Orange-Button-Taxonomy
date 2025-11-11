@@ -12987,8 +12987,8 @@
           "IssueResolutionDate": {
             "$ref": "#/components/schemas/IssueResolutionDate"
           },
-          "IssueRecommendation": {
-            "$ref": "#/components/schemas/IssueRecommendation"
+          "IssueRecommendations": {
+            "$ref": "#/components/schemas/IssueRecommendations"
           }
         }
       },
@@ -15790,6 +15790,12 @@
             "properties": {}
           }
         ]
+      },
+      "IssueRecommendations": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/IssueRecommendation"
+        }
       }
     }
   },
