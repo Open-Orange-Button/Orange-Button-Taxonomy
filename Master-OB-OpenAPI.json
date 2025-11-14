@@ -175,14 +175,14 @@
           "ManufactureDate": {
             "$ref": "#/components/schemas/ManufactureDate"
           },
-          "ManualLink": {
-            "$ref": "#/components/schemas/ManualLink"
-          },
           "Orientation": {
             "$ref": "#/components/schemas/Orientation"
           },
           "HeightAboveGround": {
             "$ref": "#/components/schemas/HeightAboveGround"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
           }
         },
         "x-ob-usage-tips": ""
@@ -4879,21 +4879,6 @@
             "type": "object",
             "description": "Indicates data inclusion or exclusion. True if data is retained; False if data is excluded.",
             "x-ob-item-type": "BooleanItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "ManualLink": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Link to the device manual.",
-            "x-ob-item-type": "StringItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {},
             "x-ob-item-type-group": ""

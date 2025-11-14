@@ -6,7 +6,7 @@ XXXX.0.0
 
 Element changes
 ~~~~~~~~~~~~~~~
-
+* Delete ManualLink (:pull: `xx`)
 
 Object changes
 ~~~~~~~~~~~~~~
@@ -27,3 +27,4 @@ Documentation
 Contributors
 ~~~~~~~~~~~~
 * Cliff Hansen (cwhanse)
+* Tom Walther (twalther-bb)
