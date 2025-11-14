@@ -10,7 +10,7 @@ Element changes
 
 Object changes
 ~~~~~~~~~~~~~~
-
+* Add IssueRecommendation, attach to OMISsue (:issue:`395`, :pull:`396`)
 Unit changes
 ~~~~~~~~~~~~
 
