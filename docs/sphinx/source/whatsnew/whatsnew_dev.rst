@@ -6,7 +6,7 @@ XXXX.0.0
 
 Element changes
 ~~~~~~~~~~~~~~~
-* Delete ManualLink (:pull: `xx`)
+* Delete ManualLink (:pull: `397`)
 
 Object changes
 ~~~~~~~~~~~~~~
