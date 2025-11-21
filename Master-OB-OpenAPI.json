@@ -12986,6 +12986,9 @@
           },
           "IssueResolutionDate": {
             "$ref": "#/components/schemas/IssueResolutionDate"
+          },
+          "IssueRecommendations": {
+            "$ref": "#/components/schemas/IssueRecommendations"
           }
         }
       },
@@ -15774,6 +15777,24 @@
           "FileFolderURL": {
             "$ref": "#/components/schemas/FileFolderURL"
           }
+        }
+      },
+      "IssueRecommendation": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Comment"
+          },
+          {
+            "type": "object",
+            "description": "Recommendation to respond to an OMIssue",
+            "properties": {}
+          }
+        ]
+      },
+      "IssueRecommendations": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/IssueRecommendation"
         }
       }
     }
