@@ -96,6 +96,9 @@
           },
           "CommunicationStacks": {
             "$ref": "#/components/schemas/CommunicationStacks"
+          },
+          "SourceCountries": {
+            "$ref": "#/components/schemas/SourceCountries"
           }
         },
         "type": "object"
@@ -15780,6 +15783,120 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/IssueRecommendation"
+        }
+      },
+      "CountryOfManufacture": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The ISO country code where this is manufactured",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "USA"
+            }
+          }
+        ]
+      },
+      "CountryOfOwnershipPrimary": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The ISO country code of the primary owner of the company that produced the product",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "USA"
+            }
+          }
+        ]
+      },
+      "AssignedCostPercentage": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The percentage of cost assigned to this product",
+            "x-ob-item-type": "DecimalPercentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Precision": "2",
+              "Unit": "decimal_percent",
+              "Value": 0.05
+            }
+          }
+        ]
+      },
+      "SourceCountry": {
+        "type": "object",
+        "description": "Country information about where this product was manufactured and who owns the company",
+        "properties": {
+          "CountryOfManufacture": {
+            "$ref": "#/components/schemas/CountryOfManufacture"
+          },
+          "CountryOfOwnershipPrimary": {
+            "$ref": "#/components/schemas/CountryOfOwnershipPrimary"
+          },
+          "AssignedCostPercentage": {
+            "$ref": "#/components/schemas/AssignedCostPercentage"
+          },
+          "CountryOfManufactureIsNotPFE": {
+            "$ref": "#/components/schemas/CountryOfManufactureIsNotPFE"
+          },
+          "CountryOfOwnershipIsNotPFE": {
+            "$ref": "#/components/schemas/CountryOfOwnershipIsNotPFE"
+          }
+        }
+      },
+      "CountryOfManufactureIsNotPFE": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "Country of manufacture is not a prohibited foreign entity as defined by 26CFR7701a51",
+            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": true
+            }
+          }
+        ]
+      },
+      "CountryOfOwnershipIsNotPFE": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "Country of ownership is not a prohibited foreign entity as defined by 26CFR7701a51",
+            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": true
+            }
+          }
+        ]
+      },
+      "SourceCountries": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/SourceCountry"
         }
       }
     }
