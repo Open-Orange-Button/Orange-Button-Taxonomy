@@ -7,6 +7,8 @@ XXXX.0.0
 Element changes
 ~~~~~~~~~~~~~~~
 * Delete ManualLink (:pull: `397`)
+* Rename CountryOfOwnershipPrimary to be CountryOfOwnershipForPFE
+* Change description for CountryOfOwnershipForPFE (:issue:``, :pull:`401`)
 
 Object changes
 ~~~~~~~~~~~~~~
