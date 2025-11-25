@@ -15802,23 +15802,6 @@
           }
         ]
       },
-      "CountryOfOwnershipPrimary": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The ISO country code of the primary owner of the company that produced the product",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "USA"
-            }
-          }
-        ]
-      },
       "AssignedCostPercentage": {
         "allOf": [
           {
@@ -15845,9 +15828,6 @@
           "CountryOfManufacture": {
             "$ref": "#/components/schemas/CountryOfManufacture"
           },
-          "CountryOfOwnershipPrimary": {
-            "$ref": "#/components/schemas/CountryOfOwnershipPrimary"
-          },
           "AssignedCostPercentage": {
             "$ref": "#/components/schemas/AssignedCostPercentage"
           },
@@ -15856,6 +15836,9 @@
           },
           "CountryOfOwnershipIsNotPFE": {
             "$ref": "#/components/schemas/CountryOfOwnershipIsNotPFE"
+          },
+          "CountryOfOwnershipforPFE": {
+            "$ref": "#/components/schemas/CountryOfOwnershipforPFE"
           }
         }
       },
@@ -15898,6 +15881,23 @@
         "items": {
           "$ref": "#/components/schemas/SourceCountry"
         }
+      },
+      "CountryOfOwnershipforPFE": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The ISO country code of the primary owner of the company that produced the product for prohibited foreign entity determination",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "USA"
+            }
+          }
+        ]
       }
     }
   },
