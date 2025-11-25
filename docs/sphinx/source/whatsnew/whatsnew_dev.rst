@@ -7,7 +7,7 @@ XXXX.0.0
 Element changes
 ~~~~~~~~~~~~~~~
 * Delete ManualLink (:pull: `397`)
-* Added new elements CountryOfManufacture, CountryOfManufactureIsNotPFE, CountryOfOwnershipIsNotPFE, CountryOfOwnershipPrimary (:issue:`398`, :pull:`400`)
+* Added new elements CountryOfManufacture, CountryOfManufactureIsNotPFE, CountryOfOwnershipIsNotPFE, CountryOfOwnershipforPFE (:issue:`398`, :pull:`400`)
 
 Object changes
 ~~~~~~~~~~~~~~
