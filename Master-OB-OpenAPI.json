@@ -2386,9 +2386,6 @@
           "Description": {
             "$ref": "#/components/schemas/Description"
           },
-          "ChecklistType": {
-            "$ref": "#/components/schemas/ChecklistType"
-          },
           "TransactionID": {
             "$ref": "#/components/schemas/TransactionID"
           },
@@ -2406,6 +2403,9 @@
           },
           "Scope": {
             "$ref": "#/components/schemas/Scope"
+          },
+          "ChecklistTemplateID": {
+            "$ref": "#/components/schemas/ChecklistTemplateID"
           }
         }
       },
@@ -2529,23 +2529,6 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "ChecklistType": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The type of Checklist",
-            "x-ob-item-type": "ChecklistTypeItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "Site"
             },
             "x-ob-item-type-group": ""
           }
@@ -15898,6 +15881,130 @@
             }
           }
         ]
+      },
+      "ChecklistTemplateID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Identifier for a ChecklistTemplate",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
+            }
+          }
+        ]
+      },
+      "ChecklistTemplateName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of a ChecklistTemplate",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "ModuleMaterialsDisclosure"
+            }
+          }
+        ]
+      },
+      "ChecklistTemplateVersion": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Version number for a ChecklistTemplate",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2.13a"
+            }
+          }
+        ]
+      },
+      "ChecklistTemplateMaintainer": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "Entity that maintains a ChecklistTemplate",
+            "properties": {
+              "ChecklistTemplateMaintainerID": {
+                "$ref": "#/components/schemas/ChecklistTemplateMaintainerID"
+              },
+              "ChecklistTemplateMaintainerName": {
+                "$ref": "#/components/schemas/ChecklistTemplateMaintainerName"
+              }
+            }
+          }
+        ]
+      },
+      "ChecklistTemplateMaintainerID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Identifier for the maintainer of a ChecklistTemplate",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ChecklistTemplateMaintainerName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of the entity that maintains a ChecklistTemplate",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ChecklistTemplate": {
+        "type": "object",
+        "description": "Template for a Checklist. A ChecklistTemplate should contain the Questions for a Checklist.",
+        "properties": {
+          "ChecklistTemplateID": {
+            "$ref": "#/components/schemas/ChecklistTemplateID"
+          },
+          "ChecklistTemplateMaintainer": {
+            "$ref": "#/components/schemas/ChecklistTemplateMaintainer"
+          },
+          "ChecklistTemplateName": {
+            "$ref": "#/components/schemas/ChecklistTemplateName"
+          },
+          "ChecklistTemplateVersion": {
+            "$ref": "#/components/schemas/ChecklistTemplateVersion"
+          },
+          "Questions": {
+            "$ref": "#/components/schemas/Questions"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          }
+        }
       }
     }
   },
