@@ -15,7 +15,7 @@ jobs:
         uses: swaggerexpert/swagger-editor-validate@master
         with:
           definition-file: Master-OB-OpenAPI.json
-          default-timeout: 60000
+          default-timeout: 120000
 
   ob-open-api-validator:
     name: OB OpenAPI Validator
