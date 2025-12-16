@@ -5,8 +5,6 @@
     "title": "OB OpenAPI Taxonomy",
     "description": "OB OpenAPI Definitions For Orange Button."
   },
-  "paths": {},
-  "servers": [],
   "components": {
     "schemas": {
       "EnergyModel": {
