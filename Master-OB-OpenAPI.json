@@ -453,14 +453,14 @@
           "PreferredContactMethod": {
             "$ref": "#/components/schemas/PreferredContactMethod"
           },
-          "ContactTimezone": {
-            "$ref": "#/components/schemas/ContactTimezone"
-          },
           "Title": {
             "$ref": "#/components/schemas/Title"
           },
           "URL": {
             "$ref": "#/components/schemas/URL"
+          },
+          "Timezone": {
+            "$ref": "#/components/schemas/Timezone"
           }
         },
         "x-ob-usage-tips": ""
@@ -877,7 +877,7 @@
           },
           {
             "type": "object",
-            "description": "Height from ground level.",
+            "description": "Height above sea level.",
             "x-ob-item-type": "LengthItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -1325,23 +1325,6 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "ContactTimezone": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The timezone where the contact is located.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "PST"
             },
             "x-ob-item-type-group": ""
           }
@@ -3273,6 +3256,9 @@
             "x-ob-item-type": "SpeedItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "EndTime": "2025-06-02T12:30:00-08:00",
+              "Precision": "2",
+              "StartTime": "2025-06-02T12:00:00-08:00",
               "Unit": "mi_per_h",
               "Value": 15
             },
@@ -4169,8 +4155,9 @@
             "x-ob-item-type": "LengthItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "EndTime": "2020-02-08 09:59:59+07:00",
-              "StartTime": "2020-02-08 09:00:00+07:00",
+              "EndTime": "2025-06-02T12:30:00-08:00",
+              "Precision": "1",
+              "StartTime": "2025-06-02T12:00:00-08:00",
               "Unit": "mm",
               "Value": 5
             },
@@ -4224,6 +4211,9 @@
             "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Decimals": "2",
+              "EndTime": "2025-06-02T12:30:00-08:00",
+              "StartTime": "2025-06-02T12:00:00-08:00",
               "Unit": "decimal_percent",
               "Value": 0.33
             },
@@ -4454,6 +4444,9 @@
             "x-ob-item-type": "PressureItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Decimals": "1",
+              "EndTime": "2025-06-02T12:30:00-08:00",
+              "StartTime": "2025-06-02T12:00:00-08:00",
               "Unit": "psi",
               "Value": 14.7
             },
@@ -5331,6 +5324,9 @@
             "x-ob-item-type": "LengthItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "EndTime": "2025-06-02T12:30:00-08:00",
+              "Precision": "2",
+              "StartTime": "2025-06-02T12:00:00-08:00",
               "Unit": "cm",
               "Value": 20
             },
@@ -5660,6 +5656,9 @@
             "x-ob-item-type": "PlaneAngleItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "EndTime": "2025-06-02T12:30:00-08:00",
+              "Precision": "2",
+              "StartTime": "2025-06-02T12:00:00-08:00",
               "Unit": "Degree",
               "Value": 90
             },
@@ -10546,7 +10545,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "John Q. Public"
+              "Value": "Green Solar Inc"
             }
           }
         ]
@@ -11712,14 +11711,14 @@
           "Email": {
             "$ref": "#/components/schemas/Email"
           },
-          "ContactTimezone": {
-            "$ref": "#/components/schemas/ContactTimezone"
-          },
           "WorkerID": {
             "$ref": "#/components/schemas/WorkerID"
           },
           "EmploymentType": {
             "$ref": "#/components/schemas/EmploymentType"
+          },
+          "Timezone": {
+            "$ref": "#/components/schemas/Timezone"
           }
         }
       },
@@ -13748,14 +13747,14 @@
           "Email": {
             "$ref": "#/components/schemas/Email"
           },
-          "ContactTimezone": {
-            "$ref": "#/components/schemas/ContactTimezone"
-          },
           "SkillsQualsCerts": {
             "$ref": "#/components/schemas/SkillsQualsCerts"
           },
           "TeamRole": {
             "$ref": "#/components/schemas/TeamRole"
+          },
+          "Timezone": {
+            "$ref": "#/components/schemas/Timezone"
           }
         }
       },
@@ -15167,6 +15166,9 @@
             "x-ob-item-type-group": "OBElectricalPower",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Decimals": "1",
+              "EndTime": "2025-06-02T12:30:00-08:00",
+              "StartTime": "2025-06-02T12:00:00-08:00",
               "Unit": "kW",
               "Value": 12.5
             }
@@ -15225,6 +15227,9 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "EndTime": "2025-06-02T12:30:00-08:00",
+              "Precision": "3",
+              "StartTime": "2025-06-02T12:00:00-08:00",
               "Unit": "V",
               "Value": 120
             }
@@ -15273,6 +15278,9 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "Use IrradianceType to indicate POA, GHI, DHI, DNI, or other type listed.",
             "x-ob-sample-value": {
+              "EndTime": "2025-06-02T12:30:00-08:00",
+              "Precision": "2",
+              "StartTime": "2025-06-02T12:00:00-08:00",
               "Unit": "W_per_sqm",
               "Value": 1000
             }
@@ -15291,6 +15299,9 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "Use TemperatureType to indicate Surface, Ambient, Internal, etc.",
             "x-ob-sample-value": {
+              "Decimals": "1",
+              "EndTime": "2025-06-02T12:30:00-08:00",
+              "StartTime": "2025-06-02T12:00:00-08:00",
               "Unit": "Cel",
               "Value": 25
             }
@@ -15642,9 +15653,9 @@
             "x-ob-item-type-group": "OBElectricalEnergy",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "EndTime": "2025-06-02 12:30:00",
+              "EndTime": "2025-06-02T12:30:00-08:00",
               "Precision": "3",
-              "StartTime": "2025-06-02 12:00:00",
+              "StartTime": "2025-06-02T12:00:00-08:00",
               "Unit": "kWh",
               "Value": 40.1
             }
@@ -15669,6 +15680,9 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "EndTime": "2025-06-02T12:30:00-08:00",
+              "Precision": "2",
+              "StartTime": "2025-06-02T12:00:00-08:00",
               "Unit": "A",
               "Value": 15
             }
@@ -15693,6 +15707,9 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Decimals": "2",
+              "EndTime": "2025-06-02T12:30:00-08:00",
+              "StartTime": "2025-06-02T12:00:00-08:00",
               "Value": 0.95
             }
           }
@@ -15896,6 +15913,23 @@
             "x-ob-sample-value": {
               "Value": "USA"
             }
+          }
+        ]
+      },
+      "Timezone": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A timezone",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "PST"
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       }
