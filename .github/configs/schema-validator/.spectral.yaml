@@ -4,7 +4,8 @@ functions: [spellcheckSubstrings,
             refPathExists,
             validateItemTypeGroupEntries,
             validateXOBSampleValue,
-            validateItemTypeAgainstElementType]
+            validateItemTypeAgainstElementType,
+            noSuperclassFieldShadowing]
 rules:
   ibm-schema-casing-convention: off
   ibm-enum-casing-convention: off
@@ -101,6 +102,14 @@ rules:
       function: pattern
       functionOptions:
         match: ^[0-9A-Za-z_]+$
+
+  no-superclass-field-shadowing:
+    description: Check that OB Objects do not define fields whose names shadow fields of their superclass.
+    message: '{{error}}'
+    given: $.components.schemas[*][?(@property === 'allOf' && !(@[0].properties && @[0].properties.Value))]
+    severity: error
+    then:
+      function: noSuperclassFieldShadowing
 
   upper-camel-case-with-all-caps-acronyms:
     description: Name should follow the upper camel case convention with all-caps acronyms.
