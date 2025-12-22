@@ -47,16 +47,9 @@ function getItemTypeGroup(input) {
 
 function getValueOpenAPIType(input) {
   let Value = input[0].properties.Value;
-  return { isArray: Value.type === 'array', type: Value.type };
-}
-
-function getOpenAPITypeName(type) {
-  let result = '';
-  if (type.isArray) {
-    result += 'array of ';
-  }
-  result += type.type;
-  return result;
+  let isArray = Value.type === 'array'
+  let type = isArray ? Value.items.type : Value.type
+  return { isArray, type }
 }
 
 function OpenAPITypecheck(value, type) {
@@ -127,7 +120,11 @@ function validateValue(input, taxonomy, addResult) {
     let sampleValueValue = sampleValue[primitive];
     let OpenAPIType = getValueOpenAPIType(input);
     if (!OpenAPITypecheck(sampleValueValue, OpenAPIType)) {
-      addResult(`Must be of type ${getOpenAPITypeName(OpenAPIType)}. Value: ${sampleValueValue}`);
+      if (OpenAPIType.isArray) {
+          addResult(`Must be an array of type ${OpenAPIType.type}, but the array contains this item: ${sampleValueValue}`);
+      } else {
+          addResult(`Must be of type ${OpenAPIType.type}. Value: ${sampleValueValue}`);
+      }
     } else if (OpenAPIType.type === 'string' && sampleValueValue.length === 0) {
       addResult(`Must not be an empty string.`);
     } else if (itemTypeEnums && !validatorOptions.enumItemTypeIgnoreList.includes(itemType)) {
