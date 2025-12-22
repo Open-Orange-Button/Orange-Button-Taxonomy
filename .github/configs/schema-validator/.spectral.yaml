@@ -59,7 +59,7 @@ rules:
       - If the schema definition OB item type defines enums or units:
         - When enums are defined, Value is an enum of the OB item type.
           - If the schema definition has an OB item type group, Value is an enum of the item type group.
-        - When units are defined, Unit is a unit of the OB item type.
+        - When units are defined, Unit is defined and is a unit of the OB item type.
           - If the schema definition has an OB item type group, Unit is a unit of the item type group.
       - Additional validation rules for each primitive can be added to validateXOBSampleValue.
     message: '{{error}}'
