@@ -5,6 +5,7 @@ Aggregator
 AGM//Absorbent Glass Mat
 AHJ//Authority Having Jurisdiction
 AHJID//Authority Having Jurisdiction Identifier
+Albedo
 Amb//Ambient
 App//Application
 ASCE//American Society of Civil Engineers
@@ -27,13 +28,16 @@ CN//Phase C to Neutral
 Coeff//Coefficient
 Collada//Collada
 Cond//Condition
+Consumptions
 Contactor
 Counterparty
 CPV//Concentrator Photovoltaic
 CRC//Cyclic Redundancy Check
+Cryptographic
 CSIP//Common Smart Inverter Profile
 DAQ//Data Acquisition System
 Datasheet
+DER//Decentralized Energy Resource
 Derate
 Diene
 DHI//Diffuse Horizontal Irradiance
@@ -41,6 +45,7 @@ DNI//Direct Normal Irradiance
 DNP//Distributed Network Protocol
 DPP//Digital Product Passport
 ESS//Energy Storage System
+EV//Electric Vehicle
 EWG//Environmental Working Group
 Facil//Facilitator
 FEIN//Federal Employer Identification Number
@@ -57,17 +62,20 @@ Hemiboreal
 Heterojunction
 HJT//Heterojunction Technology
 HOA//Homeowners Association
+HOAID//Homeowners Association Identifier
 Horiz//Horizontal
 IBC//International Building Code
 ID//Identifier
 IDs//Identifiers
 IEC//International Electrical Commission
+IECTS//International Electrical Commission Technical Specification
 IFC//International Fire Code
-IGBT//Insulated-Gate Bipolar Transistor 
+IGBT//Insulated-Gate Bipolar Transistor
 Insolation
 IRC//International Residential Code
 Irrad//Irradiance
 Irradiance
+Islanded
 JA//Joint Appendix
 JSON//JavaScript Object Notation
 Keccak
@@ -102,13 +110,16 @@ Obligee
 Offline
 Online
 Perf//Performance
+PFE//Prohibited Foreign Entity
 POA//Plane of Array
 Polyolefin
 PolySi
 PPA//Power Purchase Agreement
 PPE//Personal Protection Equipment
 Pre
+Preparer
 ProForma
+Propylene
 PSA//Power Sale Agreement
 PTC//PVUSA Test Condition
 Purch//Purchase
@@ -123,15 +134,18 @@ Reqrmnts//Requirements
 Rpt//Reporting
 Rtg//Rating
 SAE//Society of Automotive Engineers
+SAEJ//Society of Automotive Engineers J (Surface Vehicle Recommended Practice) Standards
 SBS//Styrene-Butadiene-Styrene
 SCADA//Supervisory Control and Data Acquisition
 SEP//Smart Ethernet Protocol
 SHA//Secure Hash Algorithm
 Shapefile
+SPEOM//Solar Power Europe (SPE) Operations and Maintenance
 SPV//Special Purpose Vehicle
 STC//Standard Test Condition
 Sublimits
 Subpanel
+TCP//Transmission Control Protocol
 TCPIP//Transmission Control Protocol/Internet Protocol
 Terpolymer
 TFSI//Thin Film Silicon
@@ -139,6 +153,7 @@ THWN//Thermoplastic Heat and Water Resistant
 Transformerless
 UEI//Unique Entity Identifier
 Unbilled
+URI//Uniform Resource Identifier
 UTF//Unicode Transformation Format
 UUID//Universally Unique Identifier
 Voc//Open-Circuit Voltage
