@@ -1,162 +1,411 @@
 0
 ACH//Automated Clearing House
-Addr//Address
-Aggregator
+AD//Andorra
+AE//United Arab Emirates
+AF//Afghanistan
+AG//Antigua and Barbuda
 AGM//Absorbent Glass Mat
 AHJ//Authority Having Jurisdiction
 AHJID//Authority Having Jurisdiction Identifier
-Albedo
-Amb//Ambient
-App//Application
+AI//Anguilla
+AL//Albania
+AM//Armenia
+AO//Angola
+AQ//Antarctica
+AR//Argentina
+AS//American Samoa
 ASCE//American Society of Civil Engineers
 ASHRAE//American Society of Heating, Refrigerating and Air-Conditioning
 ASTME//American Society of Tool and Manufacturing Engineers
+AT//Austria
+AU//Australia
+AW//Aruba
 AWG//American Wire Gauge
+AX//Åland Islands
+AZ//Azerbaijan
+Addr//Address
+Aggregator
+Albedo
+Amb//Ambient
+App//Application
+BA//Bosnia and Herzegovina
+BB//Barbados
+BD//Bangladesh
+BE//Belgium
+BF//Burkina Faso
+BG//Bulgaria
+BH//Bahrain
+BI//Burundi
+BIPV//Building-Integrated Photovoltaics
+BJ//Benin
+BL//Saint Barthélemy
+BM//Bermuda
+BN//Brunei Darussalam
+BN//Phase B to Neutral
+BO//Bolivia (Plurinational State of)
+BQ//Bonaire, Sint Eustatius and Saba
+BR//Brazil
+BS//Bahamas
+BT//Bhutan
+BV//Bouvet Island
+BW//Botswana
+BY//Belarus
+BZ//Belize
 Backsheet
 Bifacial
-BIPV//Building-Integrated Photovoltaics
 Bluetooth
-BN//Phase B to Neutral
 Bool//Boolean
 Boreal
 Busbar
-Cancelled
+CA//Canada
+CC//Cocos (Keeling) Islands
+CD//Congo (the Democratic Republic of the)
 CEC//California Energy Commission
 CECPBI//California Energy Commission Performance-Based Incentive
+CF//Central African Republic
+CG//Congo
+CH//Switzerland
+CI//Côte d'Ivoire
 CIGS//Copper Indium Gallium Diselenide Selenium
+CK//Cook Islands
+CL//Chile
+CM//Cameroon
+CN//China
 CN//Phase C to Neutral
+CO//Colombia
+CPV//Concentrator Photovoltaic
+CR//Costa Rica
+CRC//Cyclic Redundancy Check
+CSIP//Common Smart Inverter Profile
+CU//Cuba
+CV//Cabo Verde
+CW//Curaçao
+CX//Christmas Island
+CY//Cyprus
+CZ//Czechia
+Cancelled
 Coeff//Coefficient
 Collada//Collada
 Cond//Condition
 Consumptions
 Contactor
 Counterparty
-CPV//Concentrator Photovoltaic
-CRC//Cyclic Redundancy Check
 Cryptographic
-CSIP//Common Smart Inverter Profile
 DAQ//Data Acquisition System
-Datasheet
+DE//Germany
 DER//Decentralized Energy Resource
-Derate
-Diene
 DHI//Diffuse Horizontal Irradiance
+DJ//Djibouti
+DK//Denmark
+DM//Dominica
 DNI//Direct Normal Irradiance
 DNP//Distributed Network Protocol
+DO//Dominican Republic
 DPP//Digital Product Passport
+DZ//Algeria
+Datasheet
+Derate
+Diene
+EC//Ecuador
+EE//Estonia
+EG//Egypt
+EH//Western Sahara
+ER//Eritrea
+ES//Spain
 ESS//Energy Storage System
+ET//Ethiopia
 EV//Electric Vehicle
 EWG//Environmental Working Group
-Facil//Facilitator
 FEIN//Federal Employer Identification Number
+FI//Finland
+FJ//Fiji
+FK//Falkland Islands (Malvinas)
+FM//Micronesia (Federated States of)
+FO//Faroe Islands
+FR//France
+Facil//Facilitator
 Forecasted
 Frameless
+GA//Gabon
+GB//United Kingdom of Great Britain and Northern Ireland
+GD//Grenada
+GE//Georgia
+GF//French Guiana
+GG//Guernsey
+GH//Ghana
+GHI//Global Horizontal Irradiance
+GI//Gibraltar
+GIS//Geographic Information System
+GL//Greenland
+GM//Gambia
+GML//Generalized Markup Language
+GN//Guinea
+GP//Guadeloupe
+GPS//Global Positioning System
+GQ//Equatorial Guinea
+GR//Greece
+GS//South Georgia and the South Sandwich Islands
+GT//Guatemala
+GU//Guam
+GW//Guinea-Bissau
+GY//Guyana
 Gauge
 Geocoding
-GHI//Global Horizontal Irradiance
-GIS//Geographic Information System
-GML//Generalized Markup Language
-GPS//Global Positioning System
 Groundskeeping
-Hemiboreal
-Heterojunction
 HJT//Heterojunction Technology
+HK//Hong Kong
+HM//Heard Island and McDonald Islands
+HN//Honduras
 HOA//Homeowners Association
 HOAID//Homeowners Association Identifier
+HR//Croatia
+HT//Haiti
+HU//Hungary
+Hemiboreal
+Heterojunction
 Horiz//Horizontal
 IBC//International Building Code
+ID//Indonesia
+IE//Ireland
 IEC//International Electrical Commission
 IECTS//International Electrical Commission Technical Specification
 IFC//International Fire Code
 IGBT//Insulated-Gate Bipolar Transistor
-Insolation
+IL//Israel
+IM//Isle of Man
+IN//India
+IO//British Indian Ocean Territory
+IQ//Iraq
+IR//Iran (Islamic Republic of)
 IRC//International Residential Code
+IS//Iceland
+IT//Italy
+Insolation
 Irrad//Irradiance
 Irradiance
 Islanded
 JA//Joint Appendix
+JE//Jersey
+JM//Jamaica
+JO//Jordan
+JP//Japan
 JSON//JavaScript Object Notation
-Keccak
+KE//Kenya
+KG//Kyrgyzstan
+KH//Cambodia
+KI//Kiribati
+KM//Comoros
 KML//Keyhole Markup Language
+KN//Saint Kitts and Nevis
+KP//Korea (the Democratic People's Republic of)
+KR//Korea (the Republic of)
+KW//Kuwait
+KY//Cayman Islands
+KZ//Kazakhstan
+Keccak
 Koppen
+LA//Lao People's Democratic Republic
+LB//Lebanon
+LC//Saint Lucia
 LCD//Liquid Crystal Display
+LI//Liechtenstein
 LIC//Low Irradiance Condition
-LiPoly
+LK//Sri Lanka
 LN//Line to Neutral
+LR//Liberia
+LS//Lesotho
+LT//Lithuania
+LU//Luxembourg
+LV//Latvia
+LY//Libya
+LiPoly
+MA//Morocco
+MC//Monaco
+MCER//Risk-Targeted Maximum Considered Earthquake
+MD//Moldova (the Republic of)
+ME//Montenegro
+MF//Saint Martin (French part)
+MG//Madagascar
+MH//Marshall Islands
+MK//North Macedonia
+ML//Mali
+MM//Myanmar
+MN//Mongolia
+MO//Macao
+MOR//Monthly Operating Report
+MP//Northern Mariana Islands
+MPPT//Maximum Power Point Tracker
+MPPTs//Maximum Power Point Trackers
+MQ//Martinique
+MR//Mauritania
+MS//Montserrat
+MT//Malta
+MU//Mauritius
+MV//Maldives
+MW//Malawi
+MX//Mexico
+MY//Malaysia
+MZ//Mozambique
 Maint//Maintenance
 Majeure
-MCER//Risk-Targeted Maximum Considered Earthquake
 Megathermal
 Mesothermal
 Meth//Method
 Microthermal
 Modbus
-MOR//Monthly Operating Report
-MPPT//Maximum Power Point Tracker
-MPPTs//Maximum Power Point Trackers
-Nanogrid
+NA//Namibia
+NC//New Caledonia
+NE//Niger
 NEC//National Electric Code
-NiMH//Nickel Metal Hydride
+NF//Norfolk Island
+NG//Nigeria
+NI//Nicaragua
+NL//Netherlands (Kingdom of the)
+NO//Norway
 NOCT//Nominal Operating Cell Temperature
+NP//Nepal
+NR//Nauru
+NRTL//Nationally Recognized Testing Laboratory
+NU//Niue
+NZ//New Zealand
+Nanogrid
+NiMH//Nickel Metal Hydride
 Nom//Nominal
 Noncurrent
 Noninterest
 Nonposting
-NRTL//Nationally Recognized Testing Laboratory
 Num//Number
+OM//Oman
 Obligee
 Offline
 Online
-Perf//Performance
+PA//Panama
+PE//Peru
+PF//French Polynesia
 PFE//Prohibited Foreign Entity
+PG//Papua New Guinea
+PH//Philippines
+PK//Pakistan
+PL//Poland
+PM//Saint Pierre and Miquelon
+PN//Pitcairn
 POA//Plane of Array
-Polyolefin
-PolySi
 PPA//Power Purchase Agreement
 PPE//Personal Protection Equipment
+PR//Puerto Rico
+PS//Palestine, State of
+PSA//Power Sale Agreement
+PT//Portugal
+PTC//PVUSA Test Condition
+PV//Photovoltaic
+PVUSA//Photovoltaics for Utility Scale Applications
+PW//Palau
+PY//Paraguay
+Perf//Performance
+PolySi
+Polyolefin
 Pre
 Preparer
 ProForma
 Propylene
-PSA//Power Sale Agreement
-PTC//PVUSA Test Condition
 Purch//Purchase
-PV//Photovoltaic
-PVUSA//Photovoltaics for Utility Scale Applications
 Pyranometer
+QA//Qatar
 QF//Qualifying Facility
 Qual//Qualification
 Quals//Qualifications
+RE//Réunion
 REbusDCNanogrid
+RO//Romania
+RS//Serbia
+RU//Russian Federation
+RW//Rwanda
 Reqrmnts//Requirements
 Rpt//Reporting
 Rtg//Rating
+SA//Saudi Arabia
 SAE//Society of Automotive Engineers
 SAEJ//Society of Automotive Engineers J (Surface Vehicle Recommended Practice) Standards
+SB//Solomon Islands
 SBS//Styrene-Butadiene-Styrene
+SC//Seychelles
 SCADA//Supervisory Control and Data Acquisition
+SD//Sudan
+SE//Sweden
 SEP//Smart Ethernet Protocol
+SG//Singapore
+SH//Saint Helena, Ascension and Tristan da Cunha
 SHA//Secure Hash Algorithm
-Shapefile
+SI//Slovenia
+SJ//Svalbard and Jan Mayen
+SK//Slovakia
+SL//Sierra Leone
+SM//San Marino
+SN//Senegal
+SO//Somalia
 SPEOM//Solar Power Europe (SPE) Operations and Maintenance
 SPV//Special Purpose Vehicle
+SR//Suriname
+SS//South Sudan
+ST//Sao Tome and Principe
 STC//Standard Test Condition
+SV//El Salvador
+SX//Sint Maarten (Dutch part)
+SY//Syrian Arab Republic
+SZ//Eswatini
+Shapefile
 Sublimits
 Subpanel
+TC//Turks and Caicos Islands
 TCP//Transmission Control Protocol
 TCPIP//Transmission Control Protocol/Internet Protocol
-Terpolymer
+TD//Chad
+TF//French Southern Territories
 TFSI//Thin Film Silicon
+TG//Togo
+TH//Thailand
 THWN//Thermoplastic Heat and Water Resistant
+TJ//Tajikistan
+TK//Tokelau
+TL//Timor-Leste
+TM//Turkmenistan
+TN//Tunisia
+TO//Tonga
+TR//Türkiye
+TT//Trinidad and Tobago
+TV//Tuvalu
+TW//Taiwan (Province of China)
+TZ//Tanzania, the United Republic of
+Terpolymer
 Transformerless
+UA//Ukraine
 UEI//Unique Entity Identifier
-Unbilled
+UG//Uganda
+UM//United States Minor Outlying Islands
 URI//Uniform Resource Identifier
+US//United States of America
 UTF//Unicode Transformation Format
 UUID//Universally Unique Identifier
+UY//Uruguay
+UZ//Uzbekistan
+Unbilled
+VA//Holy See
+VC//Saint Vincent and the Grenadines
+VE//Venezuela (Bolivarian Republic of)
+VG//Virgin Islands (British)
+VI//Virgin Islands (U.S.)
+VN//Viet Nam
+VU//Vanuatu
 Voc//Open-Circuit Voltage
-Warr//Warranty
+WF//Wallis and Futuna
 WIFI//Wireless Fidelity
+WS//Samoa
+Warr//Warranty
 Workmans
 Wtd//Weighted
+YE//Yemen
+YT//Mayotte
+ZA//South Africa
+ZM//Zambia
+ZW//Zimbabwe
 Zigbee
