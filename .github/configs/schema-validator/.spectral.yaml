@@ -1,4 +1,4 @@
-extends: 'ibm-oas-wrapper-check-components.js'
+extends: '@ibm-cloud/openapi-ruleset'
 functions: [spellcheckSubstrings,
             validateXOBFields,
             refPathExists,
@@ -6,14 +6,15 @@ functions: [spellcheckSubstrings,
             validateXOBSampleValue,
             validateItemTypeAgainstElementType]
 rules:
-  enum-case-convention: off
-  major-version-in-path: off
+  ibm-schema-casing-convention: off
+  ibm-enum-casing-convention: off
+  ibm-major-version-in-path: off
   openapi-tags: off
   oas3-api-servers: off
   oas3-unused-component: off
-  property-case-convention: off
-  property-description: off
-  property-inconsistent-name-and-type: off
+  ibm-property-casing-convention: off
+  ibm-property-description: off
+  ibm-property-consistent-name-and-type: off
 
   element-valid-item-type:
     message: 'Item type does not exist: {{error}}'
