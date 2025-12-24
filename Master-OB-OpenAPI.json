@@ -6391,6 +6391,7 @@
             "x-ob-item-type": "TempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "percent_per_Cel",
               "Value": -0.37
             },
             "x-ob-item-type-group": ""
@@ -6408,6 +6409,7 @@
             "x-ob-item-type": "TempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "percent_per_Cel",
               "Value": -0.304
             },
             "x-ob-item-type-group": ""
@@ -6425,6 +6427,7 @@
             "x-ob-item-type": "TempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "percent_per_Cel",
               "Value": 0.05
             },
             "x-ob-item-type-group": ""
@@ -6442,6 +6445,7 @@
             "x-ob-item-type": "TempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "percent_per_Cel",
               "Value": -0.304
             },
             "x-ob-item-type-group": ""
@@ -6459,6 +6463,7 @@
             "x-ob-item-type": "TempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "percent_per_Cel",
               "Value": 0.05
             },
             "x-ob-item-type-group": ""
