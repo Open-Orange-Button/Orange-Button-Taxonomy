@@ -2369,9 +2369,6 @@
           "Description": {
             "$ref": "#/components/schemas/Description"
           },
-          "ChecklistType": {
-            "$ref": "#/components/schemas/ChecklistType"
-          },
           "TransactionID": {
             "$ref": "#/components/schemas/TransactionID"
           },
@@ -2389,6 +2386,9 @@
           },
           "Scope": {
             "$ref": "#/components/schemas/Scope"
+          },
+          "ChecklistTemplateID": {
+            "$ref": "#/components/schemas/ChecklistTemplateID"
           }
         }
       },
@@ -2512,23 +2512,6 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "ChecklistType": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The type of Checklist",
-            "x-ob-item-type": "ChecklistTypeItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "Site"
             },
             "x-ob-item-type-group": ""
           }
@@ -5876,9 +5859,6 @@
               "Grounding": {
                 "$ref": "#/components/schemas/Grounding"
               },
-              "Dimension": {
-                "$ref": "#/components/schemas/Dimension"
-              },
               "InverterEfficiency": {
                 "$ref": "#/components/schemas/InverterEfficiency"
               },
@@ -6393,6 +6373,7 @@
             "x-ob-item-type": "TempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "percent_per_Cel",
               "Value": -0.37
             },
             "x-ob-item-type-group": ""
@@ -6410,6 +6391,7 @@
             "x-ob-item-type": "TempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "percent_per_Cel",
               "Value": -0.304
             },
             "x-ob-item-type-group": ""
@@ -6427,6 +6409,7 @@
             "x-ob-item-type": "TempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "percent_per_Cel",
               "Value": 0.05
             },
             "x-ob-item-type-group": ""
@@ -6444,6 +6427,7 @@
             "x-ob-item-type": "TempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "percent_per_Cel",
               "Value": -0.304
             },
             "x-ob-item-type-group": ""
@@ -6461,6 +6445,7 @@
             "x-ob-item-type": "TempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "percent_per_Cel",
               "Value": 0.05
             },
             "x-ob-item-type-group": ""
@@ -6774,18 +6759,6 @@
               "ProdCell": {
                 "$ref": "#/components/schemas/ProdCell"
               },
-              "ProdCode": {
-                "$ref": "#/components/schemas/ProdCode"
-              },
-              "Description": {
-                "$ref": "#/components/schemas/Description"
-              },
-              "FileFolderURL": {
-                "$ref": "#/components/schemas/FileFolderURL"
-              },
-              "ProdDatasheet": {
-                "$ref": "#/components/schemas/ProdDatasheet"
-              },
               "ProdGlazing": {
                 "$ref": "#/components/schemas/ProdGlazing"
               },
@@ -6800,9 +6773,6 @@
               },
               "CableConnector": {
                 "$ref": "#/components/schemas/CableConnector"
-              },
-              "Dimension": {
-                "$ref": "#/components/schemas/Dimension"
               },
               "PowerToleranceMin": {
                 "$ref": "#/components/schemas/PowerToleranceMin"
@@ -6840,9 +6810,6 @@
               "ShadeResponse": {
                 "$ref": "#/components/schemas/ShadeResponse"
               },
-              "Warranties": {
-                "$ref": "#/components/schemas/Warranties"
-              },
               "PowerSTC": {
                 "$ref": "#/components/schemas/PowerSTC"
               },
@@ -6874,15 +6841,6 @@
             "type": "object",
             "description": "A subcomponent of a ProdModule",
             "properties": {
-              "Description": {
-                "$ref": "#/components/schemas/Description"
-              },
-              "FileFolderURL": {
-                "$ref": "#/components/schemas/FileFolderURL"
-              },
-              "ProdCode": {
-                "$ref": "#/components/schemas/ProdCode"
-              },
               "CellColor": {
                 "$ref": "#/components/schemas/CellColor"
               },
@@ -8032,20 +7990,8 @@
               "FeeStructures": {
                 "$ref": "#/components/schemas/FeeStructures"
               },
-              "Description": {
-                "$ref": "#/components/schemas/Description"
-              },
-              "Contacts": {
-                "$ref": "#/components/schemas/Contacts"
-              },
-              "Addresses": {
-                "$ref": "#/components/schemas/Addresses"
-              },
               "FileFolderURL": {
                 "$ref": "#/components/schemas/FileFolderURL"
-              },
-              "URL": {
-                "$ref": "#/components/schemas/URL"
               },
               "UtilityID": {
                 "$ref": "#/components/schemas/UtilityID"
@@ -9747,9 +9693,6 @@
               "CapacityDC": {
                 "$ref": "#/components/schemas/CapacityDC"
               },
-              "Description": {
-                "$ref": "#/components/schemas/Description"
-              },
               "ElectricalServiceID": {
                 "$ref": "#/components/schemas/ElectricalServiceID"
               },
@@ -10480,9 +10423,6 @@
               },
               "SigningFor": {
                 "$ref": "#/components/schemas/SigningFor"
-              },
-              "EntityRole": {
-                "$ref": "#/components/schemas/EntityRole"
               }
             }
           }
@@ -10505,9 +10445,6 @@
               },
               "PreparerName": {
                 "$ref": "#/components/schemas/PreparerName"
-              },
-              "EntityRole": {
-                "$ref": "#/components/schemas/EntityRole"
               },
               "PreparerID": {
                 "$ref": "#/components/schemas/PreparerID"
@@ -10866,9 +10803,6 @@
               "Address": {
                 "$ref": "#/components/schemas/Address"
               },
-              "Contacts": {
-                "$ref": "#/components/schemas/Contacts"
-              },
               "BuildingCode": {
                 "$ref": "#/components/schemas/BuildingCode"
               },
@@ -10908,9 +10842,6 @@
               "FileFolderURL": {
                 "$ref": "#/components/schemas/FileFolderURL"
               },
-              "Description": {
-                "$ref": "#/components/schemas/Description"
-              },
               "WindCode": {
                 "$ref": "#/components/schemas/WindCode"
               },
@@ -10919,9 +10850,6 @@
               },
               "FeeStructures": {
                 "$ref": "#/components/schemas/FeeStructures"
-              },
-              "URL": {
-                "$ref": "#/components/schemas/URL"
               },
               "AHJCode": {
                 "$ref": "#/components/schemas/AHJCode"
@@ -10970,20 +10898,11 @@
               "Address": {
                 "$ref": "#/components/schemas/Address"
               },
-              "Contacts": {
-                "$ref": "#/components/schemas/Contacts"
-              },
-              "Description": {
-                "$ref": "#/components/schemas/Description"
-              },
               "FileFolderURL": {
                 "$ref": "#/components/schemas/FileFolderURL"
               },
               "FeeStructures": {
                 "$ref": "#/components/schemas/FeeStructures"
-              },
-              "URL": {
-                "$ref": "#/components/schemas/URL"
               },
               "HOAID": {
                 "$ref": "#/components/schemas/HOAID"
@@ -13370,9 +13289,6 @@
             "type": "object",
             "description": "The agency or testing center that grants the certification",
             "properties": {
-              "Description": {
-                "$ref": "#/components/schemas/Description"
-              },
               "CertificationAgencyName": {
                 "$ref": "#/components/schemas/CertificationAgencyName"
               },
@@ -14444,17 +14360,8 @@
             "type": "object",
             "description": "Contract describing the energy services between the service provider and the service requester.",
             "properties": {
-              "EffectiveDate": {
-                "$ref": "#/components/schemas/EffectiveDate"
-              },
-              "ExpirationDate": {
-                "$ref": "#/components/schemas/ExpirationDate"
-              },
               "Aggregator": {
                 "$ref": "#/components/schemas/Aggregator"
-              },
-              "ContractTerms": {
-                "$ref": "#/components/schemas/ContractTerms"
               },
               "ProgramName": {
                 "$ref": "#/components/schemas/ProgramName"
@@ -15932,6 +15839,129 @@
             "x-ob-item-type-group": ""
           }
         ]
+      "ChecklistTemplateID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Identifier for a ChecklistTemplate",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
+            }
+          }
+        ]
+      },
+      "ChecklistTemplateName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of a ChecklistTemplate",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "ModuleMaterialsDisclosure"
+            }
+          }
+        ]
+      },
+      "ChecklistTemplateVersion": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Version number for a ChecklistTemplate",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "2.13a"
+            }
+          }
+        ]
+      },
+      "ChecklistTemplateMaintainer": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Entity"
+          },
+          {
+            "type": "object",
+            "description": "Entity that maintains a ChecklistTemplate",
+            "properties": {
+              "ChecklistTemplateMaintainerID": {
+                "$ref": "#/components/schemas/ChecklistTemplateMaintainerID"
+              },
+              "ChecklistTemplateMaintainerName": {
+                "$ref": "#/components/schemas/ChecklistTemplateMaintainerName"
+              }
+            }
+          }
+        ]
+      },
+      "ChecklistTemplateMaintainerID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Identifier for the maintainer of a ChecklistTemplate",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ChecklistTemplateMaintainerName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Name of the entity that maintains a ChecklistTemplate",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ChecklistTemplate": {
+        "type": "object",
+        "description": "Template for a Checklist. A ChecklistTemplate should contain the Questions for a Checklist.",
+        "properties": {
+          "ChecklistTemplateID": {
+            "$ref": "#/components/schemas/ChecklistTemplateID"
+          },
+          "ChecklistTemplateMaintainer": {
+            "$ref": "#/components/schemas/ChecklistTemplateMaintainer"
+          },
+          "ChecklistTemplateName": {
+            "$ref": "#/components/schemas/ChecklistTemplateName"
+          },
+          "ChecklistTemplateVersion": {
+            "$ref": "#/components/schemas/ChecklistTemplateVersion"
+          },
+          "Questions": {
+            "$ref": "#/components/schemas/Questions"
+          },
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          }
+        }
       }
     }
   },
@@ -22950,6 +22980,1007 @@
         "LG": {
           "label": "LG",
           "description": "Line to Ground."
+        }
+      }
+    },
+    "Country": {
+      "description": "ISO country enumeration codes from wiki",
+      "enums": {
+        "AD": {
+          "label": "Andorra",
+          "description": ""
+        },
+        "AE": {
+          "label": "United Arab Emirates",
+          "description": ""
+        },
+        "AF": {
+          "label": "Afghanistan",
+          "description": ""
+        },
+        "AG": {
+          "label": "Antigua and Barbuda",
+          "description": ""
+        },
+        "AI": {
+          "label": "Anguilla",
+          "description": ""
+        },
+        "AL": {
+          "label": "Albania",
+          "description": ""
+        },
+        "AM": {
+          "label": "Armenia",
+          "description": ""
+        },
+        "AO": {
+          "label": "Angola",
+          "description": ""
+        },
+        "AQ": {
+          "label": "Antarctica",
+          "description": ""
+        },
+        "AR": {
+          "label": "Argentina",
+          "description": ""
+        },
+        "AS": {
+          "label": "American Samoa",
+          "description": ""
+        },
+        "AT": {
+          "label": "Austria",
+          "description": ""
+        },
+        "AU": {
+          "label": "Australia",
+          "description": ""
+        },
+        "AW": {
+          "label": "Aruba",
+          "description": ""
+        },
+        "AX": {
+          "label": "Åland Islands",
+          "description": ""
+        },
+        "AZ": {
+          "label": "Azerbaijan",
+          "description": ""
+        },
+        "BA": {
+          "label": "Bosnia and Herzegovina",
+          "description": ""
+        },
+        "BB": {
+          "label": "Barbados",
+          "description": ""
+        },
+        "BD": {
+          "label": "Bangladesh",
+          "description": ""
+        },
+        "BE": {
+          "label": "Belgium",
+          "description": ""
+        },
+        "BF": {
+          "label": "Burkina Faso",
+          "description": ""
+        },
+        "BG": {
+          "label": "Bulgaria",
+          "description": ""
+        },
+        "BH": {
+          "label": "Bahrain",
+          "description": ""
+        },
+        "BI": {
+          "label": "Burundi",
+          "description": ""
+        },
+        "BJ": {
+          "label": "Benin",
+          "description": ""
+        },
+        "BL": {
+          "label": "Saint Barthélemy",
+          "description": ""
+        },
+        "BM": {
+          "label": "Bermuda",
+          "description": ""
+        },
+        "BN": {
+          "label": "Brunei Darussalam",
+          "description": ""
+        },
+        "BO": {
+          "label": "Bolivia (Plurinational State of)",
+          "description": ""
+        },
+        "BQ": {
+          "label": "Bonaire, Sint Eustatius and Saba",
+          "description": ""
+        },
+        "BR": {
+          "label": "Brazil",
+          "description": ""
+        },
+        "BS": {
+          "label": "Bahamas",
+          "description": ""
+        },
+        "BT": {
+          "label": "Bhutan",
+          "description": ""
+        },
+        "BV": {
+          "label": "Bouvet Island",
+          "description": ""
+        },
+        "BW": {
+          "label": "Botswana",
+          "description": ""
+        },
+        "BY": {
+          "label": "Belarus",
+          "description": ""
+        },
+        "BZ": {
+          "label": "Belize",
+          "description": ""
+        },
+        "CA": {
+          "label": "Canada",
+          "description": ""
+        },
+        "CC": {
+          "label": "Cocos (Keeling) Islands",
+          "description": ""
+        },
+        "CD": {
+          "label": "Congo (the Democratic Republic of the)",
+          "description": ""
+        },
+        "CF": {
+          "label": "Central African Republic",
+          "description": ""
+        },
+        "CG": {
+          "label": "Congo",
+          "description": ""
+        },
+        "CH": {
+          "label": "Switzerland",
+          "description": ""
+        },
+        "CI": {
+          "label": "Côte d'Ivoire",
+          "description": ""
+        },
+        "CK": {
+          "label": "Cook Islands",
+          "description": ""
+        },
+        "CL": {
+          "label": "Chile",
+          "description": ""
+        },
+        "CM": {
+          "label": "Cameroon",
+          "description": ""
+        },
+        "CN": {
+          "label": "China",
+          "description": ""
+        },
+        "CO": {
+          "label": "Colombia",
+          "description": ""
+        },
+        "CR": {
+          "label": "Costa Rica",
+          "description": ""
+        },
+        "CU": {
+          "label": "Cuba",
+          "description": ""
+        },
+        "CV": {
+          "label": "Cabo Verde",
+          "description": ""
+        },
+        "CW": {
+          "label": "Curaçao",
+          "description": ""
+        },
+        "CX": {
+          "label": "Christmas Island",
+          "description": ""
+        },
+        "CY": {
+          "label": "Cyprus",
+          "description": ""
+        },
+        "CZ": {
+          "label": "Czechia",
+          "description": ""
+        },
+        "DE": {
+          "label": "Germany",
+          "description": ""
+        },
+        "DJ": {
+          "label": "Djibouti",
+          "description": ""
+        },
+        "DK": {
+          "label": "Denmark",
+          "description": ""
+        },
+        "DM": {
+          "label": "Dominica",
+          "description": ""
+        },
+        "DO": {
+          "label": "Dominican Republic",
+          "description": ""
+        },
+        "DZ": {
+          "label": "Algeria",
+          "description": ""
+        },
+        "EC": {
+          "label": "Ecuador",
+          "description": ""
+        },
+        "EE": {
+          "label": "Estonia",
+          "description": ""
+        },
+        "EG": {
+          "label": "Egypt",
+          "description": ""
+        },
+        "EH": {
+          "label": "Western Sahara",
+          "description": ""
+        },
+        "ER": {
+          "label": "Eritrea",
+          "description": ""
+        },
+        "ES": {
+          "label": "Spain",
+          "description": ""
+        },
+        "ET": {
+          "label": "Ethiopia",
+          "description": ""
+        },
+        "FI": {
+          "label": "Finland",
+          "description": ""
+        },
+        "FJ": {
+          "label": "Fiji",
+          "description": ""
+        },
+        "FK": {
+          "label": "Falkland Islands (Malvinas)",
+          "description": ""
+        },
+        "FM": {
+          "label": "Micronesia (Federated States of)",
+          "description": ""
+        },
+        "FO": {
+          "label": "Faroe Islands",
+          "description": ""
+        },
+        "FR": {
+          "label": "France",
+          "description": ""
+        },
+        "GA": {
+          "label": "Gabon",
+          "description": ""
+        },
+        "GB": {
+          "label": "United Kingdom of Great Britain and Northern Ireland",
+          "description": ""
+        },
+        "GD": {
+          "label": "Grenada",
+          "description": ""
+        },
+        "GE": {
+          "label": "Georgia",
+          "description": ""
+        },
+        "GF": {
+          "label": "French Guiana",
+          "description": ""
+        },
+        "GG": {
+          "label": "Guernsey",
+          "description": ""
+        },
+        "GH": {
+          "label": "Ghana",
+          "description": ""
+        },
+        "GI": {
+          "label": "Gibraltar",
+          "description": ""
+        },
+        "GL": {
+          "label": "Greenland",
+          "description": ""
+        },
+        "GM": {
+          "label": "Gambia",
+          "description": ""
+        },
+        "GN": {
+          "label": "Guinea",
+          "description": ""
+        },
+        "GP": {
+          "label": "Guadeloupe",
+          "description": ""
+        },
+        "GQ": {
+          "label": "Equatorial Guinea",
+          "description": ""
+        },
+        "GR": {
+          "label": "Greece",
+          "description": ""
+        },
+        "GS": {
+          "label": "South Georgia and the South Sandwich Islands",
+          "description": ""
+        },
+        "GT": {
+          "label": "Guatemala",
+          "description": ""
+        },
+        "GU": {
+          "label": "Guam",
+          "description": ""
+        },
+        "GW": {
+          "label": "Guinea-Bissau",
+          "description": ""
+        },
+        "GY": {
+          "label": "Guyana",
+          "description": ""
+        },
+        "HK": {
+          "label": "Hong Kong",
+          "description": ""
+        },
+        "HM": {
+          "label": "Heard Island and McDonald Islands",
+          "description": ""
+        },
+        "HN": {
+          "label": "Honduras",
+          "description": ""
+        },
+        "HR": {
+          "label": "Croatia",
+          "description": ""
+        },
+        "HT": {
+          "label": "Haiti",
+          "description": ""
+        },
+        "HU": {
+          "label": "Hungary",
+          "description": ""
+        },
+        "ID": {
+          "label": "Indonesia",
+          "description": ""
+        },
+        "IE": {
+          "label": "Ireland",
+          "description": ""
+        },
+        "IL": {
+          "label": "Israel",
+          "description": ""
+        },
+        "IM": {
+          "label": "Isle of Man",
+          "description": ""
+        },
+        "IN": {
+          "label": "India",
+          "description": ""
+        },
+        "IO": {
+          "label": "British Indian Ocean Territory",
+          "description": ""
+        },
+        "IQ": {
+          "label": "Iraq",
+          "description": ""
+        },
+        "IR": {
+          "label": "Iran (Islamic Republic of)",
+          "description": ""
+        },
+        "IS": {
+          "label": "Iceland",
+          "description": ""
+        },
+        "IT": {
+          "label": "Italy",
+          "description": ""
+        },
+        "JE": {
+          "label": "Jersey",
+          "description": ""
+        },
+        "JM": {
+          "label": "Jamaica",
+          "description": ""
+        },
+        "JO": {
+          "label": "Jordan",
+          "description": ""
+        },
+        "JP": {
+          "label": "Japan",
+          "description": ""
+        },
+        "KE": {
+          "label": "Kenya",
+          "description": ""
+        },
+        "KG": {
+          "label": "Kyrgyzstan",
+          "description": ""
+        },
+        "KH": {
+          "label": "Cambodia",
+          "description": ""
+        },
+        "KI": {
+          "label": "Kiribati",
+          "description": ""
+        },
+        "KM": {
+          "label": "Comoros",
+          "description": ""
+        },
+        "KN": {
+          "label": "Saint Kitts and Nevis",
+          "description": ""
+        },
+        "KP": {
+          "label": "Korea (the Democratic People's Republic of)",
+          "description": ""
+        },
+        "KR": {
+          "label": "Korea (the Republic of)",
+          "description": ""
+        },
+        "KW": {
+          "label": "Kuwait",
+          "description": ""
+        },
+        "KY": {
+          "label": "Cayman Islands",
+          "description": ""
+        },
+        "KZ": {
+          "label": "Kazakhstan",
+          "description": ""
+        },
+        "LA": {
+          "label": "Lao People's Democratic Republic",
+          "description": ""
+        },
+        "LB": {
+          "label": "Lebanon",
+          "description": ""
+        },
+        "LC": {
+          "label": "Saint Lucia",
+          "description": ""
+        },
+        "LI": {
+          "label": "Liechtenstein",
+          "description": ""
+        },
+        "LK": {
+          "label": "Sri Lanka",
+          "description": ""
+        },
+        "LR": {
+          "label": "Liberia",
+          "description": ""
+        },
+        "LS": {
+          "label": "Lesotho",
+          "description": ""
+        },
+        "LT": {
+          "label": "Lithuania",
+          "description": ""
+        },
+        "LU": {
+          "label": "Luxembourg",
+          "description": ""
+        },
+        "LV": {
+          "label": "Latvia",
+          "description": ""
+        },
+        "LY": {
+          "label": "Libya",
+          "description": ""
+        },
+        "MA": {
+          "label": "Morocco",
+          "description": ""
+        },
+        "MC": {
+          "label": "Monaco",
+          "description": ""
+        },
+        "MD": {
+          "label": "Moldova (the Republic of)",
+          "description": ""
+        },
+        "ME": {
+          "label": "Montenegro",
+          "description": ""
+        },
+        "MF": {
+          "label": "Saint Martin (French part)",
+          "description": ""
+        },
+        "MG": {
+          "label": "Madagascar",
+          "description": ""
+        },
+        "MH": {
+          "label": "Marshall Islands",
+          "description": ""
+        },
+        "MK": {
+          "label": "North Macedonia",
+          "description": ""
+        },
+        "ML": {
+          "label": "Mali",
+          "description": ""
+        },
+        "MM": {
+          "label": "Myanmar",
+          "description": ""
+        },
+        "MN": {
+          "label": "Mongolia",
+          "description": ""
+        },
+        "MO": {
+          "label": "Macao",
+          "description": ""
+        },
+        "MP": {
+          "label": "Northern Mariana Islands",
+          "description": ""
+        },
+        "MQ": {
+          "label": "Martinique",
+          "description": ""
+        },
+        "MR": {
+          "label": "Mauritania",
+          "description": ""
+        },
+        "MS": {
+          "label": "Montserrat",
+          "description": ""
+        },
+        "MT": {
+          "label": "Malta",
+          "description": ""
+        },
+        "MU": {
+          "label": "Mauritius",
+          "description": ""
+        },
+        "MV": {
+          "label": "Maldives",
+          "description": ""
+        },
+        "MW": {
+          "label": "Malawi",
+          "description": ""
+        },
+        "MX": {
+          "label": "Mexico",
+          "description": ""
+        },
+        "MY": {
+          "label": "Malaysia",
+          "description": ""
+        },
+        "MZ": {
+          "label": "Mozambique",
+          "description": ""
+        },
+        "NA": {
+          "label": "Namibia",
+          "description": ""
+        },
+        "NC": {
+          "label": "New Caledonia",
+          "description": ""
+        },
+        "NE": {
+          "label": "Niger",
+          "description": ""
+        },
+        "NF": {
+          "label": "Norfolk Island",
+          "description": ""
+        },
+        "NG": {
+          "label": "Nigeria",
+          "description": ""
+        },
+        "NI": {
+          "label": "Nicaragua",
+          "description": ""
+        },
+        "NL": {
+          "label": "Netherlands (Kingdom of the)",
+          "description": ""
+        },
+        "NO": {
+          "label": "Norway",
+          "description": ""
+        },
+        "NP": {
+          "label": "Nepal",
+          "description": ""
+        },
+        "NR": {
+          "label": "Nauru",
+          "description": ""
+        },
+        "NU": {
+          "label": "Niue",
+          "description": ""
+        },
+        "NZ": {
+          "label": "New Zealand",
+          "description": ""
+        },
+        "OM": {
+          "label": "Oman",
+          "description": ""
+        },
+        "PA": {
+          "label": "Panama",
+          "description": ""
+        },
+        "PE": {
+          "label": "Peru",
+          "description": ""
+        },
+        "PF": {
+          "label": "French Polynesia",
+          "description": ""
+        },
+        "PG": {
+          "label": "Papua New Guinea",
+          "description": ""
+        },
+        "PH": {
+          "label": "Philippines",
+          "description": ""
+        },
+        "PK": {
+          "label": "Pakistan",
+          "description": ""
+        },
+        "PL": {
+          "label": "Poland",
+          "description": ""
+        },
+        "PM": {
+          "label": "Saint Pierre and Miquelon",
+          "description": ""
+        },
+        "PN": {
+          "label": "Pitcairn",
+          "description": ""
+        },
+        "PR": {
+          "label": "Puerto Rico",
+          "description": ""
+        },
+        "PS": {
+          "label": "Palestine, State of",
+          "description": ""
+        },
+        "PT": {
+          "label": "Portugal",
+          "description": ""
+        },
+        "PW": {
+          "label": "Palau",
+          "description": ""
+        },
+        "PY": {
+          "label": "Paraguay",
+          "description": ""
+        },
+        "QA": {
+          "label": "Qatar",
+          "description": ""
+        },
+        "RE": {
+          "label": "Réunion",
+          "description": ""
+        },
+        "RO": {
+          "label": "Romania",
+          "description": ""
+        },
+        "RS": {
+          "label": "Serbia",
+          "description": ""
+        },
+        "RU": {
+          "label": "Russian Federation",
+          "description": ""
+        },
+        "RW": {
+          "label": "Rwanda",
+          "description": ""
+        },
+        "SA": {
+          "label": "Saudi Arabia",
+          "description": ""
+        },
+        "SB": {
+          "label": "Solomon Islands",
+          "description": ""
+        },
+        "SC": {
+          "label": "Seychelles",
+          "description": ""
+        },
+        "SD": {
+          "label": "Sudan",
+          "description": ""
+        },
+        "SE": {
+          "label": "Sweden",
+          "description": ""
+        },
+        "SG": {
+          "label": "Singapore",
+          "description": ""
+        },
+        "SH": {
+          "label": "Saint Helena, Ascension and Tristan da Cunha",
+          "description": ""
+        },
+        "SI": {
+          "label": "Slovenia",
+          "description": ""
+        },
+        "SJ": {
+          "label": "Svalbard and Jan Mayen",
+          "description": ""
+        },
+        "SK": {
+          "label": "Slovakia",
+          "description": ""
+        },
+        "SL": {
+          "label": "Sierra Leone",
+          "description": ""
+        },
+        "SM": {
+          "label": "San Marino",
+          "description": ""
+        },
+        "SN": {
+          "label": "Senegal",
+          "description": ""
+        },
+        "SO": {
+          "label": "Somalia",
+          "description": ""
+        },
+        "SR": {
+          "label": "Suriname",
+          "description": ""
+        },
+        "SS": {
+          "label": "South Sudan",
+          "description": ""
+        },
+        "ST": {
+          "label": "Sao Tome and Principe",
+          "description": ""
+        },
+        "SV": {
+          "label": "El Salvador",
+          "description": ""
+        },
+        "SX": {
+          "label": "Sint Maarten (Dutch part)",
+          "description": ""
+        },
+        "SY": {
+          "label": "Syrian Arab Republic",
+          "description": ""
+        },
+        "SZ": {
+          "label": "Eswatini",
+          "description": ""
+        },
+        "TC": {
+          "label": "Turks and Caicos Islands",
+          "description": ""
+        },
+        "TD": {
+          "label": "Chad",
+          "description": ""
+        },
+        "TF": {
+          "label": "French Southern Territories",
+          "description": ""
+        },
+        "TG": {
+          "label": "Togo",
+          "description": ""
+        },
+        "TH": {
+          "label": "Thailand",
+          "description": ""
+        },
+        "TJ": {
+          "label": "Tajikistan",
+          "description": ""
+        },
+        "TK": {
+          "label": "Tokelau",
+          "description": ""
+        },
+        "TL": {
+          "label": "Timor-Leste",
+          "description": ""
+        },
+        "TM": {
+          "label": "Turkmenistan",
+          "description": ""
+        },
+        "TN": {
+          "label": "Tunisia",
+          "description": ""
+        },
+        "TO": {
+          "label": "Tonga",
+          "description": ""
+        },
+        "TR": {
+          "label": "Türkiye",
+          "description": ""
+        },
+        "TT": {
+          "label": "Trinidad and Tobago",
+          "description": ""
+        },
+        "TV": {
+          "label": "Tuvalu",
+          "description": ""
+        },
+        "TW": {
+          "label": "Taiwan",
+          "description": ""
+        },
+        "TZ": {
+          "label": "Tanzania, the United Republic of",
+          "description": ""
+        },
+        "UA": {
+          "label": "Ukraine",
+          "description": ""
+        },
+        "UG": {
+          "label": "Uganda",
+          "description": ""
+        },
+        "UM": {
+          "label": "United States Minor Outlying Islands",
+          "description": ""
+        },
+        "US": {
+          "label": "United States of America",
+          "description": ""
+        },
+        "UY": {
+          "label": "Uruguay",
+          "description": ""
+        },
+        "UZ": {
+          "label": "Uzbekistan",
+          "description": ""
+        },
+        "VA": {
+          "label": "Holy See",
+          "description": ""
+        },
+        "VC": {
+          "label": "Saint Vincent and the Grenadines",
+          "description": ""
+        },
+        "VE": {
+          "label": "Venezuela",
+          "description": ""
+        },
+        "VG": {
+          "label": "Virgin Islands (British)",
+          "description": ""
+        },
+        "VI": {
+          "label": "Virgin Islands (U.S.)",
+          "description": ""
+        },
+        "VN": {
+          "label": "Viet Nam",
+          "description": ""
+        },
+        "VU": {
+          "label": "Vanuatu",
+          "description": ""
+        },
+        "WF": {
+          "label": "Wallis and Futuna",
+          "description": ""
+        },
+        "WS": {
+          "label": "Samoa",
+          "description": ""
+        },
+        "YE": {
+          "label": "Yemen",
+          "description": ""
+        },
+        "YT": {
+          "label": "Mayotte",
+          "description": ""
+        },
+        "ZA": {
+          "label": "South Africa",
+          "description": ""
+        },
+        "ZM": {
+          "label": "Zambia",
+          "description": ""
+        },
+        "ZW": {
+          "label": "Zimbabwe",
+          "description": ""
         }
       }
     }

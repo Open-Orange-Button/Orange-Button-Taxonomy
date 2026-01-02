@@ -15,8 +15,10 @@ export default (input, options, context) => {
   let sampleValue = getSampleValue(input);
   if (!isObject(sampleValue)) {
     addResult('Sample value must be an object.');
-  } else if (options.requireAtLeastOneField && (!isObject(sampleValue) || Object.keys(sampleValue) === 0)) {
-    addResult('Sample value must have defined primitive fields.');
+  } else if (Object.keys(sampleValue).length === 0) {
+    if (options.requireAtLeastOneField) {
+      addResult("Sample value's Value primitive must be defined.");
+    }
   } else if (!Object.keys(sampleValue).every(k => primitiveValidators[k])) {
     let extraKeys = Object.keys(sampleValue).filter(k => !primitiveValidators[k]);
     addResult(`These fields are not valid primitives: ${extraKeys.join(', ')}`);
@@ -47,16 +49,9 @@ function getItemTypeGroup(input) {
 
 function getValueOpenAPIType(input) {
   let Value = input[0].properties.Value;
-  return { isArray: Value.type === 'array', type: Value.type };
-}
-
-function getOpenAPITypeName(type) {
-  let result = '';
-  if (type.isArray) {
-    result += 'array of ';
-  }
-  result += type.type;
-  return result;
+  let isArray = Value.type === 'array'
+  let type = isArray ? Value.items.type : Value.type
+  return { isArray, type }
 }
 
 function OpenAPITypecheck(value, type) {
@@ -92,22 +87,28 @@ function validateUnit(input, taxonomy, addResult) {
   let sampleValue = getSampleValue(input);
   let itemType = getItemType(input);
   let sampleValueUnit = sampleValue[primitive];
-  if (itemType && primitive in sampleValue) {
+  if (itemType) {
     let itemTypeDef = taxonomy['x-ob-item-types'][itemType];
     if (!itemTypeDef) {
       // ignore if item type does not exist, this is checked separately
       return;
     }
     let itemTypeUnits = itemTypeDef['units'];
-    if (!itemTypeUnits) {
-      addResult(`Cannot define 'Unit' because the item type '${itemType}' does not define units.`);
+    if (itemTypeUnits) {
+      if (primitive in sampleValue) {
+        let itemTypeGroup = getItemTypeGroup(input);
+        let itemTypeGroupDef = taxonomy['x-ob-item-type-groups'][itemTypeGroup];
+        if (!itemTypeUnits[sampleValueUnit]) {
+          addResult(`The item type '${itemType}' does not define the unit '${sampleValueUnit}'.`);
+        } else if (itemTypeGroupDef && !itemTypeGroupDef.group.includes(sampleValueUnit)) {
+          addResult(`The item type group '${itemTypeGroup}' does not define the unit '${sampleValueUnit}'.`)
+        }
+      } else {
+        addResult(`Must define 'Unit' because the item type '${itemType}' defines units.`);
+      }
     } else {
-      let itemTypeGroup = getItemTypeGroup(input);
-      let itemTypeGroupDef = taxonomy['x-ob-item-type-groups'][itemTypeGroup];
-      if (!itemTypeUnits[sampleValueUnit]) {
-        addResult(`The item type '${itemType}' does not define the unit '${sampleValueUnit}'.`);
-      } else if (itemTypeGroupDef && !itemTypeGroupDef.group.includes(sampleValueUnit)) {
-        addResult(`The item type group '${itemTypeGroup}' does not define the unit '${sampleValueUnit}'.`)
+      if (primitive in sampleValue) {
+        addResult(`Cannot define 'Unit' because the item type '${itemType}' does not define units.`);
       }
     }
   }
@@ -127,7 +128,11 @@ function validateValue(input, taxonomy, addResult) {
     let sampleValueValue = sampleValue[primitive];
     let OpenAPIType = getValueOpenAPIType(input);
     if (!OpenAPITypecheck(sampleValueValue, OpenAPIType)) {
-      addResult(`Must be of type ${getOpenAPITypeName(OpenAPIType)}. Value: ${sampleValueValue}`);
+      if (OpenAPIType.isArray) {
+          addResult(`Must be an array of type ${OpenAPIType.type}, but the array contains this item: ${sampleValueValue}`);
+      } else {
+          addResult(`Must be of type ${OpenAPIType.type}. Value: ${sampleValueValue}`);
+      }
     } else if (OpenAPIType.type === 'string' && sampleValueValue.length === 0) {
       addResult(`Must not be an empty string.`);
     } else if (itemTypeEnums && !validatorOptions.enumItemTypeIgnoreList.includes(itemType)) {

@@ -1,19 +1,21 @@
-extends: 'ibm-oas-wrapper-check-components.js'
+extends: '@ibm-cloud/openapi-ruleset'
 functions: [spellcheckSubstrings,
             validateXOBFields,
             refPathExists,
             validateItemTypeGroupEntries,
             validateXOBSampleValue,
-            validateItemTypeAgainstElementType]
+            validateItemTypeAgainstElementType,
+            noSuperclassFieldShadowing]
 rules:
-  enum-case-convention: off
-  major-version-in-path: off
+  ibm-schema-casing-convention: off
+  ibm-enum-casing-convention: off
+  ibm-major-version-in-path: off
   openapi-tags: off
   oas3-api-servers: off
   oas3-unused-component: off
-  property-case-convention: off
-  property-description: off
-  property-inconsistent-name-and-type: off
+  ibm-property-casing-convention: off
+  ibm-property-description: off
+  ibm-property-consistent-name-and-type: off
 
   element-valid-item-type:
     message: 'Item type does not exist: {{error}}'
@@ -57,7 +59,7 @@ rules:
       - If the schema definition OB item type defines enums or units:
         - When enums are defined, Value is an enum of the OB item type.
           - If the schema definition has an OB item type group, Value is an enum of the item type group.
-        - When units are defined, Unit is a unit of the OB item type.
+        - When units are defined, Unit is defined and is a unit of the OB item type.
           - If the schema definition has an OB item type group, Unit is a unit of the item type group.
       - Additional validation rules for each primitive can be added to validateXOBSampleValue.
     message: '{{error}}'
@@ -101,6 +103,14 @@ rules:
       functionOptions:
         match: ^[0-9A-Za-z_]+$
 
+  no-superclass-field-shadowing:
+    description: Check that OB Objects do not define fields whose names shadow fields of their superclass.
+    message: '{{error}}'
+    given: $.components.schemas[*][?(@property === 'allOf' && !(@[0].properties && @[0].properties.Value))]
+    severity: error
+    then:
+      function: noSuperclassFieldShadowing
+
   upper-camel-case-with-all-caps-acronyms:
     description: Name should follow the upper camel case convention with all-caps acronyms.
     type: style
@@ -128,7 +138,7 @@ rules:
     then:
       function: spellcheckSubstrings
       functionOptions:
-        substringMatch: '[0-9]+|[A-Z][a-z]+|[A-Z]+(?![a-z])'
+        substringMatch: '[0-9]+|[A-Z][a-z]+|[A-Z]+s(?![a-z])|[A-Z]+(?![a-z])'
         dictionaries:
           - name: en_US
             path: node_modules/typo-js/dictionaries
