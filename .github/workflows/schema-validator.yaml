@@ -7,28 +7,32 @@ jobs:
     name: Swagger Editor OAS Validator Remote
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Install/Update Packages
-        run: sudo apt-get update && sudo apt-get install -y libnss3 libgdk-pixbuf2.0 libgtk-3-dev libxss-dev libasound2t64
+      - uses: actions/checkout@v6
       - name: Validate OB OpenAPI
-        uses: swaggerexpert/swagger-editor-validate@master
-        with:
-          definition-file: Master-OB-OpenAPI.json
+        run: |
+          # 1. curl: Sends the OB taxonomy to the Swagger's validation API.
+          # 2. jq: Prints the validation error messages in the API response.
+          #   a. jq has exit code 0 if error messages are present.
+          #   b. jq has exit code 4 if no error messages are present.
+          #   c. View the exit code of a program by typing 'echo $?'.
+          # 3. The '!' in front of 'curl' negates the jq exit code.
+          #   a. jq has exit code 0 -> '!' has exit code 1 -> fail GitHub action.
+          #   b. jq has nonzero exit code (e.g., 4) -> '!' has exit code 0 -> do not fail action.
+          ! curl https://validator.swagger.io/validator/debug --silent --data @Master-OB-OpenAPI.json -H 'Content-Type: application/json' | jq --exit-status --raw-output 'select(.messages) | .messages[]'
 
   ob-open-api-validator:
     name: OB OpenAPI Validator
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v6
       - name: Setup
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v6
         with:
-          node-version: '16'
+          node-version: '24'
       - name: Install IBM OpenAPI Validator with Its Spectral OpenAPI Ruleset
-        run: npm install -g ibm-openapi-validator@0.76.2 && npm install @ibm-cloud/openapi-ruleset@0.25.2
+        run: npm install -g ibm-openapi-validator@1.37.8 && npm install @ibm-cloud/openapi-ruleset@1.33.5
       - name: Install Typo.js Spellchecker
-        run: npm install typo-js@1.2.1
+        run: npm install typo-js@1.3.1
       - name: Run validator
         run: lint-openapi Master-OB-OpenAPI.json -r ./.github/configs/schema-validator/.spectral.yaml
