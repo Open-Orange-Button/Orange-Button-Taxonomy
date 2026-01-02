@@ -4,7 +4,8 @@ functions: [spellcheckSubstrings,
             refPathExists,
             validateItemTypeGroupEntries,
             validateXOBSampleValue,
-            validateItemTypeAgainstElementType]
+            validateItemTypeAgainstElementType,
+            noSuperclassFieldShadowing]
 rules:
   ibm-schema-casing-convention: off
   ibm-enum-casing-convention: off
@@ -58,7 +59,7 @@ rules:
       - If the schema definition OB item type defines enums or units:
         - When enums are defined, Value is an enum of the OB item type.
           - If the schema definition has an OB item type group, Value is an enum of the item type group.
-        - When units are defined, Unit is a unit of the OB item type.
+        - When units are defined, Unit is defined and is a unit of the OB item type.
           - If the schema definition has an OB item type group, Unit is a unit of the item type group.
       - Additional validation rules for each primitive can be added to validateXOBSampleValue.
     message: '{{error}}'
@@ -101,6 +102,14 @@ rules:
       function: pattern
       functionOptions:
         match: ^[0-9A-Za-z_]+$
+
+  no-superclass-field-shadowing:
+    description: Check that OB Objects do not define fields whose names shadow fields of their superclass.
+    message: '{{error}}'
+    given: $.components.schemas[*][?(@property === 'allOf' && !(@[0].properties && @[0].properties.Value))]
+    severity: error
+    then:
+      function: noSuperclassFieldShadowing
 
   upper-camel-case-with-all-caps-acronyms:
     description: Name should follow the upper camel case convention with all-caps acronyms.

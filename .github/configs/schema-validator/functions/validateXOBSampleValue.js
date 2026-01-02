@@ -15,8 +15,10 @@ export default (input, options, context) => {
   let sampleValue = getSampleValue(input);
   if (!isObject(sampleValue)) {
     addResult('Sample value must be an object.');
-  } else if (options.requireAtLeastOneField && (!isObject(sampleValue) || Object.keys(sampleValue).length === 0)) {
-    addResult("Sample value's Value primitive must be defined.");
+  } else if (Object.keys(sampleValue).length === 0) {
+    if (options.requireAtLeastOneField) {
+      addResult("Sample value's Value primitive must be defined.");
+    }
   } else if (!Object.keys(sampleValue).every(k => primitiveValidators[k])) {
     let extraKeys = Object.keys(sampleValue).filter(k => !primitiveValidators[k]);
     addResult(`These fields are not valid primitives: ${extraKeys.join(', ')}`);
@@ -85,22 +87,28 @@ function validateUnit(input, taxonomy, addResult) {
   let sampleValue = getSampleValue(input);
   let itemType = getItemType(input);
   let sampleValueUnit = sampleValue[primitive];
-  if (itemType && primitive in sampleValue) {
+  if (itemType) {
     let itemTypeDef = taxonomy['x-ob-item-types'][itemType];
     if (!itemTypeDef) {
       // ignore if item type does not exist, this is checked separately
       return;
     }
     let itemTypeUnits = itemTypeDef['units'];
-    if (!itemTypeUnits) {
-      addResult(`Cannot define 'Unit' because the item type '${itemType}' does not define units.`);
+    if (itemTypeUnits) {
+      if (primitive in sampleValue) {
+        let itemTypeGroup = getItemTypeGroup(input);
+        let itemTypeGroupDef = taxonomy['x-ob-item-type-groups'][itemTypeGroup];
+        if (!itemTypeUnits[sampleValueUnit]) {
+          addResult(`The item type '${itemType}' does not define the unit '${sampleValueUnit}'.`);
+        } else if (itemTypeGroupDef && !itemTypeGroupDef.group.includes(sampleValueUnit)) {
+          addResult(`The item type group '${itemTypeGroup}' does not define the unit '${sampleValueUnit}'.`)
+        }
+      } else {
+        addResult(`Must define 'Unit' because the item type '${itemType}' defines units.`);
+      }
     } else {
-      let itemTypeGroup = getItemTypeGroup(input);
-      let itemTypeGroupDef = taxonomy['x-ob-item-type-groups'][itemTypeGroup];
-      if (!itemTypeUnits[sampleValueUnit]) {
-        addResult(`The item type '${itemType}' does not define the unit '${sampleValueUnit}'.`);
-      } else if (itemTypeGroupDef && !itemTypeGroupDef.group.includes(sampleValueUnit)) {
-        addResult(`The item type group '${itemTypeGroup}' does not define the unit '${sampleValueUnit}'.`)
+      if (primitive in sampleValue) {
+        addResult(`Cannot define 'Unit' because the item type '${itemType}' does not define units.`);
       }
     }
   }

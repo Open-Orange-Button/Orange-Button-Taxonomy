@@ -5860,9 +5860,6 @@
               "Grounding": {
                 "$ref": "#/components/schemas/Grounding"
               },
-              "Dimension": {
-                "$ref": "#/components/schemas/Dimension"
-              },
               "InverterEfficiency": {
                 "$ref": "#/components/schemas/InverterEfficiency"
               },
@@ -6377,6 +6374,7 @@
             "x-ob-item-type": "TempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "percent_per_Cel",
               "Value": -0.37
             },
             "x-ob-item-type-group": ""
@@ -6394,6 +6392,7 @@
             "x-ob-item-type": "TempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "percent_per_Cel",
               "Value": -0.304
             },
             "x-ob-item-type-group": ""
@@ -6411,6 +6410,7 @@
             "x-ob-item-type": "TempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "percent_per_Cel",
               "Value": 0.05
             },
             "x-ob-item-type-group": ""
@@ -6428,6 +6428,7 @@
             "x-ob-item-type": "TempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "percent_per_Cel",
               "Value": -0.304
             },
             "x-ob-item-type-group": ""
@@ -6445,6 +6446,7 @@
             "x-ob-item-type": "TempCoefficientItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "percent_per_Cel",
               "Value": 0.05
             },
             "x-ob-item-type-group": ""
@@ -6758,18 +6760,6 @@
               "ProdCell": {
                 "$ref": "#/components/schemas/ProdCell"
               },
-              "ProdCode": {
-                "$ref": "#/components/schemas/ProdCode"
-              },
-              "Description": {
-                "$ref": "#/components/schemas/Description"
-              },
-              "FileFolderURL": {
-                "$ref": "#/components/schemas/FileFolderURL"
-              },
-              "ProdDatasheet": {
-                "$ref": "#/components/schemas/ProdDatasheet"
-              },
               "ProdGlazing": {
                 "$ref": "#/components/schemas/ProdGlazing"
               },
@@ -6784,9 +6774,6 @@
               },
               "CableConnector": {
                 "$ref": "#/components/schemas/CableConnector"
-              },
-              "Dimension": {
-                "$ref": "#/components/schemas/Dimension"
               },
               "PowerToleranceMin": {
                 "$ref": "#/components/schemas/PowerToleranceMin"
@@ -6824,9 +6811,6 @@
               "ShadeResponse": {
                 "$ref": "#/components/schemas/ShadeResponse"
               },
-              "Warranties": {
-                "$ref": "#/components/schemas/Warranties"
-              },
               "PowerSTC": {
                 "$ref": "#/components/schemas/PowerSTC"
               },
@@ -6858,15 +6842,6 @@
             "type": "object",
             "description": "A subcomponent of a ProdModule",
             "properties": {
-              "Description": {
-                "$ref": "#/components/schemas/Description"
-              },
-              "FileFolderURL": {
-                "$ref": "#/components/schemas/FileFolderURL"
-              },
-              "ProdCode": {
-                "$ref": "#/components/schemas/ProdCode"
-              },
               "CellColor": {
                 "$ref": "#/components/schemas/CellColor"
               },
@@ -8016,20 +7991,8 @@
               "FeeStructures": {
                 "$ref": "#/components/schemas/FeeStructures"
               },
-              "Description": {
-                "$ref": "#/components/schemas/Description"
-              },
-              "Contacts": {
-                "$ref": "#/components/schemas/Contacts"
-              },
-              "Addresses": {
-                "$ref": "#/components/schemas/Addresses"
-              },
               "FileFolderURL": {
                 "$ref": "#/components/schemas/FileFolderURL"
-              },
-              "URL": {
-                "$ref": "#/components/schemas/URL"
               },
               "UtilityID": {
                 "$ref": "#/components/schemas/UtilityID"
@@ -9731,9 +9694,6 @@
               "CapacityDC": {
                 "$ref": "#/components/schemas/CapacityDC"
               },
-              "Description": {
-                "$ref": "#/components/schemas/Description"
-              },
               "ElectricalServiceID": {
                 "$ref": "#/components/schemas/ElectricalServiceID"
               },
@@ -10464,9 +10424,6 @@
               },
               "SigningFor": {
                 "$ref": "#/components/schemas/SigningFor"
-              },
-              "EntityRole": {
-                "$ref": "#/components/schemas/EntityRole"
               }
             }
           }
@@ -10489,9 +10446,6 @@
               },
               "PreparerName": {
                 "$ref": "#/components/schemas/PreparerName"
-              },
-              "EntityRole": {
-                "$ref": "#/components/schemas/EntityRole"
               },
               "PreparerID": {
                 "$ref": "#/components/schemas/PreparerID"
@@ -10850,9 +10804,6 @@
               "Address": {
                 "$ref": "#/components/schemas/Address"
               },
-              "Contacts": {
-                "$ref": "#/components/schemas/Contacts"
-              },
               "BuildingCode": {
                 "$ref": "#/components/schemas/BuildingCode"
               },
@@ -10892,9 +10843,6 @@
               "FileFolderURL": {
                 "$ref": "#/components/schemas/FileFolderURL"
               },
-              "Description": {
-                "$ref": "#/components/schemas/Description"
-              },
               "WindCode": {
                 "$ref": "#/components/schemas/WindCode"
               },
@@ -10903,9 +10851,6 @@
               },
               "FeeStructures": {
                 "$ref": "#/components/schemas/FeeStructures"
-              },
-              "URL": {
-                "$ref": "#/components/schemas/URL"
               },
               "AHJCode": {
                 "$ref": "#/components/schemas/AHJCode"
@@ -10954,20 +10899,11 @@
               "Address": {
                 "$ref": "#/components/schemas/Address"
               },
-              "Contacts": {
-                "$ref": "#/components/schemas/Contacts"
-              },
-              "Description": {
-                "$ref": "#/components/schemas/Description"
-              },
               "FileFolderURL": {
                 "$ref": "#/components/schemas/FileFolderURL"
               },
               "FeeStructures": {
                 "$ref": "#/components/schemas/FeeStructures"
-              },
-              "URL": {
-                "$ref": "#/components/schemas/URL"
               },
               "HOAID": {
                 "$ref": "#/components/schemas/HOAID"
@@ -13354,9 +13290,6 @@
             "type": "object",
             "description": "The agency or testing center that grants the certification",
             "properties": {
-              "Description": {
-                "$ref": "#/components/schemas/Description"
-              },
               "CertificationAgencyName": {
                 "$ref": "#/components/schemas/CertificationAgencyName"
               },
@@ -14428,17 +14361,8 @@
             "type": "object",
             "description": "Contract describing the energy services between the service provider and the service requester.",
             "properties": {
-              "EffectiveDate": {
-                "$ref": "#/components/schemas/EffectiveDate"
-              },
-              "ExpirationDate": {
-                "$ref": "#/components/schemas/ExpirationDate"
-              },
               "Aggregator": {
                 "$ref": "#/components/schemas/Aggregator"
-              },
-              "ContractTerms": {
-                "$ref": "#/components/schemas/ContractTerms"
               },
               "ProgramName": {
                 "$ref": "#/components/schemas/ProgramName"
