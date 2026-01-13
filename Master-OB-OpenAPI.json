@@ -5405,7 +5405,7 @@
       "StartTime": {
         "type": "string",
         "description": "Start time of a measurement period for the instance element",
-        "x-ob-usage-tips": "StartTime can be used to note the start of a window of time that a value represents, where EndTime closes time period. In instances where a value represents a snapshot, or single moment in time, StartTime can be used to represent that exact moment in time. "
+        "x-ob-usage-tips": "This primitive is to be used to reference a specific instance in time."
       },
       "EndTime": {
         "type": "string",
