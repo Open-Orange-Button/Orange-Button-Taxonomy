@@ -2446,6 +2446,12 @@
           },
           "AnswerRangeMax": {
             "$ref": "#/components/schemas/AnswerRangeMax"
+          },
+          "DisplaySeqNumber": {
+            "$ref": "#/components/schemas/DisplaySeqNumber"
+          },
+          "SectionName": {
+            "$ref": "#/components/schemas/SectionName"
           }
         }
       },
@@ -15836,7 +15842,7 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": "PST"
-            }           
+            }
           }
         ]
       },
@@ -15963,6 +15969,40 @@
             "$ref": "#/components/schemas/Description"
           }
         }
+      },
+      "SectionName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A section creates a grouping of questions to ease user understanding",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": "Roof Condition"
+            }
+          }
+        ]
+      },
+      "DisplaySeqNumber": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
+          },
+          {
+            "type": "object",
+            "description": "Determines the sequence in which elements are displayed",
+            "x-ob-item-type": "IntegerItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": 1
+            }
+          }
+        ]
       }
     }
   },
