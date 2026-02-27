@@ -2389,6 +2389,9 @@
           },
           "ChecklistTemplateID": {
             "$ref": "#/components/schemas/ChecklistTemplateID"
+          },
+          "Tags": {
+            "$ref": "#/components/schemas/Tags"
           }
         }
       },
@@ -2452,6 +2455,9 @@
           },
           "SectionName": {
             "$ref": "#/components/schemas/SectionName"
+          },
+          "QuestionHelp": {
+            "$ref": "#/components/schemas/QuestionHelp"
           }
         }
       },
@@ -15950,6 +15956,9 @@
           },
           "Description": {
             "$ref": "#/components/schemas/Description"
+          },
+          "Tags": {
+            "$ref": "#/components/schemas/Tags"
           }
         }
       },
@@ -15987,6 +15996,21 @@
           }
         ]
       },
+      "QuestionHelp": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Help text for the question in the QuestionLabel",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "If contains HTML or rich text, user's application must validate and render it.",
+            "x-ob-sample-value": {}
+          }
+		]
+	  },
       "ProdDatasheetURL": {
         "allOf": [
           {
@@ -15999,8 +16023,7 @@
             "x-ob-usage-tips": "This is for a URL leading to the Datasheet for a product.",
             "x-ob-sample-value": {
               "Value": "http://www.lg-solar.com/downloads/spec-sheet/DS_NeON2_60cells.pdf"
-            },
-            "x-ob-item-type-group": ""
+            }
           }
         ]
       },
