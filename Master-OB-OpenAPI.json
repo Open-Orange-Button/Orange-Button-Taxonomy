@@ -15773,8 +15773,8 @@
           "CountryOfOwnershipIsNotPFE": {
             "$ref": "#/components/schemas/CountryOfOwnershipIsNotPFE"
           },
-          "CountryOfOwnershipforPFE": {
-            "$ref": "#/components/schemas/CountryOfOwnershipforPFE"
+          "CountryOfOwnershipForPFE": {
+            "$ref": "#/components/schemas/CountryOfOwnershipForPFE"
           }
         }
       },
@@ -15818,7 +15818,7 @@
           "$ref": "#/components/schemas/SourceCountry"
         }
       },
-      "CountryOfOwnershipforPFE": {
+      "CountryOfOwnershipForPFE": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementString"
