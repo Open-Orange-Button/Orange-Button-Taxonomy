@@ -19466,6 +19466,10 @@
     "ProdTypeItemType": {
       "description": "",
       "enums": {
+        "ProdCell": {
+          "label": "Cell",
+          "description": ""
+        },
         "ProdModule": {
           "label": "Module",
           "description": ""
