@@ -52,9 +52,6 @@
           "ProdType": {
             "$ref": "#/components/schemas/ProdType"
           },
-          "ProdDatasheet": {
-            "$ref": "#/components/schemas/ProdDatasheet"
-          },
           "ProdInstructions": {
             "$ref": "#/components/schemas/ProdInstructions"
           },
@@ -99,6 +96,9 @@
           },
           "SourceCountries": {
             "$ref": "#/components/schemas/SourceCountries"
+          },
+          "ProdDatasheetURL": {
+            "$ref": "#/components/schemas/ProdDatasheetURL"
           }
         },
         "type": "object"
@@ -2916,23 +2916,6 @@
         "items": {
           "$ref": "#/components/schemas/EnergyConsumption"
         }
-      },
-      "ProdDatasheet": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The datasheet for the product",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-usage-tips": "This is for a URL leading to the Datasheet for a product.",
-            "x-ob-sample-value": {
-              "Value": "http://www.lg-solar.com/downloads/spec-sheet/DS_NeON2_60cells.pdf"
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
       },
       "ProdInstruction": {
         "allOf": [
@@ -16024,6 +16007,37 @@
             "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "If contains HTML or rich text, user's application must validate and render it.",
+            "x-ob-sample-value": {}
+          }
+		]
+	  },
+      "ProdDatasheetURL": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The datasheet for the product",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-usage-tips": "This is for a URL leading to the Datasheet for a product.",
+            "x-ob-sample-value": {
+              "Value": "http://www.lg-solar.com/downloads/spec-sheet/DS_NeON2_60cells.pdf"
+            }
+          }
+        ]
+      },
+      "AttestationURL": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "A URL to the attestation of a product's assigned cost percentage for country of manufacture",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
           }
         ]
