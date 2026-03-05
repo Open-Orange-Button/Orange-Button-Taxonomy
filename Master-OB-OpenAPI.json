@@ -15712,7 +15712,7 @@
           {
             "type": "object",
             "description": "The ISO country code where this is manufactured",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "CountryCodeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -15809,7 +15809,7 @@
           {
             "type": "object",
             "description": "The ISO country code of the primary owner of the company that produced the product for prohibited foreign entity determination",
-            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type": "CountryCodeItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -16009,8 +16009,8 @@
             "x-ob-usage-tips": "If contains HTML or rich text, user's application must validate and render it.",
             "x-ob-sample-value": {}
           }
-		]
-	  },
+        ]
+      },
       "ProdDatasheetURL": {
         "allOf": [
           {
@@ -23066,7 +23066,7 @@
         }
       }
     },
-    "Country": {
+    "CountryCodeItemType": {
       "description": "ISO country enumeration codes from wiki",
       "enums": {
         "AD": {
