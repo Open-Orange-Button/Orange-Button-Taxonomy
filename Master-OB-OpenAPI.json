@@ -2699,7 +2699,7 @@
               "Unit": "USD",
               "Value": 0.01
             },
-            "x-ob-item-type-group": ""
+            "x-ob-item-type-group": "OBMonetary"
           }
         ]
       },
@@ -3106,7 +3106,7 @@
               "Unit": "USD",
               "Value": 120
             },
-            "x-ob-item-type-group": ""
+            "x-ob-item-type-group": "OBMonetary"
           }
         ]
       },
@@ -3124,7 +3124,7 @@
               "Unit": "USD",
               "Value": 125
             },
-            "x-ob-item-type-group": ""
+            "x-ob-item-type-group": "OBMonetary"
           }
         ]
       },
@@ -3142,7 +3142,7 @@
               "Unit": "USD",
               "Value": 130
             },
-            "x-ob-item-type-group": ""
+            "x-ob-item-type-group": "OBMonetary"
           }
         ]
       },
@@ -3160,7 +3160,7 @@
               "Unit": "USD",
               "Value": 135
             },
-            "x-ob-item-type-group": ""
+            "x-ob-item-type-group": "OBMonetary"
           }
         ]
       },
@@ -3178,7 +3178,7 @@
               "Unit": "USD",
               "Value": 145
             },
-            "x-ob-item-type-group": ""
+            "x-ob-item-type-group": "OBMonetary"
           }
         ]
       },
@@ -4033,7 +4033,7 @@
               "Unit": "USD",
               "Value": 10
             },
-            "x-ob-item-type-group": ""
+            "x-ob-item-type-group": "OBMonetary"
           }
         ]
       },
@@ -4051,7 +4051,7 @@
               "Unit": "USD",
               "Value": 1000
             },
-            "x-ob-item-type-group": ""
+            "x-ob-item-type-group": "OBMonetary"
           }
         ]
       },
@@ -5326,7 +5326,7 @@
               "Unit": "USD",
               "Value": 500
             },
-            "x-ob-item-type-group": ""
+            "x-ob-item-type-group": "OBMonetary"
           }
         ]
       },
@@ -10759,7 +10759,7 @@
             "type": "object",
             "description": "Generally recurring costs associated with normal operations except for the portion of these expenses which can be clearly related to production and included in cost of sales or services. Includes selling, general and administrative expense.",
             "x-ob-item-type": "MonetaryItemType",
-            "x-ob-item-type-group": "",
+            "x-ob-item-type-group": "OBMonetary",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Unit": "USD",
@@ -14340,9 +14340,12 @@
             "type": "object",
             "description": "Amount paid by service requester for signing up in the program.",
             "x-ob-item-type": "MonetaryItemType",
-            "x-ob-item-type-group": "",
+            "x-ob-item-type-group": "OBMonetary",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "USD",
+              "Value": 1000
+            }
           }
         ]
       },
@@ -14425,9 +14428,12 @@
             "type": "object",
             "description": "Payment for every event.",
             "x-ob-item-type": "MonetaryItemType",
-            "x-ob-item-type-group": "",
+            "x-ob-item-type-group": "OBMonetary",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "USD",
+              "Value": 1000
+            }
           }
         ]
       },
