@@ -18996,7 +18996,7 @@
     },
     "UUIDItemType": {
       "description": "",
-      "enums": {
+      "units": {
         "UUID": {
           "label": "UUID",
           "description": "An string identifier that matches the regex [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
