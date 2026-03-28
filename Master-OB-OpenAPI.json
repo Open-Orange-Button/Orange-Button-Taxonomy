@@ -1874,6 +1874,7 @@
             "x-ob-item-type": "UUIDItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "UUID",
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
             },
             "x-ob-item-type-group": ""
@@ -2067,6 +2068,7 @@
             "x-ob-item-type": "UUIDItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "UUID",
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
             },
             "x-ob-item-type-group": ""
@@ -2255,6 +2257,7 @@
             "description": "The ID of a particular fee",
             "x-ob-item-type": "UUIDItemType",
             "x-ob-sample-value": {
+              "Unit": "UUID",
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
             },
             "x-ob-item-type-group": ""
@@ -2277,6 +2280,7 @@
             "description": "The uuid of the FeeStructure",
             "x-ob-item-type": "UUIDItemType",
             "x-ob-sample-value": {
+              "Unit": "UUID",
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
             },
             "x-ob-item-type-group": ""
@@ -2662,6 +2666,7 @@
             "x-ob-item-type": "UUIDItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "UUID",
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
             },
             "x-ob-item-type-group": ""
@@ -3193,6 +3198,7 @@
             "x-ob-item-type": "UUIDItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "UUID",
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
             },
             "x-ob-item-type-group": ""
@@ -3583,6 +3589,7 @@
             "x-ob-item-type": "UUIDItemType",
             "x-ob-usage-tips": "Always place this UUID at the top level of an object to which it refers. UUIDs are to be used for uniquely identifying objects that need to be repeatedly tracked across multiple softwares",
             "x-ob-sample-value": {
+              "Unit": "UUID",
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
             },
             "x-ob-item-type-group": ""
@@ -3638,6 +3645,7 @@
             "x-ob-item-type": "UUIDItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "UUID",
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
             },
             "x-ob-item-type-group": ""
@@ -3879,6 +3887,7 @@
             "x-ob-item-type": "UUIDItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "UUID",
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
             },
             "x-ob-item-type-group": ""
@@ -4172,6 +4181,7 @@
             "x-ob-item-type": "UUIDItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "UUID",
               "Value": "de35e71d-98de-422c-bae9-290b0c00338d"
             },
             "x-ob-item-type-group": ""
@@ -5267,6 +5277,7 @@
             "x-ob-item-type": "UUIDItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "UUID",
               "Value": "15e50b0b-998b-4079-a276-d46f91fa897a"
             },
             "x-ob-item-type-group": ""
@@ -5655,6 +5666,7 @@
             "x-ob-item-type": "UUIDItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "UUID",
               "Value": "7a00622c-6bb0-4a3f-c6da-73090958db3a"
             },
             "x-ob-item-type-group": ""
@@ -5708,6 +5720,7 @@
             "x-ob-item-type": "UUIDItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "UUID",
               "Value": "7a00622c-6bb0-4a3f-c6da-73090958db3a"
             },
             "x-ob-item-type-group": ""
@@ -5979,6 +5992,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "UUID",
               "Value": "7a00622c-6bb0-4a3f-c6da-73090958db3a"
             }
           }
@@ -6059,6 +6073,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "UUID",
               "Value": "82b2f9ea-0a88-464f-80ef-6712662eef68"
             }
           }
@@ -7004,6 +7019,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "UUID",
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
             }
           }
@@ -8814,6 +8830,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "UUID",
               "Value": "123e4567-e89b-12d3-a456-426614174000"
             }
           }
@@ -8903,6 +8920,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "UUID",
               "Value": "123e4567-e89b-12d3-a456-426614174000"
             }
           }
@@ -8920,6 +8938,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "UUID",
               "Value": "123e4567-e89b-12d3-a456-426614174000"
             }
           }
@@ -11227,6 +11246,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "UUID",
               "Value": "d522ff95-43c2-41e5-83e1-911c1f3ad81f"
             }
           }
@@ -11560,6 +11580,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "UUID",
               "Value": "cac773e0-26cd-4785-9421-d100c77f5ff4"
             }
           }
@@ -11648,6 +11669,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "UUID",
               "Value": "2c7cefef-412b-4900-a7af-3a6fcacaf0b7"
             }
           }
@@ -12345,7 +12367,10 @@
             "x-ob-item-type": "UUIDItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "UUID",
+              "Value": "15e50b0b-998b-4079-a276-d46f91fa897a"
+            }
           }
         ]
       },
@@ -12757,7 +12782,10 @@
             "x-ob-item-type": "UUIDItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "UUID",
+              "Value": "15e50b0b-998b-4079-a276-d46f91fa897a"
+            }
           }
         ]
       },
@@ -12772,7 +12800,10 @@
             "x-ob-item-type": "UUIDItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "UUID",
+              "Value": "15e50b0b-998b-4079-a276-d46f91fa897a"
+            }
           }
         ]
       },
@@ -12786,7 +12817,10 @@
             "description": "UUID for an individual piece of equipment.",
             "x-ob-item-type": "UUIDItemType",
             "x-ob-usage-tips": "Use SerialNum for the manufacturer's serial number.",
-            "x-ob-sample-value": {},
+            "x-ob-sample-value": {
+              "Unit": "UUID",
+              "Value": "15e50b0b-998b-4079-a276-d46f91fa897a"
+            },
             "x-ob-item-type-group": ""
           }
         ]
@@ -12802,7 +12836,10 @@
             "x-ob-item-type": "UUIDItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "UUID",
+              "Value": "15e50b0b-998b-4079-a276-d46f91fa897a"
+            }
           }
         ]
       },
@@ -13837,7 +13874,10 @@
             "x-ob-item-type": "UUIDItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "UUID",
+              "Value": "15e50b0b-998b-4079-a276-d46f91fa897a"
+            }
           }
         ]
       },
@@ -13852,7 +13892,10 @@
             "x-ob-item-type": "UUIDItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "UUID",
+              "Value": "15e50b0b-998b-4079-a276-d46f91fa897a"
+            }
           }
         ]
       },
@@ -15853,6 +15896,7 @@
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "UUID",
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
             }
           }
@@ -15922,7 +15966,10 @@
             "x-ob-item-type": "UUIDItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
+            "x-ob-sample-value": {
+              "Unit": "UUID",
+              "Value": "15e50b0b-998b-4079-a276-d46f91fa897a"
+            }
           }
         ]
       },
@@ -18995,7 +19042,13 @@
       }
     },
     "UUIDItemType": {
-      "description": "An string identifier that matches the regex [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
+      "description": "An string identifier that matches the regex [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}",
+      "units": {
+        "UUID": {
+          "label": "UUID",
+          "description": "An string identifier that matches the regex [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
+        }
+      }
     },
     "BuildingCodeItemType": {
       "description": "",
