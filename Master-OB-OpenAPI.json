@@ -156,6 +156,9 @@
           },
           "Nodes": {
             "$ref": "#/components/schemas/Nodes"
+          },
+          "LifeCycleEvents": {
+            "$ref": "#/components/schemas/LifeCycleEvents"
           }
         },
         "type": "object"
@@ -16094,6 +16097,87 @@
             "x-ob-sample-value": {}
           }
         ]
+      },
+      "LifeCycleEvent": {
+        "description": "An event in the lifecycle of a device or system.",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "Location": {
+            "$ref": "#/components/schemas/Location"
+          },
+          "LifeCycleEventDate": {
+            "$ref": "#/components/schemas/LifeCycleEventDate"
+          },
+          "LifeCycleEventID": {
+            "$ref": "#/components/schemas/LifeCycleEventID"
+          },
+          "LifeCycleEventType": {
+            "$ref": "#/components/schemas/LifeCycleEventType"
+          },
+          "OMIssues": {
+            "$ref": "#/components/schemas/OMIssues"
+          }
+        },
+        "type": "object"
+      },
+      "LifeCycleEventID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An identifier for a lifecycle event",
+            "x-ob-item-type": "IdentifierTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "LifeCycleEventDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The datetime of a lifecycle event.",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "LifeCycleEventType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of a lifecycle event",
+            "x-ob-item-type": "LifeCycleEventTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "LifeCycleEvents": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/LifeCycleEvent"
+        }
       }
     }
   },
@@ -24116,6 +24200,59 @@
         },
         "ZW": {
           "label": "Zimbabwe",
+          "description": ""
+        }
+      }
+    },
+    "LifeCycleEventTypeItemType": {
+      "description": "An enumeration of the types of lifecycle events.",
+      "enums": {
+        "ComponentManufacture": {
+          "label": "ComponentManufacture",
+          "description": ""
+        },
+        "DeviceManufacture": {
+          "label": "DeviceManufacture",
+          "description": ""
+        },
+        "Listing": {
+          "label": "Listing",
+          "description": ""
+        },
+        "Purchase": {
+          "label": "Purchase",
+          "description": ""
+        },
+        "Installation": {
+          "label": "Installation",
+          "description": ""
+        },
+        "InService": {
+          "label": "InService",
+          "description": ""
+        },
+        "OutOfService": {
+          "label": "OutOfService",
+          "description": ""
+        },
+        "Refurbishment": {
+          "label": "Refurbishment",
+          "description": ""
+        },
+        "Recertification": {
+          "label": "Recertification",
+          "description": ""
+        },
+        "Delisting": {
+          "label": "Delisting",
+          "description": ""
+        },
+        "Disposal": {
+          "label": "Disposal",
+          "description": ""
+        },
+        "Other": {
+          "label": "Other",
           "description": ""
         }
       }
