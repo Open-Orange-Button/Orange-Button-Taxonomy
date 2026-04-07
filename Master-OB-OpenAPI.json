@@ -3954,6 +3954,7 @@
             "x-ob-item-type": "UUIDItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
+              "Unit": "UUID",
               "Value": "63e32227-7a31-4a0c-a715-20d46315cc9e"
             },
             "x-ob-item-type-group": ""
