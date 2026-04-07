@@ -14,8 +14,6 @@ export default (input, options, context) => {
     let errorMessageFirstPart = (elementType, isArray) => `This element's Value primitive ${isArray ? 'has items of' : 'is an'} OpenAPI type '${elementType}'`;
     if (numericOpenAPITypes.includes(elementType) && itemTypeDef.enums) {
         return [{ message: `${errorMessageFirstPart(elementType, isArray)}, but the item type '${itemType}' defines 'string' type enumerations.` }];
-    } else if (elementType === 'string' && itemTypeDef.units) {
-        return [{ message: `${errorMessageFirstPart(elementType, isArray)}, but the item type '${itemType}' defines units.` }];
     } else if (elementType === 'boolean' && itemType !== 'BooleanItemType') {
         return [{ message: `${errorMessageFirstPart(elementType, isArray)}, so its item type must be 'BooleanItemType', not '${itemType}'.`}];
     }
