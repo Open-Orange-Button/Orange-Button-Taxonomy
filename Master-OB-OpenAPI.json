@@ -16098,36 +16098,6 @@
           }
         ]
       },
-      "LifeCycleEvent": {
-        "description": "An event in the lifecycle of a device or system.",
-        "properties": {
-          "Description": {
-            "$ref": "#/components/schemas/Description"
-          },
-          "FileFolderURL": {
-            "$ref": "#/components/schemas/FileFolderURL"
-          },
-          "Scope": {
-            "$ref": "#/components/schemas/Scope"
-          },
-          "Location": {
-            "$ref": "#/components/schemas/Location"
-          },
-          "LifeCycleEventDate": {
-            "$ref": "#/components/schemas/LifeCycleEventDate"
-          },
-          "LifeCycleEventID": {
-            "$ref": "#/components/schemas/LifeCycleEventID"
-          },
-          "LifeCycleEventType": {
-            "$ref": "#/components/schemas/LifeCycleEventType"
-          },
-          "OMIssues": {
-            "$ref": "#/components/schemas/OMIssues"
-          }
-        },
-        "type": "object"
-      },
       "LifeCycleEventID": {
         "allOf": [
           {
@@ -16178,6 +16148,135 @@
         "items": {
           "$ref": "#/components/schemas/LifeCycleEvent"
         }
+      },
+      "Event": {
+        "type": "object",
+        "description": "Generic data that describes an event.",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Location": {
+            "$ref": "#/components/schemas/Location"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "EventID": {
+            "$ref": "#/components/schemas/EventID"
+          },
+          "EventDate": {
+            "$ref": "#/components/schemas/EventDate"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          }
+        }
+      },
+      "EventID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An identifier for an event.",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "EventDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The date or datetime of an event",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "EventDuration": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The duration of an event.",
+            "x-ob-item-type": "DurationItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "LifeCycleEvent": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Event"
+          },
+          {
+            "description": "An event in the lifecycle of a device or system.",
+            "properties": {
+              "Description": {
+                "$ref": "#/components/schemas/Description"
+              },
+              "FileFolderURL": {
+                "$ref": "#/components/schemas/FileFolderURL"
+              },
+              "Scope": {
+                "$ref": "#/components/schemas/Scope"
+              },
+              "Location": {
+                "$ref": "#/components/schemas/Location"
+              },
+              "LifeCycleEventType": {
+                "$ref": "#/components/schemas/LifeCycleEventType"
+              }
+            },
+            "type": "object"
+          }
+        ]
+      },
+      "ExternalEvent": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Event"
+          },
+          {
+            "type": "object",
+            "description": "An event outside the control of a system or device.",
+            "properties": {
+              "ExternalCondition": {
+                "$ref": "#/components/schemas/ExternalCondition"
+              }
+            }
+          }
+        ]
+      },
+      "OMEvent": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Event"
+          },
+          {
+            "type": "object",
+            "description": "An event involving service, inspection, repair, maintenance, calibration, etc., within the control of a system or device.",
+            "properties": {
+              "OMActivityType": {
+                "$ref": "#/components/schemas/OMActivityType"
+              }
+            }
+          }
+        ]
       }
     }
   },
@@ -24227,14 +24326,6 @@
           "label": "Installation",
           "description": ""
         },
-        "InService": {
-          "label": "InService",
-          "description": ""
-        },
-        "OutOfService": {
-          "label": "OutOfService",
-          "description": ""
-        },
         "Refurbishment": {
           "label": "Refurbishment",
           "description": ""
@@ -24253,6 +24344,14 @@
         },
         "Other": {
           "label": "Other",
+          "description": ""
+        },
+        "Commissioning": {
+          "label": "Commissioning",
+          "description": ""
+        },
+        "Decommissioning": {
+          "label": "Decommissioning",
           "description": ""
         }
       }
