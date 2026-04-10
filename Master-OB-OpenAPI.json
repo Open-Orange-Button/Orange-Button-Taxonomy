@@ -159,6 +159,12 @@
           },
           "LifeCycleEvents": {
             "$ref": "#/components/schemas/LifeCycleEvents"
+          },
+          "ExternalEvents": {
+            "$ref": "#/components/schemas/ExternalEvents"
+          },
+          "OMEvents": {
+            "$ref": "#/components/schemas/OMEvents"
           }
         },
         "type": "object"
@@ -16277,6 +16283,18 @@
             }
           }
         ]
+      },
+      "ExternalEvents": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ExternalEvent"
+        }
+      },
+      "OMEvents": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/OMEvent"
+        }
       }
     }
   },
@@ -23024,6 +23042,10 @@
         "Decommission": {
           "label": "Decommission",
           "description": "Remove a device or system from operation"
+        },
+        "Clean": {
+          "label": "Clean",
+          "description": ""
         }
       }
     },
