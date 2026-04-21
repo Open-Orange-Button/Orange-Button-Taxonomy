@@ -99,6 +99,9 @@
           },
           "ProdDatasheetURL": {
             "$ref": "#/components/schemas/ProdDatasheetURL"
+          },
+          "CompatibleProducts": {
+            "$ref": "#/components/schemas/CompatibleProducts"
           }
         },
         "type": "object"
@@ -6147,9 +6150,6 @@
               "TotalHarmonicDistortionCurrent": {
                 "$ref": "#/components/schemas/TotalHarmonicDistortionCurrent"
               },
-              "CompatibleWith": {
-                "$ref": "#/components/schemas/CompatibleWith"
-              },
               "IsSelectiveOptimization": {
                 "$ref": "#/components/schemas/IsSelectiveOptimization"
               },
@@ -9099,12 +9099,6 @@
           "ChecksumDetail": {
             "$ref": "#/components/schemas/ChecksumDetail"
           }
-        }
-      },
-      "CompatibleWith": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ProdName"
         }
       },
       "AllowsString": {
@@ -16095,6 +16089,45 @@
             "x-ob-sample-value": {}
           }
         ]
+      },
+      "ProdController": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Product"
+          },
+          {
+            "type": "object",
+            "description": "A device that controls another device",
+            "properties": {}
+          }
+        ]
+      },
+      "CompatibleProduct": {
+        "type": "object",
+        "description": "Products designed to work together as intended.",
+        "properties": {
+          "ProdCode": {
+            "$ref": "#/components/schemas/ProdCode"
+          },
+          "ProdID": {
+            "$ref": "#/components/schemas/ProdID"
+          },
+          "ProdMfr": {
+            "$ref": "#/components/schemas/ProdMfr"
+          },
+          "ProdName": {
+            "$ref": "#/components/schemas/ProdName"
+          },
+          "ProdType": {
+            "$ref": "#/components/schemas/ProdType"
+          }
+        }
+      },
+      "CompatibleProducts": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/CompatibleProduct"
+        }
       }
     }
   },
@@ -19612,6 +19645,10 @@
         },
         "ProdThermostat": {
           "label": "Thermostat",
+          "description": ""
+        },
+        "ProdController": {
+          "label": "Controller",
           "description": ""
         }
       }
