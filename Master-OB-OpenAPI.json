@@ -22910,6 +22910,10 @@
         "Disturbance": {
           "label": "Disturbance",
           "description": "Human-caused disturbances"
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
         }
       }
     },
@@ -23046,6 +23050,22 @@
         "Clean": {
           "label": "Clean",
           "description": ""
+        },
+        "Calibrate": {
+          "label": "Calibrate",
+          "description": ""
+        },
+        "UpdateSoftware": {
+          "label": "UpdateSoftware",
+          "description": ""
+        },
+        "UpdateFirmware": {
+          "label": "UpdateFirmware",
+          "description": ""
+        },
+        "UpdateSecurity": {
+          "label": "UpdateSecurity",
+          "description": "For certificates, passwords, and credentials."
         }
       }
     },
@@ -24336,10 +24356,6 @@
           "label": "DeviceManufacture",
           "description": ""
         },
-        "Listing": {
-          "label": "Listing",
-          "description": ""
-        },
         "Purchase": {
           "label": "Purchase",
           "description": ""
@@ -24350,15 +24366,11 @@
         },
         "Refurbishment": {
           "label": "Refurbishment",
-          "description": ""
+          "description": "Reconditioning or returning a device to full functionality."
         },
         "Recertification": {
           "label": "Recertification",
-          "description": ""
-        },
-        "Delisting": {
-          "label": "Delisting",
-          "description": ""
+          "description": "Demonstrating a device's compliance with criteria or standards."
         },
         "Disposal": {
           "label": "Disposal",
