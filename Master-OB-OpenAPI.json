@@ -16106,7 +16106,7 @@
           },
           {
             "type": "object",
-            "description": "A device that controls other devices.",
+            "description": "A device that controls other device(s).",
             "properties": {}
           }
         ]
