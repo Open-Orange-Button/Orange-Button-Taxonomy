@@ -159,6 +159,15 @@
           },
           "Nodes": {
             "$ref": "#/components/schemas/Nodes"
+          },
+          "LifeCycleEvents": {
+            "$ref": "#/components/schemas/LifeCycleEvents"
+          },
+          "ExternalEvents": {
+            "$ref": "#/components/schemas/ExternalEvents"
+          },
+          "OMEvents": {
+            "$ref": "#/components/schemas/OMEvents"
           }
         },
         "type": "object"
@@ -2974,7 +2983,7 @@
             "type": "object",
             "description": "The enumerated list of the types of major specifications.",
             "x-ob-item-type": "SpecificationTypeItemType",
-            "x-ob-usage-tips": "If the specification does not have a type listed here, select \"None\" and then use the SpecificationName as an alternative.",
+            "x-ob-usage-tips": "If the specification does not have a type listed here, select \"Other\" and then use SpecificationName to describe the specification.",
             "x-ob-sample-value": {},
             "x-ob-item-type-group": ""
           }
@@ -16099,6 +16108,186 @@
           }
         ]
       },
+      "LifeCycleEventID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An identifier for a lifecycle event",
+            "x-ob-item-type": "IdentifierTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "LifeCycleEventDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The datetime of a lifecycle event.",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "LifeCycleEventType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The type of a lifecycle event",
+            "x-ob-item-type": "LifeCycleEventTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "LifeCycleEvents": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/LifeCycleEvent"
+        }
+      },
+      "Event": {
+        "type": "object",
+        "description": "Generic data that describes an event.",
+        "properties": {
+          "Description": {
+            "$ref": "#/components/schemas/Description"
+          },
+          "Location": {
+            "$ref": "#/components/schemas/Location"
+          },
+          "Scope": {
+            "$ref": "#/components/schemas/Scope"
+          },
+          "EventID": {
+            "$ref": "#/components/schemas/EventID"
+          },
+          "EventDate": {
+            "$ref": "#/components/schemas/EventDate"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
+          }
+        }
+      },
+      "EventID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "An identifier for an event.",
+            "x-ob-item-type": "UUIDItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "EventDate": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The date or datetime of an event",
+            "x-ob-item-type": "DateTimeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "EventDuration": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "The duration of an event.",
+            "x-ob-item-type": "DurationItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "LifeCycleEvent": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Event"
+          },
+          {
+            "type": "object",
+            "description": "An event in the lifecycle of a device or system.",
+            "properties": {
+              "LifeCycleEventType": {
+                "$ref": "#/components/schemas/LifeCycleEventType"
+              }
+            }
+          }
+        ]
+      },
+      "ExternalEvent": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Event"
+          },
+          {
+            "type": "object",
+            "description": "An event outside the control of a system or device.",
+            "properties": {
+              "ExternalCondition": {
+                "$ref": "#/components/schemas/ExternalCondition"
+              }
+            }
+          }
+        ]
+      },
+      "OMEvent": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Event"
+          },
+          {
+            "type": "object",
+            "description": "An event involving service, inspection, repair, maintenance, calibration, etc., within the control of a system or device.",
+            "properties": {
+              "OMActivityType": {
+                "$ref": "#/components/schemas/OMActivityType"
+              }
+            }
+          }
+        ]
+      },
+      "ExternalEvents": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ExternalEvent"
+        }
+      },
+      "OMEvents": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/OMEvent"
+        }
+      },
       "ProdController": {
         "allOf": [
           {
@@ -20211,7 +20400,7 @@
       }
     },
     "SpecificationTypeItemType": {
-      "description": "",
+      "description": "An enumeration of specification types for a product.",
       "enums": {
         "Weight": {
           "label": "Weight",
@@ -20260,6 +20449,10 @@
         "OperatingTemperatureLowLimit": {
           "label": "OperatingTemperatureLowLimit",
           "description": ""
+        },
+        "Other": {
+          "label": "Other",
+          "description": "Use for a specification that is not enumerated here."
         }
       }
     },
@@ -22756,6 +22949,10 @@
         "Disturbance": {
           "label": "Disturbance",
           "description": "Human-caused disturbances"
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
         }
       }
     },
@@ -22888,6 +23085,26 @@
         "Decommission": {
           "label": "Decommission",
           "description": "Remove a device or system from operation"
+        },
+        "Clean": {
+          "label": "Clean",
+          "description": ""
+        },
+        "Calibrate": {
+          "label": "Calibrate",
+          "description": ""
+        },
+        "UpdateSoftware": {
+          "label": "UpdateSoftware",
+          "description": ""
+        },
+        "UpdateFirmware": {
+          "label": "UpdateFirmware",
+          "description": ""
+        },
+        "UpdateSecurity": {
+          "label": "UpdateSecurity",
+          "description": "For certificates, passwords, and credentials."
         }
       }
     },
@@ -24163,6 +24380,51 @@
         },
         "ZW": {
           "label": "Zimbabwe",
+          "description": ""
+        }
+      }
+    },
+    "LifeCycleEventTypeItemType": {
+      "description": "An enumeration of the types of lifecycle events.",
+      "enums": {
+        "ComponentManufacture": {
+          "label": "ComponentManufacture",
+          "description": ""
+        },
+        "DeviceManufacture": {
+          "label": "DeviceManufacture",
+          "description": ""
+        },
+        "Purchase": {
+          "label": "Purchase",
+          "description": ""
+        },
+        "Installation": {
+          "label": "Installation",
+          "description": ""
+        },
+        "Refurbishment": {
+          "label": "Refurbishment",
+          "description": "Reconditioning or returning a device to functionality."
+        },
+        "Recertification": {
+          "label": "Recertification",
+          "description": "Demonstrating a device's compliance with criteria or standards."
+        },
+        "Disposal": {
+          "label": "Disposal",
+          "description": ""
+        },
+        "Other": {
+          "label": "Other",
+          "description": ""
+        },
+        "Commissioning": {
+          "label": "Commissioning",
+          "description": ""
+        },
+        "Decommissioning": {
+          "label": "Decommissioning",
           "description": ""
         }
       }
