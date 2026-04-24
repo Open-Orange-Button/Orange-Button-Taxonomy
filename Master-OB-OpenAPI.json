@@ -16234,20 +16234,9 @@
             "$ref": "#/components/schemas/Event"
           },
           {
+            "type": "object",
             "description": "An event in the lifecycle of a device or system.",
             "properties": {
-              "Description": {
-                "$ref": "#/components/schemas/Description"
-              },
-              "FileFolderURL": {
-                "$ref": "#/components/schemas/FileFolderURL"
-              },
-              "Scope": {
-                "$ref": "#/components/schemas/Scope"
-              },
-              "Location": {
-                "$ref": "#/components/schemas/Location"
-              },
               "LifeCycleEventType": {
                 "$ref": "#/components/schemas/LifeCycleEventType"
               }
