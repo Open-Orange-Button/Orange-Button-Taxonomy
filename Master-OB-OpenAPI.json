@@ -16240,8 +16240,7 @@
               "LifeCycleEventType": {
                 "$ref": "#/components/schemas/LifeCycleEventType"
               }
-            },
-            "type": "object"
+            }
           }
         ]
       },
