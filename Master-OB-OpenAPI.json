@@ -2983,7 +2983,7 @@
             "type": "object",
             "description": "The enumerated list of the types of major specifications.",
             "x-ob-item-type": "SpecificationTypeItemType",
-            "x-ob-usage-tips": "If the specification does not have a type listed here, select \"None\" and then use the SpecificationName as an alternative.",
+            "x-ob-usage-tips": "If the specification does not have a type listed here, select \"Other\" and then use SpecificationName to describe the specification.",
             "x-ob-sample-value": {},
             "x-ob-item-type-group": ""
           }
@@ -16234,13 +16234,25 @@
             "$ref": "#/components/schemas/Event"
           },
           {
-            "type": "object",
             "description": "An event in the lifecycle of a device or system.",
             "properties": {
+              "Description": {
+                "$ref": "#/components/schemas/Description"
+              },
+              "FileFolderURL": {
+                "$ref": "#/components/schemas/FileFolderURL"
+              },
+              "Scope": {
+                "$ref": "#/components/schemas/Scope"
+              },
+              "Location": {
+                "$ref": "#/components/schemas/Location"
+              },
               "LifeCycleEventType": {
                 "$ref": "#/components/schemas/LifeCycleEventType"
               }
-            }
+            },
+            "type": "object"
           }
         ]
       },
@@ -20400,7 +20412,7 @@
       }
     },
     "SpecificationTypeItemType": {
-      "description": "",
+      "description": "An enumeration of specification types for a product.",
       "enums": {
         "Weight": {
           "label": "Weight",
@@ -20449,6 +20461,10 @@
         "OperatingTemperatureLowLimit": {
           "label": "OperatingTemperatureLowLimit",
           "description": ""
+        },
+        "Other": {
+          "label": "Other",
+          "description": "Use for a specification that is not enumerated here."
         }
       }
     },
@@ -24401,7 +24417,7 @@
         },
         "Refurbishment": {
           "label": "Refurbishment",
-          "description": "Reconditioning or returning a device to full functionality."
+          "description": "Reconditioning or returning a device to functionality."
         },
         "Recertification": {
           "label": "Recertification",
