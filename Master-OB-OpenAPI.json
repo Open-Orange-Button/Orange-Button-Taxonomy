@@ -6259,42 +6259,6 @@
           }
         ]
       },
-      "VoltageAtMaximumPower": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Voltage of a photovoltaic device at the maximum power point.",
-            "x-ob-item-type": "VoltageItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "V",
-              "Value": 32.26
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "CurrentAtMaximumPower": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Current of a photovoltaic device at the maximum power point.",
-            "x-ob-item-type": "ElectricCurrentItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "A",
-              "Value": 9.31
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "ModuleEfficiency": {
         "allOf": [
           {
@@ -6302,7 +6266,7 @@
           },
           {
             "type": "object",
-            "description": "The efficiency of the solar module at standard test condition (STC).",
+            "description": "The efficiency of the solar module.",
             "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -6470,24 +6434,6 @@
             "x-ob-sample-value": {
               "Unit": "percent_per_Cel",
               "Value": 0.05
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "VoltageMaximumSystem": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The maximum voltage that a string of modules can support",
-            "x-ob-item-type": "VoltageItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "V",
-              "Value": 1500
             },
             "x-ob-item-type-group": ""
           }
@@ -6749,9 +6695,6 @@
             "type": "object",
             "description": "A solar module product",
             "properties": {
-              "ModuleEfficiency": {
-                "$ref": "#/components/schemas/ModuleEfficiency"
-              },
               "PowerToleranceMax": {
                 "$ref": "#/components/schemas/PowerToleranceMax"
               },
@@ -6772,9 +6715,6 @@
               },
               "TemperatureCoefficientShortCircuitCurrent": {
                 "$ref": "#/components/schemas/TemperatureCoefficientShortCircuitCurrent"
-              },
-              "VoltageMaximumSystem": {
-                "$ref": "#/components/schemas/VoltageMaximumSystem"
               },
               "FuseSeriesRating": {
                 "$ref": "#/components/schemas/FuseSeriesRating"
@@ -6850,6 +6790,9 @@
               },
               "ModuleArea": {
                 "$ref": "#/components/schemas/ModuleArea"
+              },
+              "VoltageSystemMax": {
+                "$ref": "#/components/schemas/VoltageSystemMax"
               }
             }
           }
@@ -9527,17 +9470,20 @@
           "VoltageOpenCircuit": {
             "$ref": "#/components/schemas/VoltageOpenCircuit"
           },
-          "VoltageAtMaximumPower": {
-            "$ref": "#/components/schemas/VoltageAtMaximumPower"
-          },
           "CurrentShortCircuit": {
             "$ref": "#/components/schemas/CurrentShortCircuit"
           },
-          "CurrentAtMaximumPower": {
-            "$ref": "#/components/schemas/CurrentAtMaximumPower"
-          },
           "ModuleRatingCondition": {
             "$ref": "#/components/schemas/ModuleRatingCondition"
+          },
+          "CurrentMaximumPower": {
+            "$ref": "#/components/schemas/CurrentMaximumPower"
+          },
+          "VoltageMaximumPower": {
+            "$ref": "#/components/schemas/VoltageMaximumPower"
+          },
+          "ModuleEfficiency": {
+            "$ref": "#/components/schemas/ModuleEfficiency"
           }
         }
       },
@@ -16326,6 +16272,60 @@
         "items": {
           "$ref": "#/components/schemas/CompatibleProduct"
         }
+      },
+      "VoltageSystemMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The maximum voltage that a string of modules can support",
+            "x-ob-item-type": "VoltageItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "V",
+              "Value": 1500
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "CurrentMaximumPower": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Current of a photovoltaic device at the maximum power point.",
+            "x-ob-item-type": "ElectricCurrentItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "A",
+              "Value": 9.31
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "VoltageMaximumPower": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Voltage of a photovoltaic device at the maximum power point.",
+            "x-ob-item-type": "VoltageItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "V",
+              "Value": 32.26
+            },
+            "x-ob-item-type-group": ""
+          }
+        ]
       }
     }
   },
