@@ -15729,25 +15729,6 @@
           }
         ]
       },
-      "AssignedCostPercentage": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The percentage of cost assigned to this product",
-            "x-ob-item-type": "DecimalPercentItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Precision": "2",
-              "Unit": "decimal_percent",
-              "Value": 0.05
-            }
-          }
-        ]
-      },
       "SourceCountry": {
         "type": "object",
         "description": "Country information about where this product was manufactured and who owns the company",
@@ -15755,17 +15736,14 @@
           "CountryOfManufacture": {
             "$ref": "#/components/schemas/CountryOfManufacture"
           },
-          "AssignedCostPercentage": {
-            "$ref": "#/components/schemas/AssignedCostPercentage"
+          "AttestationURL": {
+            "$ref": "#/components/schemas/AttestationURL"
           },
-          "CountryOfManufactureIsNotPFE": {
-            "$ref": "#/components/schemas/CountryOfManufactureIsNotPFE"
+          "CostPercentage": {
+            "$ref": "#/components/schemas/CostPercentage"
           },
-          "CountryOfOwnershipIsNotPFE": {
-            "$ref": "#/components/schemas/CountryOfOwnershipIsNotPFE"
-          },
-          "CountryOfOwnershipForPFE": {
-            "$ref": "#/components/schemas/CountryOfOwnershipForPFE"
+          "ManufacturerIsNotPFE": {
+            "$ref": "#/components/schemas/ManufacturerIsNotPFE"
           }
         }
       },
@@ -16324,6 +16302,42 @@
               "Value": 32.26
             },
             "x-ob-item-type-group": ""
+          }
+        ]
+      },
+      "CostPercentage": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The percentage of cost assigned to this product",
+            "x-ob-item-type": "DecimalPercentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Precision": "2",
+              "Unit": "decimal_percent",
+              "Value": 0.05
+            }
+          }
+        ]
+      },
+      "ManufacturerIsNotPFE": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementBoolean"
+          },
+          {
+            "type": "object",
+            "description": "Manufacturer is not a prohibited foreign entity",
+            "x-ob-item-type": "BooleanItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Value": true
+            }
           }
         ]
       }
