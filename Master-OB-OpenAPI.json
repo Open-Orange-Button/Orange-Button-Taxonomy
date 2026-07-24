@@ -5845,7 +5845,7 @@
           },
           {
             "type": "object",
-            "description": "Equipment that converts electricity from DC to AC",
+            "description": "Product that converts electricity from DC to AC",
             "properties": {
               "InverterStyle": {
                 "$ref": "#/components/schemas/InverterStyle"
@@ -6666,7 +6666,7 @@
           },
           {
             "type": "object",
-            "description": "A solar module product",
+            "description": "A solar (PV) module product (also known as panel).",
             "properties": {
               "PowerToleranceMax": {
                 "$ref": "#/components/schemas/PowerToleranceMax"
@@ -7851,7 +7851,7 @@
           },
           {
             "type": "object",
-            "description": "A chemical electrical storage device",
+            "description": "A chemical electrical storage product",
             "properties": {
               "BatteryChemistryType": {
                 "$ref": "#/components/schemas/BatteryChemistryType"
@@ -9090,7 +9090,7 @@
             "$ref": "#/components/schemas/Checksum"
           }
         },
-        "x-ob-usage-tips": "Intended for use with DeviceBattery, DeviceBatteryManagementSystem, DeviceOptimizer, DeviceInverter, DeviceLogger (change to DAS - DataAcquistionSystem?), DeviceMeter, DeviceModem, DeviceRouter(add), DeviceTrackerController."
+        "x-ob-usage-tips": "The following is evolving documentation. Intended for use with DeviceBattery, DeviceBatteryManagementSystem, DeviceOptimizer, DeviceInverter, DeviceLogger (change to DAS - DataAcquistionSystem?), DeviceMeter, DeviceModem, DeviceRouter(add), DeviceTrackerController."
       },
       "FirmwareVersions": {
         "type": "array",
@@ -12518,7 +12518,7 @@
             "$ref": "#/components/schemas/CalibrationMeth"
           }
         },
-        "x-ob-usage-tips": "Intended for use with future objects, including DevicePyranometer, DeviceTemperatureSensor, DeviceReferenceCell, DeviceMeter, DeviceWindSpeedSensor."
+        "x-ob-usage-tips": "The following is evolving documentation. Intended for use with future objects, including DevicePyranometer, DeviceTemperatureSensor, DeviceReferenceCell, DeviceMeter, DeviceWindSpeedSensor."
       },
       "DeviceType": {
         "allOf": [
@@ -16673,7 +16673,7 @@
           },
           {
             "type": "object",
-            "description": "A battery device.",
+            "description": "A chemical electrical storage device",
             "properties": {
               "Firmware": {
                 "$ref": "#/components/schemas/Firmware"
@@ -16692,7 +16692,7 @@
           },
           {
             "type": "object",
-            "description": "A module device.",
+            "description": "A solar (PV) module device (also known as panel).",
             "properties": {}
           }
         ]
@@ -16703,7 +16703,7 @@
             "$ref": "#/components/schemas/Device"
           },
           {
-            "description": "An inverter device.",
+            "description": "Device that converts electricity from DC to AC",
             "properties": {
               "Firmware": {
                 "$ref": "#/components/schemas/Firmware"
