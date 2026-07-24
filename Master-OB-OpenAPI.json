@@ -125,26 +125,17 @@
           "Description": {
             "$ref": "#/components/schemas/Description"
           },
-          "URL": {
-            "$ref": "#/components/schemas/URL"
-          },
           "ProdCode": {
             "$ref": "#/components/schemas/ProdCode"
           },
           "ProdID": {
             "$ref": "#/components/schemas/ProdID"
           },
-          "Firmware": {
-            "$ref": "#/components/schemas/Firmware"
-          },
           "MaintDateLast": {
             "$ref": "#/components/schemas/MaintDateLast"
           },
           "InServiceDate": {
             "$ref": "#/components/schemas/InServiceDate"
-          },
-          "Calibration": {
-            "$ref": "#/components/schemas/Calibration"
           },
           "Warranties": {
             "$ref": "#/components/schemas/Warranties"
@@ -160,9 +151,6 @@
           },
           "DeviceUUID": {
             "$ref": "#/components/schemas/DeviceUUID"
-          },
-          "CryptographicKeyIDs": {
-            "$ref": "#/components/schemas/CryptographicKeyIDs"
           },
           "IsMaintainable": {
             "$ref": "#/components/schemas/IsMaintainable"
@@ -187,6 +175,12 @@
           },
           "HardwareBOMID": {
             "$ref": "#/components/schemas/HardwareBOMID"
+          },
+          "ConditionChecklists": {
+            "$ref": "#/components/schemas/ConditionChecklists"
+          },
+          "FileFolderURL": {
+            "$ref": "#/components/schemas/FileFolderURL"
           }
         },
         "type": "object"
@@ -5851,7 +5845,7 @@
           },
           {
             "type": "object",
-            "description": "Equipment that converts electricity from DC to AC",
+            "description": "Product that converts electricity from DC to AC",
             "properties": {
               "InverterStyle": {
                 "$ref": "#/components/schemas/InverterStyle"
@@ -6672,7 +6666,7 @@
           },
           {
             "type": "object",
-            "description": "A solar module product",
+            "description": "A solar (PV) module product (also known as panel).",
             "properties": {
               "PowerToleranceMax": {
                 "$ref": "#/components/schemas/PowerToleranceMax"
@@ -7857,7 +7851,7 @@
           },
           {
             "type": "object",
-            "description": "A chemical electrical storage device",
+            "description": "A chemical electrical storage product",
             "properties": {
               "BatteryChemistryType": {
                 "$ref": "#/components/schemas/BatteryChemistryType"
@@ -9095,7 +9089,8 @@
           "Checksum": {
             "$ref": "#/components/schemas/Checksum"
           }
-        }
+        },
+        "x-ob-usage-tips": "The following is evolving documentation. Intended for use with DeviceBattery, DeviceBatteryManagementSystem, DeviceOptimizer, DeviceInverter, DeviceLogger (change to DAS - DataAcquistionSystem?), DeviceMeter, DeviceModem, DeviceRouter(add), DeviceTrackerController."
       },
       "FirmwareVersions": {
         "type": "array",
@@ -12523,7 +12518,7 @@
             "$ref": "#/components/schemas/CalibrationMeth"
           }
         },
-        "x-ob-usage-tips": ""
+        "x-ob-usage-tips": "The following is evolving documentation. Intended for use with future objects, including DevicePyranometer, DeviceTemperatureSensor, DeviceReferenceCell, DeviceMeter, DeviceWindSpeedSensor."
       },
       "DeviceType": {
         "allOf": [
@@ -13003,7 +12998,8 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/CryptographicKeyID"
-        }
+        },
+        "x-ob-usage-tips": "Intended for use with these future objects: DeviceInverter, DeviceMeter, DeviceBatteryManagementSystem, DeviceLogger/DeviceDataAcquisitionSystem, DeviceTrackerController."
       },
       "DetectionMethod": {
         "allOf": [
@@ -16651,6 +16647,74 @@
         "items": {
           "$ref": "#/components/schemas/HardwareBOM"
         }
+      },
+      "ConditionChecklist": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Checklist"
+          },
+          {
+            "type": "object",
+            "description": "A checklist of questions that describe the condition of a device.",
+            "properties": {}
+          }
+        ]
+      },
+      "ConditionChecklists": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ConditionChecklist"
+        }
+      },
+      "DeviceBattery": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Device"
+          },
+          {
+            "type": "object",
+            "description": "A chemical electrical storage device",
+            "properties": {
+              "Firmware": {
+                "$ref": "#/components/schemas/Firmware"
+              },
+              "CryptographicKeyIDs": {
+                "$ref": "#/components/schemas/CryptographicKeyIDs"
+              }
+            }
+          }
+        ]
+      },
+      "DeviceModule": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Device"
+          },
+          {
+            "type": "object",
+            "description": "A solar (PV) module device (also known as panel).",
+            "properties": {}
+          }
+        ]
+      },
+      "DeviceInverter": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Device"
+          },
+          {
+            "description": "Device that converts electricity from DC to AC",
+            "properties": {
+              "Firmware": {
+                "$ref": "#/components/schemas/Firmware"
+              },
+              "CryptographicKeyIDs": {
+                "$ref": "#/components/schemas/CryptographicKeyIDs"
+              }
+            },
+            "type": "object"
+          }
+        ]
       }
     }
   },
@@ -19078,112 +19142,112 @@
     "DeviceTypeItemType": {
       "description": "",
       "enums": {
-        "Battery": {
-          "label": "",
+        "DeviceBattery": {
+          "label": "Battery",
           "description": ""
         },
-        "BatteryManagementSystem": {
-          "label": "",
+        "DeviceBatteryManagementSystem": {
+          "label": "Battery Management System",
           "description": ""
         },
-        "Combiner": {
-          "label": "",
+        "DeviceCombiner": {
+          "label": "Combiner",
           "description": ""
         },
-        "DisconnectSwitchAC": {
-          "label": "",
+        "DeviceDisconnectSwitchAC": {
+          "label": "Disconnect Switch AC",
           "description": ""
         },
-        "DisconnectSwitchDC": {
-          "label": "",
+        "DeviceDisconnectSwitchDC": {
+          "label": "Disconnect Switch DC",
           "description": ""
         },
-        "Inverter": {
-          "label": "",
+        "DeviceInverter": {
+          "label": "Inverter",
           "description": ""
         },
-        "Logger": {
-          "label": "",
+        "DeviceLogger": {
+          "label": "Logger",
           "description": ""
         },
-        "Meter": {
-          "label": "",
+        "DeviceMeter": {
+          "label": "Meter",
           "description": ""
         },
-        "Modem": {
-          "label": "",
+        "DeviceModem": {
+          "label": "Modem",
           "description": ""
         },
-        "Module": {
-          "label": "",
+        "DeviceModule": {
+          "label": "Module",
           "description": ""
         },
-        "Mounting": {
-          "label": "",
+        "DeviceMounting": {
+          "label": "Mounting",
           "description": ""
         },
-        "Optimizer": {
-          "label": "",
+        "DeviceOptimizer": {
+          "label": "Optimizer",
           "description": ""
         },
-        "Other": {
-          "label": "",
+        "DeviceOther": {
+          "label": "Other",
           "description": ""
         },
-        "PowerSupply": {
-          "label": "",
+        "DevicePowerSupply": {
+          "label": "Power Supply",
           "description": ""
         },
-        "Pyranometer": {
-          "label": "",
+        "DevicePyranometer": {
+          "label": "Pyranometer",
           "description": ""
         },
-        "RapidShutdown": {
-          "label": "",
+        "DeviceRapidShutdown": {
+          "label": "Rapid Shutdown",
           "description": ""
         },
-        "ReferenceCell": {
-          "label": "",
+        "DeviceReferenceCell": {
+          "label": "Reference Cell",
           "description": ""
         },
-        "String": {
-          "label": "",
+        "DeviceString": {
+          "label": "String",
           "description": ""
         },
-        "Switch": {
-          "label": "",
+        "DeviceSwitch": {
+          "label": "Switch",
           "description": ""
         },
-        "TemperatureSensor": {
-          "label": "",
+        "DeviceTemperatureSensor": {
+          "label": "Temperature Sensor",
           "description": ""
         },
-        "Tracker": {
-          "label": "",
+        "DeviceTracker": {
+          "label": "Tracker",
           "description": ""
         },
-        "TrackerMotor": {
-          "label": "",
+        "DeviceTrackerMotor": {
+          "label": "Tracker Motor",
           "description": ""
         },
-        "TrackerController": {
-          "label": "",
+        "DeviceTrackerController": {
+          "label": "Tracker Controller",
           "description": ""
         },
-        "TrackerStructure": {
-          "label": "",
+        "DeviceTrackerStructure": {
+          "label": "Tracker Structure",
           "description": ""
         },
-        "Transformer": {
-          "label": "",
+        "DeviceTransformer": {
+          "label": "Transformer",
           "description": ""
         },
-        "UPS": {
+        "DeviceUPS": {
           "label": "Uninterruptible Power Supply",
           "description": ""
         },
-        "WindSpeedSensor": {
-          "label": "",
+        "DeviceWindSpeedSensor": {
+          "label": "Wind Speed Sensor",
           "description": ""
         }
       }
