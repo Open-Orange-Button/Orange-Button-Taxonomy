@@ -181,6 +181,9 @@
           },
           "FileFolderURL": {
             "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "SCATE_UID": {
+            "$ref": "#/components/schemas/SCATE_UID"
           }
         },
         "type": "object"
@@ -6778,6 +6781,9 @@
               },
               "ModuleStyle": {
                 "$ref": "#/components/schemas/ModuleStyle"
+              },
+              "DegradationRateAnnual": {
+                "$ref": "#/components/schemas/DegradationRateAnnual"
               }
             }
           }
@@ -7882,6 +7888,9 @@
               },
               "EfficiencyBatteryRoundTrip": {
                 "$ref": "#/components/schemas/EfficiencyBatteryRoundTrip"
+              },
+              "DegradationRateAnnual": {
+                "$ref": "#/components/schemas/DegradationRateAnnual"
               }
             }
           }
@@ -16715,6 +16724,36 @@
             "type": "object"
           }
         ]
+      },
+      "SCATE_UID": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Supply Chain and Asset Traceability for the Electric Grid (SCATE) Unique Identifier as described in IEEE P3476.",
+            "x-ob-item-type": "IdentifierTypeItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "UID means Unique Identifier across all manufacturers.",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "DegradationRateAnnual": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Year-over-year degradation rate as a percentage.",
+            "x-ob-item-type": "DecimalPercentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
       }
     }
   },
@@ -21629,10 +21668,6 @@
           "label": "aSi",
           "description": "Amorphous silicon thin film"
         },
-        "ThinFilm": {
-          "label": "thinfilm",
-          "description": "Thin film (generic)"
-        },
         "CIGS": {
           "label": "CIGS",
           "description": "Cadmium indium gallium selenium thin film"
@@ -21645,9 +21680,21 @@
           "label": "Other",
           "description": ""
         },
-        "ASi_tandem": {
-          "label": "aSi tandem",
-          "description": "Amorphous silicon tandem"
+        "TOPCon": {
+          "label": "Tunnel Oxide Passivated Contact",
+          "description": ""
+        },
+        "PERC": {
+          "label": "Passivated Emitter and Rear Cell",
+          "description": ""
+        },
+        "Perovskite": {
+          "label": "Perovskite",
+          "description": ""
+        },
+        "Al_BSF": {
+          "label": "Aluminum Back Surface Field",
+          "description": ""
         }
       }
     },
@@ -24867,6 +24914,60 @@
         },
         "Other": {
           "label": "Other",
+          "description": ""
+        }
+      }
+    },
+    "CellConfigurationTypeItemType": {
+      "description": "Electrical connections on the cells themselves.",
+      "enums": {
+        "SingleJunction": {
+          "label": "Single Junction",
+          "description": ""
+        },
+        "TwoTerminalsMonolithic": {
+          "label": "Two Terminals Monolithic",
+          "description": ""
+        },
+        "TwoTerminalsMechanicallyStacked": {
+          "label": "Two Terminals Mechanically Stacked",
+          "description": ""
+        },
+        "ThreeTerminalsMonolithic": {
+          "label": "Three Terminals Monolithic",
+          "description": ""
+        },
+        "FourTerminalsMechanicallyStacked": {
+          "label": "Four Terminals Mechanically Stacked",
+          "description": ""
+        },
+        "FourTerminalsSpectrumSplit": {
+          "label": "Four Terminals Spectrum-Split",
+          "description": ""
+        },
+        "LateralInterconnections": {
+          "label": "Lateral Interconnections",
+          "description": ""
+        }
+      }
+    },
+    "ElectricalShockProtectionClassItemType": {
+      "description": "Values from IEC 61730.",
+      "enums": {
+        "Class0": {
+          "label": "Class 0",
+          "description": ""
+        },
+        "ClassI": {
+          "label": "Class I",
+          "description": ""
+        },
+        "ClassII": {
+          "label": "Class II",
+          "description": ""
+        },
+        "ClassIII": {
+          "label": "Class III",
           "description": ""
         }
       }
