@@ -16762,7 +16762,7 @@
           },
           {
             "type": "object",
-            "description": "Year-over-year degradation rate of power at STC as a percentage.",
+            "description": "Annual degradation rate of power at STC as a percentage.",
             "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
