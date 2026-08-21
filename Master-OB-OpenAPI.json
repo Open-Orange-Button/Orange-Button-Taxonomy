@@ -6782,8 +6782,8 @@
               "ModuleStyle": {
                 "$ref": "#/components/schemas/ModuleStyle"
               },
-              "DegradationRateAnnual": {
-                "$ref": "#/components/schemas/DegradationRateAnnual"
+              "PowerSTCDegradationRateAnnual": {
+                "$ref": "#/components/schemas/PowerSTCDegradationRateAnnual"
               }
             }
           }
@@ -7889,8 +7889,8 @@
               "EfficiencyBatteryRoundTrip": {
                 "$ref": "#/components/schemas/EfficiencyBatteryRoundTrip"
               },
-              "DegradationRateAnnual": {
-                "$ref": "#/components/schemas/DegradationRateAnnual"
+              "CapacityEnergyDegradationRateAnnual": {
+                "$ref": "#/components/schemas/CapacityEnergyDegradationRateAnnual"
               }
             }
           }
@@ -16740,14 +16740,29 @@
           }
         ]
       },
-      "DegradationRateAnnual": {
+      "CapacityEnergyDegradationRateAnnual": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
-            "description": "Year-over-year degradation rate as a percentage.",
+            "description": "Year-over-year capacity degradation rate as a percentage.",
+            "x-ob-item-type": "DecimalPercentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "PowerSTCDegradationRateAnnual": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Year-over-year degradation rate of power at STC as a percentage.",
             "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
