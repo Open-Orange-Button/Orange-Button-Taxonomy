@@ -1,0 +1,136 @@
+name: Expand spell checker dictionary
+
+on:
+  schedule:
+    - cron: '23 0 * * *'
+      timezone: 'America/Denver'
+  workflow_dispatch:
+
+env:
+  PR_LABEL: 'Slow loop: expand-spell-checker-dictionary'
+
+concurrency:
+  group: expand-spell-checker-dictionary
+  cancel-in-progress: false
+
+jobs:
+  should_run_loop:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: read
+    outputs:
+      should_run: ${{ steps.check.outputs.should_run }}
+    steps:
+      - name: Ensure workflow label exists
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create "$PR_LABEL" \
+            --repo "$GITHUB_REPOSITORY" \
+            --color '0E8A16' \
+            --description 'Created by the expand-spell-checker-dictionary workflow' \
+            --force
+      - name: Check for an open pull request
+        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          count="$(
+            gh pr list \
+              --repo "$GITHUB_REPOSITORY" \
+              --state open \
+              --label "$PR_LABEL" \
+              --json number \
+              --jq 'length'
+          )"
+
+          if (( count > 0 )); then
+            echo 'should_run=false' >> "$GITHUB_OUTPUT"
+            echo 'An open spell checker dictionary pull request already exists.'
+          else
+            echo 'should_run=true' >> "$GITHUB_OUTPUT"
+          fi
+
+  loop:
+    needs: should_run_loop
+    if: needs.should_run_loop.outputs.should_run == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+      - name: Configure Git identity
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - name: Setup
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Install spell checker dependencies
+        run: npm install -g ibm-openapi-validator@1.37.8 && npm install @ibm-cloud/openapi-ruleset@1.33.5 typo-js@1.3.1
+      - name: Run validator
+        id: validator
+        continue-on-error: true
+        run: |
+          delimiter="validator-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          echo "misspelled_substrings<<$delimiter" >> "$GITHUB_OUTPUT"
+
+          set +e
+          lint-openapi Master-OB-OpenAPI.json \
+            -r ./.github/configs/schema-validator/.spectral.yaml 2>&1 |
+            sed -n '/These substrings are not in the dictionary:/{s/.*: //;h;n;n;s/.*: [^A-Z]*//;H;g;s/\n/: /;p;}' |
+            tee -a "$GITHUB_OUTPUT"
+          status=${PIPESTATUS[0]}
+          set -e
+
+          echo "$delimiter" >> "$GITHUB_OUTPUT"
+          git clean -dfx -- node_modules package.json package-lock.json
+          exit "$status"
+      - name: Run agent to update dictionary and create a pull request
+        if: steps.validator.outputs.misspelled_substrings != ''
+        uses: anomalyco/opencode/github@v1.18.18
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          model: opencode/muse-spark-1.2-contributor-free
+          use_github_token: true
+          prompt: |
+            Here are lines of "<substring>: <source>" where <substring> might be misspelled.
+
+            ${{ steps.validator.outputs.misspelled_substrings }}
+
+            Add <substring> to .github/configs/schema-validator/OB-dictionaries/OB-words/OB-words.dic if it is correctly spelled in American English for the photovoltaics industry.
+            Use "<substring>//<definition>" only for abbreviations.
+            Context for determining spelling and <definition> is provided by <source>.
+            Only the exact text of <substring> should be added for <substring>; no additional text from <source>.
+            Preserve case-insensitive alphabetical order.
+            Do not inspect other files, research, run tests, or explain.
+            Act immediately; do not ask for confirmation. You must edit with the necessary changes before the file before responding.
+            Title the pull request "Adding words to spell checker dictionary."
+      - name: Label created pull request
+        if: steps.validator.outputs.misspelled_substrings != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          branch="$(git branch --show-current)"
+          pr_number="$(
+            gh pr list \
+              --repo "$GITHUB_REPOSITORY" \
+              --state open \
+              --head "$branch" \
+              --json number \
+              --jq '.[0].number // empty'
+          )"
+
+          if [[ -n "$pr_number" ]]; then
+            gh pr edit "$pr_number" \
+              --repo "$GITHUB_REPOSITORY" \
+              --add-label "$PR_LABEL"
+          else
+            echo 'The agent did not create a pull request.'
+          fi
