@@ -16747,7 +16747,7 @@
           },
           {
             "type": "object",
-            "description": "Year-over-year capacity degradation rate as a percentage.",
+            "description": "Annual capacity degradation rate as a percentage.",
             "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
