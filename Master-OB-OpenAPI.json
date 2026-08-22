@@ -6784,6 +6784,15 @@
               },
               "PowerSTCDegradationRateAnnual": {
                 "$ref": "#/components/schemas/PowerSTCDegradationRateAnnual"
+              },
+              "MechanicalLoadMax": {
+                "$ref": "#/components/schemas/MechanicalLoadMax"
+              },
+              "VoltageBypassDiodeRated": {
+                "$ref": "#/components/schemas/VoltageBypassDiodeRated"
+              },
+              "CurrentBypassDiodeRated": {
+                "$ref": "#/components/schemas/CurrentBypassDiodeRated"
               }
             }
           }
@@ -16764,6 +16773,51 @@
             "type": "object",
             "description": "Annual degradation rate of power at STC as a percentage.",
             "x-ob-item-type": "DecimalPercentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "MechanicalLoadMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum mechanical load capacity that will not cause damage.",
+            "x-ob-item-type": "PressureItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "Use for hail, golf ball impacts.  Snow loads and mechanical pressure from wind.  Standard has a calibrated density piece of ice cannon-fired at a module.",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "VoltageBypassDiodeRated": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum voltage for the bypass diode that will not cause damage.",
+            "x-ob-item-type": "VoltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "CurrentBypassDiodeRated": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum current for the bypass diode that will not cause damage.",
+            "x-ob-item-type": "ElectricCurrentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
