@@ -16789,7 +16789,7 @@
             "description": "Maximum mechanical load capacity that will not cause damage.",
             "x-ob-item-type": "PressureItemType",
             "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "Use for hail, golf ball impacts.  Snow loads and mechanical pressure from wind.  Standard has a calibrated density piece of ice cannon-fired at a module.",
+            "x-ob-usage-tips": "For snow loads and mechanical pressure from wind.",
             "x-ob-sample-value": {}
           }
         ]
