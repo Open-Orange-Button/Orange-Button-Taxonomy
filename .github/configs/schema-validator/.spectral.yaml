@@ -54,7 +54,7 @@ rules:
 
   item-type-is-referenced:
     description: Check that each item type is referenced by at least one element.
-    message: 'Item type is not referenced by any element: {{error}}'
+    message: 'Item type is not referenced by any OB element: {{error}}'
     given: $[x-ob-item-types][*]~
     severity: warn
     then:
@@ -64,7 +64,7 @@ rules:
 
   item-type-group-is-referenced:
     description: Check that each item type group is referenced by at least one element.
-    message: 'Item type group is not referenced by any element: {{error}}'
+    message: 'Item type group is not referenced by any OB element: {{error}}'
     given: $[x-ob-item-type-groups][*]~
     severity: warn
     then:
