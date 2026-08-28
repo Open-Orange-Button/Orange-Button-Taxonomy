@@ -6835,6 +6835,18 @@
           },
           "FileFolderURL": {
             "$ref": "#/components/schemas/FileFolderURL"
+          },
+          "MaterialFront": {
+            "$ref": "#/components/schemas/MaterialFront"
+          },
+          "ThicknessFront": {
+            "$ref": "#/components/schemas/ThicknessFront"
+          },
+          "MaterialBack": {
+            "$ref": "#/components/schemas/MaterialBack"
+          },
+          "ThicknessBack": {
+            "$ref": "#/components/schemas/ThicknessBack"
           }
         }
       },
@@ -16823,6 +16835,85 @@
             "x-ob-sample-value": {}
           }
         ]
+      },
+      "ProdConnector": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Product"
+          },
+          {
+            "type": "object",
+            "description": "TODO",
+            "properties": {
+              "VoltageDCMax": {
+                "$ref": "#/components/schemas/VoltageDCMax"
+              },
+              "VoltageDCMin": {
+                "$ref": "#/components/schemas/VoltageDCMin"
+              }
+            }
+          }
+        ]
+      },
+      "MaterialFront": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Glazing material on the front of the module.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "Possible values include: Low-iron float, Low-iron rolled, Standard-iron float, and Standard-iron rolled. \"Tempered\" is how the glass is cooled quickly or slowly.",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "MaterialBack": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementString"
+          },
+          {
+            "type": "object",
+            "description": "Glazing material on the back of the module.",
+            "x-ob-item-type": "StringItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "Possible values include: Low-iron float, Low-iron rolled, Standard-iron float, and Standard-iron rolled. \"Tempered\" is how the glass is cooled quickly or slowly.",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ThicknessFront": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Glazing thickness on the front of the module.",
+            "x-ob-item-type": "LengthItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "ThicknessBack": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Glazing thickness on the back of the module.",
+            "x-ob-item-type": "LengthItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
       }
     }
   },
@@ -20336,6 +20427,10 @@
         },
         "ProdController": {
           "label": "Controller",
+          "description": ""
+        },
+        "ProdConnector": {
+          "label": "Connector",
           "description": ""
         }
       }
