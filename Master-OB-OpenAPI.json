@@ -16843,7 +16843,7 @@
           },
           {
             "type": "object",
-            "description": "TODO",
+            "description": "A electrical connector to link solar (PV) modules and inverters.",
             "properties": {
               "VoltageDCMax": {
                 "$ref": "#/components/schemas/VoltageDCMax"
