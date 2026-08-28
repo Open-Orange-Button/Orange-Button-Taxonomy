@@ -6824,29 +6824,23 @@
         "type": "object",
         "description": "The collection of glass, plastic or other solar cell transparent covers used in crafting a solar module",
         "properties": {
-          "Height": {
-            "$ref": "#/components/schemas/Height"
-          },
-          "GlazingMaterial": {
-            "$ref": "#/components/schemas/GlazingMaterial"
-          },
           "Description": {
             "$ref": "#/components/schemas/Description"
           },
           "FileFolderURL": {
             "$ref": "#/components/schemas/FileFolderURL"
           },
-          "MaterialFront": {
-            "$ref": "#/components/schemas/MaterialFront"
+          "GlazingBack": {
+            "$ref": "#/components/schemas/GlazingBack"
           },
-          "ThicknessFront": {
-            "$ref": "#/components/schemas/ThicknessFront"
+          "GlazingFront": {
+            "$ref": "#/components/schemas/GlazingFront"
           },
-          "MaterialBack": {
-            "$ref": "#/components/schemas/MaterialBack"
+          "GlazingThicknessBack": {
+            "$ref": "#/components/schemas/GlazingThicknessBack"
           },
-          "ThicknessBack": {
-            "$ref": "#/components/schemas/ThicknessBack"
+          "GlazingThicknessFront": {
+            "$ref": "#/components/schemas/GlazingThicknessFront"
           }
         }
       },
@@ -16843,34 +16837,19 @@
           },
           {
             "type": "object",
-            "description": "A electrical connector to link solar (PV) modules and inverters.",
+            "description": "TODO",
             "properties": {
               "VoltageDCMax": {
                 "$ref": "#/components/schemas/VoltageDCMax"
               },
-              "VoltageDCMin": {
-                "$ref": "#/components/schemas/VoltageDCMin"
+              "CurrentDCMax": {
+                "$ref": "#/components/schemas/CurrentDCMax"
               }
             }
           }
         ]
       },
-      "MaterialFront": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Glazing material on the front of the module.",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "Possible values include: Low-iron float, Low-iron rolled, Standard-iron float, and Standard-iron rolled. \"Tempered\" is how the glass is cooled quickly or slowly.",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "MaterialBack": {
+      "GlazingBack": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementString"
@@ -16885,22 +16864,22 @@
           }
         ]
       },
-      "ThicknessFront": {
+      "GlazingFront": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
+            "$ref": "#/components/schemas/TaxonomyElementString"
           },
           {
             "type": "object",
-            "description": "Glazing thickness on the front of the module.",
-            "x-ob-item-type": "LengthItemType",
+            "description": "Glazing material on the front of the module.",
+            "x-ob-item-type": "StringItemType",
             "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
+            "x-ob-usage-tips": "Possible values include: Low-iron float, Low-iron rolled, Standard-iron float, and Standard-iron rolled. \"Tempered\" is how the glass is cooled quickly or slowly.",
             "x-ob-sample-value": {}
           }
         ]
       },
-      "ThicknessBack": {
+      "GlazingThicknessBack": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementNumber"
@@ -16908,6 +16887,21 @@
           {
             "type": "object",
             "description": "Glazing thickness on the back of the module.",
+            "x-ob-item-type": "LengthItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "GlazingThicknessFront": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Glazing thickness on the front of the module.",
             "x-ob-item-type": "LengthItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
