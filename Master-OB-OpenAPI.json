@@ -6505,23 +6505,6 @@
           }
         ]
       },
-      "GlazingMaterial": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The material used in the glazing of a solar module",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": "GlassTempered"
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "CellCount": {
         "allOf": [
           {
@@ -16837,7 +16820,7 @@
           },
           {
             "type": "object",
-            "description": "TODO",
+            "description": "Connector between solar (PV) modules or between modules and inverters.",
             "properties": {
               "VoltageDCMax": {
                 "$ref": "#/components/schemas/VoltageDCMax"
