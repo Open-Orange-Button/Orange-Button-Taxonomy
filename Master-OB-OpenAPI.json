@@ -16820,7 +16820,7 @@
           },
           {
             "type": "object",
-            "description": "Connector between solar (PV) modules or between modules and inverters.",
+            "description": "Connector between solar (PV) modules.",
             "properties": {
               "VoltageDCMax": {
                 "$ref": "#/components/schemas/VoltageDCMax"
