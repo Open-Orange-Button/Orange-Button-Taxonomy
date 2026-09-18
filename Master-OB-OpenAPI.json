@@ -6260,7 +6260,7 @@
           },
           {
             "type": "object",
-            "description": "The specified range within which a solar panel could overperform its rated power at Standard Test Conditions.",
+            "description": "At Standard Test Condition, the highest percent by which a solar panel's performance can vary from its rating.",
             "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -6634,7 +6634,7 @@
           },
           {
             "type": "object",
-            "description": "The specified range within which a solar panel could underperform its rated power at Standard Test Conditions.",
+            "description": "At Standard Test Condition, the lowest percent by which a solar panel's performance can vary from its rating.",
             "x-ob-item-type": "DecimalPercentItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
