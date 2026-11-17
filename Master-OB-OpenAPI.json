@@ -10859,7 +10859,7 @@
           },
           {
             "type": "object",
-            "description": "Ratio of the actual energy generated over a time interval, divided by the AC capacity multiplied by the duration of the time interval",
+            "description": "Ratio of the actual energy generated over a time interval, divided by the AC capacity multiplied by the duration of the time interval. Energy technology types can be compared using this metric. See https://en.wikipedia.org/wiki/Capacity_factor for reference.",
             "x-ob-item-type": "DecimalItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
