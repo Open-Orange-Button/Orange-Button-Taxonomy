@@ -14036,7 +14036,7 @@
             "description": "Maximum amount of time that an event can occur.",
             "x-ob-item-type": "DurationItemType",
             "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
+            "x-ob-usage-tips": "Specify the time unit in the Unit primitive, and the duration as a number in the Value primitive.",
             "x-ob-sample-value": {
               "Unit": "MM",
               "Value": 90
