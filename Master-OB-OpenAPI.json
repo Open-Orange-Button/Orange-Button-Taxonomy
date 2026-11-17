@@ -6569,7 +6569,7 @@
             "description": "How long the Warranty is valid",
             "x-ob-item-type": "DurationItemType",
             "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "Enter as integer; Specify Units.",
+            "x-ob-usage-tips": "Specify the time unit in the Unit primitive, and the duration as a number in the Value primitive.",
             "x-ob-sample-value": {
               "Value": 25,
               "Unit": "Y"
