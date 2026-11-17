@@ -10859,7 +10859,7 @@
           },
           {
             "type": "object",
-            "description": "Ratio of the actual power generated over a time interval divided by the AC capacity multiplied by the duration of the time interval",
+            "description": "Ratio of the actual energy generated over a time interval, divided by the AC capacity multiplied by the duration of the time interval",
             "x-ob-item-type": "DecimalItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
