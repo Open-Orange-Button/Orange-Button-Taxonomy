@@ -6566,7 +6566,7 @@
           },
           {
             "type": "object",
-            "description": "How long is the Warranty valid for",
+            "description": "How long the Warranty is valid",
             "x-ob-item-type": "DurationItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "Enter as integer; Specify Units.",
