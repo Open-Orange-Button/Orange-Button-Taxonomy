@@ -3299,6 +3299,9 @@
           "Fees": {
             "$ref": "#/components/schemas/Fees"
           },
+          "SignatureDate": {
+            "$ref": "#/components/schemas/SignatureDate"
+          },
           "LoanRate": {
             "$ref": "#/components/schemas/LoanRate"
           },
@@ -15373,6 +15376,12 @@
         "properties": {
           "CountryOfManufacture": {
             "$ref": "#/components/schemas/CountryOfManufacture"
+          },
+          "CountryOfManufactureIsNotPFE": {
+            "$ref": "#/components/schemas/CountryOfManufactureIsNotPFE"
+          },
+          "CountryOfOwnershipIsNotPFE": {
+            "$ref": "#/components/schemas/CountryOfOwnershipIsNotPFE"
           },
           "AttestationURL": {
             "$ref": "#/components/schemas/AttestationURL"
