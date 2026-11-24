@@ -5862,24 +5862,6 @@
           }
         ]
       },
-      "PowerMaximum": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "(Pmax) at STC",
-            "x-ob-item-type": "PowerItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "W",
-              "Value": 300
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "ModuleEfficiency": {
         "allOf": [
           {
@@ -6162,23 +6144,6 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": 120
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "JunctionBoxDiodeQuantity": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The number of Junction Box Diodes in a solar module",
-            "x-ob-item-type": "PureItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 3
             },
             "x-ob-item-type-group": ""
           }
@@ -13719,21 +13684,6 @@
           }
         ]
       },
-      "SeasonStartDate": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "Date after which the program is effective for the season. Events are generally created after the season start",
-            "x-ob-item-type": "StringItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
       "Aggregator": {
         "allOf": [
           {
@@ -14676,21 +14626,6 @@
         "items": {
           "$ref": "#/components/schemas/TemperatureTS"
         }
-      },
-      "Frequency": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Frequency (Hz) of a AC power device or system",
-            "x-ob-item-type": "FrequencyItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
       },
       "LineFrequency": {
         "allOf": [
@@ -15734,21 +15669,6 @@
             "type": "object",
             "description": "The date or datetime of an event",
             "x-ob-item-type": "DateTimeItemType",
-            "x-ob-item-type-group": "",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {}
-          }
-        ]
-      },
-      "EventDuration": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementString"
-          },
-          {
-            "type": "object",
-            "description": "The duration of an event.",
-            "x-ob-item-type": "DurationItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
