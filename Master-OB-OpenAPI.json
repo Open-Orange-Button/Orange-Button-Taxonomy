@@ -6208,11 +6208,12 @@
             "type": "object",
             "description": "The weight of the parent object",
             "x-ob-item-type": "WeightItemType",
-            "x-ob-usage-tips": "",
+            "x-ob-usage-tips": "Use appropriate engineering consistency with related object Mass",
             "x-ob-sample-value": {
-              "Unit": "g",
+              "Unit": "lb",
               "Value": 9.81
-            }
+            },
+            "x-ob-item-type-group": ""
           }
         ]
       },
