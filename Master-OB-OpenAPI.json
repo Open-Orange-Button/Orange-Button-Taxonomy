@@ -2777,40 +2777,6 @@
           }
         }
       },
-      "StartPastDueDays": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementInteger"
-          },
-          {
-            "type": "object",
-            "description": "The number of past due days that the transactions are to be included in this aging bucket",
-            "x-ob-item-type": "PureItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 30
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "EndPastDueDays": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementInteger"
-          },
-          {
-            "type": "object",
-            "description": "The number of past due days that the transactions are to be included in this aging bucket",
-            "x-ob-item-type": "PureItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 31
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "AgingBucketType": {
         "allOf": [
           {
@@ -2991,96 +2957,6 @@
         "items": {
           "$ref": "#/components/schemas/ProdCertification"
         }
-      },
-      "AgingBalance1To30Days": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The aging balance from 1 to 30 days",
-            "x-ob-item-type": "MonetaryItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "USD",
-              "Value": 120
-            },
-            "x-ob-item-type-group": "OBMonetary"
-          }
-        ]
-      },
-      "AgingBalance31To60Days": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Aging balance from 31 to 60 days",
-            "x-ob-item-type": "MonetaryItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "USD",
-              "Value": 125
-            },
-            "x-ob-item-type-group": "OBMonetary"
-          }
-        ]
-      },
-      "AgingBalance61to90Days": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Aging balance from 61 to 90 days",
-            "x-ob-item-type": "MonetaryItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "USD",
-              "Value": 130
-            },
-            "x-ob-item-type-group": "OBMonetary"
-          }
-        ]
-      },
-      "AgingBalance91to120Days": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Aging balance from 91 to 120 days",
-            "x-ob-item-type": "MonetaryItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "USD",
-              "Value": 135
-            },
-            "x-ob-item-type-group": "OBMonetary"
-          }
-        ]
-      },
-      "AgingBalanceOver120Days": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "The aging balance over 120 days",
-            "x-ob-item-type": "MonetaryItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "USD",
-              "Value": 145
-            },
-            "x-ob-item-type-group": "OBMonetary"
-          }
-        ]
       },
       "TaskTypeID": {
         "allOf": [
