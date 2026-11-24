@@ -6188,7 +6188,7 @@
           },
           {
             "type": "object",
-            "description": "The mass (commonly referred to as weight) of the parent object",
+            "description": "The mass of the parent object",
             "x-ob-item-type": "MassItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
@@ -16652,7 +16652,7 @@
       }
     },
     "MassItemType": {
-      "description": "The mass item type represents the mass of an object (commonly referred to as weight) which can be measured. Unit source prefixes: num",
+      "description": "The mass item type represents the mass of an object which can be measured. Unit source prefixes: num",
       "units": {
         "lb": {
           "label": "Pound",
@@ -20514,7 +20514,7 @@
       "enums": {
         "Mass": {
           "label": "Mass",
-          "description": "Mass of a product (commonly referred to as weight)"
+          "description": "Mass of a product"
         },
         "Weight": {
           "label": "Weight",
@@ -21269,7 +21269,7 @@
       }
     },
     "MonetaryPerMassItemType": {
-      "description": "Units for currency per mass (commonly referred to as weight)",
+      "description": "Units for currency per mass or weight",
       "units": {
         "USD_per_lb": {
           "label": "US dollars per pound",
