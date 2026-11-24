@@ -6440,7 +6440,7 @@
           },
           {
             "type": "object",
-            "description": "The mass of the parent object. ",
+            "description": "The mass of the parent object",
             "x-ob-item-type": "MassItemType",
             "x-ob-usage-tips": "Apply appropriate engineering consistency with related object Weight.",
             "x-ob-sample-value": {
@@ -6617,7 +6617,7 @@
           {
             "type": "object",
             "description": "The weight of the parent object",
-            "x-ob-item-type": "MassItemType",
+            "x-ob-item-type": "WeightItemType",
             "x-ob-usage-tips": "Use appropriate engineering consistency with related object Mass",
             "x-ob-sample-value": {
               "Unit": "lb",
@@ -20951,6 +20951,10 @@
     "SpecificationTypeItemType": {
       "description": "An enumeration of specification types for a product.",
       "enums": {
+        "Mass": {
+          "label": "Mass",
+          "description": ""
+        },
         "Weight": {
           "label": "Weight",
           "description": ""
@@ -21471,6 +21475,14 @@
         "lb": {
           "label": "Pound",
           "description": ""
+        },
+        "oz": {
+          "label": "Ounce",
+          "description": "US Ounce"
+        },
+        "g": {
+          "label": "Gram",
+          "description": "Gram"
         },
         "kg": {
           "label": "Kilogram",
