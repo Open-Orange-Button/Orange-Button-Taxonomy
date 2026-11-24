@@ -5,7 +5,9 @@ functions: [spellcheckSubstrings,
             validateItemTypeGroupEntries,
             validateXOBSampleValue,
             validateItemTypeAgainstElementType,
-            noSuperclassFieldShadowing]
+            noSuperclassFieldShadowing,
+            validateXOBFieldIsReferenced,
+            validateOBElementIsReferenced]
 rules:
   ibm-schema-casing-convention: off
   ibm-enum-casing-convention: off
@@ -49,6 +51,34 @@ rules:
     severity: error
     then:
       function: validateItemTypeGroupEntries
+
+  item-type-is-referenced:
+    description: Check that each item type is referenced by at least one element.
+    message: 'Item type is not referenced by any OB element: {{error}}'
+    given: $[x-ob-item-types][*]~
+    severity: warn
+    then:
+      function: validateXOBFieldIsReferenced
+      functionOptions:
+        field: x-ob-item-type
+
+  item-type-group-is-referenced:
+    description: Check that each item type group is referenced by at least one element.
+    message: 'Item type group is not referenced by any OB element: {{error}}'
+    given: $[x-ob-item-type-groups][*]~
+    severity: warn
+    then:
+      function: validateXOBFieldIsReferenced
+      functionOptions:
+        field: x-ob-item-type-group
+
+  ob-element-is-referenced:
+    description: Check that each OB element is referenced by at least one OB object.
+    message: 'OB element is not referenced by any OB object: {{error}}'
+    given: $.components.schemas[*]~
+    severity: warn
+    then:
+      function: validateOBElementIsReferenced
 
   element-valid-sample-value:
     description: >-
