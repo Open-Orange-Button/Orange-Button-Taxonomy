@@ -4413,8 +4413,8 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Decimals": "1",
-              "EndTime": "2020-02-08 09:59:59+07:00",
-              "StartTime": "2020-02-08 09:00:00+07:00",
+              "EndTime": "2020-02-08T09:59:59+07:00",
+              "StartTime": "2020-02-08T09:00:00+07:00",
               "Unit": "kWh",
               "Value": 50.1
             },
@@ -10267,8 +10267,8 @@
             "x-ob-item-type-group": "OBElectricalEnergy",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "EndTime": "2020-01-05 17:00:00-05:00",
-              "StartTime": "2020-01-05 13:00:00-05:00",
+              "EndTime": "2020-01-05T17:00:00-05:00",
+              "StartTime": "2020-01-05T13:00:00-05:00",
               "Unit": "kWh",
               "Value": 150
             }
@@ -11610,7 +11610,8 @@
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
               "Value": [
-                "LCD"
+                "LCD",
+                "RemoteDisplay"
               ]
             }
           }
