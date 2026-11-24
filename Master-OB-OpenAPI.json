@@ -269,69 +269,6 @@
         },
         "x-ob-usage-tips": ""
       },
-      "ASTME2848ReportingConditions": {
-        "type": "object",
-        "properties": {
-          "IrradPlaneOfArray": {
-            "$ref": "#/components/schemas/IrradPlaneOfArray"
-          },
-          "TempAmb": {
-            "$ref": "#/components/schemas/TempAmb"
-          },
-          "WindSpeed": {
-            "$ref": "#/components/schemas/WindSpeed"
-          },
-          "RefCellCalibrationConstantAtRptCond": {
-            "$ref": "#/components/schemas/RefCellCalibrationConstantAtRptCond"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
-      "ASTME2848DataRecord": {
-        "type": "object",
-        "properties": {
-          "IrradPlaneOfArray": {
-            "$ref": "#/components/schemas/IrradPlaneOfArray"
-          },
-          "TempAmb": {
-            "$ref": "#/components/schemas/TempAmb"
-          },
-          "WindSpeed": {
-            "$ref": "#/components/schemas/WindSpeed"
-          },
-          "DataSelected": {
-            "$ref": "#/components/schemas/DataSelected"
-          },
-          "DataFilterVisual": {
-            "$ref": "#/components/schemas/DataFilterVisual"
-          },
-          "DataFilterOutliers": {
-            "$ref": "#/components/schemas/DataFilterOutliers"
-          },
-          "DataFilterMissing": {
-            "$ref": "#/components/schemas/DataFilterMissing"
-          },
-          "DataFilterCollectionSystem": {
-            "$ref": "#/components/schemas/DataFilterCollectionSystem"
-          },
-          "DataFilterOutsideRange": {
-            "$ref": "#/components/schemas/DataFilterOutsideRange"
-          },
-          "DataFilterStability": {
-            "$ref": "#/components/schemas/DataFilterStability"
-          },
-          "DataFilterInverterClipping": {
-            "$ref": "#/components/schemas/DataFilterInverterClipping"
-          },
-          "DataFilterShading": {
-            "$ref": "#/components/schemas/DataFilterShading"
-          },
-          "DataFilterInstrumentAlignment": {
-            "$ref": "#/components/schemas/DataFilterInstrumentAlignment"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
       "DataFilterCriteria": {
         "type": "object",
         "properties": {
@@ -364,36 +301,6 @@
           },
           "FilterIrradStabilityWindowLen": {
             "$ref": "#/components/schemas/FilterIrradStabilityWindowLen"
-          }
-        },
-        "x-ob-usage-tips": ""
-      },
-      "ASTME2848Model": {
-        "type": "object",
-        "properties": {
-          "ASTME28484ModelCoeffA1": {
-            "$ref": "#/components/schemas/ASTME28484ModelCoeffA1"
-          },
-          "ASTME28484ModelCoeffA2": {
-            "$ref": "#/components/schemas/ASTME28484ModelCoeffA2"
-          },
-          "ASTME28484ModelCoeffA3": {
-            "$ref": "#/components/schemas/ASTME28484ModelCoeffA3"
-          },
-          "ASTME28484ModelCoeffA4": {
-            "$ref": "#/components/schemas/ASTME28484ModelCoeffA4"
-          },
-          "ASTME2848PowerRtgAtRptCond": {
-            "$ref": "#/components/schemas/ASTME2848PowerRtgAtRptCond"
-          },
-          "ASTME2848PowerRtgUncertainty": {
-            "$ref": "#/components/schemas/ASTME2848PowerRtgUncertainty"
-          },
-          "ASTME2848ModelResidualMean": {
-            "$ref": "#/components/schemas/ASTME2848ModelResidualMean"
-          },
-          "ASTME2848ModelResidualStandardDeviation": {
-            "$ref": "#/components/schemas/ASTME2848ModelResidualStandardDeviation"
           }
         },
         "x-ob-usage-tips": ""
@@ -4120,23 +4027,6 @@
           }
         ]
       },
-      "ASTME28484ModelCoeffA3": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Coefficient a3 in Equation 1 of ASTM E2848-11, P = E(a1 + a2 x E + a3 x Ta + a4 x V) where P is power, E is in-plane irradiance, Ta is ambient air temperature and V is wind speed.",
-            "x-ob-item-type": "DecimalItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 0
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "Rainfall": {
         "allOf": [
           {
@@ -4211,21 +4101,6 @@
               "Unit": "decimal_percent",
               "Value": 0.33
             },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "ASTME2848ModelResidualMean": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Mean value of the residuals of the regression model at ASTM E2848-11 Eq. 1.",
-            "x-ob-item-type": "DecimalItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
             "x-ob-item-type-group": ""
           }
         ]
@@ -4329,21 +4204,6 @@
           }
         ]
       },
-      "ASTME2848ModelResidualStandardDeviation": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Standard deviation of the residuals of the regression model at ASTM E2848-11 Eq. 1.",
-            "x-ob-item-type": "DecimalItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "TempMeter": {
         "allOf": [
           {
@@ -4394,24 +4254,6 @@
           }
         ]
       },
-      "ASTME2848PowerRtgAtRptCond": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Power rating P0 at reporting condition calculated using fitted model. Calculated by Equation 2 of ASTM E2848-11, P0 = E(a1 + a2 x E + a3 x Ta + a4 x V) where E is in-plane irradiance, Ta is ambient air temperature and V is wind speed at the reporting condition.",
-            "x-ob-item-type": "PowerItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Unit": "W",
-              "Value": 45
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "ManufactureDate": {
         "allOf": [
           {
@@ -4444,21 +4286,6 @@
               "Unit": "psi",
               "Value": 14.7
             },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "ASTME28484ModelCoeffA1": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Coefficient a1 in Equation 1 of ASTM E2848-11, P = E(a1 + a2 x E + a3 x Ta + a4 x V) where P is power, E is in-plane irradiance, Ta is ambient air temperature and V is wind speed.",
-            "x-ob-item-type": "DecimalItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
             "x-ob-item-type-group": ""
           }
         ]
@@ -4564,21 +4391,6 @@
           }
         ]
       },
-      "ASTME2848PowerRtgUncertainty": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Expanded uncertainty of the power rating at the reference condition. See ASTM E2848-11 paragraph 9.4 for guidance on calculating the expanded uncertainty.",
-            "x-ob-item-type": "DecimalItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "DataFilterInverterClipping": {
         "allOf": [
           {
@@ -4588,21 +4400,6 @@
             "type": "object",
             "description": "Indicator that data passes checks for periods of inverter clipping or operating away from maximum power point tracking.",
             "x-ob-item-type": "BooleanItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "ASTME28484ModelCoeffA4": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Coefficient a4 in Equation 1 of ASTM E2848-11, P = E(a1 + a2 x E + a3 x Ta + a4 x V) where P is power, E is in-plane irradiance, Ta is ambient air temperature and V is wind speed.",
-            "x-ob-item-type": "DecimalItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {},
             "x-ob-item-type-group": ""
@@ -4658,21 +4455,6 @@
               "Unit": "W_per_sqm",
               "Value": 800
             },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
-      "ASTME28484ModelCoeffA2": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementNumber"
-          },
-          {
-            "type": "object",
-            "description": "Coefficient a2 in Equation 1 of ASTM E2848-11, P = E(a1 + a2 x E + a3 x Ta + a4 x V) where P is power, E is in-plane irradiance, Ta is ambient air temperature and V is wind speed.",
-            "x-ob-item-type": "DecimalItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {},
             "x-ob-item-type-group": ""
           }
         ]
