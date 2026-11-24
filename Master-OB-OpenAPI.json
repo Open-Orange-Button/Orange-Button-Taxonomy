@@ -1154,18 +1154,21 @@
           }
         ]
       },
-      "DocumentSubmissionMethod": {
+      "DocumentSubmissionMethods": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementString"
+            "$ref": "#/components/schemas/TaxonomyElementArrayString"
           },
           {
             "type": "object",
-            "description": "The method for submitting AHJ documents.",
+            "description": "The methods for submitting AHJ documents.",
             "x-ob-item-type": "DocumentSubmissionMethodItemType",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {
-              "Value": "Email"
+              "Value": [
+                "EPermitting",
+                "Email"
+              ]
             },
             "x-ob-item-type-group": ""
           }
@@ -3741,12 +3744,6 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/PermitIssueMethod"
-        }
-      },
-      "DocumentSubmissionMethods": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DocumentSubmissionMethod"
         }
       },
       "Service": {
