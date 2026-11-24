@@ -1486,23 +1486,6 @@
           }
         ]
       },
-      "ProdQty": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/TaxonomyElementInteger"
-          },
-          {
-            "type": "object",
-            "description": "Quantity of a Product",
-            "x-ob-item-type": "PerUnitItemType",
-            "x-ob-usage-tips": "",
-            "x-ob-sample-value": {
-              "Value": 4
-            },
-            "x-ob-item-type-group": ""
-          }
-        ]
-      },
       "ProdLineItem": {
         "type": "object",
         "description": "A product used within a PVSystem and the quantity of that product",
