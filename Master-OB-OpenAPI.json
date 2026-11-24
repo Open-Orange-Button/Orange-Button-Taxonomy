@@ -10206,6 +10206,9 @@
           "LossReport": {
             "$ref": "#/components/schemas/LossReport"
           },
+          "CapacityFactorAC": {
+            "$ref": "#/components/schemas/CapacityFactorAC"
+          },
           "OMIssues": {
             "$ref": "#/components/schemas/OMIssues"
           }
@@ -10879,9 +10882,24 @@
           },
           {
             "type": "object",
-            "description": "A fraction of nominal AC capacity",
-            "x-ob-item-type": "PowerItemType",
-            "x-ob-item-type-group": "OBElectricalPower",
+            "description": "The fraction of AC capacity affected",
+            "x-ob-item-type": "DecimalPercentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {}
+          }
+        ]
+      },
+      "CapacityFactorAC": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Ratio of the actual energy generated over a time interval, divided by the AC capacity multiplied by the duration of the time interval. Energy technology types can be compared using this metric. See https://en.wikipedia.org/wiki/Capacity_factor for reference.",
+            "x-ob-item-type": "DecimalItemType",
+            "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
             "x-ob-sample-value": {}
           }
