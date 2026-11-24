@@ -6199,6 +6199,23 @@
           }
         ]
       },
+      "Weight": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "The weight of the parent object",
+            "x-ob-item-type": "WeightItemType",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": {
+              "Unit": "g",
+              "Value": 9.81
+            }
+          }
+        ]
+      },
       "PowerToleranceMin": {
         "allOf": [
           {
@@ -6417,6 +6434,9 @@
           },
           "Mass": {
             "$ref": "#/components/schemas/Mass"
+          },
+          "Weight": {
+            "$ref": "#/components/schemas/Weight"
           }
         }
       },
@@ -20495,6 +20515,10 @@
           "label": "Mass",
           "description": "Mass of a product (commonly referred to as weight)"
         },
+        "Weight": {
+          "label": "Weight",
+          "description": ""
+        },
         "Height": {
           "label": "Height",
           "description": ""
@@ -21002,6 +21026,35 @@
         "Diamond": {
           "label": "Diamond",
           "description": "Use when the object (e.g., Array) has modules that are neither Portrait nor Landscape."
+        }
+      }
+    },
+    "WeightItemType": {
+      "description": "Units for weight",
+      "units": {
+        "lb": {
+          "label": "Pound",
+          "description": ""
+        },
+        "oz": {
+          "label": "Ounce",
+          "description": "US Ounce"
+        },
+        "g": {
+          "label": "Gram",
+          "description": "Gram"
+        },
+        "kg": {
+          "label": "Kilogram",
+          "description": ""
+        },
+        "T": {
+          "label": "Ton",
+          "description": "US ton, equal to 2000lb"
+        },
+        "t": {
+          "label": "Tonne",
+          "description": "Metric ton, equal to 1000kg"
         }
       }
     },
